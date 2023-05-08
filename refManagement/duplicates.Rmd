@@ -1,0 +1,175 @@
+---
+title: "Management of duplicates in ris files"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+     number_sections: true
+     toc: true
+---
+
+
+```{r setup}
+knitr::opts_chunk$set(tidy.opts = list(width.cutoff = 70), tidy = TRUE, cache=F)
+def.chunk.hook  <- knitr::knit_hooks$get("chunk")
+knitr::knit_hooks$set(chunk = function(x, options) {
+  x <- def.chunk.hook(x, options)
+  paste0("\n \\", "footnotesize","\n\n", x, "\n\n \\normalsize\n\n")
+})
+```
+
+
+# Extracting and analysing ris Files
+
+## Creating the reading function
+```{r file="./readRis.R"}
+source("./readRis.R")
+```
+
+## Reading the files
+
+```{r}
+risFiles<-c("../../Search/Results/scopus20230403/scopus.ris","../../Search/Results/wosCore20230403/wosCore.ris","../../Search/Results/wosSciELO20230403/savedrecs.ris")
+names(risFiles)<- c("scopus","WoS_core","WoS_SciELO")
+risExtracted<-lapply(risFiles,read_ris)
+```
+
+# Extracting fields
+
+```{r file="./extractFields.R"}
+source("./extractFields.R")
+```
+
+## Application
+
+```{r}
+require(kableExtra)
+extractFields(risExtracted$scopus,c("DO","TI"))%>%
+  head()%>%
+  kable(booktabs=T)%>%
+  column_spec(2,width="8cm")
+```
+
+# Finding duplicates
+
+In order to find duplicate when comparing ris files, we will use the following steps:
+
+1. documents having the same doi will be tested for resemblance in their titles considered duplicates, if they are not chapters of a book, because those may be referenced with the DOI of the book...
+2. documents not having a DOI will be compared (between them and with the ones having a doi) in terms of resemblance in their titles and years. If they have a very similar title and a maximum of one year difference, they will be considered as duplicates.
+
+In order to compare titles:
+1. we suppress all the characters which are not classical letters (space, punctuation, etc.)
+1. we put every character in lower case
+1. we compare strings
+
+At first we used the following distance-based string comparation: String Alignment distance (restricted Damerau-Levenshtein distance), divide it by the length of the smallest string. Values inferior to 0.05 are considered identical, i.e. if less than 5\% of the characters of the smallest string must be added or modified to obtain the larger one, they are considered identical.
+However, some obviously different documents were considered duplicates, so we now just consider exact matches in modified titles.
+The result is that some of the duplicates are not found, but no false dupe is deleted.
+
+
+Also note that if 2 documents have the same title and year but have different type, the articles and book chapters will have the priority over the conferences (for the duplicate which will be kept in the ris file).
+
+## function definitions
+
+### finding duplicates
+
+```{r file="./duplicate_search_function.R"}
+source("./duplicate_search_function.R")
+```
+
+### Modifying and writing ris objects
+
+```{r file="./filterRis.R"}
+source("./filterRis.R")
+```
+
+## Finding duplicates in one Ris
+
+```{r warning=F}
+findDupes<-lapply(risExtracted,risInternalDuplicate)
+```
+
+Example of the scopus Ris File.
+
+```{r}
+A<-rbind(data.frame(supp=F,
+  findDupes$scopus$tabInfo[unique(findDupes$scopus$accepted_dupes$ref),]
+),data.frame(supp=T,
+  findDupes$scopus$tabInfo[findDupes$scopus$accepted_dupes$toSupp,])
+)
+A[order(A$TI),c("id","TY","TI","PY","DO","AU")]%>%
+  kable(booktabs=T,longtable=T)%>%
+  row_spec(which(A$supp[order(A$TI)]),background="red")%>%
+  row_spec(which(!A$supp[order(A$TI)]),background="green")%>%
+  column_spec(4,width="4cm")%>%
+  column_spec(7,width="4cm")%>%
+  landscape()
+ 
+```
+
+```{r}
+int_filt_ris<-mapply(function(ris,dupe){filterRis(ris,dupe$toSupp)},risExtracted,findDupes,SIMPLIFY = F)
+```
+
+
+## Filtering a Ris file from the records of another
+```{r}
+finalRis<-list(scopus=int_filt_ris$scopus)
+```
+
+### Wos: Core Collection from scopus
+
+```{r}
+filWosCore<-compareRisDuplicate(int_filt_ris$WoS_core,finalRis$scopus)
+finalRis$WoS_core<-filterRis(extractedRis=int_filt_ris$WoS_core,idToSupp=filWosCore$toSupp)
+```
+### Wos: SciELO from scopus and WoS Core Collection
+
+```{r}
+filWosSciELO<-compareRisDuplicate(int_filt_ris$WoS_SciELO,finalRis$scopus)
+int_filt_ris$WoS_SciELO<-filterRis(extractedRis=int_filt_ris$WoS_SciELO,idToSupp=filWosSciELO$toSupp)
+filWosSciELO<-compareRisDuplicate(int_filt_ris$WoS_SciELO,finalRis$WoS_core)
+finalRis$WosScielo<-filterRis(int_filt_ris$WoS_SciELO,idToSupp = filWosSciELO$toSupp)
+
+```
+
+# After deleting sustain\*
+
+
+## Making one file out of multiple files
+```{r}
+dirProquest<-"../../Search/Results/proquest ana /"
+fileProquest<-tempfile()
+writeLines(unlist(lapply(paste0(dirProquest,dir(dirProquest,pattern="ris")),function(x)c(readLines(x),""))),con = fileProquest)
+
+dirInformit<-"../../Search/Results/informit/"
+fileInformit<-tempfile()
+writeLines(unlist(lapply(paste0(dirInformit,dir(dirInformit,pattern="ris")),function(x)c(readLines(x),""))),con = fileInformit)
+
+dirWosCore<-"../../Search/Results/wosCore20230503/"
+fileWosCore<-tempfile()
+writeLines(unlist(lapply(paste0(dirWosCore,dir(dirWosCore,pattern="ris")),function(x)c(readLines(x),""))),con = fileWosCore)
+
+
+A<-read_ris(fileProquest,title="T1")
+B<-read_ris(fileInformit,title="T1",multiLine="N2")
+C<-read_ris(fileWosCore)
+```
+
+
+
+# Writing final Ris files
+
+```{r}
+DIR <- "../../Search/finalRis"
+if(dir.exists(DIR))
+{
+  unlink(DIR,recursive=T)
+}
+dir.create(DIR)
+writeRis(finalRis$scopus,filename=paste(DIR,"scopus.ris",sep="/"))
+writeRis(finalRis$WoS_core,filename=paste(DIR,"WoS_Core.ris",sep="/"))
+writeRis(finalRis$WosScielo,filename=paste(DIR,"WoS_SciELO.ris",sep="/"))
+```
+
+
