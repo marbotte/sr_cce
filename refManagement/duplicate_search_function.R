@@ -10,42 +10,49 @@ risInternalDuplicate <- function(extractedRis, priority=c("JOUR","CHAP"))
   do_d <- duplicated(tabFields_do$DO)
   doDupli<-unique(tabFields_do[do_d,"DO"])
   toTest <- lapply(doDupli,function(x,tab)tab[tab$DO==x,],tab=tabFields_do)
-  tested <- sapply(toTest,function(x){
-    length(unique(x$title_simp))==1
-  })
-  if(any(!tested))
-  {sapply(toTest[!tested],function(x)warning("\nRecords: ",paste(x$id,collapse=","),"\nhave the same DOI (",unique(x$DO),") but differences in their titles:\n",paste(x$TI,collapse="\n"),"\n\nthey will NOT be considered as duplicates\n"))}
-  AcceptedDupli<-rbind(AcceptedDupli,Reduce(rbind,lapply(toTest[tested],function(x,p){
-      tab<-x[order(match(x$TY,p)),]
-      data.frame(step="doi",ref=tab$id[1],toSupp=tab$id[2:nrow(x)])
-    },p=priority)))
-  DupliToCheck<-rbind(DupliToCheck,Reduce(rbind,lapply(toTest[!tested],function(x)data.frame(step="doi",ref=x$id[1],toSupp=x$id[2:nrow(x)]))))
+  if(length(toTest)>0)
+  {
+    tested <- sapply(toTest,function(x){
+      length(unique(x$title_simp))==1
+    })
+    if(any(!tested))
+    {sapply(toTest[!tested],function(x)warning("\nRecords: ",paste(x$id,collapse=","),"\nhave the same DOI (",unique(x$DO),") but differences in their titles:\n",paste(x$TI,collapse="\n"),"\n\nthey will NOT be considered as duplicates\n"))}
+    AcceptedDupli<-rbind(AcceptedDupli,Reduce(rbind,lapply(toTest[tested],function(x,p){
+        tab<-x[order(match(x$TY,p)),]
+        data.frame(step="doi",ref=tab$id[1],toSupp=tab$id[2:nrow(x)])
+      },p=priority)))
+    DupliToCheck<-rbind(DupliToCheck,Reduce(rbind,lapply(toTest[!tested],function(x)data.frame(step="doi",ref=x$id[1],toSupp=x$id[2:nrow(x)]))))
+  }
   # Searching duplicated titles and years (max difference:1) 
   # (both either do not have DOI or are chapters)
   tabFields_tiye <- tabFields[is.na(tabFields$DO)|tabFields$TY=="CHAP",]
+  tabFields_tiye <-tabFields_tiye[!is.na(tabFields_tiye$PY),]
   title_simp_dup<-unique(tabFields_tiye$title_simp[duplicated(tabFields_tiye$title_simp)])
   toTest <- by(tabFields_tiye[which(tabFields_tiye$title_simp%in%title_simp_dup),], tabFields_tiye$title_simp[tabFields_tiye$title_simp%in%title_simp_dup],function(x)x)
-  diff_Ymax1 <- sapply(toTest,function(x)diff(range(as.numeric(x$PY)))<=1)
-  sameType <- sapply(toTest,function(x)length(unique(x$TY))==1)
-  sameAuth <- sapply(toTest,function(x)length(unique(x$AU))==1)
-  if(any(diff_Ymax1&(!sameAuth|!sameType)))
+  if(length(toTest)>0)
   {
-    {sapply(toTest[diff_Ymax1&(!sameAuth|!sameType)],function(x)warning("\nRecords: ",paste(x$id,collapse=","),"\nhave comparable titles and pulication years \n(",paste(unique(x$TI),collapse="\n"),")\n but have differences in their authors and/or types:\n\nNote that they will be considered as duplicates\n"))}
-  }
-  if(any(!diff_Ymax1))
-  {
-    {sapply(toTest[!diff_Ymax1],function(x)warning("\nRecords: ",paste(x$id,collapse=","),"\nhave comparable titles (",paste(unique(x$TI),collapse="\n"),") but have a difference of more than one publication year!\n\nNote that they WONT be considered as duplicates\n"))}
-  }
-  AcceptedDupli<-rbind(AcceptedDupli,Reduce(rbind,lapply(toTest[diff_Ymax1],function(x,p,a)
+    diff_Ymax1 <- sapply(toTest,function(x)diff(range(as.numeric(x$PY)))<=1)
+    sameType <- sapply(toTest,function(x)length(unique(x$TY))==1)
+    sameAuth <- sapply(toTest,function(x)length(unique(x$AU))==1)
+    if(any(diff_Ymax1&(!sameAuth|!sameType)))
     {
-      tab<-x[order(match(x$TY,p),!x$id%in%a),]
-      return(data.frame(step="ti_ye_noDoi",ref=tab$id[1],toSupp=tab$id[2:nrow(x)]))
-    },p=priority,a=AcceptedDupli$ref)))
-  DupliToCheck<-rbind(DupliToCheck,Reduce(rbind,lapply(toTest[!diff_Ymax1],function(x,p)
+      {sapply(toTest[diff_Ymax1&(!sameAuth|!sameType)],function(x)warning("\nRecords: ",paste(x$id,collapse=","),"\nhave comparable titles and pulication years \n(",paste(unique(x$TI),collapse="\n"),")\n but have differences in their authors and/or types:\n\nNote that they will be considered as duplicates\n"))}
+    }
+    if(any(!diff_Ymax1))
     {
-      tab<-x[order(match(x$TY,p)),]
-      return(data.frame(step="ti_ye_noDoi",ref=tab$id[1],toSupp=tab$id[2:nrow(x)]))
-    },p=priority)))
+      {sapply(toTest[!diff_Ymax1],function(x)warning("\nRecords: ",paste(x$id,collapse=","),"\nhave comparable titles (",paste(unique(x$TI),collapse="\n"),") but have a difference of more than one publication year!\n\nNote that they WONT be considered as duplicates\n"))}
+    }
+    AcceptedDupli<-rbind(AcceptedDupli,Reduce(rbind,lapply(toTest[diff_Ymax1],function(x,p,a)
+      {
+        tab<-x[order(match(x$TY,p),!x$id%in%a),]
+        return(data.frame(step="ti_ye_noDoi",ref=tab$id[1],toSupp=tab$id[2:nrow(x)]))
+      },p=priority,a=AcceptedDupli$ref)))
+    DupliToCheck<-rbind(DupliToCheck,Reduce(rbind,lapply(toTest[!diff_Ymax1],function(x,p)
+      {
+        tab<-x[order(match(x$TY,p)),]
+        return(data.frame(step="ti_ye_noDoi",ref=tab$id[1],toSupp=tab$id[2:nrow(x)]))
+      },p=priority)))
+  }
  # Searching duplicated titles and years (max difference:1) 
  # (one of them do not have DOI or is a chapter)
   m_tiye_do <- match(tabFields_tiye$title_simp,tabFields_do$title_simp)
