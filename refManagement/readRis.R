@@ -59,7 +59,7 @@ read_ris <- function(risFile,keepCompleteRaw = T, extractFields = T, title="TI",
   fieldName [lineOtherFields] <- gsub("^([ A-Za-z]+): +([0-9]+)$","\\1",fileLines[lineOtherFields])
   fieldName [emptyLinesBool] <- NA
   if(extractFields){
-    fieldContent <- gsub("^[ ?[A]-Z][A-Za-z0-9] +- +(.*)$","\\1",fileLines)
+    fieldContent <- gsub("^[ ?[A-Z][A-Za-z0-9] +- +(.*)$","\\1",fileLines)
     fieldContent [grepl("^﻿[ -Z]][A-Za-z0-9] +-$",fileLines)] <- ""
     if(!all(is.na(multiLine)) & length(multiLine)>0)
     {
