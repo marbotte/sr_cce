@@ -145,6 +145,18 @@ ebsco <- addField(ebsco, fieldName = "PY",values = valPY)
 head(extractFields(ebsco,"PY")$PY)
 ```
 
+### Class climate and classroom climate in Ebsco file
+It appears that the filter of class climate and classroom climate did not work in the search, we will do it by hand here
+
+```{r}
+ebscoTS <- extractFields(ebsco,c("TI","AB","KW"))
+toSupp <- ebscoTS[which(grepl("class climate",ebscoTS$TI)|grepl("classroom climate",ebscoTS$TI)|
+grepl("class climate",ebscoTS$AB)|grepl("classroom climate",ebscoTS$AB)|
+grepl("class climate",ebscoTS$KW)|grepl("classroom climate",ebscoTS$KW)),"id"]
+ebsco <- filterRis(ebsco, toSupp)
+```
+
+
 
 ## Finding and deleting internal duplicates in Ris Files
 
@@ -246,16 +258,17 @@ angel <- filterRis(angel, dupe_angel_informit$toSupp)
 
 # Writing final Ris files
 
-```r
-DIR <- "../../Search/finalRis"
+```{r}
+DIR <- "../../Search/finalRis/"
 if(dir.exists(DIR))
 {
   unlink(DIR,recursive=T)
 }
 dir.create(DIR)
-writeRis(finalRis$scopus,filename=paste(DIR,"scopus.ris",sep="/"))
-writeRis(finalRis$WoS_core,filename=paste(DIR,"WoS_Core.ris",sep="/"))
-writeRis(finalRis$WosScielo,filename=paste(DIR,"WoS_SciELO.ris",sep="/"))
+for(i in 1:length(dataList))
+{
+  writeRis(get(dataList[i]),filename=paste0(DIR,dataList[i],".ris"))
+}
 ```
 
 

@@ -1,7 +1,7 @@
 Management of duplicates in ris files
 ================
 Marius Bottin
-2023-05-09
+2023-05-10
 
 - [1 Extracting and analysing ris
   Files](#1-extracting-and-analysing-ris-files)
@@ -20,6 +20,8 @@ Marius Bottin
   - [4.3 description](#43-description)
   - [4.4 Corrections on files](#44-corrections-on-files)
     - [4.4.1 Ebsco publications years](#441-ebsco-publications-years)
+    - [4.4.2 Class climate and classroom climate in Ebsco
+      file](#442-class-climate-and-classroom-climate-in-ebsco-file)
   - [4.5 Finding and deleting internal duplicates in Ris
     Files](#45-finding-and-deleting-internal-duplicates-in-ris-files)
 - [5 Writing final Ris files](#5-writing-final-ris-files)
@@ -938,6 +940,20 @@ head(extractFields(ebsco, "PY")$PY)
 
     ## [1] "2022" "2020" "2023" "2022" "2022" "2023"
 
+### 4.4.2 Class climate and classroom climate in Ebsco file
+
+It appears that the filter of class climate and classroom climate did
+not work in the search, we will do it by hand here
+
+``` r
+ebscoTS <- extractFields(ebsco, c("TI", "AB", "KW"))
+toSupp <- ebscoTS[which(grepl("class climate", ebscoTS$TI) | grepl("classroom climate",
+    ebscoTS$TI) | grepl("class climate", ebscoTS$AB) | grepl("classroom climate",
+    ebscoTS$AB) | grepl("class climate", ebscoTS$KW) | grepl("classroom climate",
+    ebscoTS$KW)), "id"]
+ebsco <- filterRis(ebsco, toSupp)
+```
+
 ## 4.5 Finding and deleting internal duplicates in Ris Files
 
 ``` r
@@ -1201,13 +1217,6 @@ intDupe_ebsco <- risInternalDuplicate(ebsco)
     ## Records: 1922,2054
     ## have comparable titles (An Analysis of Tardiness, Absenteeism, and Academic Achievement of 9th Grade Students in a Selected School District in Southeastern Georgia
     ## An analysis of tardiness, absenteeism, and academic achievement of 9th grade students in a selected school district in Southeastern Georgia) but have a difference of more than one publication year!
-    ## 
-    ## Note that they WONT be considered as duplicates
-
-    ## Warning in FUN(X[[i]], ...): 
-    ## Records: 907,1177
-    ## have comparable titles (An Analysis of the Relationship between 3rd Grade Teachers' Emotional Intelligence and Classroom Management Styles and Implications on Student Achievement in Title I Elementary Schools: A Correlational Study
-    ## An analysis of the relationship between 3rd grade teachers' emotional intelligence and classroom management styles and implications on student achievement in Title I elementary schools: A correlational study) but have a difference of more than one publication year!
     ## 
     ## Note that they WONT be considered as duplicates
 
@@ -1568,28 +1577,28 @@ embase <- filterRis(embase, dupe_embase_wosScielo$toSupp)
 dupe_ebsco_scopus <- compareRisDuplicate(ebsco, scopus)
 ```
 
-    ## 947 / 3957 records are already in the reference file
+    ## 947 / 3889 records are already in the reference file
 
 ``` r
 ebsco <- filterRis(ebsco, dupe_ebsco_scopus$toSupp)
 dupe_ebsco_wosCore <- compareRisDuplicate(ebsco, wosCore)
 ```
 
-    ## 34 / 3010 records are already in the reference file
+    ## 25 / 2942 records are already in the reference file
 
 ``` r
 ebsco <- filterRis(ebsco, dupe_ebsco_wosCore$toSupp)
 dupe_ebsco_wosScielo <- compareRisDuplicate(ebsco, wosScielo)
 ```
 
-    ## 0 / 2976 records are already in the reference file
+    ## 0 / 2917 records are already in the reference file
 
 ``` r
 ebsco <- filterRis(ebsco, dupe_ebsco_wosScielo$toSupp)
 dupe_ebsco_embase <- compareRisDuplicate(ebsco, embase)
 ```
 
-    ## 0 / 2976 records are already in the reference file
+    ## 0 / 2917 records are already in the reference file
 
 ``` r
 ebsco <- filterRis(ebsco, dupe_ebsco_embase$toSupp)
@@ -1719,13 +1728,12 @@ angel <- filterRis(angel, dupe_angel_informit$toSupp)
 # 5 Writing final Ris files
 
 ``` r
-DIR <- "../../Search/finalRis"
-if(dir.exists(DIR))
-{
-  unlink(DIR,recursive=T)
+DIR <- "../../Search/finalRis/"
+if (dir.exists(DIR)) {
+    unlink(DIR, recursive = T)
 }
 dir.create(DIR)
-writeRis(finalRis$scopus,filename=paste(DIR,"scopus.ris",sep="/"))
-writeRis(finalRis$WoS_core,filename=paste(DIR,"WoS_Core.ris",sep="/"))
-writeRis(finalRis$WosScielo,filename=paste(DIR,"WoS_SciELO.ris",sep="/"))
+for (i in 1:length(dataList)) {
+    writeRis(get(dataList[i]), filename = paste0(DIR, dataList[i], ".ris"))
+}
 ```
