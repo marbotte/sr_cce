@@ -27,6 +27,8 @@ filterRis <- function(extractedRis, idToSupp, writeFile=NA)
   }else{
     filteredRis$nbDeleted <- extractedRis$nbDeleted+(extractedRis$nbRecords-filteredRis$nbRecords)
   }
+  if(any(!names(extractedRis) %in% names(filteredRis)))
+  {filteredRis<-c(filteredRis,extractedRis[!names(extractedRis) %in% names(filteredRis)])}
   if(!is.na(writeFile))
   {
     print(paste(writeRis(filteredRis,filename=writeFile),"written!"))

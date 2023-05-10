@@ -135,7 +135,7 @@ compareRisDuplicate<-function(risToFilter, risReference)
     m <- match(x[!x$ref,"title_simp"], x[x$ref,"title_simp"])
     data.frame(toSupp = x[!x$ref,"id"],ref = x[x$ref,"id"][m])
   }))
-  if(nrow(tab))
+  if(!is.null(tab) && as.logical(nrow(tab)) && sum(!is.na(tab$ref))>0)
   {
     AcceptedDupli <- rbind(AcceptedDupli, 
                            data.frame(step="doi",
@@ -147,7 +147,7 @@ compareRisDuplicate<-function(risToFilter, risReference)
     data.frame(toSupp = pb, ref = x[x$ref,"id"])
     }
   }))
-  if(nrow(pbs))
+  if(!is.null(pbs) && nrow(pbs)>0)
   {
     DupliToCheck <- rbind(AcceptedDupli, 
                            data.frame(step="doi",

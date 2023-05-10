@@ -6,7 +6,8 @@ synoFields <- function(extractedRis,fieldFrom=c("T1","N2"),fieldTo=c("TI","AB"))
 {
   tab<-data.frame(from=fieldFrom,to=fieldTo)
   if("synoFields" %in% names(extractedRis))
-  {extractedRis$synoFields<-unique(rbind.data.frame(extractedRis$synoFields,tab))}else{
+  {extractedRis$synoFields<-unique(rbind.data.frame(extractedRis$synoFields,tab))}
+  else{
     extractedRis$synoFields <- tab 
   }
   return(extractedRis)

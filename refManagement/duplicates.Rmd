@@ -3,7 +3,7 @@ title: "Management of duplicates in ris files"
 author: "Marius Bottin"
 date: "`r Sys.Date()`"
 output: 
-  pdf_document:
+  github_document:
      number_sections: true
      toc: true
 ---
@@ -26,28 +26,10 @@ knitr::knit_hooks$set(chunk = function(x, options) {
 source("./readRis.R")
 ```
 
-## Reading the files
-
-```{r}
-risFiles<-c("../../Search/Results/scopus20230403/scopus.ris","../../Search/Results/wosCore20230403/wosCore.ris","../../Search/Results/wosSciELO20230403/savedrecs.ris")
-names(risFiles)<- c("scopus","WoS_core","WoS_SciELO")
-risExtracted<-lapply(risFiles,read_ris)
-```
-
 # Extracting fields
 
 ```{r file="./extractFields.R"}
 source("./extractFields.R")
-```
-
-## Application
-
-```{r}
-require(kableExtra)
-extractFields(risExtracted$scopus,c("DO","TI"))%>%
-  head()%>%
-  kable(booktabs=T)%>%
-  column_spec(2,width="8cm")
 ```
 
 # Finding duplicates
@@ -83,58 +65,7 @@ source("./duplicate_search_function.R")
 source("./filterRis.R")
 ```
 
-## Finding duplicates in one Ris
-
-```{r warning=F}
-findDupes<-lapply(risExtracted,risInternalDuplicate)
-```
-
-Example of the scopus Ris File.
-
-```{r}
-A<-rbind(data.frame(supp=F,
-  findDupes$scopus$tabInfo[unique(findDupes$scopus$accepted_dupes$ref),]
-),data.frame(supp=T,
-  findDupes$scopus$tabInfo[findDupes$scopus$accepted_dupes$toSupp,])
-)
-A[order(A$TI),c("id","TY","TI","PY","DO","AU")]%>%
-  kable(booktabs=T,longtable=T)%>%
-  row_spec(which(A$supp[order(A$TI)]),background="red")%>%
-  row_spec(which(!A$supp[order(A$TI)]),background="green")%>%
-  column_spec(4,width="4cm")%>%
-  column_spec(7,width="4cm")%>%
-  landscape()
- 
-```
-
-```{r}
-int_filt_ris<-mapply(function(ris,dupe){filterRis(ris,dupe$toSupp)},risExtracted,findDupes,SIMPLIFY = F)
-```
-
-
-## Filtering a Ris file from the records of another
-```{r}
-finalRis<-list(scopus=int_filt_ris$scopus)
-```
-
-### Wos: Core Collection from scopus
-
-```{r}
-filWosCore<-compareRisDuplicate(int_filt_ris$WoS_core,finalRis$scopus)
-finalRis$WoS_core<-filterRis(extractedRis=int_filt_ris$WoS_core,idToSupp=filWosCore$toSupp)
-```
-### Wos: SciELO from scopus and WoS Core Collection
-
-```{r}
-filWosSciELO<-compareRisDuplicate(int_filt_ris$WoS_SciELO,finalRis$scopus)
-int_filt_ris$WoS_SciELO<-filterRis(extractedRis=int_filt_ris$WoS_SciELO,idToSupp=filWosSciELO$toSupp)
-filWosSciELO<-compareRisDuplicate(int_filt_ris$WoS_SciELO,finalRis$WoS_core)
-finalRis$WosScielo<-filterRis(int_filt_ris$WoS_SciELO,idToSupp = filWosSciELO$toSupp)
-
-```
-
-# After deleting sustain\*
-
+# Application
 
 ## Making one file out of multiple files
 ```{r}
@@ -151,16 +82,171 @@ fileWosCore<-tempfile()
 writeLines(unlist(lapply(paste0(dirWosCore,dir(dirWosCore,pattern="ris")),function(x)c(readLines(x),""))),con = fileWosCore)
 
 
-A<-read_ris(fileProquest,title="T1")
-B<-read_ris(fileInformit,title="T1",multiLine="N2")
-C<-read_ris(fileWosCore)
+proquest<-read_ris(fileProquest,title="T1")
+proquest<-synoFields(proquest)
+informit<-read_ris(fileInformit,title="T1",multiLine="N2")
+informit<-synoFields(informit)
+wosCore<-read_ris(fileWosCore)
+```
+
+## Reading unique file
+
+```{r}
+ebsco <- read_ris("../../Search/Results/EbscoJames/620fd6a2-22fd-429e-aa34-9bd22d3fffed.ris",title = "T1")
+ebsco <- synoFields(ebsco)
+embase <- read_ris("../../Search/Results/Embase20230418/records.ris",title="T1",multiLine = "N2")
+embase <-synoFields(embase,c("T1","N2","Y1","A1"),c("TI","AB","PY","AU"))
+angel <- read_ris("../../Search/Results/angelGene20230502/angelgene.ris")
+scopus <- read_ris("../../Search/Results/scopus20230503/scopus.ris")
+wosScielo <- read_ris("../../Search/Results/wosSciELO20230503/savedrecs.ris")
+```
+
+
+## description
+
+```{r}
+dataList<-c("scopus","wosCore","wosScielo","embase","ebsco","proquest","informit","angel")
+lapply(mget(dataList),function(x)table(x$fieldName))
+lapply(mget(dataList),function(x)table(x$content[x$fieldName=="PY"]))
 ```
 
 
 
-# Writing final Ris files
+## Corrections on files
+The functions to modify ris file objects in R are in [./modifyRis.R](./modifyRis.R)
+```{r}
+source("./modifyRis.R")
+```
+
+### Ebsco publications years
+
+The "PY" field in the ebsco files is definitely not what it should:
 
 ```{r}
+A<-extractFields(ebsco,c("PY","Y1"))
+head(A,n=10)
+any(!is.na(A$PY) & !is.na(A$Y1))
+
+```
+
+So what we will do is:
+
+1. to move "PY" to the field "Y1"
+1. extract the years from the new field "Y1"
+1. add a field "PY" to put the years
+
+```{r}
+ebsco<-changeFieldName(ebsco,"PY","Y1",title="T1")
+valPY<-gsub("^([0-9]{4})/.*","\\1",extractFields(ebsco,"Y1")$Y1)
+ebsco <- addField(ebsco, fieldName = "PY",values = valPY)
+```
+
+```{r}
+head(extractFields(ebsco,"PY")$PY)
+```
+
+
+## Finding and deleting internal duplicates in Ris Files
+
+```{r}
+intDupe_scopus <- risInternalDuplicate(scopus)
+scopus <- filterRis(scopus,intDupe_scopus$toSupp)
+
+intDupe_wosCore <- risInternalDuplicate(wosCore)
+wosCore <- filterRis(wosCore,intDupe_wosCore$toSupp)
+
+intDupe_wosScielo <- risInternalDuplicate(wosScielo)
+wosScielo <- filterRis(wosScielo,intDupe_wosScielo$toSupp)
+
+intDupe_ebsco <- risInternalDuplicate(ebsco)
+ebsco <- filterRis(ebsco,intDupe_ebsco$toSupp)
+
+intDupe_proquest <- risInternalDuplicate(proquest)
+proquest <- filterRis(proquest,intDupe_proquest$toSupp)
+
+intDupe_informit <- risInternalDuplicate(informit)
+informit <- filterRis(informit,intDupe_informit$toSupp)
+
+intDupe_embase <- risInternalDuplicate(embase)
+embase <- filterRis(embase, intDupe_embase$toSupp)
+
+angel# only one record... no 
+```
+
+```{r}
+#for(i in 2:length(dataList))
+#{
+#  for(j in 1:(i-1))
+#  {
+#    cat(paste0("dupe_",dataList[i],"_",dataList[j]," <- #compareRisDuplicate(",dataList[i],", ",dataList[j],")\n",
+#        dataList[i]," <- filterRis(",dataList[i],", dupe_",dataList[i],"_",dataList[j],"$toSupp)\n"))
+#  }
+#}
+
+dupe_wosCore_scopus <- compareRisDuplicate(wosCore, scopus)
+wosCore <- filterRis(wosCore, dupe_wosCore_scopus$toSupp)
+dupe_wosScielo_scopus <- compareRisDuplicate(wosScielo, scopus)
+wosScielo <- filterRis(wosScielo, dupe_wosScielo_scopus$toSupp)
+dupe_wosScielo_wosCore <- compareRisDuplicate(wosScielo, wosCore)
+wosScielo <- filterRis(wosScielo, dupe_wosScielo_wosCore$toSupp)
+dupe_embase_scopus <- compareRisDuplicate(embase, scopus)
+embase <- filterRis(embase, dupe_embase_scopus$toSupp)
+dupe_embase_wosCore <- compareRisDuplicate(embase, wosCore)
+embase <- filterRis(embase, dupe_embase_wosCore$toSupp)
+dupe_embase_wosScielo <- compareRisDuplicate(embase, wosScielo)
+embase <- filterRis(embase, dupe_embase_wosScielo$toSupp)
+dupe_ebsco_scopus <- compareRisDuplicate(ebsco, scopus)
+ebsco <- filterRis(ebsco, dupe_ebsco_scopus$toSupp)
+dupe_ebsco_wosCore <- compareRisDuplicate(ebsco, wosCore)
+ebsco <- filterRis(ebsco, dupe_ebsco_wosCore$toSupp)
+dupe_ebsco_wosScielo <- compareRisDuplicate(ebsco, wosScielo)
+ebsco <- filterRis(ebsco, dupe_ebsco_wosScielo$toSupp)
+dupe_ebsco_embase <- compareRisDuplicate(ebsco, embase)
+ebsco <- filterRis(ebsco, dupe_ebsco_embase$toSupp)
+dupe_proquest_scopus <- compareRisDuplicate(proquest, scopus)
+proquest <- filterRis(proquest, dupe_proquest_scopus$toSupp)
+dupe_proquest_wosCore <- compareRisDuplicate(proquest, wosCore)
+proquest <- filterRis(proquest, dupe_proquest_wosCore$toSupp)
+dupe_proquest_wosScielo <- compareRisDuplicate(proquest, wosScielo)
+proquest <- filterRis(proquest, dupe_proquest_wosScielo$toSupp)
+dupe_proquest_embase <- compareRisDuplicate(proquest, embase)
+proquest <- filterRis(proquest, dupe_proquest_embase$toSupp)
+dupe_proquest_ebsco <- compareRisDuplicate(proquest, ebsco)
+proquest <- filterRis(proquest, dupe_proquest_ebsco$toSupp)
+dupe_informit_scopus <- compareRisDuplicate(informit, scopus)
+informit <- filterRis(informit, dupe_informit_scopus$toSupp)
+dupe_informit_wosCore <- compareRisDuplicate(informit, wosCore)
+informit <- filterRis(informit, dupe_informit_wosCore$toSupp)
+dupe_informit_wosScielo <- compareRisDuplicate(informit, wosScielo)
+informit <- filterRis(informit, dupe_informit_wosScielo$toSupp)
+dupe_informit_embase <- compareRisDuplicate(informit, embase)
+informit <- filterRis(informit, dupe_informit_embase$toSupp)
+dupe_informit_ebsco <- compareRisDuplicate(informit, ebsco)
+informit <- filterRis(informit, dupe_informit_ebsco$toSupp)
+#dupe_informit_proquest <- compareRisDuplicate(informit, proquest)
+#informit <- filterRis(informit, dupe_informit_proquest$toSupp)
+dupe_angel_scopus <- compareRisDuplicate(angel, scopus)
+angel <- filterRis(angel, dupe_angel_scopus$toSupp)
+dupe_angel_wosCore <- compareRisDuplicate(angel, wosCore)
+angel <- filterRis(angel, dupe_angel_wosCore$toSupp)
+dupe_angel_wosScielo <- compareRisDuplicate(angel, wosScielo)
+angel <- filterRis(angel, dupe_angel_wosScielo$toSupp)
+dupe_angel_embase <- compareRisDuplicate(angel, embase)
+angel <- filterRis(angel, dupe_angel_embase$toSupp)
+dupe_angel_ebsco <- compareRisDuplicate(angel, ebsco)
+angel <- filterRis(angel, dupe_angel_ebsco$toSupp)
+dupe_angel_proquest <- compareRisDuplicate(angel, proquest)
+angel <- filterRis(angel, dupe_angel_proquest$toSupp)
+dupe_angel_informit <- compareRisDuplicate(angel, informit)
+angel <- filterRis(angel, dupe_angel_informit$toSupp)
+
+
+```
+
+
+# Writing final Ris files
+
+```r
 DIR <- "../../Search/finalRis"
 if(dir.exists(DIR))
 {
