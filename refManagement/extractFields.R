@@ -28,7 +28,7 @@ extractFields <- function(extractedRis, fields=c("DO","TI","AU"),sep="|")
     fieldName=extractedRis$fieldName[!is.na(extractedRis$fieldName)&extractedRis$fieldName%in%fields],
     record=extractedRis$lineRegId[!is.na(extractedRis$fieldName)&extractedRis$fieldName%in%fields],
     content=extractedRis$content[!is.na(extractedRis$fieldName)&extractedRis$fieldName%in%fields])
-  f_multi<-sapply(by(tab,INDICES = tab$fieldName,FUN = duplicated),any)
+  f_multi<-sapply(by(tab[c("fieldName","record")],INDICES = tab$fieldName,FUN = duplicated),any)
   #
   reg<-extractedRis$registers$id
   no_multi_field <- names(f_multi)[!f_multi]

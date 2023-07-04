@@ -38,3 +38,12 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# User RData files
+*/*.RData
+
+
+# Python environment
+*_env/
+
+

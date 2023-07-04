@@ -156,6 +156,38 @@ grepl("class climate",ebscoTS$KW)|grepl("classroom climate",ebscoTS$KW)),"id"]
 ebsco <- filterRis(ebsco, toSupp)
 ```
 
+### Creating a Ris files from James' proquest Excel file
+
+```r
+require(openxlsx)
+proquestJames_xl <- read.xlsx("../../Search/Results/proquestJames/Climate Education Project 04-05-2023.xlsx", sheet=2)
+summary(proquestJames_xl)
+#which(is.na(proquestJames_xl),arr.ind=T)
+apply(proquestJames_xl,2,function(x)table(is.na(x)))
+table(proquestJames_xl$SourceType)
+library(dplyr)
+with(proquestJames_xl,
+     mutate(TY=case_when(
+       SourceType=="Blogs, Podcasts, & Websites" ~ 'MULTI',
+       SourceType=="Books" ~ 'BOOK',
+       SourceType == "Conference Papers & Proceedings" ~ 'CONF',
+       SourceType == "Dissertations & Theses" ~ 'THES',
+       SourceType == "Government & Official Publications" ~ 'GOVDOC',
+       SourceType == "Magazines" ~ 'MGZN',
+       SourceType == "Newspapers" ~ 'NEWS',
+       SourceType == "Other Sources" ~ 'GEN',
+       SourceType == "Reports" ~ 'RPRT',
+       SourceType == "Scholarly Journals" ~ 'JOUR',
+       SourceType == "Trade Journals" ~ "LEGAL",
+       SourceType == "GEN",
+       
+     ))
+     
+     )
+
+
+```
+
 
 
 ## Finding and deleting internal duplicates in Ris Files
@@ -183,6 +215,11 @@ intDupe_embase <- risInternalDuplicate(embase)
 embase <- filterRis(embase, intDupe_embase$toSupp)
 
 angel# only one record... no 
+list_noIntDupl<-mget(c("scopus","wosCore","wosScielo","ebsco","proquest","informit","embase","angel"))
+names(list_noIntDupl)<-c("scopus","wosCore","wosScielo","ebsco","proquest","informit","embase","angel")
+save(list_noIntDupl,file="noIntDupl.RData")
+
+
 ```
 
 ```{r}

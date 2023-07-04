@@ -22,7 +22,7 @@ read_ris <- function(risFile,keepCompleteRaw = T, extractFields = T, title="TI",
   #}
   titleLines<-grep(regexiseField(title),fileLines)
   abstractLines<-grep(regexiseField("AB"),fileLines)
-  stopifnot(length(sep_registers)+1==length(titleLines))
+  #stopifnot(length(sep_registers)+1==length(titleLines))
   registers <- data.frame(
     id=1:(length(sep_registers)+1),
     begin=c(1,sep_registers+1),

@@ -1,0 +1,604 @@
+---
+title: "Preliminary analyses, at the end of Title/Abstract screening"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+
+# Reading and cleaning file
+
+We've got a problem here: Cadima modify the references of the Ris file in a weird way, adding a lot of empty lines and mixing the fields from the various formats of input from the source databases.
+In order to make a clean file, I will use the standard used by Scopus/WOS, which seems not to be in agreement with the ris standard, but is very likely to be recognised everywhere
+
+
+```r
+fileRis <- "../../screening/res_scr_ta_20230621.ris"
+source("../refManagement/readRis.R")
+#read_ris(fileRis)
+A<-readLines(fileRis)
+length(grep(regexiseField("TI"),A))
+length(grep(regexiseField("T2"),A))
+length(grep(regexiseField("TY"),A))
+length(grep(regexiseField("ER"),A))
+```
+
+For now we will read the information in Excel:
+```{r}
+xlFile <- "../../screening/res_scr_ta_20230621.xlsx"
+xlFileWithEx <- "../../screening/res_scr_ta_20230621_filtered.xlsx"
+require(openxlsx)
+tab <- read.xlsx(xlFile)[-1,]
+tab2<-read.xlsx(xlFileWithEx)
+excluded <- !tab$Article.ID%in%tab2$Article.ID
+
+```
+
+## Reading the original files
+
+I believe that to get the cleanest ris file possible, the only solution is to get back to the original files that we have send to Cadima in the first place.
+
+```{r}
+source("../refManagement/readRis.R")
+source("../refManagement/modifyRis.R")
+source("../refManagement/extractFields.R")
+dosOrigFiles <- "../../Search/finalRis/"
+dir(dosOrigFiles)
+angel <- read_ris(paste(dosOrigFiles,"angel.ris",sep=""))
+ebsco <- read_ris(paste(dosOrigFiles,"ebsco.ris",sep=""), title = "T1")
+ebsco <- synoFields(ebsco)
+proquest <- read_ris(paste(dosOrigFiles,"proquest.ris",sep=""), title = "T1")
+proquest <- synoFields(proquest)
+scopus <- read_ris(paste(dosOrigFiles,"scopus.ris",sep=""))
+wosCore <- read_ris(paste(dosOrigFiles,"wosCore.ris",sep=""))
+wosScielo <- read_ris(paste(dosOrigFiles,"wosScielo.ris",sep=""))
+embase <- read_ris(paste(dosOrigFiles,"embase.ris",sep=""), title = "T1",multiLine=NA)
+embase <- synoFields(embase,fieldFrom = c("T1", "N2", "Y1"), fieldTo = c("TI", "AB", "PY"))
+informit <- read_ris(paste(dosOrigFiles,"informit.ris",sep=""), title = "T1",multiLine=NA)
+informit <- synoFields(informit)
+
+load("../refManagement/noIntDupl.RData")
+
+
+```
+
+
+
+```{r}
+extractFields(scopus,c("DO","TI"))
+tab$Title<-sub("\\n$","",tab$Title)
+tab$DOI<-sub("\\n$","",tab$DOI)
+tab[,c("DOI","Title","publication.year")]
+
+# extracting the information from the original files
+#extractedOriginal <- lapply(mget(c("scopus","wosCore","wosScielo","embase","ebsco","proquest","informit")),extractFields,c("DO","TI","PY"))
+#names(extractedOriginal)<-c("scopus","wosCore","wosScielo","embase","ebsco","proquest","informit")
+extractedOriginal <- lapply(list_noIntDupl,extractFields,c("DO","TI","PY","AU","AB"))
+tab$DOI <- sub("^https://doi.org/","",tab$DOI)
+tab$title_simp<-tolower(gsub("[^A-Za-z0-9]","",tab$Title,perl = T))
+for(i in 1:length(extractedOriginal))
+{
+  if ("DO" %in% names(extractedOriginal[[i]]))
+  {
+    extractedOriginal[[i]]$DO<-sub("^https://doi.org/","",extractedOriginal[[i]]$DO)
+  }
+  extractedOriginal[[i]]$title_simp<-tolower(gsub("[^A-Za-z0-9]","",extractedOriginal[[i]]$TI,perl = T))
+}
+
+# searching records
+records<-list()
+for(i in 1:nrow(tab))
+{
+  records[[i]]<-data.frame()
+  for(j in 1:length(extractedOriginal))
+  {
+    if(is.null(tab$DOI[i])|is.na(tab$DOI[i]))
+    {
+      toCheck<-which(extractedOriginal[[j]]$title_simp==tab$title_simp[i])
+      if(length(toCheck>0))
+      {
+      records[[i]] <- rbind(records[[i]],
+                            data.frame(
+                              base=names(extractedOriginal)[j],
+                              record=extractedOriginal[[j]]$id[toCheck],
+                              sameYear=as.numeric(extractedOriginal[[j]]$PY[toCheck])==as.numeric(tab$publication.year[i]),
+                              sameDOI=NA,
+                              sameTitleSimp=T,
+                              sameTitle=extractedOriginal[[j]]$TI[toCheck]==tab$Title[i]
+                            ))
+        
+      }
+    }else{
+      toCheck <- which(extractedOriginal[[j]]$DO==tab$DOI[i] | extractedOriginal[[j]]$title_simp==tab$title_simp[i])
+      if(length(toCheck>0))
+      {
+      records[[i]] <- rbind(records[[i]],
+                            data.frame(
+                              base=names(extractedOriginal)[j],
+                              record=extractedOriginal[[j]]$id[toCheck],
+                              sameYear=as.numeric(extractedOriginal[[j]]$PY[toCheck])==as.numeric(tab$publication.year[i]),
+                              sameDOI=extractedOriginal[[j]]$DO[toCheck]==tab$DOI[i],
+                              sameTitleSimp=extractedOriginal[[j]]$title_simp[toCheck]==tab$title_simp[i],
+                              sameTitle=extractedOriginal[[j]]$TI[toCheck]==tab$Title[i]
+                            ))
+      }
+    }
+  }
+}
+res<-list()
+for(i in 1:length(records))
+{
+  res[[i]]<-list()
+  res[[i]]$tab<-tab[i,]
+  res[[i]]$records<-records[[i]]
+  res[[i]]$risRecord<-list()
+  res[[i]]$extractedInfo<-data.frame()
+  for(j in 1:nrow(records[[i]]))
+  {
+    basename<-records[[i]][j,"base"]
+    res[[i]]$risRecord[[j]]<-list_noIntDupl[[basename]]$raw [list_noIntDupl[[basename]]$lineRegId==records[[i]][j,"record"]]
+    res[[i]]$extractedInfo<-rbind(res[[i]]$extractedInfo,
+      extractedOriginal[[basename]][extractedOriginal[[basename]]$id==records[[i]][j,"record"],c("DO","TI","PY","AU","AB")]
+    )
+  }
+}
+```
+
+```{r}
+inBase<-table(
+  rep(tab$Article.ID,sapply(res,function(x)nrow(x$records))),
+  unlist(sapply(res,function(x)x$records$base))
+)
+```
+
+```{r}
+basePriority<-c("wosCore","scopus","ebsco","proquest","embase","wosScielo","informit")
+whichRecord <- sapply(res,function(x,pr)which.min(match(x$records$base,pr)),pr=basePriority)
+risRecords_total<-unlist(mapply(function(x,wr)x$risRecord[wr],res,whichRecord))
+risRecords_excluded<-unlist(mapply(function(x,wr)x$risRecord[wr],res[excluded],whichRecord[excluded]))
+risRecords_kept<-unlist(mapply(function(x,wr)x$risRecord[wr],res[!excluded],whichRecord[!excluded]))
+unclear<-tab$rated.unclear=="Yes"
+unclear[!excluded]<-tab2$rated.unclear=="Yes"
+risRecords_kept_unclear<-unlist(mapply(function(x,wr)x$risRecord[wr],res[!excluded&unclear],whichRecord[!excluded&unclear]))
+chosenRecords<-Reduce(rbind,mapply(function(x,wr)x$records[wr,],res,whichRecord,SIMPLIFY = F))
+rownames(chosenRecords)<-tab$Article.ID
+compRec<-data.frame()
+for(i in 1:nrow(tab))
+{
+  base<-chosenRecords[i,"base"]
+  record<-chosenRecords$record[i]
+  compRec<-rbind(compRec,data.frame(
+    title=tab$Title[i],
+    titleFound=extractedOriginal[[base]]$TI[extractedOriginal[[base]]$id==record]
+  ))
+}
+folderRis<-"../../screening/risAfterScreening/"
+lapply(paste0(folderRis,dir(folderRis)),unlink)
+writeLines(text=risRecords_total,con=paste0(folderRis,"total.ris"))
+writeLines(text=risRecords_excluded,con=paste0(folderRis,"excluded.ris"))
+writeLines(text=risRecords_kept,con=paste0(folderRis,"kept.ris"))
+writeLines(text=risRecords_kept_unclear,con=paste0(folderRis,"kept_unclear.ris"))
+```
+
+# Downloading pdf
+There are some functions in python to search for doi, and from doi to download pdf.
+In order to make python work, we need to use the virtual environment which has been created with:
+
+```bash
+python -m venv sr_cce_env
+```
+
+The environment may be activated with:
+
+```bash
+. ./sr_cce_env/bin/activate
+```
+Then we need to install the packages `habanero`, `scidownl` and `Levenshtein`
+
+```bash
+pip install habanero scidownl Levenshtein
+```
+
+
+```{r}
+require(reticulate)
+use_virtualenv("../sr_cce_env/")
+py_config()
+```
+
+## First step: missing doi
+
+Let's concatenate the DOI from the final tab of cadima and the DOI from the ris original information
+
+```{r}
+DOI<-data.frame(
+  from_tab=tab$DOI,
+  from_ris=mapply(function(x,wr)x$extractedInfo[wr,"DO"],res,whichRecord)
+)
+doi<-ifelse(is.na(DOI$from_tab),DOI$from_ris,DOI$from_tab)
+title<-tab$Title
+titleSinDoi<-title[is.na(doi)]
+py$tsd<-titleSinDoi
+```
+
+
+
+```{python}
+from habanero import Crossref
+from Levenshtein import ratio
+cr=Crossref()
+findFromTitle=[cr.works(query_bibliographic = t, limit=1) for t in tsd]
+```
+
+we only keep the doi when the title found and the original one have a levenshtein ratio of more than 0.9
+
+```{python}
+foundDoi=[]
+for i in range(len(tsd)):
+  print(tsd[i])
+#  print(findFromTitle[i]['status'])
+  if ratio(tsd[i],findFromTitle[i]['message']['items'][0]['title'][0])>.9:
+    foundDoi.append(findFromTitle[i]['message']['items'][0]['DOI'])
+    print('found title:')
+    print(findFromTitle[i]['message']['items'][0]['title'])
+  else:
+    print('Nope, nothing found here')
+    foundDoi.append('')
+  print('\n')
+```
+
+```{r}
+doi[is.na(doi)]<-py$foundDoi
+doi[doi==""]<-NA
+
+```
+
+extracting the name of the first author:
+```{r}
+infoExtracted<-Reduce(rbind,mapply(function(x,wr)x$extractedInfo[wr,c("DO","TI","AU","PY","AB")],res,whichRecord,SIMPLIFY = F))
+infoExtracted$doiFinal<-doi
+infoExtracted$PY[is.na(infoExtracted$PY)]<-tab$publication.year[is.na(infoExtracted$PY)]
+fa<-sapply(strsplit(infoExtracted$AU,"\\|"),function(x)gsub("^([^,]*).*","\\1",x[1]))
+fa[is.na(fa)]<-"Anonymous"
+py<-ifelse(is.na(infoExtracted$PY),"_noYear",infoExtracted$PY)
+abbrev<-paste(fa,py,sep="")
+abbrev<-gsub("[ -]","_",abbrev)
+multiFaPy<-table(abbrev)[table(abbrev)>1]
+multi_postLet<- lapply(multiFaPy,function(x)c("",letters)[1:x])
+for(i in 1:length(multi_postLet))
+{
+  abbrev[abbrev==names(multi_postLet)[i]]<-paste(names(multi_postLet)[i],multi_postLet[[i]],sep="")
+}
+infoExtracted$abbrev<-abbrev
+infoExtracted$titleModif<- gsub("[\"']","",infoExtracted$TI)
+if(file.exists("./downloadPdf.sh")){unlink("./downloadPdf.sh")}
+writeLines(
+paste0("scidownl download ",
+      ifelse(is.na(infoExtracted$doiFinal),
+             paste0("--title \"",infoExtracted$titleModif,"\""),
+             paste0("--doi \"",infoExtracted$doiFinal,"\"")
+      ),
+      " --out ../../PDF_included_total/",infoExtracted$abbrev,".pdf"
+      ),"./downloadPdf.sh")
+```
+
+```bash
+. ../sr_cce_env/bin/activate
+bash ./downloadPdf.sh
+find ../../PDF_included_total/ -name "*.pdf" -size -50k -delete
+```
+
+```{r}
+downloaded<-infoExtracted$abbrev%in%gsub("\\.pdf$","",dir("../../PDF_included_total/", pattern="pdf$"))
+if(file.exists("../../PDF_included_total/PyPaperBot/doiPPB")){unlink("../../PDF_included_total/PyPaperBot/doiPPB")}
+writeLines(
+infoExtracted[!downloaded&!is.na(infoExtracted$doiFinal),"doiFinal"],"../../PDF_included_total/PyPaperBot/doiPPB")
+```
+
+Then apply the following bash code:
+
+```bash
+cd ..
+python -m PyPaperBot --doi-file="../PDF_included_total/PyPaperBot/doiPPB" --dwn-dir="../PDF_included_total/PyPaperBot/"
+```
+
+```{r}
+ppb_res<-read.csv("../../PDF_included_total/PyPaperBot/result.csv")
+names_final<-infoExtracted$abbrev[match(ppb_res$DOI,infoExtracted$doiFinal)][ppb_res$Downloaded=="True"]
+namesPPB<-ppb_res$PDF.Name[ppb_res$Downloaded=="True"]
+A<-mapply(file.rename,paste0("../../PDF_included_total/PyPaperBot/",namesPPB), paste0("../../PDF_included_total/",names_final,".pdf"))
+downloaded<-infoExtracted$abbrev%in%gsub("\\.pdf$","",dir("../../PDF_included_total/", pattern="pdf$"))
+```
+
+```{r}
+if(file.exists("./downloadPdf_pass2.sh")){unlink("./downloadPdf_pass2.sh")}
+writeLines(
+paste0("scidownl download ",
+      ifelse(is.na(infoExtracted$doiFinal[!downloaded]),
+             paste0("--title \"",infoExtracted$titleModif[!downloaded],"\""),
+             paste0("--doi \"",infoExtracted$doiFinal[!downloaded],"\"")
+      ),
+      " --out ../../PDF_included_total/",infoExtracted$abbrev[!downloaded],".pdf"
+      ),"./downloadPdf_pass2.sh")
+```
+
+
+```python
+from scidownl import scihub_download
+len(r.infoExtracted['abbrev'])
+[r.infoExtracted['doiFinal'][i] =="NA" for i in range(len(r.infoExtracted['abbrev']))]
+with open('downloadPdf.sh','w') as f:
+  for i in range(len(r.infoExtracted['abbrev'])):
+    if r.infoExtracted['doiFinal'][i] == "NA":
+      #scihub_download(r.infoExtracted["TI"][i],'title',out='../../PDF_included_total/'+r.infoExtracted['abbrev'][i]+'.pdf')
+      f.write('scidownl download --title "'+r.infoExtracted["TI"][i]+'" --out ../../PDF_included_total/'+r.infoExtracted['abbrev'][i]+'.pdf\n')
+    else:
+      #scihub_download(r.infoExtracted["doiFinal"][i],'doi',out='../../PDF_included_total/'+r.infoExtracted['abbrev'][i]+'.pdf')
+      f.write('scidownl download --doi "'+r.infoExtracted["doiFinal"][i]+'" --out ../../PDF_included_total/'+r.infoExtracted['abbrev'][i]+'.pdf\n')
+```
+
+
+
+
+
+
+# Comparing with close reviews
+
+```{r}
+extractedOriginal_join<-Reduce(rbind,lapply(extractedOriginal[names(extractedOriginal)!="angel"],function(x)x[c("DO","TI","AU","title_simp")]))
+
+```
+
+
+
+## Nepras et al 2022
+
+```{r}
+source("../refManagement/filterRis.R")
+file <- "../../screening/nepras2022Reference.ris"
+nepras2022<-read_ris(file)
+ex_nepras2022<-extractFields(nepras2022,fields=c("DO","TI","PY","AU"))
+ex_nepras2022$title_simp<-tolower(gsub("[^A-Za-z0-9]","",ex_nepras2022$TI,perl = T))
+sum(ex_nepras2022$DO%in%tab$DOI|ex_nepras2022$title_simp%in%tab$title_simp)/nrow(ex_nepras2022)
+nepras2022Analysed<-c(83,40,44,21,16,41,38,26,31,49,19,42,43,48,23,56,58,45,24,55,29,53,79,59,64, 20,33,54,62,
+                      52, 46, 65, 11, 60, 37, 15, 34, 17, 12, 32, 27, 50, 35)
+#ex_nepras2022[grep("communication",ex_nepras2022$TI),]
+nep_an<-ex_nepras2022[as.character(nepras2022Analysed),]
+sum(nep_an$DO%in%tab$DO|nep_an$title_simp%in%tab$title_simp)/nrow(nep_an)
+A<-nep_an$id[nep_an$id%in%as.character(nepras2022Analysed)&!(nep_an$DO%in%tab$DO|nep_an$title_simp%in%tab$title_simp)]
+B<-filterRis(nepras2022,idToSupp = nepras2022$registers$id[!nepras2022$registers$id%in%A],writeFile = "../../screening/nepras2022MissingInOurs.ris")
+nep_an$inOrig <- nep_an$title_simp%in%extractedOriginal_join$title_simp|nep_an$DO%in%extractedOriginal_join$DO
+```
+
+
+
+
+## Monroe et al 2017
+
+```{r}
+file <- "../../screening/monroe2017references.ris"
+filesSupp <- c("../../screening/suppMon2017_1.ris","../../screening/suppMon2017_2.ris")
+tmpFile<-tempfile()
+writeLines(c(readLines(file),"",readLines(filesSupp[1]),"",readLines(filesSupp[2])),tmpFile)
+monroe2017<-read_ris(tmpFile)
+ex_monroe2017<-extractFields(monroe2017,fields=c("DO","TI","PY","AU"))
+ex_monroe2017$title_simp<-tolower(gsub("[^A-Za-z0-9]","",ex_monroe2017$TI,perl = T))
+sum(ex_monroe2017$DO%in%tab$DOI|ex_monroe2017$title_simp%in%tab$title_simp)/nrow(ex_monroe2017)
+monroe2017Analysed<-c(106,107,54,110,102,35,93,78,100,55, 
+                      96,77,91,69,60,82,34,101,50,42,109,
+                      43,75,49,105,95,67,46,84,72,70,44,
+                      98,66,68,39,76,57,52,61,56,97,64,111,
+                      63,29,122,123
+                      )
+
+ex_monroe2017[grep("Alexandar",ex_monroe2017$AU),]
+
+
+
+
+
+mon_an<-ex_monroe2017[as.character(monroe2017Analysed),]
+sum(mon_an$DO%in%tab$DO|mon_an$title_simp%in%tab$title_simp)/nrow(mon_an)
+A<-mon_an$id[mon_an$id%in%as.character(monroe2017Analysed)&!(mon_an$DO%in%tab$DO|mon_an$title_simp%in%tab$title_simp)]
+B<-filterRis(monroe2017,idToSupp = monroe2017$registers$id[!monroe2017$registers$id%in%A],writeFile = "../../screening/monroe2017MissingInOurs.ris")
+mon_an$in_orig <- mon_an$title_simp%in%extractedOriginal_join$title_simp|mon_an$DO%in%extractedOriginal_join$DO
+```
+
+Missing:
+
+McNeal, Karen, James Hammerman, Jonathan Christiansen, and F. Julian Carroll. 2014. “Climate Change Education in the Southeastern U.S. through Public Dialogue: Not Just Preaching to the Choir.” Journal of Geoscience Education 62 (4):631–644. doi:10.5408/13-061.1.
+
+McNeal, Karen S., Julie C. Libarkin, Tamara Shapiro Ledley, Erin Bardar, Nick Haddad, Kathy Ellins, and Saranee Dutta. 2014. “The Role of Research in Online Curriculum Development: The Case of EarthLabs Climate Change and Earth System Modules.” Journal of Geoscience Education 62 (4): 560–577. doi:10.5408/13-060.1.
+
+## Benjamin list
+
+
+First we need to extract the doi in order to be able to make a list and be able to extract a ris from a database:
+```{r}
+doi_bl<-c(
+"10.3390/ijerph19052532",
+"10.1038/s41558-019-0463-3",
+"10.1016/j.wasman.2011.07.023",
+"10.3390/su12177030",
+"10.1177/1098300720940168",
+"10.1371/journal.pone.0134993",
+"10.1371/journal.pone.0206266",
+"10.3390/su141610365",
+"10.3390/ijerph19138039",
+"10.3390/su12051748",
+"10.1186/s12889-023-15033-y",
+"10.1016/j.erss.2018.06.023",
+"10.1080/1350462032000126096",
+"10.1080/13504622.2019.1607258"
+)
+(wosDoiSearch<-paste0("DO=",doi_bl,collapse=" OR "))
+```
+The result from WOS is downloaded.
+
+
+```{r}
+file<-"../../screening/list_Benjamin_wos.ris"
+list_bl<-read_ris(file)
+ex_listBl<-extractFields(list_bl)
+doi_bl[!doi_bl%in%ex_listBl$DO]
+# We download the missing ref from scopus
+file2<-"../../screening/list_Benjamin_scopus.ris"
+fileTmp<-tempfile()
+writeLines(c(readLines(file),"",readLines(file2)),fileTmp)
+list_bl<-read_ris(fileTmp)
+ex_bl<-extractFields(list_bl,fields=c("DO","TI","PY","AU"))
+ex_bl$title_simp<-tolower(gsub("[^A-Za-z0-9]","",ex_bl$TI,perl = T))
+A<-ex_bl$id[!(ex_bl$DO%in%tab$DO|ex_bl$title_simp%in%tab$title_simp)]
+B<-filterRis(list_bl,idToSupp = list_bl$registers$id[!list_bl$registers$id%in%A],writeFile = "../../screening/listBenjaminMissingInOurs.ris")
+```
+
+# Exporting table of references to check from extra sources
+
+Re-reading from ris files:
+
+```{r}
+mon2017Miss<-read_ris("../../screening/monroe2017MissingInOurs.ris")
+nap2022Miss<-read_ris("../../screening/nepras2022MissingInOurs.ris")
+blMiss<-read_ris("../../screening/listBenjaminMissingInOurs.ris")
+tableExtraRef<-Reduce(rbind.data.frame,lapply(mget(c("mon2017Miss","nap2022Miss","blMiss")),extractFields,c("DO","TI","PY","AB","AU")))
+tableExtraRef$title_simp<-tolower(gsub("[^A-Za-z0-9]","",tableExtraRef$TI,perl = T))
+tableExtraRef$source<-rep(c("Monroe 2017","Nepras 2022","Benjamin expert list"),times=c(mon2017Miss$nbRecords,nap2022Miss$nbRecords,blMiss$nbRecords))
+tableExtraRef$in_origBases<-tableExtraRef$title_simp %in% extractedOriginal_join$title_simp | tableExtraRef$DO%in%extractedOriginal_join$DO
+write.xlsx(data.frame(
+  DOI=tableExtraRef$DO,
+  source=tableExtraRef$source,
+  Title=tableExtraRef$TI,
+  Authors=tableExtraRef$AU,
+  Year=tableExtraRef$PY,
+  Abstract=tableExtraRef$AB,
+  InOrigBase=tableExtraRef$in_origBases
+),file="../../screening/ExtraRef.xlsx"
+           )
+```
+
+## Downloading pdf from extra references
+```{r}
+fa<-sapply(strsplit(tableExtraRef$AU,"\\|"),function(x)gsub("^([^,]*).*","\\1",x[1]))
+fa[is.na(fa)]<-"Anonymous"
+py<-ifelse(is.na(tableExtraRef$PY),"_noYear",tableExtraRef$PY)
+abbrev<-paste(fa,py,sep="")
+abbrev<-gsub("[ -]","_",abbrev)
+alreadyThere<-abbrev[abbrev%in%infoExtracted$abbrev]
+A<-lapply(alreadyThere,function(x,a)a[grep(x,a)],a=infoExtracted$abbrev)
+names(A)<-alreadyThere
+A
+multiFaPy<-table(abbrev)[table(abbrev)>1]
+names(multiFaPy)%in%alreadyThere
+abbrev[abbrev%in%alreadyThere]<-paste0(abbrev[abbrev%in%alreadyThere],"a")
+multi_postLet<- lapply(multiFaPy,function(x)c("",letters)[1:x])
+for(i in 1:length(multi_postLet))
+{
+  abbrev[abbrev==names(multi_postLet)[i]]<-paste(names(multi_postLet)[i],multi_postLet[[i]],sep="")
+}
+tableExtraRef$abbrev<-abbrev
+tableExtraRef$titleModif<- gsub("[\"']","",tableExtraRef$TI)
+if(file.exists("./DownloadExtraListPdf.sh")){unlink("./DownloadExtraListPdf.sh")}
+writeLines(
+paste0("scidownl download ",
+      ifelse(is.na(tableExtraRef$DO),
+             paste0("--title \"",tableExtraRef$titleModif,"\""),
+             paste0("--doi \"",tableExtraRef$DO,"\"")
+      ),
+      " --out ../../PDF_included_total/",tableExtraRef$abbrev,".pdf"
+      ),"./DownloadExtraListPdf.sh")
+```
+
+# Final organization for full text screening
+
+```{r}
+fileFinal<-"../../screening/res_scr_ta_final.xlsx"
+extraRefDecision<-read.xlsx(fileFinal,sheet="extraReferences")
+basicRefDecision<-read.xlsx(fileFinal,sheet="Included title_abstract")
+nrow(extraRefDecision)
+nrow(tableExtraRef)
+extraRefDecision$DOI==tableExtraRef$DO
+tableExtraRef$Decision<-extraRefDecision$Decision.final
+table(tableExtraRef$Decision)
+
+infoExtracted$cadimaRecord<-tab$Article.ID
+infoExtracted$Decision<-"No"
+infoExtracted$Decision[match(basicRefDecision$Article.ID,tab$Article.ID)]<-basicRefDecision$Decision
+mode(inBase)<-"logical"
+infoExtracted$source<-sapply(apply(inBase,1,function(x,n)n[x],n=colnames(inBase)),paste,collapse=",")
+
+# pdfCadima<-dir("../../PDF_included_total/cadimaDowloadPDF/",pattern="\\.pdf$")
+pdfAbbrev<-dir("../../PDF_included_total/",pattern="\\.pdf")
+# cadimaRecordPdf<-gsub("^([0-9]+)-.*","\\1",pdfCadima)
+# newNamePdf<-paste0(infoExtracted[match(cadimaRecordPdf,infoExtracted$cadimaRecord),"abbrev"],".pdf")
+# for(i in 1:length(pdfCadima)) {
+#   if(!newNamePdf[i]%in%pdfAbbrev) {
+#     file.rename(paste0("../../PDF_included_total/cadimaDowloadPDF/",pdfCadima[i]),paste0("../../PDF_included_total/",newNamePdf[i]))
+#   }
+# }
+
+abbrevPdf<-gsub("\\.pdf$","",dir("../../PDF_included_total/",pattern="\\.pdf"))
+infoExtracted$Downloaded<-infoExtracted$abbrev%in%abbrevPdf
+infoExtracted$title_simp<-tolower(gsub("[^A-Za-z0-9]","",tab$Title,perl = T))
+tableExtraRef$Downloaded<-tableExtraRef$abbrev%in%abbrevPdf
+
+tableExtraRef_nextStep<-tableExtraRef[tableExtraRef$Decision%in%c("Yes","Unclear"),]
+infoExtracted_nextStep<-infoExtracted[infoExtracted$Decision%in%c("Yes","Unclear"),]
+
+tabIncluded<-rbind(
+  data.frame(
+  source=tableExtraRef_nextStep$source,
+  abbrev=tableExtraRef_nextStep$abbrev,
+  pdfDownloaded=tableExtraRef_nextStep$Downloaded,
+  linkDoi=paste0("https://doi.org/",tableExtraRef_nextStep$DO),
+  number_cadima=NA,
+  unclear=tableExtraRef_nextStep$Decision=="Unclear",
+  authors=tableExtraRef_nextStep$AU,
+  year=tableExtraRef_nextStep$PY,
+  title=tableExtraRef_nextStep$TI,
+  abstract=tableExtraRef_nextStep$AB
+  )
+  ,
+  data.frame(
+  source=infoExtracted_nextStep$source,
+  abbrev=infoExtracted_nextStep$abbrev,
+  pdfDownloaded=infoExtracted_nextStep$Downloaded,
+  linkDoi=paste0("https://doi.org/",infoExtracted_nextStep$doiFinal),
+  number_cadima=infoExtracted_nextStep$cadimaRecord,
+  unclear=infoExtracted_nextStep$Decision=="Unclear",
+  authors=infoExtracted_nextStep$AU,
+  year=infoExtracted_nextStep$PY,
+  title=infoExtracted_nextStep$TI,
+  abstract=infoExtracted_nextStep$AB
+  ))
+write.xlsx(tabIncluded,file="../../screening/includedFullTextScreening.xlsx")
+toPutUnclear<-paste0("../../PDF_included_total/",tabIncluded$abbrev[tabIncluded$unclear&tabIncluded$pdfDownloaded],".pdf")
+toPutIncluded<-paste0("../../PDF_included_total/",tabIncluded$abbrev[tabIncluded$pdfDownloaded],".pdf")
+system(paste("ln",toPutUnclear,"../../PDF_included_total/unclear",collapse=" ; "))
+system(paste("ln",toPutIncluded,"../../PDF_included_total/included",collapse=" ; "))
+
+res[infoExtracted$Decision%in%c("Yes","Unclear")]
+```
+
+```r
+fileFinalNoModify<-"../../screening/KeepThatAfterTAscreening.xlsx"
+write.xlsx(tabIncluded,fileFinalNoModify)
+```
+
+
+
+# Small graph about the years
+
+```r
+A<-barplot(table(tab$rated.unclear,factor(tab$publication.year,levels=min(as.numeric(tab$publication.year),na.rm = T):max(as.numeric(tab$publication.year),na.rm=T))),legend=T,args.legend = list(x="topleft",legend=c("At least one unclear","No doubt")))
+dates <- c(1994,2010,2015)
+datesOnGraph <- A[dates - as.numeric(min(as.numeric(tab$publication.year), na.rm = T)) +1]
+events <- c("United nations: Climate\nchange education framework","UNESCO: Climate Change\nEducation for Sustainable\nDevelopment program","Paris Agreement\nand SDG adoption")
+arrows(x0=datesOnGraph,y0=c(25,25,40),y1=rep(0,3),x1=datesOnGraph,length = .2,col="red", lwd=2)
+text(datesOnGraph,c(30,30,45),events, cex=.7)
+```
+
+
+

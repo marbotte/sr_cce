@@ -1,7 +1,7 @@
 Management of duplicates in ris files
 ================
 Marius Bottin
-2023-05-10
+2023-06-24
 
 - [1 Extracting and analysing ris
   Files](#1-extracting-and-analysing-ris-files)
@@ -22,6 +22,8 @@ Marius Bottin
     - [4.4.1 Ebsco publications years](#441-ebsco-publications-years)
     - [4.4.2 Class climate and classroom climate in Ebsco
       file](#442-class-climate-and-classroom-climate-in-ebsco-file)
+    - [4.4.3 Creating a Ris files from James’ proquest Excel
+      file](#443-creating-a-ris-files-from-james-proquest-excel-file)
   - [4.5 Finding and deleting internal duplicates in Ris
     Files](#45-finding-and-deleting-internal-duplicates-in-ris-files)
 - [5 Writing final Ris files](#5-writing-final-ris-files)
@@ -954,6 +956,36 @@ toSupp <- ebscoTS[which(grepl("class climate", ebscoTS$TI) | grepl("classroom cl
 ebsco <- filterRis(ebsco, toSupp)
 ```
 
+### 4.4.3 Creating a Ris files from James’ proquest Excel file
+
+``` r
+require(openxlsx)
+proquestJames_xl <- read.xlsx("../../Search/Results/proquestJames/Climate Education Project 04-05-2023.xlsx", sheet=2)
+summary(proquestJames_xl)
+#which(is.na(proquestJames_xl),arr.ind=T)
+apply(proquestJames_xl,2,function(x)table(is.na(x)))
+table(proquestJames_xl$SourceType)
+library(dplyr)
+with(proquestJames_xl,
+     mutate(TY=case_when(
+       SourceType=="Blogs, Podcasts, & Websites" ~ 'MULTI',
+       SourceType=="Books" ~ 'BOOK',
+       SourceType == "Conference Papers & Proceedings" ~ 'CONF',
+       SourceType == "Dissertations & Theses" ~ 'THES',
+       SourceType == "Government & Official Publications" ~ 'GOVDOC',
+       SourceType == "Magazines" ~ 'MGZN',
+       SourceType == "Newspapers" ~ 'NEWS',
+       SourceType == "Other Sources" ~ 'GEN',
+       SourceType == "Reports" ~ 'RPRT',
+       SourceType == "Scholarly Journals" ~ 'JOUR',
+       SourceType == "Trade Journals" ~ "LEGAL",
+       SourceType == "GEN",
+       
+     ))
+     
+     )
+```
+
 ## 4.5 Finding and deleting internal duplicates in Ris Files
 
 ``` r
@@ -1524,6 +1556,14 @@ angel  # only one record... no
     ## [7] "Global Education and Climate Change : Looking at Climate Change Education through the lens of Global Education"                                           
     ## [8] "https://angel-network.net/sites/default/files/Briefing_Global%2BEducation%2Band%2BClimate%2BChange.pdf"                                                   
     ## [9] "ER  -"
+
+``` r
+list_noIntDupl <- mget(c("scopus", "wosCore", "wosScielo", "ebsco", "proquest",
+    "informit", "embase", "angel"))
+names(list_noIntDupl) <- c("scopus", "wosCore", "wosScielo", "ebsco", "proquest",
+    "informit", "embase", "angel")
+save(list_noIntDupl, file = "noIntDupl.RData")
+```
 
 ``` r
 # for(i in 2:length(dataList)) { for(j in 1:(i-1)) {

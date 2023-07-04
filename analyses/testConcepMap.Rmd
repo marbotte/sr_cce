@@ -1,0 +1,44 @@
+---
+title: "Preliminary analyses, at the end of Title/Abstract screening"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+
+```{r}
+xlFile <- "../../screening/res_scr_ta_20230621_filtered.xlsx"
+require(openxlsx)
+tab <- read.xlsx(xlFile)[-1,]
+```
+
+Modifying tab:
+
+
+```{r}
+tab$Title<-sub("\\r\\n$","",tab$Title)
+tab$Abstract<- sub("\\r\\n$","",tab$name)
+tab$Abstract <- sapply(strsplit(tab$Abstract,"©"),function(x)x[1])
+tab2<-data.frame(
+  AU = tab$Author,
+  TI = tab$Title,
+  AB = tab$Abstract,
+  PY = tab$publication.year
+)
+require(openxlsx)
+A<-tempfile(fileext = "xlsx")
+write.xlsx(tab2,file=A)
+B<-convert2df(A,dbsource="generic",format="excel")
+tab2$DB<-"various"
+tab2$SR<-1:nrow(tab2)
+tab2$TC<-0
+tab2$SO<-"a"
+ba<-biblioAnalysis(tab2)
+conceptualStructure(tab2,field="TI")
+A <- thematicMap(tab2,field="AB",minfreq = 50,ngrams=1,remove.terms = c("climate","environmental","change","students","education","study"))
+plot(A$map)
+```
+
