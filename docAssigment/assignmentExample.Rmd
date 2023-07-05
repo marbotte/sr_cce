@@ -1,0 +1,92 @@
+---
+title: "Example of use of the assignment functions with the documents of the full text screening"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+
+# Reading source functions
+
+
+```{r}
+source("./docAssignment_functions.R")
+```
+
+# Creating the project
+
+All the information we need to create the project is in the excel file with the document, that we will use as well to make the document reviews.
+
+```{r}
+require(openxlsx)
+completeFTS <- read.xlsx("../../screening/fullTextScreening/fullTextScreening.xlsx")
+listDocument <- data.frame(documents=completeFTS$abbrev,categ="default")
+listDocument$categ[completeFTS$group%in%c("Thesis","thesis","Book")] <- "thesesOrBook"
+listDocument$categ[!is.na(completeFTS$group)]
+listDocument$categ[!completeFTS$pdfDownloaded]<-"missingPdf"
+listDocument$categ[completeFTS$unclear]<-"unclear"
+(documents<-tapply(listDocument$documents,listDocument$categ,function(x)x))
+```
+
+Then we create the project with the following function:
+
+```r
+createProj(
+  name="FTS",
+  documents=documents,
+  people=c("Ana","Marius","Sara","Luisa","Sergio","Benjamin","JuanGabriel"),
+  nameFile="FTS.RData",
+  dirProject="../../screening/fullTextScreening/",
+  nbReview_categ=c(default=2,missingPdf=2,thesesOrBook=2,unclear=2),
+  priority=c("unclear","default","missingPdf","thesesOrBook")
+)
+```
+
+We load the project that way:
+
+```{r}
+(load("../../screening/fullTextScreening/FTS.RData"))
+```
+
+# Making assignment by hand
+
+Luisa told me that she already started reviewing the documents from the unclear section:
+
+```r
+FTS<-addManualAssignment(FTS,person="Luisa",documents=documents$unclear)
+```
+
+# Making automatic assignments
+
+Sergio asked me 5 documents:
+
+```r
+FTS<-createAssigment_auto(FTS,nbDoc=5,person="Sergio")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Current state
+
+
+In the following table, you will see the current state of assigned document in the Full Text Screening project:
+
+```{r}
+require(knitr)
+rt<-reviewTable(FTS)
+kable(rt)
+```
+

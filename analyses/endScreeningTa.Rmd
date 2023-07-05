@@ -579,7 +579,7 @@ toPutIncluded<-paste0("../../PDF_included_total/",tabIncluded$abbrev[tabIncluded
 system(paste("ln",toPutUnclear,"../../PDF_included_total/unclear",collapse=" ; "))
 system(paste("ln",toPutIncluded,"../../PDF_included_total/included",collapse=" ; "))
 
-res[infoExtracted$Decision%in%c("Yes","Unclear")]
+#res[infoExtracted$Decision%in%c("Yes","Unclear")]
 ```
 
 ```r
