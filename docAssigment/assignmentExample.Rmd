@@ -82,11 +82,32 @@ FTS<-createAssigment_auto(FTS,nbDoc=5,person="Sergio")
 # Current state
 
 
-In the following table, you will see the current state of assigned document in the Full Text Screening project:
 
 ```{r}
 require(knitr)
 rt<-reviewTable(FTS)
+```
+
+Percentage of documents attributed at least once: `r round((sum(rt$total>0)/length(rt$total))*100,2)`%
+
+Percentage of documents attributed twice: `r round((sum(rt$nbMissing==0)/nrow(rt))*100,2)`%
+
+
+Number of documents attributed by person:
+
+
+```{r}
+colSums(rt[,FTS$description$people])
+```
+
+
+
+
+
+
+In the following table, you will see the current state of assigned document in the Full Text Screening project:
+
+```{r}
 kable(rt)
 ```
 
