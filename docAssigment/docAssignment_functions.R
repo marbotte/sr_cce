@@ -42,7 +42,7 @@ reviewTable <- function(proj)
   names(category)<-unlist(proj$description$documents)
   res$category <- category[rownames(res)]
   totalNeeded <- proj$description$nbReview_categ[match(res$category,names(proj$description$nbReview_categ))]
-  res$nbMissing <- totalNeeded-res$total
+  res$nbMissing <- sapply(totalNeeded-res$total,function(x)ifelse(x<0,0,x))
   res$priority <- match(res$category,proj$description$priority)
   return(res)
 }
