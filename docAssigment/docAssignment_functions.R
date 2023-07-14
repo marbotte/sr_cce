@@ -55,7 +55,7 @@ calculateDocPriority <- function(proj, person, mode=c("default","newDoc"))
 	rt<-rt[rt[,person]==0&rt$nbMissing>0,]
 	if(nrow(rt)==0){stop(person," has already finished the reviews")}
 	if(mode=="default")
-	{return(rownames(rt)[order(rt$priority,rt$nbMissing,runif(nrow(rt)),decreasing=c(F,T,F))])}
+	{return(rownames(rt)[order(rt$priority,rt$nbMissing,runif(nrow(rt)),decreasing=c(F,F,F))])}
 	if(mode=="newDoc")
 	{return(rownames(rt)[order(rt$total,rt$priority,runif(nrow(rt)),decreasing=c(F,F,F))])}
 }
