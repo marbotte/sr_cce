@@ -1,0 +1,90 @@
+---
+title: "Reading the results of the assignments and extracting the interesting data (example of a full-text screening exercise)"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+
+In order to read the results of the assignments, we put all the resulting excel files in a unique directory:
+
+
+
+```{r}
+require(openxlsx)
+dirResults <- "../../screening/fullTextScreening/DONE/"
+patternFiles <- "^assignment([0-9]{1,4})_([A-Za-z]+)_([0-9]+)\\.xlsx$"
+sheetName <- "Sheet 1"
+idDoc <- "abbrev"
+(filesResults<-dir(dirResults,pattern=patternFiles))
+assignment<-gsub(patternFiles,"\\1",filesResults)
+person<-gsub(patternFiles,"\\2",filesResults)
+dateAssign<-gsub(patternFiles,"\\3",filesResults)
+listResults<-lapply(paste(dirResults,filesResults,sep="/"),read.xlsx,sheet=sheetName)
+nameCol<-lapply(listResults,colnames)
+unNameCol<-unique(unlist(nameCol))
+docAnalysed<-data.frame(
+  assignment=rep(assignment,sapply(listResults,nrow)),
+  person=rep(person,sapply(listResults,nrow)),
+  id=unlist(lapply(listResults,function(x,a)x[,a],a=idDoc)),
+  inclusion=unlist(lapply(listResults,function(x,a)x[,a],a="Inclusion")),
+  reasonExcl=unlist(lapply(listResults,function(x,a)x[,a],a="ReasonExlusion")),
+  comment=unlist(lapply(listResults,function(x,a)x[,a],a="Comment"))
+  
+)
+
+table(docAnalysed$inclusion)
+docAnalysed$incl<-NA
+docAnalysed$incl[docAnalysed$inclusion%in%c("1","TRUE")]<-T
+docAnalysed$incl[docAnalysed$inclusion%in%c("0","FALSE")]<-F
+table(docAnalysed$incl,useNA="ifany")
+```
+Which are the documents which were reviewed more than once:
+
+```{r}
+nbRev<-table(docAnalysed$id)
+(moreThanOnce <- names(nbRev)[nbRev>1])
+conflictOnInclusion <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$id[docAnalysed$id%in%moreThanOnce],function(tab)
+  {
+    any(is.na(tab$incl))|length(unique(tab$incl))>1
+  },simplify = T)
+(w_conflict_incl <- names(conflictOnInclusion)[conflictOnInclusion])
+toTest_conflictReason<-moreThanOnce[!moreThanOnce%in%w_conflict_incl]
+conflictOnReason <- by(docAnalysed[docAnalysed$id%in%toTest_conflictReason,],docAnalysed$id[docAnalysed$id%in%toTest_conflictReason],function(tab)
+  {
+    length(unique(tab$reasonExcl))>1
+  },simplify=T)
+(w_conflict_reason<-names(conflictOnReason)[conflictOnReason])
+```
+# Conflicts
+
+## Inclusion 
+
+```{r results='asis'}
+require(kableExtra)
+for(i in w_conflict_incl)
+{
+  cat('### ',i,'\n\n')
+  tab_toShow<-docAnalysed[docAnalysed$id==i,c("assignment","person","incl","reasonExcl","comment")]
+  #tab_toShow$comment[!is.na(tab_toShow$comment)&nchar(tab_toShow$comment)>50]<-paste(substr(tab_toShow$comment[!is.na(tab_toShow$comment)&nchar(tab_toShow$comment)>50],1,46),"...")
+  cat(kable(tab_toShow,format="html"))
+  cat("\n\n")
+}
+```
+
+## Reason of exclusion
+
+```{r results='asis'}
+require(kableExtra)
+for(i in w_conflict_reason)
+{
+  cat('### ',i,'\n\n')
+  tab_toShow<-docAnalysed[docAnalysed$id==i,c("assignment","person","incl","reasonExcl","comment")]
+  #tab_toShow$comment[!is.na(tab_toShow$comment)&nchar(tab_toShow$comment)>50]<-paste(substr(tab_toShow$comment[!is.na(tab_toShow$comment)&nchar(tab_toShow$comment)>50],1,46),"...")
+  cat(kable(tab_toShow,format="html"))
+  cat("\n\n")
+}
+```

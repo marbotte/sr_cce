@@ -2,7 +2,7 @@ Example of use of the assignment functions with the documents of the
 full text screening
 ================
 Marius Bottin
-2023-07-14
+2023-07-24
 
 - [1 Reading source functions](#1-reading-source-functions)
 - [2 Creating the project](#2-creating-the-project)
@@ -190,9 +190,9 @@ require(knitr)
 rt<-reviewTable(FTS)
 ```
 
-Percentage of documents attributed at least once: 58.37%
+Percentage of documents attributed at least once: 73.15%
 
-Percentage of documents attributed twice: 29.18%
+Percentage of documents attributed twice: 45.53%
 
 Number of documents attributed by person:
 
@@ -201,9 +201,9 @@ colSums(rt[,FTS$description$people])
 ```
 
     ##         Ana      Marius        Sara       Luisa      Sergio    Benjamin 
-    ##         115          65          25          15           5          10 
+    ##         165          65          25          25          20          10 
     ## JuanGabriel 
-    ##          10
+    ##          15
 
 In the following table, you will see the current state of assigned
 document in the Full Text Screening project:
@@ -216,9 +216,9 @@ kable(rt)
 |-----------------------|----:|-------:|-----:|------:|-------:|---------:|------------:|------:|:-------------|----------:|---------:|
 | Zografakis2008        |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Klosterman2010        |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
-| Mason1998             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Mason1998             |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
 | Svihla2012            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Sellmann2013a         |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Sellmann2013a         |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Reinfried2012         |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Otieno2014            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Karpudewan2015a       |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
@@ -228,173 +228,173 @@ kable(rt)
 | Akaygun2021           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Li2022                |   0 |      0 |    0 |     0 |      0 |        1 |           1 |     2 | default      |         0 |        2 |
 | Kabir2015             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Aksel_Stenberdt2023   |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Aksel_Stenberdt2023   |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Oberauer2023          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Kumar2023             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Sutela2023            |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Sutela2023            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Catanzaro2023         |   0 |      0 |    1 |     0 |      0 |        1 |           0 |     2 | default      |         0 |        2 |
-| Crouze2023            |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Meixner2023           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Crouze2023            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
+| Meixner2023           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Littrell2022          |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Wang2022              |   0 |      0 |    0 |     0 |      0 |        1 |           0 |     1 | default      |         1 |        2 |
-| Kolenaty2022          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Wang2022              |   1 |      0 |    0 |     0 |      0 |        1 |           0 |     2 | default      |         0 |        2 |
+| Kolenaty2022          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Aydogan2022           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Schubatzky2022        |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Skains2022            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Skains2022            |   1 |      0 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Kubisch2022           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Steffensen2022        |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Sukardi2022           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Turner2022            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Turner2022            |   1 |      0 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Nafisah2022           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | White2022             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Herrick2022           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Gladwin2022           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Herrick2022           |   1 |      0 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
+| Gladwin2022           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Hugel2022             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Ferguson2022          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Ferguson2022          |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
 | da_Silva2022          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | McGowan2022           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Gutierrez2022         |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | van_Zee2022           |   0 |      1 |    0 |     0 |      0 |        1 |           0 |     2 | default      |         0 |        2 |
-| Cebesoy2022           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Trott2022             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Cebesoy2022           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Trott2022             |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
 | Leitao2022            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Muller2021            |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Muller2021            |   0 |      1 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Hepper2021            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Choi2021              |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Sandoval_Rivera2021   |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Zhong2021             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Choi2021              |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
+| Sandoval_Rivera2021   |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Zhong2021             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Jones2021             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Ross2021              |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Levrini2021           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Bhattacharya2021      |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Bhattacharya2021      |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
 | Leckey2021            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Salas_Rueda2021       |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Pimentel2021          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Bopardikar2021        |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Bopardikar2021        |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
 | Tallapragada2021      |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Pfirman2021           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Pfirman2021           |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
 | Schrot2021a           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Tasti2021             |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Tasti2021             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Wu2021                |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Sezen_Barrie2021      |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Sezen_Barrie2021      |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
 | Khadka2021            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Bentz2020             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Petersen2020          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Parth2020             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| da_Rocha2020          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| da_Rocha2020          |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
 | Hosman2020            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Park2020              |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Trott2020             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Sezen_Barrie2020      |   0 |      1 |    0 |     0 |      0 |        1 |           0 |     2 | default      |         0 |        2 |
-| Deisenrieder2020      |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Nkoana2020            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Deisenrieder2020      |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Nkoana2020            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Trott2020a            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Goeschl2020           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Goeschl2020           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Dormody2020           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Kretser2020           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Rooney2021            |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Prosser_Bravo2020     |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Kretser2020           |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
+| Rooney2021            |   0 |      1 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
+| Prosser_Bravo2020     |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Levrini2019           |   0 |      1 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Salsabila2019         |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Harker_Schuch2020     |   0 |      1 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Nakamura2019          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Cebesoy2019           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Cebesoy2019           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | de_Sousa2019          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Bush2019a             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Trott2019             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Landon2019            |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Liu2019               |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Trott2019             |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
+| Landon2019            |   0 |      1 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
+| Liu2019               |   0 |      1 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Monroe2019            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Walsh2019             |   0 |      1 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
 | Pekel2019             |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Varela_Losada2019     |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Siegner2018           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Siegner2018           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Smith2019             |   0 |      1 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Sandhaus2018          |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Stevenson2018         |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Stevenson2018         |   1 |      0 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Keller2019            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Breslyn2019           |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Plutzer2018           |   0 |      0 |    0 |     0 |      0 |        1 |           0 |     1 | default      |         1 |        2 |
-| Puttick2018           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Meya2018              |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Breslyn2019           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
+| Plutzer2018           |   1 |      0 |    0 |     0 |      0 |        1 |           0 |     2 | default      |         0 |        2 |
+| Puttick2018           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Meya2018              |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Walsh2018             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Tomlinson2018         |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Chang2018             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Chang2018             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Drewes2018            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Stevenson2018a        |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Ozen2018              |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Jacobson2017          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Burkholder2017        |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Ozen2018              |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
+| Jacobson2017          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Burkholder2017        |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Gkotzos2017           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Tasquier2017          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Karpudewan2017        |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Nicholas_Figueroa2017 |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Karpudewan2017        |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Nicholas_Figueroa2017 |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Eggert2017            |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
 | Korfgen2017           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Blaum2017             |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Goulah2017            |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Goulah2017            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Carey2017             |   0 |      0 |    1 |     0 |      0 |        1 |           0 |     2 | default      |         0 |        2 |
 | Hestness2017          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Chankrajang2017       |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Hu2016                |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Manalo2016            |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Swim2017              |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Arya2016              |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Arya2016              |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Monroe2016            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Shea2016              |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Chin2016              |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Saribaş2016           |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
 | Boon2016              |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Aksut2016             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Aksut2016             |   1 |      0 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Todd2016              |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Yoon2016              |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Yoon2016a             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Raes2016              |   0 |      0 |    0 |     0 |      0 |        1 |           0 |     1 | default      |         1 |        2 |
-| Chong2015             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Logan2015             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Raes2016              |   0 |      0 |    0 |     0 |      1 |        1 |           0 |     2 | default      |         0 |        2 |
+| Chong2015             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Logan2015             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Korsager2015          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Tasquier2015          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Tasquier2015          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Karpudewan2015        |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Visintainer2015       |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Sellmann2015          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Bofferding2015        |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Miller2015            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Miller2015            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Nussbaum2015          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Flora2014             |   0 |      1 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
 | Gold2015              |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Holthuis2014          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Bodzin2014            |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | DeWaters2014          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Jeong2014             |   0 |      0 |    0 |     0 |      0 |        1 |           0 |     1 | default      |         1 |        2 |
-| Sundberg2013          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Ratinen2013           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Jeong2014             |   0 |      0 |    0 |     0 |      1 |        1 |           0 |     2 | default      |         0 |        2 |
+| Sundberg2013          |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
+| Ratinen2013           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Harker_Schuch2013     |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Lambert2013           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Lombardi2013          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Allen2014             |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Day2013               |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Roscoe2013            |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Jin2013               |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Veijalainen2013       |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Sellmann2013          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Day2013               |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Roscoe2013            |   0 |      1 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
+| Jin2013               |   1 |      0 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
+| Veijalainen2013       |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Sellmann2013          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Kinsey2012            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Makrakis2012          |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Chordnork2012         |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Chordnork2012         |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Ruboon2012            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Makrakis2012a         |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Makrakis2012a         |   0 |      1 |    0 |     1 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Feldpausch_Parker2013 |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Picketts2012          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Picketts2012          |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
 | Feierabend2012        |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Varma2012             |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Varma2012             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | McNeill2012           |   0 |      1 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Lambert2012           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Lombardi2012          |   0 |      0 |    0 |     0 |      0 |        1 |           0 |     1 | default      |         1 |        2 |
+| Lombardi2012          |   0 |      0 |    0 |     0 |      1 |        1 |           0 |     2 | default      |         0 |        2 |
 | Porter2012            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Koseoglu2011          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Sternang2012          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Bozdogan2011          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Robelia2011           |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Taber2009             |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Taber2009             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Cordero2008           |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Schuster2008          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Pruneau2006           |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
@@ -403,33 +403,33 @@ kable(rt)
 | Pruneau2003           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Trott2020b            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Cibik2022             |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Muller2021a           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Kathiresan2021        |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Muller2021a           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Kathiresan2021        |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Leckey2021a           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
-| Sumrall2021           |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Lozano2022            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Sumrall2021           |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
+| Lozano2022            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Eichinger2022         |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Oe2022                |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Williams2017          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Anonymous2021         |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Anonymous2021         |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Parant2017            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Kreibich2011          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Gomes2015             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | da_Silva2022a         |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Prosser_Bravo2022     |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Silva2021             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Oliveira2021          |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Oliveira2021          |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Bello_Benavides2019   |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Bright2020            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Dormody2021           |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Aldila2018            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Roychoudhury2017      |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Kern2017              |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Kern2017              |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Liu2015               |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Musselman2020         |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
+| Musselman2020         |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default      |         0 |        2 |
 | Xie2014               |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Bhattacharya2020      |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
-| Taylor2020            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Taylor2020            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Le2019                |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Gutierrez2016         |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Chattuchai2015        |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
@@ -437,12 +437,12 @@ kable(rt)
 | Wallace2018           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | McNeal2014            |   0 |      1 |    1 |     0 |      0 |        0 |           0 |     2 | default      |         0 |        2 |
 | Walsh2012             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Kumar2018             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Kumar2018             |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Ouariachi2017a        |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
 | Cohen2013             |   0 |      1 |    0 |     0 |      0 |        0 |           1 |     2 | default      |         0 |        2 |
 | Swim2013              |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Nauck2020             |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
-| Kullar2011            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | default      |         2 |        2 |
+| Kullar2011            |   1 |      0 |    0 |     0 |      0 |        0 |           0 |     1 | default      |         1 |        2 |
 | Caputo2018            |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | missingPdf   |         2 |        3 |
 | Alexandar2017         |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | missingPdf   |         2 |        3 |
 | Wannawichitra2011     |   0 |      0 |    0 |     0 |      0 |        0 |           0 |     0 | missingPdf   |         2 |        3 |
