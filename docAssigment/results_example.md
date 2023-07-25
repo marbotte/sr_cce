@@ -2,23 +2,29 @@ Reading the results of the assignments and extracting the interesting
 data (example of a full-text screening exercise)
 ================
 Marius Bottin
-2023-07-24
+2023-07-25
 
 - [1 Conflicts](#1-conflicts)
   - [1.1 Inclusion](#11-inclusion)
     - [1.1.1 Andrews1993](#111-andrews1993)
-    - [1.1.2 Ellins2014](#112-ellins2014)
-    - [1.1.3 Maddox2011](#113-maddox2011)
-    - [1.1.4 Markowitz2018](#114-markowitz2018)
-    - [1.1.5 Öhman2013](#115-öhman2013)
-    - [1.1.6 Pruneau2006a](#116-pruneau2006a)
-    - [1.1.7 Rebich2005](#117-rebich2005)
-    - [1.1.8 Rooney_Varga2018](#118-rooney_varga2018)
-    - [1.1.9 Saribaş2016](#119-saribaş2016)
-    - [1.1.10 Stevenson2016a](#1110-stevenson2016a)
-    - [1.1.11 Vize2012](#1111-vize2012)
+    - [1.1.2 Bello_Benavides2019](#112-bello_benavides2019)
+    - [1.1.3 Ellins2014](#113-ellins2014)
+    - [1.1.4 Feierabend2012](#114-feierabend2012)
+    - [1.1.5 Koseoglu2011](#115-koseoglu2011)
+    - [1.1.6 Levrini2021](#116-levrini2021)
+    - [1.1.7 Maddox2011](#117-maddox2011)
+    - [1.1.8 Markowitz2018](#118-markowitz2018)
+    - [1.1.9 Öhman2013](#119-öhman2013)
+    - [1.1.10 Pruneau2006a](#1110-pruneau2006a)
+    - [1.1.11 Rooney_Varga2018](#1111-rooney_varga2018)
+    - [1.1.12 Saribaş2016](#1112-saribaş2016)
+    - [1.1.13 Stevenson2016a](#1113-stevenson2016a)
+    - [1.1.14 Vize2012](#1114-vize2012)
+    - [1.1.15 Yoon2016a](#1115-yoon2016a)
   - [1.2 Reason of exclusion](#12-reason-of-exclusion)
-    - [1.2.1 Yarker2013](#121-yarker2013)
+    - [1.2.1 Otieno2014](#121-otieno2014)
+    - [1.2.2 Rebich2005](#122-rebich2005)
+    - [1.2.3 Yarker2013](#123-yarker2013)
 
 In order to read the results of the assignments, we put all the
 resulting excel files in a unique directory:
@@ -37,15 +43,16 @@ idDoc <- "abbrev"
 (filesResults<-dir(dirResults,pattern=patternFiles))
 ```
 
-    ## [1] "assignment10_Marius_20230710.xlsx"     
-    ## [2] "assignment11_JuanGabriel_20230711.xlsx"
-    ## [3] "assignment13_JuanGabriel_20230714.xlsx"
-    ## [4] "assignment3_Ana_20230705.xlsx"         
-    ## [5] "assignment4_Marius_20230705.xlsx"      
-    ## [6] "assignment5_Ana_20230706.xlsx"         
-    ## [7] "assignment6_Ana_20230706.xlsx"         
-    ## [8] "assignment7_Ana_20230706.xlsx"         
-    ## [9] "assignment8_Ana_20230706.xlsx"
+    ##  [1] "assignment10_Marius_20230710.xlsx"     
+    ##  [2] "assignment11_JuanGabriel_20230711.xlsx"
+    ##  [3] "assignment13_JuanGabriel_20230714.xlsx"
+    ##  [4] "assignment14_Marius_20230714.xlsx"     
+    ##  [5] "assignment3_Ana_20230705.xlsx"         
+    ##  [6] "assignment4_Marius_20230705.xlsx"      
+    ##  [7] "assignment5_Ana_20230706.xlsx"         
+    ##  [8] "assignment6_Ana_20230706.xlsx"         
+    ##  [9] "assignment7_Ana_20230706.xlsx"         
+    ## [10] "assignment8_Ana_20230706.xlsx"
 
 ``` r
 assignment<-gsub(patternFiles,"\\1",filesResults)
@@ -69,7 +76,7 @@ table(docAnalysed$inclusion)
 
     ## 
     ##       0       1   FALSE    TRUE UNCLEAR 
-    ##      14      18      33      95       1
+    ##      19      31      37      97       1
 
 ``` r
 docAnalysed$incl<-NA
@@ -80,7 +87,7 @@ table(docAnalysed$incl,useNA="ifany")
 
     ## 
     ## FALSE  TRUE  <NA> 
-    ##    47   113     5
+    ##    56   128     6
 
 Which are the documents which were reviewed more than once:
 
@@ -89,12 +96,22 @@ nbRev<-table(docAnalysed$id)
 (moreThanOnce <- names(nbRev)[nbRev>1])
 ```
 
-    ##  [1] "Andrews1993"      "Baker2013"        "Clark2020"        "Cohen2013"       
-    ##  [5] "Dal2015a"         "Eggert2017"       "Ellins2014"       "Flora2014"       
-    ##  [9] "Gold2015a"        "Klosterman2010"   "Lawson2019a"      "Maddox2011"      
-    ## [13] "Markowitz2018"    "McNeal2014a"      "Ng2019"           "Öhman2013"       
-    ## [17] "Pruneau2006a"     "Rebich2005"       "Rooney_Varga2018" "Saribaş2016"     
-    ## [21] "Stevenson2016a"   "Vize2012"         "Walsh2019"        "Yarker2013"
+    ##  [1] "Andrews1993"         "Aydogan2022"         "Baker2013"          
+    ##  [4] "Bello_Benavides2019" "Chattuchai2015"      "Clark2020"          
+    ##  [7] "Cohen2013"           "Dal2015a"            "DeWaters2014"       
+    ## [10] "Drewes2018"          "Eggert2017"          "Ellins2014"         
+    ## [13] "Feierabend2012"      "Flora2014"           "Gold2015a"          
+    ## [16] "Holthuis2014"        "Keller2019"          "Klosterman2010"     
+    ## [19] "Koseoglu2011"        "Lawson2019a"         "Leckey2021a"        
+    ## [22] "Leitao2022"          "Lester2006"          "Levrini2021"        
+    ## [25] "Lombardi2013"        "Maddox2011"          "Markowitz2018"      
+    ## [28] "McNeal2014a"         "Ng2019"              "Öhman2013"          
+    ## [31] "Otieno2014"          "Park2020"            "Parth2020"          
+    ## [34] "Pruneau2006a"        "Rebich2005"          "Rooney_Varga2018"   
+    ## [37] "Ross2021"            "Salas_Rueda2021"     "Saribaş2016"        
+    ## [40] "Schrot2021a"         "Sellmann2015"        "Stevenson2016a"     
+    ## [43] "Vize2012"            "Wallace2018"         "Walsh2019"          
+    ## [46] "Yarker2013"          "Yoon2016a"
 
 ``` r
 conflictOnInclusion <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$id[docAnalysed$id%in%moreThanOnce],function(tab)
@@ -104,9 +121,11 @@ conflictOnInclusion <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalys
 (w_conflict_incl <- names(conflictOnInclusion)[conflictOnInclusion])
 ```
 
-    ##  [1] "Andrews1993"      "Ellins2014"       "Maddox2011"       "Markowitz2018"   
-    ##  [5] "Öhman2013"        "Pruneau2006a"     "Rebich2005"       "Rooney_Varga2018"
-    ##  [9] "Saribaş2016"      "Stevenson2016a"   "Vize2012"
+    ##  [1] "Andrews1993"         "Bello_Benavides2019" "Ellins2014"         
+    ##  [4] "Feierabend2012"      "Koseoglu2011"        "Levrini2021"        
+    ##  [7] "Maddox2011"          "Markowitz2018"       "Öhman2013"          
+    ## [10] "Pruneau2006a"        "Rooney_Varga2018"    "Saribaş2016"        
+    ## [13] "Stevenson2016a"      "Vize2012"            "Yoon2016a"
 
 ``` r
 toTest_conflictReason<-moreThanOnce[!moreThanOnce%in%w_conflict_incl]
@@ -117,7 +136,7 @@ conflictOnReason <- by(docAnalysed[docAnalysed$id%in%toTest_conflictReason,],doc
 (w_conflict_reason<-names(conflictOnReason)[conflictOnReason])
 ```
 
-    ## [1] "Yarker2013"
+    ## [1] "Otieno2014" "Rebich2005" "Yarker2013"
 
 # 1 Conflicts
 
@@ -178,7 +197,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-50
+75
 
 </td>
 <td style="text-align:left;">
@@ -210,7 +229,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-65
+90
 
 </td>
 <td style="text-align:left;">
@@ -242,7 +261,7 @@ Missing Full Text
 </tbody>
 </table>
 
-### 1.1.2 Ellins2014
+### 1.1.2 Bello_Benavides2019
 
 <table>
 <thead>
@@ -280,7 +299,112 @@ comment
 <tr>
 <td style="text-align:left;">
 
-46
+58
+
+</td>
+<td style="text-align:left;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+They did not measure or describe any effect on the student, there are
+some reasoning about the advantages of the intervention, and about the
+difficulties to implement, but I do not see anything that we might use
+in the future steps of the analysis…
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+188
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 1.1.3 Ellins2014
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+71
 
 </td>
 <td style="text-align:left;">
@@ -312,7 +436,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-61
+86
 
 </td>
 <td style="text-align:left;">
@@ -345,7 +469,218 @@ should be discussed… See my pdf file with yellow highlighter…
 </tbody>
 </table>
 
-### 1.1.3 Maddox2011
+### 1.1.4 Feierabend2012
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+54
+
+</td>
+<td style="text-align:left;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+No idea what to do here, the objective of the research is to measure the
+complexity of arguments from students, however the 2 chosen topics are
+related to climate change, more specifically on political decisions that
+would reduce the energy consumption, and the results show that
+discussions on these topics lead to more complex reasoning in the
+students arguments…
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+108
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 1.1.5 Koseoglu2011
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+55
+
+</td>
+<td style="text-align:left;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+The outcomes are about the engagement of the students in the activity,
+not directly related to CC, even though there is a CC aspect in the
+activity.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+133
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 1.1.6 Levrini2021
 
 <table>
 <thead>
@@ -388,6 +723,112 @@ comment
 </td>
 <td style="text-align:left;">
 
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+The goal of the paper is to analyze the ability of the children to
+comprehend the future, while CC is the theme of the intervention, it is
+not really the point of the paper. Since CC is not central in the
+objective of the researchers I would tend to reject it, but I am not
+certain…
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+168
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+secondary schools, two universities, an environmental NGO,
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 1.1.7 Maddox2011
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+66
+
+</td>
+<td style="text-align:left;">
+
 3
 
 </td>
@@ -415,7 +856,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-56
+81
 
 </td>
 <td style="text-align:left;">
@@ -449,7 +890,7 @@ the focus of the author…
 </tbody>
 </table>
 
-### 1.1.4 Markowitz2018
+### 1.1.8 Markowitz2018
 
 <table>
 <thead>
@@ -487,7 +928,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-44
+69
 
 </td>
 <td style="text-align:left;">
@@ -520,7 +961,7 @@ mezclan high school students con university
 <tr>
 <td style="text-align:left;">
 
-59
+84
 
 </td>
 <td style="text-align:left;">
@@ -553,7 +994,7 @@ Study 1 OK, Study 2 No (population), Study 3 No (population), Study 4 No
 </tbody>
 </table>
 
-### 1.1.5 Öhman2013
+### 1.1.9 Öhman2013
 
 <table>
 <thead>
@@ -591,7 +1032,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-36
+61
 
 </td>
 <td style="text-align:left;">
@@ -623,7 +1064,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-51
+76
 
 </td>
 <td style="text-align:left;">
@@ -655,7 +1096,7 @@ NA
 </tbody>
 </table>
 
-### 1.1.6 Pruneau2006a
+### 1.1.10 Pruneau2006a
 
 <table>
 <thead>
@@ -693,7 +1134,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-47
+72
 
 </td>
 <td style="text-align:left;">
@@ -726,7 +1167,7 @@ maestros
 <tr>
 <td style="text-align:left;">
 
-62
+87
 
 </td>
 <td style="text-align:left;">
@@ -758,7 +1199,7 @@ NA
 </tbody>
 </table>
 
-### 1.1.7 Rebich2005
+### 1.1.11 Rooney_Varga2018
 
 <table>
 <thead>
@@ -796,109 +1237,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-35
-
-</td>
-<td style="text-align:left;">
-
-13
-
-</td>
-<td style="text-align:left;">
-
-JuanGabriel
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Population
-
-</td>
-<td style="text-align:left;">
-
-Población de estudiantes de pregrado.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-85
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 1.1.8 Rooney_Varga2018
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:left;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-45
+70
 
 </td>
 <td style="text-align:left;">
@@ -930,7 +1269,7 @@ mezclan a la poblacion (colegio, universidad) en los descenlaces
 <tr>
 <td style="text-align:left;">
 
-60
+85
 
 </td>
 <td style="text-align:left;">
@@ -963,7 +1302,7 @@ concerning only the children
 </tbody>
 </table>
 
-### 1.1.9 Saribaş2016
+### 1.1.12 Saribaş2016
 
 <table>
 <thead>
@@ -1034,7 +1373,7 @@ educación ambiental adscrito a un programa de educación elemental.
 <tr>
 <td style="text-align:left;">
 
-150
+175
 
 </td>
 <td style="text-align:left;">
@@ -1066,7 +1405,7 @@ NA
 </tbody>
 </table>
 
-### 1.1.10 Stevenson2016a
+### 1.1.13 Stevenson2016a
 
 <table>
 <thead>
@@ -1104,7 +1443,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-39
+64
 
 </td>
 <td style="text-align:left;">
@@ -1139,7 +1478,7 @@ students’ belief that global warming was happening and human caused’’
 <tr>
 <td style="text-align:left;">
 
-54
+79
 
 </td>
 <td style="text-align:left;">
@@ -1173,7 +1512,109 @@ was rationalizable, it is not!
 </tbody>
 </table>
 
-### 1.1.11 Vize2012
+### 1.1.14 Vize2012
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+74
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+89
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+I do not see any extractable outcome…
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 1.1.15 Yoon2016a
 
 <table>
 <thead>
@@ -1216,7 +1657,41 @@ comment
 </td>
 <td style="text-align:left;">
 
-3
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+The measured outcomes concern satisfaction of the student concerning the
+intervention, not directly cognition, intent and habits of students on
+climate change.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+177
+
+</td>
+<td style="text-align:left;">
+
+8
 
 </td>
 <td style="text-align:left;">
@@ -1240,38 +1715,6 @@ NA
 
 </td>
 </tr>
-<tr>
-<td style="text-align:left;">
-
-64
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-I do not see any extractable outcome…
-
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -1289,7 +1732,7 @@ for(i in w_conflict_reason)
 }
 ```
 
-### 1.2.1 Yarker2013
+### 1.2.1 Otieno2014
 
 <table>
 <thead>
@@ -1327,7 +1770,211 @@ comment
 <tr>
 <td style="text-align:left;">
 
-48
+36
+
+</td>
+<td style="text-align:left;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+University students
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+142
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 1.2.2 Rebich2005
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+13
+
+</td>
+<td style="text-align:left;">
+
+JuanGabriel
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+Población de estudiantes de pregrado.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+110
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+university students
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 1.2.3 Yarker2013
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+73
 
 </td>
 <td style="text-align:left;">
@@ -1359,7 +2006,7 @@ thesis
 <tr>
 <td style="text-align:left;">
 
-63
+88
 
 </td>
 <td style="text-align:left;">
