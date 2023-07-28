@@ -17,6 +17,8 @@ In order to read the results of the assignments, we put all the resulting excel 
 require(openxlsx)
 dirResults <- "../../screening/fullTextScreening/DONE/"
 patternFiles <- "^assignment([0-9]{1,4})_([A-Za-z]+)_([0-9]+)\\.xlsx$"
+finalDecisionFile <- "FinalDecision.xlsx"
+finalDecisionTab <- read.xlsx(paste(dirResults,finalDecisionFile,sep="/"))
 sheetName <- "Sheet 1"
 idDoc <- "abbrev"
 (filesResults<-dir(dirResults,pattern=patternFiles))
@@ -27,10 +29,10 @@ listResults<-lapply(paste(dirResults,filesResults,sep="/"),read.xlsx,sheet=sheet
 nameCol<-lapply(listResults,colnames)
 unNameCol<-unique(unlist(nameCol))
 docAnalysed<-data.frame(
-  assignment=rep(assignment,sapply(listResults,nrow)),
+  assignment=as.numeric(rep(assignment,sapply(listResults,nrow))),
   person=rep(person,sapply(listResults,nrow)),
   id=unlist(lapply(listResults,function(x,a)x[,a],a=idDoc)),
-  inclusion=unlist(lapply(listResults,function(x,a)x[,a],a="Inclusion")),
+  inclusion=gsub("^ +","",gsub(" +$" ,"", unlist(lapply(listResults,function(x,a)x[,a],a="Inclusion")))),
   reasonExcl=unlist(lapply(listResults,function(x,a)x[,a],a="ReasonExlusion")),
   comment=unlist(lapply(listResults,function(x,a)x[,a],a="Comment"))
   
@@ -47,18 +49,54 @@ Which are the documents which were reviewed more than once:
 ```{r}
 nbRev<-table(docAnalysed$id)
 (moreThanOnce <- names(nbRev)[nbRev>1])
-conflictOnInclusion <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$id[docAnalysed$id%in%moreThanOnce],function(tab)
+mTO_noFinalD <- moreThanOnce[!moreThanOnce%in%finalDecisionTab$abbrev]
+conflictOnInclusion <- by(docAnalysed[docAnalysed$id%in%mTO_noFinalD,],docAnalysed$id[docAnalysed$id%in%mTO_noFinalD],function(tab)
   {
     any(is.na(tab$incl))|length(unique(tab$incl))>1
   },simplify = T)
 (w_conflict_incl <- names(conflictOnInclusion)[conflictOnInclusion])
-toTest_conflictReason<-moreThanOnce[!moreThanOnce%in%w_conflict_incl]
+toTest_conflictReason<-mTO_noFinalD[!mTO_noFinalD%in%w_conflict_incl]
 conflictOnReason <- by(docAnalysed[docAnalysed$id%in%toTest_conflictReason,],docAnalysed$id[docAnalysed$id%in%toTest_conflictReason],function(tab)
   {
     length(unique(tab$reasonExcl))>1
   },simplify=T)
 (w_conflict_reason<-names(conflictOnReason)[conflictOnReason])
 ```
+
+# Numbers
+
+
+Number of article reviewed by more than one person:
+```{r}
+length(moreThanOnce)
+```
+
+Number of papers accepted without conflict:
+```{r}
+accepted <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$id[docAnalysed$id%in%moreThanOnce],function(tab)
+  {
+    all(tab$incl)
+  },simplify = T)
+sum(na.omit(as.logical(accepted)))
+```
+
+Reason of exclusions when excluded without conflicts:
+```{r}
+exclusionReason <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$id[docAnalysed$id%in%moreThanOnce],function(tab)
+  {
+    if(!any(is.na(tab$incl))&all(!tab$incl))
+    {return(unique(tab$reasonExcl))}else
+    {return(NA)}
+  
+  },simplify = T)
+#exclusionReason
+exclusionReason[sapply(exclusionReason,function(x)length(x)==1&!any(is.na(x)))]
+```
+
+
+
+
+
 # Conflicts
 
 ## Inclusion 
@@ -85,6 +123,24 @@ for(i in w_conflict_reason)
   tab_toShow<-docAnalysed[docAnalysed$id==i,c("assignment","person","incl","reasonExcl","comment")]
   #tab_toShow$comment[!is.na(tab_toShow$comment)&nchar(tab_toShow$comment)>50]<-paste(substr(tab_toShow$comment[!is.na(tab_toShow$comment)&nchar(tab_toShow$comment)>50],1,46),"...")
   cat(kable(tab_toShow,format="html"))
+  cat("\n\n")
+}
+```
+
+
+# Resolved conflicts
+
+```{r results='asis'} 
+resolved<-finalDecisionTab$abbrev
+for(i in resolved)
+{
+  cat('## ',i,'\n\n')
+  tab_toShow<-docAnalysed[docAnalysed$id==i,c("assignment","person","incl","reasonExcl","comment")]
+  #tab_toShow$comment[!is.na(tab_toShow$comment)&nchar(tab_toShow$comment)>50]<-paste(substr(tab_toShow$comment[!is.na(tab_toShow$comment)&nchar(tab_toShow$comment)>50],1,46),"...")
+  cat(kable(tab_toShow,format="html"))
+  cat("\n\n")
+  cat("**Decision**:\n\n")
+  cat(kable(finalDecisionTab[finalDecisionTab$abbrev==i,],format="html"))
   cat("\n\n")
 }
 ```
