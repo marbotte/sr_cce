@@ -90,7 +90,7 @@ exclusionReason <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$i
   
   },simplify = T)
 #exclusionReason
-exclusionReason[sapply(exclusionReason,function(x)length(x)==1&!any(is.na(x)))]
+(reasonOK<-exclusionReason[sapply(exclusionReason,function(x)length(x)==1&!any(is.na(x)))])
 ```
 
 
@@ -144,3 +144,24 @@ for(i in resolved)
   cat("\n\n")
 }
 ```
+
+
+# Final Numbers
+
+```{r}
+(AcceptedFinal <- c(names(accepted)[!is.na(as.logical(accepted))&as.logical(accepted)],
+                   finalDecisionTab$abbrev[!is.na(finalDecisionTab$Inclusion)&as.logical(finalDecisionTab$Inclusion)]))
+
+length(AcceptedFinal)
+
+RejectedFinal<-
+  rbind(
+    data.frame(id=names(reasonOK),reason=unlist(reasonOK)),
+    data.frame(
+      id=finalDecisionTab$abbrev[!is.na(finalDecisionTab$Inclusion)&!as.logical(finalDecisionTab$Inclusion)],
+      reason=finalDecisionTab$ReasonExlusion[!is.na(finalDecisionTab$Inclusion)&!as.logical(finalDecisionTab$Inclusion)]
+    ))
+kable(RejectedFinal,row.names = F)  
+table(RejectedFinal$reason)
+```
+
