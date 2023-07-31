@@ -9,40 +9,21 @@ Marius Bottin
   - [2.1 Inclusion](#21-inclusion)
     - [2.1.1 Bello_Benavides2019](#211-bello_benavides2019)
     - [2.1.2 Burkholder2017](#212-burkholder2017)
-    - [2.1.3 Chong2015](#213-chong2015)
-    - [2.1.4 Chordnork2012](#214-chordnork2012)
-    - [2.1.5 Crouze2023](#215-crouze2023)
-    - [2.1.6 Deisenrieder2020](#216-deisenrieder2020)
-    - [2.1.7 Eichinger2022](#217-eichinger2022)
-    - [2.1.8 Ellins2014](#218-ellins2014)
-    - [2.1.9 Feierabend2012](#219-feierabend2012)
-    - [2.1.10 Ferguson2022](#2110-ferguson2022)
-    - [2.1.11 Gold2015](#2111-gold2015)
-    - [2.1.12 Gomes2015](#2112-gomes2015)
-    - [2.1.13 Goulah2017](#2113-goulah2017)
-    - [2.1.14 Hosman2020](#2114-hosman2020)
-    - [2.1.15 Jacobson2017](#2115-jacobson2017)
-    - [2.1.16 Levrini2021](#2116-levrini2021)
-    - [2.1.17 McNeal2014a](#2117-mcneal2014a)
-    - [2.1.18 Meya2018](#2118-meya2018)
-    - [2.1.19 Miller2015](#2119-miller2015)
-    - [2.1.20 Ng2019](#2120-ng2019)
-    - [2.1.21 Oliveira2021](#2121-oliveira2021)
-    - [2.1.22 Pruneau2006a](#2122-pruneau2006a)
-    - [2.1.23 Ratinen2013](#2123-ratinen2013)
-    - [2.1.24 Saribaş2016](#2124-saribaş2016)
-    - [2.1.25 Schuster2008](#2125-schuster2008)
-    - [2.1.26 Siegner2018](#2126-siegner2018)
-    - [2.1.27 Sutela2023](#2127-sutela2023)
-    - [2.1.28 Swim2013](#2128-swim2013)
-    - [2.1.29 Zhong2021](#2129-zhong2021)
+    - [2.1.3 Chordnork2012](#213-chordnork2012)
+    - [2.1.4 Crouze2023](#214-crouze2023)
+    - [2.1.5 Ferguson2022](#215-ferguson2022)
+    - [2.1.6 Gomes2015](#216-gomes2015)
+    - [2.1.7 Levrini2021](#217-levrini2021)
+    - [2.1.8 Meya2018](#218-meya2018)
+    - [2.1.9 Oliveira2021](#219-oliveira2021)
+    - [2.1.10 Pruneau2006a](#2110-pruneau2006a)
+    - [2.1.11 Saribaş2016](#2111-saribaş2016)
+    - [2.1.12 Schuster2008](#2112-schuster2008)
+    - [2.1.13 Siegner2018](#2113-siegner2018)
+    - [2.1.14 Sutela2023](#2114-sutela2023)
+    - [2.1.15 Zhong2021](#2115-zhong2021)
   - [2.2 Reason of exclusion](#22-reason-of-exclusion)
-    - [2.2.1 da_Silva2022](#221-da_silva2022)
-    - [2.2.2 Goeschl2020](#222-goeschl2020)
-    - [2.2.3 Gutierrez2016](#223-gutierrez2016)
-    - [2.2.4 Kathiresan2021](#224-kathiresan2021)
-    - [2.2.5 Le2019](#225-le2019)
-    - [2.2.6 Logan2015](#226-logan2015)
+    - [2.2.1 Goeschl2020](#221-goeschl2020)
 - [3 Resolved conflicts](#3-resolved-conflicts)
   - [3.1 Yarker2013](#31-yarker2013)
   - [3.2 Rebich2005](#32-rebich2005)
@@ -63,6 +44,26 @@ Marius Bottin
   - [3.17 Prosser_Bravo2020](#317-prosser_bravo2020)
   - [3.18 Vize2012](#318-vize2012)
   - [3.19 Yoon2016a](#319-yoon2016a)
+  - [3.20 Jacobson2017](#320-jacobson2017)
+  - [3.21 Chong2015](#321-chong2015)
+  - [3.22 Deisenrieder2020](#322-deisenrieder2020)
+  - [3.23 Eichinger2022](#323-eichinger2022)
+  - [3.24 Ellins2014](#324-ellins2014)
+  - [3.25 Feierabend2012](#325-feierabend2012)
+  - [3.26 Gold2015](#326-gold2015)
+  - [3.27 Goulah2017](#327-goulah2017)
+  - [3.28 Hosman2020](#328-hosman2020)
+  - [3.29 McNeal2014a](#329-mcneal2014a)
+  - [3.30 Miller2015](#330-miller2015)
+  - [3.31 Ng2019](#331-ng2019)
+  - [3.32 Ratinen2013](#332-ratinen2013)
+  - [3.33 da_Silva2022](#333-da_silva2022)
+  - [3.34 Goelsh2020](#334-goelsh2020)
+  - [3.35 Gutierrez2016](#335-gutierrez2016)
+  - [3.36 Swim2013](#336-swim2013)
+  - [3.37 Kathiresan2021](#337-kathiresan2021)
+  - [3.38 Le2019](#338-le2019)
+  - [3.39 Logan2015](#339-logan2015)
 - [4 Final Numbers](#4-final-numbers)
 
 In order to read the results of the assignments, we put all the
@@ -202,16 +203,11 @@ conflictOnInclusion <- by(docAnalysed[docAnalysed$id%in%mTO_noFinalD,],docAnalys
 (w_conflict_incl <- names(conflictOnInclusion)[conflictOnInclusion])
 ```
 
-    ##  [1] "Bello_Benavides2019" "Burkholder2017"      "Chong2015"          
-    ##  [4] "Chordnork2012"       "Crouze2023"          "Deisenrieder2020"   
-    ##  [7] "Eichinger2022"       "Ellins2014"          "Feierabend2012"     
-    ## [10] "Ferguson2022"        "Gold2015"            "Gomes2015"          
-    ## [13] "Goulah2017"          "Hosman2020"          "Jacobson2017"       
-    ## [16] "Levrini2021"         "McNeal2014a"         "Meya2018"           
-    ## [19] "Miller2015"          "Ng2019"              "Oliveira2021"       
-    ## [22] "Pruneau2006a"        "Ratinen2013"         "Saribaş2016"        
-    ## [25] "Schuster2008"        "Siegner2018"         "Sutela2023"         
-    ## [28] "Swim2013"            "Zhong2021"
+    ##  [1] "Bello_Benavides2019" "Burkholder2017"      "Chordnork2012"      
+    ##  [4] "Crouze2023"          "Ferguson2022"        "Gomes2015"          
+    ##  [7] "Levrini2021"         "Meya2018"            "Oliveira2021"       
+    ## [10] "Pruneau2006a"        "Saribaş2016"         "Schuster2008"       
+    ## [13] "Siegner2018"         "Sutela2023"          "Zhong2021"
 
 ``` r
 toTest_conflictReason<-mTO_noFinalD[!mTO_noFinalD%in%w_conflict_incl]
@@ -222,8 +218,7 @@ conflictOnReason <- by(docAnalysed[docAnalysed$id%in%toTest_conflictReason,],doc
 (w_conflict_reason<-names(conflictOnReason)[conflictOnReason])
 ```
 
-    ## [1] "da_Silva2022"   "Goeschl2020"    "Gutierrez2016"  "Kathiresan2021"
-    ## [5] "Le2019"         "Logan2015"
+    ## [1] "Goeschl2020"
 
 # 1 Numbers
 
@@ -507,109 +502,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.3 Chong2015
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-114
-
-</td>
-<td style="text-align:right;">
-
-19
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-163
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-StudyType: book, Since it is a book chapter, I did not read it…
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.4 Chordnork2012
+### 2.1.3 Chordnork2012
 
 <table>
 <thead>
@@ -713,7 +606,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.5 Crouze2023
+### 2.1.4 Crouze2023
 
 <table>
 <thead>
@@ -819,460 +712,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.6 Deisenrieder2020
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-132
-
-</td>
-<td style="text-align:right;">
-
-20
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-157
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-I understand that it is difficult to consider “Fridays For Future” as an
-intervention… However we need to think about whether (I) education has
-to come from a figure of authority (ii) the interaction between the
-kidz21 program and FFF could be considered here. I am afraid that
-excluding this study may make us miss an important aspect of CC
-awareness gain for youth from the last years
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.7 Eichinger2022
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-188
-
-</td>
-<td style="text-align:right;">
-
-22
-
-</td>
-<td style="text-align:left;">
-
-Sergio
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-335
-
-</td>
-<td style="text-align:right;">
-
-8
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-es un protocolo no tiene resultados
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.8 Ellins2014
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-11
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-<td style="text-align:left;">
-
-Luisa
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
--This article describes an intervention with a good level of detail. It
-reports on teachers satisfaction with the intervention and mention SELF
-REPORT on learning but there are no measures of anything.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-221
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-236
-
-</td>
-<td style="text-align:right;">
-
-4
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-I have the feeling this is unsuficient in terms of outcomes, but that
-should be discussed… See my pdf file with yellow highlighter…
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.9 Feierabend2012
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-69
-
-</td>
-<td style="text-align:right;">
-
-14
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-No idea what to do here, the objective of the research is to measure the
-complexity of arguments from students, however the 2 chosen topics are
-related to climate change, more specifically on political decisions that
-would reduce the energy consumption, and the results show that
-discussions on these topics lead to more complex reasoning in the
-students arguments…
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-258
-
-</td>
-<td style="text-align:right;">
-
-5
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.10 Ferguson2022
+### 2.1.5 Ferguson2022
 
 <table>
 <thead>
@@ -1374,115 +814,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.11 Gold2015
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-167
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-While there is a claim that some statistical quantitative analysis have
-been done concerning the knowledge and science behind CC have been made,
-my quick reading did not find any numbers. Anyway the authors and
-teachers claim that the effect is positive on that topic, sufficient for
-now, right? Careful though, the authors insist a lot on the motivation
-and some other effects of the activity, we will have to filter in our
-analysis for the synthesis
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-256
-
-</td>
-<td style="text-align:right;">
-
-5
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-how to communicate about scientific topics
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.12 Gomes2015
+### 2.1.6 Gomes2015
 
 <table>
 <thead>
@@ -1584,323 +916,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.13 Goulah2017
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-31
-
-</td>
-<td style="text-align:right;">
-
-10
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-They are 2 main goals of the intervention: language and CCE, however the
-authors have specific conclusions about CCE. This is strongly
-qualitative and we need to think how to extract! Many complicated words
-and concepts, for me!
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-113
-
-</td>
-<td style="text-align:right;">
-
-19
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.14 Hosman2020
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-156
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-I do not see much outcomes concerning CCE that we could use in the next
-steps. It is a good example on how to improve access to CCE material
-though.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-250
-
-</td>
-<td style="text-align:right;">
-
-5
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.15 Jacobson2017
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-111
-
-</td>
-<td style="text-align:right;">
-
-19
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-1 PAGE
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-161
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-The paper is very interesting in comparing different ways to teach
-complex systems to the students. One could argue that the ultimate goal
-of the paper is complex system thinking, not CC. However the authors are
-very consistent in describing always complex thinking AND CC. Therefore
-I would tend to keep this paper, even though we might to have to be
-careful in our extraction of the outcomes
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.16 Levrini2021
+### 2.1.7 Levrini2021
 
 <table>
 <thead>
@@ -2006,145 +1022,7 @@ secondary schools, two universities, an environmental NGO,
 </tbody>
 </table>
 
-### 2.1.17 McNeal2014a
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-3
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-<td style="text-align:left;">
-
-Luisa
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-I+O
-
-</td>
-<td style="text-align:left;">
-
-Intervention doesnt directly address climate change although it is
-contextualied by the authors in the introduction as relevant to climate
-change. The paper is focused on the intervention but there is not
-outcome directly talking about climate change. However, it seems to me
-that this is a tendency of interventions within the frame of the NGSS.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-213
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-228
-
-</td>
-<td style="text-align:right;">
-
-4
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.18 Meya2018
+### 2.1.8 Meya2018
 
 <table>
 <thead>
@@ -2246,278 +1124,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.19 Miller2015
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-116
-
-</td>
-<td style="text-align:right;">
-
-19
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-166
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Population
-
-</td>
-<td style="text-align:left;">
-
-There is no way to separate the outcomes for students from university
-and from student from late secondary schools…
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.20 Ng2019
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-8
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-<td style="text-align:left;">
-
-Luisa
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-Output. Not sure is relevant. Authors are concerned with evaluating the
-intervention (EARTH MODULE) not the change in the students (see table 3)
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-123
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-<td style="text-align:left;">
-
-Sergio
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-218
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-233
-
-</td>
-<td style="text-align:right;">
-
-4
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-While it is mostly focused on the technical implementations, there are
-some data we can use about cognition
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.21 Oliveira2021
+### 2.1.9 Oliveira2021
 
 <table>
 <thead>
@@ -2619,7 +1226,7 @@ Portuguese… Sara, help me!!!!
 </tbody>
 </table>
 
-### 2.1.22 Pruneau2006a
+### 2.1.10 Pruneau2006a
 
 <table>
 <thead>
@@ -2787,109 +1394,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.23 Ratinen2013
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-139
-
-</td>
-<td style="text-align:right;">
-
-20
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-207
-
-</td>
-<td style="text-align:right;">
-
-23
-
-</td>
-<td style="text-align:left;">
-
-Sergio
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Intervention
-
-</td>
-<td style="text-align:left;">
-
-No hay intervention.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.24 Saribaş2016
+### 2.1.11 Saribaş2016
 
 <table>
 <thead>
@@ -2992,7 +1497,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.25 Schuster2008
+### 2.1.12 Schuster2008
 
 <table>
 <thead>
@@ -3094,7 +1599,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.26 Siegner2018
+### 2.1.13 Siegner2018
 
 <table>
 <thead>
@@ -3196,7 +1701,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.27 Sutela2023
+### 2.1.14 Sutela2023
 
 <table>
 <thead>
@@ -3304,110 +1809,7 @@ sustainable music education,
 </tbody>
 </table>
 
-### 2.1.28 Swim2013
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-175
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Population
-
-</td>
-<td style="text-align:left;">
-
-It is about people presenting CC in museum, zoos etc. So the objective
-is the general public, children are not mentionned as a clear objective
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-315
-
-</td>
-<td style="text-align:right;">
-
-7
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.29 Zhong2021
+### 2.1.15 Zhong2021
 
 <table>
 <thead>
@@ -3523,110 +1925,7 @@ for(i in w_conflict_reason)
 }
 ```
 
-### 2.2.1 da_Silva2022
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-180
-
-</td>
-<td style="text-align:right;">
-
-22
-
-</td>
-<td style="text-align:left;">
-
-Sergio
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-I+O
-
-</td>
-<td style="text-align:left;">
-
-It’s about protection and knowledge of earthquakes. Not sure it
-qualifies as CC even though they claim so.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-268
-
-</td>
-<td style="text-align:right;">
-
-6
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.2.2 Goeschl2020
+### 2.2.1 Goeschl2020
 
 <table>
 <thead>
@@ -3724,419 +2023,6 @@ P+I+O
 Population of adults, the game is not really a pedagogical intervention
 and the outcomes, consequently do not show any useful information for
 us…
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.2.3 Gutierrez2016
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-174
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-StudyType: PhD thesis
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-263
-
-</td>
-<td style="text-align:right;">
-
-5
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-THESIS
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.2.4 Kathiresan2021
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-143
-
-</td>
-<td style="text-align:right;">
-
-20
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-farmers
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-169
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-P+I+O
-
-</td>
-<td style="text-align:left;">
-
-It’s about the needs of a farmer community about risks associated with
-climate change in their professional practices, but it does not concern
-children, which although they might be part of the community, are not
-mentioned. There is no pedagogical intervention and therefore, neither
-is there outcome
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.2.5 Le2019
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-173
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-StudyType: thesis
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-339
-
-</td>
-<td style="text-align:right;">
-
-8
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Population
-
-</td>
-<td style="text-align:left;">
-
-thesis
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.2.6 Logan2015
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-138
-
-</td>
-<td style="text-align:right;">
-
-20
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-performance climate, not climate change
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-164
-
-</td>
-<td style="text-align:right;">
-
-21
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-I+O
-
-</td>
-<td style="text-align:left;">
-
-Not about CC, about climate in physical education (How the hell did that
-pass through?)
 
 </td>
 </tr>
@@ -7715,6 +5601,3553 @@ NA
 </tbody>
 </table>
 
+## 3.20 Jacobson2017
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+111
+
+</td>
+<td style="text-align:right;">
+
+19
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+1 PAGE
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+161
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+The paper is very interesting in comparing different ways to teach
+complex systems to the students. One could argue that the ultimate goal
+of the paper is complex system thinking, not CC. However the authors are
+very consistent in describing always complex thinking AND CC. Therefore
+I would tend to keep this paper, even though we might to have to be
+careful in our extraction of the outcomes
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+20
+
+</td>
+<td style="text-align:left;">
+
+Jacobson2017
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.21 Chong2015
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+114
+
+</td>
+<td style="text-align:right;">
+
+19
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+163
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+StudyType: book, Since it is a book chapter, I did not read it…
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Chong2015
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+StudyType
+
+</td>
+<td style="text-align:left;">
+
+Book Chapter
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.22 Deisenrieder2020
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+132
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+157
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+I understand that it is difficult to consider “Fridays For Future” as an
+intervention… However we need to think about whether (I) education has
+to come from a figure of authority (ii) the interaction between the
+kidz21 program and FFF could be considered here. I am afraid that
+excluding this study may make us miss an important aspect of CC
+awareness gain for youth from the last years
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+22
+
+</td>
+<td style="text-align:left;">
+
+Deisenrieder2020
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Friday For Future
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.23 Eichinger2022
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+188
+
+</td>
+<td style="text-align:right;">
+
+22
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+335
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+es un protocolo no tiene resultados
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+23
+
+</td>
+<td style="text-align:left;">
+
+Eichinger2022
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+StudyType
+
+</td>
+<td style="text-align:left;">
+
+Protocol, intervention not really done
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.24 Ellins2014
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+11
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Luisa
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+-This article describes an intervention with a good level of detail. It
+reports on teachers satisfaction with the intervention and mention SELF
+REPORT on learning but there are no measures of anything.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+221
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+236
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+I have the feeling this is unsuficient in terms of outcomes, but that
+should be discussed… See my pdf file with yellow highlighter…
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+24
+
+</td>
+<td style="text-align:left;">
+
+Ellins2014
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.25 Feierabend2012
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+69
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+No idea what to do here, the objective of the research is to measure the
+complexity of arguments from students, however the 2 chosen topics are
+related to climate change, more specifically on political decisions that
+would reduce the energy consumption, and the results show that
+discussions on these topics lead to more complex reasoning in the
+students arguments…
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+258
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+25
+
+</td>
+<td style="text-align:left;">
+
+Feierabend2012
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.26 Gold2015
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+167
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+While there is a claim that some statistical quantitative analysis have
+been done concerning the knowledge and science behind CC have been made,
+my quick reading did not find any numbers. Anyway the authors and
+teachers claim that the effect is positive on that topic, sufficient for
+now, right? Careful though, the authors insist a lot on the motivation
+and some other effects of the activity, we will have to filter in our
+analysis for the synthesis
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+256
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+how to communicate about scientific topics
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+26
+
+</td>
+<td style="text-align:left;">
+
+Gold2015
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Nothing extractable
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.27 Goulah2017
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+31
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+They are 2 main goals of the intervention: language and CCE, however the
+authors have specific conclusions about CCE. This is strongly
+qualitative and we need to think how to extract! Many complicated words
+and concepts, for me!
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+113
+
+</td>
+<td style="text-align:right;">
+
+19
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+27
+
+</td>
+<td style="text-align:left;">
+
+Goulah2017
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Very qualitative
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.28 Hosman2020
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+156
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+I do not see much outcomes concerning CCE that we could use in the next
+steps. It is a good example on how to improve access to CCE material
+though.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+250
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+28
+
+</td>
+<td style="text-align:left;">
+
+Hosman2020
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.29 McNeal2014a
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Luisa
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+Intervention doesnt directly address climate change although it is
+contextualied by the authors in the introduction as relevant to climate
+change. The paper is focused on the intervention but there is not
+outcome directly talking about climate change. However, it seems to me
+that this is a tendency of interventions within the frame of the NGSS.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+213
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+228
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+29
+
+</td>
+<td style="text-align:left;">
+
+McNeal2014a
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Is it possible Luisa looked at McNeal2014 (without a)?
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.30 Miller2015
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+116
+
+</td>
+<td style="text-align:right;">
+
+19
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+166
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+There is no way to separate the outcomes for students from university
+and from student from late secondary schools…
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+30
+
+</td>
+<td style="text-align:left;">
+
+Miller2015
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Careful on age at the extraction!
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.31 Ng2019
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Luisa
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Output. Not sure is relevant. Authors are concerned with evaluating the
+intervention (EARTH MODULE) not the change in the students (see table 3)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+123
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+218
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+233
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+While it is mostly focused on the technical implementations, there are
+some data we can use about cognition
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Ng2019
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.32 Ratinen2013
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+139
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+207
+
+</td>
+<td style="text-align:right;">
+
+23
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Intervention
+
+</td>
+<td style="text-align:left;">
+
+No hay intervention.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+32
+
+</td>
+<td style="text-align:left;">
+
+Ratinen2013
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+There is an intervention!
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.33 da_Silva2022
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+180
+
+</td>
+<td style="text-align:right;">
+
+22
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+It’s about protection and knowledge of earthquakes. Not sure it
+qualifies as CC even though they claim so.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+268
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+33
+
+</td>
+<td style="text-align:left;">
+
+da_Silva2022
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.34 Goelsh2020
+
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+34
+
+</td>
+<td style="text-align:left;">
+
+Goelsh2020
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+P+I+O
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.35 Gutierrez2016
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+174
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+StudyType: PhD thesis
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+263
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+THESIS
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Gutierrez2016
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+StudyType
+
+</td>
+<td style="text-align:left;">
+
+Thesis
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.36 Swim2013
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+175
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+It is about people presenting CC in museum, zoos etc. So the objective
+is the general public, children are not mentionned as a clear objective
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+315
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+36
+
+</td>
+<td style="text-align:left;">
+
+Swim2013
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.37 Kathiresan2021
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+143
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+farmers
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+169
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+P+I+O
+
+</td>
+<td style="text-align:left;">
+
+It’s about the needs of a farmer community about risks associated with
+climate change in their professional practices, but it does not concern
+children, which although they might be part of the community, are not
+mentioned. There is no pedagogical intervention and therefore, neither
+is there outcome
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+37
+
+</td>
+<td style="text-align:left;">
+
+Kathiresan2021
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+P+I+O
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.38 Le2019
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+173
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+StudyType: thesis
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+339
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+thesis
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+38
+
+</td>
+<td style="text-align:left;">
+
+Le2019
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+StudyType
+
+</td>
+<td style="text-align:left;">
+
+Thesis
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.39 Logan2015
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+138
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+performance climate, not climate change
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+164
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+Not about CC, about climate in physical education (How the hell did that
+pass through?)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+39
+
+</td>
+<td style="text-align:left;">
+
+Logan2015
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
 # 4 Final Numbers
 
 ``` r
@@ -7746,13 +9179,15 @@ NA
     ## [64] "Taber2009"             "Tasti2021"             "Taylor2020"           
     ## [67] "Trott2019"             "Trott2020"             "Trott2022"            
     ## [70] "Varma2012"             "Veijalainen2013"       "Walsh2019"            
-    ## [73] "Williams2017"          "Markowitz2018"
+    ## [73] "Williams2017"          "Markowitz2018"         "Jacobson2017"         
+    ## [76] "Deisenrieder2020"      "Feierabend2012"        "Goulah2017"           
+    ## [79] "McNeal2014a"           "Miller2015"            "Ratinen2013"
 
 ``` r
 length(AcceptedFinal)
 ```
 
-    ## [1] 74
+    ## [1] 81
 
 ``` r
 RejectedFinal<-
@@ -8069,6 +9504,162 @@ Outcome
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+Chong2015
+
+</td>
+<td style="text-align:left;">
+
+StudyType
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Eichinger2022
+
+</td>
+<td style="text-align:left;">
+
+StudyType
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Ellins2014
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Gold2015
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Hosman2020
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Ng2019
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+da_Silva2022
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Goelsh2020
+
+</td>
+<td style="text-align:left;">
+
+P+I+O
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Gutierrez2016
+
+</td>
+<td style="text-align:left;">
+
+StudyType
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Swim2013
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Kathiresan2021
+
+</td>
+<td style="text-align:left;">
+
+P+I+O
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Le2019
+
+</td>
+<td style="text-align:left;">
+
+StudyType
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Logan2015
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -8077,7 +9668,7 @@ table(RejectedFinal$reason)
 ```
 
     ## 
-    ##          I+O Intervention   MissingPdf      Outcome          P+I   Population 
-    ##            1            4            1            7            1            9 
-    ##    StudyType 
-    ##            1
+    ##          I+O Intervention   MissingPdf      Outcome          P+I        P+I+O 
+    ##            1            4            1           13            1            2 
+    ##   Population    StudyType 
+    ##           10            5
