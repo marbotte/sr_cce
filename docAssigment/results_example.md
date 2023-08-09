@@ -2,48 +2,68 @@ Reading the results of the assignments and extracting the interesting
 data (example of a full-text screening exercise)
 ================
 Marius Bottin
-2023-08-03
+2023-08-09
 
 - [1 Numbers](#1-numbers)
 - [2 Conflicts](#2-conflicts)
   - [2.1 Inclusion](#21-inclusion)
     - [2.1.1 Aldila2018](#211-aldila2018)
-    - [2.1.2 Anonymous2021](#212-anonymous2021)
-    - [2.1.3 Bello_Benavides2019](#213-bello_benavides2019)
-    - [2.1.4 Bhattacharya2020](#214-bhattacharya2020)
-    - [2.1.5 Burkholder2017](#215-burkholder2017)
-    - [2.1.6 Cebesoy2019](#216-cebesoy2019)
-    - [2.1.7 Chordnork2012](#217-chordnork2012)
-    - [2.1.8 Crouze2023](#218-crouze2023)
-    - [2.1.9 Dormody2020](#219-dormody2020)
-    - [2.1.10 Ferguson2022](#2110-ferguson2022)
-    - [2.1.11 Gomes2015](#2111-gomes2015)
-    - [2.1.12 Hestness2017](#2112-hestness2017)
-    - [2.1.13 Hugel2022](#2113-hugel2022)
-    - [2.1.14 Jin2013](#2114-jin2013)
-    - [2.1.15 Levrini2021](#2115-levrini2021)
-    - [2.1.16 Liu2019](#2116-liu2019)
-    - [2.1.17 McGowan2022](#2117-mcgowan2022)
-    - [2.1.18 Meya2018](#2118-meya2018)
-    - [2.1.19 Muller2021](#2119-muller2021)
-    - [2.1.20 Nkoana2020](#2120-nkoana2020)
-    - [2.1.21 Oliveira2021](#2121-oliveira2021)
-    - [2.1.22 Pimentel2021](#2122-pimentel2021)
-    - [2.1.23 Pruneau2006a](#2123-pruneau2006a)
-    - [2.1.24 Saribaş2016](#2124-saribaş2016)
-    - [2.1.25 Schuster2008](#2125-schuster2008)
-    - [2.1.26 Siegner2018](#2126-siegner2018)
-    - [2.1.27 Sternang2012](#2127-sternang2012)
-    - [2.1.28 Sutela2023](#2128-sutela2023)
-    - [2.1.29 Todd2016](#2129-todd2016)
-    - [2.1.30 Zhong2021](#2130-zhong2021)
-    - [2.1.31 Zografakis2008](#2131-zografakis2008)
+    - [2.1.2 Allen2014](#212-allen2014)
+    - [2.1.3 Anonymous2021](#213-anonymous2021)
+    - [2.1.4 Bello_Benavides2019](#214-bello_benavides2019)
+    - [2.1.5 Bhattacharya2020](#215-bhattacharya2020)
+    - [2.1.6 Burkholder2017](#216-burkholder2017)
+    - [2.1.7 Carey2017](#217-carey2017)
+    - [2.1.8 Cebesoy2019](#218-cebesoy2019)
+    - [2.1.9 Chordnork2012](#219-chordnork2012)
+    - [2.1.10 Crouze2023](#2110-crouze2023)
+    - [2.1.11 da_Silva2022a](#2111-da_silva2022a)
+    - [2.1.12 Day2013](#2112-day2013)
+    - [2.1.13 Dormody2020](#2113-dormody2020)
+    - [2.1.14 Ferguson2022](#2114-ferguson2022)
+    - [2.1.15 Gomes2015](#2115-gomes2015)
+    - [2.1.16 Hestness2017](#2116-hestness2017)
+    - [2.1.17 Hugel2022](#2117-hugel2022)
+    - [2.1.18 Jin2013](#2118-jin2013)
+    - [2.1.19 Kreibich2011](#2119-kreibich2011)
+    - [2.1.20 Lambert2012](#2120-lambert2012)
+    - [2.1.21 Levrini2019](#2121-levrini2019)
+    - [2.1.22 Levrini2021](#2122-levrini2021)
+    - [2.1.23 Liu2019](#2123-liu2019)
+    - [2.1.24 Lombardi2012](#2124-lombardi2012)
+    - [2.1.25 McGowan2022](#2125-mcgowan2022)
+    - [2.1.26 McNeal2014](#2126-mcneal2014)
+    - [2.1.27 Meya2018](#2127-meya2018)
+    - [2.1.28 Monroe2019](#2128-monroe2019)
+    - [2.1.29 Muller2021](#2129-muller2021)
+    - [2.1.30 Nkoana2020](#2130-nkoana2020)
+    - [2.1.31 Oe2022](#2131-oe2022)
+    - [2.1.32 Oliveira2021](#2132-oliveira2021)
+    - [2.1.33 Pimentel2021](#2133-pimentel2021)
+    - [2.1.34 Plutzer2018](#2134-plutzer2018)
+    - [2.1.35 Prosser_Bravo2022](#2135-prosser_bravo2022)
+    - [2.1.36 Pruneau2006a](#2136-pruneau2006a)
+    - [2.1.37 Raes2016](#2137-raes2016)
+    - [2.1.38 Saribaş2016](#2138-saribaş2016)
+    - [2.1.39 Schuster2008](#2139-schuster2008)
+    - [2.1.40 Sezen_Barrie2020](#2140-sezen_barrie2020)
+    - [2.1.41 Siegner2018](#2141-siegner2018)
+    - [2.1.42 Sternang2012](#2142-sternang2012)
+    - [2.1.43 Sutela2023](#2143-sutela2023)
+    - [2.1.44 Todd2016](#2144-todd2016)
+    - [2.1.45 Xie2014](#2145-xie2014)
+    - [2.1.46 Yoon2016](#2146-yoon2016)
+    - [2.1.47 Zhong2021](#2147-zhong2021)
+    - [2.1.48 Zografakis2008](#2148-zografakis2008)
   - [2.2 Reason of exclusion](#22-reason-of-exclusion)
     - [2.2.1 Chankrajang2017](#221-chankrajang2017)
     - [2.2.2 Goeschl2020](#222-goeschl2020)
     - [2.2.3 Kullar2011](#223-kullar2011)
-    - [2.2.4 Makrakis2012a](#224-makrakis2012a)
-    - [2.2.5 Nauck2020](#225-nauck2020)
+    - [2.2.4 Makrakis2012](#224-makrakis2012)
+    - [2.2.5 Makrakis2012a](#225-makrakis2012a)
+    - [2.2.6 Nauck2020](#226-nauck2020)
+    - [2.2.7 Tomlinson2018](#227-tomlinson2018)
+    - [2.2.8 van_Zee2022](#228-van_zee2022)
 - [3 Resolved conflicts](#3-resolved-conflicts)
   - [3.1 Yarker2013](#31-yarker2013)
   - [3.2 Rebich2005](#32-rebich2005)
@@ -108,29 +128,35 @@ idDoc <- "abbrev"
     ##  [1] "assignment1_Luisa_20230705.xlsx"       
     ##  [2] "assignment10_Marius_20230710.xlsx"     
     ##  [3] "assignment11_JuanGabriel_20230711.xlsx"
-    ##  [4] "assignment13_JuanGabriel_20230714.xlsx"
-    ##  [5] "assignment14_Marius_20230714.xlsx"     
-    ##  [6] "assignment15_Sergio_20230718.xlsx"     
-    ##  [7] "assignment16_JuanGabriel_20230718.xlsx"
-    ##  [8] "assignment17_Luisa_20230719.xlsx"      
-    ##  [9] "assignment18_Sergio_20230719.xlsx"     
-    ## [10] "assignment19_Ana_20230724.xlsx"        
-    ## [11] "assignment2_Sergio_20230705.xlsx"      
-    ## [12] "assignment20_Ana_20230724.xlsx"        
-    ## [13] "assignment21_Marius_20230725.xlsx"     
-    ## [14] "assignment22_Sergio_20230726.xlsx"     
-    ## [15] "assignment23_Sergio_20230727.xlsx"     
-    ## [16] "assignment24_JuanGabriel_20230727.xlsx"
-    ## [17] "assignment25_Ana_20230727.xlsx"        
-    ## [18] "assignment26_Ana_20230727.xlsx"        
-    ## [19] "assignment27_Marius_20230731.xlsx"     
-    ## [20] "assignment29_Sergio_20230731.xlsx"     
-    ## [21] "assignment3_Ana_20230705.xlsx"         
-    ## [22] "assignment4_Marius_20230705.xlsx"      
-    ## [23] "assignment5_Ana_20230706.xlsx"         
-    ## [24] "assignment6_Ana_20230706.xlsx"         
-    ## [25] "assignment7_Ana_20230706.xlsx"         
-    ## [26] "assignment8_Ana_20230706.xlsx"
+    ##  [4] "assignment12_Sara_20230711.xlsx"       
+    ##  [5] "assignment13_JuanGabriel_20230714.xlsx"
+    ##  [6] "assignment14_Marius_20230714.xlsx"     
+    ##  [7] "assignment15_Sergio_20230718.xlsx"     
+    ##  [8] "assignment16_JuanGabriel_20230718.xlsx"
+    ##  [9] "assignment17_Luisa_20230719.xlsx"      
+    ## [10] "assignment18_Sergio_20230719.xlsx"     
+    ## [11] "assignment19_Ana_20230724.xlsx"        
+    ## [12] "assignment2_Sergio_20230705.xlsx"      
+    ## [13] "assignment20_Ana_20230724.xlsx"        
+    ## [14] "assignment21_Marius_20230725.xlsx"     
+    ## [15] "assignment22_Sergio_20230726.xlsx"     
+    ## [16] "assignment23_Sergio_20230727.xlsx"     
+    ## [17] "assignment24_JuanGabriel_20230727.xlsx"
+    ## [18] "assignment25_Ana_20230727.xlsx"        
+    ## [19] "assignment26_Ana_20230727.xlsx"        
+    ## [20] "assignment27_Marius_20230731.xlsx"     
+    ## [21] "assignment28_JuanGabriel_20230731.xlsx"
+    ## [22] "assignment29_Sergio_20230731.xlsx"     
+    ## [23] "assignment3_Ana_20230705.xlsx"         
+    ## [24] "assignment31_Marius_20230803.xlsx"     
+    ## [25] "assignment32_Sergio_20230808.xlsx"     
+    ## [26] "assignment33_Marius_20230809.xlsx"     
+    ## [27] "assignment4_Marius_20230705.xlsx"      
+    ## [28] "assignment5_Ana_20230706.xlsx"         
+    ## [29] "assignment6_Ana_20230706.xlsx"         
+    ## [30] "assignment7_Ana_20230706.xlsx"         
+    ## [31] "assignment8_Ana_20230706.xlsx"         
+    ## [32] "assignment9_Benjamin_20230706.xlsx"
 
 ``` r
 assignment<-gsub(patternFiles,"\\1",filesResults)
@@ -154,7 +180,7 @@ table(docAnalysed$inclusion)
 
     ## 
     ##       0       1   FALSE    TRUE UNCLEAR  UNSURE 
-    ##      32      47     103     239       3       3
+    ##      47      54     127     259       3       3
 
 ``` r
 docAnalysed$incl<-NA
@@ -165,7 +191,7 @@ table(docAnalysed$incl,useNA="ifany")
 
     ## 
     ## FALSE  TRUE  <NA> 
-    ##   135   286    24
+    ##   174   313    28
 
 Which are the documents which were reviewed more than once:
 
@@ -175,68 +201,83 @@ nbRev<-table(docAnalysed$id)
 ```
 
     ##   [1] "Aksel_Stenberdt2023"   "Aksut2016"             "Aldila2018"           
-    ##   [4] "Andrews1993"           "Anonymous2021"         "Arya2016"             
-    ##   [7] "Aydogan2022"           "Baker2013"             "Bello_Benavides2019"  
-    ##  [10] "Bentz2020"             "Bhattacharya2020"      "Bhattacharya2021"     
-    ##  [13] "Boon2016"              "Bopardikar2021"        "Bozdogan2011"         
-    ##  [16] "Breslyn2019"           "Burkholder2017"        "Cebesoy2019"          
-    ##  [19] "Cebesoy2022"           "Chang2018"             "Chankrajang2017"      
-    ##  [22] "Chattuchai2015"        "Chin2016"              "Choi2021"             
-    ##  [25] "Chong2015"             "Chordnork2012"         "Clark2020"            
-    ##  [28] "Cohen2013"             "Crouze2023"            "da_Rocha2020"         
-    ##  [31] "da_Silva2022"          "Dal2015a"              "Deisenrieder2020"     
-    ##  [34] "DeWaters2014"          "Dormody2020"           "Drewes2018"           
-    ##  [37] "Eggert2017"            "Eichinger2022"         "Ellins2014"           
-    ##  [40] "Faria2015"             "Feierabend2012"        "Feldpausch_Parker2013"
-    ##  [43] "Ferguson2022"          "Flora2014"             "Gkotzos2017"          
-    ##  [46] "Gladwin2022"           "Goeschl2020"           "Gold2015"             
-    ##  [49] "Gold2015a"             "Gomes2015"             "Goulah2017"           
-    ##  [52] "Gutierrez2016"         "Gutierrez2022"         "Harker_Schuch2013"    
-    ##  [55] "Hepper2021"            "Herrick2022"           "Hestness2017"         
-    ##  [58] "Holthuis2014"          "Hosman2020"            "Hu2016"               
-    ##  [61] "Hugel2022"             "Jacobson2017"          "Jin2013"              
-    ##  [64] "Jones2021"             "Karpudewan2015"        "Karpudewan2015a"      
-    ##  [67] "Karpudewan2017"        "Kathiresan2021"        "Keller2019"           
-    ##  [70] "Kern2017"              "Khadka2021"            "Kinsey2012"           
-    ##  [73] "Klosterman2010"        "Kolenaty2022"          "Korfgen2017"          
-    ##  [76] "Korsager2015"          "Koseoglu2011"          "Kretser2020"          
-    ##  [79] "Kubisch2022"           "Kullar2011"            "Kumar2023"            
-    ##  [82] "Lambert2013"           "Landon2019"            "Lawson2019a"          
-    ##  [85] "Le2019"                "Leckey2021a"           "Leitao2022"           
-    ##  [88] "Lester2006"            "Levrini2021"           "Liu2019"              
-    ##  [91] "Logan2015"             "Lombardi2013"          "Lozano2022"           
-    ##  [94] "Maddox2011"            "Makrakis2012a"         "Markowitz2018"        
-    ##  [97] "Mason1998"             "McGowan2022"           "McNeal2014a"          
-    ## [100] "Meixner2023"           "Meya2018"              "Miller2015"           
-    ## [103] "Monroe2016"            "Muller2021"            "Muller2021a"          
-    ## [106] "Musselman2020"         "Nafisah2022"           "Nakamura2019"         
-    ## [109] "Nauck2020"             "Ng2019"                "Nicholas_Figueroa2017"
-    ## [112] "Nkoana2020"            "Nussbaum2015"          "Öhman2013"            
-    ## [115] "Oliveira2021"          "Otieno2014"            "Ozen2018"             
-    ## [118] "Parant2017"            "Park2020"              "Parth2020"            
-    ## [121] "Petersen2020"          "Pfirman2021"           "Picketts2012"         
-    ## [124] "Pimentel2021"          "Porter2012"            "Prosser_Bravo2020"    
-    ## [127] "Pruneau2003"           "Pruneau2006a"          "Puttick2018"          
-    ## [130] "Ratinen2013"           "Rebich2005"            "Reinfried2012"        
-    ## [133] "Rooney_Varga2018"      "Rooney2021"            "Roscoe2013"           
-    ## [136] "Ross2021"              "Roychoudhury2017"      "Ruboon2012"           
-    ## [139] "Salas_Rueda2021"       "Sandoval_Rivera2021"   "Saribaş2016"          
-    ## [142] "Schrot2021a"           "Schubatzky2022"        "Schuster2008"         
-    ## [145] "Sellmann2013"          "Sellmann2013a"         "Sellmann2015"         
-    ## [148] "Sezen_Barrie2021"      "Shea2016"              "Siegner2018"          
-    ## [151] "Silva2021"             "Skains2022"            "Steffensen2022"       
-    ## [154] "Sternang2012"          "Stevenson2016a"        "Stevenson2018"        
-    ## [157] "Stevenson2018a"        "Sumrall2021"           "Sundberg2013"         
-    ## [160] "Sutela2023"            "Svihla2012"            "Swim2013"             
-    ## [163] "Swim2017"              "Taber2009"             "Tallapragada2021"     
-    ## [166] "Tasquier2015"          "Tasti2021"             "Taylor2020"           
-    ## [169] "Todd2016"              "Trott2019"             "Trott2020"            
-    ## [172] "Trott2020a"            "Trott2020b"            "Trott2022"            
-    ## [175] "Turner2022"            "Varma2012"             "Veijalainen2013"      
-    ## [178] "Visintainer2015"       "Vize2012"              "Wallace2018"          
-    ## [181] "Walsh2019"             "Williams2017"          "Wu2021"               
-    ## [184] "Yarker2013"            "Yoon2016a"             "Zhong2021"            
-    ## [187] "Zografakis2008"
+    ##   [4] "Allen2014"             "Andrews1993"           "Anonymous2021"        
+    ##   [7] "Arya2016"              "Aydogan2022"           "Baker2013"            
+    ##  [10] "Bello_Benavides2019"   "Bentz2020"             "Bhattacharya2020"     
+    ##  [13] "Bhattacharya2021"      "Blaum2017"             "Bodzin2014"           
+    ##  [16] "Bofferding2015"        "Boon2016"              "Bopardikar2021"       
+    ##  [19] "Bozdogan2011"          "Breslyn2019"           "Bright2020"           
+    ##  [22] "Burkholder2017"        "Carey2017"             "Catanzaro2023"        
+    ##  [25] "Cebesoy2019"           "Cebesoy2022"           "Chang2018"            
+    ##  [28] "Chankrajang2017"       "Chattuchai2015"        "Chin2016"             
+    ##  [31] "Choi2021"              "Chong2015"             "Chordnork2012"        
+    ##  [34] "Cibik2022"             "Clark2020"             "Cohen2013"            
+    ##  [37] "Cordero2008"           "Crouze2023"            "da_Rocha2020"         
+    ##  [40] "da_Silva2022"          "da_Silva2022a"         "Dal2015a"             
+    ##  [43] "Day2013"               "Deisenrieder2020"      "DeWaters2014"         
+    ##  [46] "Dormody2020"           "Dormody2021"           "Drewes2018"           
+    ##  [49] "Eggert2017"            "Eichinger2022"         "Ellins2014"           
+    ##  [52] "Faria2015"             "Feierabend2012"        "Feldpausch_Parker2013"
+    ##  [55] "Ferguson2022"          "Flora2014"             "Gkotzos2017"          
+    ##  [58] "Gladwin2022"           "Goeschl2020"           "Gold2015"             
+    ##  [61] "Gold2015a"             "Gomes2015"             "Goulah2017"           
+    ##  [64] "Gutierrez2016"         "Gutierrez2022"         "Harker_Schuch2013"    
+    ##  [67] "Harker_Schuch2020"     "Hepper2021"            "Herrick2022"          
+    ##  [70] "Hestness2017"          "Holthuis2014"          "Hosman2020"           
+    ##  [73] "Hu2016"                "Hugel2022"             "Jacobson2017"         
+    ##  [76] "Jeong2014"             "Jin2013"               "Jones2021"            
+    ##  [79] "Karpudewan2015"        "Karpudewan2015a"       "Karpudewan2017"       
+    ##  [82] "Kathiresan2021"        "Keller2019"            "Kern2017"             
+    ##  [85] "Khadka2021"            "Kinsey2012"            "Klosterman2010"       
+    ##  [88] "Kolenaty2022"          "Korfgen2017"           "Korsager2015"         
+    ##  [91] "Koseoglu2011"          "Kreibich2011"          "Kretser2020"          
+    ##  [94] "Kubisch2022"           "Kullar2011"            "Kumar2018"            
+    ##  [97] "Kumar2023"             "Lambert2012"           "Lambert2013"          
+    ## [100] "Landon2019"            "Lawson2019a"           "Le2019"               
+    ## [103] "Leckey2021a"           "Leitao2022"            "Lester2006"           
+    ## [106] "Levrini2019"           "Levrini2021"           "Li2022"               
+    ## [109] "Littrell2022"          "Liu2015"               "Liu2019"              
+    ## [112] "Logan2015"             "Lombardi2012"          "Lombardi2013"         
+    ## [115] "Lozano2022"            "Maddox2011"            "Makrakis2012"         
+    ## [118] "Makrakis2012a"         "Manalo2016"            "Markowitz2018"        
+    ## [121] "Mason1998"             "McGowan2022"           "McNeal2014"           
+    ## [124] "McNeal2014a"           "McNeill2012"           "Meixner2023"          
+    ## [127] "Meya2018"              "Miller2015"            "Monroe2016"           
+    ## [130] "Monroe2019"            "Muller2021"            "Muller2021a"          
+    ## [133] "Musselman2020"         "Nafisah2022"           "Nakamura2019"         
+    ## [136] "Nauck2020"             "Ng2019"                "Nicholas_Figueroa2017"
+    ## [139] "Nkoana2020"            "Nussbaum2015"          "Oe2022"               
+    ## [142] "Öhman2013"             "Oliveira2021"          "Otieno2014"           
+    ## [145] "Ozen2018"              "Parant2017"            "Park2020"             
+    ## [148] "Parth2020"             "Pekel2019"             "Petersen2020"         
+    ## [151] "Pfirman2021"           "Picketts2012"          "Pimentel2021"         
+    ## [154] "Plutzer2018"           "Porter2012"            "Prosser_Bravo2020"    
+    ## [157] "Prosser_Bravo2022"     "Pruneau2003"           "Pruneau2006"          
+    ## [160] "Pruneau2006a"          "Puttick2018"           "Raes2016"             
+    ## [163] "Ratinen2013"           "Rebich2005"            "Reinfried2012"        
+    ## [166] "Robelia2011"           "Rooney_Varga2018"      "Rooney2021"           
+    ## [169] "Roscoe2013"            "Ross2021"              "Roychoudhury2017"     
+    ## [172] "Ruboon2012"            "Salas_Rueda2021"       "Salsabila2019"        
+    ## [175] "Sandhaus2018"          "Sandoval_Rivera2021"   "Saribaş2016"          
+    ## [178] "Schrot2021a"           "Schubatzky2022"        "Schuster2008"         
+    ## [181] "Sellmann2013"          "Sellmann2013a"         "Sellmann2015"         
+    ## [184] "Sezen_Barrie2020"      "Sezen_Barrie2021"      "Shea2016"             
+    ## [187] "Siegner2018"           "Silva2021"             "Skains2022"           
+    ## [190] "Smith2019"             "Steffensen2022"        "Sternang2012"         
+    ## [193] "Stevenson2016a"        "Stevenson2018"         "Stevenson2018a"       
+    ## [196] "Sumrall2021"           "Sundberg2013"          "Sutela2023"           
+    ## [199] "Svihla2012"            "Swim2013"              "Swim2017"             
+    ## [202] "Taber2009"             "Tallapragada2021"      "Tasquier2015"         
+    ## [205] "Tasti2021"             "Taylor2020"            "Todd2016"             
+    ## [208] "Tomlinson2018"         "Trott2019"             "Trott2020"            
+    ## [211] "Trott2020a"            "Trott2020b"            "Trott2022"            
+    ## [214] "Turner2022"            "van_Zee2022"           "Varela_Losada2019"    
+    ## [217] "Varma2012"             "Veijalainen2013"       "Vicente2020"          
+    ## [220] "Visintainer2015"       "Vize2012"              "Wallace2018"          
+    ## [223] "Walsh2019"             "Wang2022"              "White2022"            
+    ## [226] "Williams2017"          "Wu2021"                "Xie2014"              
+    ## [229] "Yarker2013"            "Yoon2016"              "Yoon2016a"            
+    ## [232] "Zhong2021"             "Zografakis2008"
 
 ``` r
 mTO_noFinalD <- moreThanOnce[!moreThanOnce%in%finalDecisionTab$abbrev]
@@ -247,17 +288,22 @@ conflictOnInclusion <- by(docAnalysed[docAnalysed$id%in%mTO_noFinalD,],docAnalys
 (w_conflict_incl <- names(conflictOnInclusion)[conflictOnInclusion])
 ```
 
-    ##  [1] "Aldila2018"          "Anonymous2021"       "Bello_Benavides2019"
-    ##  [4] "Bhattacharya2020"    "Burkholder2017"      "Cebesoy2019"        
-    ##  [7] "Chordnork2012"       "Crouze2023"          "Dormody2020"        
-    ## [10] "Ferguson2022"        "Gomes2015"           "Hestness2017"       
-    ## [13] "Hugel2022"           "Jin2013"             "Levrini2021"        
-    ## [16] "Liu2019"             "McGowan2022"         "Meya2018"           
-    ## [19] "Muller2021"          "Nkoana2020"          "Oliveira2021"       
-    ## [22] "Pimentel2021"        "Pruneau2006a"        "Saribaş2016"        
-    ## [25] "Schuster2008"        "Siegner2018"         "Sternang2012"       
-    ## [28] "Sutela2023"          "Todd2016"            "Zhong2021"          
-    ## [31] "Zografakis2008"
+    ##  [1] "Aldila2018"          "Allen2014"           "Anonymous2021"      
+    ##  [4] "Bello_Benavides2019" "Bhattacharya2020"    "Burkholder2017"     
+    ##  [7] "Carey2017"           "Cebesoy2019"         "Chordnork2012"      
+    ## [10] "Crouze2023"          "da_Silva2022a"       "Day2013"            
+    ## [13] "Dormody2020"         "Ferguson2022"        "Gomes2015"          
+    ## [16] "Hestness2017"        "Hugel2022"           "Jin2013"            
+    ## [19] "Kreibich2011"        "Lambert2012"         "Levrini2019"        
+    ## [22] "Levrini2021"         "Liu2019"             "Lombardi2012"       
+    ## [25] "McGowan2022"         "McNeal2014"          "Meya2018"           
+    ## [28] "Monroe2019"          "Muller2021"          "Nkoana2020"         
+    ## [31] "Oe2022"              "Oliveira2021"        "Pimentel2021"       
+    ## [34] "Plutzer2018"         "Prosser_Bravo2022"   "Pruneau2006a"       
+    ## [37] "Raes2016"            "Saribaş2016"         "Schuster2008"       
+    ## [40] "Sezen_Barrie2020"    "Siegner2018"         "Sternang2012"       
+    ## [43] "Sutela2023"          "Todd2016"            "Xie2014"            
+    ## [46] "Yoon2016"            "Zhong2021"           "Zografakis2008"
 
 ``` r
 toTest_conflictReason<-mTO_noFinalD[!mTO_noFinalD%in%w_conflict_incl]
@@ -268,8 +314,8 @@ conflictOnReason <- by(docAnalysed[docAnalysed$id%in%toTest_conflictReason,],doc
 (w_conflict_reason<-names(conflictOnReason)[conflictOnReason])
 ```
 
-    ## [1] "Chankrajang2017" "Goeschl2020"     "Kullar2011"      "Makrakis2012a"  
-    ## [5] "Nauck2020"
+    ## [1] "Chankrajang2017" "Goeschl2020"     "Kullar2011"      "Makrakis2012"   
+    ## [5] "Makrakis2012a"   "Nauck2020"       "Tomlinson2018"   "van_Zee2022"
 
 # 1 Numbers
 
@@ -279,7 +325,7 @@ Number of article reviewed by more than one person:
 length(moreThanOnce)
 ```
 
-    ## [1] 187
+    ## [1] 233
 
 Number of papers accepted without conflict:
 
@@ -291,7 +337,7 @@ accepted <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$id[docAn
 sum(na.omit(as.logical(accepted)))
 ```
 
-    ## [1] 100
+    ## [1] 117
 
 Reason of exclusions when excluded without conflicts:
 
@@ -310,17 +356,35 @@ exclusionReason <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$i
     ## $Aydogan2022
     ## [1] "Population"
     ## 
+    ## $Bright2020
+    ## [1] "Intervention"
+    ## 
+    ## $Catanzaro2023
+    ## [1] "I+O"
+    ## 
+    ## $Cordero2008
+    ## [1] "Population"
+    ## 
     ## $Gkotzos2017
     ## [1] "Outcome"
     ## 
     ## $Hepper2021
     ## [1] "Population"
     ## 
+    ## $Jeong2014
+    ## [1] "Outcome"
+    ## 
     ## $Kretser2020
     ## [1] "Outcome"
     ## 
+    ## $Kumar2018
+    ## [1] "Population"
+    ## 
     ## $Landon2019
     ## [1] "Population"
+    ## 
+    ## $Manalo2016
+    ## [1] "Outcome"
     ## 
     ## $Meixner2023
     ## [1] "Population"
@@ -331,6 +395,9 @@ exclusionReason <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$i
     ## $Rooney2021
     ## [1] "I+O"
     ## 
+    ## $Sandhaus2018
+    ## [1] "Population"
+    ## 
     ## $Sandoval_Rivera2021
     ## [1] "Outcome"
     ## 
@@ -338,6 +405,9 @@ exclusionReason <- by(docAnalysed[docAnalysed$id%in%moreThanOnce,],docAnalysed$i
     ## [1] "Population"
     ## 
     ## $Tallapragada2021
+    ## [1] "Outcome"
+    ## 
+    ## $Varela_Losada2019
     ## [1] "Outcome"
     ## 
     ## $Wu2021
@@ -402,7 +472,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-248
+260
 
 </td>
 <td style="text-align:right;">
@@ -434,7 +504,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-298
+310
 
 </td>
 <td style="text-align:right;">
@@ -472,7 +542,7 @@ Indonesia, and maybe I focus a little bit too much on that!)
 </tbody>
 </table>
 
-### 2.1.2 Anonymous2021
+### 2.1.2 Allen2014
 
 <table>
 <thead>
@@ -510,7 +580,144 @@ comment
 <tr>
 <td style="text-align:left;">
 
-155
+373
+
+</td>
+<td style="text-align:right;">
+
+32
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Outcome does not deal with CC rather with field trips in general.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+386
+
+</td>
+<td style="text-align:right;">
+
+33
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+I agree that the focus of the study is mostly to see how “docents”
+(museum guides) change their professional practice, in the context of
+school trips concerning CC. I feel we need to discuss that in group to
+really know if it can be including in our criteria
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+447
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.3 Anonymous2021
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+167
 
 </td>
 <td style="text-align:right;">
@@ -542,7 +749,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-297
+309
 
 </td>
 <td style="text-align:right;">
@@ -575,7 +782,7 @@ enough information
 </tbody>
 </table>
 
-### 2.1.3 Bello_Benavides2019
+### 2.1.4 Bello_Benavides2019
 
 <table>
 <thead>
@@ -613,7 +820,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-73
+85
 
 </td>
 <td style="text-align:right;">
@@ -648,7 +855,7 @@ in the future steps of the analysis…
 <tr>
 <td style="text-align:left;">
 
-301
+318
 
 </td>
 <td style="text-align:right;">
@@ -681,7 +888,7 @@ than climate per se.
 <tr>
 <td style="text-align:left;">
 
-443
+503
 
 </td>
 <td style="text-align:right;">
@@ -713,7 +920,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.4 Bhattacharya2020
+### 2.1.5 Bhattacharya2020
 
 <table>
 <thead>
@@ -751,7 +958,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-224
+236
 
 </td>
 <td style="text-align:right;">
@@ -785,7 +992,43 @@ colegios, basándose en modelos computacionales.
 <tr>
 <td style="text-align:left;">
 
-395
+387
+
+</td>
+<td style="text-align:right;">
+
+33
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Juan Gabriel said that this paper was just a curriculum proposal,
+however there is a very small part called “Assesment” which would be
+telling the opposite. This part is so small that showing it to the group
+and seeing whether it is sufficient to consider the paper having the
+outcome part should not take too much time
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+455
 
 </td>
 <td style="text-align:right;">
@@ -817,7 +1060,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.5 Burkholder2017
+### 2.1.6 Burkholder2017
 
 <table>
 <thead>
@@ -855,7 +1098,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-145
+157
 
 </td>
 <td style="text-align:right;">
@@ -887,7 +1130,7 @@ college students
 <tr>
 <td style="text-align:left;">
 
-205
+217
 
 </td>
 <td style="text-align:right;">
@@ -916,10 +1159,44 @@ NA
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+388
+
+</td>
+<td style="text-align:right;">
+
+33
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+I read carefully this paper to see whether it was a program for student
+in education, it is not, so the population here is just young college
+adults, not the entourage of children…
+
+</td>
+</tr>
 </tbody>
 </table>
 
-### 2.1.6 Cebesoy2019
+### 2.1.7 Carey2017
 
 <table>
 <thead>
@@ -957,7 +1234,141 @@ comment
 <tr>
 <td style="text-align:left;">
 
-115
+56
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:left;">
+
+Sara
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+389
+
+</td>
+<td style="text-align:right;">
+
+33
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+I agree with Sara that the population is university students here
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+512
+
+</td>
+<td style="text-align:right;">
+
+9
+
+</td>
+<td style="text-align:left;">
+
+Benjamin
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.8 Cebesoy2019
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+127
 
 </td>
 <td style="text-align:right;">
@@ -989,7 +1400,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-284
+296
 
 </td>
 <td style="text-align:right;">
@@ -1025,7 +1436,7 @@ in relation to CC…
 </tbody>
 </table>
 
-### 2.1.7 Chordnork2012
+### 2.1.9 Chordnork2012
 
 <table>
 <thead>
@@ -1097,7 +1508,7 @@ is described…
 <tr>
 <td style="text-align:left;">
 
-128
+140
 
 </td>
 <td style="text-align:right;">
@@ -1126,10 +1537,44 @@ NA
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+316
+
+</td>
+<td style="text-align:right;">
+
+28
+
+</td>
+<td style="text-align:left;">
+
+JuanGabriel
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+No hay intervención y el outcome no se relaciona con el conocimiento,
+actitudes o comportamientos. El estudio solo se limita a ver las
+prácticas de educación en un tema como calentamiento global.
+
+</td>
+</tr>
 </tbody>
 </table>
 
-### 2.1.8 Crouze2023
+### 2.1.10 Crouze2023
 
 <table>
 <thead>
@@ -1203,7 +1648,7 @@ complicated.
 <tr>
 <td style="text-align:left;">
 
-107
+119
 
 </td>
 <td style="text-align:right;">
@@ -1235,7 +1680,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-302
+319
 
 </td>
 <td style="text-align:right;">
@@ -1269,425 +1714,7 @@ intervention.
 </tbody>
 </table>
 
-### 2.1.9 Dormody2020
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-233
-
-</td>
-<td style="text-align:right;">
-
-25
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-science comprehension OR knowledfe
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-283
-
-</td>
-<td style="text-align:right;">
-
-27
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-The authors present the paper as focusing on “science” skill, so not
-directly CC. However, when we read carefully the themes of the “science”
-they are all related to climate change, or almost all. Therefore I think
-we should keep it, but there might be a debate on it, since the authors
-themselves are clearly not insisting on the CC aspect of the “science”.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.10 Ferguson2022
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-77
-
-</td>
-<td style="text-align:right;">
-
-15
-
-</td>
-<td style="text-align:left;">
-
-Sergio
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-422
-
-</td>
-<td style="text-align:right;">
-
-8
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.11 Gomes2015
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-207
-
-</td>
-<td style="text-align:right;">
-
-23
-
-</td>
-<td style="text-align:left;">
-
-Sergio
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-Outcome is more about the learning environment rather than climate.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-392
-
-</td>
-<td style="text-align:right;">
-
-6
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.12 Hestness2017
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-264
-
-</td>
-<td style="text-align:right;">
-
-26
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-285
-
-</td>
-<td style="text-align:right;">
-
-27
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-This is another difficult one: the authors measure qualitatively how the
-concept of “learning progression” (an educative conceptual framework)
-may help the teachers to teach better on the topic of CC. So really the
-intervention is about a professional method in education, and the
-outcomes as well, but since all the topics are applied to CCE, we might
-consider it can enter, I am not sure though where it would land, in
-terms of cognition attitude behavior…
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.13 Hugel2022
+### 2.1.11 da_Silva2022a
 
 <table>
 <thead>
@@ -1730,7 +1757,7 @@ comment
 </td>
 <td style="text-align:right;">
 
-26
+25
 
 </td>
 <td style="text-align:left;">
@@ -1740,7 +1767,7 @@ Ana
 </td>
 <td style="text-align:left;">
 
-NA
+TRUE
 
 </td>
 <td style="text-align:left;">
@@ -1757,12 +1784,12 @@ NA
 <tr>
 <td style="text-align:left;">
 
-277
+364
 
 </td>
 <td style="text-align:right;">
 
-27
+31
 
 </td>
 <td style="text-align:left;">
@@ -1772,28 +1799,24 @@ Marius
 </td>
 <td style="text-align:left;">
 
-FALSE
+NA
 
 </td>
 <td style="text-align:left;">
 
-Outcome
+NA
 
 </td>
 <td style="text-align:left;">
 
-The authors claim that there is a positive effect in terms of cognition
-(of the pedagogical classical intervention and the game) and that it has
-been tested on a cohort. However, the presented outcomes are light to
-say the least, and they focus more on other aspects concerning the game
-technical and conceptual issues.
+Help! (portuguese)
 
 </td>
 </tr>
 </tbody>
 </table>
 
-### 2.1.14 Jin2013
+### 2.1.12 Day2013
 
 <table>
 <thead>
@@ -1831,7 +1854,710 @@ comment
 <tr>
 <td style="text-align:left;">
 
-99
+162
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+359
+
+</td>
+<td style="text-align:right;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+It is not about the changes of the students concerning CC, but more
+about the feelings of the students concerning the type of education (a
+more horizontal between student organization of classes). I don’t think
+we can work on that, it is however interesting to note the possibility
+of teaching CC differently!
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.13 Dormody2020
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+245
+
+</td>
+<td style="text-align:right;">
+
+25
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+science comprehension OR knowledfe
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+295
+
+</td>
+<td style="text-align:right;">
+
+27
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+The authors present the paper as focusing on “science” skill, so not
+directly CC. However, when we read carefully the themes of the “science”
+they are all related to climate change, or almost all. Therefore I think
+we should keep it, but there might be a debate on it, since the authors
+themselves are clearly not insisting on the CC aspect of the “science”.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.14 Ferguson2022
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+89
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+314
+
+</td>
+<td style="text-align:right;">
+
+28
+
+</td>
+<td style="text-align:left;">
+
+JuanGabriel
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Este artículo me deja con grandes dudas sobre el outcome porque no veo
+tan claro que haya habido una incidencia sobre conocimientos,
+comportamientos o emociones, tal vez solo la prospectiva de "hacia
+futuro" que hacen en las actividades.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+482
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.15 Gomes2015
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+219
+
+</td>
+<td style="text-align:right;">
+
+23
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Outcome is more about the learning environment rather than climate.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+390
+
+</td>
+<td style="text-align:right;">
+
+33
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+So, that is a harsh one, the authors mostly survey the way student felt
+with this way of learning (Blended-learning: a sort of mix between
+internet and with a mentor punctually). There is a survey at the
+beginning concerning cognition of the students but only before the
+pedagogical intervention. Where it becomes very difficult to choose is
+that the authors conclude that the methods are efficient for CCE, but I
+do not feel that their method support their claims…
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+452
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.16 Hestness2017
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+276
+
+</td>
+<td style="text-align:right;">
+
+26
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+297
+
+</td>
+<td style="text-align:right;">
+
+27
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+This is another difficult one: the authors measure qualitatively how the
+concept of “learning progression” (an educative conceptual framework)
+may help the teachers to teach better on the topic of CC. So really the
+intervention is about a professional method in education, and the
+outcomes as well, but since all the topics are applied to CCE, we might
+consider it can enter, I am not sure though where it would land, in
+terms of cognition attitude behavior…
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.17 Hugel2022
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+270
+
+</td>
+<td style="text-align:right;">
+
+26
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+289
+
+</td>
+<td style="text-align:right;">
+
+27
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+The authors claim that there is a positive effect in terms of cognition
+(of the pedagogical classical intervention and the game) and that it has
+been tested on a cohort. However, the presented outcomes are light to
+say the least, and they focus more on other aspects concerning the game
+technical and conceptual issues.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.18 Jin2013
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+111
 
 </td>
 <td style="text-align:right;">
@@ -1869,7 +2595,7 @@ learning to think about complex things like climate change
 <tr>
 <td style="text-align:left;">
 
-435
+495
 
 </td>
 <td style="text-align:right;">
@@ -1901,7 +2627,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.15 Levrini2021
+### 2.1.19 Kreibich2011
 
 <table>
 <thead>
@@ -1939,7 +2665,315 @@ comment
 <tr>
 <td style="text-align:left;">
 
-56
+257
+
+</td>
+<td style="text-align:right;">
+
+25
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+363
+
+</td>
+<td style="text-align:right;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+P+I
+
+</td>
+<td style="text-align:left;">
+
+General public, no intervention
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.20 Lambert2012
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+252
+
+</td>
+<td style="text-align:right;">
+
+25
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+pre service teachers
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+360
+
+</td>
+<td style="text-align:right;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+University students
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.21 Levrini2019
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+23
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+While CC is present as a background, it seems that the focus is the
+attitude toward future of the student, not specifically for CC… A second
+opinion is welcome though
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+48
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:left;">
+
+Sara
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.22 Levrini2021
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+68
 
 </td>
 <td style="text-align:right;">
@@ -1975,7 +3009,7 @@ certain…
 <tr>
 <td style="text-align:left;">
 
-423
+483
 
 </td>
 <td style="text-align:right;">
@@ -2007,7 +3041,7 @@ secondary schools, two universities, an environmental NGO,
 </tbody>
 </table>
 
-### 2.1.16 Liu2019
+### 2.1.23 Liu2019
 
 <table>
 <thead>
@@ -2078,7 +3112,7 @@ author claims… I am not sure yet how to extract that
 <tr>
 <td style="text-align:left;">
 
-96
+108
 
 </td>
 <td style="text-align:right;">
@@ -2112,7 +3146,7 @@ lasts 3 years, there is no account of change due to the intervention.
 </tbody>
 </table>
 
-### 2.1.17 McGowan2022
+### 2.1.24 Lombardi2012
 
 <table>
 <thead>
@@ -2150,7 +3184,109 @@ comment
 <tr>
 <td style="text-align:left;">
 
-259
+95
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+University students, not high school or younger.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+515
+
+</td>
+<td style="text-align:right;">
+
+9
+
+</td>
+<td style="text-align:left;">
+
+Benjamin
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.25 McGowan2022
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+271
 
 </td>
 <td style="text-align:right;">
@@ -2183,7 +3319,7 @@ outbreaks in sea stars. // NO SE si es un deselnace de interes
 <tr>
 <td style="text-align:left;">
 
-306
+323
 
 </td>
 <td style="text-align:right;">
@@ -2215,7 +3351,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.18 Meya2018
+### 2.1.26 McNeal2014
 
 <table>
 <thead>
@@ -2253,7 +3389,111 @@ comment
 <tr>
 <td style="text-align:left;">
 
-118
+39
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+380
+
+</td>
+<td style="text-align:right;">
+
+32
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+P+O
+
+</td>
+<td style="text-align:left;">
+
+Population not exclusively of K12 educators or other entourage. Also not
+all results are directly linked to CC, some about political
+organization, feeling their views were taken into account and respected…
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.27 Meya2018
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+130
 
 </td>
 <td style="text-align:right;">
@@ -2285,7 +3525,7 @@ THESIS
 <tr>
 <td style="text-align:left;">
 
-169
+181
 
 </td>
 <td style="text-align:right;">
@@ -2317,7 +3557,112 @@ NA
 </tbody>
 </table>
 
-### 2.1.19 Muller2021
+### 2.1.28 Monroe2019
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+247
+
+</td>
+<td style="text-align:right;">
+
+25
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+354
+
+</td>
+<td style="text-align:right;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+I believe the outcomes concerning the evaluation of the change in
+knowledge after the dissemination of the material created is not
+sufficient… There are some small sentences, but I don’t think that is
+sufficient in terms of outcomes
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.29 Muller2021
 
 <table>
 <thead>
@@ -2390,7 +3735,7 @@ difficult to use
 <tr>
 <td style="text-align:left;">
 
-94
+106
 
 </td>
 <td style="text-align:right;">
@@ -2425,7 +3770,7 @@ qualitative.
 </tbody>
 </table>
 
-### 2.1.20 Nkoana2020
+### 2.1.30 Nkoana2020
 
 <table>
 <thead>
@@ -2463,7 +3808,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-112
+124
 
 </td>
 <td style="text-align:right;">
@@ -2495,7 +3840,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-222
+234
 
 </td>
 <td style="text-align:right;">
@@ -2529,7 +3874,7 @@ cambio.
 </tbody>
 </table>
 
-### 2.1.21 Oliveira2021
+### 2.1.31 Oe2022
 
 <table>
 <thead>
@@ -2567,7 +3912,111 @@ comment
 <tr>
 <td style="text-align:left;">
 
-156
+382
+
+</td>
+<td style="text-align:right;">
+
+32
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+Intervention is not too clear, deals with youth centers and similar.
+Outcomes also seem to deal more with how to implement them rather than
+CC.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+451
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.32 Oliveira2021
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+168
 
 </td>
 <td style="text-align:right;">
@@ -2599,7 +4048,7 @@ outcomes
 <tr>
 <td style="text-align:left;">
 
-182
+194
 
 </td>
 <td style="text-align:right;">
@@ -2631,7 +4080,7 @@ Portuguese… Sara, help me!!!!
 </tbody>
 </table>
 
-### 2.1.22 Pimentel2021
+### 2.1.33 Pimentel2021
 
 <table>
 <thead>
@@ -2669,7 +4118,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-229
+241
 
 </td>
 <td style="text-align:right;">
@@ -2701,7 +4150,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-279
+291
 
 </td>
 <td style="text-align:right;">
@@ -2738,7 +4187,211 @@ of August, I understand that we reject the papers in these cases.
 </tbody>
 </table>
 
-### 2.1.23 Pruneau2006a
+### 2.1.34 Plutzer2018
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+129
+
+</td>
+<td style="text-align:right;">
+
+19
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Intervention
+
+</td>
+<td style="text-align:left;">
+
+NO INTERVENTION
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+511
+
+</td>
+<td style="text-align:right;">
+
+9
+
+</td>
+<td style="text-align:left;">
+
+Benjamin
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.35 Prosser_Bravo2022
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+383
+
+</td>
+<td style="text-align:right;">
+
+32
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Intervention
+
+</td>
+<td style="text-align:left;">
+
+No intervention rather simply focus groups.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+502
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.36 Pruneau2006a
 
 <table>
 <thead>
@@ -2809,7 +4462,7 @@ students
 <tr>
 <td style="text-align:left;">
 
-134
+146
 
 </td>
 <td style="text-align:right;">
@@ -2841,7 +4494,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-327
+344
 
 </td>
 <td style="text-align:right;">
@@ -2874,7 +4527,7 @@ maestros
 <tr>
 <td style="text-align:left;">
 
-342
+402
 
 </td>
 <td style="text-align:right;">
@@ -2906,7 +4559,109 @@ NA
 </tbody>
 </table>
 
-### 2.1.24 Saribaş2016
+### 2.1.37 Raes2016
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+92
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Uncomplete text, only the first page is available.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+513
+
+</td>
+<td style="text-align:right;">
+
+9
+
+</td>
+<td style="text-align:left;">
+
+Benjamin
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.38 Saribaş2016
 
 <table>
 <thead>
@@ -2977,7 +4732,7 @@ educación ambiental adscrito a un programa de educación elemental.
 <tr>
 <td style="text-align:left;">
 
-430
+490
 
 </td>
 <td style="text-align:right;">
@@ -3009,7 +4764,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.25 Schuster2008
+### 2.1.39 Schuster2008
 
 <table>
 <thead>
@@ -3047,7 +4802,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-218
+230
 
 </td>
 <td style="text-align:right;">
@@ -3079,7 +4834,39 @@ No hay intervention.
 <tr>
 <td style="text-align:left;">
 
-364
+317
+
+</td>
+<td style="text-align:right;">
+
+28
+
+</td>
+<td style="text-align:left;">
+
+JuanGabriel
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+424
 
 </td>
 <td style="text-align:right;">
@@ -3111,7 +4898,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.26 Siegner2018
+### 2.1.40 Sezen_Barrie2020
 
 <table>
 <thead>
@@ -3149,7 +4936,113 @@ comment
 <tr>
 <td style="text-align:left;">
 
-143
+73
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+There are various aspects there. We need to choose whether we extract
+cognition effect on students, emotion effects on student, or effects on
+the educational practices of teachers, or even emotions of the teachers,
+or which combination of them… This might make the extraction process
+difficult for this one, however I can’t see why excluding it.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+510
+
+</td>
+<td style="text-align:right;">
+
+9
+
+</td>
+<td style="text-align:left;">
+
+Benjamin
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.41 Siegner2018
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+155
 
 </td>
 <td style="text-align:right;">
@@ -3181,7 +5074,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-219
+231
 
 </td>
 <td style="text-align:right;">
@@ -3213,7 +5106,7 @@ NA
 </tbody>
 </table>
 
-### 2.1.27 Sternang2012
+### 2.1.42 Sternang2012
 
 <table>
 <thead>
@@ -3251,7 +5144,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-242
+254
 
 </td>
 <td style="text-align:right;">
@@ -3283,7 +5176,7 @@ unsure about the outcomes
 <tr>
 <td style="text-align:left;">
 
-295
+307
 
 </td>
 <td style="text-align:right;">
@@ -3320,7 +5213,7 @@ would like to get a second opinion to make sure!
 </tbody>
 </table>
 
-### 2.1.28 Sutela2023
+### 2.1.43 Sutela2023
 
 <table>
 <thead>
@@ -3396,7 +5289,7 @@ in my opinion…
 <tr>
 <td style="text-align:left;">
 
-106
+118
 
 </td>
 <td style="text-align:right;">
@@ -3425,10 +5318,45 @@ sustainable music education,
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+313
+
+</td>
+<td style="text-align:right;">
+
+28
+
+</td>
+<td style="text-align:left;">
+
+JuanGabriel
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+La población de este proyecto es de un entorno, diría yo, muy lejano de
+los niños y niñas. Si bien el proyecto puede tener una intervención
+dirigida al aumento de la consciencia sobre el cambio climático, no sé
+si propósito se centre específicamente en niños y niñas.
+
+</td>
+</tr>
 </tbody>
 </table>
 
-### 2.1.29 Todd2016
+### 2.1.44 Todd2016
 
 <table>
 <thead>
@@ -3466,7 +5394,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-270
+282
 
 </td>
 <td style="text-align:right;">
@@ -3500,7 +5428,7 @@ anthropogenic climate change.
 <tr>
 <td style="text-align:left;">
 
-290
+302
 
 </td>
 <td style="text-align:right;">
@@ -3532,7 +5460,7 @@ University student (Northern Arizona University, p.52)
 </tbody>
 </table>
 
-### 2.1.30 Zhong2021
+### 2.1.45 Xie2014
 
 <table>
 <thead>
@@ -3570,7 +5498,212 @@ comment
 <tr>
 <td style="text-align:left;">
 
-141
+385
+
+</td>
+<td style="text-align:right;">
+
+32
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Outcome deals with implementation rather than CC.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+454
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.46 Yoon2016
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+283
+
+</td>
+<td style="text-align:right;">
+
+26
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+358
+
+</td>
+<td style="text-align:right;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+The “validity” of the intervention is measured, but not really its
+effect on the students
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.1.47 Zhong2021
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+153
 
 </td>
 <td style="text-align:right;">
@@ -3602,7 +5735,7 @@ children’s flood risk perceptions
 <tr>
 <td style="text-align:left;">
 
-220
+232
 
 </td>
 <td style="text-align:right;">
@@ -3631,10 +5764,42 @@ NA
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+315
+
+</td>
+<td style="text-align:right;">
+
+28
+
+</td>
+<td style="text-align:left;">
+
+JuanGabriel
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
 </tbody>
 </table>
 
-### 2.1.31 Zografakis2008
+### 2.1.48 Zografakis2008
 
 <table>
 <thead>
@@ -3672,7 +5837,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-226
+238
 
 </td>
 <td style="text-align:right;">
@@ -3705,7 +5870,7 @@ energy efficiency, not sure if its related to CC
 <tr>
 <td style="text-align:left;">
 
-315
+332
 
 </td>
 <td style="text-align:right;">
@@ -3789,7 +5954,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-236
+248
 
 </td>
 <td style="text-align:right;">
@@ -3821,7 +5986,7 @@ nationally representative surveys on environmental issues
 <tr>
 <td style="text-align:left;">
 
-286
+298
 
 </td>
 <td style="text-align:right;">
@@ -3895,7 +6060,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-113
+125
 
 </td>
 <td style="text-align:right;">
@@ -3927,7 +6092,7 @@ NOT SCHOOL STUDENTS
 <tr>
 <td style="text-align:left;">
 
-168
+180
 
 </td>
 <td style="text-align:right;">
@@ -3999,7 +6164,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-160
+172
 
 </td>
 <td style="text-align:right;">
@@ -4031,7 +6196,7 @@ thesis
 <tr>
 <td style="text-align:left;">
 
-225
+237
 
 </td>
 <td style="text-align:right;">
@@ -4064,7 +6229,111 @@ nuestra búsqueda. Además, es el tema abordado es school climate.
 </tbody>
 </table>
 
-### 2.2.4 Makrakis2012a
+### 2.2.4 Makrakis2012
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+378
+
+</td>
+<td style="text-align:right;">
+
+32
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+P+I+O
+
+</td>
+<td style="text-align:left;">
+
+Article deals with creating the actual web-intervention rather than
+testing it on actual population. It does mention how it could be tested
+but has not actually done so.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+475
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+no outcomes
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.2.5 Makrakis2012a
 
 <table>
 <thead>
@@ -4135,7 +6404,7 @@ there is no actual intervention, nor outcomes presented…
 <tr>
 <td style="text-align:left;">
 
-100
+112
 
 </td>
 <td style="text-align:right;">
@@ -4168,7 +6437,7 @@ not enacted and thus there is no PÍO
 </tbody>
 </table>
 
-### 2.2.5 Nauck2020
+### 2.2.6 Nauck2020
 
 <table>
 <thead>
@@ -4206,7 +6475,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-275
+287
 
 </td>
 <td style="text-align:right;">
@@ -4239,7 +6508,7 @@ CC
 <tr>
 <td style="text-align:left;">
 
-300
+312
 
 </td>
 <td style="text-align:right;">
@@ -4266,6 +6535,216 @@ I+O
 
 That is not about climate change, how it is possible that it got through
 title/abstract screening? Is there a mix-up between papers?
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.2.7 Tomlinson2018
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+54
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:left;">
+
+Sara
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+440
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+farmers school
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 2.2.8 van_Zee2022
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+65
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+I am actually having a hard time deciding whether to keep or reject this
+one. There is a doubt because children serve as “teachers” here, but we
+could argue that one of the goals is actually to improve the student
+knowledge… So it is debattable. However this is a “preliminary study
+report” so the outcomes are not very precisely analysed, However some
+sentences in the discussions may be interpreted as a real progress in
+the student view of the CC, both in terms of knowledge and awareness!
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+509
+
+</td>
+<td style="text-align:right;">
+
+9
+
+</td>
+<td style="text-align:left;">
+
+Benjamin
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -4359,7 +6838,7 @@ Thesis
 <tr>
 <td style="text-align:left;">
 
-135
+147
 
 </td>
 <td style="text-align:right;">
@@ -4391,7 +6870,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-328
+345
 
 </td>
 <td style="text-align:right;">
@@ -4423,7 +6902,7 @@ thesis
 <tr>
 <td style="text-align:left;">
 
-343
+403
 
 </td>
 <td style="text-align:right;">
@@ -4556,7 +7035,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-50
+62
 
 </td>
 <td style="text-align:right;">
@@ -4588,7 +7067,7 @@ Población de estudiantes de pregrado.
 <tr>
 <td style="text-align:left;">
 
-365
+425
 
 </td>
 <td style="text-align:right;">
@@ -4728,7 +7207,39 @@ comment
 <tr>
 <td style="text-align:left;">
 
-437
+57
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:left;">
+
+Sara
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+497
 
 </td>
 <td style="text-align:right;">
@@ -4868,7 +7379,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-51
+63
 
 </td>
 <td style="text-align:right;">
@@ -4900,7 +7411,7 @@ University students
 <tr>
 <td style="text-align:left;">
 
-397
+457
 
 </td>
 <td style="text-align:right;">
@@ -5077,7 +7588,7 @@ Standars leaves this responsibiliy on teachers.
 <tr>
 <td style="text-align:left;">
 
-322
+339
 
 </td>
 <td style="text-align:right;">
@@ -5109,7 +7620,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-337
+397
 
 </td>
 <td style="text-align:right;">
@@ -5250,7 +7761,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-87
+99
 
 </td>
 <td style="text-align:right;">
@@ -5286,7 +7797,7 @@ emociones.
 <tr>
 <td style="text-align:left;">
 
-407
+467
 
 </td>
 <td style="text-align:right;">
@@ -5566,7 +8077,7 @@ There is no intervention, this is a survey.
 <tr>
 <td style="text-align:left;">
 
-132
+144
 
 </td>
 <td style="text-align:right;">
@@ -5598,7 +8109,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-319
+336
 
 </td>
 <td style="text-align:right;">
@@ -5633,7 +8144,7 @@ students’ belief that global warming was happening and human caused’’
 <tr>
 <td style="text-align:left;">
 
-334
+394
 
 </td>
 <td style="text-align:right;">
@@ -5807,7 +8318,7 @@ The reports dont emphasize young population
 <tr>
 <td style="text-align:left;">
 
-325
+342
 
 </td>
 <td style="text-align:right;">
@@ -5839,7 +8350,7 @@ mezclan a la poblacion (colegio, universidad) en los descenlaces
 <tr>
 <td style="text-align:left;">
 
-340
+400
 
 </td>
 <td style="text-align:right;">
@@ -6012,7 +8523,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-330
+347
 
 </td>
 <td style="text-align:right;">
@@ -6044,7 +8555,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-345
+405
 
 </td>
 <td style="text-align:right;">
@@ -6184,7 +8695,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-70
+82
 
 </td>
 <td style="text-align:right;">
@@ -6218,7 +8729,7 @@ activity.
 <tr>
 <td style="text-align:left;">
 
-388
+448
 
 </td>
 <td style="text-align:right;">
@@ -6392,7 +8903,7 @@ about climate change
 <tr>
 <td style="text-align:left;">
 
-321
+338
 
 </td>
 <td style="text-align:right;">
@@ -6424,7 +8935,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-336
+396
 
 </td>
 <td style="text-align:right;">
@@ -6600,7 +9111,7 @@ answers
 <tr>
 <td style="text-align:left;">
 
-324
+341
 
 </td>
 <td style="text-align:right;">
@@ -6633,7 +9144,7 @@ mezclan high school students con university
 <tr>
 <td style="text-align:left;">
 
-339
+399
 
 </td>
 <td style="text-align:right;">
@@ -6812,7 +9323,7 @@ this way of teaching is actually changing anything.
 <tr>
 <td style="text-align:left;">
 
-316
+333
 
 </td>
 <td style="text-align:right;">
@@ -6844,7 +9355,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-331
+391
 
 </td>
 <td style="text-align:right;">
@@ -7016,7 +9527,7 @@ school climate!!!!
 <tr>
 <td style="text-align:left;">
 
-120
+132
 
 </td>
 <td style="text-align:right;">
@@ -7156,7 +9667,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-90
+102
 
 </td>
 <td style="text-align:right;">
@@ -7190,7 +9701,7 @@ Pertenecen a una comunidad, pero no se ofrecen mayores detalles.
 <tr>
 <td style="text-align:left;">
 
-416
+476
 
 </td>
 <td style="text-align:right;">
@@ -7362,7 +9873,7 @@ No outcome analysed
 <tr>
 <td style="text-align:left;">
 
-114
+126
 
 </td>
 <td style="text-align:right;">
@@ -7536,7 +10047,7 @@ with CC in education in the Pacific
 <tr>
 <td style="text-align:left;">
 
-329
+346
 
 </td>
 <td style="text-align:right;">
@@ -7568,7 +10079,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-344
+404
 
 </td>
 <td style="text-align:right;">
@@ -7708,7 +10219,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-64
+76
 
 </td>
 <td style="text-align:right;">
@@ -7742,7 +10253,7 @@ climate change.
 <tr>
 <td style="text-align:left;">
 
-432
+492
 
 </td>
 <td style="text-align:right;">
@@ -7882,7 +10393,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-121
+133
 
 </td>
 <td style="text-align:right;">
@@ -7914,7 +10425,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-171
+183
 
 </td>
 <td style="text-align:right;">
@@ -8059,7 +10570,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-124
+136
 
 </td>
 <td style="text-align:right;">
@@ -8091,7 +10602,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-173
+185
 
 </td>
 <td style="text-align:right;">
@@ -8231,7 +10742,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-142
+154
 
 </td>
 <td style="text-align:right;">
@@ -8263,7 +10774,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-167
+179
 
 </td>
 <td style="text-align:right;">
@@ -8408,7 +10919,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-198
+210
 
 </td>
 <td style="text-align:right;">
@@ -8440,7 +10951,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-440
+500
 
 </td>
 <td style="text-align:right;">
@@ -8614,7 +11125,7 @@ REPORT on learning but there are no measures of anything.
 <tr>
 <td style="text-align:left;">
 
-326
+343
 
 </td>
 <td style="text-align:right;">
@@ -8646,7 +11157,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-341
+401
 
 </td>
 <td style="text-align:right;">
@@ -8787,7 +11298,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-69
+81
 
 </td>
 <td style="text-align:right;">
@@ -8824,7 +11335,7 @@ students arguments…
 <tr>
 <td style="text-align:left;">
 
-363
+423
 
 </td>
 <td style="text-align:right;">
@@ -8964,7 +11475,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-177
+189
 
 </td>
 <td style="text-align:right;">
@@ -9002,7 +11513,7 @@ analysis for the synthesis
 <tr>
 <td style="text-align:left;">
 
-361
+421
 
 </td>
 <td style="text-align:right;">
@@ -9177,7 +11688,7 @@ and concepts, for me!
 <tr>
 <td style="text-align:left;">
 
-123
+135
 
 </td>
 <td style="text-align:right;">
@@ -9317,7 +11828,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-166
+178
 
 </td>
 <td style="text-align:right;">
@@ -9351,7 +11862,7 @@ though.
 <tr>
 <td style="text-align:left;">
 
-355
+415
 
 </td>
 <td style="text-align:right;">
@@ -9527,7 +12038,7 @@ that this is a tendency of interventions within the frame of the NGSS.
 <tr>
 <td style="text-align:left;">
 
-318
+335
 
 </td>
 <td style="text-align:right;">
@@ -9559,7 +12070,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-333
+393
 
 </td>
 <td style="text-align:right;">
@@ -9699,7 +12210,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-126
+138
 
 </td>
 <td style="text-align:right;">
@@ -9731,7 +12242,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-176
+188
 
 </td>
 <td style="text-align:right;">
@@ -9905,7 +12416,7 @@ intervention (EARTH MODULE) not the change in the students (see table 3)
 <tr>
 <td style="text-align:left;">
 
-133
+145
 
 </td>
 <td style="text-align:right;">
@@ -9937,7 +12448,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-323
+340
 
 </td>
 <td style="text-align:right;">
@@ -9969,7 +12480,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-338
+398
 
 </td>
 <td style="text-align:right;">
@@ -10110,7 +12621,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-149
+161
 
 </td>
 <td style="text-align:right;">
@@ -10142,7 +12653,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-217
+229
 
 </td>
 <td style="text-align:right;">
@@ -10282,7 +12793,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-190
+202
 
 </td>
 <td style="text-align:right;">
@@ -10315,7 +12826,7 @@ qualifies as CC even though they claim so.
 <tr>
 <td style="text-align:left;">
 
-373
+433
 
 </td>
 <td style="text-align:right;">
@@ -10563,7 +13074,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-184
+196
 
 </td>
 <td style="text-align:right;">
@@ -10595,7 +13106,7 @@ StudyType: PhD thesis
 <tr>
 <td style="text-align:left;">
 
-368
+428
 
 </td>
 <td style="text-align:right;">
@@ -10735,7 +13246,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-185
+197
 
 </td>
 <td style="text-align:right;">
@@ -10768,7 +13279,7 @@ is the general public, children are not mentionned as a clear objective
 <tr>
 <td style="text-align:left;">
 
-420
+480
 
 </td>
 <td style="text-align:right;">
@@ -10908,7 +13419,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-153
+165
 
 </td>
 <td style="text-align:right;">
@@ -10940,7 +13451,7 @@ farmers
 <tr>
 <td style="text-align:left;">
 
-179
+191
 
 </td>
 <td style="text-align:right;">
@@ -11084,7 +13595,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-183
+195
 
 </td>
 <td style="text-align:right;">
@@ -11116,7 +13627,7 @@ StudyType: thesis
 <tr>
 <td style="text-align:left;">
 
-444
+504
 
 </td>
 <td style="text-align:right;">
@@ -11256,7 +13767,7 @@ comment
 <tr>
 <td style="text-align:left;">
 
-148
+160
 
 </td>
 <td style="text-align:right;">
@@ -11288,7 +13799,7 @@ performance climate, not climate change
 <tr>
 <td style="text-align:left;">
 
-174
+186
 
 </td>
 <td style="text-align:right;">
@@ -11400,46 +13911,52 @@ NA
 
     ##   [1] "Aksel_Stenberdt2023"   "Aksut2016"             "Arya2016"             
     ##   [4] "Baker2013"             "Bentz2020"             "Bhattacharya2021"     
-    ##   [7] "Boon2016"              "Bopardikar2021"        "Bozdogan2011"         
-    ##  [10] "Breslyn2019"           "Cebesoy2022"           "Chang2018"            
-    ##  [13] "Chattuchai2015"        "Chin2016"              "Choi2021"             
-    ##  [16] "da_Rocha2020"          "Dal2015a"              "DeWaters2014"         
-    ##  [19] "Drewes2018"            "Eggert2017"            "Faria2015"            
-    ##  [22] "Feldpausch_Parker2013" "Flora2014"             "Gladwin2022"          
-    ##  [25] "Gold2015a"             "Gutierrez2022"         "Harker_Schuch2013"    
-    ##  [28] "Herrick2022"           "Holthuis2014"          "Hu2016"               
-    ##  [31] "Jones2021"             "Karpudewan2015"        "Karpudewan2015a"      
-    ##  [34] "Karpudewan2017"        "Keller2019"            "Kern2017"             
-    ##  [37] "Khadka2021"            "Kinsey2012"            "Klosterman2010"       
-    ##  [40] "Kolenaty2022"          "Korfgen2017"           "Korsager2015"         
-    ##  [43] "Kubisch2022"           "Kumar2023"             "Lambert2013"          
-    ##  [46] "Lawson2019a"           "Leckey2021a"           "Leitao2022"           
-    ##  [49] "Lester2006"            "Lombardi2013"          "Lozano2022"           
-    ##  [52] "Mason1998"             "Monroe2016"            "Muller2021a"          
-    ##  [55] "Nafisah2022"           "Nakamura2019"          "Nicholas_Figueroa2017"
-    ##  [58] "Nussbaum2015"          "Parant2017"            "Park2020"             
-    ##  [61] "Parth2020"             "Petersen2020"          "Porter2012"           
-    ##  [64] "Pruneau2003"           "Puttick2018"           "Reinfried2012"        
-    ##  [67] "Roscoe2013"            "Ross2021"              "Roychoudhury2017"     
-    ##  [70] "Ruboon2012"            "Salas_Rueda2021"       "Schrot2021a"          
-    ##  [73] "Schubatzky2022"        "Sellmann2013"          "Sellmann2013a"        
-    ##  [76] "Sellmann2015"          "Shea2016"              "Silva2021"            
-    ##  [79] "Skains2022"            "Steffensen2022"        "Stevenson2018"        
-    ##  [82] "Stevenson2018a"        "Sumrall2021"           "Sundberg2013"         
-    ##  [85] "Svihla2012"            "Taber2009"             "Tasquier2015"         
-    ##  [88] "Tasti2021"             "Taylor2020"            "Trott2019"            
-    ##  [91] "Trott2020"             "Trott2020a"            "Trott2020b"           
-    ##  [94] "Trott2022"             "Turner2022"            "Varma2012"            
-    ##  [97] "Veijalainen2013"       "Visintainer2015"       "Walsh2019"            
-    ## [100] "Williams2017"          "Markowitz2018"         "Jacobson2017"         
-    ## [103] "Deisenrieder2020"      "Feierabend2012"        "Goulah2017"           
-    ## [106] "McNeal2014a"           "Miller2015"            "Ratinen2013"
+    ##   [7] "Blaum2017"             "Bodzin2014"            "Bofferding2015"       
+    ##  [10] "Boon2016"              "Bopardikar2021"        "Bozdogan2011"         
+    ##  [13] "Breslyn2019"           "Cebesoy2022"           "Chang2018"            
+    ##  [16] "Chattuchai2015"        "Chin2016"              "Choi2021"             
+    ##  [19] "Cibik2022"             "da_Rocha2020"          "Dal2015a"             
+    ##  [22] "DeWaters2014"          "Dormody2021"           "Drewes2018"           
+    ##  [25] "Eggert2017"            "Faria2015"             "Feldpausch_Parker2013"
+    ##  [28] "Flora2014"             "Gladwin2022"           "Gold2015a"            
+    ##  [31] "Gutierrez2022"         "Harker_Schuch2013"     "Harker_Schuch2020"    
+    ##  [34] "Herrick2022"           "Holthuis2014"          "Hu2016"               
+    ##  [37] "Jones2021"             "Karpudewan2015"        "Karpudewan2015a"      
+    ##  [40] "Karpudewan2017"        "Keller2019"            "Kern2017"             
+    ##  [43] "Khadka2021"            "Kinsey2012"            "Klosterman2010"       
+    ##  [46] "Kolenaty2022"          "Korfgen2017"           "Korsager2015"         
+    ##  [49] "Kubisch2022"           "Kumar2023"             "Lambert2013"          
+    ##  [52] "Lawson2019a"           "Leckey2021a"           "Leitao2022"           
+    ##  [55] "Lester2006"            "Li2022"                "Littrell2022"         
+    ##  [58] "Liu2015"               "Lombardi2013"          "Lozano2022"           
+    ##  [61] "Mason1998"             "McNeill2012"           "Monroe2016"           
+    ##  [64] "Muller2021a"           "Nafisah2022"           "Nakamura2019"         
+    ##  [67] "Nicholas_Figueroa2017" "Nussbaum2015"          "Parant2017"           
+    ##  [70] "Park2020"              "Parth2020"             "Pekel2019"            
+    ##  [73] "Petersen2020"          "Porter2012"            "Pruneau2003"          
+    ##  [76] "Pruneau2006"           "Puttick2018"           "Reinfried2012"        
+    ##  [79] "Roscoe2013"            "Ross2021"              "Roychoudhury2017"     
+    ##  [82] "Ruboon2012"            "Salas_Rueda2021"       "Salsabila2019"        
+    ##  [85] "Schrot2021a"           "Schubatzky2022"        "Sellmann2013"         
+    ##  [88] "Sellmann2013a"         "Sellmann2015"          "Shea2016"             
+    ##  [91] "Silva2021"             "Skains2022"            "Smith2019"            
+    ##  [94] "Steffensen2022"        "Stevenson2018"         "Stevenson2018a"       
+    ##  [97] "Sumrall2021"           "Sundberg2013"          "Svihla2012"           
+    ## [100] "Taber2009"             "Tasquier2015"          "Tasti2021"            
+    ## [103] "Taylor2020"            "Trott2019"             "Trott2020"            
+    ## [106] "Trott2020a"            "Trott2020b"            "Trott2022"            
+    ## [109] "Turner2022"            "Varma2012"             "Veijalainen2013"      
+    ## [112] "Vicente2020"           "Visintainer2015"       "Walsh2019"            
+    ## [115] "Wang2022"              "White2022"             "Williams2017"         
+    ## [118] "Markowitz2018"         "Jacobson2017"          "Deisenrieder2020"     
+    ## [121] "Feierabend2012"        "Goulah2017"            "McNeal2014a"          
+    ## [124] "Miller2015"            "Ratinen2013"
 
 ``` r
 length(AcceptedFinal)
 ```
 
-    ## [1] 108
+    ## [1] 125
 
 ``` r
 RejectedFinal<-
@@ -11483,6 +14000,42 @@ Population
 <tr>
 <td style="text-align:left;">
 
+Bright2020
+
+</td>
+<td style="text-align:left;">
+
+Intervention
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Catanzaro2023
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Cordero2008
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Gkotzos2017
 
 </td>
@@ -11507,6 +14060,18 @@ Population
 <tr>
 <td style="text-align:left;">
 
+Jeong2014
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Kretser2020
 
 </td>
@@ -11519,12 +14084,36 @@ Outcome
 <tr>
 <td style="text-align:left;">
 
+Kumar2018
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Landon2019
 
 </td>
 <td style="text-align:left;">
 
 Population
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Manalo2016
+
+</td>
+<td style="text-align:left;">
+
+Outcome
 
 </td>
 </tr>
@@ -11567,6 +14156,18 @@ I+O
 <tr>
 <td style="text-align:left;">
 
+Sandhaus2018
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Sandoval_Rivera2021
 
 </td>
@@ -11592,6 +14193,18 @@ Population
 <td style="text-align:left;">
 
 Tallapragada2021
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Varela_Losada2019
 
 </td>
 <td style="text-align:left;">
@@ -11993,6 +14606,6 @@ table(RejectedFinal$reason)
 
     ## 
     ##          I+O Intervention   MissingPdf      Outcome          P+I        P+I+O 
-    ##            2            5            1           15            1            2 
+    ##            3            6            1           18            1            2 
     ##   Population    StudyType 
-    ##           12            5
+    ##           15            5
