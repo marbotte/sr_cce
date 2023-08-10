@@ -2,7 +2,7 @@ Example of use of the assignment functions with the documents of the
 full text screening
 ================
 Marius Bottin
-2023-08-09
+2023-08-10
 
 - [1 Reading source functions](#1-reading-source-functions)
 - [2 Creating the project](#2-creating-the-project)
@@ -201,7 +201,7 @@ colSums(rt[,FTS$description$people])
 ```
 
     ##         Ana      Marius        Sara       Luisa      Sergio    Benjamin 
-    ##         215         139          12          30          83          10 
+    ##         215         151          12          32          83          10 
     ## JuanGabriel 
     ##          25
 
@@ -214,7 +214,7 @@ kable(rt)
 
 |                       | Ana | Marius | Sara | Luisa | Sergio | Benjamin | JuanGabriel | total | category | nbMissing | priority |
 |-----------------------|----:|-------:|-----:|------:|-------:|---------:|------------:|------:|:---------|----------:|---------:|
-| Zografakis2008        |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
+| Zografakis2008        |   1 |      1 |    0 |     0 |      1 |        0 |           0 |     3 | default  |         0 |        3 |
 | Klosterman2010        |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default  |         0 |        3 |
 | Mason1998             |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Svihla2012            |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
@@ -249,7 +249,7 @@ kable(rt)
 | Gladwin2022           |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Hugel2022             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | da_Silva2022          |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
-| McGowan2022           |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
+| McGowan2022           |   1 |      1 |    0 |     0 |      1 |        0 |           0 |     3 | default  |         0 |        3 |
 | Gutierrez2022         |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | van_Zee2022           |   0 |      1 |    0 |     0 |      0 |        1 |           0 |     2 | default  |         0 |        3 |
 | Cebesoy2022           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
@@ -282,7 +282,7 @@ kable(rt)
 | Trott2020             |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Sezen_Barrie2020      |   0 |      1 |    0 |     0 |      0 |        1 |           0 |     2 | default  |         0 |        3 |
 | Deisenrieder2020      |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
-| Nkoana2020            |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default  |         0 |        3 |
+| Nkoana2020            |   1 |      1 |    0 |     0 |      0 |        0 |           1 |     3 | default  |         0 |        3 |
 | Trott2020a            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Goeschl2020           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Dormody2020           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
@@ -303,13 +303,13 @@ kable(rt)
 | Walsh2019             |   0 |      1 |    0 |     0 |      0 |        0 |           1 |     2 | default  |         0 |        3 |
 | Pekel2019             |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Varela_Losada2019     |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
-| Siegner2018           |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
+| Siegner2018           |   1 |      1 |    0 |     0 |      1 |        0 |           0 |     3 | default  |         0 |        3 |
 | Smith2019             |   0 |      1 |    1 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Sandhaus2018          |   1 |      0 |    1 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Stevenson2018         |   1 |      0 |    0 |     1 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Keller2019            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Breslyn2019           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
-| Plutzer2018           |   1 |      0 |    0 |     0 |      0 |        1 |           0 |     2 | default  |         0 |        3 |
+| Plutzer2018           |   1 |      1 |    0 |     0 |      0 |        1 |           0 |     3 | default  |         0 |        3 |
 | Puttick2018           |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Meya2018              |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Walsh2018             |   0 |      1 |    0 |     0 |      0 |        0 |           0 |     1 | default  |         1 |        3 |
@@ -338,13 +338,13 @@ kable(rt)
 | Monroe2016            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Shea2016              |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Chin2016              |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
-| Saribaş2016           |   1 |      0 |    0 |     0 |      0 |        0 |           1 |     2 | default  |         0 |        3 |
+| Saribaş2016           |   1 |      1 |    0 |     0 |      0 |        0 |           1 |     3 | default  |         0 |        3 |
 | Boon2016              |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Aksut2016             |   1 |      0 |    0 |     1 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Todd2016              |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Yoon2016              |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Yoon2016a             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
-| Raes2016              |   0 |      0 |    0 |     0 |      1 |        1 |           0 |     2 | default  |         0 |        3 |
+| Raes2016              |   0 |      1 |    0 |     0 |      1 |        1 |           0 |     3 | default  |         0 |        3 |
 | Chong2015             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Logan2015             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Korsager2015          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
@@ -369,7 +369,7 @@ kable(rt)
 | Allen2014             |   1 |      1 |    0 |     0 |      1 |        0 |           0 |     3 | default  |         0 |        3 |
 | Day2013               |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Roscoe2013            |   0 |      1 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
-| Jin2013               |   1 |      0 |    0 |     1 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
+| Jin2013               |   1 |      1 |    0 |     1 |      0 |        0 |           0 |     3 | default  |         0 |        3 |
 | Veijalainen2013       |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Sellmann2013          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Kinsey2012            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
@@ -382,7 +382,7 @@ kable(rt)
 | Varma2012             |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | McNeill2012           |   0 |      1 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Lambert2012           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
-| Lombardi2012          |   0 |      0 |    0 |     0 |      1 |        1 |           0 |     2 | default  |         0 |        3 |
+| Lombardi2012          |   0 |      1 |    0 |     0 |      1 |        1 |           0 |     3 | default  |         0 |        3 |
 | Porter2012            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Koseoglu2011          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Sternang2012          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
@@ -402,16 +402,16 @@ kable(rt)
 | Sumrall2021           |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Lozano2022            |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Eichinger2022         |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
-| Oe2022                |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
+| Oe2022                |   1 |      1 |    0 |     0 |      1 |        0 |           0 |     3 | default  |         0 |        3 |
 | Williams2017          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Anonymous2021         |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Parant2017            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Kreibich2011          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Gomes2015             |   1 |      1 |    0 |     0 |      1 |        0 |           0 |     3 | default  |         0 |        3 |
-| da_Silva2022a         |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
-| Prosser_Bravo2022     |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
+| da_Silva2022a         |   1 |      1 |    0 |     1 |      0 |        0 |           0 |     3 | default  |         0 |        3 |
+| Prosser_Bravo2022     |   1 |      1 |    0 |     0 |      1 |        0 |           0 |     3 | default  |         0 |        3 |
 | Silva2021             |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
-| Oliveira2021          |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
+| Oliveira2021          |   1 |      1 |    0 |     1 |      0 |        0 |           0 |     3 | default  |         0 |        3 |
 | Bright2020            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Dormody2021           |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Aldila2018            |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
@@ -419,7 +419,7 @@ kable(rt)
 | Kern2017              |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Liu2015               |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |
 | Musselman2020         |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
-| Xie2014               |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
+| Xie2014               |   1 |      1 |    0 |     0 |      1 |        0 |           0 |     3 | default  |         0 |        3 |
 | Bhattacharya2020      |   1 |      1 |    0 |     0 |      0 |        0 |           1 |     3 | default  |         0 |        3 |
 | Taylor2020            |   1 |      0 |    0 |     0 |      1 |        0 |           0 |     2 | default  |         0 |        3 |
 | Le2019                |   1 |      1 |    0 |     0 |      0 |        0 |           0 |     2 | default  |         0 |        3 |

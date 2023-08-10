@@ -2,7 +2,7 @@ Reading the results of the assignments and extracting the interesting
 data (example of a full-text screening exercise)
 ================
 Marius Bottin
-2023-08-09
+2023-08-10
 
 - [1 Numbers](#1-numbers)
 - [2 Conflicts](#2-conflicts)
@@ -104,6 +104,7 @@ Marius Bottin
   - [3.37 Kathiresan2021](#337-kathiresan2021)
   - [3.38 Le2019](#338-le2019)
   - [3.39 Logan2015](#339-logan2015)
+  - [3.40 Sukardi2022](#340-sukardi2022)
 - [4 Final Numbers](#4-final-numbers)
 
 In order to read the results of the assignments, we put all the
@@ -151,12 +152,13 @@ idDoc <- "abbrev"
     ## [24] "assignment31_Marius_20230803.xlsx"     
     ## [25] "assignment32_Sergio_20230808.xlsx"     
     ## [26] "assignment33_Marius_20230809.xlsx"     
-    ## [27] "assignment4_Marius_20230705.xlsx"      
-    ## [28] "assignment5_Ana_20230706.xlsx"         
-    ## [29] "assignment6_Ana_20230706.xlsx"         
-    ## [30] "assignment7_Ana_20230706.xlsx"         
-    ## [31] "assignment8_Ana_20230706.xlsx"         
-    ## [32] "assignment9_Benjamin_20230706.xlsx"
+    ## [27] "assignment35_Marius_20230810.xlsx"     
+    ## [28] "assignment4_Marius_20230705.xlsx"      
+    ## [29] "assignment5_Ana_20230706.xlsx"         
+    ## [30] "assignment6_Ana_20230706.xlsx"         
+    ## [31] "assignment7_Ana_20230706.xlsx"         
+    ## [32] "assignment8_Ana_20230706.xlsx"         
+    ## [33] "assignment9_Benjamin_20230706.xlsx"
 
 ``` r
 assignment<-gsub(patternFiles,"\\1",filesResults)
@@ -180,7 +182,7 @@ table(docAnalysed$inclusion)
 
     ## 
     ##       0       1   FALSE    TRUE UNCLEAR  UNSURE 
-    ##      47      54     127     259       3       3
+    ##      51      58     127     263       3       3
 
 ``` r
 docAnalysed$incl<-NA
@@ -191,7 +193,7 @@ table(docAnalysed$incl,useNA="ifany")
 
     ## 
     ## FALSE  TRUE  <NA> 
-    ##   174   313    28
+    ##   178   321    28
 
 Which are the documents which were reviewed more than once:
 
@@ -647,7 +649,7 @@ really know if it can be including in our criteria
 <tr>
 <td style="text-align:left;">
 
-447
+459
 
 </td>
 <td style="text-align:right;">
@@ -888,7 +890,7 @@ than climate per se.
 <tr>
 <td style="text-align:left;">
 
-503
+515
 
 </td>
 <td style="text-align:right;">
@@ -1028,7 +1030,7 @@ outcome part should not take too much time
 <tr>
 <td style="text-align:left;">
 
-455
+467
 
 </td>
 <td style="text-align:right;">
@@ -1298,7 +1300,7 @@ I agree with Sara that the population is university students here
 <tr>
 <td style="text-align:left;">
 
-512
+524
 
 </td>
 <td style="text-align:right;">
@@ -2133,7 +2135,7 @@ futuro" que hacen en las actividades.
 <tr>
 <td style="text-align:left;">
 
-482
+494
 
 </td>
 <td style="text-align:right;">
@@ -2273,7 +2275,7 @@ do not feel that their method support their claims…
 <tr>
 <td style="text-align:left;">
 
-452
+464
 
 </td>
 <td style="text-align:right;">
@@ -2595,7 +2597,43 @@ learning to think about complex things like climate change
 <tr>
 <td style="text-align:left;">
 
-495
+391
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+I am not sure why there was a doubt about including this one, it might
+be because the energy vocabulary is not mentioning directly CC, but the
+intervention is about the science of climate change… It may be because
+of the methodology, but since we accepted qualitative studies, we ought
+to accept this one as well…
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+507
 
 </td>
 <td style="text-align:right;">
@@ -3009,7 +3047,7 @@ certain…
 <tr>
 <td style="text-align:left;">
 
-483
+495
 
 </td>
 <td style="text-align:right;">
@@ -3216,7 +3254,39 @@ University students, not high school or younger.
 <tr>
 <td style="text-align:left;">
 
-515
+392
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+University students (p. 206)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+527
 
 </td>
 <td style="text-align:right;">
@@ -3345,6 +3415,42 @@ NA
 <td style="text-align:left;">
 
 NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+393
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+The extraction process will definitely be difficult, because the outcome
+measurements are not clear, but the authors clearly link the sea stars
+disease outbreaks to climate change, and use that to create an emotional
+response to Climate Change in the children, so I think it meets the
+criteria
 
 </td>
 </tr>
@@ -3871,6 +3977,42 @@ cambio.
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+394
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+I would tend to disagree with Juan Gabriel here and consider that focal
+groups discussion are presented as an educative intervention, and that
+the results and comparison of the two groups are analysed as such. This
+is one of the papers were extraction will be difficult, but in my
+opinion, the paper meets the criteria…
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -3946,7 +4088,48 @@ CC.
 <tr>
 <td style="text-align:left;">
 
-451
+395
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+I’ve got various issues with this papers: first it is difficult to see
+which is the population and whether it corresponds to our criteria: if
+it is the student there are from university, if it is the teachers it
+appears that they are the teachers from the students (university), if
+the population is the people from the community youth centers, well, we
+do not have enough information about them! Concerning the outcomes, well
+the pedagogical discourse is analysed, not the effect on those who
+receive the discourse. So there is a mix of problem from population and
+outcomes which tend to make me reject this document, however the reason
+is very blurry even though I spent quite some time on the document…
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+463
 
 </td>
 <td style="text-align:right;">
@@ -4257,7 +4440,45 @@ NO INTERVENTION
 <tr>
 <td style="text-align:left;">
 
-511
+396
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Intervention
+
+</td>
+<td style="text-align:left;">
+
+I tend to agree with Ana by saying that there is no intervention
+described in this document, it is very interesting and keeping the
+document for the introduction or discussion may be interesting for a
+sentence like “teacher may be biased by ideology in their pedagogical
+methodology choices” might be possible, but clearly I do not see any way
+to keep the paper and extract any information on the efficiency of a
+pedagogical intervention
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+523
 
 </td>
 <td style="text-align:right;">
@@ -4359,7 +4580,46 @@ No intervention rather simply focus groups.
 <tr>
 <td style="text-align:left;">
 
-502
+397
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Population
+
+</td>
+<td style="text-align:left;">
+
+There is a very large population here, not all of them can easily be
+linked directly to children. However, since there is a large discussion
+on the ideas concerning CCE, one might argue that effectively, the
+participant become somewhat the entourage of the children, but it is
+somewhat far fetch… However concerning the intervention, I tend to
+disagree with Sergio and consider that the focus group are the
+pedagogical intervention. I would be much more comfortable with an
+additional opinion here
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+514
 
 </td>
 <td style="text-align:right;">
@@ -4527,7 +4787,7 @@ maestros
 <tr>
 <td style="text-align:left;">
 
-402
+414
 
 </td>
 <td style="text-align:right;">
@@ -4629,7 +4889,48 @@ Uncomplete text, only the first page is available.
 <tr>
 <td style="text-align:left;">
 
-513
+398
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+For me it is a “includable” one, but I am conscious there are 2 small
+problems here. First, I am not sure that the objective can be described
+as purely CC, since the methodology could be applied for any other
+science topic, and it is not clear whether the authors were really
+focused on the Climate ¡, but the topic of the intervention is clearly
+related to CC so I think it can go in. The second problem is that, while
+the first research question enters in our criteria, it is only a part of
+the outcomes here, and the other part concerns the pedagogical
+methodology. However if we can filter the interesting question, we are
+good!
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+525
 
 </td>
 <td style="text-align:right;">
@@ -4732,7 +5033,40 @@ educación ambiental adscrito a un programa de educación elemental.
 <tr>
 <td style="text-align:left;">
 
-490
+399
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+We said that pre-service teachers would be accepted as children
+entourage
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+502
 
 </td>
 <td style="text-align:right;">
@@ -4866,7 +5200,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-424
+436
 
 </td>
 <td style="text-align:right;">
@@ -4972,7 +5306,7 @@ difficult for this one, however I can’t see why excluding it.
 <tr>
 <td style="text-align:left;">
 
-510
+522
 
 </td>
 <td style="text-align:right;">
@@ -5100,6 +5434,41 @@ NA
 <td style="text-align:left;">
 
 NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+400
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+It is a complete yes, I would even go further and say that it could be a
+test paper for the extraction because it is clearly in our objectives
+but will pose issues at the extraction (both teachers and students
+considered, various outcomes of interest etc.)
 
 </td>
 </tr>
@@ -5530,7 +5899,43 @@ Outcome deals with implementation rather than CC.
 <tr>
 <td style="text-align:left;">
 
-454
+401
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+It is true that the majority of the results concern the implementation
+and motivation toward the activity, so it would be in the part of
+debates concerning integration due to outcomes that may not be exactly
+what we search, however, if you look at table 9 p. 130, these results
+concern knowledge and attitudes!
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+466
 
 </td>
 <td style="text-align:right;">
@@ -5896,6 +6301,42 @@ NA
 <td style="text-align:left;">
 
 NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+402
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+I understand the issue Ana have with this paper, climate change is only
+mentioned at the beginning of the introduction. However, CC main topic
+is energy, and for me it is right in the topic. There might be a debate
+though because we should maybe base this criterium on the author
+discourses instead of external knowledge.
 
 </td>
 </tr>
@@ -6301,7 +6742,7 @@ but has not actually done so.
 <tr>
 <td style="text-align:left;">
 
-475
+487
 
 </td>
 <td style="text-align:right;">
@@ -6611,7 +7052,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-440
+452
 
 </td>
 <td style="text-align:right;">
@@ -6719,7 +7160,7 @@ the student view of the CC, both in terms of knowledge and awareness!
 <tr>
 <td style="text-align:left;">
 
-509
+521
 
 </td>
 <td style="text-align:right;">
@@ -6902,7 +7343,7 @@ thesis
 <tr>
 <td style="text-align:left;">
 
-403
+415
 
 </td>
 <td style="text-align:right;">
@@ -7067,7 +7508,7 @@ Población de estudiantes de pregrado.
 <tr>
 <td style="text-align:left;">
 
-425
+437
 
 </td>
 <td style="text-align:right;">
@@ -7239,7 +7680,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-497
+509
 
 </td>
 <td style="text-align:right;">
@@ -7411,7 +7852,7 @@ University students
 <tr>
 <td style="text-align:left;">
 
-457
+469
 
 </td>
 <td style="text-align:right;">
@@ -7620,7 +8061,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-397
+409
 
 </td>
 <td style="text-align:right;">
@@ -7797,7 +8238,7 @@ emociones.
 <tr>
 <td style="text-align:left;">
 
-467
+479
 
 </td>
 <td style="text-align:right;">
@@ -8144,7 +8585,7 @@ students’ belief that global warming was happening and human caused’’
 <tr>
 <td style="text-align:left;">
 
-394
+406
 
 </td>
 <td style="text-align:right;">
@@ -8350,7 +8791,7 @@ mezclan a la poblacion (colegio, universidad) en los descenlaces
 <tr>
 <td style="text-align:left;">
 
-400
+412
 
 </td>
 <td style="text-align:right;">
@@ -8555,7 +8996,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-405
+417
 
 </td>
 <td style="text-align:right;">
@@ -8729,7 +9170,7 @@ activity.
 <tr>
 <td style="text-align:left;">
 
-448
+460
 
 </td>
 <td style="text-align:right;">
@@ -8935,7 +9376,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-396
+408
 
 </td>
 <td style="text-align:right;">
@@ -9144,7 +9585,7 @@ mezclan high school students con university
 <tr>
 <td style="text-align:left;">
 
-399
+411
 
 </td>
 <td style="text-align:right;">
@@ -9355,7 +9796,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-391
+403
 
 </td>
 <td style="text-align:right;">
@@ -9701,7 +10142,7 @@ Pertenecen a una comunidad, pero no se ofrecen mayores detalles.
 <tr>
 <td style="text-align:left;">
 
-476
+488
 
 </td>
 <td style="text-align:right;">
@@ -10079,7 +10520,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-404
+416
 
 </td>
 <td style="text-align:right;">
@@ -10253,7 +10694,7 @@ climate change.
 <tr>
 <td style="text-align:left;">
 
-492
+504
 
 </td>
 <td style="text-align:right;">
@@ -10951,7 +11392,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-500
+512
 
 </td>
 <td style="text-align:right;">
@@ -11157,7 +11598,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-401
+413
 
 </td>
 <td style="text-align:right;">
@@ -11335,7 +11776,7 @@ students arguments…
 <tr>
 <td style="text-align:left;">
 
-423
+435
 
 </td>
 <td style="text-align:right;">
@@ -11513,7 +11954,7 @@ analysis for the synthesis
 <tr>
 <td style="text-align:left;">
 
-421
+433
 
 </td>
 <td style="text-align:right;">
@@ -11862,7 +12303,7 @@ though.
 <tr>
 <td style="text-align:left;">
 
-415
+427
 
 </td>
 <td style="text-align:right;">
@@ -12070,7 +12511,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-393
+405
 
 </td>
 <td style="text-align:right;">
@@ -12480,7 +12921,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-398
+410
 
 </td>
 <td style="text-align:right;">
@@ -12826,7 +13267,7 @@ qualifies as CC even though they claim so.
 <tr>
 <td style="text-align:left;">
 
-433
+445
 
 </td>
 <td style="text-align:right;">
@@ -13106,7 +13547,7 @@ StudyType: PhD thesis
 <tr>
 <td style="text-align:left;">
 
-428
+440
 
 </td>
 <td style="text-align:right;">
@@ -13279,7 +13720,7 @@ is the general public, children are not mentionned as a clear objective
 <tr>
 <td style="text-align:left;">
 
-480
+492
 
 </td>
 <td style="text-align:right;">
@@ -13627,7 +14068,7 @@ StudyType: thesis
 <tr>
 <td style="text-align:left;">
 
-504
+516
 
 </td>
 <td style="text-align:right;">
@@ -13902,6 +14343,146 @@ NA
 </tbody>
 </table>
 
+## 3.40 Sukardi2022
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+268
+
+</td>
+<td style="text-align:right;">
+
+26
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+40
+
+</td>
+<td style="text-align:left;">
+
+Sukardi2022
+
+</td>
+<td style="text-align:left;">
+
+Ana,Marius,Luisa,JuanGabriel,Sergio
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+problemas de calidad/extraccion
+
+</td>
+</tr>
+</tbody>
+</table>
+
 # 4 Final Numbers
 
 ``` r
@@ -13950,13 +14531,13 @@ NA
     ## [115] "Wang2022"              "White2022"             "Williams2017"         
     ## [118] "Markowitz2018"         "Jacobson2017"          "Deisenrieder2020"     
     ## [121] "Feierabend2012"        "Goulah2017"            "McNeal2014a"          
-    ## [124] "Miller2015"            "Ratinen2013"
+    ## [124] "Miller2015"            "Ratinen2013"           "Sukardi2022"
 
 ``` r
 length(AcceptedFinal)
 ```
 
-    ## [1] 125
+    ## [1] 126
 
 ``` r
 RejectedFinal<-
