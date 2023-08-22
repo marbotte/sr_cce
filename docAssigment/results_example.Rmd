@@ -165,3 +165,24 @@ kable(RejectedFinal,row.names = F)
 table(RejectedFinal$reason)
 ```
 
+
+## Missing decisions
+
+
+```{r}
+load("../../screening/fullTextScreening/FTS.RData")
+docsTot<-unlist(FTS$description$documents)
+(missin <- docsTot[!docsTot%in%AcceptedFinal & !docsTot%in%RejectedFinal$id])
+  
+```
+
+Which assignments the missing decisions correspond to:
+```{r}
+tabAssignMiss<-sapply(missin,function(x,l)
+{
+  sapply(l,function(y,x)x%in%y$documents,x=x)
+},l=FTS$assignments
+  )
+colnames(tabAssignMiss)<-missin
+apply(tabAssignMiss,2,which)
+```
