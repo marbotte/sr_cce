@@ -2,16 +2,11 @@ Reading the results of the assignments and extracting the interesting
 data (example of a full-text screening exercise)
 ================
 Marius Bottin
-2023-08-22
+2023-08-31
 
 - [1 Numbers](#1-numbers)
 - [2 Conflicts](#2-conflicts)
   - [2.1 Inclusion](#21-inclusion)
-    - [2.1.1 da_Silva2022a](#211-da_silva2022a)
-    - [2.1.2 Oberauer2023](#212-oberauer2023)
-    - [2.1.3 Ouariachi2017a](#213-ouariachi2017a)
-    - [2.1.4 Sezen_Barrie2020](#214-sezen_barrie2020)
-    - [2.1.5 Walsh2018](#215-walsh2018)
   - [2.2 Reason of exclusion](#22-reason-of-exclusion)
 - [3 Resolved conflicts](#3-resolved-conflicts)
   - [3.1 Yarker2013](#31-yarker2013)
@@ -115,6 +110,11 @@ Marius Bottin
   - [3.99 Cohen2013](#399-cohen2013)
   - [3.100 Walsh2012](#3100-walsh2012)
   - [3.101 Wallace2018](#3101-wallace2018)
+  - [3.102 da_Silva2022a](#3102-da_silva2022a)
+  - [3.103 Oberauer2023](#3103-oberauer2023)
+  - [3.104 Ouariachi2017a](#3104-ouariachi2017a)
+  - [3.105 Sezen_Barrie2020](#3105-sezen_barrie2020)
+  - [3.106 Walsh2018](#3106-walsh2018)
 - [4 Final Numbers](#4-final-numbers)
   - [4.1 Missing decisions](#41-missing-decisions)
 
@@ -312,8 +312,7 @@ conflictOnInclusion <- by(docAnalysed[docAnalysed$id%in%mTO_noFinalD,],docAnalys
 (w_conflict_incl <- names(conflictOnInclusion)[conflictOnInclusion])
 ```
 
-    ## [1] "da_Silva2022a"    "Oberauer2023"     "Ouariachi2017a"   "Sezen_Barrie2020"
-    ## [5] "Walsh2018"
+    ## character(0)
 
 ``` r
 toTest_conflictReason<-mTO_noFinalD[!mTO_noFinalD%in%w_conflict_incl]
@@ -442,593 +441,6 @@ for(i in w_conflict_incl)
   cat("\n\n")
 }
 ```
-
-### 2.1.1 da_Silva2022a
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-258
-
-</td>
-<td style="text-align:right;">
-
-25
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-369
-
-</td>
-<td style="text-align:right;">
-
-31
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-Help! (portuguese)
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-396
-
-</td>
-<td style="text-align:right;">
-
-34
-
-</td>
-<td style="text-align:left;">
-
-Luisa
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-I+O
-
-</td>
-<td style="text-align:left;">
-
-This Isa survey
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.2 Oberauer2023
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-265
-
-</td>
-<td style="text-align:right;">
-
-26
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-348
-
-</td>
-<td style="text-align:right;">
-
-30
-
-</td>
-<td style="text-align:left;">
-
-Luisa
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-I+O
-
-</td>
-<td style="text-align:left;">
-
-Lots of theory but almost no reference to intervention
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.3 Ouariachi2017a
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-376
-
-</td>
-<td style="text-align:right;">
-
-31
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-I+O
-
-</td>
-<td style="text-align:left;">
-
-It would appear difficult to consider there is an actual intervention
-here, moreover the outcomes are only the analysis of what could learn
-the users, not what the users have actually learnt.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-417
-
-</td>
-<td style="text-align:right;">
-
-36
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-los juegos online sobre este tema se perfilan como herramientas
-alternativas para fomentar la concienciación entre los jóvenes.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.4 Sezen_Barrie2020
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-73
-
-</td>
-<td style="text-align:right;">
-
-14
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-There are various aspects there. We need to choose whether we extract
-cognition effect on students, emotion effects on student, or effects on
-the educational practices of teachers, or even emotions of the teachers,
-or which combination of them… This might make the extraction process
-difficult for this one, however I can’t see why excluding it.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-413
-
-</td>
-<td style="text-align:right;">
-
-36
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-its about the emotions, unsure how this will be extracted .. how
-students’ wondering questions help teachers notice essential features of
-climate change learning such as spatiotemporal thinking.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-549
-
-</td>
-<td style="text-align:right;">
-
-9
-
-</td>
-<td style="text-align:left;">
-
-Benjamin
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-### 2.1.5 Walsh2018
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-362
-
-</td>
-<td style="text-align:right;">
-
-31
-
-</td>
-<td style="text-align:left;">
-
-Marius
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-Yes, it will be hell to analyse and extract… Despite the clear special
-way of mixing political identities and cognition effect changes in 3
-“type” student, I believe this document met the criteria to be included…
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-416
-
-</td>
-<td style="text-align:right;">
-
-36
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-Outcome
-
-</td>
-<td style="text-align:left;">
-
-small sample size, kinda complicated, it seems like the intervention
-worked but the outcomes are hard to extract, i could include it if the
-other reviwer includesd it
-
-</td>
-</tr>
-</tbody>
-</table>
 
 ## 2.2 Reason of exclusion
 
@@ -20312,6 +19724,943 @@ Thesis
 </tbody>
 </table>
 
+## 3.102 da_Silva2022a
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+258
+
+</td>
+<td style="text-align:right;">
+
+25
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+369
+
+</td>
+<td style="text-align:right;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Help! (portuguese)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+396
+
+</td>
+<td style="text-align:right;">
+
+34
+
+</td>
+<td style="text-align:left;">
+
+Luisa
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+This Isa survey
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+102
+
+</td>
+<td style="text-align:left;">
+
+da_Silva2022a
+
+</td>
+<td style="text-align:left;">
+
+Marius,Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.103 Oberauer2023
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+265
+
+</td>
+<td style="text-align:right;">
+
+26
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+348
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:left;">
+
+Luisa
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+Lots of theory but almost no reference to intervention
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+103
+
+</td>
+<td style="text-align:left;">
+
+Oberauer2023
+
+</td>
+<td style="text-align:left;">
+
+Marius,Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Check quality for description of intervention
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.104 Ouariachi2017a
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+376
+
+</td>
+<td style="text-align:right;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+I+O
+
+</td>
+<td style="text-align:left;">
+
+It would appear difficult to consider there is an actual intervention
+here, moreover the outcomes are only the analysis of what could learn
+the users, not what the users have actually learnt.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+417
+
+</td>
+<td style="text-align:right;">
+
+36
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+los juegos online sobre este tema se perfilan como herramientas
+alternativas para fomentar la concienciación entre los jóvenes.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+104
+
+</td>
+<td style="text-align:left;">
+
+Ouariachi2017a
+
+</td>
+<td style="text-align:left;">
+
+Marius,Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+P+I+O
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.105 Sezen_Barrie2020
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+73
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+There are various aspects there. We need to choose whether we extract
+cognition effect on students, emotion effects on student, or effects on
+the educational practices of teachers, or even emotions of the teachers,
+or which combination of them… This might make the extraction process
+difficult for this one, however I can’t see why excluding it.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+413
+
+</td>
+<td style="text-align:right;">
+
+36
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+its about the emotions, unsure how this will be extracted .. how
+students’ wondering questions help teachers notice essential features of
+climate change learning such as spatiotemporal thinking.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+549
+
+</td>
+<td style="text-align:right;">
+
+9
+
+</td>
+<td style="text-align:left;">
+
+Benjamin
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+105
+
+</td>
+<td style="text-align:left;">
+
+Sezen_Barrie2020
+
+</td>
+<td style="text-align:left;">
+
+Marius,Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.106 Walsh2018
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+362
+
+</td>
+<td style="text-align:right;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Yes, it will be hell to analyse and extract… Despite the clear special
+way of mixing political identities and cognition effect changes in 3
+“type” student, I believe this document met the criteria to be included…
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+416
+
+</td>
+<td style="text-align:right;">
+
+36
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+small sample size, kinda complicated, it seems like the intervention
+worked but the outcomes are hard to extract, i could include it if the
+other reviwer includesd it
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+106
+
+</td>
+<td style="text-align:left;">
+
+Walsh2018
+
+</td>
+<td style="text-align:left;">
+
+Marius,Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
 # 4 Final Numbers
 
 ``` r
@@ -20369,13 +20718,13 @@ Thesis
     ## [142] "Zhong2021"             "Zografakis2008"        "Muller2021"           
     ## [145] "Cebesoy2019"           "Levrini2021"           "Meya2018"             
     ## [148] "Dormody2020"           "Raes2016"              "Schuster2008"         
-    ## [151] "Sternang2012"
+    ## [151] "Sternang2012"          "Oberauer2023"          "Walsh2018"
 
 ``` r
 length(AcceptedFinal)
 ```
 
-    ## [1] 151
+    ## [1] 153
 
 ``` r
 RejectedFinal<-
@@ -21508,6 +21857,42 @@ StudyType
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+da_Silva2022a
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Ouariachi2017a
+
+</td>
+<td style="text-align:left;">
+
+P+I+O
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Sezen_Barrie2020
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -21517,9 +21902,13 @@ table(RejectedFinal$reason)
 
     ## 
     ##          I+O Intervention   MissingPdf      Outcome          P+I        P+I+O 
-    ##            7            8            1           36            3            6 
+    ##            7            8            1           38            3            7 
     ##   Population    StudyType 
     ##           21           10
+
+``` r
+save(AcceptedFinal,file="../../screening/fullTextScreening/acceptedFinal.RData")
+```
 
 ## 4.1 Missing decisions
 
@@ -21529,14 +21918,12 @@ docsTot<-unlist(FTS$description$documents)
 (missin <- docsTot[!docsTot%in%AcceptedFinal & !docsTot%in%RejectedFinal$id])
 ```
 
-    ##          default16          default91         default183         default204 
-    ##     "Oberauer2023"        "Walsh2018"    "da_Silva2022a"   "Ouariachi2017a" 
-    ##         conflict17 
-    ## "Sezen_Barrie2020"
+    ## named character(0)
 
 Which assignments the missing decisions correspond to:
 
 ``` r
+if(length(missin)>0){
 tabAssignMiss<-sapply(missin,function(x,l)
 {
   sapply(l,function(y,x)x%in%y$documents,x=x)
@@ -21544,19 +21931,5 @@ tabAssignMiss<-sapply(missin,function(x,l)
   )
 colnames(tabAssignMiss)<-missin
 apply(tabAssignMiss,2,which)
+}
 ```
-
-    ## $Oberauer2023
-    ## [1] 26 30
-    ## 
-    ## $Walsh2018
-    ## [1] 31 36
-    ## 
-    ## $da_Silva2022a
-    ## [1] 25 31 34
-    ## 
-    ## $Ouariachi2017a
-    ## [1] 31 36
-    ## 
-    ## $Sezen_Barrie2020
-    ## [1]  9 14 36
