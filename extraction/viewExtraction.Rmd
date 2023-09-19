@@ -1,0 +1,70 @@
+---
+title: "Document organized by paper"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+```{r}
+require(openxlsx)&require(knitr)&require(kableExtra)
+completeFTS <- read.xlsx("../../screening/fullTextScreening/fullTextScreening.xlsx")
+names(loadWorkbook("../../extraction/20230919.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20230919.xlsx",sheet = "extraction ",startRow = 2)
+extract<-rawExtract
+#table(extract$`Validation.Mitigation/adaptation`)
+tabToWork<-extract[order(extract$id),]
+```
+
+```{r, results='asis'}
+for(i in 1:nrow(tabToWork))
+{
+  ref<-tabToWork$id[i]
+  title<-tabToWork$referencia[i]
+  person<-tabToWork$codifico[i]
+  abstract<-completeFTS[completeFTS$abbrev==ref,"abstract"]
+  knowledge<-tabToWork$knowledge[i]
+  awareness<-tabToWork$awareness[i]
+  intention<-tabToWork$intention[i]
+  emotions<-tabToWork$emotion[i]
+  action<-tabToWork$action[i]
+  habit<-tabToWork$habit[i]
+  other<-tabToWork$Other[i]
+  conclusions<-tabToWork$Conclusiones.generales[i]
+  notes<-tabToWork$Main.ideas.to.keep.for.the.synthesis[i]
+  # cat("#", ref,"\n\n",
+  #     "*title*:", title,"\n\n",
+  #     "*person*:", person,"\n\n",
+  #     "*abstract*:", abstract,"\n\n",
+  #     ifelse(is.na(knowledge),"",paste("*knowledge*:", knowledge,"\n\n")),
+  #     ifelse(is.na(awareness),"",paste("*awareness*:", awareness,"\n\n")),
+  #     ifelse(is.na(intention),"",paste("*intention*:", intention,"\n\n")),
+  #     ifelse(is.na(emotions),"",paste("*emotions*:", emotions,"\n\n")),
+  #     ifelse(is.na(action),"",paste("*action*:", action,"\n\n")),
+  #     ifelse(is.na(habit),"",paste("*habit*:", habit,"\n\n")),
+  #     ifelse(is.na(other),"",paste("*other*:", other,"\n\n"))
+  # )
+  cat("#", ref, "(",person,")\n\n")
+  cat("##","abstract","\n\n")
+  cat(abstract,"\n\n")
+  cat("## Population\n\n")
+  TAB<-na.omit(t(tabToWork[i,c("Countries.STUDY","TARGETED.SAMPLE","SAMPLE","sample.size","age_min","age_max","mean.age","urban.vs.rural")]))
+  cat(kable(TAB,col.names = c()))
+  cat("\n\n")
+  cat(paste("##","Objective/questions\n\n"))
+  TAB<-na.omit(t(tabToWork[i,c("Objectives","Questions")]))
+  cat(kable(TAB,col.names = c()))
+  cat("\n\n")
+  cat("## Intervention\n\n")
+  TAB<-na.omit(t(tabToWork[i,c("Curricular/Extracurricular","Outdoor/Indoor/Both","Type.of.intervention","Descripcion.de.intervención")]))
+  cat(kable(TAB,col.names = c()))
+  cat("\n\n")
+  cat("## Methods/Results\n\n")
+  TAB<-na.omit(t(tabToWork[i,c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Resultados.obtenidos.por.cada.outcome")]))
+  cat(kable(TAB,col.names = c()))
+  cat("\n\n")
+}
+```
+
