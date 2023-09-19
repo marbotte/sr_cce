@@ -9,870 +9,1160 @@ Marius Bottin
   - [1.3 Objective/questions](#13-objectivequestions)
   - [1.4 Intervention](#14-intervention)
   - [1.5 Methods/Results](#15-methodsresults)
+  - [1.6 Outcomes](#16-outcomes)
+  - [1.7 Conclusions](#17-conclusions)
 - [2 Aksel_Stenberdt2023 ( ABP )](#2-aksel_stenberdt2023--abp-)
   - [2.1 abstract](#21-abstract)
   - [2.2 Population](#22-population)
   - [2.3 Objective/questions](#23-objectivequestions)
   - [2.4 Intervention](#24-intervention)
   - [2.5 Methods/Results](#25-methodsresults)
+  - [2.6 Outcomes](#26-outcomes)
+  - [2.7 Conclusions](#27-conclusions)
 - [3 Aksut2016 ( ABP )](#3-aksut2016--abp-)
   - [3.1 abstract](#31-abstract)
   - [3.2 Population](#32-population)
   - [3.3 Objective/questions](#33-objectivequestions)
   - [3.4 Intervention](#34-intervention)
   - [3.5 Methods/Results](#35-methodsresults)
+  - [3.6 Outcomes](#36-outcomes)
+  - [3.7 Conclusions](#37-conclusions)
 - [4 Arya2016 ( ABP )](#4-arya2016--abp-)
   - [4.1 abstract](#41-abstract)
   - [4.2 Population](#42-population)
   - [4.3 Objective/questions](#43-objectivequestions)
   - [4.4 Intervention](#44-intervention)
   - [4.5 Methods/Results](#45-methodsresults)
+  - [4.6 Outcomes](#46-outcomes)
+  - [4.7 Conclusions](#47-conclusions)
 - [5 Baker2013 ( ABP )](#5-baker2013--abp-)
   - [5.1 abstract](#51-abstract)
   - [5.2 Population](#52-population)
   - [5.3 Objective/questions](#53-objectivequestions)
   - [5.4 Intervention](#54-intervention)
   - [5.5 Methods/Results](#55-methodsresults)
+  - [5.6 Outcomes](#56-outcomes)
+  - [5.7 Conclusions](#57-conclusions)
 - [6 Bentz2020 ( ABP )](#6-bentz2020--abp-)
   - [6.1 abstract](#61-abstract)
   - [6.2 Population](#62-population)
   - [6.3 Objective/questions](#63-objectivequestions)
   - [6.4 Intervention](#64-intervention)
   - [6.5 Methods/Results](#65-methodsresults)
+  - [6.6 Outcomes](#66-outcomes)
+  - [6.7 Conclusions](#67-conclusions)
 - [7 Bhattacharya2021 ( ABP )](#7-bhattacharya2021--abp-)
   - [7.1 abstract](#71-abstract)
   - [7.2 Population](#72-population)
   - [7.3 Objective/questions](#73-objectivequestions)
   - [7.4 Intervention](#74-intervention)
   - [7.5 Methods/Results](#75-methodsresults)
+  - [7.6 Outcomes](#76-outcomes)
+  - [7.7 Conclusions](#77-conclusions)
 - [8 Blaum2017 ( SC )](#8-blaum2017--sc-)
   - [8.1 abstract](#81-abstract)
   - [8.2 Population](#82-population)
   - [8.3 Objective/questions](#83-objectivequestions)
   - [8.4 Intervention](#84-intervention)
   - [8.5 Methods/Results](#85-methodsresults)
+  - [8.6 Outcomes](#86-outcomes)
+  - [8.7 Conclusions](#87-conclusions)
 - [9 Bodzin2014 ( SC )](#9-bodzin2014--sc-)
   - [9.1 abstract](#91-abstract)
   - [9.2 Population](#92-population)
   - [9.3 Objective/questions](#93-objectivequestions)
   - [9.4 Intervention](#94-intervention)
   - [9.5 Methods/Results](#95-methodsresults)
+  - [9.6 Outcomes](#96-outcomes)
+  - [9.7 Conclusions](#97-conclusions)
 - [10 Bofferding2015 ( ABP )](#10-bofferding2015--abp-)
   - [10.1 abstract](#101-abstract)
   - [10.2 Population](#102-population)
   - [10.3 Objective/questions](#103-objectivequestions)
   - [10.4 Intervention](#104-intervention)
   - [10.5 Methods/Results](#105-methodsresults)
+  - [10.6 Outcomes](#106-outcomes)
+  - [10.7 Conclusions](#107-conclusions)
 - [11 Boon2016 ( ABP )](#11-boon2016--abp-)
   - [11.1 abstract](#111-abstract)
   - [11.2 Population](#112-population)
   - [11.3 Objective/questions](#113-objectivequestions)
   - [11.4 Intervention](#114-intervention)
   - [11.5 Methods/Results](#115-methodsresults)
+  - [11.6 Outcomes](#116-outcomes)
+  - [11.7 Conclusions](#117-conclusions)
 - [12 Bozdogan2011 ( ABP )](#12-bozdogan2011--abp-)
   - [12.1 abstract](#121-abstract)
   - [12.2 Population](#122-population)
   - [12.3 Objective/questions](#123-objectivequestions)
   - [12.4 Intervention](#124-intervention)
   - [12.5 Methods/Results](#125-methodsresults)
+  - [12.6 Outcomes](#126-outcomes)
+  - [12.7 Conclusions](#127-conclusions)
 - [13 Breslyn2019 ( MB )](#13-breslyn2019--mb-)
   - [13.1 abstract](#131-abstract)
   - [13.2 Population](#132-population)
   - [13.3 Objective/questions](#133-objectivequestions)
   - [13.4 Intervention](#134-intervention)
   - [13.5 Methods/Results](#135-methodsresults)
+  - [13.6 Outcomes](#136-outcomes)
+  - [13.7 Conclusions](#137-conclusions)
 - [14 Cebesoy2019 ( SB )](#14-cebesoy2019--sb-)
   - [14.1 abstract](#141-abstract)
   - [14.2 Population](#142-population)
   - [14.3 Objective/questions](#143-objectivequestions)
   - [14.4 Intervention](#144-intervention)
   - [14.5 Methods/Results](#145-methodsresults)
+  - [14.6 Outcomes](#146-outcomes)
+  - [14.7 Conclusions](#147-conclusions)
 - [15 Cebesoy2022 ( MB )](#15-cebesoy2022--mb-)
   - [15.1 abstract](#151-abstract)
   - [15.2 Population](#152-population)
   - [15.3 Objective/questions](#153-objectivequestions)
   - [15.4 Intervention](#154-intervention)
   - [15.5 Methods/Results](#155-methodsresults)
+  - [15.6 Outcomes](#156-outcomes)
+  - [15.7 Conclusions](#157-conclusions)
 - [16 Chang2018 ( ABP )](#16-chang2018--abp-)
   - [16.1 abstract](#161-abstract)
   - [16.2 Population](#162-population)
   - [16.3 Objective/questions](#163-objectivequestions)
   - [16.4 Intervention](#164-intervention)
   - [16.5 Methods/Results](#165-methodsresults)
+  - [16.6 Outcomes](#166-outcomes)
+  - [16.7 Conclusions](#167-conclusions)
 - [17 Chattuchai2015 ( ABP )](#17-chattuchai2015--abp-)
   - [17.1 abstract](#171-abstract)
   - [17.2 Population](#172-population)
   - [17.3 Objective/questions](#173-objectivequestions)
   - [17.4 Intervention](#174-intervention)
   - [17.5 Methods/Results](#175-methodsresults)
+  - [17.6 Outcomes](#176-outcomes)
+  - [17.7 Conclusions](#177-conclusions)
 - [18 Chin2016 ( MB )](#18-chin2016--mb-)
   - [18.1 abstract](#181-abstract)
   - [18.2 Population](#182-population)
   - [18.3 Objective/questions](#183-objectivequestions)
   - [18.4 Intervention](#184-intervention)
   - [18.5 Methods/Results](#185-methodsresults)
+  - [18.6 Outcomes](#186-outcomes)
+  - [18.7 Conclusions](#187-conclusions)
 - [19 Choi2021 ( ABP )](#19-choi2021--abp-)
   - [19.1 abstract](#191-abstract)
   - [19.2 Population](#192-population)
   - [19.3 Objective/questions](#193-objectivequestions)
   - [19.4 Intervention](#194-intervention)
   - [19.5 Methods/Results](#195-methodsresults)
+  - [19.6 Outcomes](#196-outcomes)
+  - [19.7 Conclusions](#197-conclusions)
 - [20 Cibik2022 ( SC )](#20-cibik2022--sc-)
   - [20.1 abstract](#201-abstract)
   - [20.2 Population](#202-population)
   - [20.3 Objective/questions](#203-objectivequestions)
   - [20.4 Intervention](#204-intervention)
   - [20.5 Methods/Results](#205-methodsresults)
+  - [20.6 Outcomes](#206-outcomes)
+  - [20.7 Conclusions](#207-conclusions)
 - [21 da_Rocha2020 ( JGOP )](#21-da_rocha2020--jgop-)
   - [21.1 abstract](#211-abstract)
   - [21.2 Population](#212-population)
   - [21.3 Objective/questions](#213-objectivequestions)
   - [21.4 Intervention](#214-intervention)
   - [21.5 Methods/Results](#215-methodsresults)
+  - [21.6 Outcomes](#216-outcomes)
+  - [21.7 Conclusions](#217-conclusions)
 - [22 Dal2015a ( JGOP )](#22-dal2015a--jgop-)
   - [22.1 abstract](#221-abstract)
   - [22.2 Population](#222-population)
   - [22.3 Objective/questions](#223-objectivequestions)
   - [22.4 Intervention](#224-intervention)
   - [22.5 Methods/Results](#225-methodsresults)
+  - [22.6 Outcomes](#226-outcomes)
+  - [22.7 Conclusions](#227-conclusions)
 - [23 Deisenrieder2020 ( MB )](#23-deisenrieder2020--mb-)
   - [23.1 abstract](#231-abstract)
   - [23.2 Population](#232-population)
   - [23.3 Objective/questions](#233-objectivequestions)
   - [23.4 Intervention](#234-intervention)
   - [23.5 Methods/Results](#235-methodsresults)
+  - [23.6 Outcomes](#236-outcomes)
+  - [23.7 Conclusions](#237-conclusions)
 - [24 DeWaters2014 ( ABP )](#24-dewaters2014--abp-)
   - [24.1 abstract](#241-abstract)
   - [24.2 Population](#242-population)
   - [24.3 Objective/questions](#243-objectivequestions)
   - [24.4 Intervention](#244-intervention)
   - [24.5 Methods/Results](#245-methodsresults)
+  - [24.6 Outcomes](#246-outcomes)
+  - [24.7 Conclusions](#247-conclusions)
 - [25 Dormody2020 ( SB )](#25-dormody2020--sb-)
   - [25.1 abstract](#251-abstract)
   - [25.2 Population](#252-population)
   - [25.3 Objective/questions](#253-objectivequestions)
   - [25.4 Intervention](#254-intervention)
   - [25.5 Methods/Results](#255-methodsresults)
+  - [25.6 Outcomes](#256-outcomes)
+  - [25.7 Conclusions](#257-conclusions)
 - [26 Dormody2021 ( ABP )](#26-dormody2021--abp-)
   - [26.1 abstract](#261-abstract)
   - [26.2 Population](#262-population)
   - [26.3 Objective/questions](#263-objectivequestions)
   - [26.4 Intervention](#264-intervention)
   - [26.5 Methods/Results](#265-methodsresults)
+  - [26.6 Outcomes](#266-outcomes)
+  - [26.7 Conclusions](#267-conclusions)
 - [27 Drewes2018 ( MB )](#27-drewes2018--mb-)
   - [27.1 abstract](#271-abstract)
   - [27.2 Population](#272-population)
   - [27.3 Objective/questions](#273-objectivequestions)
   - [27.4 Intervention](#274-intervention)
   - [27.5 Methods/Results](#275-methodsresults)
+  - [27.6 Outcomes](#276-outcomes)
+  - [27.7 Conclusions](#277-conclusions)
 - [28 Drewes2018 ( MB )](#28-drewes2018--mb-)
   - [28.1 abstract](#281-abstract)
   - [28.2 Population](#282-population)
   - [28.3 Objective/questions](#283-objectivequestions)
   - [28.4 Intervention](#284-intervention)
   - [28.5 Methods/Results](#285-methodsresults)
+  - [28.6 Outcomes](#286-outcomes)
+  - [28.7 Conclusions](#287-conclusions)
 - [29 Eggert2017 ( JGOP )](#29-eggert2017--jgop-)
   - [29.1 abstract](#291-abstract)
   - [29.2 Population](#292-population)
   - [29.3 Objective/questions](#293-objectivequestions)
   - [29.4 Intervention](#294-intervention)
   - [29.5 Methods/Results](#295-methodsresults)
+  - [29.6 Outcomes](#296-outcomes)
+  - [29.7 Conclusions](#297-conclusions)
 - [30 Faria2015 ( MB )](#30-faria2015--mb-)
   - [30.1 abstract](#301-abstract)
   - [30.2 Population](#302-population)
   - [30.3 Objective/questions](#303-objectivequestions)
   - [30.4 Intervention](#304-intervention)
   - [30.5 Methods/Results](#305-methodsresults)
+  - [30.6 Outcomes](#306-outcomes)
+  - [30.7 Conclusions](#307-conclusions)
 - [31 Faria2015 ( MB )](#31-faria2015--mb-)
   - [31.1 abstract](#311-abstract)
   - [31.2 Population](#312-population)
   - [31.3 Objective/questions](#313-objectivequestions)
   - [31.4 Intervention](#314-intervention)
   - [31.5 Methods/Results](#315-methodsresults)
+  - [31.6 Outcomes](#316-outcomes)
+  - [31.7 Conclusions](#317-conclusions)
 - [32 Feierabend2012 ( ABP )](#32-feierabend2012--abp-)
   - [32.1 abstract](#321-abstract)
   - [32.2 Population](#322-population)
   - [32.3 Objective/questions](#323-objectivequestions)
   - [32.4 Intervention](#324-intervention)
   - [32.5 Methods/Results](#325-methodsresults)
+  - [32.6 Outcomes](#326-outcomes)
+  - [32.7 Conclusions](#327-conclusions)
 - [33 Feldpausch_Parker2013 ( JGOP )](#33-feldpausch_parker2013--jgop-)
   - [33.1 abstract](#331-abstract)
   - [33.2 Population](#332-population)
   - [33.3 Objective/questions](#333-objectivequestions)
   - [33.4 Intervention](#334-intervention)
   - [33.5 Methods/Results](#335-methodsresults)
+  - [33.6 Outcomes](#336-outcomes)
+  - [33.7 Conclusions](#337-conclusions)
 - [34 Flora2014 ( JGOP )](#34-flora2014--jgop-)
   - [34.1 abstract](#341-abstract)
   - [34.2 Population](#342-population)
   - [34.3 Objective/questions](#343-objectivequestions)
   - [34.4 Intervention](#344-intervention)
   - [34.5 Methods/Results](#345-methodsresults)
+  - [34.6 Outcomes](#346-outcomes)
+  - [34.7 Conclusions](#347-conclusions)
 - [35 Gold2015a ( LR )](#35-gold2015a--lr-)
   - [35.1 abstract](#351-abstract)
   - [35.2 Population](#352-population)
   - [35.3 Objective/questions](#353-objectivequestions)
   - [35.4 Intervention](#354-intervention)
   - [35.5 Methods/Results](#355-methodsresults)
+  - [35.6 Outcomes](#356-outcomes)
+  - [35.7 Conclusions](#357-conclusions)
 - [36 Harker_Schuch2013 ( SC )](#36-harker_schuch2013--sc-)
   - [36.1 abstract](#361-abstract)
   - [36.2 Population](#362-population)
   - [36.3 Objective/questions](#363-objectivequestions)
   - [36.4 Intervention](#364-intervention)
   - [36.5 Methods/Results](#365-methodsresults)
+  - [36.6 Outcomes](#366-outcomes)
+  - [36.7 Conclusions](#367-conclusions)
 - [37 Harker_Schuch2020 ( SC )](#37-harker_schuch2020--sc-)
   - [37.1 abstract](#371-abstract)
   - [37.2 Population](#372-population)
   - [37.3 Objective/questions](#373-objectivequestions)
   - [37.4 Intervention](#374-intervention)
   - [37.5 Methods/Results](#375-methodsresults)
+  - [37.6 Outcomes](#376-outcomes)
+  - [37.7 Conclusions](#377-conclusions)
 - [38 Herrick2022 ( LR )](#38-herrick2022--lr-)
   - [38.1 abstract](#381-abstract)
   - [38.2 Population](#382-population)
   - [38.3 Objective/questions](#383-objectivequestions)
   - [38.4 Intervention](#384-intervention)
   - [38.5 Methods/Results](#385-methodsresults)
+  - [38.6 Outcomes](#386-outcomes)
+  - [38.7 Conclusions](#387-conclusions)
 - [39 Holthuis2014 ( ABP )](#39-holthuis2014--abp-)
   - [39.1 abstract](#391-abstract)
   - [39.2 Population](#392-population)
   - [39.3 Objective/questions](#393-objectivequestions)
   - [39.4 Intervention](#394-intervention)
   - [39.5 Methods/Results](#395-methodsresults)
+  - [39.6 Outcomes](#396-outcomes)
+  - [39.7 Conclusions](#397-conclusions)
 - [40 Hu2016 ( MB )](#40-hu2016--mb-)
   - [40.1 abstract](#401-abstract)
   - [40.2 Population](#402-population)
   - [40.3 Objective/questions](#403-objectivequestions)
   - [40.4 Intervention](#404-intervention)
   - [40.5 Methods/Results](#405-methodsresults)
+  - [40.6 Outcomes](#406-outcomes)
+  - [40.7 Conclusions](#407-conclusions)
 - [41 Jacobson2017 ( MB )](#41-jacobson2017--mb-)
   - [41.1 abstract](#411-abstract)
   - [41.2 Population](#412-population)
   - [41.3 Objective/questions](#413-objectivequestions)
   - [41.4 Intervention](#414-intervention)
   - [41.5 Methods/Results](#415-methodsresults)
+  - [41.6 Outcomes](#416-outcomes)
+  - [41.7 Conclusions](#417-conclusions)
 - [42 Jin2013 ( LR )](#42-jin2013--lr-)
   - [42.1 abstract](#421-abstract)
   - [42.2 Population](#422-population)
   - [42.3 Objective/questions](#423-objectivequestions)
   - [42.4 Intervention](#424-intervention)
   - [42.5 Methods/Results](#425-methodsresults)
+  - [42.6 Outcomes](#426-outcomes)
+  - [42.7 Conclusions](#427-conclusions)
 - [43 Jones2021 ( MB )](#43-jones2021--mb-)
   - [43.1 abstract](#431-abstract)
   - [43.2 Population](#432-population)
   - [43.3 Objective/questions](#433-objectivequestions)
   - [43.4 Intervention](#434-intervention)
   - [43.5 Methods/Results](#435-methodsresults)
+  - [43.6 Outcomes](#436-outcomes)
+  - [43.7 Conclusions](#437-conclusions)
 - [44 Kabir2015 ( SC )](#44-kabir2015--sc-)
   - [44.1 abstract](#441-abstract)
   - [44.2 Population](#442-population)
   - [44.3 Objective/questions](#443-objectivequestions)
   - [44.4 Intervention](#444-intervention)
   - [44.5 Methods/Results](#445-methodsresults)
+  - [44.6 Outcomes](#446-outcomes)
+  - [44.7 Conclusions](#447-conclusions)
 - [45 Karpudewan2015 ( MB )](#45-karpudewan2015--mb-)
   - [45.1 abstract](#451-abstract)
   - [45.2 Population](#452-population)
   - [45.3 Objective/questions](#453-objectivequestions)
   - [45.4 Intervention](#454-intervention)
   - [45.5 Methods/Results](#455-methodsresults)
+  - [45.6 Outcomes](#456-outcomes)
+  - [45.7 Conclusions](#457-conclusions)
 - [46 Karpudewan2015a ( JGOP )](#46-karpudewan2015a--jgop-)
   - [46.1 abstract](#461-abstract)
   - [46.2 Population](#462-population)
   - [46.3 Objective/questions](#463-objectivequestions)
   - [46.4 Intervention](#464-intervention)
   - [46.5 Methods/Results](#465-methodsresults)
+  - [46.6 Outcomes](#466-outcomes)
+  - [46.7 Conclusions](#467-conclusions)
 - [47 Karpudewan2017 ( MB )](#47-karpudewan2017--mb-)
   - [47.1 abstract](#471-abstract)
   - [47.2 Population](#472-population)
   - [47.3 Objective/questions](#473-objectivequestions)
   - [47.4 Intervention](#474-intervention)
   - [47.5 Methods/Results](#475-methodsresults)
+  - [47.6 Outcomes](#476-outcomes)
+  - [47.7 Conclusions](#477-conclusions)
 - [48 Keller2019 ( MB )](#48-keller2019--mb-)
   - [48.1 abstract](#481-abstract)
   - [48.2 Population](#482-population)
   - [48.3 Objective/questions](#483-objectivequestions)
   - [48.4 Intervention](#484-intervention)
   - [48.5 Methods/Results](#485-methodsresults)
+  - [48.6 Outcomes](#486-outcomes)
+  - [48.7 Conclusions](#487-conclusions)
 - [49 Kern2017 ( BQ )](#49-kern2017--bq-)
   - [49.1 abstract](#491-abstract)
   - [49.2 Population](#492-population)
   - [49.3 Objective/questions](#493-objectivequestions)
   - [49.4 Intervention](#494-intervention)
   - [49.5 Methods/Results](#495-methodsresults)
+  - [49.6 Outcomes](#496-outcomes)
+  - [49.7 Conclusions](#497-conclusions)
 - [50 Khadka2021 ( ABP )](#50-khadka2021--abp-)
   - [50.1 abstract](#501-abstract)
   - [50.2 Population](#502-population)
   - [50.3 Objective/questions](#503-objectivequestions)
   - [50.4 Intervention](#504-intervention)
   - [50.5 Methods/Results](#505-methodsresults)
+  - [50.6 Outcomes](#506-outcomes)
+  - [50.7 Conclusions](#507-conclusions)
 - [51 Kinsey2012 ( ABP )](#51-kinsey2012--abp-)
   - [51.1 abstract](#511-abstract)
   - [51.2 Population](#512-population)
   - [51.3 Objective/questions](#513-objectivequestions)
   - [51.4 Intervention](#514-intervention)
   - [51.5 Methods/Results](#515-methodsresults)
+  - [51.6 Outcomes](#516-outcomes)
+  - [51.7 Conclusions](#517-conclusions)
 - [52 Klosterman2010 ( JGOP )](#52-klosterman2010--jgop-)
   - [52.1 abstract](#521-abstract)
   - [52.2 Population](#522-population)
   - [52.3 Objective/questions](#523-objectivequestions)
   - [52.4 Intervention](#524-intervention)
   - [52.5 Methods/Results](#525-methodsresults)
+  - [52.6 Outcomes](#526-outcomes)
+  - [52.7 Conclusions](#527-conclusions)
 - [53 Kolenaty2022 ( SB )](#53-kolenaty2022--sb-)
   - [53.1 abstract](#531-abstract)
   - [53.2 Population](#532-population)
   - [53.3 Objective/questions](#533-objectivequestions)
   - [53.4 Intervention](#534-intervention)
   - [53.5 Methods/Results](#535-methodsresults)
+  - [53.6 Outcomes](#536-outcomes)
+  - [53.7 Conclusions](#537-conclusions)
 - [54 Korfgen2017 ( ABP )](#54-korfgen2017--abp-)
   - [54.1 abstract](#541-abstract)
   - [54.2 Population](#542-population)
   - [54.3 Objective/questions](#543-objectivequestions)
   - [54.4 Intervention](#544-intervention)
   - [54.5 Methods/Results](#545-methodsresults)
+  - [54.6 Outcomes](#546-outcomes)
+  - [54.7 Conclusions](#547-conclusions)
 - [55 Korsager2015 ( MB )](#55-korsager2015--mb-)
   - [55.1 abstract](#551-abstract)
   - [55.2 Population](#552-population)
   - [55.3 Objective/questions](#553-objectivequestions)
   - [55.4 Intervention](#554-intervention)
   - [55.5 Methods/Results](#555-methodsresults)
+  - [55.6 Outcomes](#556-outcomes)
+  - [55.7 Conclusions](#557-conclusions)
 - [56 Kubisch2022 ( ABP )](#56-kubisch2022--abp-)
   - [56.1 abstract](#561-abstract)
   - [56.2 Population](#562-population)
   - [56.3 Objective/questions](#563-objectivequestions)
   - [56.4 Intervention](#564-intervention)
   - [56.5 Methods/Results](#565-methodsresults)
+  - [56.6 Outcomes](#566-outcomes)
+  - [56.7 Conclusions](#567-conclusions)
 - [57 Kumar2023 ( SB )](#57-kumar2023--sb-)
   - [57.1 abstract](#571-abstract)
   - [57.2 Population](#572-population)
   - [57.3 Objective/questions](#573-objectivequestions)
   - [57.4 Intervention](#574-intervention)
   - [57.5 Methods/Results](#575-methodsresults)
+  - [57.6 Outcomes](#576-outcomes)
+  - [57.7 Conclusions](#577-conclusions)
 - [58 Lambert2012 ( ABP )](#58-lambert2012--abp-)
   - [58.1 abstract](#581-abstract)
   - [58.2 Population](#582-population)
   - [58.3 Objective/questions](#583-objectivequestions)
   - [58.4 Intervention](#584-intervention)
   - [58.5 Methods/Results](#585-methodsresults)
+  - [58.6 Outcomes](#586-outcomes)
+  - [58.7 Conclusions](#587-conclusions)
 - [59 Lambert2013 ( SC )](#59-lambert2013--sc-)
   - [59.1 abstract](#591-abstract)
   - [59.2 Population](#592-population)
   - [59.3 Objective/questions](#593-objectivequestions)
   - [59.4 Intervention](#594-intervention)
   - [59.5 Methods/Results](#595-methodsresults)
+  - [59.6 Outcomes](#596-outcomes)
+  - [59.7 Conclusions](#597-conclusions)
 - [60 Lawson2019a ( LR )](#60-lawson2019a--lr-)
   - [60.1 abstract](#601-abstract)
   - [60.2 Population](#602-population)
   - [60.3 Objective/questions](#603-objectivequestions)
   - [60.4 Intervention](#604-intervention)
   - [60.5 Methods/Results](#605-methodsresults)
+  - [60.6 Outcomes](#606-outcomes)
+  - [60.7 Conclusions](#607-conclusions)
 - [61 Lawson2019a ( LR )](#61-lawson2019a--lr-)
   - [61.1 abstract](#611-abstract)
   - [61.2 Population](#612-population)
   - [61.3 Objective/questions](#613-objectivequestions)
   - [61.4 Intervention](#614-intervention)
   - [61.5 Methods/Results](#615-methodsresults)
+  - [61.6 Outcomes](#616-outcomes)
+  - [61.7 Conclusions](#617-conclusions)
 - [62 Leckey2021 ( MB )](#62-leckey2021--mb-)
   - [62.1 abstract](#621-abstract)
   - [62.2 Population](#622-population)
   - [62.3 Objective/questions](#623-objectivequestions)
   - [62.4 Intervention](#624-intervention)
   - [62.5 Methods/Results](#625-methodsresults)
+  - [62.6 Outcomes](#626-outcomes)
+  - [62.7 Conclusions](#627-conclusions)
 - [63 Leitao2022 ( MB )](#63-leitao2022--mb-)
   - [63.1 abstract](#631-abstract)
   - [63.2 Population](#632-population)
   - [63.3 Objective/questions](#633-objectivequestions)
   - [63.4 Intervention](#634-intervention)
   - [63.5 Methods/Results](#635-methodsresults)
+  - [63.6 Outcomes](#636-outcomes)
+  - [63.7 Conclusions](#637-conclusions)
 - [64 Lester2006 ( ABP )](#64-lester2006--abp-)
   - [64.1 abstract](#641-abstract)
   - [64.2 Population](#642-population)
   - [64.3 Objective/questions](#643-objectivequestions)
   - [64.4 Intervention](#644-intervention)
   - [64.5 Methods/Results](#645-methodsresults)
+  - [64.6 Outcomes](#646-outcomes)
+  - [64.7 Conclusions](#647-conclusions)
 - [65 Levrini2021 ( SB )](#65-levrini2021--sb-)
   - [65.1 abstract](#651-abstract)
   - [65.2 Population](#652-population)
   - [65.3 Objective/questions](#653-objectivequestions)
   - [65.4 Intervention](#654-intervention)
   - [65.5 Methods/Results](#655-methodsresults)
+  - [65.6 Outcomes](#656-outcomes)
+  - [65.7 Conclusions](#657-conclusions)
 - [66 Li2022 ( BQ )](#66-li2022--bq-)
   - [66.1 abstract](#661-abstract)
   - [66.2 Population](#662-population)
   - [66.3 Objective/questions](#663-objectivequestions)
   - [66.4 Intervention](#664-intervention)
   - [66.5 Methods/Results](#665-methodsresults)
+  - [66.6 Outcomes](#666-outcomes)
+  - [66.7 Conclusions](#667-conclusions)
 - [67 Li2022 ( BQ )](#67-li2022--bq-)
   - [67.1 abstract](#671-abstract)
   - [67.2 Population](#672-population)
   - [67.3 Objective/questions](#673-objectivequestions)
   - [67.4 Intervention](#674-intervention)
   - [67.5 Methods/Results](#675-methodsresults)
+  - [67.6 Outcomes](#676-outcomes)
+  - [67.7 Conclusions](#677-conclusions)
 - [68 Littrell2022 ( SC )](#68-littrell2022--sc-)
   - [68.1 abstract](#681-abstract)
   - [68.2 Population](#682-population)
   - [68.3 Objective/questions](#683-objectivequestions)
   - [68.4 Intervention](#684-intervention)
   - [68.5 Methods/Results](#685-methodsresults)
+  - [68.6 Outcomes](#686-outcomes)
+  - [68.7 Conclusions](#687-conclusions)
 - [69 Liu2015 ( ABP )](#69-liu2015--abp-)
   - [69.1 abstract](#691-abstract)
   - [69.2 Population](#692-population)
   - [69.3 Objective/questions](#693-objectivequestions)
   - [69.4 Intervention](#694-intervention)
   - [69.5 Methods/Results](#695-methodsresults)
+  - [69.6 Outcomes](#696-outcomes)
+  - [69.7 Conclusions](#697-conclusions)
 - [70 Lombardi2013 ( ABP )](#70-lombardi2013--abp-)
   - [70.1 abstract](#701-abstract)
   - [70.2 Population](#702-population)
   - [70.3 Objective/questions](#703-objectivequestions)
   - [70.4 Intervention](#704-intervention)
   - [70.5 Methods/Results](#705-methodsresults)
+  - [70.6 Outcomes](#706-outcomes)
+  - [70.7 Conclusions](#707-conclusions)
 - [71 Lozano2022 ( SC )](#71-lozano2022--sc-)
   - [71.1 abstract](#711-abstract)
   - [71.2 Population](#712-population)
   - [71.3 Objective/questions](#713-objectivequestions)
   - [71.4 Intervention](#714-intervention)
   - [71.5 Methods/Results](#715-methodsresults)
+  - [71.6 Outcomes](#716-outcomes)
+  - [71.7 Conclusions](#717-conclusions)
 - [72 Markowitz2018 ( LR )](#72-markowitz2018--lr-)
   - [72.1 abstract](#721-abstract)
   - [72.2 Population](#722-population)
   - [72.3 Objective/questions](#723-objectivequestions)
   - [72.4 Intervention](#724-intervention)
   - [72.5 Methods/Results](#725-methodsresults)
+  - [72.6 Outcomes](#726-outcomes)
+  - [72.7 Conclusions](#727-conclusions)
 - [73 Mason1998 ( SB )](#73-mason1998--sb-)
   - [73.1 abstract](#731-abstract)
   - [73.2 Population](#732-population)
   - [73.3 Objective/questions](#733-objectivequestions)
   - [73.4 Intervention](#734-intervention)
   - [73.5 Methods/Results](#735-methodsresults)
+  - [73.6 Outcomes](#736-outcomes)
+  - [73.7 Conclusions](#737-conclusions)
 - [74 McGowan2022 ( SB )](#74-mcgowan2022--sb-)
   - [74.1 abstract](#741-abstract)
   - [74.2 Population](#742-population)
   - [74.3 Objective/questions](#743-objectivequestions)
   - [74.4 Intervention](#744-intervention)
   - [74.5 Methods/Results](#745-methodsresults)
+  - [74.6 Outcomes](#746-outcomes)
+  - [74.7 Conclusions](#747-conclusions)
 - [75 McNeal2014a ( LR )](#75-mcneal2014a--lr-)
   - [75.1 abstract](#751-abstract)
   - [75.2 Population](#752-population)
   - [75.3 Objective/questions](#753-objectivequestions)
   - [75.4 Intervention](#754-intervention)
   - [75.5 Methods/Results](#755-methodsresults)
+  - [75.6 Outcomes](#756-outcomes)
+  - [75.7 Conclusions](#757-conclusions)
 - [76 McNeill2012 ( SC )](#76-mcneill2012--sc-)
   - [76.1 abstract](#761-abstract)
   - [76.2 Population](#762-population)
   - [76.3 Objective/questions](#763-objectivequestions)
   - [76.4 Intervention](#764-intervention)
   - [76.5 Methods/Results](#765-methodsresults)
+  - [76.6 Outcomes](#766-outcomes)
+  - [76.7 Conclusions](#767-conclusions)
 - [77 Meya2018 ( SB )](#77-meya2018--sb-)
   - [77.1 abstract](#771-abstract)
   - [77.2 Population](#772-population)
   - [77.3 Objective/questions](#773-objectivequestions)
   - [77.4 Intervention](#774-intervention)
   - [77.5 Methods/Results](#775-methodsresults)
+  - [77.6 Outcomes](#776-outcomes)
+  - [77.7 Conclusions](#777-conclusions)
 - [78 Monroe2016 ( ABP )](#78-monroe2016--abp-)
   - [78.1 abstract](#781-abstract)
   - [78.2 Population](#782-population)
   - [78.3 Objective/questions](#783-objectivequestions)
   - [78.4 Intervention](#784-intervention)
   - [78.5 Methods/Results](#785-methodsresults)
+  - [78.6 Outcomes](#786-outcomes)
+  - [78.7 Conclusions](#787-conclusions)
 - [79 Muller2021 ( LR )](#79-muller2021--lr-)
   - [79.1 abstract](#791-abstract)
   - [79.2 Population](#792-population)
   - [79.3 Objective/questions](#793-objectivequestions)
   - [79.4 Intervention](#794-intervention)
   - [79.5 Methods/Results](#795-methodsresults)
+  - [79.6 Outcomes](#796-outcomes)
+  - [79.7 Conclusions](#797-conclusions)
 - [80 Muller2021 ( SC )](#80-muller2021--sc-)
   - [80.1 abstract](#801-abstract)
   - [80.2 Population](#802-population)
   - [80.3 Objective/questions](#803-objectivequestions)
   - [80.4 Intervention](#804-intervention)
   - [80.5 Methods/Results](#805-methodsresults)
+  - [80.6 Outcomes](#806-outcomes)
+  - [80.7 Conclusions](#807-conclusions)
 - [81 Nafisah2022 ( MB )](#81-nafisah2022--mb-)
   - [81.1 abstract](#811-abstract)
   - [81.2 Population](#812-population)
   - [81.3 Objective/questions](#813-objectivequestions)
   - [81.4 Intervention](#814-intervention)
   - [81.5 Methods/Results](#815-methodsresults)
+  - [81.6 Outcomes](#816-outcomes)
+  - [81.7 Conclusions](#817-conclusions)
 - [82 Nakamura2019 ( ABP )](#82-nakamura2019--abp-)
   - [82.1 abstract](#821-abstract)
   - [82.2 Population](#822-population)
   - [82.3 Objective/questions](#823-objectivequestions)
   - [82.4 Intervention](#824-intervention)
   - [82.5 Methods/Results](#825-methodsresults)
+  - [82.6 Outcomes](#826-outcomes)
+  - [82.7 Conclusions](#827-conclusions)
 - [83 Nicholas_Figueroa2017 ( ABP )](#83-nicholas_figueroa2017--abp-)
   - [83.1 abstract](#831-abstract)
   - [83.2 Population](#832-population)
   - [83.3 Objective/questions](#833-objectivequestions)
   - [83.4 Intervention](#834-intervention)
   - [83.5 Methods/Results](#835-methodsresults)
+  - [83.6 Outcomes](#836-outcomes)
+  - [83.7 Conclusions](#837-conclusions)
 - [84 Nkoana2020 ( JGOP )](#84-nkoana2020--jgop-)
   - [84.1 abstract](#841-abstract)
   - [84.2 Population](#842-population)
   - [84.3 Objective/questions](#843-objectivequestions)
   - [84.4 Intervention](#844-intervention)
   - [84.5 Methods/Results](#845-methodsresults)
+  - [84.6 Outcomes](#846-outcomes)
+  - [84.7 Conclusions](#847-conclusions)
 - [85 Oberauer2023 ( LR )](#85-oberauer2023--lr-)
   - [85.1 abstract](#851-abstract)
   - [85.2 Population](#852-population)
   - [85.3 Objective/questions](#853-objectivequestions)
   - [85.4 Intervention](#854-intervention)
   - [85.5 Methods/Results](#855-methodsresults)
+  - [85.6 Outcomes](#856-outcomes)
+  - [85.7 Conclusions](#857-conclusions)
 - [86 Parant2017 ( ABP )](#86-parant2017--abp-)
   - [86.1 abstract](#861-abstract)
   - [86.2 Population](#862-population)
   - [86.3 Objective/questions](#863-objectivequestions)
   - [86.4 Intervention](#864-intervention)
   - [86.5 Methods/Results](#865-methodsresults)
+  - [86.6 Outcomes](#866-outcomes)
+  - [86.7 Conclusions](#867-conclusions)
 - [87 Park2020 ( MB )](#87-park2020--mb-)
   - [87.1 abstract](#871-abstract)
   - [87.2 Population](#872-population)
   - [87.3 Objective/questions](#873-objectivequestions)
   - [87.4 Intervention](#874-intervention)
   - [87.5 Methods/Results](#875-methodsresults)
+  - [87.6 Outcomes](#876-outcomes)
+  - [87.7 Conclusions](#877-conclusions)
 - [88 Parth2020 ( MB )](#88-parth2020--mb-)
   - [88.1 abstract](#881-abstract)
   - [88.2 Population](#882-population)
   - [88.3 Objective/questions](#883-objectivequestions)
   - [88.4 Intervention](#884-intervention)
   - [88.5 Methods/Results](#885-methodsresults)
+  - [88.6 Outcomes](#886-outcomes)
+  - [88.7 Conclusions](#887-conclusions)
 - [89 Petersen2020 ( ABP )](#89-petersen2020--abp-)
   - [89.1 abstract](#891-abstract)
   - [89.2 Population](#892-population)
   - [89.3 Objective/questions](#893-objectivequestions)
   - [89.4 Intervention](#894-intervention)
   - [89.5 Methods/Results](#895-methodsresults)
+  - [89.6 Outcomes](#896-outcomes)
+  - [89.7 Conclusions](#897-conclusions)
 - [90 Porter2012 ( ABP )](#90-porter2012--abp-)
   - [90.1 abstract](#901-abstract)
   - [90.2 Population](#902-population)
   - [90.3 Objective/questions](#903-objectivequestions)
   - [90.4 Intervention](#904-intervention)
   - [90.5 Methods/Results](#905-methodsresults)
+  - [90.6 Outcomes](#906-outcomes)
+  - [90.7 Conclusions](#907-conclusions)
 - [91 Pruneau2003 ( BQ )](#91-pruneau2003--bq-)
   - [91.1 abstract](#911-abstract)
   - [91.2 Population](#912-population)
   - [91.3 Objective/questions](#913-objectivequestions)
   - [91.4 Intervention](#914-intervention)
   - [91.5 Methods/Results](#915-methodsresults)
+  - [91.6 Outcomes](#916-outcomes)
+  - [91.7 Conclusions](#917-conclusions)
 - [92 Pruneau2006 ( BQ )](#92-pruneau2006--bq-)
   - [92.1 abstract](#921-abstract)
   - [92.2 Population](#922-population)
   - [92.3 Objective/questions](#923-objectivequestions)
   - [92.4 Intervention](#924-intervention)
   - [92.5 Methods/Results](#925-methodsresults)
+  - [92.6 Outcomes](#926-outcomes)
+  - [92.7 Conclusions](#927-conclusions)
 - [93 Pruneau2006a ( LR )](#93-pruneau2006a--lr-)
   - [93.1 abstract](#931-abstract)
   - [93.2 Population](#932-population)
   - [93.3 Objective/questions](#933-objectivequestions)
   - [93.4 Intervention](#934-intervention)
   - [93.5 Methods/Results](#935-methodsresults)
+  - [93.6 Outcomes](#936-outcomes)
+  - [93.7 Conclusions](#937-conclusions)
 - [94 Raes2016 ( BQ )](#94-raes2016--bq-)
   - [94.1 abstract](#941-abstract)
   - [94.2 Population](#942-population)
   - [94.3 Objective/questions](#943-objectivequestions)
   - [94.4 Intervention](#944-intervention)
   - [94.5 Methods/Results](#945-methodsresults)
+  - [94.6 Outcomes](#946-outcomes)
+  - [94.7 Conclusions](#947-conclusions)
 - [95 Ratinen2013 ( BQ )](#95-ratinen2013--bq-)
   - [95.1 abstract](#951-abstract)
   - [95.2 Population](#952-population)
   - [95.3 Objective/questions](#953-objectivequestions)
   - [95.4 Intervention](#954-intervention)
   - [95.5 Methods/Results](#955-methodsresults)
+  - [95.6 Outcomes](#956-outcomes)
+  - [95.7 Conclusions](#957-conclusions)
 - [96 Reinfried2012 ( SB )](#96-reinfried2012--sb-)
   - [96.1 abstract](#961-abstract)
   - [96.2 Population](#962-population)
   - [96.3 Objective/questions](#963-objectivequestions)
   - [96.4 Intervention](#964-intervention)
   - [96.5 Methods/Results](#965-methodsresults)
+  - [96.6 Outcomes](#966-outcomes)
+  - [96.7 Conclusions](#967-conclusions)
 - [97 Roscoe2013 ( BQ )](#97-roscoe2013--bq-)
   - [97.1 abstract](#971-abstract)
   - [97.2 Population](#972-population)
   - [97.3 Objective/questions](#973-objectivequestions)
   - [97.4 Intervention](#974-intervention)
   - [97.5 Methods/Results](#975-methodsresults)
+  - [97.6 Outcomes](#976-outcomes)
+  - [97.7 Conclusions](#977-conclusions)
 - [98 Roychoudhury2017 ( ABP )](#98-roychoudhury2017--abp-)
   - [98.1 abstract](#981-abstract)
   - [98.2 Population](#982-population)
   - [98.3 Objective/questions](#983-objectivequestions)
   - [98.4 Intervention](#984-intervention)
   - [98.5 Methods/Results](#985-methodsresults)
+  - [98.6 Outcomes](#986-outcomes)
+  - [98.7 Conclusions](#987-conclusions)
 - [99 Ruboon2012 ( BQ )](#99-ruboon2012--bq-)
   - [99.1 abstract](#991-abstract)
   - [99.2 Population](#992-population)
   - [99.3 Objective/questions](#993-objectivequestions)
   - [99.4 Intervention](#994-intervention)
   - [99.5 Methods/Results](#995-methodsresults)
+  - [99.6 Outcomes](#996-outcomes)
+  - [99.7 Conclusions](#997-conclusions)
 - [100 Salas_Rueda2021 ( ABP )](#100-salas_rueda2021--abp-)
   - [100.1 abstract](#1001-abstract)
   - [100.2 Population](#1002-population)
   - [100.3 Objective/questions](#1003-objectivequestions)
   - [100.4 Intervention](#1004-intervention)
   - [100.5 Methods/Results](#1005-methodsresults)
+  - [100.6 Outcomes](#1006-outcomes)
+  - [100.7 Conclusions](#1007-conclusions)
 - [101 Salsabila2019 ( SC )](#101-salsabila2019--sc-)
   - [101.1 abstract](#1011-abstract)
   - [101.2 Population](#1012-population)
   - [101.3 Objective/questions](#1013-objectivequestions)
   - [101.4 Intervention](#1014-intervention)
   - [101.5 Methods/Results](#1015-methodsresults)
+  - [101.6 Outcomes](#1016-outcomes)
+  - [101.7 Conclusions](#1017-conclusions)
 - [102 Saribaş2016 ( JGOP )](#102-saribaş2016--jgop-)
   - [102.1 abstract](#1021-abstract)
   - [102.2 Population](#1022-population)
   - [102.3 Objective/questions](#1023-objectivequestions)
   - [102.4 Intervention](#1024-intervention)
   - [102.5 Methods/Results](#1025-methodsresults)
+  - [102.6 Outcomes](#1026-outcomes)
+  - [102.7 Conclusions](#1027-conclusions)
 - [103 Schrot2021a ( MB )](#103-schrot2021a--mb-)
   - [103.1 abstract](#1031-abstract)
   - [103.2 Population](#1032-population)
   - [103.3 Objective/questions](#1033-objectivequestions)
   - [103.4 Intervention](#1034-intervention)
   - [103.5 Methods/Results](#1035-methodsresults)
+  - [103.6 Outcomes](#1036-outcomes)
+  - [103.7 Conclusions](#1037-conclusions)
 - [104 Schubatzky2022 ( ABP )](#104-schubatzky2022--abp-)
   - [104.1 abstract](#1041-abstract)
   - [104.2 Population](#1042-population)
   - [104.3 Objective/questions](#1043-objectivequestions)
   - [104.4 Intervention](#1044-intervention)
   - [104.5 Methods/Results](#1045-methodsresults)
+  - [104.6 Outcomes](#1046-outcomes)
+  - [104.7 Conclusions](#1047-conclusions)
 - [105 Schuster2008 ( JGOP )](#105-schuster2008--jgop-)
   - [105.1 abstract](#1051-abstract)
   - [105.2 Population](#1052-population)
   - [105.3 Objective/questions](#1053-objectivequestions)
   - [105.4 Intervention](#1054-intervention)
   - [105.5 Methods/Results](#1055-methodsresults)
+  - [105.6 Outcomes](#1056-outcomes)
+  - [105.7 Conclusions](#1057-conclusions)
 - [106 Sellmann2013 ( ABP )](#106-sellmann2013--abp-)
   - [106.1 abstract](#1061-abstract)
   - [106.2 Population](#1062-population)
   - [106.3 Objective/questions](#1063-objectivequestions)
   - [106.4 Intervention](#1064-intervention)
   - [106.5 Methods/Results](#1065-methodsresults)
+  - [106.6 Outcomes](#1066-outcomes)
+  - [106.7 Conclusions](#1067-conclusions)
 - [107 Sellmann2013a ( SB )](#107-sellmann2013a--sb-)
   - [107.1 abstract](#1071-abstract)
   - [107.2 Population](#1072-population)
   - [107.3 Objective/questions](#1073-objectivequestions)
   - [107.4 Intervention](#1074-intervention)
   - [107.5 Methods/Results](#1075-methodsresults)
+  - [107.6 Outcomes](#1076-outcomes)
+  - [107.7 Conclusions](#1077-conclusions)
 - [108 Sellmann2015 ( MB )](#108-sellmann2015--mb-)
   - [108.1 abstract](#1081-abstract)
   - [108.2 Population](#1082-population)
   - [108.3 Objective/questions](#1083-objectivequestions)
   - [108.4 Intervention](#1084-intervention)
   - [108.5 Methods/Results](#1085-methodsresults)
+  - [108.6 Outcomes](#1086-outcomes)
+  - [108.7 Conclusions](#1087-conclusions)
 - [109 Shea2016 ( ABP )](#109-shea2016--abp-)
   - [109.1 abstract](#1091-abstract)
   - [109.2 Population](#1092-population)
   - [109.3 Objective/questions](#1093-objectivequestions)
   - [109.4 Intervention](#1094-intervention)
   - [109.5 Methods/Results](#1095-methodsresults)
+  - [109.6 Outcomes](#1096-outcomes)
+  - [109.7 Conclusions](#1097-conclusions)
 - [110 Siegner2018 ( SB )](#110-siegner2018--sb-)
   - [110.1 abstract](#1101-abstract)
   - [110.2 Population](#1102-population)
   - [110.3 Objective/questions](#1103-objectivequestions)
   - [110.4 Intervention](#1104-intervention)
   - [110.5 Methods/Results](#1105-methodsresults)
+  - [110.6 Outcomes](#1106-outcomes)
+  - [110.7 Conclusions](#1107-conclusions)
 - [111 Silva2021 ( SC )](#111-silva2021--sc-)
   - [111.1 abstract](#1111-abstract)
   - [111.2 Population](#1112-population)
   - [111.3 Objective/questions](#1113-objectivequestions)
   - [111.4 Intervention](#1114-intervention)
   - [111.5 Methods/Results](#1115-methodsresults)
+  - [111.6 Outcomes](#1116-outcomes)
+  - [111.7 Conclusions](#1117-conclusions)
 - [112 Skains2022 ( LR )](#112-skains2022--lr-)
   - [112.1 abstract](#1121-abstract)
   - [112.2 Population](#1122-population)
   - [112.3 Objective/questions](#1123-objectivequestions)
   - [112.4 Intervention](#1124-intervention)
   - [112.5 Methods/Results](#1125-methodsresults)
+  - [112.6 Outcomes](#1126-outcomes)
+  - [112.7 Conclusions](#1127-conclusions)
 - [113 Smith2019 ( SC )](#113-smith2019--sc-)
   - [113.1 abstract](#1131-abstract)
   - [113.2 Population](#1132-population)
   - [113.3 Objective/questions](#1133-objectivequestions)
   - [113.4 Intervention](#1134-intervention)
   - [113.5 Methods/Results](#1135-methodsresults)
+  - [113.6 Outcomes](#1136-outcomes)
+  - [113.7 Conclusions](#1137-conclusions)
 - [114 Steffensen2022 ( ABP )](#114-steffensen2022--abp-)
   - [114.1 abstract](#1141-abstract)
   - [114.2 Population](#1142-population)
   - [114.3 Objective/questions](#1143-objectivequestions)
   - [114.4 Intervention](#1144-intervention)
   - [114.5 Methods/Results](#1145-methodsresults)
+  - [114.6 Outcomes](#1146-outcomes)
+  - [114.7 Conclusions](#1147-conclusions)
 - [115 Sternang2012 ( SB )](#115-sternang2012--sb-)
   - [115.1 abstract](#1151-abstract)
   - [115.2 Population](#1152-population)
   - [115.3 Objective/questions](#1153-objectivequestions)
   - [115.4 Intervention](#1154-intervention)
   - [115.5 Methods/Results](#1155-methodsresults)
+  - [115.6 Outcomes](#1156-outcomes)
+  - [115.7 Conclusions](#1157-conclusions)
 - [116 Stevenson2018 ( LR )](#116-stevenson2018--lr-)
   - [116.1 abstract](#1161-abstract)
   - [116.2 Population](#1162-population)
   - [116.3 Objective/questions](#1163-objectivequestions)
   - [116.4 Intervention](#1164-intervention)
   - [116.5 Methods/Results](#1165-methodsresults)
+  - [116.6 Outcomes](#1166-outcomes)
+  - [116.7 Conclusions](#1167-conclusions)
 - [117 Stevenson2018a ( MB )](#117-stevenson2018a--mb-)
   - [117.1 abstract](#1171-abstract)
   - [117.2 Population](#1172-population)
   - [117.3 Objective/questions](#1173-objectivequestions)
   - [117.4 Intervention](#1174-intervention)
   - [117.5 Methods/Results](#1175-methodsresults)
+  - [117.6 Outcomes](#1176-outcomes)
+  - [117.7 Conclusions](#1177-conclusions)
 - [118 Sukardi2022 ( LR )](#118-sukardi2022--lr-)
   - [118.1 abstract](#1181-abstract)
   - [118.2 Population](#1182-population)
   - [118.3 Objective/questions](#1183-objectivequestions)
   - [118.4 Intervention](#1184-intervention)
   - [118.5 Methods/Results](#1185-methodsresults)
+  - [118.6 Outcomes](#1186-outcomes)
+  - [118.7 Conclusions](#1187-conclusions)
 - [119 Sumrall2021 ( BQ )](#119-sumrall2021--bq-)
   - [119.1 abstract](#1191-abstract)
   - [119.2 Population](#1192-population)
   - [119.3 Objective/questions](#1193-objectivequestions)
   - [119.4 Intervention](#1194-intervention)
   - [119.5 Methods/Results](#1195-methodsresults)
+  - [119.6 Outcomes](#1196-outcomes)
+  - [119.7 Conclusions](#1197-conclusions)
 - [120 Sundberg2013 ( BQ )](#120-sundberg2013--bq-)
   - [120.1 abstract](#1201-abstract)
   - [120.2 Population](#1202-population)
   - [120.3 Objective/questions](#1203-objectivequestions)
   - [120.4 Intervention](#1204-intervention)
   - [120.5 Methods/Results](#1205-methodsresults)
+  - [120.6 Outcomes](#1206-outcomes)
+  - [120.7 Conclusions](#1207-conclusions)
 - [121 Sutela2023 ( JGOP )](#121-sutela2023--jgop-)
   - [121.1 abstract](#1211-abstract)
   - [121.2 Population](#1212-population)
   - [121.3 Objective/questions](#1213-objectivequestions)
   - [121.4 Intervention](#1214-intervention)
   - [121.5 Methods/Results](#1215-methodsresults)
+  - [121.6 Outcomes](#1216-outcomes)
+  - [121.7 Conclusions](#1217-conclusions)
 - [122 Svihla2012 ( SB )](#122-svihla2012--sb-)
   - [122.1 abstract](#1221-abstract)
   - [122.2 Population](#1222-population)
   - [122.3 Objective/questions](#1223-objectivequestions)
   - [122.4 Intervention](#1224-intervention)
   - [122.5 Methods/Results](#1225-methodsresults)
+  - [122.6 Outcomes](#1226-outcomes)
+  - [122.7 Conclusions](#1227-conclusions)
 - [123 Taber2009 ( ABP )](#123-taber2009--abp-)
   - [123.1 abstract](#1231-abstract)
   - [123.2 Population](#1232-population)
   - [123.3 Objective/questions](#1233-objectivequestions)
   - [123.4 Intervention](#1234-intervention)
   - [123.5 Methods/Results](#1235-methodsresults)
+  - [123.6 Outcomes](#1236-outcomes)
+  - [123.7 Conclusions](#1237-conclusions)
 - [124 Tasquier2015 ( MB )](#124-tasquier2015--mb-)
   - [124.1 abstract](#1241-abstract)
   - [124.2 Population](#1242-population)
   - [124.3 Objective/questions](#1243-objectivequestions)
   - [124.4 Intervention](#1244-intervention)
   - [124.5 Methods/Results](#1245-methodsresults)
+  - [124.6 Outcomes](#1246-outcomes)
+  - [124.7 Conclusions](#1247-conclusions)
 - [125 Tasquier2017 ( LR )](#125-tasquier2017--lr-)
   - [125.1 abstract](#1251-abstract)
   - [125.2 Population](#1252-population)
   - [125.3 Objective/questions](#1253-objectivequestions)
   - [125.4 Intervention](#1254-intervention)
   - [125.5 Methods/Results](#1255-methodsresults)
+  - [125.6 Outcomes](#1256-outcomes)
+  - [125.7 Conclusions](#1257-conclusions)
 - [126 Tasti2021 ( MB )](#126-tasti2021--mb-)
   - [126.1 abstract](#1261-abstract)
   - [126.2 Population](#1262-population)
   - [126.3 Objective/questions](#1263-objectivequestions)
   - [126.4 Intervention](#1264-intervention)
   - [126.5 Methods/Results](#1265-methodsresults)
+  - [126.6 Outcomes](#1266-outcomes)
+  - [126.7 Conclusions](#1267-conclusions)
 - [127 Taylor2020 ( BQ )](#127-taylor2020--bq-)
   - [127.1 abstract](#1271-abstract)
   - [127.2 Population](#1272-population)
   - [127.3 Objective/questions](#1273-objectivequestions)
   - [127.4 Intervention](#1274-intervention)
   - [127.5 Methods/Results](#1275-methodsresults)
+  - [127.6 Outcomes](#1276-outcomes)
+  - [127.7 Conclusions](#1277-conclusions)
 - [128 Trott2019 ( JGOP )](#128-trott2019--jgop-)
   - [128.1 abstract](#1281-abstract)
   - [128.2 Population](#1282-population)
   - [128.3 Objective/questions](#1283-objectivequestions)
   - [128.4 Intervention](#1284-intervention)
   - [128.5 Methods/Results](#1285-methodsresults)
+  - [128.6 Outcomes](#1286-outcomes)
+  - [128.7 Conclusions](#1287-conclusions)
 - [129 Trott2020 ( ABP )](#129-trott2020--abp-)
   - [129.1 abstract](#1291-abstract)
   - [129.2 Population](#1292-population)
   - [129.3 Objective/questions](#1293-objectivequestions)
   - [129.4 Intervention](#1294-intervention)
   - [129.5 Methods/Results](#1295-methodsresults)
+  - [129.6 Outcomes](#1296-outcomes)
+  - [129.7 Conclusions](#1297-conclusions)
 - [130 Trott2020a ( MB )](#130-trott2020a--mb-)
   - [130.1 abstract](#1301-abstract)
   - [130.2 Population](#1302-population)
   - [130.3 Objective/questions](#1303-objectivequestions)
   - [130.4 Intervention](#1304-intervention)
   - [130.5 Methods/Results](#1305-methodsresults)
+  - [130.6 Outcomes](#1306-outcomes)
+  - [130.7 Conclusions](#1307-conclusions)
 - [131 Trott2020b ( BQ )](#131-trott2020b--bq-)
   - [131.1 abstract](#1311-abstract)
   - [131.2 Population](#1312-population)
   - [131.3 Objective/questions](#1313-objectivequestions)
   - [131.4 Intervention](#1314-intervention)
   - [131.5 Methods/Results](#1315-methodsresults)
+  - [131.6 Outcomes](#1316-outcomes)
+  - [131.7 Conclusions](#1317-conclusions)
 - [132 Trott2022 ( JGOP )](#132-trott2022--jgop-)
   - [132.1 abstract](#1321-abstract)
   - [132.2 Population](#1322-population)
   - [132.3 Objective/questions](#1323-objectivequestions)
   - [132.4 Intervention](#1324-intervention)
   - [132.5 Methods/Results](#1325-methodsresults)
+  - [132.6 Outcomes](#1326-outcomes)
+  - [132.7 Conclusions](#1327-conclusions)
 - [133 Turner2022 ( LR )](#133-turner2022--lr-)
   - [133.1 abstract](#1331-abstract)
   - [133.2 Population](#1332-population)
   - [133.3 Objective/questions](#1333-objectivequestions)
   - [133.4 Intervention](#1334-intervention)
   - [133.5 Methods/Results](#1335-methodsresults)
+  - [133.6 Outcomes](#1336-outcomes)
+  - [133.7 Conclusions](#1337-conclusions)
 - [134 Varma2012 ( ABP )](#134-varma2012--abp-)
   - [134.1 abstract](#1341-abstract)
   - [134.2 Population](#1342-population)
   - [134.3 Objective/questions](#1343-objectivequestions)
   - [134.4 Intervention](#1344-intervention)
   - [134.5 Methods/Results](#1345-methodsresults)
+  - [134.6 Outcomes](#1346-outcomes)
+  - [134.7 Conclusions](#1347-conclusions)
 - [135 Veijalainen2013 ( BQ )](#135-veijalainen2013--bq-)
   - [135.1 abstract](#1351-abstract)
   - [135.2 Population](#1352-population)
   - [135.3 Objective/questions](#1353-objectivequestions)
   - [135.4 Intervention](#1354-intervention)
   - [135.5 Methods/Results](#1355-methodsresults)
+  - [135.6 Outcomes](#1356-outcomes)
+  - [135.7 Conclusions](#1357-conclusions)
 - [136 Vicente2020 ( MB )](#136-vicente2020--mb-)
   - [136.1 abstract](#1361-abstract)
   - [136.2 Population](#1362-population)
   - [136.3 Objective/questions](#1363-objectivequestions)
   - [136.4 Intervention](#1364-intervention)
   - [136.5 Methods/Results](#1365-methodsresults)
+  - [136.6 Outcomes](#1366-outcomes)
+  - [136.7 Conclusions](#1367-conclusions)
 - [137 Visintainer2015 ( ABP )](#137-visintainer2015--abp-)
   - [137.1 abstract](#1371-abstract)
   - [137.2 Population](#1372-population)
   - [137.3 Objective/questions](#1373-objectivequestions)
   - [137.4 Intervention](#1374-intervention)
   - [137.5 Methods/Results](#1375-methodsresults)
+  - [137.6 Outcomes](#1376-outcomes)
+  - [137.7 Conclusions](#1377-conclusions)
 - [138 Walsh2018 ( MB )](#138-walsh2018--mb-)
   - [138.1 abstract](#1381-abstract)
   - [138.2 Population](#1382-population)
   - [138.3 Objective/questions](#1383-objectivequestions)
   - [138.4 Intervention](#1384-intervention)
   - [138.5 Methods/Results](#1385-methodsresults)
+  - [138.6 Outcomes](#1386-outcomes)
+  - [138.7 Conclusions](#1387-conclusions)
 - [139 Walsh2019 ( JGOP )](#139-walsh2019--jgop-)
   - [139.1 abstract](#1391-abstract)
   - [139.2 Population](#1392-population)
   - [139.3 Objective/questions](#1393-objectivequestions)
   - [139.4 Intervention](#1394-intervention)
   - [139.5 Methods/Results](#1395-methodsresults)
+  - [139.6 Outcomes](#1396-outcomes)
+  - [139.7 Conclusions](#1397-conclusions)
 - [140 Wang2022 ( BQ )](#140-wang2022--bq-)
   - [140.1 abstract](#1401-abstract)
   - [140.2 Population](#1402-population)
   - [140.3 Objective/questions](#1403-objectivequestions)
   - [140.4 Intervention](#1404-intervention)
   - [140.5 Methods/Results](#1405-methodsresults)
+  - [140.6 Outcomes](#1406-outcomes)
+  - [140.7 Conclusions](#1407-conclusions)
 - [141 White2022 ( MB )](#141-white2022--mb-)
   - [141.1 abstract](#1411-abstract)
   - [141.2 Population](#1412-population)
   - [141.3 Objective/questions](#1413-objectivequestions)
   - [141.4 Intervention](#1414-intervention)
   - [141.5 Methods/Results](#1415-methodsresults)
+  - [141.6 Outcomes](#1416-outcomes)
+  - [141.7 Conclusions](#1417-conclusions)
 - [142 Williams2017 ( ABP )](#142-williams2017--abp-)
   - [142.1 abstract](#1421-abstract)
   - [142.2 Population](#1422-population)
   - [142.3 Objective/questions](#1423-objectivequestions)
   - [142.4 Intervention](#1424-intervention)
   - [142.5 Methods/Results](#1425-methodsresults)
+  - [142.6 Outcomes](#1426-outcomes)
+  - [142.7 Conclusions](#1427-conclusions)
 - [143 Xie2014 ( SB )](#143-xie2014--sb-)
   - [143.1 abstract](#1431-abstract)
   - [143.2 Population](#1432-population)
   - [143.3 Objective/questions](#1433-objectivequestions)
   - [143.4 Intervention](#1434-intervention)
   - [143.5 Methods/Results](#1435-methodsresults)
+  - [143.6 Outcomes](#1436-outcomes)
+  - [143.7 Conclusions](#1437-conclusions)
 - [144 Zhong2021 ( JGOP )](#144-zhong2021--jgop-)
   - [144.1 abstract](#1441-abstract)
   - [144.2 Population](#1442-population)
   - [144.3 Objective/questions](#1443-objectivequestions)
   - [144.4 Intervention](#1444-intervention)
   - [144.5 Methods/Results](#1445-methodsresults)
+  - [144.6 Outcomes](#1446-outcomes)
+  - [144.7 Conclusions](#1447-conclusions)
 - [145 Zografakis2008 ( SB )](#145-zografakis2008--sb-)
   - [145.1 abstract](#1451-abstract)
   - [145.2 Population](#1452-population)
   - [145.3 Objective/questions](#1453-objectivequestions)
   - [145.4 Intervention](#1454-intervention)
   - [145.5 Methods/Results](#1455-methodsresults)
+  - [145.6 Outcomes](#1456-outcomes)
+  - [145.7 Conclusions](#1457-conclusions)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -932,6 +1222,9 @@ for(i in 1:nrow(tabToWork))
   #     ifelse(is.na(other),"",paste("*other*:", other,"\n\n"))
   # )
   cat("#", ref, "(",person,")\n\n")
+  
+  cat("**title**",tabToWork$referencia[i],"\n\n")
+  
   cat("##","abstract","\n\n")
   cat(abstract,"\n\n")
   cat("## Population\n\n")
@@ -939,21 +1232,56 @@ for(i in 1:nrow(tabToWork))
   cat(kable(TAB,col.names = c()))
   cat("\n\n")
   cat(paste("##","Objective/questions\n\n"))
-  TAB<-na.omit(t(tabToWork[i,c("Objectives","Questions")]))
-  cat(kable(TAB,col.names = c()))
+  TAB<-t(tabToWork[i,c("Objectives","Questions")])
+  #TAB[,1]<-gsub("\\`","",TAB[,1])
+  #TAB[,1]<-gsub("([0-9])\\.","\\1",TAB[,1])
+  cat("**Objective**:\n\n",TAB["Objectives",],"\n\n")
+  cat("**Questions**:\n\n",TAB["Questions",],"\n\n")
   cat("\n\n")
   cat("## Intervention\n\n")
-  TAB<-na.omit(t(tabToWork[i,c("Curricular/Extracurricular","Outdoor/Indoor/Both","Type.of.intervention","Descripcion.de.intervención")]))
-  cat(kable(TAB,col.names = c()))
+  TAB<-t(tabToWork[i,c("Curricular/Extracurricular","Outdoor/Indoor/Both","Type.of.intervention","Descripcion.de.intervención")])
+  #cat(kable(TAB,col.names = c()))
+  cat("**Curricular/Extra**:",TAB[1,],"\n\n")
+  cat("**Indoor/Outdoor**:",TAB[2,],"\n\n")
+  cat("**Type**:",TAB[3,],"\n\n")
+  cat("**Description**:",TAB[4,],"\n\n")
+  
+  
   cat("\n\n")
   cat("## Methods/Results\n\n")
-  TAB<-na.omit(t(tabToWork[i,c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Resultados.obtenidos.por.cada.outcome")]))
-  cat(kable(TAB,col.names = c()))
+  TAB<-t(tabToWork[i,c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Analysis.technique","Resultados.obtenidos.por.cada.outcome","Which.aspect.has.improved.or.not?")])
+  TAB[,1]<-gsub("^- ","",TAB[,1])
+  #cat(kable(TAB,col.names = c()))
+  cat("**Data**:",TAB[1,],"\n\n")
+  cat("**Analysis**:",TAB[2,],"\n\n")
+  cat("**Results**:",TAB[3,],"\n\n")
+  cat("**Improved?**:",TAB[4,],"\n\n")
+  cat("\n\n")
+  
+  cat("## Outcomes\n\n")
+  
+  cat(ifelse(is.na(knowledge),"\n",paste("**knowledge**:",knowledge,"(*Worked?*:",tabToWork$`knowledge.did.it.work?`[i], ")\n\n")))
+  cat(ifelse(is.na(awareness),"\n",paste("**awareness**:", awareness,"(*Worked?*:",tabToWork$`awareness.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(intention),"\n",paste("**intention**:", intention,"(*Worked?*:",tabToWork$`intention.,.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(emotions),"\n",paste("**emotions**:", emotions,"(*Worked?*:",tabToWork$`emotion,.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(action),"\n",paste("**action**:", action,"(*Worked?*:",tabToWork$`action,.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(habit),"\n",paste("**habit**:", habit,"(*Worked?*:",tabToWork$`habit,.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(other),"\n",paste("**other**:", other,"(*Worked?*:",tabToWork$`Other,.did.it.work`[i],")\n\n")))
+  
+  cat("## Conclusions\n\n")
+  
+  TAB<-t(tabToWork[i,c("Conclusiones.generales","Main.ideas.to.keep.for.the.synthesis")])
+  #cat(kable(TAB,col.names = c()))
+  cat("**Conclusions**:",TAB[1,],"\n\n")
+  cat("**Message to keep:**:",TAB[2,],"\n\n")
   cat("\n\n")
 }
 ```
 
 # 1 Akaygun2021 ( MB )
+
+**title** Fostering senior primary school students’ understanding of
+climate change in an inquiry-based learning environment
 
 ## 1.1 abstract
 
@@ -1053,30 +1381,14 @@ age_max
 
 ## 1.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This study intended to explore the impact of inquiry-based instruction
 on senior primary school students’ conceptions of climate change and
 their perceptions of science learning environment as they experience
 such an instruction.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 (RQ1) What are the frequencies of conceptions concerning consequences
 of, causes of, and cures for climate change exhibited by senior primary
@@ -1086,109 +1398,43 @@ from pre to postinstruction? (RQ3) In what ways do senior primary school
 students’ perceptions of science learning environment differ from pre to
 postinstruction?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 1.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons and activities
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons and activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-6 lessons, lasting 12 class hours in total. Each lesson intended to
-address one aspect of climate change. The entire instruction was
-designed utilising the 5E learning cycle, a form of guided inquiry, and
-each lesson employed the levels of either structured
+**Description**: 6 lessons, lasting 12 class hours in total. Each lesson
+intended to address one aspect of climate change. The entire instruction
+was designed utilising the 5E learning cycle, a form of guided inquiry,
+and each lesson employed the levels of either structured
 (predict-observe-explain) or guided inquiry. There are some hands on
 activities - Experience on controlled acidity and seashells
 dissolution - Experience on melting ice in water or on rocks -
 calculation of personal carbon footprint - discussion about ethics of
 science
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 1.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test/post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Questionnaire on global climate change, coded 0 (false),
+1(I dont know) and 2 (true) Score are calculated and tested with paired
+t-test Effect size are calculated with Cohen’s d
 
-</td>
-<td style="text-align:left;">
-
-pre-test/post-test
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-RQ1, Consequences of climate change : Following the instruction, about
-75–85% of the participants developed scientific ideas about the major
-consequences of climate change, and they were able to connect the idea
-of desertification with the climate change (see Table 1). However, the
-progression in connecting the ideas of flooding and having more bugs and
-pests on crops with climate change was not as dramatic as the other
-scientific ideas. RQ1, causes of climate change: Following the
-instruction, more than 50% of the participants developed scientific
-understandings about the major causes of climate change, and in total,
-about 75–80% of the participants were sure that the climate change is
-caused by the large amount of carbon dioxide released into the
+**Results**: RQ1, Consequences of climate change : Following the
+instruction, about 75–85% of the participants developed scientific ideas
+about the major consequences of climate change, and they were able to
+connect the idea of desertification with the climate change (see Table
+1). However, the progression in connecting the ideas of flooding and
+having more bugs and pests on crops with climate change was not as
+dramatic as the other scientific ideas. RQ1, causes of climate change:
+Following the instruction, more than 50% of the participants developed
+scientific understandings about the major causes of climate change, and
+in total, about 75–80% of the participants were sure that the climate
+change is caused by the large amount of carbon dioxide released into the
 atmosphere. RQ1 cures of climate change: Following the instruction,
 70–80% of the participants developed the idea about the frequently
 recognised cures for climate change such as planting trees, recycling
@@ -1203,12 +1449,32 @@ interpretation: The participants, who provided scientific responses on
 the questionnaire, may have either been guessed or learned from other
 sources based their individual efforts.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Better knoeledge and concepts concerning climate change
+(consequences, causes, cures)
+
+## 1.6 Outcomes
+
+**knowledge**: Increased right conceptions about climate change after
+lessons Better understanding of climate change Note: it does not concern
+only the topics of the lesson but also other topics (*Worked?*: Yes )
+
+## 1.7 Conclusions
+
+**Conclusions**: The instructional features, such as involving in
+first-hand experiences, making sense of certain phenomena based on
+collected evidence and sharing and discussing understandings, and coming
+up with common agreement on certain issues on climate change, which
+fostered the expansion of conceptions in students’ conceptual framework
+
+**Message to keep:**: Classical example of science club activities on
+Climate change. Note: the fact that students learned about the effect of
+climate change on crop pest while it was not a topic in the science
+club, nor in classes might be worth noting for the synthesis
 
 # 2 Aksel_Stenberdt2023 ( ABP )
+
+**title** Mastery experiences in immersive virtual reality promote
+pro-environmental waste-sorting behavior
 
 ## 2.1 abstract
 
@@ -1321,137 +1587,75 @@ urban
 
 ## 2.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Investigate the feasibility of an alternative educational approach to
 improving waste management in the classroom as part of formal education,
 utilizing mastery experiences in IVR.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Is IVR an effective educational technology for climate change education
 in a high school classroom setting? What psychological mechanisms drive
 the effectiveness of IVR for climate change education?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 2.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Immersive virtual reality
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Immersive virtual reality
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-experience-based learning - immersive virtual reality (IVR) simulation,
-targeting climate change education through mastery experiences in a
-classroom setting
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: experience-based learning - immersive virtual reality
+(IVR) simulation, targeting climate change education through mastery
+experiences in a classroom setting
 
 ## 2.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionnaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: repeated-measures ANOVA with the within-group independent
+variable of time and the dependent variables of knowledge (H1a) and
+intentions (H1b).
 
-</td>
-<td style="text-align:left;">
+**Results**: We found a medium- to-large and significant increase in
+participants’ (N = 162) intentions from before the intervention 3.96 (SD
+= 0.75) to 4.19 (SD = 0.88) after the VR intervention, F = 18.43, p \<
+.001, η2 = 0.10. Similarly, we found a significant, large increase in
+participants’ (N = 173) knowledge about waste management from before the
+intervention (M = 7.67, SD = 1.48) to after the intervention (M = 8.97,
+SD = 1.80), F = 121.47, p \< .001, η2 = 0.41. In conclusion,
+participants both showed higher intentions to sort their waste and
+ability to correctly sort waste into more categories than before the VR
+experience, showing support for hypotheses H1a and H1b
 
-questionnaire
+**Improved?**: cognicion y actitud mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 2.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: knowledge about waste managemen (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**intention**: sort pieces of waste (*Worked?*: yes )
 
-We found a medium- to-large and significant increase in participants’ (N
-= 162) intentions from before the intervention 3.96 (SD = 0.75) to 4.19
-(SD = 0.88) after the VR intervention, F = 18.43, p \< .001, η2 = 0.10.
-Similarly, we found a significant, large increase in participants’ (N =
-173) knowledge about waste management from before the intervention (M =
-7.67, SD = 1.48) to after the intervention (M = 8.97, SD = 1.80), F =
-121.47, p \< .001, η2 = 0.41. In conclusion, participants both showed
-higher intentions to sort their waste and ability to correctly sort
-waste into more categories than before the VR experience, showing
-support for hypotheses H1a and H1b
+## 2.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: The results indicated that IVR was effective for
+increasing students’ knowledge (η2 = 0.41), intentions (η2 = 0.10),
+self-efficacy (η2 = 0.4), and response efficacy (η2 = 0.35) and that
+students found the simulation interesting and enjoyable. Furthermore,
+self-efficacy was found to predict intentions (B = 0.190, p = .015),
+supporting the idea that cognitive and affective factors drive the
+effectiveness of IVR.
+
+**Message to keep:**: that IVR can be an effective educational
+technology for learning through mastery experiences,
 
 # 3 Aksut2016 ( ABP )
+
+**title** If You Change Yourself, The World Changes: The Effect of
+Exhibition on Preservice Science Teachers’ Views about Global Climate
+Change
 
 ## 3.1 abstract
 
@@ -1542,126 +1746,66 @@ urban
 
 ## 3.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 the effect of the exhibition on Turkish preservice science teachers’
 views on GCC towards better understanding of the subject
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 “What are Turkish preservice science teachers’ views about the GCC”
 “What is the effect of the exhibition Turkish preservice science
 teachers’ views about GCC?”
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 3.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Climate Change exhibition
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Climate Change exhibition
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-visiting of this exhibition
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: visiting of this exhibition
 
 ## 3.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: draft drawings
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Data were analyzed individually through content analysis
+to identify pre-service
 
-</td>
-<td style="text-align:left;">
+**Results**: It can be interpreted that preservice science teachers’
+awareness and knowledge have increased and changed after visiting
+exhibition.
 
-draft drawings
+**Improved?**: cognicion y actitud mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 3.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: complexity and diversification topics of teachers
+understanding (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 3.7 Conclusions
 
-It can be interpreted that preservice science teachers’ awareness and
-knowledge have increased and changed after visiting exhibition.
+**Conclusions**: Visiting an exhibition about GCC has led preservice
+science teachers to aware that GCC has an impact on their everyday life.
+After the visiting exhibition, they were much more interested in GCC
+than they were previously. Also, their answers indicate that the
+importance of GCC and how rapidly it is occurring. After the visiting
+exhibition, % 4 of them depicted in their drawings not only animals,
+trees and glaciers, but also depicted to take a proactive role in
+preventing as much GCC as possible.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Visiting an exhibition about GCC has led
+preservice science teachers to aware that GCC has an impact on their
+everyday life. After the visiting exhibition, they were much more
+interested in GCC than they were previously. Also, their answers
+indicate that the importance of GCC and how rapidly it is occurring.
 
 # 4 Arya2016 ( ABP )
+
+**title** The building of knowledge, language, and decision-making about
+climate change science: a cross-national program for secondary students
 
 ## 4.1 abstract
 
@@ -1776,15 +1920,7 @@ urban
 
 ## 4.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To explore the malleability of understandings, attitudes, and behaviors
 related to climate change science, the nature of science (NOS) as a way
@@ -1792,110 +1928,36 @@ of knowing, and evidence-based reasoning through structured
 conversations (interviews). To develop and refine a program that could
 effectively shift these understandings, attitudes, and behaviors.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 (What does climate change science mean to you? What do you think climate
 change scientists do in their work?)
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 4.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Science learning through discussions about evidence.
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Science learning through discussions about evidence.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-read and discussed a series of seminal studies related to climate change
-issues - a sustainable set of resources and discussion guides for
-fostering evidence-based discussions about climate change concepts and
-issues
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: read and discussed a series of seminal studies related
+to climate change issues - a sustainable set of resources and discussion
+guides for fostering evidence-based discussions about climate change
+concepts and issues
 
 ## 4.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre- and post-program interviews, including both interview
+question and all follow-up elicitations,
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
-
-pre- and post-program interviews, including both interview question and
-all follow-up elicitations,
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-With respect to NOS understanding, at pretest, a total of 35
-demonstrations (out of 384 possible; 4 opportunities for each of the 96
-students) of NOS understanding were his difference was statistically
+**Results**: With respect to NOS understanding, at pretest, a total of
+35 demonstrations (out of 384 possible; 4 opportunities for each of the
+96 students) of NOS understanding were his difference was statistically
 significant (x2 = 4.59, df = 1, p \< .05). Qualitatively, participants
 appeared to demon- strate an increase in understanding of science as a
 continual process of evidence-based reasoning and consensus-building
@@ -1907,12 +1969,23 @@ about scientific work (climate change is all made-up because it is
 getting warmer anyway; scientists keep changing their minds; they
 $$scientists$$ give us facts about what is going on).
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: conocimiento mejoro
+
+## 4.6 Outcomes
+
+**knowledge**: nature of science understanding (*Worked?*: yes )
+
+## 4.7 Conclusions
+
+**Conclusions**: evidence of a significant overall shift in focus on the
+NOS as a way of knowing,
+
+**Message to keep:**: NA
 
 # 5 Baker2013 ( ABP )
+
+**title** Using Art Elicitation to Deliver and Evaluate a Grade 4
+Climate Change Instructional Module
 
 ## 5.1 abstract
 
@@ -1999,131 +2072,68 @@ town further inland.
 
 ## 5.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 we designed this study to combine the two, demonstrating the utility of
 using creative methods to teach, as well as to evaluate, student
 perceptions of global climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 na
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 5.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: teaching module containing seven lessons on climate change
+topics
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-teaching module containing seven lessons on climate change topics
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-After the session, Students produced their artwork using watercolor
-paint on 8.5 × 11-inch watercolor paper. JB began each art session by
-ex- planning to the class that the goal of the activity was to see what
-students thought about when they heard the words “climate change.”\|In
-response to student requests for clarification, the classroom
-instructions were expanded to suggest “causes” or “results” as possible
-topics.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: After the session, Students produced their artwork
+using watercolor paint on 8.5 × 11-inch watercolor paper. JB began each
+art session by ex- planning to the class that the goal of the activity
+was to see what students thought about when they heard the words
+“climate change.”\|In response to student requests for clarification,
+the classroom instructions were expanded to suggest “causes” or
+“results” as possible topics.
 
 ## 5.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: draft drawings
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: We distilled categories of visual features and thematic
+concepts after going through the entire dataset of images and artists’
+state- ments several times
 
-</td>
-<td style="text-align:left;">
+**Results**: The modules appeared to inform and expand student
+conceptions of climate change
 
-draft drawings
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 5.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: student conceptions of climate change (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 5.7 Conclusions
 
-The modules appeared to inform and expand student conceptions of climate
-change
+**Conclusions**: Students demonstrated limited knowledge about climate
+change before the modules and misconceptions related to littering,
+particulate and water pollution, and the ozone layer. By contrast, their
+postintervention artwork/artist’s statements included causes (e.g.,
+greenhouse gases), a range of projected climate change impacts
+(increased rain, wind, erosion, sea level rise, etc.), some mitigation
+options, but very little adaptation.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: We found art elicitation to be an effective
+diagnostic tool and a creative mode of engagement, which provides
+opportunities for both researchers and educators to monitor and evaluate
+student learning,
 
 # 6 Bentz2020 ( ABP )
+
+**title** Learning about climate change in, with and through art
 
 ## 6.1 abstract
 
@@ -2242,116 +2252,72 @@ urban
 
 ## 6.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Objective**:
+
+NA
+
+**Questions**:
+
+NA
 
 ## 6.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: ART
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-ART
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-"they read the short stories in “Everything Change: An Anthology of
-Climate Fiction” (Milkoreit et al. 2016) and expressed their feelings
-about the stories, climate change, and the future more generally in
-group dialogues. Within the communication design classes, they developed
-an art project about their particular interaction with the topic."
-students reflected individually and in groups on climate change by
-connecting behavioral changes and practical actions with larger systems
-and structures, as well as by examining individual and shared beliefs,
-values, and worldviews.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: “they read the short stories in”Everything Change: An
+Anthology of Climate Fiction” (Milkoreit et al. 2016) and expressed
+their feelings about the stories, climate change, and the future more
+generally in group dialogues. Within the communication design classes,
+they developed an art project about their particular interaction with
+the topic.” students reflected individually and in groups on climate
+change by connecting behavioral changes and practical actions with
+larger systems and structures, as well as by examining individual and
+shared beliefs, values, and worldviews.
 
 ## 6.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: draft drawings
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: In group dialogues and fish-bowl discussions, students
+could share their thoughts and feelings along the learning process as
+well as new insights about themselves and about climate change. They
+further discussed similarities and differences in their experiences.
+Parallel to the reflection and learning process, students started
+sketching and conceptualizing their individual art project. Each student
+developed an artwork related his or her personal subject of interest,
+point of view, new insight, or individual process of reflection related
+to climate change.
 
-draft drawings
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 6.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: sketching and conceptualizing climate change
+understanding in their individual art project. (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 6.7 Conclusions
 
-In group dialogues and fish-bowl discussions, students could share their
-thoughts and feelings along the learning process as well as new insights
-about themselves and about climate change. They further discussed
-similarities and differences in their experiences. Parallel to the
-reflection and learning process, students started sketching and
-conceptualizing their individual art project. Each student developed an
-artwork related his or her personal subject of interest, point of view,
-new insight, or individual process of reflection related to climate
-change.
+**Conclusions**: the central place that art has in climate change
+education, with avenues for greater depth of learning and transformative
+potential depending on whether one brings art in to the climate change
+curriculum, whether art is taught with other climate science concepts in
+participatory ways, or whether one teaches through the very topic to the
+heart of transformation itself.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 7 Bhattacharya2021 ( ABP )
+
+**title** Climate education in secondary science: comparison of
+model-based and non-model-based investigations of Earth’s climate
 
 ## 7.1 abstract
 
@@ -2446,30 +2412,14 @@ Urban
 
 ## 7.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 analyse the effectiveness of two pedagogical approaches – one
 model-based and another non-model-based – for developing secondary
 students’ understanding of the phenomenon of increase in Earth’s average
 surface temperatures, a core dimension of global climate change (GCC).
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 How do students engage in evidence-based reasoning about the phenomenon
 of global increase in average surface temperatures differently in the
@@ -2477,82 +2427,50 @@ context of a non- model-based activity vs a model-based activity? How
 does a computational model support students’ reasoning about the phenom-
 enon of global increase in average surface temperatures?\|
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 7.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: training
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-training
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Students first complete the non-model-based activity (day 1, 2, 3) and
-then proceed to the model-based activity (day 4 and 5) using EzGCM. For
-both activities, teachers initiated instruction with a guiding question,
-‘Why does it feel like the weather is getting hotter each year?’ and
-encouraged students to use their prior knowledge about the Earth’s
-climate, GCC, and the phenomenon of the global increase in average
-surface temperatures for making initial claim.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Students first complete the non-model-based activity
+(day 1, 2, 3) and then proceed to the model-based activity (day 4 and 5)
+using EzGCM. For both activities, teachers initiated instruction with a
+guiding question, ‘Why does it feel like the weather is getting hotter
+each year?’ and encouraged students to use their prior knowledge about
+the Earth’s climate, GCC, and the phenomenon of the global increase in
+average surface temperatures for making initial claim.
 
 ## 7.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
+
+**Results**: NA
+
+**Improved?**: conocimiento mejoro
+
+## 7.6 Outcomes
+
+**knowledge**: yes (*Worked?*: yes )
+
+## 7.7 Conclusions
+
+**Conclusions**: students were able to develop scientific knowledge
+about climate science as well as understand the processes undertaken by
+climate scientists in analysing climate data.
+
+**Message to keep:**: NA
 
 # 8 Blaum2017 ( SC )
+
+**title** Thinking About Global Warming: Effect of Policy-Related
+Documents and Prompts on Learning About Causes of Climate Change
 
 ## 8.1 abstract
 
@@ -2639,17 +2557,9 @@ mean.age
 
 ## 8.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Objectives
-
-</td>
-<td style="text-align:left;">
-
-"In this study the main goal of the inquiry task for all students was to
+“In this study the main goal of the inquiry task for all students was to
 provide an explanation for how and why global temperatures are changing
 from a document set that contained several documents, each of which
 described different aspects of the phenomenon (e.g., Griffin et al.,
@@ -2662,115 +2572,52 @@ opinion essay, then they should focus on this policy information at the
 expense of causal information. Therefore, students with this document
 should include less causal information in their essays and perform worse
 on the inference verification task than those with only the core
-document set." "Given the call for students to read more authentic
+document set.” “Given the call for students to read more authentic
 science material and the belief that considering solutions or involving
 students in policy-related discussions can better engage students’
 interest, it is important to demonstrate whether these activities lead
-to benefits in understanding."
+to benefits in understanding.”
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 8.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Document reading and essay writing
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Document reading and essay writing
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-—Two class periods spanning 2 days. 1. Students read a document set.
-Half of the participants also read a policy editorial. 2. Students were
-given an inquiry prompt. Half of the participants received a casual
-prompt, the others a causal-plus-solution prompt (i.e., "what we can do
-about it"). 3. Essay writing according to the inquiry prompt
-instructions: "provide an explanation for how and why global
+**Description**: —Two class periods spanning 2 days. 1. Students read a
+document set. Half of the participants also read a policy editorial. 2.
+Students were given an inquiry prompt. Half of the participants received
+a casual prompt, the others a causal-plus-solution prompt (i.e., “what
+we can do about it”). 3. Essay writing according to the inquiry prompt
+instructions: “provide an explanation for how and why global
 temperatures are changing from a document set that contained several
-documents, each of which described different aspects of the phenomenon".
+documents, each of which described different aspects of the phenomenon”.
 3. Participants completed a verification task to check comprehension. 4.
 Demographic survey - included an enjoyment of the task measure
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 8.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Causal-plus-solution prompt group: “Your task is to use this set of
-documents to write an essay explaining how and why recent patterns in
-global temperature are different from what has been observed in the past
-and what we can do about it. Be sure to use specific information from
-the documents to support your conclusions and ideas.” (the other group
-was not shown the phrase "what we can do about it"). An inference
-verification task was used to provide converging evidence for
+**Data**: Causal-plus-solution prompt group: “Your task is to use this
+set of documents to write an essay explaining how and why recent
+patterns in global temperature are different from what has been observed
+in the past and what we can do about it. Be sure to use specific
+information from the documents to support your conclusions and ideas.”
+(the other group was not shown the phrase “what we can do about it”). An
+inference verification task was used to provide converging evidence for
 comprehension.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: Chi-square test (essay was scored categorically) x2 =
+4,84, p = ,028.
 
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Essays were an average of 19.60 (SD = 6.56) sentences long, with no
-differences between conditions, all Fs(1, 41) \< 1. Essays in the
-core-documents condition provided more coverage of the important
+**Results**: Essays were an average of 19.60 (SD = 6.56) sentences long,
+with no differences between conditions, all Fs(1, 41) \< 1. Essays in
+the core-documents condition provided more coverage of the important
 concepts (M =4.59, SD = 1.30) than did essays in the policy-plus-core
 document condition (M = 3.79, SD = .88), F(1, 41) = 4.80, p = .034, d =
 .79. No other effects were significant. Essays in the policy-plus-core
@@ -2779,12 +2626,52 @@ concept of human energy sources releasing CO2, which is the same
 connection that is used to support fuel-use changes in the policy
 document.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Better knowledge is understood as more references to
+causal mechanisms leading to climate change and more references to the
+human role in it. “Students were asked to write an essay”explaining”
+changes in “global temperatures” (…) Each essay was coded categorically
+for whether or not it attempted to provide an explanation for global
+climate change. An essay could be marked as attempting to provide an
+explanation for global climate change even if the explanation was
+incorrect. As long as a student was attempting to explain causal
+mechanisms that led to global climate change, their essay would be
+marked as an explanation, even if they also suggested solutions or
+policy changes that could help reduce climate change…)“.”
+
+## 8.6 Outcomes
+
+**knowledge**: “Students were asked to write an essay”explaining”
+changes in “global temperatures” (…) Each essay was coded categorically
+for whether or not it attempted to provide an explanation for global
+climate change. An essay could be marked as attempting to provide an
+explanation for global climate change even if the explanation was
+incorrect. As long as a student was attempting to explain causal
+mechanisms that led to global climate change, their essay would be
+marked as an explanation, even if they also suggested solutions or
+policy changes that could help reduce climate change…)“. (*Worked?*: Yes
+)
+
+**other**: Task enjoyment: enjoyment was positively correlated with
+concept coverage in the essays (r = ,26, p = ,04) yet negatively
+correlated with inclusion of policy information (r = 2,28, p = ,03).
+(*Worked?*: Correlation )
+
+## 8.7 Conclusions
+
+**Conclusions**: “The results of this experiment suggest that the
+inclusion of a single brief policy document can impact performance on a
+multiple-document inquiry task: altering the type of information
+students include in their essays, reducing inclusion of key concepts and
+causal links needed to provide the requested causal explanation, and
+increasing inclusion of policy-related information.”
+
+**Message to keep:**: Policy mentions and side-taking came at the
+expense of including causal information.
 
 # 9 Bodzin2014 ( SC )
+
+**title** The Effectiveness of the Geospatial Curriculum Approach on
+Urban Middle-Level Students’ Climate Change Understandings
 
 ## 9.1 abstract
 
@@ -2907,131 +2794,109 @@ Urban
 
 ## 9.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 1.  to examine the efficacy of a technology-integrated curriculum that
     used geospatial technologies to promote urban middle-level students
     understandings of important climate change science concepts.
 2.  to investigate factors related to both students and teachers that
     may account for the variance in students’ climate change knowledge
-    achievement. `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     <tr>` `{=html}     <td style="text-align:left;">`
-    Questions `{=html}     </td>`
-    `{=html}     <td style="text-align:left;">`
-    1.  Whether and to what extent can a geospatial curriculum approach
-        promote climate change understandings with students in urban
-        middle-level education?
-3.  What factors related to both students and teachers may account for
-    students climate change knowledge achievement? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    achievement.
+
+**Questions**:
+
+1.  Whether and to what extent can a geospatial curriculum approach
+    promote climate change understandings with students in urban
+    middle-level education?
+2.  What factors related to both students and teachers may account for
+    students climate change knowledge achievement?
 
 ## 9.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Curriculum (lessons, class activities, investigation)
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Curriculum (lessons, class activities, investigation)
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The Climate Change curriculum included a coherent sequence of topics and
-learning activities designed to promote learner understandings about the
-atmosphere, Earth system energy balance, weather and climate, greenhouse
-gases, paleoclimatology, and environmental impacts of human-induced
-climate change and it has five lessons during 20-day instructional
-sequence approach with Google Earth. The curriculum also included
-lessons with a Webbased interactive carbon calculator and geologic time
-line, inquiry-based laboratories, demonstrations, readings, and modeling
-activities aligned to the curriculum learning goals.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The Climate Change curriculum included a coherent
+sequence of topics and learning activities designed to promote learner
+understandings about the atmosphere, Earth system energy balance,
+weather and climate, greenhouse gases, paleoclimatology, and
+environmental impacts of human-induced climate change and it has five
+lessons during 20-day instructional sequence approach with Google Earth.
+The curriculum also included lessons with a Webbased interactive carbon
+calculator and geologic time line, inquiry-based laboratories,
+demonstrations, readings, and modeling activities aligned to the
+curriculum learning goals.
 
 ## 9.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-post assessment measure included 28 multiple-choice items
+and 3 open-ended response items
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: To address the first research question in a
+straightforward fashion, paired-sample t tests were conducted in IBM
+SPSS 21 to examine whether the mean scores of the climate change
+assessment items were significantly different between the pretest and
+the posttest. - Two approaches in total were tried to address the second
+research question. We first tried the ordinary least squares (OLS)
+multiple regression analysis using the blockwise method in IBM/SPSS 21
+to investigate how well the teacher factors accounted for the variance
+in students’ climate change posttest scores, after controlling for
+students’ gender and pretest scores. Secondly, for the purpose of
+incorporating the data structure that students were nested within
+teachers, we conducted a series of two-level hierarchical linear models
+(HLM).
 
-</td>
-<td style="text-align:left;">
+**Results**: The standard effect size for the urban students in our
+study had an effect size of 1.29 for the entire climate change
+assessment measure. These results speak favorably to using the
+geospatial curriculum approach to promote growth in students’ climate
+change understandings. - After the curriculum implementation, the
+students identified more anthropogenic sources that contribute to
+climate change, environmental impacts, and solutions to enhanced
+anthropogenic climate change at a personal and societal level.
 
-pre-post assessment measure included 28 multiple-choice items and 3
-open-ended response items
+**Improved?**: overall results regarding the use of the Climate Change
+curriculum showed significan improvement in urban middle-level students’
+climate change science understandings for the entire assessment and for
+each topic area subgroup
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 9.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: significant improvement in urban middle-level students’
+climate change science understandings (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: After the curriculum implementation, the students
+identified more anthropogenic sources that contribute to climate change,
+environmental impacts, and solutions to enhanced anthropogenic climate
+change at a personal and societal level. (*Worked?*: Yes )
 
-- The standard effect size for the urban students in our study had an
-  effect size of 1.29 for the entire climate change assessment measure.
-  These results speak favorably to using the geospatial curriculum
-  approach to promote growth in students’ climate change understandings.
-- After the curriculum implementation, the students identified more
-  anthropogenic sources that contribute to climate change, environmental
-  impacts, and solutions to enhanced anthropogenic climate change at a
-  personal and societal level. `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+## 9.7 Conclusions
+
+**Conclusions**: The findings from this study illustrate that
+implementing a coherent middle-level climate change science curriculum
+using a geospatial curriculum approach to learning can enhance urban
+middle-level students’ understandings of important climate science
+topics and help foster a deeper understanding of climate change science.
+
+**Message to keep:**: The results from this study provide support for
+the effectiveness of the geospatial curriculum approach to enhance the
+climate change content knowledge of urban middle-level students. The
+findings also provide support that a geospatial curriculum approach may
+be an effective science curriculum approach for learners in urban
+middle-level education. Virtual globes such as Google Earth are
+interactive visualization tools that can be designed to enable learners
+to manipulate, analyze, and synthesize spatial data in novel ways and
+support the development of contextually rich learning environments that
+promote higher-order thinking skills, meaningful learning, and authentic
+scientific inquiry.
 
 # 10 Bofferding2015 ( ABP )
+
+**title** Middle and high school students’ conceptions of climate change
+mitigation and adaptation strategies
 
 ## 10.1 abstract
 
@@ -3147,29 +3012,13 @@ urban
 
 ## 10.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to identify aspects of middle and high school students’ climate system
 knowledge and action knowledge of both mitigation of and adaptation to
 climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  What are adolescents’ conceptualizations of and justification for
     climate change mitigation and adaptation strategies in their
@@ -3178,110 +3027,58 @@ Questions
     on GCC, its causes, and human responses?
 3)  What similarities or differences exist between how students from
     different- ent developmental levels of middle and high school
-    conceptualize these constructs? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    conceptualize these constructs?
 
 ## 10.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: climate change curriculum
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-climate change curriculum
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-week-long training on the climate change curriculum and met throughout
-the year with the research team – consisting of climate scientists,
-education researchers, and graduate students – for additional
-professional development experiences (1) Name one thing that your
-community could realistically do to reduce carbon dioxide emissions to
-the atmosphere. Explain how this change or activity could reduce carbon
-dioxide emissions to the atmosphere. (2) What is one thing you or your
-community could realistically do to prepare for or adapt to future
+**Description**: week-long training on the climate change curriculum and
+met throughout the year with the research team – consisting of climate
+scientists, education researchers, and graduate students – for
+additional professional development experiences (1) Name one thing that
+your community could realistically do to reduce carbon dioxide emissions
+to the atmosphere. Explain how this change or activity could reduce
+carbon dioxide emissions to the atmosphere. (2) What is one thing you or
+your community could realistically do to prepare for or adapt to future
 changes in climate? Explain how or why your suggestion would work.
-
-</td>
-</tr>
-</tbody>
-</table>
 
 ## 10.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: SURVEY
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: anova
 
-</td>
-<td style="text-align:left;">
+**Results**: adolescents currently conflate climate change mitigation
+strategies with unrelated environmental problems far less than in
+previous surveys. However, students demonstrated limited understanding
+of adaptive responses to climate change. After engaging in an
+instructional unit on climate change, students expressed stronger system
+and action knowledge, but significant misconceptions remained that
+conflated mitigation of and adaptation to climate change.
 
-SURVEY
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 10.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: understanding of adaptive responses to climate change
+(*Worked?*: YES )
 
-</td>
-<td style="text-align:left;">
+**other**: high level of confidence teaching (*Worked?*: yes )
 
-adolescents currently conflate climate change mitigation strategies with
-unrelated environmental problems far less than in previous surveys.
-However, students demonstrated limited understanding of adaptive
-responses to climate change. After engaging in an instructional unit on
-climate change, students expressed stronger system and action knowledge,
-but significant misconceptions remained that conflated mitigation of and
-adaptation to climate change.
+## 10.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 11 Boon2016 ( ABP )
+
+**title** Pre-Service Teachers and Climate Change: A Stalemate?
 
 ## 11.1 abstract
 
@@ -3393,90 +3190,62 @@ urban
 
 ## 11.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to estimate the efficacy of the B.Ed. program in preparing PSTs to
 understand climate change science to the level that a secondary school
 student would Be expected to have reached by Grade 10.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 11.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: NA
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: NA
 
 ## 11.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: SURVEY PRE POST
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: their attitudes towards environmental education were
+consistently favourable, but their climate change science knowledge had
+not changed as a result of their participation in their degree.
 
-SURVEY PRE POST
+**Improved?**: \|
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 11.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: climate change science knowledge (*Worked?*: no )
 
-</td>
-<td style="text-align:left;">
+**intention**: attitudes towards environmental education (*Worked?*: yes
+)
 
-their attitudes towards environmental education were consistently
-favourable, but their climate change science knowledge had not changed
-as a result of their participation in their degree.
+## 11.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: PSTs should be taught the history and causes of climate
+change, mitigation and adaptation practices, and the positions and
+understanding of different interest groups that shape responses to
+climate change; PSTs should also be given time to develop their ability
+to critically evaluate these responses.
+
+**Message to keep:**: NA
 
 # 12 Bozdogan2011 ( ABP )
+
+**title** THE EFFECTS OF INSTRUCTION WITH VISUAL MATERIALS ON THE
+DEVELOPMENT OF PRESERVICE ELEMENTARY TEACHERS’ KNOWLEDGE AND ATTITUDE
+TOWARDS GLOBAL WARMING
 
 ## 12.1 abstract
 
@@ -3567,28 +3336,12 @@ urban
 
 ## 12.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 the effects of instruction with visual materials on preservice
 elementary teachers’ deficiencies and misconceptions in global warming,
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  Does instruction with visual materials have an effect in rectifying
     preservice teachers’ deficient knowledge and misconceptions about
@@ -3600,104 +3353,57 @@ Questions
     attitudes of preservice teachers towards global warming?
 4.  Does instruction with visual materials have an effect in changing
     the daily habits of preservice teachers to curb global warming?
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
 
 ## 12.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: climate change curriculum
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-climate change curriculum
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-instruction with visual materials (video, images)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: instruction with visual materials (video, images)
 
 ## 12.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: SURVEY AND INTERVIEW
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Data obtained were analyzed by using quantitative and
+qualitative data analysis techniques. The former included frequency,
+t-test and Covariance analyses, while the latter included the two
+open-ended question measuring students’ level of information about
+global warming and focus group interviews.
 
-</td>
-<td style="text-align:left;">
+**Results**: This study compared instruction with visual materials and
+traditional instructional methods in improving preservice teachers’
+global warming information levels, rectifying their deficient
+information and misconceptions, developing environmentally friendly
+behaviors against global warming, and increasing their attitudes towards
+global warming. that both experimental and control group individuals had
+knowledge gaps and certain misconceptions about the reasons underlying
+global warming. However, preservice teachers were more successful in
+rectifying the gaps and misconceptions via nstruction with visual
+materials.
 
-SURVEY AND INTERVIEW
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 12.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: rectifying the gaps and misconceptions via instruction
+with visual materials (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 12.7 Conclusions
 
-This study compared instruction with visual materials and traditional
-instructional methods in improving preservice teachers’ global warming
-information levels, rectifying their deficient information and
-misconceptions, developing environmentally friendly behaviors against
-global warming, and increasing their attitudes towards global warming.
-that both experimental and control group individuals had knowledge gaps
-and certain misconceptions about the reasons underlying global warming.
-However, preservice teachers were more successful in rectifying the gaps
-and misconceptions via nstruction with visual materials.
+**Conclusions**: After the intervention, the experimental group had
+higher global warming attitude scores.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 13 Breslyn2019 ( MB )
+
+**title** Investigating Preservice Elementary Science Teachers’
+Understanding of Climate Change from a Computational Thinking Systems
+Perspective
 
 ## 13.1 abstract
 
@@ -3804,171 +3510,117 @@ age_max
 
 ## 13.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The goal of this study was to determine how preservice teachers (PSTs)
 learn about a complex EE topic like climate change, and how they planned
 to incorporate the topic in their own teaching, supported by a CT
 framework
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  How does computational thinking, with an emphasis on systems
     thinking, support preservice elementary teachers’ thinking about
     climate change, a complex environmental education topic?
 2.  How do preservice elementary teachers incorporate systems thinking
     in their proposed teaching of the environmental education topic of
-    sea level rise? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    sea level rise?
 
 ## 13.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Professional development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons with computational tools (system thinking with,
+punctually the help of software), online activities
 
-Professional development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons with computational tools (system thinking with, punctually the
-help of software), online activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-This study focuses on 2 weeks (10 and 11) from the science method course
-for undergraduate preservice teachers. - week 10: Climate change and
-computational thinking: PSTs learn about assessment in the context of
-weather and climate change with an emphasis on the CT practice of
-systems thinking - week 11: Blended learning, Sea Level Rise and
-computational thinking: PSTs continue with assessment and climate change
-with a focus on technology and blended learning. PSTs complete an online
-activity on sea level rise and how it will affect a geographic community
-using data and projections from the Surging Seas website (Climate
-Central, 2018)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: This study focuses on 2 weeks (10 and 11) from the
+science method course for undergraduate preservice teachers. - week 10:
+Climate change and computational thinking: PSTs learn about assessment
+in the context of weather and climate change with an emphasis on the CT
+practice of systems thinking - week 11: Blended learning, Sea Level Rise
+and computational thinking: PSTs continue with assessment and climate
+change with a focus on technology and blended learning. PSTs complete an
+online activity on sea level rise and how it will affect a geographic
+community using data and projections from the Surging Seas website
+(Climate Central, 2018)
 
 ## 13.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Before and after session 1, preservice teachers were asked to
+respond online to the prompt: “List up to three science related
+questions you have about climate systems and climate change. This might
+involve the interrelationships between factors, how different factors
+affect each other, or connections between humans and climate change.”
+Data were collected and coded for the number and type of systems in
+their pre and post responses. independent interrater agreement was
+approximately 90%, with subsequent negotiation among the three raters
+resulting in over 95% agreement. After session 2, they responded to the
+following prompt: “Within the context of climate change, what
+systems/systems models do you now know inform a scientific understanding
+of sea level rise, and how would you use such models to teach upper
+elementary students how scientists think about the causes of sea level
+rise with an emphasis on systems thinking?” Using the instrument
+developed earlier, responses were coded and codes tabulated. While data
+were not collected prior to instruction for this prompt, the use of the
+same codes allowed for comparison with their responses in the previous
+section The researchers realized later that the preservice teachers did
+not mention fossil fuels in their responses in session 1 and 2. Data
+were collected from four PSTs using selected questions from the CSKAI
+(Drewes, et al., 2017) to gain a sense of PSTs’ understanding of the
+role of fossil fuels in climate change
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Qualitative data are coded into categories, but the
+results are very descriptive, and no particular methodological approach
+is described
 
-</td>
-<td style="text-align:left;">
+**Results**: Pre-post session 1: - The primary change in PSTs’ questions
+before and after instruction was a shift from an emphasis on the
+relationship between weather and climate change towards the greenhouse
+effect and the role of greenhouse gases. - PSTs shifted towards a more
+mechanistic view of climate change, involving CO2 and the greenhouse
+effect, their view was still constrained and might not include key
+relationships between the systems involved in climate change.
+Post-session 2 (Sea level rise) - their understanding developed further
+to include global warming, ice melt, and sea level rise. - weather was
+no longer present in their responses, suggesting they no longer
+considered it a primary component of climate change. - Still absent from
+their responses was the relationship between fossil fuels and other
+drivers of climate change. Additional questionnaire on fossil fuels: -
+The PSTs’ responses to the selected CSKAI questions indicated they
+understand the connection between the use of fossil fuels, CO2, and
+global warming
 
-Before and after session 1, preservice teachers were asked to respond
-online to the prompt: "List up to three science related questions you
-have about climate systems and climate change. This might involve the
-interrelationships between factors, how different factors affect each
-other, or connections between humans and climate change." Data were
-collected and coded for the number and type of systems in their pre and
-post responses. independent interrater agreement was approximately 90%,
-with subsequent negotiation among the three raters resulting in over 95%
-agreement. After session 2, they responded to the following prompt:
-"Within the context of climate change, what systems/systems models do
-you now know inform a scientific understanding of sea level rise, and
-how would you use such models to teach upper elementary students how
-scientists think about the causes of sea level rise with an emphasis on
-systems thinking?" Using the instrument developed earlier, responses
-were coded and codes tabulated. While data were not collected prior to
-instruction for this prompt, the use of the same codes allowed for
-comparison with their responses in the previous section The researchers
-realized later that the preservice teachers did not mention fossil fuels
-in their responses in session 1 and 2. Data were collected from four
-PSTs using selected questions from the CSKAI (Drewes, et al., 2017) to
-gain a sense of PSTs’ understanding of the role of fossil fuels in
-climate change
+**Improved?**: Cognitive approach of climate change improve toward a
+more structured mechanistic view
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 13.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Computational/system thinking abilities concerning
+Climate Change (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 13.7 Conclusions
 
-Pre-post session 1: - The primary change in PSTs’ questions before and
-after instruction was a shift from an emphasis on the relationship
-between weather and climate change towards the greenhouse effect and the
-role of greenhouse gases. - PSTs shifted towards a more mechanistic view
-of climate change, involving CO2 and the greenhouse effect, their view
-was still constrained and might not include key relationships between
-the systems involved in climate change. Post-session 2 (Sea level
-rise) - their understanding developed further to include global warming,
-ice melt, and sea level rise. - weather was no longer present in their
-responses, suggesting they no longer considered it a primary component
-of climate change. - Still absent from their responses was the
-relationship between fossil fuels and other drivers of climate change.
-Additional questionnaire on fossil fuels: - The PSTs’ responses to the
-selected CSKAI questions indicated they understand the connection
-between the use of fossil fuels, CO2, and global warming
+**Conclusions**: Overall, we assert that it is beneficial to incorporate
+CT to meaningfully enact the NGSS as well as to prepare young learners
+with the expected disciplinary core knowledge, practices, and cross
+cutting concepts that apply across a wide range of disciplines involving
+computation
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Computational/system thinking is an important
+aspect to consider when teaching climate change, in this example, it
+helped pre-service teachers go beyond weather and start thinking more
+systematically and mechanistically about climate change. A less central
+result might be interesting to keep in mind: in this study the focus
+given to system thinking on the macroscopic Sea Level Rise process
+caused the student to not think about the causes of greenhouse gas
+(burning fossil fuels) in their discourse.
 
 # 14 Cebesoy2019 ( SB )
+
+**title** Pre-service teachers’ opinions about a two-day climate change
+education workshop
 
 ## 14.1 abstract
 
@@ -4053,118 +3705,67 @@ sample.size
 
 ## 14.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To raise awareness of different aspects of CC and their impact in
 forests.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 ??
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 14.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: NA
 
-Outdoor/Indoor/Both
+**Indoor/Outdoor**: Both, depends on the activity
 
-</td>
-<td style="text-align:left;">
+**Type**: 5 activities: 1) Climate change and forests (adaptation and
+mitigation). 2) General knowledge (CC journalism). 3) Climate refugges
+(Digital storytelling). 4) Forests policies (Island challenge). 5)
+Strengths and weaknesses (Stop deforestation).
 
-Both, depends on the activity
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-5 activities: 1) Climate change and forests (adaptation and mitigation).
-2) General knowledge (CC journalism). 3) Climate refugges (Digital
-storytelling). 4) Forests policies (Island challenge). 5) Strengths and
-weaknesses (Stop deforestation).
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-1)  Create posters about forest protection in case of different events
-    (e.g. fires, floods…)
-2)  In groups: create questions sent to university students and then
-    report them to other groups.
-3)  Digital storytelling about climate refugees.
-4)  Each participant was situated in play-islands. They were suposed to
-    collaborate to help other participants who had cut down all their
-    forests and were now in trouble.
-5)  ?? `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
+**Description**: 1) Create posters about forest protection in case of
+different events (e.g. fires, floods…) 2) In groups: create questions
+sent to university students and then report them to other groups. 3)
+Digital storytelling about climate refugees. 4) Each participant was
+situated in play-islands. They were suposed to collaborate to help other
+participants who had cut down all their forests and were now in trouble.
+5) ??
 
 ## 14.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Entrevistas
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Thematic content
 
-</td>
-<td style="text-align:left;">
+**Results**: Awareness of CC and its impact in forests was increased.
 
-Entrevistas
+**Improved?**: Knowledge and awareness
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 14.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Dealing with several aspects of CC: - Effects of CC in
+forests - General knowledge of CC - Climate refugees - Loss of
+biodiversity (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Differents objects of awareness: . adaptation and
+mitigation strategies to CC - importance of forest and environment
+management. (*Worked?*: Yes )
 
-Awareness of CC and its impact in forests was increased.
+## 14.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Implemented workshop and the way activities were
+designed were accepted by pre-service teachers who found value in them.
+Little evidence as to actual changes in knowledge or awareness of CC.
+
+**Message to keep:**: Collaborative design of activities ensures they
+are accepted, and presumably used, by teachers.
 
 # 15 Cebesoy2022 ( MB )
+
+**title** Teaching the role of forests in mitigating the effects of
+climate change using outdoor educational workshop
 
 ## 15.1 abstract
 
@@ -4251,29 +3852,13 @@ sample.size
 
 ## 15.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 this study examined the effectiveness of a two-day extra-curricular
 workshop designed to increase preservice teachers’ awareness of climate
 change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 What concepts relating to climate change and the role of forests in
 mitigating the effects of climate change do PTs have? Was there any
@@ -4282,108 +3867,79 @@ forests in mitigating the effects of climate change after they
 participated in the workshop? What do PTs think about the effectiveness
 of the activities they completed?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 15.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Professional development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Outdoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Non-formal Outdoor 2-days workshop (no precise information on
+the contents and/or activities)
 
-Professional development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Outdoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Non-formal Outdoor 2-days workshop (no precise information on the
-contents and/or activities)
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Non-formal Outdoor 2-days workshop (no precise information on the
-contents and/or activities)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Non-formal Outdoor 2-days workshop (no precise
+information on the contents and/or activities)
 
 ## 15.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Visual comparison of word association test through network
+**Data**: Visual comparison of word association test through network
 representation of the association. Thematic content analysis method of
 post workshop reflection forms
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: Pre- and Post word association test, analysed through
+visual semantic network maps Calculation of inter-rater reliability
+Qualitative analysis of participant reflection form distributed after
+the workshop
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: Main result: the number of stimulus words and the number of
+response words increased, which is interpreted as creating a meaningful
+cognitive structure and conceptual organization and conceptual change
+concerning climate change and the role of forest (outcome: KNOWLEDGE)
+Concerning the outcomes AWARENESS and EMOTION the results come from the
+qualitative interpretation (through classification) of the reflection
+form distributed post-workshop.
 
-</td>
-<td style="text-align:left;">
+**Improved?**: Creating a meaningful cognitive structure and conceptual
+organization concerning climate change and the role of forest “The
+preservice teachers agreed that the activities in the workshop helped
+them realize the human impact on climate change” “The workshop helped
+the PTs recognize the phenomenon of ‘climate refugees’”The PTs reflected
+that after participating in the outdoor activities, they experienced a
+strong empathic relationship with nature” Some PT declared a similar
+empathy phenomenon with climatic refugees
 
-Main result: the number of stimulus words and the number of response
-words increased, which is interpreted as creating a meaningful cognitive
-structure and conceptual organization and conceptual change concerning
-climate change and the role of forest (outcome: KNOWLEDGE) Concerning
-the outcomes AWARENESS and EMOTION the results come from the qualitative
-interpretation (through classification) of the reflection form
-distributed post-workshop.
+## 15.6 Outcomes
 
-</td>
-</tr>
-</tbody>
-</table>
+**knowledge**: Creating a meaningful cognitive structure and conceptual
+organization concerning climate change and the role of forest
+(*Worked?*: Yes )
+
+**awareness**: “The preservice teachers agreed that the activities in
+the workshop helped them realize the human impact on climate change”
+“The workshop helped the PTs recognize the phenomenon of ‘climate
+refugees’ (*Worked?*: Yes )
+
+**emotions**: “The PTs reflected that after participating in the outdoor
+activities, they experienced a strong empathic relationship with nature”
+Some PT declared a similar empathy phenomenon with climatic refugees
+(*Worked?*: Yes )
+
+## 15.7 Conclusions
+
+**Conclusions**: Outdoor activities results in changing the cognitive
+structure of preservice-teachers toward more understanding and more
+complexity concerning climate change, acompanied with improved awareness
+and empathy
+
+**Message to keep:**: Outdoor activities for changing the cognitive
+structures of preservice teachers, concerning the role of forest in
+climate change. It is worth noting that the authors describe outcomes
+concerning knowledge, awareness and emotions (strong empathy towards
+nature and climatic refugees).
 
 # 16 Chang2018 ( ABP )
+
+**title** Closing the “Hole in the Sky”: The Use of Refutation-Oriented
+Instruction to Correct Students’ Climate Change Misconceptions
 
 ## 16.1 abstract
 
@@ -4467,132 +4023,65 @@ urban
 
 ## 16.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 designed to understand the manner in which climate change is learned in
 Singapore as a topic in geography education.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 does a pedagogical tool based on refutation improve secondary school
 students’ understanding of climate change?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 16.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: climate change curriculum
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-climate change curriculum
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-four sessions corresponding to four key topics on weather and climate:
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: four sessions corresponding to four key topics on
+weather and climate:
 
 ## 16.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: SURVEY
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: A repeated measures t-test was computed to ascertaiN the
+degree to which the intervention was (in)effective for the intervention
+as one unit of analysis as well as individually for each of the four key
+topics covered $$greenhouse effect, enhanced greenhouse effect, climate
+change, and effects of climate change$$.
 
-</td>
-<td style="text-align:left;">
+**Results**: There was a notable difference in the scores for the
+pretest (M D 9.78, SD D 3.68) and the post-test (M D 16.63, SD D 4.44);
+t(26) D 9.9127, p D 0.0001), indicating that there was strong and
+statistically significant improvement in understanding postinstruction.
+This signifies that a deliberate teaching approach aided by
+refutation-based instruction had a positive effect on the overall
+comprehension by students of climate-related topics. In total,
+twenty-five alternative conceptions were successfully refuted; thirty
+three decreased while eight increased in frequency.
 
-SURVEY
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 16.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: understanding postinstruction (*Worked?*: YES )
 
-</td>
-<td style="text-align:left;">
+## 16.7 Conclusions
 
-There was a notable difference in the scores for the pretest (M D 9.78,
-SD D 3.68) and the post-test (M D 16.63, SD D 4.44); t(26) D 9.9127, p D
-0.0001), indicating that there was strong and statistically significant
-improvement in understanding postinstruction. This signifies that a
-deliberate teaching approach aided by refutation-based instruction had a
-positive effect on the overall comprehension by students of
-climate-related topics. In total, twenty-five alternative conceptions
-were successfully refuted; thirty three decreased while eight increased
-in frequency.
+**Conclusions**: there was significant improvement in the students’
+climate change conceptual understanding following the intervention.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 17 Chattuchai2015 ( ABP )
+
+**title** Development of knowledge, awareness, global warming decreasing
+behavior and critical thinking of grade 11 students using the Four Noble
+Truths method with meta-cognitive techniques
 
 ## 17.1 abstract
 
@@ -4693,125 +4182,82 @@ urban
 
 ## 17.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to investigate the effects of learning environmental education on the
 knowledge, awareness, global warming decreasing behavior, and critical
 thinking of eighty grade 11 students from two classes.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 17.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: lessons
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-lessons
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-the Four Noble Truths (FNT) The method applies the Buddhist principles
-for instruction with systematic thinking procedures comparable to the
-scientific method. The FNT method has four stages: suffering, cause of
-suffering, cessation of suffering, the way to the cessation of suffering
-which emphasizes problem solving by oneself
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: the Four Noble Truths (FNT) The method applies the
+Buddhist principles for instruction with systematic thinking procedures
+comparable to the scientific method. The FNT method has four stages:
+suffering, cause of suffering, cessation of suffering, the way to the
+cessation of suffering which emphasizes problem solving by oneself
 
 ## 17.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: The pretest and posttest scores of the four instruments
+were analyzed to test assumptions of the Two-way MANCOVA and ANCOVA in
+terms of normality, correlation of dependent variables, homogeneity of
+variance, homogeneity of regression slope, and homogeneity of
+variance-covariance matrices.
 
-</td>
-<td style="text-align:left;">
-
-questionaire
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-The major findings revealed that the experimental group and based on
-prior Biology learning outcome had more knowledge, awareness, global
-warming decreasing behavior, and critical thinking prior to learning.
-The high Biology achievers had higher awareness of global warming in two
-areas, global warming decreasing behavior in one area and critical
-thinking than the lower Biology achievers in three areas. The
+**Results**: The major findings revealed that the experimental group and
+based on prior Biology learning outcome had more knowledge, awareness,
+global warming decreasing behavior, and critical thinking prior to
+learning. The high Biology achievers had higher awareness of global
+warming in two areas, global warming decreasing behavior in one area and
+critical thinking than the lower Biology achievers in three areas. The
 experimental group had more knowledge, awareness of global warming
 generally and in one area, global warming decreasing behavior generally
 and in one area and overall critical thinking in three aspects than the
 control group students.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: conocimiento mejoro
+
+## 17.6 Outcomes
+
+**knowledge**: YES (*Worked?*: yes )
+
+**awareness**: yes (*Worked?*: yes )
+
+**intention**: yes (*Worked?*: yes )
+
+**other**: global warming decreasing behavior, and critical thinking.
+(*Worked?*: yes )
+
+## 17.7 Conclusions
+
+**Conclusions**: The Four Noble Truths method with metacognitive
+techniques is an effective teaching and learning method for enhancing
+knowledge, awareness, global warming, decreasing behavior and critical
+thinking of the students. This method is based on learner-centered
+activities and The view of learning by experience and thinking, the
+social constructivist view and intellectual procedures of metacognitive
+techniques. The teachers, therefore, should be encouraged and supported
+to implement this method in teaching environmental education at any
+grade Level.
+
+**Message to keep:**: NA
 
 # 18 Chin2016 ( MB )
+
+**title** Arguemntation in a Socioscientific Context and its Influence
+on Fundamental and Derived Science Literacies
 
 ## 18.1 abstract
 
@@ -4915,15 +4361,11 @@ Urban
 
 ## 18.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Questions
+NA
 
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  Could arguing to learn about global climate change as fundamental
     literacy enhance the fundamental and derived literacy components of
@@ -4932,65 +4374,24 @@ Questions
     literacy components?
 3)  What were the qualitative benefits of using arguing to learn (focus
     on fundamental literacy practices) to enhance students’ fundamental
-    literacy practices and science understanding? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    literacy practices and science understanding?
 
 ## 18.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons, “Arguing to learn”
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons, "Arguing to learn"
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-This 7-week study included three phases: reading–writing
-activity/pretest, arguing to learn/treatment, and reading–writing
-activity/posttest. Week 2 and the remaining class time in weeks 1, 3,
-and 4 were focused on the textbook and teaching the Weather unit. 1.
-Phase 1 focused on fundamental literacy practices and science
-understanding that involved directed activities related to texts (DARTs;
-Wellington & Osborne, 2001) and to complete a global climate change
-reading–writing worksheet. DARTs utilized the
+**Description**: This 7-week study included three phases:
+reading–writing activity/pretest, arguing to learn/treatment, and
+reading–writing activity/posttest. Week 2 and the remaining class time
+in weeks 1, 3, and 4 were focused on the textbook and teaching the
+Weather unit. 1. Phase 1 focused on fundamental literacy practices and
+science understanding that involved directed activities related to texts
+(DARTs; Wellington & Osborne, 2001) and to complete a global climate
+change reading–writing worksheet. DARTs utilized the
 constructive–interpretative language arts pair of reading–writing and
 integrated the literacy practices of learning to read and write. 2.
 Phase 2, the instruction phase (90 min in week 3), used arguing to learn
@@ -5006,76 +4407,100 @@ issue. 3. Phase 3 repeated the phase 1 reading–writing activity and
 posttest (90 min distributed in three class periods in week 4) using the
 same textual materials.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 18.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: ten question for text comprehension (true/false) PREPOST -
+Essay writing scored using four dimension (content, organization, word
+choice, sentence structure) PREPOST - Arguments cell in a worksheet
+(arguing to learn in a structured worksheet) were scored as well (POST
+activity ONLY) - Finally, qualitative data from the follow-up
+questionnaires and interviews were analyzed. The questionnaire was
+designed to collect all participants’ viewpoints and learning
+experiences on (a) arguing to learn a socioscientific issue and (b) the
+learning benefits from using argumentation as a fundamental literacy
+practice in the global climate change context. Eight students were
+randomly selected for interview by the second author as a case sample
+(POST ONLY)
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Quantitative: Analysis of quantitative data involved
+calculating descriptive statistics, testing gain scores, and exploring
+the correlations among the variables. Paired-sample t tests were used to
+analyze pretest–posttest changes in the participants’ reading
+comprehension and essay writing. Pearson correlation coefficients were
+used to analyze the associations between the fundamental and derived
+literacy components in an attempt to investigate how these literacy
+components support and complement each other. Qualitative: Using open
+coding (Strauss & Corbin, 1998), two researchers analyzed the
+questionnaire and interview responses; they read and coded all the
+verbatim responses individually and then discussed their discrepant
+codes to reach consensus. We employed triangulation to guard against
+misinterpretation of data and to build credibility of the qualitative
+data (Sadler & Zeidler, 2005)
 
-</td>
-<td style="text-align:left;">
+**Results**: Reading Comprehension as Derived Literacy: The analysis of
+pretest and posttest scores of reading comprehension related to science
+understanding about the global climate change issue (Table 1) revealed
+no significant gain, t = −0.124, p = 0.902. We had not predicted that
+the effect of active reading from the DARTs reading–writing activity
+would lead to high levels of science understanding on the pretest and
+posttest (8.68, 8.71, respectively, out of ten possible points). Thus,
+this ceiling effect limited the potential learning influence from using
+argumentation in supporting students’ reading comprehension Essay
+Writing as Fundamental Literacy: Analysis of the pretest and posttest
+essay writing scores related to fundamental literacy practices (Table 1)
+revealed significant gains. The paired-sample t test of the students’
+performance on all of the posttest scoring items demonstrated
+significant (p \< 0.05) progress over the pretest performance. The
+improvement on the total essay writing score was a large effect size, d
+= 1.43; the improvement on the content item was a medium effect size, d
+= 0.57; and the improvements on the organization, word choice, and
+sentence structure items were large effect size, d = 1.43, 1.29, and
+1.22, respectively. These medium to large effect sizes meant that the
+arguing-to-learn treatment likely contributed to the performances on
+essay writing, organization, word choice, and sentence structure.
+Benefits of Using Argumentation (Qualitative analysis): Three benefits
+of the argumentation experience on learning to read and write at the
+posttest phase were reported by the students interviewed: (i) ntegrating
+argumentation experience with the reading–writing worksheet task
+encouraged the students to determine and evaluate whether or not the
+results were beneficial to global climate change, (ii) the experiences
+of arguing to learn could guide the students to do structured thinking
+by warrant/backing/rebbutal (pro) and W/B/R (con) when doing the
+reading–writing activity in the posttest, (iii) the arguing-to-learn
+experiences could encourage the students to consider the global climate
+change issue for better and thorough science understanding
 
-- ten question for text comprehension (true/false) PREPOST
-- Essay writing scored using four dimension (content, organization, word
-  choice, sentence structure) PREPOST
-- Arguments cell in a worksheet (arguing to learn in a structured
-  worksheet) were scored as well (POST activity ONLY)
-- Finally, qualitative data from the follow-up questionnaires and
-  interviews were analyzed. The questionnaire was designed to collect
-  all participants’ viewpoints and learning experiences on (a) arguing
-  to learn a socioscientific issue and (b) the learning benefits from
-  using argumentation as a fundamental literacy practice in the global
-  climate change context. Eight students were randomly selected for
-  interview by the second author as a case sample (POST ONLY)
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     <tr>`
-  `{=html}     <td style="text-align:left;">`
-  Resultados.obtenidos.por.cada.outcome `{=html}     </td>`
-  `{=html}     <td style="text-align:left;">` Reading Comprehension as
-  Derived Literacy: The analysis of pretest and posttest scores of
-  reading comprehension related to science understanding about the
-  global climate change issue (Table 1) revealed no significant gain, t
-  = −0.124, p = 0.902. We had not predicted that the effect of active
-  reading from the DARTs reading–writing activity would lead to high
-  levels of science understanding on the pretest and posttest (8.68,
-  8.71, respectively, out of ten possible points). Thus, this ceiling
-  effect limited the potential learning influence from using
-  argumentation in supporting students’ reading comprehension Essay
-  Writing as Fundamental Literacy: Analysis of the pretest and posttest
-  essay writing scores related to fundamental literacy practices
-  (Table 1) revealed significant gains. The paired-sample t test of the
-  students’ performance on all of the posttest scoring items
-  demonstrated significant (p \< 0.05) progress over the pretest
-  performance. The improvement on the total essay writing score was a
-  large effect size, d = 1.43; the improvement on the content item was a
-  medium effect size, d = 0.57; and the improvements on the
-  organization, word choice, and sentence structure items were large
-  effect size, d = 1.43, 1.29, and 1.22, respectively. These medium to
-  large effect sizes meant that the arguing-to-learn treatment likely
-  contributed to the performances on essay writing, organization, word
-  choice, and sentence structure. Benefits of Using Argumentation
-  (Qualitative analysis): Three benefits of the argumentation experience
-  on learning to read and write at the posttest phase were reported by
-  the students interviewed: (i) ntegrating argumentation experience with
-  the reading–writing worksheet task encouraged the students to
-  determine and evaluate whether or not the results were beneficial to
-  global climate change, (ii) the experiences of arguing to learn could
-  guide the students to do structured thinking by
-  warrant/backing/rebbutal (pro) and W/B/R (con) when doing the
-  reading–writing activity in the posttest, (iii) the arguing-to-learn
-  experiences could encourage the students to consider the global
-  climate change issue for better and thorough science understanding
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-  `{=html}     </table>`
+**Improved?**: Essay writing as fundamental literacy has improved Text
+comprehension as derived literacy has not improved, but the pretest
+score were so high that there were not much space for improvement The
+students completed well the structured arguments in the arguing to learn
+activity
+
+## 18.6 Outcomes
+
+**knowledge**: - derived literacy (reading comprehension on CC texts) -
+fundamental literacy (essay writing) - capacity of arguing (structure of
+arguments counter-argument etc) (*Worked?*: Yes )
+
+## 18.7 Conclusions
+
+**Conclusions**: Through the activity of arguing to learn about the
+global climate change issue, the students internalized the literacy
+practices by combining reading and writing with arguing to learn, which
+had significant teaching–learning benefits.
+
+**Message to keep:**: In Taiwan, the use of an “arguing to learn”
+pedagogical strategy seems to have a good impact in terms of “science
+literacy” (writing/reading on climate change) on relatively young
+learners (~11-12 years old). Note that the “arguing” part of the
+intervention consisted in exploring a warrant/backing/rebuttal structure
+on arguments and counter-arguments (in an excel worksheet!), not in a
+lively discussion between students
 
 # 19 Choi2021 ( ABP )
+
+**title** The Impacts of a Climate Change SSI-STEAM Program on Junior
+High School Students’ Climate Literacy
 
 ## 19.1 abstract
 
@@ -5169,136 +4594,72 @@ urban
 
 ## 19.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to explore whether an action-oriented SSI-STEAM approach in climate
 change education might be an appropriate educational tool for fostering
 climate literacy.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  What are the impacts of a climate change SSI-STEAM program on junior
     high school students’ climate literacy?
 2)  What are the characteristics of climate literacy changes among
     junior high school students who have participated in a climate
-    change SSI-STEAM program? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    change SSI-STEAM program?
 
 ## 19.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: 7 session programme
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-7 session programme
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-In the third session, the students were divided into six groups. Each
-group formed a Climate Change Countermeasures Headquarters (CCCH) to
-investigate the climate change phenomenon and its impact on specific
-regions of the Earth. The areas to be explored were Korea, Australia,
-the polar regions, China, America, and Africa, and each group was asked
-to choose one of these regions.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: In the third session, the students were divided into
+six groups. Each group formed a Climate Change Countermeasures
+Headquarters (CCCH) to investigate the climate change phenomenon and its
+impact on specific regions of the Earth. The areas to be explored were
+Korea, Australia, the polar regions, China, America, and Africa, and
+each group was asked to choose one of these regions.
 
 ## 19.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Climate Literacy Questionnaire (CLQ)
 
-</td>
-<td style="text-align:left;">
+**Results**: The results showed significant increases in the domains of
+perception (p = .038) and action (p = .000), but no statistically
+significant change was found in the knowledge domain. Participants’
+climate literacy was shown to improve substantially after attending the
+program, especially in the domains of perception and action. The four
+characteristics of climate literacy change were identified in the
+participants’ responses: more concrete ideas, extension of the scope of
+thinking, positive responsibility, and relevance recognition.
 
-questionaire
+**Improved?**: literacy improved
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 19.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: no )
 
-</td>
-<td style="text-align:left;">
+**awareness**: perception (*Worked?*: yes )
 
-The results showed significant increases in the domains of perception (p
-= .038) and action (p = .000), but no statistically significant change
-was found in the knowledge domain. Participants’ climate literacy was
-shown to improve substantially after attending the program, especially
-in the domains of perception and action. The four characteristics of
-climate literacy change were identified in the participants’ responses:
-more concrete ideas, extension of the scope of thinking, positive
-responsibility, and relevance recognition.
+**intention**: action (*Worked?*: yes )
 
-</td>
-</tr>
-</tbody>
-</table>
+## 19.7 Conclusions
+
+**Conclusions**: The climate literacy program developed showed potential
+for fostering young people’s climate literacy along with their under-
+standing of responsible national and global citizenship.
+
+**Message to keep:**: NA
 
 # 20 Cibik2022 ( SC )
+
+**title** A glance at mathematical modeling from an ecological
+perspective: the problem of “Pine Processionary Caterpillar Invasion”
 
 ## 20.1 abstract
 
@@ -5392,126 +4753,79 @@ mean.age
 
 ## 20.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The ultimate goal was to awaken the pre-service teachers’ awareness of
 the cross-curricular nature of ecological problems and climate change.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 20.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Professional Development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: A mathematical problem case
 
-Professional Development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-A mathematical problem case
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The PSTs (Pres-service teachers) are given a mathematical problem case
-and because PSTs may or may not be familiar with the mathematical
-modeling processes, semi-structured worksheets were designed so that
-PSTs may guide themselves in finding solutions to a selected ecological
-problem. Worksheets and important numerical variables and ratios were
-provided implicitly, rather than explicitly so that PSTs needed further
-calculations specific to their purpose. After they introduced the
-problem, the PSTs started making nature observations, collecting
-real-world data, computing mathematical calculations, and considering
-assumptions given (or even making new assumptions) to get some
-solutions.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The PSTs (Pres-service teachers) are given a
+mathematical problem case and because PSTs may or may not be familiar
+with the mathematical modeling processes, semi-structured worksheets
+were designed so that PSTs may guide themselves in finding solutions to
+a selected ecological problem. Worksheets and important numerical
+variables and ratios were provided implicitly, rather than explicitly so
+that PSTs needed further calculations specific to their purpose. After
+they introduced the problem, the PSTs started making nature
+observations, collecting real-world data, computing mathematical
+calculations, and considering assumptions given (or even making new
+assumptions) to get some solutions.
 
 ## 20.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: The different mathematical models based on data from the
+observations and collecting real- world data.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: By computing mathematical modeling processes to solve the
+local, authentic, and challenging ecological problem, the pre-service
+teachers became aware of the importance of nature’s ecological balance
+that is in danger and noticed how species in forests are interrelated
+and dependent on each other.
 
-The different mathematical models based on data from the observations
-and collecting real- world data.
+**Improved?**: By computing mathematical modeling processes to solve the
+local, authentic, and challenging ecological problem, the pre-service
+teachers became aware of the importance of nature’s ecological balance
+that is in danger and noticed how species in forests are interrelated
+and dependent on each other.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 20.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**awareness**: pre-service teachers’ awareness of the cross-curricular
+nature of ecological problems and climate change. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 20.7 Conclusions
 
-By computing mathematical modeling processes to solve the local,
-authentic, and challenging ecological problem, the pre-service teachers
-became aware of the importance of nature’s ecological balance that is in
-danger and noticed how species in forests are interrelated and dependent
-on each other.
+**Conclusions**: The context of the activity is also appropriate for
+high school students since environmental problems for ecological balance
+and climate change are core topics covered in science courses and the
+same for proportional relations and linear equations in the mathematics
+courses in high schools. Therefore, the students aged 14–18 would also
+be engaged in the activity.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: PSTs (pre-service teachers) indicated that they
+improved their mathematical modeling competencies and problem-solving
+skills and started paying more attention to the relations of species in
+nature which they did not before and that they intend to apply such
+interdisciplinary activities in their practicum and future career to
+help their students to be holistic thinking problem solvers.
 
 # 21 da_Rocha2020 ( JGOP )
+
+**title** Climate change education in school: knowledge, behavior and
+attitude
 
 ## 21.1 abstract
 
@@ -5586,28 +4900,12 @@ Urban
 
 ## 21.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To present an experience of inclusion of the theme “climate change” in a
 Brazilian public school through training, conducted with teachers.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 How do teachers view climate change at present and in the future? What
 are the practices that can be inserted into the school context to assist
@@ -5615,99 +4913,42 @@ in the process of mitigating the effects of climate change? After
 conducting research (CCE training) what is the teachers’ level of
 knowledge, behavior and attitude?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 21.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Several activities with different approaches (descriptive,
+illustrative, theoretical and narrative, among others) have been
+performed with the group of teachers.
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Several activities with different approaches (descriptive, illustrative,
-theoretical and narrative, among others) have been performed with the
-group of teachers.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Instructions of topics. All materials developed during the training
-process were didactic/pedagogical references of the UNESCO (2014)
-document. When comparing the results before and after the teachers’
-qualifications, it can be observed that for all domains (knowledge,
-attitude and behavior) the mean scores were always higher in the
-post-moment, and this difference in the total score evaluation was
+**Description**: Instructions of topics. All materials developed during
+the training process were didactic/pedagogical references of the UNESCO
+(2014) document. When comparing the results before and after the
+teachers’ qualifications, it can be observed that for all domains
+(knowledge, attitude and behavior) the mean scores were always higher in
+the post-moment, and this difference in the total score evaluation was
 significant
-
-</td>
-</tr>
-</tbody>
-</table>
 
 ## 21.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test / post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: For the analysis of the answers before and after the
+training, statistical analyses were performed for the quantitative
+variables, obtained by the total score, considering the three domains of
+interest of the research. All variables followed normal distribution,
+verified by the Shapiro–Wilk normality test. Then, the parametric tests
+were used; Student’s t-test for paired samples to compare the mean
+scores of the four teachers participating in the research in the pre-
+and post-training moments. And then the Pearson correlation test was
+used to correlate the three domains of the score at both times (pre- and
+post-test). Finally, an alpha (a) value less than or equal to 5 per cent
+was considered as statistically significant and the statistical software
+PASWStatistics version 18.0 was used.
 
-</td>
-<td style="text-align:left;">
-
-pre-test / post-test
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-When comparing the results before and after the teachers’
+**Results**: When comparing the results before and after the teachers’
 qualifications, it can be observed that for all domains (knowledge,
 attitude and behavior) the mean scores were always higher in the
 post-moment, and this difference in the total score evaluation was
@@ -5726,12 +4967,46 @@ subject. According to Chappin et al. (2017), knowledge helps in more
 sustainable attitudes and behaviors, but it is not a guarantee that
 people will actually change habits and behavior through knowledge.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Better knowlegde, attitudes and behaviours towards
+Climate Change
+
+## 21.6 Outcomes
+
+**knowledge**: When comparing the results before and after the teachers’
+qualifications, it can be observed that for all domains (knowledge,
+attitude and behavior) the mean scores were always higher in the
+post-moment, and this difference in the total score evaluation was
+significant (*Worked?*: Yes )
+
+**action**: When comparing the results before and after the teachers’
+qualifications, it can be observed that for all domains (knowledge,
+attitude and behavior) the mean scores were always higher in the
+post-moment, and this difference in the total score evaluation was
+significant (*Worked?*: Yes )
+
+## 21.7 Conclusions
+
+**Conclusions**: However, this research reinforces that the CCE theme is
+cross-sectional and can be addressed by all areas of knowledge. In this
+research, the sample is small; however, it was committed to the
+research, according to the results presented in the activities performed
+during training (pre and post-test), verifying that the knowledge of 100
+per cent of the participants increased and in 75 per cent of the
+participants, attitude and behavior also improved. the teachers who
+participated in this research see climate change as an opportunity for
+society to develop a more sustainable behavior, a factor evidenced in
+the analysis of the SDGs.
+
+**Message to keep:**: There is an importance of using different
+approaches in the instructions of teachers, specially in climate change
+education. This paper reflect that the use of different strategies
+(e.g. descriptive, illustrative, theoretical andnarrative, among others)
+could be useful in the change of attitudes, behaviors and knowledge, and
+this change may affect their students and community.
 
 # 22 Dal2015a ( JGOP )
+
+**title** An Analysis of the Teachers’ Climate Change Awareness
 
 ## 22.1 abstract
 
@@ -5853,90 +5128,33 @@ Urban
 
 ## 22.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The study aimed to identify if there is any change in climate change
 awareness among teachers after attending the in-service training.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  How teachers perceive climate change? (b) Is there a difference
     between teachers’ perceptions on the issue depending on the
     geographical locations they are selected from? (c) How effective is
-    the professional development program? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    the professional development program?
 
 ## 22.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor/outdoor
 
-</td>
-<td style="text-align:left;">
+**Type**: in-service teacher training on Climate Change Adaptation and
+Awareness through workshops.
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor/outdoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-in-service teacher training on Climate Change Adaptation and Awareness
-through workshops.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The selected teachers for the workshops were asked to be present on
-campus one day prior, and introductory activities were conducted to
-familiarize teachers with the workshop programs as well as faculty
-members and facilities. Each day of the workshop was organized around a
-special theme. First day: ecology and environmental problems that we
-face mostly in the last century, especially global warming and
+**Description**: The selected teachers for the workshops were asked to
+be present on campus one day prior, and introductory activities were
+conducted to familiarize teachers with the workshop programs as well as
+faculty members and facilities. Each day of the workshop was organized
+around a special theme. First day: ecology and environmental problems
+that we face mostly in the last century, especially global warming and
 sustainable development. Second day: climate change, its impacts and
 consequences for us and the ways to be followed for adaptation and
 mitigation. Third day: energy including the subtopics of efficient ways
@@ -5944,57 +5162,59 @@ of energy consumption and sustainable energy resources in the world. The
 workshops were structured around instruction, discussions, hands on
 activities and field trips.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 22.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test/ post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Analysis of a variance test used to examine whether there
+were any differences among participants originating from different
+geographical regions of Turkey based on pre-test scores. Further
+analysis was conducted through paired sample t-test analysis.
 
-</td>
-<td style="text-align:left;">
+**Results**: ANOVA results revealed that there were no statistical
+differences among the four groups in terms of climate change awareness
+before the training F (3, 97) = 0.525, p = 0.66. there was a
+statistically significant difference between the mean scores of science
+and social science teachers’ overall awareness to climate change before
+and after the in-service training. The eta-squared statistics 0.31
+indicated a moderate effect size (Cohen, 1988). Having established that
+there was a statistically significant difference, the mean values were
+examined to find which set of scores were higher (ACC1 or ACC2). The
+pre-test mean scores of overall climate change awareness was calculated
+3.31 meaning that the teachers reported that they were aware of the
+topic. The post-test mean score was calculated as 3.84 indicating a
+stronger awareness presented in Table 5. Based on the calculated mean
+values and t-test analysis, a statistically significant increase was
+found between pre- and post-test scores of the participating teachers.
 
-pre-test/ post-test
+**Improved?**: Increased level of awareness
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 22.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**awareness**: Raise awareness on climate change (*Worked?*: YES )
 
-</td>
-<td style="text-align:left;">
+## 22.7 Conclusions
 
-ANOVA results revealed that there were no statistical differences among
-the four groups in terms of climate change awareness before the training
-F (3, 97) = 0.525, p = 0.66. there was a statistically significant
-difference between the mean scores of science and social science
-teachers’ overall awareness to climate change before and after the
-in-service training. The eta-squared statistics 0.31 indicated a
-moderate effect size (Cohen, 1988). Having established that there was a
-statistically significant difference, the mean values were examined to
-find which set of scores were higher (ACC1 or ACC2). The pre-test mean
-scores of overall climate change awareness was calculated 3.31 meaning
-that the teachers reported that they were aware of the topic. The
-post-test mean score was calculated as 3.84 indicating a stronger
-awareness presented in Table 5. Based on the calculated mean values and
-t-test analysis, a statistically significant increase was found between
-pre- and post-test scores of the participating teachers.
+**Conclusions**: Pre-test results also revealed that although climate
+change is related to the field of teaching, social studies and science
+in-service teachers are unaware of the climate change issue. Both the
+overall questionnaire and the subscales analysis revealed that teachers
+have awareness on the topic. Since both social studies and science
+curriculum include content on climate change, it is expected to have
+teachers to have at least a basic understanding and awareness on the
+topic. Although the increase in teachers’ awareness of global climate
+change is not large, this outcome shows a positive impact of the
+workshop on participating teachers’ awareness on climate change.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: The use of workshops to raise awareness on climate
+change could be a useful approach to teach this topic. The results shown
+that participants had some gains in terms of knowledge when they don’t
+have it.
 
 # 23 Deisenrieder2020 ( MB )
+
+**title** Bridging the Action Gap by Democratizing Climate Change
+Education—The Case of k.i.d.Z.21 in the Context of Fridays for Future
 
 ## 23.1 abstract
 
@@ -6116,127 +5336,95 @@ both
 
 ## 23.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Evaluating the effect of the k.i.d.Z.21 programme and investigate
 whether components of climate change awareness differ among participant
-to the "Friday For Future" protest participants and non-participants
+to the “Friday For Future” protest participants and non-participants
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 23.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular/Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons / Research projects / One week field trip
 
-Curricular/Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons / Research projects / One week field trip
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-k.i.d.Z.21 takes place during all the academic year with various
-modules - kick-off workshop (plenary discussions with diverse actors,
-transdisciplinary) - classical school lessons - individual research
-projects - 3 modules in the "High alpine Research Week" with experts
-(tourism, environmental ethics, vegtation, soil, glacier etc)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: k.i.d.Z.21 takes place during all the academic year
+with various modules - kick-off workshop (plenary discussions with
+diverse actors, transdisciplinary) - classical school lessons -
+individual research projects - 3 modules in the “High alpine Research
+Week” with experts (tourism, environmental ethics, vegtation, soil,
+glacier etc)
 
 ## 23.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Pre- post- questionnaire 20-minutes semi-structured individual
+**Data**: Pre- post- questionnaire 20-minutes semi-structured individual
 interviews for 10 students who participated in the Friday For Future
 protests
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: t-test to compare pre- and post test effect size
+calculated based on Bravais-Pearson, and Cohen interpretation Cronbach’s
+alpha on the questionnaire to measure scale reliability Interviews were
+conducted on students participating in “Friday for future” and analysed
+with structured content analyses
 
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-$$AWARENESS$$ Awareness improved for all students, in all the different
-aspect "Responsability" and "locus of control" were higher for students
-participating in protests before and after interventions The mean change
-of "Level of concern" and "self-efficacy" was higher for students
-participating in protest $$INTENTION$$ mean behavioral change
+**Results**: $$AWARENESS$$ Awareness improved for all students, in all
+the different aspect “Responsability” and “locus of control” were higher
+for students participating in protests before and after interventions
+The mean change of “Level of concern” and “self-efficacy” was higher for
+students participating in protest $$INTENTION$$ mean behavioral change
 (engagement and multiplicative actions) improved for all students but
 more in students participating in protest $$HABIT$$ Change of diet
 (refusal of meet) only occured in FFF protest participants, who also
 mention consumption behavior change (88.9%) $$KNOWLEDGE$$ Improved for
 all students, but more in FFF protest participants
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Concerning awareness, knowledge, intention all students
+improved, with higher improvement for the Friday For Future (FFF)
+protest participants. Concerning habits, the improvement is particularly
+seen in FFF participants
+
+## 23.6 Outcomes
+
+**knowledge**: Correctness in questionnaire in question concerning
+tourism, ethics, vegetation/soil and glaciers (*Worked?*: Yes )
+
+**awareness**: - Sense of responsability - Self-efficacy (sense of
+competence) - locus of control (*Worked?*: Yes )
+
+**intention**: Part of behavior which is not related with particular
+habits or actions (multiplier effect and general behavior change)
+(*Worked?*: Yes )
+
+**habit**: Behavior change such as diet, transport, consumption
+(*Worked?*: Yes )
+
+## 23.7 Conclusions
+
+**Conclusions**: Climate change awareness could be enhanced by the
+learning intervention of k.i.d.Z.21 in all students. Combination of the
+educative interventions from k.i.d.Z.21 and the participation in the
+Friday For Future protests can be mutually beneficial. Action-related
+components of students’ CCA are strengthened, student motivation
+increases, and practical skills are developed.
+
+**Message to keep:**: Beyond a quite positive effect of the k.i.d.Z.21
+one-year programme, on numerous students and on various outcomes
+concerning CC behavior and awareness, the originality of this paper is
+to show a potential complementarity effect of the student participation
+in the Friday For Future protest movement.This show that the effect of
+CCE is part of a complex environment which may influence children toward
+change, and this might be the key for the knowledge action gap.
 
 # 24 DeWaters2014 ( ABP )
+
+**title** Improving Climate Literacy With Project-Based Modules Rich in
+Educational Rigor and Relevance
 
 ## 24.1 abstract
 
@@ -6344,118 +5532,62 @@ urban
 
 ## 24.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to improve the climate science literacy of students in middle school
 (MS) through college, with an intermediate step of educating and
 training MS and HS teachers to improve and enhance their climate
 literacy and data analysis skill set.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 24.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Project-based climate change instructional modules
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Project-based climate change instructional modules
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Project-based climate change instructional modules
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Project-based climate change instructional modules
 
 ## 24.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: Both groups of students who completed project-based modules
+demonstrated significant gains in climate-related content knowledge (p
+0.001) and affect (p \< 0.01) (Fig. 3). MS students also experienced
+significant gains in their climate-related self-efficacy (p = 0.03),
+with no significant change in self-efficacy for HS students and no
+change in either group on the behavioral subscale.
 
-questionaire
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 24.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**other**: climate-related self-efficacy (*Worked?*: yes )
 
-Both groups of students who completed project-based modules demonstrated
-significant gains in climate-related content knowledge (p 0.001) and
-affect (p \< 0.01) (Fig. 3). MS students also experienced significant
-gains in their climate-related self-efficacy (p = 0.03), with no
-significant change in self-efficacy for HS students and no change in
-either group on the behavioral subscale.
+## 24.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Students at both levels made highly significant gains
+in the cognitive subscale, and the middle school students improved their
+literacy in the affective, self-efficacy, and behavioral subscales.
+
+**Message to keep:**: NA
 
 # 25 Dormody2020 ( SB )
+
+**title** Lesson Worksheets: A Tool for Developing Youth Weather and
+Climate Science Comprehension
 
 ## 25.1 abstract
 
@@ -6541,116 +5673,70 @@ Urban
 
 ## 25.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Determine impact of lessons in science knowledge, comprehension,
 reasoning abilities. Some knowledge includes CC comprehension amd
 knowledge.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 25.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: 5 Lessons
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-5 Lessons
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-lesson 1: water cycle lesson 2: greenhouse effect lesson 3 and 4:
-weather stations, precipitation and temperature data lesson 5:
-mitigation and adaptation to weather and extreme climates in
+**Description**: lesson 1: water cycle lesson 2: greenhouse effect
+lesson 3 and 4: weather stations, precipitation and temperature data
+lesson 5: mitigation and adaptation to weather and extreme climates in
 agricultural and natural ressources.
-
-</td>
-</tr>
-</tbody>
-</table>
 
 ## 25.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: In-class quizzes
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Statistical: Correlation between worsheet scores and
+pre-post improvement.
 
-</td>
-<td style="text-align:left;">
+**Results**: Sessions on adaptation and mitigation of CC are related to
+awareness and knowledge on CC.
 
-In-class quizzes
+**Improved?**: NA
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 25.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Several multiple selection items dealing with technical
+knowledge on the mechanisms and possible ways to prevent CC. (*Worked?*:
+Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Several multiple selection items dealing with technical
+knowledge on the consequences of CC. (*Worked?*: Yes )
 
-Sessions on adaptation and mitigation of CC are related to awareness and
-knowledge on CC.
+**intention**: No (*Worked?*: NA )
 
-</td>
-</tr>
-</tbody>
-</table>
+**emotions**: No (*Worked?*: NA )
+
+**action**: No (*Worked?*: NA )
+
+**habit**: No (*Worked?*: NA )
+
+## 25.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Classic lessons with the help of group worsheets
+appear to be effective in fostering knowledge about CC as well as more
+general scientific reasoning.
 
 # 26 Dormody2021 ( ABP )
+
+**title** Assessing the Impact of a Weather and Climate Curriculum on
+Youth Science Comprehension
 
 ## 26.1 abstract
 
@@ -6748,28 +5834,12 @@ urban
 
 ## 26.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to pilot the curriculum to determine if it would improve youth science
 comprehension.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Determine if science comprehension scores improve after youths are
 taught our weather and climate curriculum. 2. Determine if science
@@ -6784,95 +5854,61 @@ they change after being taught the curriculum. 5. Determine youth
 perceptions of the most interesting thing learned about climate science
 while being taught the curriculum.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 26.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: climate change curriculum
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-climate change curriculum
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-students were taught five weather and climate science lessons that
-included setting up experiments and developing and testing hypotheses
-for local climate trends from online weather station data.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: students were taught five weather and climate science
+lessons that included setting up experiments and developing and testing
+hypotheses for local climate trends from online weather station data.
 
 ## 26.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: NA
 
-Resultados.obtenidos.por.cada.outcome
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: science comprehension improved from pretest to posttest for
+this mostly Hispanic sample of 8th-grade youths taught our weather and
+climate curriculum. Science knowledge, science skills, and reasoning
+abilities all improved from pretest to posttest. Science comprehension
+improved or the greenhouse effect, measuring and analyzing
+precipitation, measuring and analyzing temperature, and mitigating and
+adapting to weather and climate extremes in agriculture and natural
+resources lessons. Science comprehension did not improve during the
+water cycle lesson.
 
-science comprehension improved from pretest to posttest for this mostly
-Hispanic sample of 8th-grade youths taught our weather and climate
-curriculum. Science knowledge, science skills, and reasoning abilities
-all improved from pretest to posttest. Science comprehension improved or
-the greenhouse effect, measuring and analyzing precipitation, measuring
-and analyzing temperature, and mitigating and adapting to weather and
-climate extremes in agriculture and natural resources lessons. Science
-comprehension did not improve during the water cycle lesson.
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-</tbody>
-</table>
+## 26.6 Outcomes
+
+**knowledge**: yes (*Worked?*: yes )
+
+**other**: science skills, and reasoning abilities. (*Worked?*: yes )
+
+## 26.7 Conclusions
+
+**Conclusions**: Their science comprehension also improved for four of
+five lessons. The number of youths preferring learning by doing over
+other learning modalities also increased from pretest to posttest.
+Youths most frequently mentioned the experiments, that the earth is
+getting warmer, and the greenhouse effect and gasses when asked what
+interested them about the lessons. Pilot test results were used to
+strengthen the curriculum before making it available to educators
+online.
+
+**Message to keep:**: NA
 
 # 27 Drewes2018 ( MB )
+
+**title** Professional development design considerations in climate
+change education: teacher enactment and student learning
 
 ## 27.1 abstract
 
@@ -6964,15 +6000,7 @@ Urban
 
 ## 27.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The research presented here reports on the design, pedagogical enactment
 and subsequent effects on student learning of a climate change
@@ -6980,95 +6008,31 @@ professional development (PD) model in the United States. We focus
 attention on how one teacher made specific curricular and pedagogical
 decisions in light of her participation in climate change PD.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  How did a middle-school teacher integrate climate change concepts
     into her science curriculum following PD participation?
 2)  How did climate change instruction influence student understanding
-    of key climate change constructs? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    of key climate change constructs?
 
 ## 27.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Professional development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons, discussions, experiments, outdoor activities
 
-Professional development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons, discussions, experiments, outdoor activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Year-long climate academy programme for teachers professional
-development: (a) an intensive residential week-long summer institute (46
-h); (b) four virtual follow-up sessions on challenging climate change
-concepts; and (c) two face-to-face follow-up sessions focusing on
-pedagogical methods for teaching about climate change
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Year-long climate academy programme for teachers
+professional development: (a) an intensive residential week-long summer
+institute (46 h); (b) four virtual follow-up sessions on challenging
+climate change concepts; and (c) two face-to-face follow-up sessions
+focusing on pedagogical methods for teaching about climate change
 
 ## 27.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-We engaged as active participant observers, both taking field notes and
-interacting with participating teachers as they engaged in PD
+**Data**: We engaged as active participant observers, both taking field
+notes and interacting with participating teachers as they engaged in PD
 activities. We collected daily reflections where all participants
 reflected on what was learned, articulated remaining questions, and
 noted additional supports needed. Finally, we collected the
@@ -7081,34 +6045,57 @@ time scale through field notes and the collection of relevant student
 work products. We also conducted interviews with $$the teacher$$ both
 pre- and post-instruction.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: An abductive analytic approach was implemented to examine
+qualitative documents collected from the Climate Academy and Emma’s
+instructional delivery (Tavory & Timmermans, 2014). Specifically, we
+first used an etic coding scheme built The first author coded the
+artefact corpus according to the four pre-established conceptual
+domains. Initial findings from this stage of the analysis were
+triangulated against additional data sources
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: Emma acknowledged that she improved her knowledge of the
+carbon cycle while gaining understanding of how scientists track CO2
+levels in Earth’s past - Emma acknowledged gaining a better
+understanding of ice melt and thermal expansion Other results: knowledge
+in terms of pedagogy: - Emma remarked about the value of interactive lab
+demonstrations on how changing ocean currents are influenced by
+temperature and density on her understanding of thermal expansion. - she
+gained a deeper appreciation of the role of outdoor activities for
+experiencing climate change first hand. - She also gained a deeper
+understanding of NGSS, the role of climate change in the new standards,
+and potential resources for implementation in middle-school
+classrooms. - she recognised the importance of empowering students to
+act to set a positive tone when discussingclimate change
 
-</td>
-<td style="text-align:left;">
+**Improved?**: Better knowledge concerning CO2 measurements in
+methodologies and Sea level rise mechanisms
 
-- Emma acknowledged that she improved her knowledge of the carbon cycle
-  while gaining understanding of how scientists track CO2 levels in
-  Earth’s past
-- Emma acknowledged gaining a better understanding of ice melt and
-  thermal expansion Other results: knowledge in terms of pedagogy:
-- Emma remarked about the value of interactive lab demonstrations on how
-  changing ocean currents are influenced by temperature and density on
-  her understanding of thermal expansion.
-- she gained a deeper appreciation of the role of outdoor activities for
-  experiencing climate change first hand.
-- She also gained a deeper understanding of NGSS, the role of climate
-  change in the new standards, and potential resources for
-  implementation in middle-school classrooms.
-- she recognised the importance of empowering students to act to set a
-  positive tone when discussingclimate change `{=html}     </td>`
-  `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+## 27.6 Outcomes
+
+**knowledge**: Gain of knowledge concerning processes and scientific
+methodology in climate change science (*Worked?*: Yes )
+
+**other**: Pedagogical knowledge: using pedagogical strategies
+(*Worked?*: Yes )
+
+## 27.7 Conclusions
+
+**Conclusions**: Good effect on knowledge on Climate change and the
+pedagogical strategies to present it to the students
+
+**Message to keep:**: The paper follows a teacher and her students. The
+teacher goes to a professional development program and the researchers
+evaluate her gain of knowledge (good both in terms of knowledge and
+pedagogy) but also those of the students (good for basic knowledge and
+processes but not enough in terms of mitigation and adaptation
+strategy). “A climate change education that merely presents causes and
+effects of climate change will remain of limited import and unable to
+address the nature of the problem in its totality.”
 
 # 28 Drewes2018 ( MB )
+
+**title** Professional development design considerations in climate
+change education: teacher enactment and student learning
 
 ## 28.1 abstract
 
@@ -7200,15 +6187,7 @@ Urban
 
 ## 28.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The research presented here reports on the design, pedagogical enactment
 and subsequent effects on student learning of a climate change
@@ -7216,131 +6195,93 @@ professional development (PD) model in the United States. We focus
 attention on how one teacher made specific curricular and pedagogical
 decisions in light of her participation in climate change PD.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  How did a middle-school teacher integrate climate change concepts
     into her science curriculum following PD participation?
 2)  How did climate change instruction influence student understanding
-    of key climate change constructs? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    of key climate change constructs?
 
 ## 28.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons, discussions experiments, outdoor activities
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons, discussions experiments, outdoor activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The teacher who participated in the "climate academy" infused climate
-change into 2 classes in classical curriculum: watersheds, and Earth
-geological history. - lessons on the difference between weather and
-climate and the carbon cycle - lessons with demonstrations
-(experimental) on ice melt and thermal expansion - argumentative
-activity using concept cartoons, where groups of students chose
-different perspectives, conducted their own research, and discussed the
-strengths and weaknesses of that position. - discussion on the effects
-of climate change both locally and globally with introduced personal
-changes, like driving less and planting trees, that her students could
-take to influence their own carbon footprint
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The teacher who participated in the “climate academy”
+infused climate change into 2 classes in classical curriculum:
+watersheds, and Earth geological history. - lessons on the difference
+between weather and climate and the carbon cycle - lessons with
+demonstrations (experimental) on ice melt and thermal expansion -
+argumentative activity using concept cartoons, where groups of students
+chose different perspectives, conducted their own research, and
+discussed the strengths and weaknesses of that position. - discussion on
+the effects of climate change both locally and globally with introduced
+personal changes, like driving less and planting trees, that her
+students could take to influence their own carbon footprint
 
 ## 28.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-post questionnaire on content knowledge assessment Both
+the pre- and post-instruction content knowledge assessment included
+short answer written response prompts so students could demonstrate
+their reasoning beyond the basic multiple-choice selection.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Dependent samples t-test with effect sizes (Cohen’s d) -
+Student open response justification items were analysed qualitatively to
+determine potential changes following targeted instruction. Findings
+from this stage were also triangulated against additional data sources
+for credibility purposes.
 
-</td>
-<td style="text-align:left;">
+**Results**: Out of 18 possible points, on average students scored 8.6
+points on the pre-assessment compared to 10.2 points on the
+post-assessment (t = 4.138, df = 41, p = .001) - small but marked shift
+toward a more accurate and complex understanding of the human mechanisms
+causing climate change and what might be done to mitigate the effect of
+those causes - In general students updated incorrect or partial
+conceptualizations of how humans were impacting the atmosphere and were
+then able to translate that under standing into tangible suggestions -
+Results, however, indicated small differences in the climate change
+constructs on effects and mitigation and adaptation strategies. (==\>
+our results indicate that students remained unclear following
+instruction about what to actually do about climate change given their
+newfound scientific knowledge)
 
-pre-post questionnaire on content knowledge assessment Both the pre- and
-post-instruction content knowledge assessment included short answer
-written response prompts so students could demonstrate their reasoning
-beyond the basic multiple-choice selection.
+**Improved?**: better knowledge concerning anthropogenic climate change
+and the greenhouse effect mechanism, not concerning Mitigation and
+adaptation strategies
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 28.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Correctness of knowledge test concerning: 1 Causal human
+activity impact 2 Greenhouse effect mechanism 3 Mitigation and
+adaptation strategies 4 Climate change effects (*Worked?*: 1 and 2: yes
+3 and 4: no )
 
-</td>
-<td style="text-align:left;">
+## 28.7 Conclusions
 
-- Out of 18 possible points, on average students scored 8.6 points on
-  the pre-assessment compared to 10.2 points on the post-assessment (t =
-  4.138, df = 41, p = .001)
-- small but marked shift toward a more accurate and complex
-  understanding of the human mechanisms causing climate change and what
-  might be done to mitigate the effect of those causes
-- In general students updated incorrect or partial conceptualizations of
-  how humans were impacting the atmosphere and were then able to
-  translate that under standing into tangible suggestions
-- Results, however, indicated small differences in the climate change
-  constructs on effects and mitigation and adaptation strategies. (==\>
-  our results indicate that students remained unclear following
-  instruction about what to actually do about climate change given their
-  newfound scientific knowledge) `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+**Conclusions**: Good effect on knowledge concerning reality and
+processes of CC, but not on mitigation and adaptation strategies. “A
+climate change education that merely presents causes and effects of
+climate change will remain of limitedimport and unable to address the
+nature of the problem in its totality.”
+
+**Message to keep:**: The paper follows a teacher and her students. The
+teacher goes to a professional development program and the researchers
+evaluate her gain of knowledge (good both in terms of knowledge and
+pedagogy) but also those of the students (good for basic knowledge and
+processes but not enough in terms of mitigation and adaptation
+strategy). “A climate change education that merely presents causes and
+effects of climate change will remain of limited import and unable to
+address the nature of the problem in its totality.”
 
 # 29 Eggert2017 ( JGOP )
+
+**title** Supporting Students’ Learning and Socioscientific Reasoning
+About Climate Change—the Effect of Computer-Based Concept Mapping
+Scaffolds
 
 ## 29.1 abstract
 
@@ -7458,29 +6399,13 @@ Urban
 
 ## 29.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 We aimed to make use of the potential benefits of concept mapping as a
 learning strategy to promote knowledge acquisition as well as students’
 reasoning and decision making processes about socioscientific issues.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  In what ways do different concept mapping scaffolds influence the
     quality of students’
@@ -7495,61 +6420,20 @@ Questions
 2.  In what ways do different concept mapping scaffolds influence
     students’ learning outcomes with respect to conceptual knowledge
     acquisition on climate change, as well as their socioscientific
-    reasoning and decision making? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    reasoning and decision making?
 
 ## 29.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Concept mapping
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Concept mapping
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Four treatment conditions: (1) map generation condition, 2)
-concepts-provided condition, 3) lines1-provided condition, and 4)
-concepts- and lines-provided condition. Four sessions during their
-normal science classes: 1 (90 min) Pretest measures • Conceptual
+**Description**: Four treatment conditions: (1) map generation
+condition, 2) concepts-provided condition, 3) lines1-provided condition,
+and 4) concepts- and lines-provided condition. Four sessions during
+their normal science classes: 1 (90 min) Pretest measures • Conceptual
 knowledge on climate change • General socioscientific reasoning and
 socioscientific decision making • Prior experience with mind maps and
 concept maps, computer literacy 2 (90 min) Learning about climate change
@@ -7567,51 +6451,56 @@ different treatments) 4 (90 min) Posttest measures • Conceptual
 knowledge on climate change • General socioscientific reasoning and
 socioscientific decision making
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 29.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pre-test/post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Pre-test/post-test
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-A repeated measures ANOVA (treatment × measurement points) with factual
-knowledge on climate change as the dependent variable was conducted. A
-one-way ANOVA had shown no significant group differences on the pretest
-measures (F(3, 92)=2.51, p\>.05). Table 4 shows the means and standard
-deviations for factual knowledge on climate change. The repeated
-measures ANOVA indicated a significant main effect for time (F(1,
-92)=4.90, p\<.05, partial η2=.05) but no significant main effect for the
-treatment condition (F(3, 92)=1.24, p\>.05) and no significant
+**Analysis**: A repeated measures ANOVA (treatment × measurement points)
+with factual knowledge on climate change as the dependent variable was
+conducted. A one-way ANOVA had shown no significant group differences on
+the pretest measures (F(3, 92)=2.51, p\>.05). Table 4 shows the means
+and standard deviations for factual knowledge on climate change. The
+repeated measures ANOVA indicated a significant main effect for time
+(F(1, 92)=4.90, p\<.05, partial η2=.05) but no significant main effect
+for the treatment condition (F(3, 92)=1.24, p\>.05) and no significant
 interaction (F\<1).
 
-</td>
-</tr>
-</tbody>
-</table>
+**Results**: A repeated measures ANOVA (treatment × measurement points)
+with factual knowledge on climate change as the dependent variable was
+conducted. A one-way ANOVA had shown no significant group differences on
+the pretest measures (F(3, 92)=2.51, p\>.05). Table 4 shows the means
+and standard deviations for factual knowledge on climate change. The
+repeated measures ANOVA indicated a significant main effect for time
+(F(1, 92)=4.90, p\<.05, partial η2=.05) but no significant main effect
+for the treatment condition (F(3, 92)=1.24, p\>.05) and no significant
+interaction (F\<1).
+
+**Improved?**: Increase in students’ competence in the posttest for all
+four treatment conditions. Thus, all students benefitted from the
+teaching intervention in a similar way in terms of knowledge gains.
+
+## 29.6 Outcomes
+
+**knowledge**: Conceptual knowledge test on climate change scientific
+reasoning throw conceptual maps (*Worked?*: YES )
+
+## 29.7 Conclusions
+
+**Conclusions**: We could successfully show that a teaching intervention
+that incorporates concept mapping as “representational guidance” (Toth
+et al. 2002) supports students in visualizing and structuring their
+knowledge and learning about climate change as well as some aspects of
+socioscientific reasoning and decision making.
+
+**Message to keep:**: It is useful for students and their knowledge
+about CC to use conceptual maps, and mostly when they are given with
+relevant and interdisciplinary information to build them.
 
 # 30 Faria2015 ( MB )
+
+**title** A new approach of science, technology, engineering, and
+mathematics outreach in climate change, energy, and environmental
+decision making
 
 ## 30.1 abstract
 
@@ -7694,15 +6583,7 @@ sample.size
 
 ## 30.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Evaluate SUCCEED, a program which aims at 1.) improve scientific
 literacy through a summer program focusing on climate, energy, and
@@ -7711,112 +6592,58 @@ teachers; 2.) encourage the pursuit of STEM-related careers, and 3.)
 help teachers prepare curriculum in these disciplines, to be used in
 their classes.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 n/d
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 30.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Multiple: classes, activities, field trips
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Multiple: classes, activities, field trips
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-5-day summer school program including and other hands-on activities
-related to energy and climate change
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: 5-day summer school program including and other
+hands-on activities related to energy and climate change
 
 ## 30.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test / post-test compared statistically with paired
+t-tests
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. For
+each year’s worth of data, we performed a paired t test on the
+difference between the pre-test and post-test results of each
+participant
 
-</td>
-<td style="text-align:left;">
+**Results**: Student performance improved significantly in all four
+years (p \<0.01 each year from 2011- 2014) when pre- and post-tests are
+compared.
 
-pre-test / post-test compared statistically with paired t-tests
+**Improved?**: Better percentage of correctly answered question
+$$KNOWLEDGE$$ in the post-test
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 30.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Correctness in true/false questionnaire questions
+concerning general climate change (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 30.7 Conclusions
 
-Student performance improved significantly in all four years (p \<0.01
-each year from 2011- 2014) when pre- and post-tests are compared.
+**Conclusions**: STEM programs such as SUCCEED are critical to continued
+success in improving knowledge, producing interest in STEM careers,
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Interesting to note that the same program
+(SUCCEED) is used to teach teachers and students (see next line)
+Otherwise this paper is a very classical summer school program on
+climate change, with pre-/post test
 
 # 31 Faria2015 ( MB )
+
+**title** A new approach of science, technology, engineering, and
+mathematics outreach in climate change, energy, and environmental
+decision making
 
 ## 31.1 abstract
 
@@ -7899,15 +6726,7 @@ sample.size
 
 ## 31.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Evaluate SUCCEED, a program which aims at 1.) improve scientific
 literacy through a summer program focusing on climate, energy, and
@@ -7916,116 +6735,63 @@ teachers; 2.) encourage the pursuit of STEM-related careers, and 3.)
 help teachers prepare curriculum in these disciplines, to be used in
 their classes.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 n/d
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 31.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Professional development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lectures/activities/lesson
 
-Professional development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lectures/activities/lesson
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-two-day workshop targeting K-12 science teachers consists of lectures,
-activities, and lesson planning with one day focused on climate, and one
-day focused on energy. Program mornings are focused onlectures from
-experts followed by discussion. Afternoons are reserved for the creation
-of lesson plans related to topics discussed during the morning and
-exchange of ideas between the participant teachers and EPP community.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: two-day workshop targeting K-12 science teachers
+consists of lectures, activities, and lesson planning with one day
+focused on climate, and one day focused on energy. Program mornings are
+focused onlectures from experts followed by discussion. Afternoons are
+reserved for the creation of lesson plans related to topics discussed
+during the morning and exchange of ideas between the participant
+teachers and EPP community.
 
 ## 31.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test / post-test compared statistically with paired
+t-tests
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. For
+each year’s worth of data, we performed a paired t test on the
+difference between the pre-test and post-test results of each
+participant
 
-</td>
-<td style="text-align:left;">
+**Results**: Teacher performance improved significantly in all four
+years (p\<0,05 each year from 2011-2014) when pre- and post-tests are
+compared
 
-pre-test / post-test compared statistically with paired t-tests
+**Improved?**: Better percentage of correctly answered question
+$$KNOWLEDGE$$ in the post-test
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 31.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Correctness in true/false questionnaire questions
+concerning general climate change (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 31.7 Conclusions
 
-Teacher performance improved significantly in all four years (p\<0,05
-each year from 2011-2014) when pre- and post-tests are compared
+**Conclusions**: STEM programs such as SUCCEED are critical to continued
+success in improving knowledge and preparing educators to communicate
+and teach issues at the crossroads of STEM and climate change.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Interesting to note that the same program
+(SUCCEED) is used to teach teachers and students (see previous line)
+Otherwise this paper is a very classical summer school program on
+climate change, with pre-/post test
 
 # 32 Feierabend2012 ( ABP )
+
+**title** Two approaches for analyzing students’ competence of
+‘evaluation’ in group discussions about climate change
 
 ## 32.1 abstract
 
@@ -8094,15 +6860,11 @@ urban
 
 ## 32.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Questions
+NA
 
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 How can the evaluation and communication competence of students’ be
 characterized in the means of students’ abilities to discuss and argue
@@ -8111,40 +6873,40 @@ evaluation and communication competence in argumentation on the
 socioscientific issue of climate change do German student have at the
 end of lower secondary education?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 32.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: NA
 
-</td>
-<td style="text-align:left;">
+**Type**: NA
 
-extracurricular
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: NA
 
 ## 32.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 32.6 Outcomes
+
+## 32.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 33 Feldpausch_Parker2013 ( JGOP )
+
+**title** The Adventures of Carbon Bond: Using a melodramatic game to
+explain CCS as a mitigation strategy for climate change
 
 ## 33.1 abstract
 
@@ -8268,29 +7030,13 @@ Urban
 
 ## 33.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 We developed The Adventures of Carbon Bond© to enable students to learn
 about the science and technology related to climate change in an
 atmosphere relatively free from ideological conflict.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 RQ1: Do students learn basic science information related to climate
 change through playing The Adventures of Carbon Bond©? RQ2: Do students
@@ -8300,74 +7046,29 @@ process through playing Th e Adventures of Carbon Bond©?RQ4: Do boys and
 girls learn diff erently through playing Th e Adventures of Carbon
 Bond©?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 33.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Video game
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Video game
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-the narrative of the game creates a melodramatic frame that focuses on
-climate change mitigation by positioning players as heroes through
-capturing and sequestering villainous CO2 molecules. The storyline of
-the game focuses on a main character, Carbon Bond, who is on a mission
-to save the planet by capturing as many rogue CO2 molecules as possible
-and sequestering them in an underground formation. Being a CO2 molecule
-himself, Bond separates himself from anthropogenic CO2 at the beginning
-of the story by claiming to be naturally formed’ through the carbon
-cycle, thus distinguishing for players the difference between natural
-CO2 and CO2 from industrial operations. Bond’s adventures take him from
-the smokestacks of an integrated gasification combined cycles power
-plant, to the stormy coasts of the Gulf of Mexico (impacted by increased
-storm intensity related to climate change), and finally to a CO2 storage
-facility in the Southern Rockies where the Greenhouse Gas Gang
-(anthropogenic GHGs) is locked away. The narrative begins with the
+**Description**: the narrative of the game creates a melodramatic frame
+that focuses on climate change mitigation by positioning players as
+heroes through capturing and sequestering villainous CO2 molecules. The
+storyline of the game focuses on a main character, Carbon Bond, who is
+on a mission to save the planet by capturing as many rogue CO2 molecules
+as possible and sequestering them in an underground formation. Being a
+CO2 molecule himself, Bond separates himself from anthropogenic CO2 at
+the beginning of the story by claiming to be naturally formed’ through
+the carbon cycle, thus distinguishing for players the difference between
+natural CO2 and CO2 from industrial operations. Bond’s adventures take
+him from the smokestacks of an integrated gasification combined cycles
+power plant, to the stormy coasts of the Gulf of Mexico (impacted by
+increased storm intensity related to climate change), and finally to a
+CO2 storage facility in the Southern Rockies where the Greenhouse Gas
+Gang (anthropogenic GHGs) is locked away. The narrative begins with the
 assumption that climate change is a factual problem that needs to be
 solved, offers CCS as a technological solution to mitigating climate
 change, and positions players to be a part of the solution by capturing
@@ -8375,50 +7076,49 @@ and sequestering CO2 molecules. Following a melodramatic frame, the game
 presents anthropogenic CO2 as the villain and players (through the game
 persona of Carbon Bond) as the heroes.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 33.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pre-test/post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: t-tests on the pre- and post-game knowledge data and
+descriptive statistics for questions addressing gaming enjoyment.
 
-</td>
-<td style="text-align:left;">
+**Results**: From our analysis of the students’ knowledge tests (RQ1 and
+RQ2), we found a statistically signifi cant diff erence between pre-game
+(M = 6.862, SD = 1.7688) and post-game scores (M = 8.448, SD = 1.7212, t
+= 9.5226, DF = 115, P \<0.0001) as well as a change in score
+distribution from pre- and post-gaming. To summarize, playing the game
+enabled students to learn about the carbon cycle, climate change, and
+geological CCS. Girls’ knowledge of these topics increased more than
+boys’ knowledge.
 
-Pre-test/post-test
+**Improved?**: An increase in basic knowledge of the carbon cycle and
+other information relevant to student learning about CCS and
+anthropogenic climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 33.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Increase in basic knowledge (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 33.7 Conclusions
 
-From our analysis of the students’ knowledge tests (RQ1 and RQ2), we
-found a statistically signifi cant diff erence between pre-game (M =
-6.862, SD = 1.7688) and post-game scores (M = 8.448, SD = 1.7212, t =
-9.5226, DF = 115, P \<0.0001) as well as a change in score distribution
-from pre- and post-gaming. To summarize, playing the game enabled
-students to learn about the carbon cycle, climate change, and geological
-CCS. Girls’ knowledge of these topics increased more than boys’
-knowledge.
+**Conclusions**: we demonstrated one way that the strategic use of this
+commonly used frame can enable science educators to work within
+melodrama by recasting what is constituted as good and evil or
+villainous and heroic. The enjoyment and signifi cant knowledge gains of
+student players suggest that Th e Adventures of Carbon Bond© has the
+potential to reframe the issue of climate change to villianize GHGs and
+make heroes out of people (the students in this case) who combat these
+emissions.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Using video games allows students to engaged in
+the discussion of climate change, and provides a valuable tool to learn
+while they are enjoying the process.
 
 # 34 Flora2014 ( JGOP )
+
+**title** Evaluation of a national high school entertainment education
+program: The Alliance for Climate Education
 
 ## 34.1 abstract
 
@@ -8508,30 +7208,14 @@ Urban
 
 ## 34.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Evaluate the climate science knowledge, beliefs, attitudes, behavior and
 communication impact of an entertainmenteducation high school assembly
 program in a random sample of 49 schools (from population of 779 that
 received the intervention) and a panel of 1,241 students.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 RQ1 Does attending the ACE assembly inspire students to mitigate climate
 change by (a) improving their knowledge of climate science, (b)
@@ -8542,109 +7226,103 @@ Americas audience segmentation scheme? RQ3 Are student members of the
 Global Warming’s Six Americas audience segments differentially affected
 by the ACE assembly?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 34.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: NA
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Alliance for Climate Education (ACE) delivered a standardized, 50-min
-entertainment-education presentation on climate science to 779 high
-schools during the 2011–2012 school year. The content was based on the
-latest scientific sources (e.g., IPCC 2007) and followed the Next
-Generation Science Standards (NGSS Lead States 2013). Presentations took
-place in assemblies held in gymnasiums or auditoriums. Presenters were
-full-time ACE staff who memorized the script and passed a test of
-climate knowledge to ensure they could answer follow-up questions.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Alliance for Climate Education (ACE) delivered a
+standardized, 50-min entertainment-education presentation on climate
+science to 779 high schools during the 2011–2012 school year. The
+content was based on the latest scientific sources (e.g., IPCC 2007) and
+followed the Next Generation Science Standards (NGSS Lead States 2013).
+Presentations took place in assemblies held in gymnasiums or
+auditoriums. Presenters were full-time ACE staff who memorized the
+script and passed a test of climate knowledge to ensure they could
+answer follow-up questions.
 
 ## 34.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pre-test/post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: To answer Research Question 1, paired t-tests were used to
+compare pre- and post-assembly means for outcome measures in the panel
+as a whole; To answer Research Question 2, we followed the methodology
+developed by Maibach and colleagues (2011b) to categorize students into
+one of six audience segments according to their pre-assembly responses;
+To answer Research Question 3, paired t-tests were used to compare pre-
+and post-assembly means for all outcome measures except the Global
+Warming’s Six Americas index.
 
-</td>
-<td style="text-align:left;">
+**Results**: As shown in Table 2, students’ knowledge of climate
+science, positive engagement in the issue of climate change, and all
+short-term behaviors (except carrying a reusable water bottle) Climatic
+Change (2014) increased significantly after attending the ACE assembly.
+Effect sizes were largest for knowledge of climate science (r=0.50) and
+for two of the measures of positive engagement in the climate change
+issue—beliefs measured by the Global Warming’s Six Americas index and
+self-efficacy for explaining global warming to others or starting a
+conservation project at school (r=0.49 and 0.42, respectively). Before
+the assembly, students on average marked correct answers for just over
+half (mean=5.13, SD=2.49) of the ten knowledge questions. After the
+assembly, students on average answered 6.52 questions correctly
+(SD=2.76, t(1,240)=20.49, p \<0.001). The Global Warming’s Six Americas
+index increased over a quarter of a point on a response scale ranging
+from 1 to 5 (t(1,240)=19.97, p\<0.001). Selfefficacy increased from just
+under the mid-point of the ten-point scale to just over the midpoint
+(4.30 to 5.19, t(1,240)=16.02, p\<0.001).
 
-Pre-test/post-test
+**Improved?**: ACE’s 1-h, single-exposure edutainment presentation
+succeeded in improving students’ knowledge of climate science, positive
+engagement in the issue, and climate-related behaviors in the short
+term.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 34.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Increase knowlegde about climate science using
+edutainment strategies (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**action**: Edutainment change behaviours (*Worked?*: Yes )
 
-As shown in Table 2, students’ knowledge of climate science, positive
-engagement in the issue of climate change, and all short-term behaviors
-(except carrying a reusable water bottle) Climatic Change (2014)
-increased significantly after attending the ACE assembly. Effect sizes
-were largest for knowledge of climate science (r=0.50) and for two of
-the measures of positive engagement in the climate change issue—beliefs
-measured by the Global Warming’s Six Americas index and self-efficacy
-for explaining global warming to others or starting a conservation
-project at school (r=0.49 and 0.42, respectively). Before the assembly,
-students on average marked correct answers for just over half
-(mean=5.13, SD=2.49) of the ten knowledge questions. After the assembly,
-students on average answered 6.52 questions correctly (SD=2.76,
-t(1,240)=20.49, p \<0.001). The Global Warming’s Six Americas index
-increased over a quarter of a point on a response scale ranging from 1
-to 5 (t(1,240)=19.97, p\<0.001). Selfefficacy increased from just under
-the mid-point of the ten-point scale to just over the midpoint (4.30 to
-5.19, t(1,240)=16.02, p\<0.001).
+**other**: The use of edutaniment contributes to change attitudes
+(*Worked?*: Yes )
 
-</td>
-</tr>
-</tbody>
-</table>
+## 34.7 Conclusions
+
+**Conclusions**: ACE’s 1-h, single-exposure edutainment presentation
+succeeded in improving students’ knowledge of climate science, positive
+engagement in the issue, and climate-related behaviors in the short
+term. Knowledge of climate science increased 27 % over baseline levels,
+producing an effect size of r=0.50, considered large for social science
+(Cohen 1988). Effect sizes were moderate to large (0.42–0.49) for two
+measures of positive engagement in the issue of climate change—the
+Global Warming’s Six Americas index and self-efficacy for talking about
+climate change or starting a conservation project at school. And whereas
+fewer than half of students (45 %) recognized before the assembly that
+scientists generally agree that global warming is happening, closer to
+two-thirds (60 %) recognized this afterward. The behavior most
+influenced by the ACE assembly was interpersonal discussion with parents
+and with friends about climate change, with small-to-moderate effect
+sizes of r=0.23 and 0.25, respectively. We find this encouraging, as it
+suggests that students carry the information and enthusiasm they gained
+from the edutainment presentation into their families and social
+circles. This result also illustrates how discussion of climate change
+is a potential game changer for shifting norms, as well as deeper issue
+engagement and action (Rimal and Flora 1998).
+
+**Message to keep:**: The authors suggest that using educational and
+entertainment tools could be a good strategy to teach CC due to its
+engaging benefits, and consider that bringing the discussion within
+students and their personal circle ( family or friends) is a useful
+mechanism to change norms in a general level.
 
 # 35 Gold2015a ( LR )
+
+**title** Arctic Climate Connections Curriculum: A Model for Bringing
+Authentic Data Into the Classroom
 
 ## 35.1 abstract
 
@@ -8735,93 +7413,65 @@ sample.size
 
 ## 35.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To test a model curriculum development process in which scientists,
 curriculum developers, and classroom educators worked together
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 35.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curriculum development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Workshop
 
-Curriculum development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Workshop
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-1-day workshop that put educators in the role of students and allowed
-them to engage in the active learning approaches used throughout the
-curriculum. It included interactive lectures with two research
-scientists on the sciences of the Artic and data collection in the
-Artic’s extreme environment
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: 1-day workshop that put educators in the role of
+students and allowed them to engage in the active learning approaches
+used throughout the curriculum. It included interactive lectures with
+two research scientists on the sciences of the Artic and data collection
+in the Artic’s extreme environment
 
 ## 35.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: Percentage of correct answers and increase in complexity
+in open ended question
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 35.6 Outcomes
+
+**knowledge**: Increase in complexity and detailed information in
+responses (*Worked?*: yes )
+
+**awareness**: believe that human activity causes GW; 89% think that
+scientists agree GW is happening (*Worked?*: Authors say yes but data
+provided is unclear )
+
+**other**: System thinking competences among teachers should benefit
+students. Qualitative report of teachers is positive but doesn´t speak
+of this outcome in particular. Overall, engagement was higher than in
+other school activities and among those that already had higher ability
+level (*Worked?*: NA )
+
+## 35.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 36 Harker_Schuch2013 ( SC )
+
+**title** Opinions and Knowledge About Climate Change Science in High
+School Students
 
 ## 36.1 abstract
 
@@ -8922,125 +7572,97 @@ age_max
 
 ## 36.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The objective of the study is to investigate the opinions and level of
 knowledge about climate change science in high school students from the
 emerging adults’ age group, and to investigate how their opinions and
 knowledge is affected by a lecture in climate change science.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 36.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: A lecture based on a Power Point presentation
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-A lecture based on a Power Point presentation
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The teaching method used in this study was a lecture based on a Power
-Point presentation with 71 slides covering: – basic climate change
-science clearly differentiating between natural and anthropogenic
-climate change (48 slides) – best-studied impacts of climate change (12)
-– human evidence of climate change (2) – current socio-political status
-of global agreement – a list of ‘’green jobs’’ – an appeal to students
-to consider their role in the future of climate change mitigation The
-power point was visual with simple animations and diagrams demonstrating
-how climate change operates within the atmosphere. Each lecture was
-allotted 45 min for narration, allowing approximately 30–40 s for each
-slide to be shown. After the lecture students continued their usual
-courses within their respective disciplines.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The teaching method used in this study was a lecture
+based on a Power Point presentation with 71 slides covering: – basic
+climate change science clearly differentiating between natural and
+anthropogenic climate change (48 slides) – best-studied impacts of
+climate change (12) – human evidence of climate change (2) – current
+socio-political status of global agreement – a list of ‘’green jobs’’ –
+an appeal to students to consider their role in the future of climate
+change mitigation The power point was visual with simple animations and
+diagrams demonstrating how climate change operates within the
+atmosphere. Each lecture was allotted 45 min for narration, allowing
+approximately 30–40 s for each slide to be shown. After the lecture
+students continued their usual courses within their respective
+disciplines.
 
 ## 36.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pre-post questionnaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: The effects of knowledge, country, school, specialization,
+and gender on opinions about climate change were analyzed with logistic
+regression and expressed in terms of odds ratios (OR) using the PROC
+LOGISTICS procedure of SAS. The effects of the lecture (before
+vs. after), country, school, specialization, and gender on the knowledge
+about climate change was analyzed using the PROC MIXED procedure of SAS.
+Finally, the effects of the lecture on the opinions about climate change
+(change in opinions before vs. after) were analyzed with logistic
+regression using the PROC LOGISTICS procedure of SAS.
 
-</td>
-<td style="text-align:left;">
+**Results**: When adjusted for specialization and excluding the effect
+of gender therewas a significant effect of specialization on the
+percentage of correct answers. - There was no significant change in any
+of the opinions about climate change after the lecture compared with
+before the lecture.
 
-Pre-post questionnaire
+**Improved?**: There was an improve in knowlesge about climate change
+but there was not significant change in student´s opinión.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 36.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: There was a significant increase of knowledge when the
+model was adjusted for student’s specialization. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**other**: Opinios about Climate Change (*Worked?*: There was no
+significant change in any of the opinions about climate change after the
+lecture compared with before the lecture. )
 
-- When adjusted for specialization and excluding the effect of gender
-  therewas a significant effect of specialization on the percentage of
-  correct answers.
-- There was no significant change in any of the opinions about climate
-  change after the lecture compared with before the lecture.
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-  `{=html}     </table>`
+## 36.7 Conclusions
+
+**Conclusions**: - knowledge about climate change increases the
+likelihood of having the opinion that climate change is caused by humans
+and is the responsibility of both individuals and governments, and that
+knowledge can be improved by a lecture in climate change science. -
+simple instruction (demonstrating and explaining) in climate change
+science, though improving knowledge, is not sufficient to provide a
+complete overview of climate change science and, more importantly, does
+not adequately cover the interdisciplinary aspects of this subject.
+
+**Message to keep:**: Improving knowledge could therefore be an
+important factor toward opinion cultivation, effective policy
+development, and social engagement toward climate change adaptation and
+mitigation. The traditional methods of knowledge development in formal
+education institutions are not sufficient for teaching climate change
+and are not, due to the socio-scientific nature of the climate change
+issue adequately formulated to encourage rational opinion cultivation.
+We need to start expecting our students to think critically and we need
+to ensure our students are given precise instruction in climate change
+science—covering all the aspects of climate change.
 
 # 37 Harker_Schuch2020 ( SC )
+
+**title** CO2peration – Structuring a 3D interactive digital game to
+improve climate literacy in the 12-13-year-old age group
 
 ## 37.1 abstract
 
@@ -9156,15 +7778,7 @@ Urban
 
 ## 37.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The main objective of this study is to explore the use of a 3D
 interactive digital game to teach climate science in the first year of
@@ -9173,125 +7787,107 @@ curriculum framework (climate literacy framework) (Harker-Schuch et al.,
 2019; Harker-Schuch & Watson, 2019) on which the CO2peration game is
 based.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 37.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: 3D interactive climate science game
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-3D interactive climate science game
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The narrative for CO2peration follows the journey of a photon as it
-visits the Rocky Planets in search of answers as to why Earth has liquid
-water on its surface. After working with friendly orbital space probes
-(i.e., Messenger, Magellan, Viking I & II, etc.) to collect data (e.g.,
-composition of planet/surface temperature samples/diameter of planet),
-the photon begins modelling the molecules that it finds along the way.
-After reaching Mars, the photon returns to Earth where it explores the
-role of albedo on Earth’s global mean surface temperature (GMST);
-observing the effect from the Exosphere and then testing it in an
-atmospheric-tank simulation (altering all relevant variables to observe
-outcomes). Earth’s atmosphere is then investigated by the photon to
-understand the role that each of Earth’s atmospheric layers has in
-allowing us to understand climate phenomena (e.g., research on the
-International Space Station in the Thermosphere/data from orbital
-satellites in the Exosphere) and the role each layer plays in the
-protection and maintenance of life (e.g., burning-up of meteors in the
-Mesosphere/weather in the troposphere/ozone in the stratosphere) and
-other atmospheric phenomena (e.g. auroras). Both game versions were
+**Description**: The narrative for CO2peration follows the journey of a
+photon as it visits the Rocky Planets in search of answers as to why
+Earth has liquid water on its surface. After working with friendly
+orbital space probes (i.e., Messenger, Magellan, Viking I & II, etc.) to
+collect data (e.g., composition of planet/surface temperature
+samples/diameter of planet), the photon begins modelling the molecules
+that it finds along the way. After reaching Mars, the photon returns to
+Earth where it explores the role of albedo on Earth’s global mean
+surface temperature (GMST); observing the effect from the Exosphere and
+then testing it in an atmospheric-tank simulation (altering all relevant
+variables to observe outcomes). Earth’s atmosphere is then investigated
+by the photon to understand the role that each of Earth’s atmospheric
+layers has in allowing us to understand climate phenomena (e.g.,
+research on the International Space Station in the Thermosphere/data
+from orbital satellites in the Exosphere) and the role each layer plays
+in the protection and maintenance of life (e.g., burning-up of meteors
+in the Mesosphere/weather in the troposphere/ozone in the stratosphere)
+and other atmospheric phenomena (e.g. auroras). Both game versions were
 played in the native language of instruction (English in Australia and
 German in Austria) and the game contents were translated by a certified
 English-German translator.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 37.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: A climate Science Questionnaire that involved 19 climate
+science questions
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: To investigate differences between the PRIOR and POST
+results (PRIOR_SCORE & POST_SCORE) and differences in knowledge domains
+(e.g., for Knowledge Domain 1: PRIOR_KD1 & POST_KD1) as a measure for
+climate literacy we conducted a series of pairedsamples T-tests and a
+spearman correlation (IBM Statistics 23.0). The overall analysis
+approach: 1. Paired-samples T-test for differences between PRIOR and
+POST question scores. 2. Paired-samples T-test between PRIOR and POST
+knowledge domains (KDs). 3 Spearman correlation for association between
+knowledge domains (KDs).
 
-</td>
-<td style="text-align:left;">
+**Results**: T-test results indicate a significant difference in the
+scores between PRIOR questionnaire scores (M =48.45, SD =7.97) and POST
+questionnaire scores (M = 53.61, SD ¼ 11.13); t (400) = -9.75, p \<
+.001. On average, climate literacy improved by 5.16% after playing the
+climate science game ‘CO2peration’. Overall, we see an improvement in
+climate literacy between the questionnaires that can be explained, at
+least in part, by the treatment of the CO2peration game.
 
-A climate Science Questionnaire that involved 19 climate science
-questions
+**Improved?**: T-test results indicate a significant difference in the
+scores between PRIOR questionnaire scores (M = 48.45, SD = 7.97) and
+POST questionnaire scores (M = 53.61, SD = 11.13); t (400) = -9.75, p \<
+.001. On average, climate literacy improved by 5.16% after playing the
+climate science game ‘CO2peration’.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 37.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: On most questions, there was an improvement in
+participants’ climate science knowledge as measured a week following
+completion of the game. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 37.7 Conclusions
 
-T-test results indicate a significant difference in the scores between
-PRIOR questionnaire scores (M =48.45, SD =7.97) and POST questionnaire
-scores (M = 53.61, SD ¼ 11.13); t (400) = -9.75, p \< .001. On average,
-climate literacy improved by 5.16% after playing the climate science
-game ‘CO2peration’. Overall, we see an improvement in climate literacy
-between the questionnaires that can be explained, at least in part, by
-the treatment of the CO2peration game.
+**Conclusions**: - The study demonstrate that early adolescents do
+understand important concepts related to climate change and they are
+capable of improving their understanding of climate science which
+supports previous recommendations to introduce climate science earlier
+into the secondary curricula. - For climate literacy, 3D interactive
+digital games offer enormous potential as an effective mass
+communication tool. Visualising climate change helps learners interpret
+complex information in a meaningful and comprehendible way; visually and
+dynamically representing processes and mechanisms that may be impossible
+to explore in real life
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: These results support previous research
+recommendation for the use of visualisations and game-based
+interventions to improve climate literacy. In summary, by giving early
+adolescents a thorough background in the physical science basis that
+underpins climate science, we may help ensure worldview development is
+founded on fact and informed decision-making. Aside from the importance
+this approach has to worldview, climate literacy also lays a solid
+intellectual foundation in climate science which will provide students
+with the tools and understanding they’ll need to address this problem.
+By establishing climate change in the realm of science, we provide a
+base for meaning-focused coping which will help individuals perceive
+climate change as a solvable and mitigatable problem. In this way, we
+can prepare them to be intellectually, psychologically and emotionally
+equipped to deal with climate change.
 
 # 38 Herrick2022 ( LR )
+
+**title** Through the eyes of a child: exploring and engaging elementary
+students’ climate conceptions through photovoice
 
 ## 38.1 abstract
 
@@ -9372,15 +7968,7 @@ urban
 
 ## 38.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Transformative experience consisting in: *Knowledge: instruction
 (meaningful lessons) + deeper knowledge construction (iterate on their
@@ -9390,101 +7978,67 @@ and support students’ in constructing hope around CC issues by
 positioning them as capable pro­blem posers who are able to affect change
 in their communities. Intervention
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 38.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Outdoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Arts based pedagogy (Photovoice)/Place-based approach
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Outdoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Arts based pedagogy (Photovoice)/Place-based approach
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-1)  View science in the world through visual imagery (Photovoice) and re
-    seeing it through scafolded classroom interactions (interviews and a
-    grand conversation). `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+**Description**: (1) View science in the world through visual imagery
+(Photovoice) and re seeing it through scafolded classroom interactions
+(interviews and a grand conversation).
 
 ## 38.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Qualitative data: photographs, reflections, transcriptions of
+**Data**: Qualitative data: photographs, reflections, transcriptions of
 interviews, small group presentations and whole class grand
 conversation. Quatitatively: Post-TE survey shortened and adapted for
 5th graders
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: Structured and a priori coding of transcripts from
+interviews of information that represented portential instances of
+Transformative Experience and its based on three dimensions (motivated
+use, expansion perception and experiential value)
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: Cognition: Making deeper connetions between C.C: and their
+everyday lifes Emotions: Building constructive hope and a sense of
+agency to address their community issues
 
-</td>
-<td style="text-align:left;">
+**Improved?**: Cognition: Making deeper connetions between C.C: and
+their everyday lifes Emotions: Building constructive hope and a sense of
+agency to address their community issues
 
-Cognition: Making deeper connetions between C.C: and their everyday
-lifes Emotions: Building constructive hope and a sense of agency to
-address their community issues
+## 38.6 Outcomes
 
-</td>
-</tr>
-</tbody>
-</table>
+**awareness**: yes (*Worked?*: yes )
+
+**intention**: yes (*Worked?*: yes )
+
+**emotions**: yes (*Worked?*: yes )
+
+## 38.7 Conclusions
+
+**Conclusions**: Authors argue that the photovoice experience
+contributed to making science teaching a transformative experience
+
+**Message to keep:**: This study attempt to integrate in an arts-based
+intervention cognitive and emotional processes. It reports on
+qualitative analysis, initially with the intention of evaluating where
+children are at in relation to climate change, and the following
+children´s trajectories as the progress through the 8 week science unit.
+Also, authors measured using a Transformative Experience scale
+children´s reports POST intervention.
 
 # 39 Holthuis2014 ( ABP )
+
+**title** Supporting and Understanding Students’ Epistemological
+Discourse About Climate Change
 
 ## 39.1 abstract
 
@@ -9577,139 +8131,73 @@ urban
 
 ## 39.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to enhance students’ knowledge of climate change as well as their
 awareness of mitigation and adaptation strategies that address the
 effects of climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  What did students learn about climate change and to what extent have
     their opinions shifted after experiencing a climate change
     curriculum?
 2.  How do teachers and students talk about how we know about climate
     change? 3. What classroom conditions support such talk?
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
 
 ## 39.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: climate change curriculum
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-climate change curriculum
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Section 1 begins with students distinguishing between climate and
-weather, and considering the local impact of sea level rise due to
-climate change. This hook provides students the opportunity to think
-about their own connection to climate change. Students then learn about
-the Earth’s energy budget (Section 2) and greenhouse gases (Section 3)
-to understand how excess carbon dioxide, with its ability to bsorb and
-reradiate heat, is rapidly changing the climate Section 3 ends with
-students looking at sources and sinks of carbon dioxide so that they
-realize that climate change is almost certainly caused mostly by humans.
-In Sections 4 and 5, students examine the effects of climate change to
-both physical and biological systems.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Section 1 begins with students distinguishing between
+climate and weather, and considering the local impact of sea level rise
+due to climate change. This hook provides students the opportunity to
+think about their own connection to climate change. Students then learn
+about the Earth’s energy budget (Section 2) and greenhouse gases
+(Section 3) to understand how excess carbon dioxide, with its ability to
+bsorb and reradiate heat, is rapidly changing the climate Section 3 ends
+with students looking at sources and sinks of carbon dioxide so that
+they realize that climate change is almost certainly caused mostly by
+humans. In Sections 4 and 5, students examine the effects of climate
+change to both physical and biological systems.
 
 ## 39.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionario
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: statistically significant gains from pre- to postassessment
+in students’ content knowledge and a shift in their opinions about
+climate change. These gains are positively related to the percentage of
+students who are engaged and interacting, and negatively related to the
+percentage f students who are disengaged.
 
-questionario
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 39.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: YES (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 39.7 Conclusions
 
-statistically significant gains from pre- to postassessment in students’
-content knowledge and a shift in their opinions about climate change.
-These gains are positively related to the percentage of students who are
-engaged and interacting, and negatively related to the percentage f
-students who are disengaged.
+**Conclusions**: hrough classroom observations and video recordings, we
+identify how teachers and students talk about how we know about climate
+change, and we discuss how that talk can be enhanced.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 40 Hu2016 ( MB )
+
+**title** Place-based inter-generational communication on local climate
+improves adolescents’ perceptions and willingness to mitigate climate
+change
 
 ## 40.1 abstract
 
@@ -9829,30 +8317,14 @@ Urban
 
 ## 40.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 We introduced $$and evaluated using the Theory of Planned Behaviour$$ a
 new educational programme for climate change that included inviting
 adolescents to communicate with seniors (aged ≥ 60 years) in focus
 groups to discuss the local climate during the past several decades.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 No really questions, but three hypotheses were tested: H1: Climate
 change can be observed and perceived by individuals in their own
@@ -9862,130 +8334,129 @@ local seniors; H3: The place-based inter-generational communication on
 local climate can contribute to the changes in behavioural intention of
 mitigation.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 40.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular, but I have a doubt: “, we
+introduced a new educational programme for climate change that included
+inviting adolescents to communicate with seniors”
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lesson, intergenerational exchange/discussion
 
-Extracurricular, but I have a doubt: ", we introduced a new educational
-programme for climate change that included inviting adolescents to
-communicate with seniors"
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lesson, intergenerational exchange/discussion
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-1.  a 30-min lecture introducing global climate change (lecture group +
-    communication group) The lecture was based on heuristic approaches
-    and included questions, images and video clips.
-2.  30-min communication between adolescents and local seniors on local
-    climate in focus groups. (communication group) We used a focus group
-    setting for inter-generational communication in order to avoid
-    skewed individual biased recall and capture the richness of
-    perceived local information. `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+**Description**: 1. a 30-min lecture introducing global climate change
+(lecture group + communication group) The lecture was based on heuristic
+approaches and included questions, images and video clips. 2. 30-min
+communication between adolescents and local seniors on local climate in
+focus groups. (communication group) We used a focus group setting for
+inter-generational communication in order to avoid skewed individual
+biased recall and capture the richness of perceived local information.
 
 ## 40.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-The survey $$pre-post$$ included questions related to the modified model
-of the TPB $$Theory of Planned Behaviour$$, measuring a range of
-perceptions associated with climate change, related behavioural
+**Data**: The survey $$pre-post$$ included questions related to the
+modified model of the TPB $$Theory of Planned Behaviour$$, measuring a
+range of perceptions associated with climate change, related behavioural
 intentions, and key demographic variables 15 min in-depth interviews
 were conducted on two students from each focus group $$complete
 treatment group$$, who had higher expressing abilities that could
-provided comprehensive explanations beyond "yes" or "no" response as
+provided comprehensive explanations beyond “yes” or “no” response as
 purposive sampling after the post-tests
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: ANOVA for testing intervention groups and control on each
+construct, with Tukey HSD post-hoc test, type III sum of square -
+multiple mixed linear model regression mitigation intention vs
+lecture/communication groups, site as random factor (1: all the
+socio-demographic variable, 2: all the changes in perceptual variables,
+3: 1+2) - multiple mediation analysis with bias correction bootstrap
+$$some kind of path analysis based on the Theory of Planned
+Behaviour$$ - thematic content analyses of the post interviews
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: ANOVA AND Mixed linear model\_ - Controlling site as a
+random factor, the communication group showed a considerable reduction
+in uncertainty, an increase in concern and risk perception regarding
+climate change compared with the lecture group. The communication group
+also showed a significant increase in perceived behavioural control,
+subjective norm, place attachment, and mitigation intention. -The
+results of the mixed linear model showed that the changes in concern
+could be used to positively predict the changes in intention in model 3
+(Table 1). The changes in perceived behavioural control, subjective
+norms, and place attachment were also strong predictors of changes in
+intention. However, although uncertainty and risk perception improved
+significantly after the communication, both failed to explain the
+changes in intention. - Demographic variables other than gender were not
+significant predictors of intention changes. - Communication experience
+also failed to show a significant direct relationship with changes in
+intention \[but the Tukey post test show a significant difference
+Qualitative - The results of the in-depth interview (N = 72) generally
+supported the quantitative analysis. - Increased risk perception was
+most frequently mentioned (94.4 %) Result not directly related to our
+objectives: - The descriptions of trends and extreme climatic events
+from local seniors were generally consistent with local meteorological
+data
 
-</td>
-<td style="text-align:left;">
+**Improved?**: All constructs (uncertainty, concern, risk perception,
+subjective norms, perceived behavioural control, place attachment and
+mitigation intention) showed the highest positive effects from the
+“communication” (lecture + intergenerational learning), effect of the
+lecture only were generally higher than in the control group, and lower
+than the complete intervention. NOTE: the mixed model with site as
+random factor does not show a significant effect of the intervention
+group on intention, which makes the authors have contradictory
+conclusions about it, however the Tukey post test show it, and the
+multiple mediation analysis shows also indirect effects through the
+theoretical construct
 
-ANOVA AND Mixed linear model\_ - Controlling site as a random factor,
-the communication group showed a considerable reduction in uncertainty,
-an increase in concern and risk perception regarding climate change
-compared with the lecture group. The communication group also showed a
-significant increase in perceived behavioural control, subjective norm,
-place attachment, and mitigation intention. -The results of the mixed
-linear model showed that the changes in concern could be used to
-positively predict the changes in intention in model 3 (Table 1). The
-changes in perceived behavioural control, subjective norms, and place
-attachment were also strong predictors of changes in intention. However,
-although uncertainty and risk perception improved significantly after
-the communication, both failed to explain the changes in intention. -
-Demographic variables other than gender were not significant predictors
-of intention changes. - Communication experience also failed to show a
-significant direct relationship with changes in intention \[but the
-Tukey post test show a significant difference Qualitative - The results
-of the in-depth interview (N = 72) generally supported the quantitative
-analysis. - Increased risk perception was most frequently mentioned
-(94.4 %) Result not directly related to our objectives: - The
-descriptions of trends and extreme climatic events from local seniors
-were generally consistent with local meteorological data
+## 40.6 Outcomes
 
-</td>
-</tr>
-</tbody>
-</table>
+**knowledge**: - Risk perception of local vulnerability to climate
+change (*Worked?*: Yes )
+
+**awareness**: - Uncertainty about climate change reality (*Worked?*:
+Yes )
+
+**intention**: - Behavioural intention of climate change mitigation
+(*Worked?*: Yes/Unclear )
+
+**emotions**: - Place attachment to natural aspects - Concern about
+climate change (*Worked?*: Yes )
+
+**other**: In the Theory of Planned Behaviour, 2 construct are used to
+explain the Intentions (subjective norms, the surrounding social
+pressure about the intention, and perception of control, the perception
+about our capacity to act efficiently). In this study, they are declined
+as: - Subjective norm - Perceived behaviour control (*Worked?*: Yes )
+
+## 40.7 Conclusions
+
+**Conclusions**: “This study showed that place-based strategies for
+climate change education have considerable potential to render the
+abstract concrete for helping adolescents understand global issues.
+Emphasizing experience-based interpretation and showing the rele- vance
+of global climate change to local impacts and individual experiences by
+inter- generational communication makes the invisible process of climate
+change visible for engage- ment.”
+
+**Message to keep:**: In China the focus groups with local seniors to
+discuss local climate change have a positive effects on all the
+constructs (perception) of the Theory of Planned Behaviour toward
+mitigation intentions, which in turn is, according to this theory, the
+best predictor for behavioural change. This outperform the only lecture
+intervention, which is for most of the construct better than the control
+group (no intervention). 3 specificities might be worth noting: - the
+use of the Theory of Planned Behaviour gives a different but complete
+cognitive/attitude vision of CCE - a result may not be directly relevant
+to us but important: local senior evaluate well the local climate change
+effects, the “non-expert” discussions in intergenerational learning may
+be used for CCE! - the mixed model with site as random factor does not
+show a significant effect of the intervention group on intention, which
+makes the authors have contradictory conclusions about it, however the
+Tukey post test show it, and the multiple mediation analysis shows also
+indirect effects through the theoretical construct
 
 # 41 Jacobson2017 ( MB )
+
+**title** Designs for learning about climate change as a complex system
 
 ## 41.1 abstract
 
@@ -10086,30 +8557,14 @@ Urban
 
 ## 41.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 We conducted a study that contrasted and compared the efficacy of a PF
 $$Productive Failure$$ design versus a DI $$Direct Instruction$$ design
 to help students deeply learnconceptual knowledge about climate ideas
 and complex systems.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 RQ1: Are PF and DI treatment conditions equally effective for students
 to learn declarative and explanatory knowledge1 about climate and
@@ -10121,131 +8576,109 @@ new problems in the same domain (e.g., climate problems or complex
 systems problems), and the second class is far transfer, which is
 solving new problems in a different domain
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 41.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons, computer assisted modeling
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons, computer assisted modeling
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-6 days: - Pre test - Feedback in dynamic systems. Climate: global
-temperature, greenhouse effect, cloud cover. Complex systems: modeling
-of the ant foraging model - Emergence. Climate: Wind and storm model.
-Complex systems: Birds flocking model - Dynamic equilibrium. Climate:
-Carbon cycle model. Complex systems: Wolf-sheep predation model -
-Tipping points and positive feedback. Climate: climate model with water
-feedback. Complex systems: forest fire model - Post test For every
-pedagogical activities, the class correspond to a teacher lecture (15-20
-min), an example of complex system model (15-20 min), and a climate and
-complex systems models (10-20 min) In the Productive Failure treatment,
-the lecture takes place after complex system modeling activities, in the
-Direct Instruction treatment, before the modeling activity.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: 6 days: - Pre test - Feedback in dynamic systems.
+Climate: global temperature, greenhouse effect, cloud cover. Complex
+systems: modeling of the ant foraging model - Emergence. Climate: Wind
+and storm model. Complex systems: Birds flocking model - Dynamic
+equilibrium. Climate: Carbon cycle model. Complex systems: Wolf-sheep
+predation model - Tipping points and positive feedback. Climate: climate
+model with water feedback. Complex systems: forest fire model - Post
+test For every pedagogical activities, the class correspond to a teacher
+lecture (15-20 min), an example of complex system model (15-20 min), and
+a climate and complex systems models (10-20 min) In the Productive
+Failure treatment, the lecture takes place after complex system modeling
+activities, in the Direct Instruction treatment, before the modeling
+activity.
 
 ## 41.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Qualitative open-ended questions concerning four aspects of climate and
-complex system knowledge in a pre-post survey: - declarative knowledge
-(simple knowledge about concepts of the climate system) - explanatory
-knowledge (explaining climate processes) - near transfer problem
-(concerning climate system) - far transfer problem (concerning complex
-system in another domain) The answers were coded on a 1-4 scale
+**Data**: Qualitative open-ended questions concerning four aspects of
+climate and complex system knowledge in a pre-post survey: - declarative
+knowledge (simple knowledge about concepts of the climate system) -
+explanatory knowledge (explaining climate processes) - near transfer
+problem (concerning climate system) - far transfer problem (concerning
+complex system in another domain) The answers were coded on a 1-4 scale
 describing correctness of knowledge and reasoning, and used in
 quantitative analyses
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: The students’ performance was assessed with a marking
+rubric that consisted of a four-point coding scheme. - two-ways
+ANOVA/ANCOVA with follow-up t-test (treatment group + experience of
+teachers vs declarative knowledge/explanatory knowledge/near
+transfer/far transfer) - qulitative analysis of class observations
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: declarative knowledge scores for the two treatment groups
+were statistically equivalent in terms of their respective knowledge
+gains from pre- test to post-test and there were no significant teacher
+effects. (F(1,105) 1⁄4 1.652, p \> 0.1, h2 p 1⁄4 0.015) - For climate
+explanatory knowledge, a two-way ANOVA revealed that there was a
+significant main effect of treatment group and a significant main effect
+of teacher experience at post-test favored the high experience
+teachers. - For complex systems explanatory knowledge, a two-way ANCOVA
+found that there was a significant main effect for the experimental
+treatment group (F(1,105) 1⁄4 21.126, p \< 0.001, h2 p 1⁄4 0.167): while
+the students in each of the groups scored higher with experienced
+teachers compared to early career teachers, the PF group scored higher
+overall than the DI group. - being in the PF treatment had a significant
+positive impact on the near transfer scores compared to the DI
+treatment. - being in the experimental PF group and having an
+experienced teacher each respectively had a positive influence on far
+transfer knowledge test scores, but that there was not a statistically
+significant special benefit of having both.
 
-</td>
-<td style="text-align:left;">
+**Improved?**: All aspects (declarative knowledge, explanatory
+knowledge), resolution of near transfer and far transfer problems
+increased in the 2 pedagogical treatment (there are distincts effect of
+the teacher experience and the pedagogical treatments)
 
-- declarative knowledge scores for the two treatment groups were
-  statistically equivalent in terms of their respective knowledge gains
-  from pre- test to post-test and there were no significant teacher
-  effects. (F(1,105) 1⁄4 1.652, p \> 0.1, h2 p 1⁄4 0.015)
-- For climate explanatory knowledge, a two-way ANOVA revealed that there
-  was a significant main effect of treatment group and a significant
-  main effect of teacher experience at post-test favored the high
-  experience teachers.
-- For complex systems explanatory knowledge, a two-way ANCOVA found that
-  there was a significant main effect for the experimental treatment
-  group (F(1,105) 1⁄4 21.126, p \< 0.001, h2 p 1⁄4 0.167): while the
-  students in each of the groups scored higher with experienced teachers
-  compared to early career teachers, the PF group scored higher overall
-  than the DI group.
-- being in the PF treatment had a significant positive impact on the
-  near transfer scores compared to the DI treatment.
-- being in the experimental PF group and having an experienced teacher
-  each respectively had a positive influence on far transfer knowledge
-  test scores, but that there was not a statistically significant
-  special benefit of having both. `{=html}     </td>`
-  `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+## 41.6 Outcomes
+
+**knowledge**: - correctness in declarative knowledge concerning climate
+system (e.g. relating biosphere to carbon cycle) - correctness in
+explanatory knowledge concerning climate system (e.g. behaviour of
+climate phenomena) - ability to use the complex system ideas to resolve
+a near transfer problem concerning the complex climate system (butterfly
+effect) (*Worked?*: Yes )
+
+**other**: - ability to resolve a far transfer problem, using complex
+system notions in a different domain (not climate) (*Worked?*: Yes )
+
+## 41.7 Conclusions
+
+**Conclusions**: The Productive Failure pedagogical design (presenting a
+problem to the students before the lecture) did not do better than the
+Direct Instruction (lecture first) design in terms of declarative
+knowledge (simple conceptual knowledge about the climate system), but it
+performed better in terms of explanatory knowledge (explaining processes
+in the climate system), near transfer problem (concerning the climate
+system) resolution and far transfer (in another domain) problems. The
+authors note that there are 2 explanations: - social perspective: PF
+treatment caused more engagement and more collaboration between students
+and with the teachers (more questions) - cognitive perspective: the
+lecture after the problem allows to activate cognitive processes of
+knowledge assembly and shema abstraction
+
+**Message to keep:**: A very interesting study which shows that
+different pedagogical designs with exactly the same activities but a
+different perspective (problem resolving before lecture) may have
+important effect on the capacity of students to use complex system
+concepts to better understand the climate. What is also interesting is
+that the author show that this may have effect particularly in the
+capacity of understanding complex problem even beyond the only domain of
+climate.
 
 # 42 Jin2013 ( LR )
+
+**title** Developing a Fine-Grained Learning Progression Framework for
+Carbon-Transforming Processes
 
 ## 42.1 abstract
 
@@ -10346,15 +8779,7 @@ Sub-urban and rural schools
 
 ## 42.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The intervention is on knowledge and the outcome is thought process,
 that is, whether students thinking reflect complex patterns. E.g. FROM
@@ -10363,15 +8788,7 @@ and sequence of events TO classifying processes into three classes of
 carbon-transforming processes and to connect them in terms of the carbon
 cycle and the energy ﬂow.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  Progression: Regarding explaining carbon-transforming processes,
     what achievement levels do students typically experience as they
@@ -10380,90 +8797,75 @@ Questions
     coherently organized in their explanations about one
     socio-ecological context (plant growth, flame burning, etc.)? (2) To
     what extent is students’ reasoning consistent across different
-    socio-ecological contexts? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    socio-ecological contexts?
 
 ## 42.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: 6 units about carbon-transformig processes
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-6 units about carbon-transformig processes
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-6 units about carbon-transforming processes: Systems and scale (tools
-for reasoning Plants Unit Animal Unit Decomposers Unit Ecosystem Unit
-Human Energy Systems Unit
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: 6 units about carbon-transforming processes: Systems
+and scale (tools for reasoning Plants Unit Animal Unit Decomposers Unit
+Ecosystem Unit Human Energy Systems Unit
 
 ## 42.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: NA
 
-Resultados.obtenidos.por.cada.outcome
+**Analysis**: “Used thematic analysis (Braun & Clarke, 2006) to identify
+patterns of students’ explaining practices from the interview and
+written data”, developed achievement levels for progress variables of
+the five-practice learning progression framework. Then used the
+framework as guideline to develop coding rubrics for each interview task
+and each written assessment item. THEN used paired samples t-test to
+compare students learning gains in pre-post interviews (quantitative
+models to measure learning gains, cohesion and consistency.) Used IRT to
+analyze written assessments.
 
-</td>
-<td style="text-align:left;">
+**Results**: Authors computed a global score of average gains. A.G. for
+Elementary School were 0.481 (Effect Size 0.659), Middles school 0.46
+(ES=0.604) and High School 0.6 (ES =0.83). Findings suggest that
+highschool students were the ones able to take more advantage of the
+learninf framework.
 
-Authors computed a global score of average gains. A.G. for Elementary
-School were 0.481 (Effect Size 0.659), Middles school 0.46 (ES=0.604)
-and High School 0.6 (ES =0.83). Findings suggest that highschool
-students were the ones able to take more advantage of the learninf
-framework.
+**Improved?**: There were significant learning gains according to the
+framework developed by researchers, gaining complexity on scales.
+However the ultimate goal (constructing scientific explanations) was not
+achieved.
 
-</td>
-</tr>
-</tbody>
-</table>
+## 42.6 Outcomes
+
+**knowledge**: The learning progression framework contains five progress
+variables to assess student´s understanding of a science topic. Each
+progress variable contains four achievement levels that describe
+qualitatively different ways of reasoning when explaining
+carbon-transforming processes. The “upper anchor” recognizes that there
+are three socio-ecological systems: atmosphere, ecosystems, and human
+socio-ecological systems that interact with each other through
+carbon-transforming processes. There are three cross cutting core
+concepts (matter, energy, and scale) that provide students with ways to
+connect knowledge from the various disciplines into a coherent and
+scientific view of the world’ (*Worked?*: partially )
+
+## 42.7 Conclusions
+
+**Conclusions**: “These results cannot be generalized to other research
+contexts; they suggest that effective curriculum and instruction on
+carbon-transforming processes could target students’ intuitive ways of
+reasoning, which are specified in the learning progression framework.”
+However, given partial success the framework shouls be revised.
+
+**Message to keep:**: NGSS changes sciente teaching to make into a more
+inquiry based apprach to try to combine knowledge acquisition with the
+practical nature of scientific activity
 
 # 43 Jones2021 ( MB )
+
+**title** “It makes me angry. REALLY angry”: exploring emotional
+responses to climate change education
 
 ## 43.1 abstract
 
@@ -10576,142 +8978,63 @@ Urban
 
 ## 43.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This paper considers the emotional response to climate education in a
 primary classroom (age 9-10 years) in England and begins to explore the
 emotions that teaching about climate change may raise for both teacher,
 researcher and pupil.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.What are the emotional responses 9-10-year olds recognize with regard
 climate change and climate education? (2.How does an ethnographic
 approach add to our understanding of emotions when teaching climate
 education?) \[Not extracted
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 43.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons, drawings and expression of emotions
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons, drawings and expression of emotions
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-(The intervention is complex to describe because it is embedded in a
-long-term teaching/classroom ethnography project) - before the described
-session: "Previous to the lesson about climate change we had worked with
-the class on issues that related to this theme, for example fast fashion
-which, as an industry, contributes 10% of global carbon emissions." and
-lesson about climate change - described session: "a session that direcly
-asked pupils about their feelings regarding climate change", where
-students are the "experts on their own knowledge" organized as
-discussions and questions to the children, accompanied with activities
-of drawing, and expression of their emotions, in 3 parts: 1. WHat is
-climate change and the climate crisis (with drawings) 2. Causes of the
-climate change (with help of a "scale" to express feelings) 3. Solutions
-:"who or what is going to help us" (with drawings)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: (The intervention is complex to describe because it is
+embedded in a long-term teaching/classroom ethnography project) - before
+the described session: “Previous to the lesson about climate change we
+had worked with the class on issues that related to this theme, for
+example fast fashion which, as an industry, contributes 10% of global
+carbon emissions.” and lesson about climate change - described session:
+“a session that direcly asked pupils about their feelings regarding
+climate change”, where students are the “experts on their own knowledge”
+organized as discussions and questions to the children, accompanied with
+activities of drawing, and expression of their emotions, in 3 parts: 1.
+WHat is climate change and the climate crisis (with drawings) 2. Causes
+of the climate change (with help of a “scale” to express feelings) 3.
+Solutions :“who or what is going to help us” (with drawings)
 
 ## 43.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: “Classroom ethnography”. Qualitative analysis of: - drawing
+from the children - discussion around the drawing (the teacher walk
+through the class and provoke discussion and explanation on the
+drawing - expression of emotion helped by a “scale” where all the
+student are expected to place their feelings - research diaries from the
+teachers where they write their impressions
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: “Classroom ethnography”. Qualitative analysis of: -
+drawing from the children - discussion around the drawing (the teacher
+walk through the class and provoke discussion and explanation on the
+drawing - expression of emotion helped by a “scale” where all the
+student are expected to place their feelings - research diaries from the
+teachers where they write their impressions
 
-</td>
-<td style="text-align:left;">
-
-"Classroom ethnography". Qualitative analysis of: - drawing from the
-children - discussion around the drawing (the teacher walk through the
-class and provoke discussion and explanation on the drawing - expression
-of emotion helped by a "scale" where all the student are expected to
-place their feelings - research diaries from the teachers where they
-write their impressions
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Overall results: the children who took part in the planned climate
-education lessons experienced a spectrum of emotion. Activity 1 and 2
-$$general knowledge and cause of the climate change$$ saw many usually
-considered negative emotions being displayed and talked about by young
-people - such as anger, sadness and helplessness. Activity three
+**Results**: Overall results: the children who took part in the planned
+climate education lessons experienced a spectrum of emotion. Activity 1
+and 2 $$general knowledge and cause of the climate change$$ saw many
+usually considered negative emotions being displayed and talked about by
+young people - such as anger, sadness and helplessness. Activity three
 $$future and solutions$$, saw more positive feelings in the class with
 all participants being able to identify ways in which we might mitigate
 the consequences of climate change. Children were more hopeful and
@@ -10719,12 +9042,41 @@ happier. On activity 2, the authors also noted a large and shared anger
 of the students toward the adults which the students considered as
 responsible of climate change
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Overall results: the children who took part in the
+planned climate education lessons experienced a spectrum of emotion.
+Activity 1 and 2 $$general knowledge and cause of the climate change$$
+saw many usually considered negative emotions being displayed and talked
+about by young people - such as anger, sadness and helplessness.
+Activity three $$future and solutions$$, saw more positive feelings in
+the class with all participants being able to identify ways in which we
+might mitigate the consequences of climate change. Children were more
+hopeful and happier. On activity 2, the authors also noted a large and
+shared anger of the students toward the adults which the students
+considered as responsible of climate change
+
+## 43.6 Outcomes
+
+**emotions**: Emotions expressed by the students in activities
+concerning: 1. the general knowledge 2. the cause of climate change 3.
+the solutions (*Worked?*: Yes, but what do we consider as “working”? )
+
+## 43.7 Conclusions
+
+**Conclusions**: general knowledge and causes of climate change cause
+negative emotions: anger, sadness and helplessness in young student
+lessons on solutions cause positive emotion such as hope and happiness
+
+**Message to keep:**: This article is very specific in its methodology
+(classroom ethnography) and objectives (emotional responses to climate
+change education) in young students (9-10 years). The authors describe
+negative emotion to the general knowledge and cause of climate change
+and positive one on the topic of solutions for climate change in the
+future.
 
 # 44 Kabir2015 ( SC )
+
+**title** Child Centred Approach to Climate Change and Health Adaptation
+through Schools in Bangladesh: A Cluster Randomised Intervention Trial
 
 ## 44.1 abstract
 
@@ -10799,120 +9151,86 @@ Rural
 
 ## 44.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The objective of this study was to test the effectiveness of the manual
 in increasing the knowledge level of the school children about climate
 change and health adaptation.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 44.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: A printed manual and classroom discusions
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-A printed manual and classroom discusions
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The manual contains seven chapters that include essential knowledge
-about climate change and health issues, the ‘do’s and don’ts’ during
-extreme weather events, and adaptation activities. The science teacher
-used the topics in the manual as basis for a weekly 45-minutes classroom
-discussion
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The manual contains seven chapters that include
+essential knowledge about climate change and health issues, the ‘do’s
+and don’ts’ during extreme weather events, and adaptation activities.
+The science teacher used the topics in the manual as basis for a weekly
+45-minutes classroom discussion
 
 ## 44.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: A knowledge questionnaire comprised a set of 30 questions on
+various aspects of climate change and health issues and took around 20
+minutes to complete.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: They modelled a multivariable linear regression using
+percentage of post-intervention test score as the outcome variable under
+the Generalized Estimating Equation (GEE) framework to account for
+clustering by school, after adjusting for potential confounders and
+pre-intervention test score. We then used exchangeable correlation
+structure to adjust for clustering in the GEE model. In the initial
+model, we included all variables that were significant at 25% level,
+along with the main exposure variable (randomization arm) in the
+univariable analysis.
 
-</td>
-<td style="text-align:left;">
+**Results**: The final model revealed that students in the intervention
+school obtained 17.42% (95% CI: 14–20, P\<0.001) higher marks in the
+post test compared to the control school.
 
-A knowledge questionnaire comprised a set of 30 questions on various
-aspects of climate change and health issues and took around 20 minutes
-to complete.
+**Improved?**: Health effect of climate change knowledge score increased
+almost 2 times from baseline to follow up in the intervention group in
+comparison to control group, as per multivariable log-binomial
+regression analysis.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 44.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Questions on adaptation for health and mitigation of
+climate change showed a statistically significant increased score in the
+intervention group than the control group. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 44.7 Conclusions
 
-The final model revealed that students in the intervention school
-obtained 17.42% (95% CI: 14–20, P\<0.001) higher marks in the post test
-compared to the control school.
+**Conclusions**: As the results suggest, a child-centred adaptation
+strategy through school-based intervention can enhance the adaptive
+capacity of the future generation in the vulnerable community of South
+East Asia, specially in the high-risk context of Bangladesh. The manual
+could be scaled up to be provided to all schools in the Least Developed
+Country context, for mainstreaming the risk awareness in the education
+system and to protect human health from climate change.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Children spend many hours a day in schools, and
+schools play a central role in teaching life skills. Health promotion in
+schools and preparation of children to be adaptation activists can bring
+substantial changes in knowledge, attitude and practices to address
+climate change issues and effect risk reduction of adverse health
+outcomes. Based on this, the intervention trial showed that a novel
+educational intervention providing manuals for school children achieved
+a significant increase in the knowledge about climate change and its
+relation to current and future health risks, as well as the adaptive
+measures.
 
 # 45 Karpudewan2015 ( MB )
+
+**title** Enhancing Primary School Students’ Knowledge about Global
+Warming and Environmental Attitude Using Climate Change Activities
 
 ## 45.1 abstract
 
@@ -11017,30 +9335,14 @@ Urban
 
 ## 45.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This study was designed in the context of primary school education in
 Malaysia with the underlying purpose of selecting teaching models that
 promote students’ knowledge related to global warming and attitudes
 towards the environment
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 3 hypotheses: (a) Specially designed student-centred, 5E learning
 cycle-based climate change activities increases climate change knowledge
@@ -11052,129 +9354,106 @@ significant positive relationship between pro-environmental attitudes of
 the students from treatment group with their knowledge about climate
 change based on the post-test results.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 45.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons, experiences, simulation game
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons, experiences, simulation game
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Five weeks activities: (a) investigating the effect of greenhouse gases,
-(b) the carbon dioxide role play, (c) modelling the melting of icebergs,
-(d) modelling the melting of glaciers and (e) investigation of renewable
-and non-renewable energy that students use in their homes. In the
-control treatment the same topics are presented in teacher-centered
-lectures
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Five weeks activities: (a) investigating the effect of
+greenhouse gases, (b) the carbon dioxide role play, (c) modelling the
+melting of icebergs, (d) modelling the melting of glaciers and (e)
+investigation of renewable and non-renewable energy that students use in
+their homes. In the control treatment the same topics are presented in
+teacher-centered lectures
 
 ## 45.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: $$KNOWLEDGE$$ pre-post questionnaires on global warming
+adapted from a study in the UK (Taber & Taylor, 2009) - $$AWARENESS$$
+attitude toward the environment measured with a questionnaire NEP for
+children - $$KNOWLEDGE, AWARENESS, INTENTION$$: further insights of
+student knowledge and attitudes were obtained through 30 minutes
+semi-structured interviews on 10 students $$5 in each group$$
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: ANCOVA approach was used (Shadish et al., 2002) where the
+pretest comparison within-group variance based on pre-experiment
+differences To control experiment-wise error rates (i.e. error rates for
+the study as a whole), Bonferroni adjustments were used to test each
+hypothesis at the corresponding aadj 1⁄4 aexp/3 levels Qualitative
+analyses are conducted but there is no described methodological
+framework
 
-</td>
-<td style="text-align:left;">
+**Results**: Quantitative: - The first hypothesis stated that there
+would be no significant difference in understanding about global warming
+between treatment and comparison treatment groups as measured by global
+warming test. This hypothesis was (as presented in Table 2) rejected
+(F(1, 112) 1⁄4 193.6, p , .00033). The treatment group (M exp 1⁄4 17.07,
+SD exp 1⁄4 2.54) outperformed the comparison group (Mcont 1⁄4 9.50,
+SDcont 1⁄4 2.75), suggesting that they were more knowledgeable about
+global warming. - The second hypothesis stated that there would be no
+significant difference between treatment and comparison groups in the
+attitude towards the environment as measured by the NEP Scale for
+Children. This hypothesis (as presented in Table 2) was rejected (F(1,
+112) 1⁄4 7.52, p , .0167). The treatment group exhibited more
+pro-environmental attitudes (Mexp 1⁄4 35.27, SDexp 1⁄4 4.66) than the
+comparison group (Mcont 1⁄4 32.9, SDcont 1⁄4 4.29) - The third
+hypothesis states that there would be no significant correlation between
+pro-environmental attitude and knowledge about global warming of the
+treatment group students based on the post-test results. This null
+hypothesis was not rejected at the chosen a-levels (r(53) 1⁄4 0.285; p
+1⁄4 .035) suggesting that there was no significant correlation between
+understanding about global warming and pro-environmental attitude.
+Qualitative: - $$Contrary to students in the control group$$ The
+students in the treatment group provided brief, but specific and
+knowledgeable responses. When asked about the causes for global warming,
+the treatment students showed that two weeks after the unit, they made
+appropriate connections - Consistent with the quantitative results,
+students in the treatment group expressed more pro-environmental
+attitudes. Compared to the students from the comparison group, the
+interview responses reflected somewhat more positive attitudes together
+with self-reported changes in pro-environmental behaviours
 
-- $$KNOWLEDGE$$ pre-post questionnaires on global warming adapted from a
-  study in the UK (Taber & Taylor, 2009)
-- $$AWARENESS$$ attitude toward the environment measured with a
-  questionnaire NEP for children
-- $$KNOWLEDGE, AWARENESS, INTENTION$$: further insights of student
-  knowledge and attitudes were obtained through 30 minutes
-  semi-structured interviews on 10 students $$5 in each group$$
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     <tr>`
-  `{=html}     <td style="text-align:left;">`
-  Resultados.obtenidos.por.cada.outcome `{=html}     </td>`
-  `{=html}     <td style="text-align:left;">` Quantitative:
-- The first hypothesis stated that there would be no significant
-  difference in understanding about global warming between treatment and
-  comparison treatment groups as measured by global warming test. This
-  hypothesis was (as presented in Table 2) rejected (F(1, 112) 1⁄4
-  193.6, p , .00033). The treatment group (M exp 1⁄4 17.07, SD exp 1⁄4
-  2.54) outperformed the comparison group (Mcont 1⁄4 9.50, SDcont 1⁄4
-  2.75), suggesting that they were more knowledgeable about global
-  warming.
-- The second hypothesis stated that there would be no significant
-  difference between treatment and comparison groups in the attitude
-  towards the environment as measured by the NEP Scale for Children.
-  This hypothesis (as presented in Table 2) was rejected (F(1, 112) 1⁄4
-  7.52, p , .0167). The treatment group exhibited more pro-environmental
-  attitudes (Mexp 1⁄4 35.27, SDexp 1⁄4 4.66) than the comparison group
-  (Mcont 1⁄4 32.9, SDcont 1⁄4 4.29)
-- The third hypothesis states that there would be no significant
-  correlation between pro-environmental attitude and knowledge about
-  global warming of the treatment group students based on the post-test
-  results. This null hypothesis was not rejected at the chosen a-levels
-  (r(53) 1⁄4 0.285; p 1⁄4 .035) suggesting that there was no significant
-  correlation between understanding about global warming and
-  pro-environmental attitude. Qualitative:
-- $$Contrary to students in the control group$$ The students in the
-  treatment group provided brief, but specific and knowledgeable
-  responses. When asked about the causes for global warming, the
-  treatment students showed that two weeks after the unit, they made
-  appropriate connections
-- Consistent with the quantitative results, students in the treatment
-  group expressed more pro-environmental attitudes. Compared to the
-  students from the comparison group, the interview responses reflected
-  somewhat more positive attitudes together with self-reported changes
-  in pro-environmental behaviours `{=html}     </td>`
-  `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+**Improved?**: The treatment group $$constructivist 5E method$$ had
+better results in term of knowledge of climate change, attitude
+$$AWARENESS$$ toward environment and attitude $$INTENTION$$ regarding
+energy use
+
+## 45.6 Outcomes
+
+**knowledge**: Correctness in a knowledge based test on global warming
+(*Worked?*: Yes )
+
+**awareness**: Attitude toward environment from the NEP scale for
+children (*Worked?*: Yes )
+
+**intention**: “Attitudes toward the environment” measured in pre-post
+qualitative interviews \[question such as the willingness to turn off
+electrical devices after use (*Worked?*: Yes )
+
+## 45.7 Conclusions
+
+**Conclusions**: The 5E pedagogical method (constructivist) is more
+efficient for students to gain knowledge, and change attitudes
+$$AWARENESS, INTENTION$$ than the classical teacher-centered lessons.
+However, no clear correlation between knowledge and attitudes is found
+when the results from all the students is mixed
+
+**Message to keep:**: In this study, traditional teacher-centered
+lessons are compared to 5E constructivist methods based on students
+activities, and the latter seem to have a clearly more efficient effect
+on knowledge, awareness and intentions of the students. It might be
+worth noting that the researchers insist on the fact that in the
+malaysian education, it goes opposite to the traditional exam-focused
+education. Moreover there was no overall (without considering treatment)
+correlation between knowledge and attitudes.
 
 # 46 Karpudewan2015a ( JGOP )
+
+**title** Remediating misconception on climate change among secondary
+school students in Malaysia
 
 ## 46.1 abstract
 
@@ -11274,15 +9553,7 @@ Urban
 
 ## 46.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The present study was designed to test whether students, taught by means
 of a curriculum grounded in a constructivist epistemology and with
@@ -11292,132 +9563,74 @@ understandings of climate change-related concepts among Malaysian high
 school students than the regular, state-mandated curriculum (control
 treatment).
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Test of the null hypothesis comparing student understanding of climate
 change-related concepts when taught using an experimental vs.
 traditional curriculum.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 46.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Conceptual change approach
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Conceptual change approach
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The experimental group was instructed using four foci: acid rain,
-greenhouse effect, global warming, and ozone layer depletion. Students
-were asked to perform the activities in groups of five followed by an
-in-group discussion. The entire set of activities was conducted over a
-five-week period (one activity per week). The activities included
+**Description**: The experimental group was instructed using four foci:
+acid rain, greenhouse effect, global warming, and ozone layer depletion.
+Students were asked to perform the activities in groups of five followed
+by an in-group discussion. The entire set of activities was conducted
+over a five-week period (one activity per week). The activities included
 role-play, hands-on laboratories, and a video exploring the ozone layer.
 The control group conducted activities on the same topic over a
 five-week period (one activity per week for 2 h). These followed a
 traditional teacher-centered lecture format with students listening,
 discussing in groups, and presentation of the outcome of discussion.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 46.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Questionnaires and interviews
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Pre-test and analysis of covariance (ANCOVA)
 
-</td>
-<td style="text-align:left;">
+**Results**: The experimental treatment group (Mexp = 1.51, SDexp =
+0.56) outperformed the control group (Mcont = 0.97, SDcont = 0.55),
+suggesting that they better understood the central concepts of this
+dimension of climate change. Students in the experimental group
+exhibited better understanding of global warming concepts (Mexp = 3.29,
+SDexp = 0.86) than their peers in the control group (Mcont = 2.03,
+SDcont = 1.15). On average, students in the experimental group exhibited
+better understandings as measured by the AREPDiT subtest (Mexp = 3.17,
+SDexp = 0.82) than the students of the control group (Mcont = 1.84,
+SDcont = 0.89). The experimental group (Mexp = 2.46, SDexp = 0.85)
+outperformed the control group (Mcont = 1.68, SDcont = 0.93) on the
+understanding of acid rain concepts as measured by the related AREPDiT
+subtest.
 
-Questionnaires and interviews
+**Improved?**: Improved understandings and fewer misconceptions about
+global warming, greenhouse effects, acid rain, and ozone layer
+depletion.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 46.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Better understandings of climate change-related concepts
+(*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 46.7 Conclusions
 
-The experimental treatment group (Mexp = 1.51, SDexp = 0.56)
-outperformed the control group (Mcont = 0.97, SDcont = 0.55), suggesting
-that they better understood the central concepts of this dimension of
-climate change. Students in the experimental group exhibited better
-understanding of global warming concepts (Mexp = 3.29, SDexp = 0.86)
-than their peers in the control group (Mcont = 2.03, SDcont = 1.15). On
-average, students in the experimental group exhibited better
-understandings as measured by the AREPDiT subtest (Mexp = 3.17, SDexp =
-0.82) than the students of the control group (Mcont = 1.84, SDcont =
-0.89). The experimental group (Mexp = 2.46, SDexp = 0.85) outperformed
-the control group (Mcont = 1.68, SDcont = 0.93) on the understanding of
-acid rain concepts as measured by the related AREPDiT subtest.
+**Conclusions**: NA
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Alternative curriculums are useful to strike the
+misconceptions on climate change, and it is helpful to support this type
+of learning throw role-play, hands-on laboratories, and video. The
+results in general shown differences between the traditional curricula
+and the curriculim based on constructivis approach.
 
 # 47 Karpudewan2017 ( MB )
+
+**title** Experiential-based climate change education: fostering
+students’ knowledge and motivation towards the environment
 
 ## 47.1 abstract
 
@@ -11546,15 +9759,7 @@ Urban
 
 ## 47.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This study attempts to integrate experiential-based climate change
 activities into the teaching and learning of Form Four Biology lessons
@@ -11562,100 +9767,44 @@ on “Endangered Ecosystems.” The effectiveness of this intervention to
 improve students’ knowledge on climate change and their motivation was
 measured
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 47.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons, Field trip, discussions, videos, Carbon footprint
+calculation, role game discussion.
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons, Field trip, discussions, videos, Carbon footprint calculation,
-role game discussion.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Experimental treatment, during each activity students go through 4
-stages of learning: concrete experience; reflective observation;
-abstract con- ceptualization; and active experimentation. - first week:
-field trip to Penang National Park, observation, photos, comparison with
-close city Georgetown) - second lesson: video about climate change and
-discussion, analysis of global climate change data - third lesson:
-interactive presentation regarding greenhouse effect, experiments with
-plastic bottles (temperature) - fourth lesson: climate change in local
-and global community, climate change card game, lessons on climate
-change effect - fifth lesson: carbon footprint calculation - sixth
-lesson: role playing (minister, architect, teacher, doctor, student,
-farmer, businessman, environmentalist, town planner and policeman) Each
-group had to discuss and present how they could reduce the impact of
-climate change globally and locally. Control treatment: In the control
-group, the students were taught about climate change and how climate
-change endangered our ecosystem as presented in the Form Four Biology
-curriculum specifications (CDC, 2006), using their Ministry of Education
-certified textbooks. During the lessons, the teacher used the chalk and
-talk method to teach the entire topic on climate change.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Experimental treatment, during each activity students
+go through 4 stages of learning: concrete experience; reflective
+observation; abstract con- ceptualization; and active experimentation. -
+first week: field trip to Penang National Park, observation, photos,
+comparison with close city Georgetown) - second lesson: video about
+climate change and discussion, analysis of global climate change data -
+third lesson: interactive presentation regarding greenhouse effect,
+experiments with plastic bottles (temperature) - fourth lesson: climate
+change in local and global community, climate change card game, lessons
+on climate change effect - fifth lesson: carbon footprint calculation -
+sixth lesson: role playing (minister, architect, teacher, doctor,
+student, farmer, businessman, environmentalist, town planner and
+policeman) Each group had to discuss and present how they could reduce
+the impact of climate change globally and locally. Control treatment: In
+the control group, the students were taught about climate change and how
+climate change endangered our ecosystem as presented in the Form Four
+Biology curriculum specifications (CDC, 2006), using their Ministry of
+Education certified textbooks. During the lessons, the teacher used the
+chalk and talk method to teach the entire topic on climate change.
 
 ## 47.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Climate Change Knowledge Test (CCKT): The CCKT, Shepardson, Niyogi,
-Choi, and Charusombat (2009), was used to measure students’ knowledge
-about climate change. The test consisted of five items: four
+**Data**: Climate Change Knowledge Test (CCKT): The CCKT, Shepardson,
+Niyogi, Choi, and Charusombat (2009), was used to measure students’
+knowledge about climate change. The test consisted of five items: four
 open-response items and one-draw-and-explain item that tested the
 students’ knowledge related to climate change. Motivation Toward the
 Environment Scale (MTES) The MTES obtained from Pelletier et al. (1998)
@@ -11665,42 +9814,68 @@ integrated regulation, identified regulation, introjected regulation,
 external regulation, and amotivation. Each subscale consisted of four
 items.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: The scores obtained from pre-test and post-test were
+analyzed using one-way analysis of covariance (ANCOVA) Data collected
+from this study were analyzed and the level of significance was set at
+0.05 (p\< 0.05) similar to other studies on climate change
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: Knowledge: - both groups exhibited an increase in the
+minimum and maximum scores. However, it is observed that the increase in
+the experimental group was higher than the control group. The mean
+post-test score of the experimental group was also higher than the
+average (Mexp = 9.66; SD exp = 1.66). - there was a significant effect
+(F(1,59) = 88.30, p \< 0.05) of experiential-based climate change
+education on the students’ knowledge about climate change after
+controlling the pre-test scores. The partial eta-squared value of 0.599
+indicates that 59.9% of changes in the post-test were caused by the
+treatment. Motivation toward the environment: - In the post-test from
+the results in Table 5, it is clear that the students in the
+experimental group exhibited higher mean values for the first three
+motivations: intrinsic, integrated and identified compared to the
+control group. For th the experimental group displayed higher increase
+than the control group students did. This suggests that the treatment
+received by the experimental group students resulted in the students
+having more pro-environmental motivation than the control group students
+do.e other three subscales, introjected, external and amotivation, both
+groups exhibited lower mean scores. This shows that they improved on
+these three subscales. -
 
-</td>
-<td style="text-align:left;">
+**Improved?**: Both groups have increased their knowledge and moved
+toward intrinsic motivation toward the environment. However the increase
+is greater for the experimental group (experiential based with
+constructivist bases).
 
-Knowledge: - both groups exhibited an increase in the minimum and
-maximum scores. However, it is observed that the increase in the
-experimental group was higher than the control group. The mean post-test
-score of the experimental group was also higher than the average (Mexp =
-9.66; SD exp = 1.66). - there was a significant effect (F(1,59) = 88.30,
-p \< 0.05) of experiential-based climate change education on the
-students’ knowledge about climate change after controlling the pre-test
-scores. The partial eta-squared value of 0.599 indicates that 59.9% of
-changes in the post-test were caused by the treatment. Motivation toward
-the environment: - In the post-test from the results in Table 5, it is
-clear that the students in the experimental group exhibited higher mean
-values for the first three motivations: intrinsic, integrated and
-identified compared to the control group. For th the experimental group
-displayed higher increase than the control group students did. This
-suggests that the treatment received by the experimental group students
-resulted in the students having more pro-environmental motivation than
-the control group students do.e other three subscales, introjected,
-external and amotivation, both groups exhibited lower mean scores. This
-shows that they improved on these three subscales. -
+## 47.6 Outcomes
 
-</td>
-</tr>
-</tbody>
-</table>
+**knowledge**: Correctness in the Climate Change Knowledge Test
+(*Worked?*: Yes )
+
+**emotions**: Measurement of motivation Toward the environment scale.
+The scale measure whether the motivation is
+intrinsic\>integrated\>identified\>introjected\>external\>amotivation.
+The idea is that people having more self motivation is more likely to
+act than people having an extrinsic motivation (*Worked?*: Yes )
+
+## 47.7 Conclusions
+
+**Conclusions**: Experiential based constructivist pedagogy is more
+efficient for knowledge gain and creating a more intrisic motivation
+toward the environment.
+
+**Message to keep:**: An experimental study with an experimental and a
+control group which shows that the experiential based contructivist
+method is more efficient for knowledge gains and to create a more
+intrinsic/personal motivation toward environment. This more intrinsic
+motivation is expected to be more likely to push toward action. The
+authors insist on the special role of the local field trip in the
+experimental group which makes students more “touched” by the local
+ecosystem and the consequences of climate change
 
 # 48 Keller2019 ( MB )
+
+**title** Changing Climate Change Education. Exploring moderate
+constructivist and transdisciplinary approaches through the
+research-education co-operation k.i.d.Z.21
 
 ## 48.1 abstract
 
@@ -11813,15 +9988,7 @@ Both
 
 ## 48.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This study aims to provide scientifically reproducible evidence of the
 comparable success of the various educational modules of k.i.d.Z.21,
@@ -11829,15 +9996,7 @@ when delivered in three ways: in line with moderate constructivist
 theories, in line with transdisciplinary theories, and, thirdly,
 delivered via a combination of both theories.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 - does the project k.i.d.Z.21 raise the young participants’ preparedness
   for CC and its consequences?
@@ -11848,137 +10007,89 @@ Questions
   experience by combining both moderate constructivist and
   transdisciplinary approaches?
 - Are the teenagers able to produce detailed responses regarding their
-  CCE experiences? `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+  CCE experiences?
 
 ## 48.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular/Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons,Seminaries,Research projects,Field trip
 
-Curricular/Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons,Seminaries,Research projects,Field trip
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-k.i.d.Z.21 is a one-year multi-module programme, the interventions
-analysed here are: - classical school lessons on CC - every student’s
-two individual CC research projects - lectures, workshop + debates with
-CC experts - CC research students + CC experts in high Alpine settings
-(one-week excursion)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: k.i.d.Z.21 is a one-year multi-module programme, the
+interventions analysed here are: - classical school lessons on CC -
+every student’s two individual CC research projects - lectures,
+workshop + debates with CC experts - CC research students + CC experts
+in high Alpine settings (one-week excursion)
 
 ## 48.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-post questionnaire - teacher online survey - structured
+interviews with the head teachers - pencil and paper survey completed by
+students
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Quantitative: - T-Test for dependent samples on self
+reported gain in preparedness - Anova with Games-Howel post-hoc test on
+Likert scale data - Nominal data analysed with chi-square tests
+Qualitative: - follows a deductive approach on a theoretically
+depveloped set of categories reliability of the pre-post tests with
+Holsti and randomly adjusted coefficient of Krippendorff’s alpha
 
-</td>
-<td style="text-align:left;">
-
-- pre-post questionnaire
-
-- teacher online survey
-
-- structured interviews with the head teachers
-
-- pencil and paper survey completed by students
-
-  </td>
-  </tr>
-  <tr>
-  <td style="text-align:left;">
-
-  Resultados.obtenidos.por.cada.outcome
-
-  </td>
-  <td style="text-align:left;">
-
-  General result: raise in preparedness for CC and its consequences
-  $$KNOWLEDGE$$
-
-- students rated themselves: pre- 51%, post- 75%, significative
-  chi-squared test
-
-- t-test show also a significative increase on the same data Comparing
-  educative approach:
-
-- all of the innovative approach es are rated to convey a much better
-  understanding than classical school lessons (ANOVA, p\<0.001; post-hoc
-  tests, all p values\<0.001)
-
-- the module classical school lessons on CC is given the highest rating
-  1 by only five percent of participating students, whereas both the
-  modules lectures, workshops + debates with CC experts (19 percent),
-  and every student’s two individual CC research projects (21 percent)
-  are rated approximately four times higher.
-
-- Combining transdisciplinary and moderate constructivist approaches,
-  the module CC research students + CC experts in high Alpine setting
-  shows the most profound influence on CC understanding (33 percent)
-  compared to the other modules (Chi square test, p\< 0.001)
+**Results**: General result: raise in preparedness for CC and its
+consequences $$KNOWLEDGE$$ - students rated themselves: pre- 51%, post-
+75%, significative chi-squared test - t-test show also a significative
+increase on the same data Comparing educative approach: - all of the
+innovative approach es are rated to convey a much better understanding
+than classical school lessons (ANOVA, p\<0.001; post-hoc tests, all p
+values\<0.001) - the module classical school lessons on CC is given the
+highest rating 1 by only five percent of participating students, whereas
+both the modules lectures, workshops + debates with CC experts (19
+percent), and every student’s two individual CC research projects (21
+percent) are rated approximately four times higher. - Combining
+transdisciplinary and moderate constructivist approaches, the module CC
+research students + CC experts in high Alpine setting shows the most
+profound influence on CC understanding (33 percent) compared to the
+other modules (Chi square test, p\< 0.001)
 
 - classical school lessons take two thirds of the project time per
   student per year (66.6 percent,100 h/150 h), but they are awarded less
   than three percent of the overall positive codings affirming learning
   by the students.
-
 - two thirds of the codings affirming learning appear to be achieved in
   little more than ten percent of the project time in a combined
   transdisciplinary and moderate constructivist approach.
 
-  </td>
-  </tr>
-  </tbody>
-  </table>
+**Improved?**: Self-reported knowledge increased and students identified
+the approaches combining moderate constructivist and transdisciplinary
+approaches as the most helpful for this raise.
+
+## 48.6 Outcomes
+
+**knowledge**: - Self reported preparedness for CC and its
+consequences - how each module helped understand CC and its consequences
+(self-reported) (*Worked?*: Yes in the follow up but back at baseline in
+)
+
+## 48.7 Conclusions
+
+**Conclusions**: - Overall the k.i.d.Z.21 have a very positive effect on
+the self-reported preparedness $$KNOWLEDGE$$ for CC and its
+consequences - both innovative approach (moderate constructivism and
+transdisciplinary approaches) are reported as more useful than
+traditional school lessons - Combining moderate constructivism and
+transdisciplinary approaches is the most useful reported approach
+
+**Message to keep:**: This is another k.i.d.Z.21 study which show great
+results in raising (self-reported) knowledge of the students. When
+modules are compared, the ones following innovative pedagogical approach
+(moderate constrictivism or transdisciplinary approach are perceived as
+performing better, and combining them show even greater results.
 
 # 49 Kern2017 ( BQ )
+
+**title** A culturally relevant teacher professional development for
+Teaching climate change to Native American Students
 
 ## 49.1 abstract
 
@@ -12080,67 +10191,65 @@ Both
 
 ## 49.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 • To improve the teaching of climate change science in the Intermountain
 West • To understand how teachers align their curricula, content, and
 instructional materials with culturally relevant content knowledge and
 teaching methods:
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 49.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Professional development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: NA
 
-Professional development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: NA
 
 ## 49.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: Explotation of quantitative data with descriptive
+statistics
+
+**Results**: NA
+
+**Improved?**: Gains in understanding how scientists access data to
+supply climate change science; Gains in how to present climate change
+concepts; Gains in climate change knowledge and culturally-relevant
+impacts; Gains in ability to interpret data
+
+## 49.6 Outcomes
+
+**knowledge**: - Climate change Content Knowledge survey pre-post
+(*Worked?*: Yes )
+
+**awareness**: Culturally relevant instruction awareness - Culturally
+Congruent Inventory (CCI) (*Worked?*: Yes )
+
+## 49.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Teachers are in need of a better understanding of
+how to interpret the data related to climate change. It is not uncommon
+for teachers in the secondary school systems to avoid this topic because
+of its political baggage and their lack of familiarity with the relevant
+science. Bringing Indigenous knowledge into the classroom to teach
+science is challenging for the teachers (lack of confidence, of contact,
+of ability to build partnerships).
 
 # 50 Khadka2021 ( ABP )
+
+**title** Unpacking the power of place-based education in climate change
+communication
 
 ## 50.1 abstract
 
@@ -12255,144 +10364,85 @@ urban
 
 ## 50.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to evaluated the efficacy of a place-based climate change education
 program
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Questions**:
 
-Questions
-
-</td>
-<td style="text-align:left;">
-
-"(1) To what extent does the program influence participants’ knowledge,
+“(1) To what extent does the program influence participants’ knowledge,
 awareness, sense of responsibility and sense of hope concerning CC? (2)
 To what extent does the program influence participants’ intention
 performing more climate friendly behavior? (3) What are participants’
-perceptions regarding a place-based CC education toolkit?"
-
-</td>
-</tr>
-</tbody>
-</table>
+perceptions regarding a place-based CC education toolkit?”
 
 ## 50.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: climate change toolkit
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-climate change toolkit
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Introduction: A poster was created that defined CC, how it works, its
-causes (individual activities that accelerate change), the impacts in
-Missouri, and some ways to become more climate friendly. II. Guided
-hike: A guided hike was adapted from “Southern Forest and Climate Change
-Activity 1: stepping through the climate science” (Monroe & Oxarart,
-2014). During the hike, participants learned about some evidence of CC
-in Missouri and how to identify it. III. Self reflection: The third item
-in the toolkit was a “score card.” These cards consisted of list of
-activities that reduce the impact of CC at home and other local
-contexts, such as parks. It also listed a series of climate friendly
-activities and a self-scoring rubric (0 1⁄4 never, 1 1⁄4 sometimes, 2
-1⁄4 always). Based on the sum score (from 0 to 32), a reccommendation
-was provided: 0-12: try harder, 13-24 1⁄4 on the right track, and 25-32
-1⁄4 keep it up.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Introduction: A poster was created that defined CC, how
+it works, its causes (individual activities that accelerate change), the
+impacts in Missouri, and some ways to become more climate friendly. II.
+Guided hike: A guided hike was adapted from “Southern Forest and Climate
+Change Activity 1: stepping through the climate science” (Monroe &
+Oxarart, 2014). During the hike, participants learned about some
+evidence of CC in Missouri and how to identify it. III. Self reflection:
+The third item in the toolkit was a “score card.” These cards consisted
+of list of activities that reduce the impact of CC at home and other
+local contexts, such as parks. It also listed a series of climate
+friendly activities and a self-scoring rubric (0 1⁄4 never, 1 1⁄4
+sometimes, 2 1⁄4 always). Based on the sum score (from 0 to 32), a
+reccommendation was provided: 0-12: try harder, 13-24 1⁄4 on the right
+track, and 25-32 1⁄4 keep it up.
 
 ## 50.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionario
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: The data were analyzed using IBM SPSS version 25.
+Percentages, means, standard deviations, and frequency distributions
+were calculated on demo- graphics and the perceptions of the toolkit.
 
-</td>
-<td style="text-align:left;">
+**Results**: students showed significant increases in level of knowledge
+regarding CC (t 1⁄4 8.72, df 1⁄4 28, p \<.001), awareness of CC (t 1⁄4
+6.64, df 1⁄4 28, p \< 0.001), sense of responsibility regarding CC (t
+1⁄4 1.83, df 1⁄4 28, p 1⁄4 04), sense of hope regarding CC (t 1⁄4 1.62,
+df 1⁄4 28, p 1⁄4 .05), and behavioral intention (t 1⁄4 1.43, df 1⁄4 28,
+p 1⁄4 .08).
 
-questionario
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 50.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: examine knowledge about CC. (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: asking students how well informed they felt about CC.
+(*Worked?*: yes )
 
-students showed significant increases in level of knowledge regarding CC
-(t 1⁄4 8.72, df 1⁄4 28, p \<.001), awareness of CC (t 1⁄4 6.64, df 1⁄4
-28, p \< 0.001), sense of responsibility regarding CC (t 1⁄4 1.83, df
-1⁄4 28, p 1⁄4 04), sense of hope regarding CC (t 1⁄4 1.62, df 1⁄4 28, p
-1⁄4 .05), and behavioral intention (t 1⁄4 1.43, df 1⁄4 28, p 1⁄4 .08).
+**emotions**: Hope (*Worked?*: yes )
 
-</td>
-</tr>
-</tbody>
-</table>
+**other**: hope, responsability (*Worked?*: yes )
+
+## 50.7 Conclusions
+
+**Conclusions**: Use of place-based education was hypothesized to
+promote knowledge, awareness, responsibility, hope, and behavioral
+intention of participants regarding climate change. Results suggested
+that the program was an effective way to increase understanding of
+climate change, as evidenced by significant increases in a variety of
+measures.
+
+**Message to keep:**: NA
 
 # 51 Kinsey2012 ( ABP )
+
+**title** Using Rain Gardens to Promote Service Learning and Climate
+Science Education with Urban Youth
 
 ## 51.1 abstract
 
@@ -12475,125 +10525,68 @@ urban
 
 ## 51.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to increase the capacity of community-based partners to continue with
 climate science/climate change education
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 51.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: outdoor
 
-</td>
-<td style="text-align:left;">
+**Type**: education and installation of two rain gardens
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-outdoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-education and installation of two rain gardens
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Students learn about the difference between weather and climate; the
-carbon cycle and how increased amounts of carbon dioxide in the
-atmosphere impact our planet; utilize technology as a means to measure
-and graph temperature; as well as plan service learning projects that
-focus on small changes in behavior that can improve the environment.
-also helped install two rain gardens at the school as their service
-learning project. Rain gardens are shallow landscaped depressions in the
-oil that can be installed at homes, parks, and schools, and that provide
-environmental benefits by filtrating stormwater runoff. Rain gardens are
-created using native plants, are aesthetically leasing, and require
-minimal maintenance.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Students learn about the difference between weather and
+climate; the carbon cycle and how increased amounts of carbon dioxide in
+the atmosphere impact our planet; utilize technology as a means to
+measure and graph temperature; as well as plan service learning projects
+that focus on small changes in behavior that can improve the
+environment. also helped install two rain gardens at the school as their
+service learning project. Rain gardens are shallow landscaped
+depressions in the oil that can be installed at homes, parks, and
+schools, and that provide environmental benefits by filtrating
+stormwater runoff. Rain gardens are created using native plants, are
+aesthetically leasing, and require minimal maintenance.
 
 ## 51.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionario
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
-
-questionario
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-knowledge gained: How to measure weather (58% change); Understanding
-that the atmosphere traps the sun’s heat energy and keeps Earth warm
-(54%); The major events in Earth’s history that created the
+**Results**: knowledge gained: How to measure weather (58% change);
+Understanding that the atmosphere traps the sun’s heat energy and keeps
+Earth warm (54%); The major events in Earth’s history that created the
 weather/climate system (44%); Increase in understanding the difference
 between climate and weather (31%).
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: conocimiento mejoro
+
+## 51.6 Outcomes
+
+**knowledge**: YES (*Worked?*: yes )
+
+## 51.7 Conclusions
+
+**Conclusions**: Urban youth have benefited from their participation in
+the Jersey Roots, Global Reach 4-H climate science program since 2009.
+Participating in the development and installation of two rain gardens
+has enabled them to connect climate science curriculum to a real-world
+environmental project. This provided a meaningful service opportunity
+for students, allowing for a youth voice to be actively heard.
+
+**Message to keep:**: NA
 
 # 52 Klosterman2010 ( JGOP )
+
+**title** Multi‐level Assessment of Scientific Content Knowledge Gains
+Associated with Socioscientific Issues‐based Instruction
 
 ## 52.1 abstract
 
@@ -12689,129 +10682,77 @@ Urban and rural
 
 ## 52.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The goal of this study was to develop, implement, and evaluate an
 SSI-based curriculum in terms of its ability to impact content knowledge
 gains using both curriculum-aligned and standards-aligned assessments.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 52.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Three-week unit on global warming
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Three-week unit on global warming
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The three-week unit consisted of seven learning exercises across
-approximately 15 contact hours. The first of the seven exercises
-required students to identify their own personal reactions to global
-warming following discussions of global warming in the news. The second
-exercise highlighted the sociopolitical complexity of global warming.
-The next three portions of the intervention provided opportunities to
-explore the basic concepts underlying the science of global warming
-through three consecutive laboratory exercises. In the sixth exercise,
-students considered climate data and displays produced by the National
-Oceanic and Atmospheric Administration. For the culminating activity,
-students worked in pairs to develop a national policy related to global
-climate change.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The three-week unit consisted of seven learning
+exercises across approximately 15 contact hours. The first of the seven
+exercises required students to identify their own personal reactions to
+global warming following discussions of global warming in the news. The
+second exercise highlighted the sociopolitical complexity of global
+warming. The next three portions of the intervention provided
+opportunities to explore the basic concepts underlying the science of
+global warming through three consecutive laboratory exercises. In the
+sixth exercise, students considered climate data and displays produced
+by the National Oceanic and Atmospheric Administration. For the
+culminating activity, students worked in pairs to develop a national
+policy related to global climate change.
 
 ## 52.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Two instruments, Standards-aligned Test and Curriculum-aligned
+Test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Analysis of standards-aligned pre- and post-test scores
+was conducted using a repeated measures ANOVA and qualitative analysis.
 
-</td>
-<td style="text-align:left;">
+**Results**: The average gains for the ES class was 1.88, and for CH was
+1.294 (total score = 20; see Figure 1). The results of the analysis
+indicate that student post-test scores were statistically significantly
+different than their pre-test scores (F = 15.31, p \< 0.001). There was
+no evidence of an interaction effect between the time variable (pre and
+post) and course variable suggesting that the intervention produced
+similar effects in both classroom settings (F = 2.88, p = 0.094).
 
-Two instruments, Standards-aligned Test and Curriculum-aligned Test
+**Improved?**: The students gained more knowledge about global warning
+and expressed more accurate, more detailed, and more sophisticated
+understandings of global warming, the greenhouse effect, and the
+controversy and challenges associated with these issues.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 52.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Knowledge gains on global warning and its controversy
+(*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 52.7 Conclusions
 
-The average gains for the ES class was 1.88, and for CH was 1.294 (total
-score = 20; see Figure 1). The results of the analysis indicate that
-student post-test scores were statistically significantly different than
-their pre-test scores (F = 15.31, p \< 0.001). There was no evidence of
-an interaction effect between the time variable (pre and post) and
-course variable suggesting that the intervention produced similar
-effects in both classroom settings (F = 2.88, p = 0.094).
+**Conclusions**: NA
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: The introduction of Socioscientific Issues (SSI)
+could be a beneficial pedagogic strategy in the learning process. In
+this study, the results shown that students gains knowlege on global
+warming and other related topics.
 
 # 53 Kolenaty2022 ( SB )
+
+**title** What Triggers Climate Action: The Impact of a Climate Change
+Education Program on Students’ Climate Literacy and Their Willingness to
+Act
 
 ## 53.1 abstract
 
@@ -12932,138 +10873,71 @@ Both
 
 ## 53.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Determine impact of curricular intervention on CC understanding,
 mitigation and adaptation.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Questions**:
 
-Questions
-
-</td>
-<td style="text-align:left;">
-
-What is global warming/CC? (5 items, system and action knowledge); How
-much will the following activities help us mitigate CC? (10 items,
-effectiveness knowledge); Is CC a serious problem? (8 items, CC
-concern); What do you think about the following statements? (7 items, CC
-mitigation self-efficacy); Are you willing to adopt the following
-actions to help mitigate CC? (8 items, willingness to act)
-
-</td>
-</tr>
-</tbody>
-</table>
+     What is global warming/CC? (5 items, system and action knowledge);
+    How much will the following activities help us mitigate CC? (10 items, effectiveness knowledge);
+    Is CC a serious problem? (8 items, CC concern);
+    What do you think about the following statements? (7 items, CC mitigation self-efficacy);
+    Are you willing to adopt the following actions to help mitigate CC? (8 items, willingness to act) 
 
 ## 53.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Several activities grouped into 4 missions.
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Several activities grouped into 4 missions.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-4 missions in groups of students + faculty (3-6 persons per group):
-mission 1: videos, texts, brainstorming, mind maps and art-based
-activities about CC and then share with others mission 2: calculate
-personal and school carbon footprint, implement ideas to decrease carbon
-footprint and share mission 3: create map of areas at risk of climatic
-events + propose adaptations mission 4: talk to local and national
-stakeholders to present adapt/ mitigation proposals
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: 4 missions in groups of students + faculty (3-6 persons
+per group): mission 1: videos, texts, brainstorming, mind maps and
+art-based activities about CC and then share with others mission 2:
+calculate personal and school carbon footprint, implement ideas to
+decrease carbon footprint and share mission 3: create map of areas at
+risk of climatic events + propose adaptations mission 4: talk to local
+and national stakeholders to present adapt/ mitigation proposals
 
 ## 53.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: survey and focus groups in pre- and post intervention.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Pre- post analysis of CC knowledge, attitudes and
+willingness to act/ self-efficacy survey.
 
-</td>
-<td style="text-align:left;">
+**Results**: Significant effecs and large to moderate effect sizes in
+all considered outcomes (CC system knowledge, CC Action knowledge, CC
+effectiveness knowledge, CC concern, CC action self-efficacy and CC
+willingness to act). Results are also triangulated by qualitative data
+showing similar patterns
 
-survey and focus groups in pre- and post intervention.
+**Improved?**: All pre-post test show significant effects with large to
+moderate effect sizes.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 53.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: 5 items on what is CC and its cuases/ consequences.
+(*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**intention**: Are you willing to adopt the following actions to help
+mitigate CC? (8 items, willing ness (*Worked?*: Yes )
 
-Significant effecs and large to moderate effect sizes in all considered
-outcomes (CC system knowledge, CC Action knowledge, CC effectiveness
-knowledge, CC concern, CC action self-efficacy and CC willingness to
-act). Results are also triangulated by qualitative data showing similar
-patterns
+## 53.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Very promising results overall.
+
+**Message to keep:**: SEM muestra que system knowledge no está
+relacionado con willingness to act pero si mediado por self-efficacy y
+concern.
 
 # 54 Korfgen2017 ( ABP )
+
+**title** (Climate) Change in young people’s minds – From categories
+towards interconnections between the anthroposphere and natural sphere
 
 ## 54.1 abstract
 
@@ -13192,15 +11066,7 @@ urban
 
 ## 54.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The objective of the study presented herein is to investigate how far
 interconnections between the natural sphere and the anthroposphere are
@@ -13209,120 +11075,74 @@ change. Our goal is to go beyond the consideration of students with a
 focus on the natural sphere, and rather analyse their ideas with regard
 to the complexity of global climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  what content teenagers connect with, as regards the issue of climate
     change?
 2.  How far the teenagers build an interconnection between different
-    spheres is investigated? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    spheres is investigated?
 
 ## 54.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: both
 
-</td>
-<td style="text-align:left;">
+**Type**: Educational activities
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Educational activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-2 phases: 1. The first one is an in-school learning setting that allows
-an interdisciplinary learning process and applies the theory of moderate
-constructivism. 2. It is an out-of-school learning setting, which also
-encompasses the criteria described above. The decisive difference
-compared to the first setting, however, is that the students are out of
-their everyday school environment and confronted with an authentic high
-mountain environment.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: 2 phases: 1. The first one is an in-school learning
+setting that allows an interdisciplinary learning process and applies
+the theory of moderate constructivism. 2. It is an out-of-school
+learning setting, which also encompasses the criteria described above.
+The decisive difference compared to the first setting, however, is that
+the students are out of their everyday school environment and confronted
+with an authentic high mountain environment.
 
 ## 54.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test / post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: Results show that the choice of the learning setting
+influences the topics students connect with climate change.
+Interconnections between sub-spheres of the anthroposphere and natural
+sphere are made only occasionally. These findings serve as a basis for
+reconsidering the content and foundation of climate change communication
+with young people. W
 
-pre-test / post-test
+**Improved?**: better understanding and more awareness
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 54.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: yes (*Worked?*: yes )
 
-Results show that the choice of the learning setting influences the
-topics students connect with climate change. Interconnections between
-sub-spheres of the anthroposphere and natural sphere are made only
-occasionally. These findings serve as a basis for reconsidering the
-content and foundation of climate change communication with young
-people. W
+## 54.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: They recommend that climate change educational
+programmes should include phases that allow the following: a)
+involvement with climate change issues related to single spheres in the
+first phase, and b) consideration of the interconnections between
+spheres when becoming involved with climate change issues in the second
+phase. As the educational setting can considerably influence the focus
+of the learning process, it should be chosen thoughtfully
+
+**Message to keep:**: The findings encourage reflection upon the
+formulation of the climate change educational programmes followed so
+far, but also of educational programmes in general where the physical
+environment or human-environmental interconnections are relevant.
+Approaches and content that support more connected thinking are
+recommended. For the development of such strategies, further research on
+the content considered relevant by teenagers will be necessary
 
 # 55 Korsager2015 ( MB )
+
+**title** International Peer Collaboration to Learn about Global Climate
+Changes
 
 ## 55.1 abstract
 
@@ -13449,228 +11269,171 @@ mean.age
 
 ## 55.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To explore the opportunities that international peer collaboration in
 Global Climate Exchange gives $$internet platform, base of the
 intervention$$, we have analyzed how students develop their explanations
 about climate change issues over time
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 - How do students develop their explanations about climate change issues
   over time when participating in Global Climate Exchange?
 - Is the development of the students’ explanations of climate change
   issues correlated to how the students interact with their peers?
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-  `{=html}     </table>`
 
 ## 55.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular \[supported by teachers, it might even
+be part of the study plan, but that is not clear in the paper
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Wiki redaction, discussions on internet
 
-Curricular $$supported by teachers, it might even be part of the study
-plan, but that is not clear in the paper
-```{=html}
-</td>
-```
-```{=html}
-</tr>
-```
-```{=html}
-<tr>
-```
-```{=html}
-<td style="text-align:left;">
-```
-Outdoor/Indoor/Both
-```{=html}
-</td>
-```
-```{=html}
-<td style="text-align:left;">
-```
-Indoor
-```{=html}
-</td>
-```
-```{=html}
-</tr>
-```
-```{=html}
-<tr>
-```
-```{=html}
-<td style="text-align:left;">
-```
-Type.of.intervention
-```{=html}
-</td>
-```
-```{=html}
-<td style="text-align:left;">
-```
-Wiki redaction, discussions on internet
-```{=html}
-</td>
-```
-```{=html}
-</tr>
-```
-```{=html}
-<tr>
-```
-```{=html}
-<td style="text-align:left;">
-```
-Descripcion.de.intervención
-```{=html}
-</td>
-```
-```{=html}
-<td style="text-align:left;">
-```
-\"We have developed a science module \[on an internet platform$$ called
-Global Climate Exchange. In Global Climate Exchange, students
-collaborate with their peers from other countries $$here: Norway (only
-ones analysed), China, Sweden, Canada$$ in online inquiry-based
-activities. The module was designed as a scaffolding wiki, in other
-words, as an online knowledge community where students were scaffolded
-through activities, by tasks given by the designers and the teachers, to
-explore and discuss climate change issues. In Global Climate Exchange,
-students were guided to collaborate with their peers through four
-different activities: Brainstorm activity, Issue activity, Discussion
-activity, and Chat activity, during a 6-week period - Brainstorm
-activity: During the first week, the students worked on the brainstorm
-activity, where they identified national climate change issues, added
-these to a Google Map developed specifically for this activity, and
-described the issues on a brainstorm page. Through this activity, the
-students started to communicate national and local climate change issues
-to their peers. After finishing this activity, the students’ work was
-examined by teachers and researchers to identify global issues that were
-relevant for further elaboration in the subsequent activities - Issue
-activity : After the brainstorm activity, each student was assigned to
-one of the twelve climate change issues, building groups containing
-students from different countries. The students’ task was, in
-collaboration, to investigate and describe their climate change issue
-further; more specifically, they were asked to describe the issue, give
-relevant examples from their own countries, and explain the science
-related to the issue. - Discussion activity: Still working in their
-groups from the issue activity, the students were introduced to a
-discussion activity. The discussions were initiated by questions posed
-by the designers and teachers about climate change topics: “What is
-‘Global’ in Global Climate Change?”, “How can changes in your lifestyle
-improve climate change?”, “What could be done?”, “What has been done?”,
-and “What might happen if we do nothing?” - Chat activity: Embedded in
-Global Climate Exchange there was also the option for students to, at
-any time, create a chat room. There was no guidance provided for the use
-of chat rooms in Global Climate Exchange, except for some ethical rules,
-which were monitored by researchers and teachers in each country.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: “We have developed a science module $$on an internet
+platform$$ called Global Climate Exchange. In Global Climate Exchange,
+students collaborate with their peers from other countries $$here:
+Norway (only ones analysed), China, Sweden, Canada$$ in online
+inquiry-based activities. The module was designed as a scaffolding wiki,
+in other words, as an online knowledge community where students were
+scaffolded through activities, by tasks given by the designers and the
+teachers, to explore and discuss climate change issues. In Global
+Climate Exchange, students were guided to collaborate with their peers
+through four different activities: Brainstorm activity, Issue activity,
+Discussion activity, and Chat activity, during a 6-week period -
+Brainstorm activity: During the first week, the students worked on the
+brainstorm activity, where they identified national climate change
+issues, added these to a Google Map developed specifically for this
+activity, and described the issues on a brainstorm page. Through this
+activity, the students started to communicate national and local climate
+change issues to their peers. After finishing this activity, the
+students’ work was examined by teachers and researchers to identify
+global issues that were relevant for further elaboration in the
+subsequent activities - Issue activity : After the brainstorm activity,
+each student was assigned to one of the twelve climate change issues,
+building groups containing students from different countries. The
+students’ task was, in collaboration, to investigate and describe their
+climate change issue further; more specifically, they were asked to
+describe the issue, give relevant examples from their own countries, and
+explain the science related to the issue. - Discussion activity: Still
+working in their groups from the issue activity, the students were
+introduced to a discussion activity. The discussions were initiated by
+questions posed by the designers and teachers about climate change
+topics:”What is ‘Global’ in Global Climate Change?“,”How can changes in
+your lifestyle improve climate change?“,”What could be done?“,”What has
+been done?“, and”What might happen if we do nothing?” - Chat activity:
+Embedded in Global Climate Exchange there was also the option for
+students to, at any time, create a chat room. There was no guidance
+provided for the use of chat rooms in Global Climate Exchange, except
+for some ethical rules, which were monitored by researchers and teachers
+in each country.
 
 ## 55.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Using the usernames of the students, the author extracted all the
-content from the wiki platforms and analysed them (see analyses for the
-identification and coding of categories), they also extracted (number
-indicators) the activity and interactions of the students in the
+**Data**: Using the usernames of the students, the author extracted all
+the content from the wiki platforms and analysed them (see analyses for
+the identification and coding of categories), they also extracted
+(number indicators) the activity and interactions of the students in the
 platform.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: There is no real complex analyses used, however, the
+identification and coding of the qualitative data is very structured:
+“The analyses were conducted in following three steps. In the first
+step, scientific concepts, links, and perspectives in students’ written
+explanations were identified and coded. Secondly, after students’
+explanations were categorized into concepts and links, they were
+converted into concept maps. This coding included an organization of the
+explanations in terms of how coherent the explanations were and the
+relevance of different parts fitting the explanation as a whole. In this
+step, explanations of cause and effect relationships were evaluated. The
+categorizations of explanations are based on the taxonomy of Causal
+Models and the SOLO taxonomy. To answer the second research question,
+the developments of students’ explanations of climate change issues were
+correlated with how the students interacted with peer students’ online
+activities.
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: Use of concepts: The results show that the proportion of
+relevant scientific concepts in relation to the total number of words
+used in the explanation increased on average from 0.16 in the first week
+to 0.20 in the last week. The proportion of concepts that the students
+used in their explanations varied from 0.12 to 0.36 between students,
+whereas there was less variation within each student’s explanation over
+time. The greatest difference was between the students’ use of concepts
+in the first week (SD = 0.13), which declined to 0.8 in week 2, and then
+to 0.6 from week 3 to week 6. - Link quality between concepts: The first
+week had links in students’ explanations that were dominated by low
+quality: weak/irrelevant/misunderstood. The proportion of low quality
+links decreased in the third week and remained stable until week 6. -
+Variety of perspectives on the studied issues: Six perspectives were
+identified in the students’ initial explanations: cause, evidence,
+mechanism, predicted consequence, remediation, and adaptation. In the
+first week, students focused mostly on explaining predicted consequences
+(37%). In week 6, the students focused similarly on predicted
+consequences (29%), evidence (27%), and mechanisms (23%). The number of
+perspectives explained increased until week 3, and then became stable
+until week 6. On average, the students explained three perspectives in
+week 6, but it varied from one to four. - Quality of causal patterns: In
+the sixth week, a large majority of the students’ explanations were
+categorized as Medium (n = 11) or Medium–high (n = 5). Compared to the
+first week, this is an increase of 41%. It is also worth noting that
+none of the students’ explanations was at Medium–high in the first week,
+whereas almost a third were in this category by week 6. These students
+developed their explanations in terms of describing multiple causes and
+effects, and by describing how these causal relationships were a part of
+the whole system. More than half of the students (n = 11) ended up
+having a medium quality to their explanations of climate change issues,
+meaning that they identified multiple linear causalities involving
+multiple indirect connections, used a variety of concepts, and linked
+them properly together as valuable examples or complementary
+information, and they described at least three perspectives for climate
+change issues. Second question: is the quality of student explanations
+linked to the peer interactions in the platform: - Twelve of 19 students
+developed their explanations in terms of advancement; for example, they
+better explained causalities using scientific concepts, by linking
+concepts together, and explaining their perspectives regarding climate
+change issues. These students interacted with their peers three times
+more often on average compared to those who did not advance.
 
-</td>
-<td style="text-align:left;">
+**Improved?**: All knowledge aspects improved over time, students used
+more scientific concepts in their explanations, better quality of links
+between concepts, with more variety in the perspectives and an overall
+improved quality of the causal pattens
 
-- Use of concepts: The results show that the proportion of relevant
-  scientific concepts in relation to the total number of words used in
-  the explanation increased on average from 0.16 in the first week to
-  0.20 in the last week. The proportion of concepts that the students
-  used in their explanations varied from 0.12 to 0.36 between students,
-  whereas there was less variation within each student’s explanation
-  over time. The greatest difference was between the students’ use of
-  concepts in the first week (SD = 0.13), which declined to 0.8 in week
-  2, and then to 0.6 from week 3 to week 6.
-- Link quality between concepts: The first week had links in students’
-  explanations that were dominated by low quality:
-  weak/irrelevant/misunderstood. The proportion of low quality links
-  decreased in the third week and remained stable until week 6.
-- Variety of perspectives on the studied issues: Six perspectives were
-  identified in the students’ initial explanations: cause, evidence,
-  mechanism, predicted consequence, remediation, and adaptation. In the
-  first week, students focused mostly on explaining predicted
-  consequences (37%). In week 6, the students focused similarly on
-  predicted consequences (29%), evidence (27%), and mechanisms (23%).
-  The number of perspectives explained increased until week 3, and then
-  became stable until week 6. On average, the students explained three
-  perspectives in week 6, but it varied from one to four.
-- Quality of causal patterns: In the sixth week, a large majority of the
-  students’ explanations were categorized as Medium (n = 11) or
-  Medium–high (n = 5). Compared to the first week, this is an increase
-  of 41%. It is also worth noting that none of the students’
-  explanations was at Medium–high in the first week, whereas almost a
-  third were in this category by week 6. These students developed their
-  explanations in terms of describing multiple causes and effects, and
-  by describing how these causal relationships were a part of the whole
-  system. More than half of the students (n = 11) ended up having a
-  medium quality to their explanations of climate change issues, meaning
-  that they identified multiple linear causalities involving multiple
-  indirect connections, used a variety of concepts, and linked them
-  properly together as valuable examples or complementary information,
-  and they described at least three perspectives for climate change
-  issues. Second question: is the quality of student explanations linked
-  to the peer interactions in the platform:
-- Twelve of 19 students developed their explanations in terms of
-  advancement; for example, they better explained causalities using
-  scientific concepts, by linking concepts together, and explaining
-  their perspectives regarding climate change issues. These students
-  interacted with their peers three times more often on average compared
-  to those who did not advance. `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+## 55.6 Outcomes
+
+**knowledge**: During their explanations in the wiki on climate
+change: - Use of scientific concepts - Links between concepts - Use of
+variety of perspectives - Quality of causal patterns (*Worked?*: Yes )
+
+## 55.7 Conclusions
+
+**Conclusions**: The intervention (use of an internet platform where
+students, chat, participate to discussions and create a wiki on climate
+change) successfully improved the use of concepts by the students, the
+relations between these concepts, and the quality of the scientific
+explanations that the student gave. “The results of this study indicate
+that international peer collaboration, if successfully supported, can be
+an effective approach to climate change education.”
+
+**Message to keep:**: The intervention (use of an internet platform
+where students, chat, participate to discussions and create a wiki on
+climate change) successfully improved the use of concepts by the
+students, the relations between these concepts, and the quality of the
+scientific explanations that the student gave. It is worth noting that
+the activity articulated in a very smart way the local and global
+climate change issues: the students from 4 countries (Norway, China,
+Sweden and Canada even though only Norwegian students were analyses)
+were put into groups on thematic and could develop local issues with
+their peers from other countries. The interaction between those peers
+seem to have a beneficial effects in the improvement of knowledge even
+though there are some methodological uncertainties.
 
 # 56 Kubisch2022 ( ABP )
+
+**title** Rethinking Quality Science Education for Climate Action:
+Transdisciplinary Education for Transformative Learning and Engagement
 
 ## 56.1 abstract
 
@@ -13792,100 +11555,56 @@ urban
 
 ## 56.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 1)  To provide an insight into the scholarly discussion about science
     education and SL for transformative engagement for climate action.
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
+
+**Questions**:
+
+NA
 
 ## 56.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: NA
 
-</td>
-<td style="text-align:left;">
+**Type**: learning modules
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-learning modules
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-we give a brief insight into the role of science education, workshops,
-lectures, debates, its limitations and visions, and significance of
-student’s scientific literacy;
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: we give a brief insight into the role of science
+education, workshops, lectures, debates, its limitations and visions,
+and significance of student’s scientific literacy;
 
 ## 56.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: standardized online questionnaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: This study reveals that the didactical concept of
+transdisciplinary education notably contributes to the implementation of
+scientific literacy vision III as well as vision II.
 
-standardized online questionnaire
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 56.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 56.7 Conclusions
 
-This study reveals that the didactical concept of transdisciplinary
-education notably contributes to the implementation of scientific
-literacy vision III as well as vision II.
+**Conclusions**: According to the results, the three visions of
+scientific literacy are predictors for transformative engagement for
+climate action, assuming to be preceded by a transformative learning
+process.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 57 Kumar2023 ( SB )
+
+**title** Using empirical science education in schools to improve
+climate change literacy
 
 ## 57.1 abstract
 
@@ -14009,133 +11728,70 @@ Both
 
 ## 57.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Determine impact of curricular intervention on CC literacy.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Climate literacy quizzes for primary and secondary schools. They include
 items about heat absortion of objects as well as general knowledge about
 CC and ways to limit it.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 57.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: 5 sessions of 30 mins each.
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-5 sessions of 30 mins each.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Session 1: Fun and play, familiarization with ipad and IR camera + its
-colour coding. Session 2: Indoor objetcs, link surface temperature -
-distance to heat source and material. Session 3: outdoor objects,
-absortion of heat and effects of shade. Session 4: green infrastructure,
-effect of cooling capacity of gren infrastructure. Session 5:
-miscellaneous, free reign of taking images according to student’s
-interests.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Session 1: Fun and play, familiarization with ipad and
+IR camera + its colour coding. Session 2: Indoor objetcs, link surface
+temperature - distance to heat source and material. Session 3: outdoor
+objects, absortion of heat and effects of shade. Session 4: green
+infrastructure, effect of cooling capacity of gren infrastructure.
+Session 5: miscellaneous, free reign of taking images according to
+student’s interests.
 
 ## 57.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pre-post quizzes assessing knowledge about causes,
+consequences and possible mitigations of CC.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Pre- post comparisons assessed via statistical testing.
+Motivation and focus on the intervention were assessed by a
+qualitatitve/ observational analysis of the photographs taken.
 
-</td>
-<td style="text-align:left;">
+**Results**: Intervention shows significant results in the expected
+direction in most but not all schools. Greater impact in consequences
+compared to causes and action on CC which may induce climate anxiety.
 
-Pre-post quizzes assessing knowledge about causes, consequences and
-possible mitigations of CC.
+**Improved?**: Pre-post tests showed significant effects of intervention
+in most but not all schools. Greater impact on knowledge of consequences
+compared to causes and mitigation.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 57.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: In-class quizzes about knowledge of CC and ways to adatp
+and mitigate. Specific items for primary and secondary schools.
+(*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**intention**: to act) (*Worked?*: NA )
 
-Intervention shows significant results in the expected direction in most
-but not all schools. Greater impact in consequences compared to causes
-and action on CC which may induce climate anxiety.
+## 57.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Intervention works in the expecteed direction,
+variability between schools could be attributed to low n in certain
+schools. Program could induce a measure of climate anxiety or fear.
+
+**Message to keep:**: IR camera can effectively teach why an object
+heats up/ cools off, needs to be linked to broader CC content though.
 
 # 58 Lambert2012 ( ABP )
+
+**title** Assessing Elementary Science Methods Students’ Understanding
+About Global Climate Change
 
 ## 58.1 abstract
 
@@ -14236,117 +11892,54 @@ urban
 
 ## 58.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to assess preservice and inservice teachers’ knowledge about climate
 change at the beginning and end of an instructional intervention
 embedded in an elementary science methods course.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 58.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: course
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-course
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-instructional intervention embedded in an elementary science methods
-course.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: instructional intervention embedded in an elementary
+science methods course.
 
 ## 58.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Knowledge of Global Climate Change (KGCC) QUESTIONAIRE
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: students increased in their knowledge of climate change
+science after participating in the methods course. They developed more
+interest and confidence in learn- ing about climate change. In addition,
+students completed the course with more positive views on the nature of
+science and climate change.
 
-Knowledge of Global Climate Change (KGCC) QUESTIONAIRE
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 58.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 58.7 Conclusions
 
-students increased in their knowledge of climate change science after
-participating in the methods course. They developed more interest and
-confidence in learn- ing about climate change. In addition, students
-completed the course with more positive views on the nature of science
-and climate change.
+**Conclusions**: NA
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 59 Lambert2013 ( SC )
+
+**title** Climate Change in the Preservice Teacher’s Mind
 
 ## 59.1 abstract
 
@@ -14421,15 +12014,11 @@ sample.size
 
 ## 59.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Questions
+NA
 
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  What changes are evident in overall concern about climate change?
 2.  What changes are there in perceptions about knowledge of climate
@@ -14439,115 +12028,91 @@ Questions
 4.  What changes are there in perceptions about constructs of climate
     change (e.g., causes, evidence and impacts, solutions, scientific
     consensus, influence of politics, and trust of information sources)?
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
 
 ## 59.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Professional Development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Elementary science methods course
 
-Professional Development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Elementary science methods course
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-- Students were first introduced to the ‘’story’’ of climate change
-  through the film, ‘’An Inconvenient Truth.’’ The film presented the
-  evidence for climate change. We framed the classroom discussion after
-  the film to establish classroom discourse in which scientific evidence
-  was set as an expectation by students.
-- Students were provided a 30-page study guide, developed by one of the
-  authors, based on a careful framing of the core science concepts
-  underlying weather and climate change. The guide was sequenced in a
-  ‘’storyline’’ that builds on the basics for understanding the
-  atmospheric composition and factors that affect weather and climate.
-- Students were then introduced to the methods used to study past
-  climates, the natural and humaninduced causes, the observed and
-  projected impacts, and finally suggestions for mitigating and adapting
-  to climate change. `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+**Description**: - Students were first introduced to the ‘’story’’ of
+climate change through the film, ‘’An Inconvenient Truth.’’ The film
+presented the evidence for climate change. We framed the classroom
+discussion after the film to establish classroom discourse in which
+scientific evidence was set as an expectation by students. - Students
+were provided a 30-page study guide, developed by one of the authors,
+based on a careful framing of the core science concepts underlying
+weather and climate change. The guide was sequenced in a ‘’storyline’’
+that builds on the basics for understanding the atmospheric composition
+and factors that affect weather and climate. - Students were then
+introduced to the methods used to study past climates, the natural and
+humaninduced causes, the observed and projected impacts, and finally
+suggestions for mitigating and adapting to climate change.
 
 ## 59.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pre-post 43-item instrument was developed to specifically
+measure students’ perspectives on (1) their self-reported knowledge of
+climate change, (2) evidence (or indicators) of climate change, (3)
+causes of climate change, (4) scientific consensus, (5) impacts of
+climate change, (6) actions or solutions, (7) influence of politics on
+the issue of climate change, and (8) trust of sources of information.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: A paired sample t test was conducted to compare changes in
+students’ self-reported knowledge and levels of concern before and after
+the methods course.
 
-</td>
-<td style="text-align:left;">
+**Results**: The students’ self-reported knowledge of climate change
+increased significantly, from 13.19 points (52 %) to 21.38 points (84 %)
+out of a possible 25 points after participation in the methods course. -
+The results indicated that, after completing the methods course,
+students had developed a level of concern about climate change that was
+significantly closer, from 58.00 (77 %) to 64.33 (86 %), to that held by
+the majority of climate scientists. - The students’ views on the causes
+of climate change were more reflective of scientists’ views at the end
+of the course; however, the change was not significant.
 
-Pre-post 43-item instrument was developed to specifically measure
-students’ perspectives on (1) their self-reported knowledge of climate
-change, (2) evidence (or indicators) of climate change, (3) causes of
-climate change, (4) scientific consensus, (5) impacts of climate change,
-(6) actions or solutions, (7) influence of politics on the issue of
-climate change, and (8) trust of sources of information.
+**Improved?**: self-reported knowledge of climate improved - The level
+of concern about climate change improved - Perceptions on the causes of
+climate change didn’t change significatly
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 59.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Self-reported knowledge scores could range from a low of
+5 to a high of 25 points. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: These overall concern scores could range from 15 to 75,
+the higher score indicating more concern about climate change.
+(*Worked?*: Yes )
 
-- The students’ self-reported knowledge of climate change increased
-  significantly, from 13.19 points (52 %) to 21.38 points (84 %) out of
-  a possible 25 points after participation in the methods course.
-- The results indicated that, after completing the methods course,
-  students had developed a level of concern about climate change that
-  was significantly closer, from 58.00 (77 %) to 64.33 (86 %), to that
-  held by the majority of climate scientists.
-- The students’ views on the causes of climate change were more
-  reflective of scientists’ views at the end of the course; however, the
-  change was not significant. `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+## 59.7 Conclusions
+
+**Conclusions**: - the gain in knowledge is related to the increase in
+their concern about climate change. - the careful framing of climate
+change seems to have been effective in changing perceptions about it and
+promoting interest in the issue. - Climate change science has
+unfortunately been highly politicized and misrepresented in the media.
+Future and practicing teachers need to understand the difference between
+appropriate scientific skepticism and denial of climate change. This
+study seems to indicate that the influence of perceptions about climate
+change can play a role in students’ motivation to learn the science
+needed to understand this complex issue.
+
+**Message to keep:**: Framing, the setting of an issue within an
+appropriate context to achieve a desired interpretation or perspective,
+can make climate science more accessible to the public. Framing helps
+provide an interpretative lens or filter for choosing resources to
+continue to develop their understanding of the science of climate
+change. Based on the study, framing could make climate science more
+accessible to preservice teachers.Climate science has the potential to
+integrate ideas from multiple disciplines using climate change as the
+organizing framework.
 
 # 60 Lawson2019a ( LR )
+
+**title** Children can foster climate change concern among their parents
 
 ## 60.1 abstract
 
@@ -14666,15 +12231,7 @@ urban
 
 ## 60.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To investigate the potential for intergenerational learning for building
 climate change concern among citizens irrespective of their
@@ -14682,65 +12239,56 @@ socio-ideological differences. THey hipothesize that adolescents have
 more potential to learn about climate change, because they are less
 influenced by socio-ideological factors than adults
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 60.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: NA
 
-</td>
-<td style="text-align:left;">
+**Type**: Curricular, field trip e intergeneracional
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Curricular, field trip e intergeneracional
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Discussions with parents and family on the basis of students´service
-projects
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Discussions with parents and family on the basis of
+students´service projects
 
 ## 60.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: developed two assessment instruments: a semi-structured
+clinical interview and a written assessment. The interview contained
+eight tasks. Seven tasks required students to explain individual
+macroscopic processes: tree growth, baby girl growth, girl running, tree
+decay, ﬂame burning, car running, and lamp lightning. The other task
+assessed students’ understanding of large-scale systems.
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 60.6 Outcomes
+
+**awareness**: politically conservative parents who had the lowest
+concern levels before the intervention displayed the largest gains in
+climate change concern associated with IGL facilitated by their children
+(Table 2 and Fig. 1; P= 0.032; Cohen’s f2= 0.326), and fathers displayed
+greater gains in climate change concern than mothers (Table 2 and Fig.
+2; P= 0.043; Cohen’s f2= 0.158). Fourth, daughters were more effective
+than sons in fostering climate change concern among their parents
+(*Worked?*: yes )
+
+## 60.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 61 Lawson2019a ( LR )
+
+**title** Children can foster climate change concern among their parents
 
 ## 61.1 abstract
 
@@ -14859,85 +12407,61 @@ urban
 
 ## 61.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Objective**:
+
+NA
+
+**Questions**:
+
+NA
 
 ## 61.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Curricular, field trip e intergeneracional
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Curricular, field trip e intergeneracional
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The original activities focused on the difference between weather and
-climate, how climate and weather relate to wildlife habitat, how
-wildlife managers can make use of adaptive management to deal with
-climate change, and how individual actions can impact the effect of
-climate change on wildlife17 . We added three components: engagement
-with parents through an interview conducted by students, a field-based
-service-learning project in conjunction with a community partner, and a
-reflective blog post (Supplementary Tables 1 and 3).
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The original activities focused on the difference
+between weather and climate, how climate and weather relate to wildlife
+habitat, how wildlife managers can make use of adaptive management to
+deal with climate change, and how individual actions can impact the
+effect of climate change on wildlife17 . We added three components:
+engagement with parents through an interview conducted by students, a
+field-based service-learning project in conjunction with a community
+partner, and a reflective blog post (Supplementary Tables 1 and 3).
 
 ## 61.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: developed two assessment instruments: a semi-structured
+clinical interview and a written assessment. The interview contained
+eight tasks. Seven tasks required students to explain individual
+macroscopic processes: tree growth, baby girl growth, girl running, tree
+decay, ﬂame burning, car running, and lamp lightning. The other task
+assessed students’ understanding of large-scale systems.
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 61.6 Outcomes
+
+**awareness**: After one year, there were statistically significant
+differences between treatment and control conditions (*Worked?*: yes )
+
+## 61.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 62 Leckey2021 ( MB )
+
+**title** Exploring local environmental change through filmmaking: the
+Lentes en Cambio Climatico program
 
 ## 62.1 abstract
 
@@ -15040,15 +12564,7 @@ age_max
 
 ## 62.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Explore the extent to which producing films on local climate topics: a)
 impacts students’ awareness of and perspectives on climate change, b)
@@ -15056,116 +12572,97 @@ increases students’ awareness of climate change’s causes and effects
 and, c) transforms how students think, communicate about, and/or engage
 in efforts to help mitigate local climate challenges.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 62.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Audiovisual creation
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Audiovisual creation
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-LECC workshops consisted of seven-days of informal science learning. In
-these workshops, students learned about climate change and filmmaking
-techniques before engaging with other students to create their own
-films. The LECC workshops were divided into three phases of filmmaking:
-pre-production (research and scripting), production (filming), and
-post-production (editing)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: LECC workshops consisted of seven-days of informal
+science learning. In these workshops, students learned about climate
+change and filmmaking techniques before engaging with other students to
+create their own films. The LECC workshops were divided into three
+phases of filmmaking: pre-production (research and scripting),
+production (filming), and post-production (editing)
 
 ## 62.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre and post workshop surveys (Awareness, 2018 and 2019) -
+Transformative Experience questionnaire (Awareness, intention) -
+post-workshop focus groups (2018) - individual student interviews
+Interviews and post workshop interviews were transcribed and translated,
+then coded by the researchers
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Pre- and Post- survey (likert scale) were analysed using
+Wilcoxon Signed Rank tests Focus groups and interviews were coded and
+analysed qualitatively using thematic analyses (Braun & Clarke,2006)
 
-</td>
-<td style="text-align:left;">
+**Results**: Awareness: - better results in the surveys
+(e.g. significance increase in their confidence on their knowledge on 4
+aspects of climate change, p\<0.5 with medium or large effect size) -
+interviews: 5 of 11 respondents (45.5%) mentioned an increaded awareness
+of local climate change issue - focus groups: increased awareness around
+the topic on which they made their films Intention: - from interviews
+and focus groups: eight out of 12 (66%) mentioned the need or desire to
+take actions, whether that was changing their own actions, feeling more
+motivated or wanting to educate others Knowledge: - “While the study did
+not aim at researching students’ knowledge gains around climate change,
+we studied the self-report data on how well-informed the students felt
+around climate change topics before and after their participation in the
+program. Our data show significant increases with medium to large effect
+sizes for students’ confidence in their understanding of climate
+topics.” - note that the knowledge gains found through the qualitative
+analyse of interviews and focus groups show that the knowledge comes
+primarily from and on the topics that the students made their films on
 
-- pre and post workshop surveys (Awareness, 2018 and 2019)
-- Transformative Experience questionnaire (Awareness, intention)
-- post-workshop focus groups (2018)
-- individual student interviews Interviews and post workshop interviews
-  were transcribed and translated, then coded by the researchers
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     <tr>`
-  `{=html}     <td style="text-align:left;">`
-  Resultados.obtenidos.por.cada.outcome `{=html}     </td>`
-  `{=html}     <td style="text-align:left;">` Awareness:
-- better results in the surveys (e.g. significance increase in their
-  confidence on their knowledge on 4 aspects of climate change, p\<0.5
-  with medium or large effect size)
-- interviews: 5 of 11 respondents (45.5%) mentioned an increaded
-  awareness of local climate change issue
-- focus groups: increased awareness around the topic on which they made
-  their films Intention:
-- from interviews and focus groups: eight out of 12 (66%) mentioned the
-  need or desire to take actions, whether that was changing their own
-  actions, feeling more motivated or wanting to educate others
-  Knowledge:
-- "While the study did not aim at researching students’ knowledge gains
-  around climate change, we studied the self-report data on how
-  well-informed the students felt around climate change topics before
-  and after their participation in the program. Our data show
-  significant increases with medium to large effect sizes for students’
-  confidence in their understanding of climate topics."
-- note that the knowledge gains found through the qualitative analyse of
-  interviews and focus groups show that the knowledge comes primarily
-  from and on the topics that the students made their films on
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-  `{=html}     </table>`
+**Improved?**: The LECC program had a measurable impact on students’
+awareness and engagement around climate topics, and students described
+feeling more agency to enact changes in the community that address
+climate change. The data show as well significant increases with medium
+to large effect sizes for students’ confidence in their understanding of
+climate topics $$particularly in local topics related to the specific
+topics of the films that each student made$$. Finally, many students
+expressed the need or desire to take action, whether that was changing
+their own actions, feeling more motivated to do something, or wanting to
+educate others.
+
+## 62.6 Outcomes
+
+**knowledge**: Knowledge about local concrete effect of climate change
+in Puerto Rico (*Worked?*: Yes )
+
+**awareness**: 1. increased students awareness of climate changes causes
+and effects 2. Recognition of its impact on their lives 3. awareness of
+solutions to prevent or mitigate environmental challenges (*Worked?*:
+Yes )
+
+**intention**: Need or desire to do something through either personal or
+group action (coded “action” by the researchers) (*Worked?*: Yes )
+
+## 62.7 Conclusions
+
+**Conclusions**: The film production by the students improved their
+awareness and intentions, particularly concerning the local topic of
+their film
+
+**Message to keep:**: The main message we should keep is that Art (film
+production) activities may have a very positive effect on awareness and
+intentions (knowledge is less important here). A side message, not
+extracted in our variables is that the activities “empowered” the
+students and made them agent of change in their communities. Interesting
+paper because climate change education can have synergistic effects :
+more people interested in science, bring more fun, etc.
 
 # 63 Leitao2022 ( MB )
+
+**title** Ocean literacy gamified: A systematic evaluation of the effect
+of game elements on students’ learning experience
 
 ## 63.1 abstract
 
@@ -15272,131 +12769,75 @@ age_max
 
 ## 63.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 this study was conducted to understand if there is any relationship
 between different game elements, such as points, badges, leaderboards
 (also known as the PBL triad), and learning outcomes of ocean literacy.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 can different game elements impact the learning outcomes and, if so,
 how?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 63.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Portugal: Extracurricular UK: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Game application, lesson
 
-Portugal: Extracurricular UK: Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Game application, lesson
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-All student: 15 min class presentation on topics: eutrophication, ocean
-plastic, sea level rise 4 groups of students with differently designed
-game: - 1: game with points element - 2: game with badge element - 3:
-game with leaderboard element -4: game with points, badge, leaderboard
-elements (PBL triad) 1 control group (class presentation but no game)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: All student: 15 min class presentation on topics:
+eutrophication, ocean plastic, sea level rise 4 groups of students with
+differently designed game: - 1: game with points element - 2: game with
+badge element - 3: game with leaderboard element -4: game with points,
+badge, leaderboard elements (PBL triad) 1 control group (class
+presentation but no game)
 
 ## 63.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Same questionnaire (correct/not correct/Don’t know) in all
+treatments.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Comparison of the correctedness of answers in the
+treatments (game elements) and country with the control group (no game,
+in both countries) with a model I factorial (orthogonal) ANOVA. Post-hoc
+comparison of treatments with Dunnett test
 
-</td>
-<td style="text-align:left;">
+**Results**: The application improve the acquisition of knowledge, the
+game elements have a positive effect, which is lower when they enhance
+too much the competition between students
 
-Same questionnaire (correct/not correct/Don’t know) in all treatments.
+**Improved?**: Overall results: the Ocean literacy mobile application
+improve the acquisition of knowledge, compared to the oral explanation
+only group. Concerning the element of the games: the results are
+consistent in the 2 countries, the leaderboard element cause
+competitions between students which may have a negative effect on the
+acquisition of knowledge, but the other treatments (points, badges and
+PBL triad: all elements) have a positive effects
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 63.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Correctedness of answers concerning ocean literacy
+(*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 63.7 Conclusions
 
-The application improve the acquisition of knowledge, the game elements
-have a positive effect, which is lower when they enhance too much the
-competition between students
+**Conclusions**: The application improve the acquisition of knowledge,
+the game elements have a positive effect, which is lower when they
+enhance too much the competition between students
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Interesting use of games in addition to formal
+lessons on ocean literacy. Overally the application (game) improve the
+knowledge acquisition, and the gamification elements are more efficient
+when they do not enhance too much the competition (over collaboration)
+between students
 
 # 64 Lester2006 ( ABP )
+
+**title** Social Activism in Elementary Science Education: A science,
+technology, and society approach to teach global warming
 
 ## 64.1 abstract
 
@@ -15486,29 +12927,13 @@ urban
 
 ## 64.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 examine fifth grade students’ responses on a writing sample with regard
 to their awareness of social activism involving an increased greenhouse
 effect and global warming,
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 How frequently did students display awareness of social activism with
 regard to an increased greenhouse effect and global warming? How
@@ -15519,110 +12944,61 @@ What is the relationship between content knowledge of an increased
 greenhouse effect and global warming and (a) awareness of social
 activism and (b) supporting statements, respectively?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 64.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: instructional intervention
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-instructional intervention
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-“The Living Planet” unit with fifth-grade students. The unit provides an
-introduction to the Earth as a planet of different interacting cycles
-and systems (atmosphere, biosphere, geosphere, and hydrosphere). The 12
-lessons in the unit are correlated with national and state standards in
-science Each of the 12 lessons includes an eco-public service
-announcement narrated by contemporary actors and musicians. The topics
-include the solar system, Earth’s seasons and climate, plate tectonics,
-the rock cycle, Earth’s resources, and endangered species.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: “The Living Planet” unit with fifth-grade students. The
+unit provides an introduction to the Earth as a planet of different
+interacting cycles and systems (atmosphere, biosphere, geosphere, and
+hydrosphere). The 12 lessons in the unit are correlated with national
+and state standards in science Each of the 12 lessons includes an
+eco-public service announcement narrated by contemporary actors and
+musicians. The topics include the solar system, Earth’s seasons and
+climate, plate tectonics, the rock cycle, Earth’s resources, and
+endangered species.
 
 ## 64.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: na
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: 36% the students in the upper range of science knowledge
+(10 out of 28 students) gave correct responses on the pre-writing
+sample, compared with 4% of the students in the lower range of science
+knowledge (17 out of 392 students). On the post-writing sample, 42% of
+the students in the upper range (54 out of 130 students) gave correct
+responses, compared with 16% of the students in the lower range (45 out
+of 290 students).
 
-na
+**Improved?**: na
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 64.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 64.7 Conclusions
 
-36% the students in the upper range of science knowledge (10 out of 28
-students) gave correct responses on the pre-writing sample, compared
-with 4% of the students in the lower range of science knowledge (17 out
-of 392 students). On the post-writing sample, 42% of the students in the
-upper range (54 out of 130 students) gave correct responses, compared
-with 16% of the students in the lower range (45 out of 290 students).
+**Conclusions**: The fifth-grade students in this study had little
+content knowledge of an increased greenhouse effect and global warming
+before they participated in the instructional intervention. Even after
+instruction over the school year, many students still had difficulty
+with this topic. The results support the literature on students’
+alternative conceptions and the persistence of such alternative
+conceptions even after an instructional intervention
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 65 Levrini2021 ( SB )
+
+**title** Recognition and operationalization of Future-Scaffolding
+Skills: Results from an empirical study of a teaching-learning module on
+climate change and futures thinking
 
 ## 65.1 abstract
 
@@ -15746,135 +13122,88 @@ Urban
 
 ## 65.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Integrate CC knowledge, scientific reasoning and future-thinking as a
 way to change student’s attitudes towards CC.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 - Students essays on a summer day on 2030
 - Questionnaires on acquired knowledge after every day’s activities.
 - Focus groups at the end of the summer school.
 - Individual interviews some days after the summer school.
 - Audio and Video recordings of the summer school’s activities.
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-  `{=html}     </table>`
 
 ## 65.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Lectures and active learning exercises
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lectures and active learning exercises
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-- Encountering the focal topics: lectures on CC as a complex system,
-  implications of CC on society in the present and in the future. All
-  contents were framed in "future cones".
-- Scientific conceptual-epistemological and inquiry activities:
-  activities centered on acquiring conceptual knowledge about CC,
-  epistemological practices around acquisition of knowledge
-  (e.g. debating, modelling, giving explanations…), and inquiry
-  practices (eg. cyclical nature of science, formulating hypothesis…).
-  These were ofered through general lectures followed by hand-on lab
-  activities centered on stationary equilibrium of CO2, transparency,
-  absorbance of the athmosphere and temperature.
-- Bridge activities: designed to bridge between scietific knowledge and
-  future reasoning. Include reading and conceptualizing scientific texts
-  and the presented positive/ negative feedback loops in the future.
-- Future oriented activities: 1) imagine possible, plausible and
-  desirable future cones based on acquired conceptual knowledge. 2)
-  activities widening the range of possible actions along different STEM
-  and non-STEM (i.e. political, social…) fields.
-- Action competence activities: Activities aiming at reflecting multiple
-  perspectives on a single decision and showcase ethical aspects of
-  decision-making. This also requires synthesizing all contents and
-  abilities acquired so far. `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+**Description**: - Encountering the focal topics: lectures on CC as a
+complex system, implications of CC on society in the present and in the
+future. All contents were framed in “future cones”. - Scientific
+conceptual-epistemological and inquiry activities: activities centered
+on acquiring conceptual knowledge about CC, epistemological practices
+around acquisition of knowledge (e.g. debating, modelling, giving
+explanations…), and inquiry practices (eg. cyclical nature of science,
+formulating hypothesis…). These were ofered through general lectures
+followed by hand-on lab activities centered on stationary equilibrium of
+CO2, transparency, absorbance of the athmosphere and temperature. -
+Bridge activities: designed to bridge between scietific knowledge and
+future reasoning. Include reading and conceptualizing scientific texts
+and the presented positive/ negative feedback loops in the future. -
+Future oriented activities: 1) imagine possible, plausible and desirable
+future cones based on acquired conceptual knowledge. 2) activities
+widening the range of possible actions along different STEM and non-STEM
+(i.e. political, social…) fields. - Action competence activities:
+Activities aiming at reflecting multiple perspectives on a single
+decision and showcase ethical aspects of decision-making. This also
+requires synthesizing all contents and abilities acquired so far.
 
 ## 65.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Students essays. - Questionnaires after every day’s
+activities. - Focus groups at the end of the summer school. - Individual
+interviews some days after the summer school. - Audio and Video
+recordings of the summer school’s activities.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Both top-down and bottom-up analysis with triangulation
+across authros and data sources.
 
-</td>
-<td style="text-align:left;">
+**Results**: Student’s effectively acquired future-thinking skills
+applied to and based on CC content knowledge.
 
-- Students essays.
-- Questionnaires after every day’s activities.
-- Focus groups at the end of the summer school.
-- Individual interviews some days after the summer school.
-- Audio and Video recordings of the summer school’s activities.
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     <tr>`
-  `{=html}     <td style="text-align:left;">`
-  Resultados.obtenidos.por.cada.outcome `{=html}     </td>`
-  `{=html}     <td style="text-align:left;">` Student’s effectively
-  acquired future-thinking skills applied to and based on CC content
-  knowledge. `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+**Improved?**: NA
+
+## 65.6 Outcomes
+
+**knowledge**: Interviews and focus groups sugests students have a more
+nuanced view of the future and CC’s impact in it. (*Worked?*: Yes )
+
+**awareness**: Interviews and focus groups sugests students are more
+aware of CC’s impact in their future. (*Worked?*: Yes )
+
+**intention**: Interviews and focus groups sugests students have a
+clearer view on how to act towards CC in the future. (*Worked?*: Yes )
+
+## 65.7 Conclusions
+
+**Conclusions**: Future thinking on the subject of CC can be fostered by
+mixed activities including both substantive content on CC and
+future-thinking conceptual tools.
+
+**Message to keep:**: A future thinking centered intervention aiming to
+clarify future impact of CC can help conceptualizing CC’s impact and how
+to act on it.
 
 # 66 Li2022 ( BQ )
+
+**title** Effectiveness Evaluation of a Primary School-Based
+Intervention against Heatwaves in China
 
 ## 66.1 abstract
 
@@ -15994,134 +13323,77 @@ Urban
 
 ## 66.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 we implemented a primary school-based intervention program to improve
 knowledge, attitude, and practice (KAP) related to extreme heat among
 school children, and evaluated the effectiveness of the intervention
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 we implemented a primary school-based intervention program to improve
 knowledge, attitude, and practice (KAP) related to extreme heat among
 school children, and evaluated the effectiveness of the intervention
-
-</td>
-</tr>
-</tbody>
-</table>
 
 ## 66.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extraccurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: series of health education activities
 
-Extraccurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-series of health education activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-main health education activities included running related health
-education courses, launching lectures and class meetings on climate
-change adaptation and children’s health protection, and holding
-competitions involving blackboard newspapers, drawing, and writing. The
-school clinic was required to prepare enough medicine to prevent and
-treat heatstroke in summer.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: main health education activities included running
+related health education courses, launching lectures and class meetings
+on climate change adaptation and children’s health protection, and
+holding competitions involving blackboard newspapers, drawing, and
+writing. The school clinic was required to prepare enough medicine to
+prevent and treat heatstroke in summer.
 
 ## 66.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Questionnaire surveys before and after intervention
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: multivariable difference-in-difference (DID) analysis,
+controlling for age, sex, etc after surveys
 
-</td>
-<td style="text-align:left;">
+**Results**: The scores of knowledge, attitude, and practice of students
+increased by ~20%; 9.6% and 10%, respectively after intervention. The
+KAP score changes of boys were slightly higher than those of girls.
+Older students had higher score changes than younger students.
 
-Questionnaire surveys before and after intervention
+**Improved?**: Scores for all the Knowledge, Attitude, Practice (KAP)
+items, except for the knowledge of climate change, were significantly
+increased. Score changes for attitude and practice were smaller than
+that for knowledge.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 66.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Yes (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Yes (*Worked?*: Yes )
 
-The scores of knowledge, attitude, and practice of students increased by
-~20%; 9.6% and 10%, respectively after intervention. The KAP score
-changes of boys were slightly higher than those of girls. Older students
-had higher score changes than younger students.
+**intention**: Yes (*Worked?*: Yes )
 
-</td>
-</tr>
-</tbody>
-</table>
+**action**: Yes (*Worked?*: Yes )
+
+**habit**: Yes (*Worked?*: Yes )
+
+## 66.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Heat and health education program in primary
+school was an effective approach to improve cognition and behavior for
+both students and their parents to better adapt to heatwaves and climate
+change (Knowledge increase \> Attitude increase \> Practice increase).
+Every activity was positively correlated with KAP score, particularly
+lectures, recess radio, speech contest.
 
 # 67 Li2022 ( BQ )
+
+**title** Effectiveness Evaluation of a Primary School-Based
+Intervention against Heatwaves in China
 
 ## 67.1 abstract
 
@@ -16241,134 +13513,74 @@ Urban
 
 ## 67.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 we implemented a primary school-based intervention program to improve
 knowledge, attitude, and practice (KAP) related to extreme heat among
 school children, and evaluated the effectiveness of the intervention
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 we implemented a primary school-based intervention program to improve
 knowledge, attitude, and practice (KAP) related to extreme heat among
 school children, and evaluated the effectiveness of the intervention
-
-</td>
-</tr>
-</tbody>
-</table>
 
 ## 67.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: series of health education activities
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-series of health education activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-main health education activities included running related health
-education courses, launching lectures and class meetings on climate
-change adaptation and children’s health protection, and holding
-competitions involving blackboard newspapers, drawing, and writing. The
-school clinic was required to prepare enough medicine to prevent and
-treat heatstroke in summer.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: main health education activities included running
+related health education courses, launching lectures and class meetings
+on climate change adaptation and children’s health protection, and
+holding competitions involving blackboard newspapers, drawing, and
+writing. The school clinic was required to prepare enough medicine to
+prevent and treat heatstroke in summer.
 
 ## 67.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Questionnaire surveys before and after intervention
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: multivariable difference-in-difference (DID) analysis,
+controlling for age, sex, etc after surveys
 
-</td>
-<td style="text-align:left;">
+**Results**: The scores of knowledge, attitude, and practice of students
+increased by ~22.5%; 7.2% and 5.2%, respectively after intervention. The
+KAP score changes of boys were slightly higher than those of girls.
+Older students had higher score changes than younger students.
 
-Questionnaire surveys before and after intervention
+**Improved?**: Scores for all the Knowledge, Attitude, Practice (KAP)
+items, except for the knowledge of climate change, were significantly
+increased. Score changes for attitude and practice were smaller than
+that for knowledge.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 67.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Yes (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Yes (*Worked?*: Yes )
 
-The scores of knowledge, attitude, and practice of students increased by
-~22.5%; 7.2% and 5.2%, respectively after intervention. The KAP score
-changes of boys were slightly higher than those of girls. Older students
-had higher score changes than younger students.
+**intention**: Yes (*Worked?*: Yes )
 
-</td>
-</tr>
-</tbody>
-</table>
+**action**: Yes (*Worked?*: Yes )
+
+**habit**: Yes (*Worked?*: Yes )
+
+## 67.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Not only the primary school students but also
+their parents had significantly improved the cognition of extreme heat
+and health adaptation.
 
 # 68 Littrell2022 ( SC )
+
+**title** Transformative experience in an informal science learning
+program about climate change
 
 ## 68.1 abstract
 
@@ -16446,15 +13658,7 @@ sample.size
 
 ## 68.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The current study focused on whether or not the program was
 transformative for the LOCC participants, such that they left the
@@ -16463,122 +13667,92 @@ others about climate change or inspired to engage in actions to help
 mitigate climate change or other environmental challenges in their
 communities.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  Did condition (intervention/comparison) statistically significantly
     predict the participants’ scores on the TEQ at posttest, above and
     beyond grade level (middle school/high school), and timing of
     program (summer/academic year), controlling for pretest TEQ scores?
 2.  Where did the participants’ measures fall along the TE continuum
-    from before to after the LOCC program? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    from before to after the LOCC program?
 
 ## 68.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Informal science education program
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Informal science education program
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The Lens On Climate Change (LOCC) program was an informal science
-education program in which middle and high school students explored the
-local effects that climate change had on their lives and communities and
-shared their findings through a short film, as an artistic and engaging
-way to communicate about a topic. The program took place in two
-formats—as an after-school program during the school year and as an
-intensive, one-week summer program.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The Lens On Climate Change (LOCC) program was an
+informal science education program in which middle and high school
+students explored the local effects that climate change had on their
+lives and communities and shared their findings through a short film, as
+an artistic and engaging way to communicate about a topic. The program
+took place in two formats—as an after-school program during the school
+year and as an intensive, one-week summer program.
 
 ## 68.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pre-post 15.item instrument
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Once pre- and posttest TE measures were on a similar
+scale, the research questions were addressed using traditional
+statistical methods using the equated and calibrated person measures
+(logits) rather than raw scores. The item difficulty mean is set at 0 in
+Rasch with higher person measures indicating higher levels of TE and
+lower person measures indicating lower levels of TE
 
-</td>
-<td style="text-align:left;">
+**Results**: Descriptive statistics for participants’ pre- and posttest
+TE scores are reported in Table 2 in logits where higher scores indicate
+a higher level of TE. As reported in Table 2, the intervention group’s
+average TE score increased by 0.85 logits, increasing the average score
+from at to above the item mean set at 0 logits. The comparison group’s
+average TE score increased by 0.18 and remained below the item mean.
 
-Pre-post 15.item instrument
+**Improved?**: When controlling for pretest TE scores, the intervention
+group members had a higher score on the posttest TE compared to those in
+the comparison group.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 68.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**other**: Yes (*Worked?*: As the LOCC participants researched topics,
+interviewed experts and developed films around a locally relevant topic,
+their posttest TEQ scores shifted toward higher engagement around the
+topic from before to after the program. This growth was statistically
+significantly greater for the LOCC participants than the comparison
+group. )
 
-</td>
-<td style="text-align:left;">
+## 68.7 Conclusions
 
-Descriptive statistics for participants’ pre- and posttest TE scores are
-reported in Table 2 in logits where higher scores indicate a higher
-level of TE. As reported in Table 2, the intervention group’s average TE
-score increased by 0.85 logits, increasing the average score from at to
-above the item mean set at 0 logits. The comparison group’s average TE
-score increased by 0.18 and remained below the item mean.
+**Conclusions**: - Our findings highlight the need to further examine
+the degree to which different informal learning settings (e.g.,
+libraries, museums, after-school and other short-term programs) provide
+TEs for participants. More research could be done to explore ways to
+engage participants in a TE given the unique opportunities and
+challenges of informal, non-guided educational settings. - The findings
+of the present study around the impacts of informal learning programs
+are important for science learning broadly, but they are also important
+in a time when concerns about the immediate and longterm effects of
+climate change are growing. TEs have the potential to not only increase
+young people’s interest in science, but also to encourage them to
+continue their learning, communicate about the science with others, and
+contribute to actions to mitigate environmental challenges and lead to a
+more sustainable future.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: When it comes to climate change, we are no longer
+in a position to “wait and see” what will happen in the future. There is
+an urgent need for immediate action, and this requires new thinking from
+youth and adults alike. Future research should seek to understand how
+existing frameworks that focus on TE (Transformative Experiences) and
+sociocultural connections with science topics in informal learning
+settings can come together to empower youth to become active
+participants in science and sustainability efforts.
 
 # 69 Liu2015 ( ABP )
+
+**title** In-service Teachers’ Attitudes, Knowledge and Classroom
+Teaching of Global Climate Change
 
 ## 69.1 abstract
 
@@ -16672,123 +13846,67 @@ urban
 
 ## 69.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to reveal the relationship between teachers’ attitudes and beliefs
 concerning GCC, their developing knowledge about climate science, and
 classroom teaching of GCCof GCC.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  What are teachers’ attitudes and beliefs about GCC, and how do they
     change through professional development?
 2)  What is the nature of teachers’ knowledge about GCC, and how does it
     relate to their attitudes?
 3)  How do teachers’ attitudes and knowledge relate to their classroom
-    teaching of GCC? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    teaching of GCC?
 
 ## 69.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: professional development workshop
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-professional development workshop
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-workshop that focused on enhancing their scientific understanding and
-classroom teaching of GCC.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: workshop that focused on enhancing their scientific
+understanding and classroom teaching of GCC.
 
 ## 69.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: NA
 
-Resultados.obtenidos.por.cada.outcome
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: While most teachers’ attitudes toward GCC stayed the same
+throughout the workshop, there were attitude changes among some
+teachers. In particular, teachers who were on The skeptical end of the
+spectrum became more aware of the significance of GCC and its potential
+threat to humans and shifted their attitudes about GCC. The Current
+findings indicate that professional development may induce attitude
+changes on the topic of GCC. By the end of the workshop, most of the
+participant teachers had a basic understanding of climate science. Most
+of them were able to provide details about the causes and scientific
+processes of GCC, although misconceptions persisted for some teacher
 
-While most teachers’ attitudes toward GCC stayed the same throughout the
-workshop, there were attitude changes among some teachers. In
-particular, teachers who were on The skeptical end of the spectrum
-became more aware of the significance of GCC and its potential threat to
-humans and shifted their attitudes about GCC. The Current findings
-indicate that professional development may induce attitude changes on
-the topic of GCC. By the end of the workshop, most of the participant
-teachers had a basic understanding of climate science. Most of them were
-able to provide details about the causes and scientific processes of
-GCC, although misconceptions persisted for some teacher
+**Improved?**: Attitude improved
 
-</td>
-</tr>
-</tbody>
-</table>
+## 69.6 Outcomes
+
+**action**: yes (*Worked?*: yes )
+
+**habit**: yes (*Worked?*: yes )
+
+## 69.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 70 Lombardi2013 ( ABP )
+
+**title** Plausibility reappraisals and shifts in middle school
+students’ climate change conceptions
 
 ## 70.1 abstract
 
@@ -16878,111 +13996,74 @@ urban
 
 ## 70.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Questions
+NA
 
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 do students’ (a) plausibility perceptions of competing climate change
 models and (b) knowledge about this topic change? The instruction
 focused on students’ evaluation of two competing models: human-induced
 climate change (i.e., the scientifically ac- curate model
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 70.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: the model-evidence link (MEL) diagram activity
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-the model-evidence link (MEL) diagram activity
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-the model-evidence link (MEL) diagram activity to promote critical
-evaluation and potential reappraisal of plausibility judgments about
-human-induced climate change. On a MEL provided to each student,
-participants drew different types of arrows linking evidentiary data to
-the two alternative models of climate change - g instruction promoting
-critical evaluation
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: the model-evidence link (MEL) diagram activity to
+promote critical evaluation and potential reappraisal of plausibility
+judgments about human-induced climate change. On a MEL provided to each
+student, participants drew different types of arrows linking evidentiary
+data to the two alternative models of climate change - g instruction
+promoting critical evaluation
 
 ## 70.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: NA
 
-Resultados.obtenidos.por.cada.outcome
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: treatment group participants experienced significant
+changes in their perceptions of model plausibility and knowledge of
+human-induced climate change after experiencing instruction that
+promoted critical evaluation. knowledge change was sustained up to six
+months after instruction. The comparison group, which experienced the
+regular curriculum, did not show any significant changes in these
+variables.
 
-treatment group participants experienced significant changes in their
-perceptions of model plausibility and knowledge of human-induced climate
-change after experiencing instruction that promoted critical evaluation.
-knowledge change was sustained up to six months after instruction. The
-comparison group, which experienced the regular curriculum, did not show
-any significant changes in these variables.
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-</tbody>
-</table>
+## 70.6 Outcomes
+
+**knowledge**: yes (*Worked?*: yes )
+
+**other**: Plausibility (*Worked?*: NA )
+
+## 70.7 Conclusions
+
+**Conclusions**: This study expands our understanding of conceptual
+change and specifically helps support the idea that experiencing
+conceptual change about human-induced climate change is neither a simple
+matter of debunking non-scientific positions nor just learning about the
+several lines of evidence that support the scientific model. Rather,
+moving toward the scientifically accepted conception that Humans are
+altering Earth’s climate may well require connecting evidences to
+alternative models, evaluating the strength of these connections with
+respect to each alternative, and explicitly reappraising the
+plausibility of each alternative
+
+**Message to keep:**: NA
 
 # 71 Lozano2022 ( SC )
+
+**title** Impact of cooperative learning and project-based learning
+through emotional intelligence: A comparison of methodologies for
+implementing SDGs
 
 ## 71.1 abstract
 
@@ -17112,15 +14193,7 @@ urban
 
 ## 71.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 …study the influence of two active methodologies (CL and PBL) on
 emotions and on the teaching-learning process, as well as the awareness
@@ -17134,104 +14207,59 @@ results in the learning environment and energy contents through 7
 (affordable and clean energy) and 13 (climate action) SDGs. Objective 4
 is the only relevant here
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 71.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: lessons
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-lessons
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-…help the virtual protagonist, Alex, to reduce global CO2 emissions.
-$$...$$ students are divided into groups and must solve several problems
-in order to achieve the global objective of the project
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: …help the virtual protagonist, Alex, to reduce global
+CO2 emissions. $$...$$ students are divided into groups and must solve
+several problems in order to achieve the global objective of the project
 
 ## 71.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionnaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: In addition, for the sake of evaluating the relationship
+between emotions and categories, a Principal Component Analysis (PCA)
+was carried out. In order to study the differences between the knowledge
+acquired pre and post test, an ANOVA was performed.
 
-</td>
-<td style="text-align:left;">
-
-questionnaire
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Results suggested statistically significant differences between the
-scores of the pre and post test (p = 0.015), being a mean of 0.577
-points with an improvement range of 0.11 and 1.04 points (Figure 2).
-Thus, a learning improvement was found thanks to the active
+**Results**: Results suggested statistically significant differences
+between the scores of the pre and post test (p = 0.015), being a mean of
+0.577 points with an improvement range of 0.11 and 1.04 points (Figure
+2). Thus, a learning improvement was found thanks to the active
 methodologies.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: knowledge on energy and climate contents
+
+## 71.6 Outcomes
+
+**knowledge**: knowledge (*Worked?*: yes )
+
+## 71.7 Conclusions
+
+**Conclusions**: Active methodologies can favor the capacity for
+meaningful learning through an increase in student motivation, thanks to
+encouraging positive emotions and the ability to learn
+
+**Message to keep:**: The focus of this paper is on the effect of two
+active learning strategies on learning and emotions. There is little
+info regarding CC, despite the intervention being aimed at reducing CO2
+emissions. Both active methodologies improve knowledge on energy and CC
+concepts. No differences in knowledge by type of methodology.
 
 # 72 Markowitz2018 ( LR )
+
+**title** Immersive Virtual Reality Field Trips Facilitate Learning
+About Climate Change
 
 ## 72.1 abstract
 
@@ -17348,15 +14376,7 @@ mean.age
 
 ## 72.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This is the first of 4 studies, on which authors tested the effect o
 different aspects of immersive VR on learning about marine science:
@@ -17364,116 +14384,77 @@ Study 1 tested the physical experience (haptic, auditory, and other
 sensory feedback experienced throughout a virtual world). Studies 2,3,4
 don´t apply because they were performed with other populations.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 72.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Mediated learning: Inmersive virtual reality
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Mediated learning: Inmersive virtual reality
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Students participated in activities based on traditional practices of
-marine scientists, who dive underwater and interact with species of ﬂora
-and fauna to measure biodiversity (Dive 1). Then, they had an inmersive
-virtual reality experience modeled after the Ischian Reef in Italy,
-where naturally occurring carbon dioxide vents acidify certain areas of
-the reef and provide scientists with a window into a future aﬀected by
-climate change. Then the had another field physical experience.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Students participated in activities based on
+traditional practices of marine scientists, who dive underwater and
+interact with species of ﬂora and fauna to measure biodiversity (Dive
+1). Then, they had an inmersive virtual reality experience modeled after
+the Ischian Reef in Italy, where naturally occurring carbon dioxide
+vents acidify certain areas of the reef and provide scientists with a
+window into a future aﬀected by climate change. Then the had another
+field physical experience.
 
 ## 72.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Open questionare about ocean acidiﬁcation: (1) What it is (2)
+What is the most signiﬁcant cause of ocean acidiﬁcation?, (3) What the
+predicted eﬀects of increasing ocean acidiﬁcation (4) How do coral and
+other sea creatures build their hard skeletons and shells?, (5) How much
+carbon dioxide is absorbed by the planet’s oceans each year?, and (6)
+How much has the pH level of the ocean changed since the industrial
+revolution?. Responses were coded by expert on a 1-7 scale Attitude or
+concern: New Ecological Paradigm (NEP; Dunlap et al., 2000), 7- point
+Likert scales, where participants responded to assertions such as “We
+are approaching the limit of the number of people the earth can
+support,” “Humans were meant to rule over the rest of nature,” and “The
+balance of nature is very delicate and easily upset
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Data were analyzed using hierarchical linear mixed models
+with a random eﬀect for participant to account for multiple,
+non-independent observations by each student.
 
-</td>
-<td style="text-align:left;">
+**Results**: There was knowledge gain from the whole experience and in
+particular from the inmersive virtual reality experience
 
-Open questionare about ocean acidiﬁcation: (1) What it is (2) What is
-the most signiﬁcant cause of ocean acidiﬁcation?, (3) What the predicted
-eﬀects of increasing ocean acidiﬁcation (4) How do coral and other sea
-creatures build their hard skeletons and shells?, (5) How much carbon
-dioxide is absorbed by the planet’s oceans each year?, and (6) How much
-has the pH level of the ocean changed since the industrial revolution?.
-Responses were coded by expert on a 1-7 scale Attitude or concern: New
-Ecological Paradigm (NEP; Dunlap et al., 2000), 7- point Likert scales,
-where participants responded to assertions such as “We are approaching
-the limit of the number of people the earth can support,” “Humans were
-meant to rule over the rest of nature,” and “The balance of nature is
-very delicate and easily upset
+**Improved?**: Knowledge about ocean identification, no enronmrntal
+concern
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 72.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: (1) demonstrating knowledge gain about the process and
+causes of ocean acidiﬁcation (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**emotions**: Envirnmental concern that is, changing attitudes toward
+the ocean environment and ocean acidiﬁcation (*Worked?*: no )
 
-There was knowledge gain from the whole experience and in particular
-from the inmersive virtual reality experience
+## 72.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: NA
+
+**Message to keep:**: THere is not a decaration regarding the
+educational approach, other than the use of mediated learning, however,
+this fall within the experiential learning category. Authors say :“Our
+interest in climate change education stems from the importance of
+bringing complex issues closer to people psychologically (Schuldt et
+al., 2016) and is also inspired by recent calls for innovative teaching
+methods to address environmental concerns (e.g., mobile games; McCright
+et al., 2013; Wu and Lee, 2015).”
 
 # 73 Mason1998 ( SB )
+
+**title** Discussing the Greenhouse Effect: children’s collaborative
+discourse reasoning and conceptual change
 
 ## 73.1 abstract
 
@@ -17568,15 +14549,7 @@ Urban
 
 ## 73.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Does collaborative discourse reasoning improve explanations $$of CC$$ at
 the individual level? In other words, what conceptual progress can be
@@ -17587,116 +14560,58 @@ CC$$ of learners related to their metaconceptual awareness of the
 changes that occured in their knowledge structures about the examined
 phenomenon due to instructional intervention?
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  how does the Earth get warmed normally?
 2)  the scientists maintain that the Earth is getting warmer and warmer.
     In your opinion what are the possible causes of this phenomenon?
 3)  if the greenhouse effect got bigger what would be the consequences;
 4)  what could be done to reduce the greenhouse effect?
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
 
 ## 73.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Small and large group discussions
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Small and large group discussions
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-40 min session in two phases: - small group discussion on several
-CC-related topics (mechanisms of CC, consequences and possible
-solutions). - large group discussion: compare different views on the
-main topics and creation of a shared representation.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: 40 min session in two phases: - small group discussion
+on several CC-related topics (mechanisms of CC, consequences and
+possible solutions). - large group discussion: compare different views
+on the main topics and creation of a shared representation.
 
 ## 73.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre- and post- interviews on conceptual understanding of CC
+(cuases, consequences and solutions) and metaconceptual knowledge of CC.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Top - down analysis and correlation between
+meta-conceptual awareness and conceptual understanding.
 
-</td>
-<td style="text-align:left;">
+**Results**: Students appear to understand better CC and to be mindful
+of their own understanding of CC.
 
-pre- and post- interviews on conceptual understanding of CC (cuases,
-consequences and solutions) and metaconceptual knowledge of CC.
+**Improved?**: NA
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 73.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Pre-post interviews and surveys on CC mechanisms,
+consequences and possible reduction actions (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 73.7 Conclusions
 
-Students appear to understand better CC and to be mindful of their own
-understanding of CC.
+**Conclusions**: Socio-constructivist pedagogies made it easier for
+children to change their understanding of CC.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Intervention based on small and large group
+discussion seems to foster CC knowledge.
 
 # 74 McGowan2022 ( SB )
+
+**title** “I now deeply care about the effects humans are having on the
+world”: cultivating ecological care and responsibility through complex
+systems modelling and investigations
 
 ## 74.1 abstract
 
@@ -17801,90 +14716,34 @@ sample.size
 
 ## 74.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Shifted student’sr understandings of CC from a technical perspective to
 a more social and situated lens of care and responsibility for
 mitigation.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 - What environmental factors might be contributing to the scale and
   severity of SSWD?
 - How has human behaviour and decision-making contributed to disease
   outbreaks, including SSWD?
 - How can we support sea star (and other species) long-term health and
-  survival in a time of rapid climate change? `{=html}     </td>`
-  `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+  survival in a time of rapid climate change?
 
 ## 74.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: 10 week curriculum on SSWD co-created by teachers and climate
+science experts.
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-10 week curriculum on SSWD co-created by teachers and climate science
-experts.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Anchor: - Technical knowledge on the anatomy and function of the sea
-star. Mostly traditional classes. - Classification of photographs of sea
-stars in various levels of disease (UC Santa Cruz MARINEe programme
+**Description**: Anchor: - Technical knowledge on the anatomy and
+function of the sea star. Mostly traditional classes. - Classification
+of photographs of sea stars in various levels of disease (UC Santa Cruz
+MARINEe programme
 (<https://marine.ucsc.edu/data-products/sea-star-wasting/index.html>).
 ) - Graph creation: link between SSWD and Sea temperature over time
 complemented by geomapping. Complex systems modelling - Causal-loops
@@ -17893,47 +14752,57 @@ causal-loops with new information/ classes. - Infographic and poster
 creation. Community engagement: - Poster and infographic presentation to
 a larger audience.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 74.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Ethnographic observation and focus groups.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Retrospective analysis and iterative coding (both
+predetermined and iterative codes) based on Ethnographic observations,
+focal groups and biweekly surveys
 
-</td>
-<td style="text-align:left;">
+**Results**: Awareness: students report being more aware of CC and its
+consequences. - Knowledge: students produce more nuanced and
+contextualised explanations of SSWD, its link to CC and its broader
+social causes and consequences. - Emotion: Students report being more
+engaged and caring more for the environment. - Action: Students produced
+infographics and posters presented to stakeholders to foster climate
+protection.
 
-Ethnographic observation and focus groups.
+**Improved?**: All, specially attitudes turned drastically in favor of
+caring for the environment as opposed to simply having techinical
+knowledge about it.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 74.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Understanding of SSWD as having social as well as
+climatic origins and consequences. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Awareness of social as well as climatic causes and
+consequences of SSWD (*Worked?*: Yes )
 
-- Awareness: students report being more aware of CC and its
-  consequences.
-- Knowledge: students produce more nuanced and contextualised
-  explanations of SSWD, its link to CC and its broader social causes and
-  consequences.
-- Emotion: Students report being more engaged and caring more for the
-  environment.
-- Action: Students produced infographics and posters presented to
-  stakeholders to foster climate protection. `{=html}     </td>`
-  `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+**emotions**: Attitude of caring and responsibility towards CC and its
+consequences on other living beings. (*Worked?*: Yes )
+
+**action**: Reaching out to decision-makers about CC. (*Worked?*: Yes )
+
+## 74.7 Conclusions
+
+**Conclusions**: Really effective intervention and well documented.
+
+**Message to keep:**: Very complete intervention fostering a more
+complex understanding of CC and facilitating action. Deserves a
+follow-up and expansion. Could have been helped by a pre-existing
+institutional commitment to environmental protection in the observed
+schools since they were already interested in urban gardening and
+similar activities.
 
 # 75 McNeal2014a ( LR )
+
+**title** Karen S. McNeal, Julie C. Libarkin, Tamara Shapiro Ledley,
+Erin Bardar, Nick Haddad, Kathy Ellins & Saranee Dutta (2014) The Role
+of Research in Online Curriculum Development: The Case of EarthLabs
+Climate Change and Earth System Modules, Journal of Geoscience
+Education, 62:4, 560-577, DOI: 10.5408/13-060.1
 
 ## 75.1 abstract
 
@@ -18019,126 +14888,87 @@ ESS module(n = 163) Some completed the Cryosphere module (n = 42).
 
 ## 75.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Questions
+NA
 
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  How does the online EarthLabs curriculum assist students in
     developing understanding of temporal and spatial dynamics and system
     interactions of climate? (2) How do users engage with and navigate
-    the online EarthLabs curriculum? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    the online EarthLabs curriculum?
 
 ## 75.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
-
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Online curriculum with an iterative process:
+**Type**: Online curriculum with an iterative process:
 create-test-revise-implement-revise
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-"Earth Science and environmental science curriculum materials that
-engage high school students in a combination of Web-based activities,
-hands-on experiments, and scientific data analysis, with the ultimate
-goal of providing easily accessible, inexpensive, and effective
+**Description**: “Earth Science and environmental science curriculum
+materials that engage high school students in a combination of Web-based
+activities, hands-on experiments, and scientific data analysis, with the
+ultimate goal of providing easily accessible, inexpensive, and effective
 inquiry-based experiences (Ledley et al., 2012). Labs evaluated here
 intended to build on the knowledge and skills learned in the previous
-labs." Activities combine online reading, data manipulation and
+labs.” Activities combine online reading, data manipulation and
 visualization using software applications such as Google Earth and
 ImageJ, hands-on activities, and outdoor explorations. Each lab within
 an EarthLabs module contains ‘’Checking In’’ and ‘’Stop and Think’’
 questions that assist students and teachers in gauging learning
 progress.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 75.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Incorporated multiple levels of data collected from teachers (perceived
-success in implementation), high school students (conceptual
+**Data**: Incorporated multiple levels of data collected from teachers
+(perceived success in implementation), high school students (conceptual
 understanding, in-class observation of interactions and engagement with
 hands on excercises), and eye-tracking data (engagement with online
 materials).
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: For pre-post comparisons used two rubrics, thematic
+analysis of interview and open-ended responses, descriptive statistics
+and parametric or nonparametric tests. Pre/postassessments included four
+to six open-ended response questions that were aligned to curriculum
+learning goals and materials, six demographic items, and one self-
+confidence item for each question set. Responses were scored using a
+conceptual understanding rubric (score 0–5) Used a paired Student’s
+t-test when assumptions of the test were satisfied, or Wilcoxon signed
+ranks test was used for nonparametric analysis.
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: There were significant increases on conceptual
+understandind and systems understanding of Cryosphere and ESS modules.
 
-</td>
-<td style="text-align:left;">
+**Improved?**: There were significant increases on conceptual
+understandin of Cryosphere and ESS modules. However, numerous
+misconceptions persisted despite intruction on Cryosphere module. THere
+were significant increases in Systems understanding on both modules as
+well. Additionally, in-class observations suggest that students were
+highly engage in activities and thus (according to authors) change can
+be attributed to the modules
 
-There were significant increases on conceptual understandind and systems
-understanding of Cryosphere and ESS modules.
+## 75.6 Outcomes
 
-</td>
-</tr>
-</tbody>
-</table>
+**knowledge**: Conceptual understanding of Earth systems Systems
+understanding of Cryosphere module (*Worked?*: Partially )
+
+## 75.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Intervention (2 out of 4) within the context of
+the EarthLab Science focuses on conceptual and systems understanding og
+cryosphere and earth systems science, both topics conected to climate
+change. It takes place in many different courses.
 
 # 76 McNeill2012 ( SC )
+
+**title** Urban High School Students’ Critical Science Agency:
+Conceptual Understandings and Environmental Actions Around Climate
+Change
 
 ## 76.1 abstract
 
@@ -18236,30 +15066,14 @@ Urban
 
 ## 76.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The study investigates how the enactment of a climate change curriculum
 supports students’ development as climate literate citizens specifically
 in terms of the impact on both students’ knowledge and personal
 environmental actions about climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  How do high school students’ understandings of climate change alter
     after a curricular unit focused on the topic?
@@ -18267,110 +15081,88 @@ Questions
     after a curricular unit focused on the topic?
 3.  How do high school students’ environmental actions about climate
     change alter after a curricular unit focused on the topic?
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
 
 ## 76.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons, discusions
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons, discusions
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The study took place during a high school urban ecology curriculum,
-Urban Ecolab: How do we develop healthy and sustainable cities? The
-curriculum was developed as a capstone course for high school students
-to engage students in environmental science and connect the science to
-their cities and their lives. The curriculum includes eight modules.
-Specifically, this study focuses on the second module, which examined
-energy and climate change. The curriculum focused on a number of key
-science ideas, such as the causes and consequences of global climate
-change. The second module had eleven lessons.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The study took place during a high school urban ecology
+curriculum, Urban Ecolab: How do we develop healthy and sustainable
+cities? The curriculum was developed as a capstone course for high
+school students to engage students in environmental science and connect
+the science to their cities and their lives. The curriculum includes
+eight modules. Specifically, this study focuses on the second module,
+which examined energy and climate change. The curriculum focused on a
+number of key science ideas, such as the causes and consequences of
+global climate change. The second module had eleven lessons.
 
 ## 76.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pre-post questionnaries and pre-post interviews
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Pre and Post For the multiple-choice items, we scored and
+tallied all six items based on whether or not students selected the
+appropriate response for a possible total of six points. - Student
+Interviews All of the pre and post interviews for the twenty-two
+students were transcribed. We then developed the coding scheme for the
+transcripts from both our theoretical framework and an iterative
+analysis of the data.
 
-</td>
-<td style="text-align:left;">
+**Results**: Students understood significantly more about what global
+climate change is, the causes of global climate change and the effects
+of global climate change after the curriculum unit compared to before
+the unit. - Students were also more likely to talk about the role of
+humans and how their actions are impacting the environment suggesting
+they developed a greater understanding of how personal actions impact
+climate change. - The percentage of students that discussed engaging in
+all of the different personal environmental actions increased.
 
-Pre-post questionnaries and pre-post interviews
+**Improved?**: Knowledge, awareness and behavior improved in the
+postests
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 76.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Students understood significantly more about what global
+climate change is (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: an increase in their understanding of the causes and
+consequences of climate change (*Worked?*: Yes )
 
-- Students understood significantly more about what global climate
-  change is, the causes of global climate change and the effects of
-  global climate change after the curriculum unit compared to before the
-  unit.
-- Students were also more likely to talk about the role of humans and
-  how their actions are impacting the environment suggesting they
-  developed a greater understanding of how personal actions impact
-  climate change.
-- The percentage of students that discussed engaging in all of the
-  different personal environmental actions increased.
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-  `{=html}     </table>`
+**action**: On the pos-interview 86% of the students said they were
+personally doing something to limit their impact on climate change
+(*Worked?*: Yes )
+
+**habit**: Yes (*Worked?*: The percentage of students that discussed
+engaging in all of the different personal environmental actions
+increased. )
+
+## 76.7 Conclusions
+
+**Conclusions**: Critical science agency is essential for scientific
+literacy that not only supports students in understanding the world
+around them, but also promotes responsible scientific behaviors for
+environmental topics, but also other socioscientific issues. In today’s
+science and technology infused world, individuals need to make informed
+and responsible decisions and engage in actions that impact not only
+themselves, but also their community and their environment.
+
+**Message to keep:**: The promulgation of a climate change curriculum
+promotes the development of critical science agency, which includes
+students developing deep understandings of science concepts and the
+ability to take action at the individual and community levels.
+Nevertheless, that believing a scientific theory (e.g. climate change)
+is not sufficient for critical science agency; rather, conceptual
+understandings and understandings of personal actions impact students’
+choices.
 
 # 77 Meya2018 ( SB )
+
+**title** Effectiveness of gaming for communicating and teaching climate
+change
 
 ## 77.1 abstract
 
@@ -18500,135 +15292,70 @@ Urban
 
 ## 77.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Determine effect of the game on perceptions of personal responsability,
 confidence in politicians, beliefs on international cooperation and
 pessimism about CC. Link in-game decisions to optimism/pesimism about
 climate politics.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Six items were newly designed to capture beliefs about international
 climate politics (pre- and post-intervention). in-game decisions: number
-of "green" and "black" decisions and self-reported teamplay.
-
-</td>
-</tr>
-</tbody>
-</table>
+of “green” and “black” decisions and self-reported teamplay.
 
 ## 77.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: serious gaming
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-serious gaming
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-A computer simulation game in which each participant takes the role of a
-country belonging to one of 6 broad categories (developing countries,
-Western Europe, ex-USSR countries, OPEC, rapidly industrializing
-countries and umbrella group). Players must chose between "green" and
-"black" technologies, adapt to CC or research on climate research to
-achieve a number of country-specific objectives. Over the in-game
-rounds, global temperature rises according to player’s decisions and all
-players lose if a critical threshold is reached. A player wins when they
-achieve a number or arbitary objectives.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: A computer simulation game in which each participant
+takes the role of a country belonging to one of 6 broad categories
+(developing countries, Western Europe, ex-USSR countries, OPEC, rapidly
+industrializing countries and umbrella group). Players must chose
+between “green” and “black” technologies, adapt to CC or research on
+climate research to achieve a number of country-specific objectives.
+Over the in-game rounds, global temperature rises according to player’s
+decisions and all players lose if a critical threshold is reached. A
+player wins when they achieve a number or arbitary objectives.
 
 ## 77.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-/post- surveys.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Linear regressions comparing pre- and post-game beliefs
+about climate politics and personal responsibility.
 
-</td>
-<td style="text-align:left;">
+**Results**: Significant pre- / post- change in the expected direction.
 
-pre-/post- surveys.
+**Improved?**: Personal responsibility, confidence and pessimis on
+climate politics.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 77.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**emotions**: Pesimism about CC lower in the post intervention
+(*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**other**: Personal responsibility and beliefs about climate politics
+and international cooperation (*Worked?*: yes )
 
-Significant pre- / post- change in the expected direction.
+## 77.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Game has a significant effect on climate politics
+(international cooperation) as well as personal responsibility and
+climate pessimism, not on confidence in politicians.
+
+**Message to keep:**: Tabletop game directly shows the social and
+political variables at play in CC politics changing personal
+responsibility and political pbeliefs about CC.
 
 # 78 Monroe2016 ( ABP )
+
+**title** Can climate change enhance biology lessons? A quasi-experiment
 
 ## 78.1 abstract
 
@@ -18725,15 +15452,7 @@ age_max
 
 ## 78.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This study explored the consequences of incorporating climate change
 into biology concepts given that students may hold a diversity of
@@ -18742,66 +15461,53 @@ science concepts of carbon cycle and carbon sequestration to climate
 change impacted student knowledge gain about carbon and interest in the
 activities.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 78.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: NA
 
-Outdoor/Indoor/Both
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: educational experience
 
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-educational experience
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-half-day educational experience about forest carbon, including the
-carbon cycle, carbon storage in trees, and carbon sequestra tion in
-various land uses.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: half-day educational experience about forest carbon,
+including the carbon cycle, carbon storage in trees, and carbon
+sequestra tion in various land uses.
 
 ## 78.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: Descriptive statistics were employed to understand the
+students’ attitudes of cli- mate change and perceptions of their
+parents’ opinions on climate change. Chi- square tests (p \< .05) were
+used to compare the proportion of response differences between treatment
+(SQ1) and control group (SQ2) on student attitudes, beliefs about
+parents’ attitudes toward climate change, and demographic backgrounds.
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 78.6 Outcomes
+
+**knowledge**: yes (*Worked?*: yes )
+
+## 78.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 79 Muller2021 ( LR )
+
+**title** Muller, I. and Wood, L. (2021). Raising Awareness of Agency to
+Address Climate Change: The Do One Thing (DOT) Strategy. Educational
+Research for Social Change, 10 (2), 47-62.
+<http://dx.doi.org/10.17159/2221-4070/2021/v10i2a4>
 
 ## 79.1 abstract
 
@@ -18903,15 +15609,7 @@ suburban
 
 ## 79.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 1st phase: meeting with teachers and community representatives to
 identify and discuss the environmental issues they were facing in this
@@ -18922,94 +15620,61 @@ subjects. DOT project, where where learners, as citizen scientists,
 shared their learning about climate change with community members and
 committed to actions to minimise the negative effects thereof
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 how the DOT strategy enhanced the knowledge and influenced the
 attitudes, and perhaps even behavioural intentions, of both the learners
 and the community members.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 79.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Participatory action research
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Participatory action research
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-"The project was conducted in cycles of action and reflection. In Cycle
-3, learners, as citizen scientists, shared their learning about climate
-change with family and community members using the DOT strategy (raising
-awareness of local environmental threats and also initiating ideas for
-action for change).
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: “The project was conducted in cycles of action and
+reflection. In Cycle 3, learners, as citizen scientists, shared their
+learning about climate change with family and community members using
+the DOT strategy (raising awareness of local environmental threats and
+also initiating ideas for action for change).
 
 ## 79.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: Thematic coding of qualitative data provided insight into
+the dynamics of teaching climate change and the influence of the DOT
+project on the learning of Grade 7 learners.
+
+**Results**: NA
+
+**Improved?**: partiallly, there was an enhanced awareness of some
+aspects, like humans responsibility but no on the extensive
+socioeconimic effects of CC. There is a superficial generalized
+understanding of CC.
+
+## 79.6 Outcomes
+
+**awareness**: raise awareness of local environmental threats
+(*Worked?*: partiallly, there was an enhanced awareness of some aspects,
+like humans responsibility but no on the extensive socioeconimic effects
+of CC. There is a superficial generalized understanding of CC. )
+
+**action**: encourage learners and families to behave in more
+environmentaly friendly ways (*Worked?*: yes )
+
+## 79.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 80 Muller2021 ( SC )
+
+**title** Raising Awareness of Agency to Address Climate Change: The Do
+One Thing (DOT) Strategy
 
 ## 80.1 abstract
 
@@ -19111,141 +15776,106 @@ Urban
 
 ## 80.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 In this project, we aimed to develop learners as citizen scientists to
 be able to counteract the negative effects of these hindrances and
 encourage the adoption of environmentally friendly behaviour.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 “How can Grade 7 teachers use the DOT strategy to raise awareness about,
 and encourage action to mitigate, climate change?”
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 80.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Project-based learning strategy, DOT (Do It a Thing)
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Project-based learning strategy, DOT (Do It a Thing)
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-- The DOT project supports the infusion of climate change knowledge into
-  a range of school subjects such as life skills, social science, and
-  natural science and technology. Teachers who attended the workshops
-  linked topics in their respective subjects to climate change. Learners
-  were tasked to explore subject content and use the information gleaned
-  to guide action on climate change in their communities.
-- The learners were requested to discuss what they had learnt in the
-  classroom about climate change with a responsible adult at home (a
-  family member or family friend) and ask them to indicate on a paper
-  “leaf” (provided by the teacher) one thing they could think of to
-  lessen the harmful effects of climate change in their community. The
-  learners were to do the same on another leaf. The next day, the
-  learners came to school with the two leaves that indicated their ideas
-  on the action they could take to combat climate change. They were
-  asked to post the leaves on a “DOT tree”. `{=html}     </td>`
-  `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+**Description**: - The DOT project supports the infusion of climate
+change knowledge into a range of school subjects such as life skills,
+social science, and natural science and technology. Teachers who
+attended the workshops linked topics in their respective subjects to
+climate change. Learners were tasked to explore subject content and use
+the information gleaned to guide action on climate change in their
+communities. - The learners were requested to discuss what they had
+learnt in the classroom about climate change with a responsible adult at
+home (a family member or family friend) and ask them to indicate on a
+paper “leaf” (provided by the teacher) one thing they could think of to
+lessen the harmful effects of climate change in their community. The
+learners were to do the same on another leaf. The next day, the learners
+came to school with the two leaves that indicated their ideas on the
+action they could take to combat climate change. They were asked to post
+the leaves on a “DOT tree”.
 
 ## 80.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Interviews and surveys
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: The data set consisted of (i) pledges of both the
+community and learners captured on the DOT leaves and (ii) learners’
+responses to open-ended questions: (a) Explain your understanding of the
+concept climate change, (b) Discuss your learning from the Skype meeting
+with the USA learners, and (c) Indicate three more things you can do to
+lessen the impact of climate change. We compared the answers to (a) with
+the transcribed discussion with community members in Cycle 1. Thematic
+coding of qualitative data (Tesch, 1990, as explained in Creswell, 2009)
+provided insight into the dynamics of teaching climate change and the
+influence of the DOT project on the learning of Grade 7 learners.
 
-</td>
-<td style="text-align:left;">
+**Results**: The ability of participants to link climate change to
+specific environmental indicators, such as ozone depletion, air
+pollution, and the loss of natural life, suggests an enhanced awareness
+of climate change effects from a scientific perspective. - The
+assumption can be made that exposure to climate change in the curriculum
+has enabled the learners to propose strategies to mitigate climate
+change on a wider scale. - The Skype discussions with peers at a school
+in Louisville, Kentucky, in America provided the learners with an
+opportunity to showcase their knowledge on climate change as capable,
+informed citizens
 
-Interviews and surveys
+**Improved?**: Awareness of climate change improved. - There was
+Increased Commitment to Adopt Environmentally Friendly Behaviour - An
+Improved Ability to Communicate About Climate Change
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 80.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**awareness**: Because the participants understood that climate change
+resulted from the actions of humans. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**intention**: the participants were inspired to pledge to put their
+litter in bins instead of discarding it in public spaces. (*Worked?*:
+Yes )
 
-- The ability of participants to link climate change to specific
-  environmental indicators, such as ozone depletion, air pollution, and
-  the loss of natural life, suggests an enhanced awareness of climate
-  change effects from a scientific perspective.
-- The assumption can be made that exposure to climate change in the
-  curriculum has enabled the learners to propose strategies to mitigate
-  climate change on a wider scale.
-- The Skype discussions with peers at a school in Louisville, Kentucky,
-  in America provided the learners with an opportunity to showcase their
-  knowledge on climate change as capable, informed citizens
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-  `{=html}     </table>`
+**action**: The South African learners spoke of the water and air
+pollution they faced daily. (*Worked?*: Yes )
+
+## 80.7 Conclusions
+
+**Conclusions**: The DOT strategy proved to be an effective way to make
+young learners aware of their responsibility towards society and the
+need to promote a healthy natural environment in their communities.
+Although social change regarding positive activities cannot be concluded
+by one cycle in a project, the findings of this small-scale study
+indicate that PAR projects incorporating participatory pedagogies such
+as the DOT strategy are useful, not only to reach educational outcomes
+but also to enable learners (and community members) to become advocates,
+if not activists, for climate change in their communities.
+
+**Message to keep:**: The DOT assignment inspired interest and
+engagement by requiring learners to act as educators and advocates of
+more environmentally responsible behaviour. There is the need to connect
+teaching about climate change more closely to the impacts thereof on
+learners’ own communities, and to train teachers to cope with any
+negative emotion learners may experience.
 
 # 81 Nafisah2022 ( MB )
+
+**title** The Integration of Environmental Pollution Materials in Social
+Studies Learning in School for Anticipation of Climate Change
 
 ## 81.1 abstract
 
@@ -19359,15 +15989,7 @@ Urban
 
 ## 81.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This research was intended to 1) identify materials of environmental
 pollution around students as a source of social studies learning; 2)
@@ -19376,102 +15998,67 @@ to anticipate climate change; 3) determine the effectiveness of learning
 activities on the integration of environmental pollution materials to
 anticipate climate change.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 81.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: lessons and activities
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-lessons and activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Activities: taking care of plants, sorting waste, composting, recycling
-and saving energy in school The lessons are based on the research and
-presentation of local environmental issues
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Activities: taking care of plants, sorting waste,
+composting, recycling and saving energy in school The lessons are based
+on the research and presentation of local environmental issues
 
 ## 81.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test / post-test, Cronbach alpha analysis on
+questionnaire, t-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: pre- post questionnaire on environmental awareness are
+compared with t-test
 
-</td>
-<td style="text-align:left;">
+**Results**: Significative t-test on the mean results of pre-test
+post-test on the environmental awareness questionnaire (mean pre: 113
+points, post-test:125 points) Increase for 11 participant, decrease for
+4. M
 
-pre-test / post-test, Cronbach alpha analysis on questionnaire, t-test
+**Improved?**: Better scores in the environmental awareness
+questionnaires
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 81.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**awareness**: Student’s environmental awareness (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**other**: There might be more than just awareness since the authors
+have a discourse about relationships between knowledge, awareness and
+actions (p. 56) but the questionnaire is not available. Authors note
+that the students are more enthusiastic, because the issues presented
+are related to local lives of participants (local environmental issues)
+(*Worked?*: Yes )
 
-Significative t-test on the mean results of pre-test post-test on the
-environmental awareness questionnaire (mean pre: 113 points,
-post-test:125 points) Increase for 11 participant, decrease for 4. M
+## 81.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: “Utilization of the surrounding environment as a
+learning resource is able to facilitate students to connect theit
+experience with new information” “School may be utilized as a supporting
+facility in carrying out environmental education through knowledge,
+awareness and attitudes, as well as rational and respondible behavior
+towards environmental problems”
+
+**Message to keep:**: The use of local environmental issues as a way to
+teach climate change in the context of social studies is something the
+authors insisted a lot on.
 
 # 82 Nakamura2019 ( ABP )
+
+**title** Multi-Timescale Education Program for Temporal Expansion in
+Ecocentric Education: Using Fixed-Point Time-Lapse Images for Phenology
+Observation
 
 ## 82.1 abstract
 
@@ -19589,117 +16176,75 @@ school that is located close to the sea
 
 ## 82.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to confirm the validity of a program featuring phenology observation,
 employing fixed-point time-lapse images as climate change learning, and
 to obtain suggestions on the influence of the program on the
 multi-timescale concepts of the learners.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 82.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: both
 
-</td>
-<td style="text-align:left;">
+**Type**: environmental education program
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-environmental education program
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Using the observation sheet printed on an A3-size paper, the students
-attached a red sticker on the day they judged as “full bloom date,”
-according to the above-mentioned observation criteria (Figure 3). This
-observation work took approximately 15 min out of the 50 min allotted
-for the entire program. Students were able to grasp the annual change of
-flowering phenology by perceiving the red seal similar to a graph point.
-At the time, only these 50 min could be secured; thus, the students
-themselves did not analyze or consider the relationship between the full
-bloom date and the annual temperature. Instead, the instructor explained
-that the full bloom date of cherry blossoms was related to global
-warming in that it is affected by the temperature conditions of each
-year.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Using the observation sheet printed on an A3-size
+paper, the students attached a red sticker on the day they judged as
+“full bloom date,” according to the above-mentioned observation criteria
+(Figure 3). This observation work took approximately 15 min out of the
+50 min allotted for the entire program. Students were able to grasp the
+annual change of flowering phenology by perceiving the red seal similar
+to a graph point. At the time, only these 50 min could be secured; thus,
+the students themselves did not analyze or consider the relationship
+between the full bloom date and the annual temperature. Instead, the
+instructor explained that the full bloom date of cherry blossoms was
+related to global warming in that it is affected by the temperature
+conditions of each year.
 
 ## 82.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: NA
 
-Resultados.obtenidos.por.cada.outcome
+**Analysis**: The mean of all the students’ determinations of full bloom
+day with a red sticker was calculated. In addition, sample variance and
+sample standard deviation were calculated in order to understand how
+much variation existed among the students.
 
-</td>
-<td style="text-align:left;">
+**Results**: The 50-min educational program that includes a 15-min plant
+phenology observation activity by third-year junior high school students
+has provided ecologically appropriate phenology observation results, as
+well as the potential for important educational effects regarding
+timescale, as described above. the students acquiring the hundreds-year
+timescale concept based on the short-term timescale concept of dynamic
+nature.
 
-The 50-min educational program that includes a 15-min plant phenology
-observation activity by third-year junior high school students has
-provided ecologically appropriate phenology observation results, as well
-as the potential for important educational effects regarding timescale,
-as described above. the students acquiring the hundreds-year timescale
-concept based on the short-term timescale concept of dynamic nature.
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-</tbody>
-</table>
+## 82.6 Outcomes
+
+**knowledge**: yes (*Worked?*: yes )
+
+## 82.7 Conclusions
+
+**Conclusions**: although the students might be able to observe daily
+changes and differences among the years from 1996 to 2017, they were not
+able to directly observe the ecological effects of long-term climate
+change, such as global warming.
+
+**Message to keep:**: NA
 
 # 83 Nicholas_Figueroa2017 ( ABP )
+
+**title** Iḷisaġvik Tribal College’s summer climate program: teaching
+STEM concepts to North Slope Alaska high school and middle-school
+students
 
 ## 83.1 abstract
 
@@ -19779,122 +16324,63 @@ rural
 
 ## 83.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 STEM program examined climate change and its effects on the local
 landscape from a multitude of perspectives
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 83.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: both
 
-</td>
-<td style="text-align:left;">
+**Type**: summer camp
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-summer camp
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Students attending the camp were given out-of-class assignments,
-maintained a daily journal, wrote a minimum 500- word essay, and
-delivered a presentation at the end of the camp scientific lectures,
-handson/lab activities, Elder discussions, and field trips, The students
-were required to take daily notes in their journals, The journals were
-collected and returned with informational comments that supplemented
-their notes, enhancing the learning process. Students were encouraged to
-write their essays on topics of interest to them. The students prepared
-a public presentation integrating the knowledge gained from the
-assignments, scientists, Elders, and fieldtrips.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Students attending the camp were given out-of-class
+assignments, maintained a daily journal, wrote a minimum 500- word
+essay, and delivered a presentation at the end of the camp scientific
+lectures, handson/lab activities, Elder discussions, and field trips,
+The students were required to take daily notes in their journals, The
+journals were collected and returned with informational comments that
+supplemented their notes, enhancing the learning process. Students were
+encouraged to write their essays on topics of interest to them. The
+students prepared a public presentation integrating the knowledge gained
+from the assignments, scientists, Elders, and fieldtrips.
 
 ## 83.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: survey
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: survey
 
-</td>
-<td style="text-align:left;">
+**Results**: Student assessment showed an increase in knowledge to how
+real-world issues can directly relate to community concerns, such as the
+local challenges of adapting to a changing climate.
 
-survey
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 83.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 83.7 Conclusions
 
-Student assessment showed an increase in knowledge to how real-world
-issues can directly relate to community concerns, such as the local
-challenges of adapting to a changing climate.
+**Conclusions**: Students developed and enhanced their understanding of
+science concepts and, at the end of the camp, could articulate the
+impact of climactic changes on their local environment.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 84 Nkoana2020 ( JGOP )
+
+**title** Exploring the effects of an environmental education course on
+the awareness and perceptions of climate change risks among seventh and
+eighth grade learners in South Africa
 
 ## 84.1 abstract
 
@@ -20002,132 +16488,84 @@ Urban and rural
 
 ## 84.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The aim of this study was to explore the effects of an environmental
 education course on the awareness and perceptions of climate change
 risks among seventh and eighth grade learners in South Africa.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 84.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Environmental education
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Environmental education
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Problem Tree, The focus group participants from the rural and township
-communities were introduced to the concept of the problem tree through
-an example. They were subsequently requested to complete the problem
-tree exercise by identifying the problems in their respective
-communities. They then diagnosed the root causes of their community
-problem and the impacts these problems are having on their communities.
-Hazard, Impact and Vulnerability matrix this tool enables the community
-members to pinpoint hazards, the impact of the hazards, their
-vulnerability to their hazards, and scoring these hazards in terms of
-the priority to community members. This can be used for vulnerability
+**Description**: Problem Tree, The focus group participants from the
+rural and township communities were introduced to the concept of the
+problem tree through an example. They were subsequently requested to
+complete the problem tree exercise by identifying the problems in their
+respective communities. They then diagnosed the root causes of their
+community problem and the impacts these problems are having on their
+communities. Hazard, Impact and Vulnerability matrix this tool enables
+the community members to pinpoint hazards, the impact of the hazards,
+their vulnerability to their hazards, and scoring these hazards in terms
+of the priority to community members. This can be used for vulnerability
 assessment, and adaptation assessment. The participant had to decide on
 how to score (or not score) each hazard that was identified by the focus
 group participants.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 84.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Focus group, problem tree and Hazard, Impact and Vulnerability
+matrix
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Qualitative content analysis techniques.
 
-</td>
-<td style="text-align:left;">
+**Results**: The environmental education group (township participants)
+was instructed to complete the hazard, impact and vulnerability matrix
+tool on any topic of concern in their local communities(they were not
+promoted to discuss environmental risks such as climate change), they
+highlighted poverty and damaged infrastructure as risks posed to their
+local communities by flooding (Kilinc, Stanisstreet, & Boyes, 2008).
+They went further to score risk of flooding alongside “dangerous
+taverns” and “drugs” that cause depopulation, mental health problems,
+infectious diseases, unwanted pregnancies, and death.
 
-Focus group, problem tree and Hazard, Impact and Vulnerability matrix
+**Improved?**: The group that receive environmental learning had better
+understandings of current and future climate change risks
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 84.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**awareness**: Environmental awareness has an effect on perceptions of
+current and future climate change risks. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 84.7 Conclusions
 
-The environmental education group (township participants) was instructed
-to complete the hazard, impact and vulnerability matrix tool on any
-topic of concern in their local communities(they were not promoted to
-discuss environmental risks such as climate change), they highlighted
-poverty and damaged infrastructure as risks posed to their local
-communities by flooding (Kilinc, Stanisstreet, & Boyes, 2008). They went
-further to score risk of flooding alongside “dangerous taverns” and
-“drugs” that cause depopulation, mental health problems, infectious
-diseases, unwanted pregnancies, and death.
+**Conclusions**: The finding suggest that environmental education
+affects the perception of linkages between different environmental
+hazard risks. Learners were more concerned about short-term risks than
+long-term risks. Responses also indicated that short-term risks such as
+meeting basic needs and dealing with criminality are priorities over
+longterm risks such as climate change. A daily struggle for these basic
+needs represent the local context and discourse within which learners
+view and experience their world.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Using environmental education could be beneficial
+in the awareness and the change of perceptions of the current and future
+risks related to climate change
 
 # 85 Oberauer2023 ( LR )
+
+**title** The impact of teenagers’ emotions on their complexity thinking
+competence related to climate change and its consequences on their
+future: looking at complex interconnections and implications in climate
+change education
 
 ## 85.1 abstract
 
@@ -20242,134 +16680,73 @@ age_max
 
 ## 85.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This study sets out to measure participants’ complexity thinking
 competence with regard to climate change consequences on their own lives
 and humanity in general.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  emotions triggered in teenage students learning about climate change
 2)  the students’ complexity thinking competence in the context of
     climate change consequences
 3)  the interconnections between different types of emotions and the
     levels of complexity thinking competence in teenagers’ explanations
-    of climate change. `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    of climate change.
 
 ## 85.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: classical school lessons, individual research projects,
+conversations, workshops, debates with experts
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-classical school lessons, individual research projects, conversations,
-workshops, debates with experts
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-It is a 1 year long intervention within the context of the school that
-combines classical approaches like school lessons, with constructivist
-methodologies like individual research projects, conversations,
-workshops, debates with experts and ends with a final project.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: It is a 1 year long intervention within the context of
+the school that combines classical approaches like school lessons, with
+constructivist methodologies like individual research projects,
+conversations, workshops, debates with experts and ends with a final
+project.
 
 ## 85.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Qualitative and Quantitative
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Multilevel Modeling Analysis
 
-</td>
-<td style="text-align:left;">
+**Results**: revealed that complexity thinking competence is more
+pronounced in girls (β = − 0.08, p = 0.017). It increases with the
+feeling of stimulation (β = 0.11, p \< 0.001), whereas it decreases with
+the feeling of attenuation (β = − 0.13, p \< 0.001). Complexity thinking
+competence did not change as a result of the k.i.d.Z.21-interventions (β
+= − 0.04, p = 0.208).
 
-Qualitative and Quantitative
+**Improved?**: NA
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 85.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Complexity thinking (*Worked?*: No )
 
-</td>
-<td style="text-align:left;">
+**awareness**: awareness of climate change on the environmental,
+economic and social challenges of the twenty-first century (*Worked?*:
+no )
 
-revealed that complexity thinking competence is more pronounced in girls
-(β = − 0.08, p = 0.017). It increases with the feeling of stimulation (β
-= 0.11, p \< 0.001), whereas it decreases with the feeling of
-attenuation (β = − 0.13, p \< 0.001). Complexity thinking competence did
-not change as a result of the k.i.d.Z.21-interventions (β = − 0.04, p =
-0.208).
+## 85.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: This study has a very interesting goal which is to
+identify the role of emotions and the intervention on awareness (which
+requires complexity thinking). They do identify some interesting
+relationship but the one-year long intervention was unablet to show
+significant results
+
+**Message to keep:**: NA
 
 # 86 Parant2017 ( ABP )
+
+**title** Raising Students Awareness to Climate Change: An Illustration
+With Binding Communication
 
 ## 86.1 abstract
 
@@ -20483,115 +16860,63 @@ urban
 
 ## 86.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to change participant’s involvement regarding global warming, which may
 not be attainable solely through an increase of information.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 86.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: binding communication
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-binding communication
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-1)  saw a 1-hr film about climate change, (b) were invited to discuss
-    the movie for 20 min, and (c) received information on greenhouse
-    gases and CO2 emission (15 min). The only difference between the two
-    conditions was that in the “binding communication condition,”
-    participants were asked to write concrete actions they would be
-    willing to take to reduce their carbon footprint (approximately for
-    5 min) at the end of the intervention. `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+**Description**: (a) saw a 1-hr film about climate change, (b) were
+invited to discuss the movie for 20 min, and (c) received information on
+greenhouse gases and CO2 emission (15 min). The only difference between
+the two conditions was that in the “binding communication condition,”
+participants were asked to write concrete actions they would be willing
+to take to reduce their carbon footprint (approximately for 5 min) at
+the end of the intervention.
 
 ## 86.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionnaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: reported statistics were adjusted with the
+Welch–Satterthwaite equation, and Type II sums of squares were used to
+account for the unequal
 
-</td>
-<td style="text-align:left;">
+**Results**: knowledge increased in both control and experimental
+conditions, there was a close-to-significant interaction effect between
+time and experimental condition on attitudes
 
-questionnaire
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 86.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: right or wrong (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 86.7 Conclusions
 
-knowledge increased in both control and experimental conditions, there
-was a close-to-significant interaction effect between time and
-experimental condition on attitudes
+**Conclusions**: binding communication could be useful for raising young
+people’s awareness of climate change and global warming. Even if movies
+are able to present information and have been shown to engage their
+audience emotionally, our data suggest that fear-appeal-based movies
+could be inefficient if not accompanied by concrete solutions.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 87 Park2020 ( MB )
+
+**title** The Impact of Project Activities on the Cultivation of
+Ecological Citizenship in a High School Climate Change Club
 
 ## 87.1 abstract
 
@@ -20706,127 +17031,93 @@ Urban
 
 ## 87.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 1.  What are the characteristics of students’ activities and artifacts
     during climate change club projects?
 2.  How do the project activities in a high school climate change club
     affect the cultivation of students’ ecological citizenship?
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
+
+**Questions**:
+
+NA
 
 ## 87.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Club activities consisting in lessons, researches, activities
+such as communicating in school and managing waste policies in school
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Club activities consisting in lessons, researches, activities such as
-communicating in school and managing waste policies in school
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Step 1: understanding climate change (2 weeks) - lessons on climate
-change - organizing groups of students and discussions - construction of
-a model (with drawings) explaining cause of climate change Step 2:
-investigating the climate change issues (2 weeks) - investigating
-$$local and in dayly lives$$ climate change issues - presentation and
-discussions of issues from each group Step 3: planning and participating
-in social practice (3 weeks) - develop social practice plan to fight
-climate change - implementation of practice and evaluation of activities
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Step 1: understanding climate change (2 weeks) -
+lessons on climate change - organizing groups of students and
+discussions - construction of a model (with drawings) explaining cause
+of climate change Step 2: investigating the climate change issues (2
+weeks) - investigating $$local and in dayly lives$$ climate change
+issues - presentation and discussions of issues from each group Step 3:
+planning and participating in social practice (3 weeks) - develop social
+practice plan to fight climate change - implementation of practice and
+evaluation of activities
 
 ## 87.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Pre- post- questionnaire for ecological citizenship, students artifact
-from their activities, field notes and in-depth interviews were
+**Data**: Pre- post- questionnaire for ecological citizenship, students
+artifact from their activities, field notes and in-depth interviews were
 collected. However, it seems that pre- post- questionnaire were mostly
 used to prepare the interview which were then analysed.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: Qualitative analyses, note that participant are informed
+of the interpretation of their interviews and confirm its
+interpretation, an effort is done for triangulation
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: The analyses are qualitative and presented as examples and
+overall impression from the researchers, hence difficult to present
+here. The authors seem confident that the awareness has improved in
+terms of “responsability”, “justice” (global social justice associated
+with CC). Concerning knowledge they also say that the students have a
+better knowledge of causes and consequences of CC Concerning intention,
+while the results seem globally positive they are somewhat contrasted
 
-</td>
-<td style="text-align:left;">
+**Improved?**: Knowledge and awareness improved (concerning knowledge
+that is said by the researchers but no clear example are given).
+Concerning intention, the results seem to be more contrasted but the
+researchers seem to be positive in terms of “sustainability competence
+of ecological citizenship”.
 
-The analyses are qualitative and presented as examples and overall
-impression from the researchers, hence difficult to present here. The
-authors seem confident that the awareness has improved in terms of
-"responsability", "justice" (global social justice associated with CC).
-Concerning knowledge they also say that the students have a better
-knowledge of causes and consequences of CC Concerning intention, while
-the results seem globally positive they are somewhat contrasted
+## 87.6 Outcomes
 
-</td>
-</tr>
-</tbody>
-</table>
+**knowledge**: Understanding causes, impact and characteristics of
+climate change (*Worked?*: Yes )
+
+**awareness**: - responsability: consciousness about the anthropogenic
+cause of CC and its consequences for “living and non-living things that
+share our ecosystem” - justice: consciousness of the link between global
+social justice and CC (*Worked?*: Yes )
+
+**intention**: - Sustainability: changing individual behavior/going from
+awareness to pratice/reflexion on usual personal behavior -
+Participation: willingness to participate (*Worked?*: Yes/Unclear )
+
+## 87.7 Conclusions
+
+**Conclusions**: No clear conclusion
+
+**Message to keep:**: An example of student club which raise awareness
+of the students, no real surprises or original results. One thing to
+keep from it might be that in such high achievement school from Asia,
+extracurricular club might be a solution to raise awareness since the
+official curricula are not very focused in CC, and the expectation for
+results from student do not leave much space for such initiative. Also,
+the idea of ecological citizenship and the associated “competences” is
+somewhat original
 
 # 88 Parth2020 ( MB )
+
+**title** Quality Child–Parent Relationships and Their Impact on
+Intergenerational Learning and Multiplier Effects in Climate Change
+Education. Are We Bridging the Knowledge–Action Gap?
 
 ## 88.1 abstract
 
@@ -20911,136 +17202,109 @@ sample.size
 
 ## 88.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 this paper aims to investigate the findings and results of students’
 research regarding intergenerational learning processes and multiplier
 effects from the younger to the older generation.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 88.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: $$The idea is to compare parents with children
+participating to the k.id.z21 CCE program to those with children one
+year younger, so difficult to know whether is is curricular or
+extracurricular$$
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: NA $$The idea is to compare parents with children
+participating to the k.id.z21 CCE program to those with children one
+year younger, so difficult to know whether is is presential, I guess it
+is?$$
 
-</td>
-<td style="text-align:left;">
+**Type**: Children participating in k.i.d.Z.21 CCE project teach, effect
+measured on parents
 
-$$The idea is to compare parents with children participating to the
-k.id.z21 CCE program to those with children one year younger, so
-difficult to know whether is is curricular or extracurricular$$
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-NA $$The idea is to compare parents with children participating to the
-k.id.z21 CCE program to those with children one year younger, so
-difficult to know whether is is presential, I guess it is?$$
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Children participating in k.i.d.Z.21 CCE project teach, effect measured
-on parents
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-We do not have much information on the actual pedagogical intervention.
-However the study compare effects on parents whose children participate
-on the k.i.d.Z.21 CCE program to those whose children are one year too
-young to participate. The k.i.d.Z.21 programme seems to consist in
-"annual seminars, research weeks and questionnaire"
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: We do not have much information on the actual
+pedagogical intervention. However the study compare effects on parents
+whose children participate on the k.i.d.Z.21 CCE program to those whose
+children are one year too young to participate. The k.i.d.Z.21 programme
+seems to consist in “annual seminars, research weeks and questionnaire”
 
 ## 88.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Questionnaire from which are extracted the factors
+“knowledge”, “attitudes”, “action - mobility”, “action - consumption”
+and “child parent relationship”. The factor are described but the method
+to extract them is not explicited
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: After extracting factors “knowledge”, “atttitudes”,
+“actions (Mobility)”, “actions (Consumption)” and “child-parent
+relationship” from the questionnaire, the statistical procedure MANOVA
+was applied to all five factors as dependent variables and the group
+experimental/control as independent variable. Direct and interaction
+effects were tested. Correlations between factors were also tested.
 
-</td>
-<td style="text-align:left;">
+**Results**: $$KNOWLEDGE$$ the knowledge of the parents of the 8th grade
+students $$participating$$ has increase above the knowledge of the
+parents of the 7th grade student $$not participating$$ - $$INTENTION$$
+(called attitudes) the attitudes of the parents have not changed either
+over time nor by the “k.i.d.Z.21” project. - $$HABIT$$ (called actions)
+in both cases the actions of the parents have not changed either over
+time nor by the “k.i.d.Z.21” project. Extra results: the relationship
+$$concerning communication on CC$$ between the children of the 8th grade
+and their parents has increased beyond the relationship between the
+children of 7th grade and their parents. There is a correlation between
+knowledge and attitudes $$intention$$ (not attributable to the
+programme, general) and another between knowledge of the parent and
+child-parent relationship. Therefore, the effect might be not conclusive
+for the project, but there is a possibility of bridging the
+knowledge-action gap by intergenerational learning, and a “multiplier
+effects” as a result from teaching CC to the children.
 
-Questionnaire from which are extracted the factors "knowledge",
-"attitudes", "action - mobility", "action - consumption" and "child
-parent relationship". The factor are described but the method to extract
-them is not explicited
+**Improved?**: Knowledge of the parents with chidren participating in
+the programme has improved, but not intentions nor habits
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 88.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Factor “knowledge” extracted from questions concerning
+auto-report of knowledge confidence, and objective questions on cause
+and consequences of climate change (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**intention**: Factor called “attitudes” by the authors: “mainly consist
+of the willingness to behave in a climate-friendly manner. (*Worked?*:
+No )
 
-- $$KNOWLEDGE$$ the knowledge of the parents of the 8th grade students
-  $$participating$$ has increase above the knowledge of the parents of
-  the 7th grade student $$not participating$$
-- $$INTENTION$$ (called attitudes) the attitudes of the parents have not
-  changed either over time nor by the "k.i.d.Z.21" project.
-- $$HABIT$$ (called actions) in both cases the actions of the parents
-  have not changed either over time nor by the "k.i.d.Z.21" project.
-  Extra results: the relationship $$concerning communication on CC$$
-  between the children of the 8th grade and their parents has increased
-  beyond the relationship between the children of 7th grade and their
-  parents. There is a correlation between knowledge and attitudes
-  $$intention$$ (not attributable to the programme, general) and another
-  between knowledge of the parent and child-parent relationship.
-  Therefore, the effect might be not conclusive for the project, but
-  there is a possibility of bridging the knowledge-action gap by
-  intergenerational learning, and a "multiplier effects" as a result
-  from teaching CC to the children. `{=html}     </td>`
-  `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+**habit**: Factor called “action” by the authors, divided into mobility
+and consumption. It is a mutifaceted factor, coming from various habits.
+(*Worked?*: No )
+
+## 88.7 Conclusions
+
+**Conclusions**: Parents mainly gain knowledge $$not attitudes/actions$$
+from their children in climate-change-related discussions, whereby the
+quality of the child–parent relationship positively influences the
+success of intergenerational learning effects. “The correlation between
+increasing knowledge and child parent relationship seems to be a
+fruitful way to contribute in the research of bridging the
+knowledge-action gap.”
+
+**Message to keep:**: Intergenerational learning where children
+participating in CCE teach to parents have a clear effect on the
+knowledge of the parents, but not in their intention or habits. The
+authors show however that the multiplier effect associated with CCE to
+children might be useful to bridge the knowledge-action gap, even though
+the effect is not as simple as imagined. “The correlation between
+increasing knowledge and child parent relationship seems to be a
+fruitful way to contribute in the research of bridging the
+knowledge-action gap.”
 
 # 89 Petersen2020 ( ABP )
+
+**title** The virtual field trip: Investigating how to optimize
+immersive virtual learning in climate change education
 
 ## 89.1 abstract
 
@@ -21134,119 +17398,62 @@ urban
 
 ## 89.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to investigate how to optimize IVR learning in climate change education
 through implement- ing the above mentioned pre-training principle.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 89.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Immersive Virtual Reality / educational virtual field trips
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Immersive Virtual Reality / educational virtual field trips
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Students investigated the consequences of climate change by virtually
-traveling to Greenland and exploring albedo and greenhouse effects first
-hand. (1) narrated pretraining followed by IVR exploration or (2) the
-same narrated training material integrated within the IVR exploration.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Students investigated the consequences of climate
+change by virtually traveling to Greenland and exploring albedo and
+greenhouse effects first hand. (1) narrated pretraining followed by IVR
+exploration or (2) the same narrated training material integrated within
+the IVR exploration.
 
 ## 89.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionnaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
-
-questionnaire
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Students in both conditions showed significant increases in declarative
-knowledge, self-efficacy, interest, STEM intentions, outcome
+**Results**: Students in both conditions showed significant increases in
+declarative knowledge, self-efficacy, interest, STEM intentions, outcome
 expectations and intentions to change behavior from the pre- to
 post-assessment. However, there was a significant difference between
 conditions favoring the pretraining group on a transfer test consisting
 of an oral presentation to a fictitious UN panel.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: conocimiento mejoro
+
+## 89.6 Outcomes
+
+**knowledge**: yes (*Worked?*: yes )
+
+## 89.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: The findings suggest that educators can choose to
+present important prerequisite learning content before or during a VFT.
+However, adding pretraining may lead to better transfer test
+performance, presumably because it helps reduce cognitive load while
+learning in IVR.
 
 # 90 Porter2012 ( ABP )
+
+**title** Assessing students’ learning about fundamental concepts of
+climate change under two different conditions
 
 ## 90.1 abstract
 
@@ -21344,122 +17551,70 @@ urban
 
 ## 90.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to determine the differences in knowledge gained and retained by
 students that received direct instruction from their science teacher,
 and by those who received equivalent content instruction from outside
 presenters.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 90.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: curriculum
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-curriculum
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-students from three different British Columbia grade six classes were
-followed through two weeks of instruction on (a) weather and climate;
-(b) the carbon cycle and human impact; and (c) global warming and the
-greenhouse effect
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: students from three different British Columbia grade
+six classes were followed through two weeks of instruction on (a)
+weather and climate; (b) the carbon cycle and human impact; and (c)
+global warming and the greenhouse effect
 
 ## 90.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: survey
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: The teacher-based setting resulted in significantly higher
+knowledge gain, although no difference was found between the groups’
+rate of knowledge decline thereafter. Highest gains in knowledge were
+for the carbon cycle and the human impacts topic, followed by
+understanding the difference between climate and weather. The students
+and teacher alike appeared to struggle with the topic of global warming
+and the greenhouse effect.
 
-survey
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 90.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: NA )
 
-</td>
-<td style="text-align:left;">
+## 90.7 Conclusions
 
-The teacher-based setting resulted in significantly higher knowledge
-gain, although no difference was found between the groups’ rate of
-knowledge decline thereafter. Highest gains in knowledge were for the
-carbon cycle and the human impacts topic, followed by understanding the
-difference between climate and weather. The students and teacher alike
-appeared to struggle with the topic of global warming and the greenhouse
-effect.
+**Conclusions**: that this timeframe was sufficient for students to make
+substantive knowledge gains in three fundamen- tal areas: (a) weather
+and climate; (b) the carbon cycle and the human impacts; and (c) global
+warming and the greenhouse effect.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Many teachers are uncomfortable instructing on
+climate change and global warming because they feel that they do not
+possess the necessary background information on the subject as they
+themselves received little if any instruction on it. This research
+supports the idea that with the necessary background information, the
+classroom teacher is more effective than the pre- senters who have
+substantially more experience educating on the topic, but less
+experience teaching in the classroom.
 
 # 91 Pruneau2003 ( BQ )
+
+**title** Experimentation with a socio- constructivist process for
+climate change education
 
 ## 91.1 abstract
 
@@ -21571,15 +17726,7 @@ Urban
 
 ## 91.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The object of the research was to verify if the proposed pedagogical
 process would succeed in improving students’ conceptions on climate
@@ -21587,125 +17734,75 @@ change: explanation of the phenomenon, its causes, signs, consequences,
 possible human actions and possibilities that the general popu- lation
 will mobilize to minimize their impact on the climate.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Has the local and experiential socio-constructivist process proposed in
 September 2000 to educate teenagers about climate change provoked
 conceptual change in students?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 91.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Experiential learning
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Experiential learning
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-• detailed and critical observation of a beach and representation of
-beach components on a map (students portrayed the plants and animals
-found on the beach as well as the undesirable elements—contaminants
-found at this place); • information on the greenhouse effect with the
-help of a simplified diagram of the phenomenon (diagram of the
-phenomenon and identification of the main greenhouse gases); •
-observation of possible signs of climate change in the milieu by asking
-their parents about these signs. Video on the consequences of a recent
-storm that had brought enormous blocks of ice to the coast and flooded
-residences; • work in teams of four to five students. Students played
-the roles of meteorologists, chemists, ecologists, doctors or urban
-planners (according to their choice) to study the environment’s current
-situation and predict what could happen through climate change.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: • detailed and critical observation of a beach and
+representation of beach components on a map (students portrayed the
+plants and animals found on the beach as well as the undesirable
+elements—contaminants found at this place); • information on the
+greenhouse effect with the help of a simplified diagram of the
+phenomenon (diagram of the phenomenon and identification of the main
+greenhouse gases); • observation of possible signs of climate change in
+the milieu by asking their parents about these signs. Video on the
+consequences of a recent storm that had brought enormous blocks of ice
+to the coast and flooded residences; • work in teams of four to five
+students. Students played the roles of meteorologists, chemists,
+ecologists, doctors or urban planners (according to their choice) to
+study the environment’s current situation and predict what could happen
+through climate change.
 
 ## 91.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Questionnaires
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Interviews and questionnaires
 
-</td>
-<td style="text-align:left;">
+**Results**: Knowledge and awareness increased but intention is not
+clear: fatalism seem to predominate (no possibility to mobilize)
 
-Questionnaires
+**Improved?**: improvement of students’ conceptions of climate change:
+the nature of the phenomenon, its signs, causes, consequences and
+remedial actions as well as the possibility of mobilizing the population
+in reducing its impact on climate.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 91.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Yes (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Yes (*Worked?*: Yes )
 
-Knowledge and awareness increased but intention is not clear: fatalism
-seem to predominate (no possibility to mobilize)
+**intention**: Yes (*Worked?*: No )
 
-</td>
-</tr>
-</tbody>
-</table>
+## 91.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: After experiential socio-constructivist process,
+students improved their knowledge of causes, impacts and solutions
+related to climate change. Awareness was mostly improved through field
+trip (i.e. beach outing), working with scientists and university
+conference. Graphic representations of the greenhouse effect seem to
+help. Fatalism (impossibility that adult’s behaviour change) and
+nihilism (climate change is very difficult to influence) could be
+unintentionnally transmitted to the students which is likely
+counterproductive
 
 # 92 Pruneau2006 ( BQ )
+
+**title** The Process of Change Experimented by Teachers and Students
+when Voluntarily Trying Environmental Behaviors
 
 ## 92.1 abstract
 
@@ -21819,95 +17916,63 @@ Urban
 
 ## 92.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Present the process of behavioural change of both teachers and students,
 analyzing it in light of Prochaska, Norcross and DiClemente’s theory
 (2002), and we recom- mend pedagogical strategies for climate change
 education.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 92.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular (students) and professional
+development (teachers)
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: climate change behaviors’ trial
 
-Extracurricular (students) and professional development (teachers)
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-climate change behaviors’ trial
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-25 participating teachers were chosen at random and individually
-interviewed two month after the start of the trial period. Open ended
-questions were aimed at making them recount their personal experience
-during the attempt at change. 75 students were interrogated two months
-after the start of their new behaviors’ trial period.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: 25 participating teachers were chosen at random and
+individually interviewed two month after the start of the trial period.
+Open ended questions were aimed at making them recount their personal
+experience during the attempt at change. 75 students were interrogated
+two months after the start of their new behaviors’ trial period.
 
 ## 92.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: content analysis of questionnaires; subjective
+interpretation
+
+**Results**: NA
+
+**Improved?**: Unclear
+
+## 92.6 Outcomes
+
+**action**: Yes (*Worked?*: Unclear )
+
+## 92.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Engage people in changing some behaviours can
+strengthen the effectivity; the first reason to act evoked by teachers
+and stu- dents was not worry about the impacts of cli- mate change, but
+rather a renewed attachment to nature and a sincere preoccupation for
+the general state of the environment. The creation of social norms
+favorable to environmental ac- tion in changing communities appears to
+hold promise.
 
 # 93 Pruneau2006a ( LR )
+
+**title** When Teachers Adopt Environmental Behaviors in the Aim of
+Protecting the Climate
 
 ## 93.1 abstract
 
@@ -21982,132 +18047,81 @@ sample.size
 
 ## 93.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Objectives
-
-</td>
-<td style="text-align:left;">
-
-This project’s goal is "to describe in more depth teachers’ behavior
+This project’s goal is “to describe in more depth teachers’ behavior
 change processes when they started their attempts at environmental
 behaviors.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 what are the factors promoting and limiting new actions, 2. the
 training’s motivational elements, and 3. the feelings experi- enced
 during the trial period
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 93.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: NA
 
-Outdoor/Indoor/Both
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: The Mutants’ Circle (the term mutant refers to any person who
+chooses to adopt new behaviors to reduce his or her impact on the
+climate)
 
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-The Mutants’ Circle (the term mutant refers to any person who chooses to
-adopt new behaviors to reduce his or her impact on the climate)
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Two major types of activities. First, knowledge transmission and
-construction activities were centered on climate change—its nature,
-signs, causes, and possible local consequences. Second, experiential and
-affective activities followed, including science experiments, a moment
-of solitude in nature (solo), role-playing, values activities, and field
-trips. Throughout the training period, we gave particular emphasis to
-sharing among peers to create a sense of community. Also, During the
-first weekend of training, all teachers decided on their own to
-experiment with one or two new behaviors to reduce their impact on the
-climate
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Two major types of activities. First, knowledge
+transmission and construction activities were centered on climate
+change—its nature, signs, causes, and possible local consequences.
+Second, experiential and affective activities followed, including
+science experiments, a moment of solitude in nature (solo),
+role-playing, values activities, and field trips. Throughout the
+training period, we gave particular emphasis to sharing among peers to
+create a sense of community. Also, During the first weekend of training,
+all teachers decided on their own to experiment with one or two new
+behaviors to reduce their impact on the climate
 
 ## 93.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Interviews; self report of behavioral change
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Interviews were written in narrative (a structured
+synopsis of remarks collected during an interview). In paralel,
+interviews were analized creating and counting emergent categories. One
+team researcher did this analysis, and the results were linked to the
+narratives (triangulation). Researchers identified behaviors chosen by
+the teachers, their degree of success in achieving those behaviors,
+factors promoting and limiting new actions, the training’s motivational
+elements, and the feelings experienced during the trial period.
 
-</td>
-<td style="text-align:left;">
-
-Interviews; self report of behavioral change
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-According to author’s report, the most successful behaviors were water
-economy (5 participants of 7), judicious automobile use (4 participants
-of 6), paper towel use reduction (5 participants of 5), and use of
-reusable containers in lunchboxes (2 participants of 3). Aspects
+**Results**: According to author’s report, the most successful behaviors
+were water economy (5 participants of 7), judicious automobile use (4
+participants of 6), paper towel use reduction (5 participants of 5), and
+use of reusable containers in lunchboxes (2 participants of 3). Aspects
 facilitating behavioral change were mainly two: being part of a
 community had reinforced the idea that individual behaviors can truly
 make a difference, even if the actions are minimal. Second, having heard
 people in their group talk of actions they were already accomplishing
 incited them to imitate those people.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: NA
+
+## 93.6 Outcomes
+
+**habit**: yes (*Worked?*: unclear, there is no baseline )
+
+**other**: Aspects facilitating behavioral change (*Worked?*: NA )
+
+## 93.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 94 Raes2016 ( BQ )
+
+**title** The effects of teacher-led class interventions during
+technology-enhanced science inquiry on students’ knowledge integration
+and basic need satisfaction
 
 ## 94.1 abstract
 
@@ -22222,132 +18236,73 @@ Urban
 
 ## 94.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Assessment of the effects of teacher-led class interventions during
 technology-enhanced science inquiry on students’ knowledge integration
 and basic need satisfaction
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  Does providing teacher-led class interventions during web-based
     collaborative inquiry leads to better knowledge inte- gration,
     higher competence satisfaction and lower competence frustration?
 2.  Can we identify aptitude-by-treatment interactions based on the
     student characteristics gender and achievement level?
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
 
 ## 94.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: technology-enhanced science inquiry
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-technology-enhanced science inquiry
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-2 groups for computer-supported collaborative learning (CSCL)
-sessions: 1) the high-structured condition (teacher interventions on
-group level and on class level) and 2) the low-structured condition
+**Description**: 2 groups for computer-supported collaborative learning
+(CSCL) sessions: 1) the high-structured condition (teacher interventions
+on group level and on class level) and 2) the low-structured condition
 (only teacher interventions on group level)
-
-</td>
-</tr>
-</tbody>
-</table>
 
 ## 94.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Students and Teacher as Social Context questionnaires (TASC)
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Statistics pre-post tests Interaction effects of predictor
+variables on different levels
 
-</td>
-<td style="text-align:left;">
+**Results**: Knowledge overall increased. high-structured condition
+(whole-classroom interventions and making rounds during group) did not
+lead to higher learning gains. Pausing the group work during
+computer-supported collaborative learning (CSCL) to provide structure
+and feedback reduce feeling of competence frustration
 
-Students and Teacher as Social Context questionnaires (TASC)
+**Improved?**: Knowledge overall increased. high-structured condition
+(whole-classroom interventions and making rounds during group) did not
+lead to higher learning gains. Pausing the group work during
+computer-supported collaborative learning (CSCL) to provide structure
+and feedback reduce feeling of competence frustration
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 94.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: integrated and coherent understanding of some climate
+concepts (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 94.7 Conclusions
 
-Knowledge overall increased. high-structured condition (whole-classroom
-interventions and making rounds during group) did not lead to higher
-learning gains. Pausing the group work during computer-supported
-collaborative learning (CSCL) to provide structure and feedback reduce
-feeling of competence frustration
+**Conclusions**: NA
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Knowledge overall increased after a
+computer-supported collaborative learning (CSCL). high-structured
+condition (whole-classroom interventions and making rounds during group)
+did not lead to higher learning gains. Pausing the group work during
+CSCL to provide structure and feedback reduce feeling of competence
+frustration
 
 # 95 Ratinen2013 ( BQ )
+
+**title** Primary School Student Teachers’ Understanding of Climate
+Change: Comparing the Results Given by Concept Maps and Communication
+Analysis
 
 ## 95.1 abstract
 
@@ -22441,91 +18396,65 @@ Unknown
 
 ## 95.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 How do sessions’ communication analysis and pre- and post-concept maps
 describe primary school student teachers’ understanding of climate
 change?
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 95.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Inclusion of climate change conceptualization in curricular disciplines
-(Biology, Chemistry, Physics and Geography)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Inclusion of climate change conceptualization in
+curricular disciplines (Biology, Chemistry, Physics and Geography)
 
 ## 95.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: Pre- and post- conceptualization map and communication
+analysis
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 95.6 Outcomes
+
+**knowledge**: Yes (*Worked?*: Yes )
+
+**awareness**: Yes (*Worked?*: Yes )
+
+## 95.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Climate change education is challenging to
+teachers because it is an issue characterized by controversy,
+uncertainty, interdisciplinarity and complexity. Learners find it
+difficult to understand climate change because abstract processes and
+concepts are involved. Without inquiry, students cannot gain a relevant
+concept for their knowledge construction, attention should be paid to
+the forms of commu- nication: Learners should be active and motivated to
+join discussions. Students usually do not have the knowledge or courage
+to participate in discussion, but post-conceptualisation map showed that
+students’ thinking had become more coherent. Paper also demonstrates
+that climate change education can be integrated to any science
+discipline
 
 # 96 Reinfried2012 ( SB )
+
+**title** Improving students’ conceptual understanding of the greenhouse
+effect using theory-based learning materials that promote deep learning
 
 ## 96.1 abstract
 
@@ -22636,139 +18565,72 @@ both
 
 ## 96.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Deternine effects of optimized and conventional learning environments on
 several aspects of understanding of greenhouse effect (holistic
 conception, knowledge about CO2, radiation conversion, multilevel
 statements).
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 6 items per subscale. Answered in a Likert scale. Pre- and post- open
 ended questions and sketches reflecting student’s understanding on the
 greenhouse effect.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 96.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Two experimental groups: - gp1: Optimised learning environment
+based on worksheets based on psychological didactics. - gp2: Standard
+learning environment Control group: No instruction
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Two experimental groups: - gp1: Optimised learning environment based on
-worksheets based on psychological didactics. - gp2: Standard learning
-environment Control group: No instruction
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Both experimental groups: - Pre-intervention questionnaire. - Worksheet
-work on greenhouse effects and its causes. Includes discussion of the
-content in pairs of students. Each experimental group separately: -
-Reasoning on an imagined experiment on the effects of athmosphere
-composition on greenhouse effects (two different learning environments,
-one for each experimental group: optimised vs standard). - Both
-experiments run by students and results are observed. Both groups: -
-Recall of procedures and what they learned. - Problem-solving transfer
-questions. - post- intervention questionnaire. Control group only
-completed pre- and post- questionnaires with no greenhouse instruction.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Both experimental groups: - Pre-intervention
+questionnaire. - Worksheet work on greenhouse effects and its causes.
+Includes discussion of the content in pairs of students. Each
+experimental group separately: - Reasoning on an imagined experiment on
+the effects of athmosphere composition on greenhouse effects (two
+different learning environments, one for each experimental group:
+optimised vs standard). - Both experiments run by students and results
+are observed. Both groups: - Recall of procedures and what they
+learned. - Problem-solving transfer questions. - post- intervention
+questionnaire. Control group only completed pre- and post-
+questionnaires with no greenhouse instruction.
 
 ## 96.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Scales (pre-, post-) and open-ended questions/ sketches.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Mixed effects ANOVAs (group X pre, post and follow-up).
 
-</td>
-<td style="text-align:left;">
+**Results**: All outcomes showed expected differences (congrol vs both
+experimental groups) and are maintained across time.
 
-Scales (pre-, post-) and open-ended questions/ sketches.
+**Improved?**: All sub scales worked (Athmosphere hole, knowledge of CO2
+emission, radiation conversion and multilevel statements).
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 96.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Yes, both experimental groups showed better understanding
+of CC and its ink to CO2 emissions compared to control group. No
+difference between experimental groups. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 96.7 Conclusions
 
-All outcomes showed expected differences (congrol vs both experimental
-groups) and are maintained across time.
+**Conclusions**: Intervention worked and effects were stable across a
+moderate amount of time.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Both learning environments interventions worked in
+the intended direction and showed effects lasting across time. Enhanced
+pedagogy did not show an effect though.
 
 # 97 Roscoe2013 ( BQ )
+
+**title** Shallow strategy development in a teachable agent environment
+designed to support self-regulated learning
 
 ## 97.1 abstract
 
@@ -22877,131 +18739,65 @@ Urban
 
 ## 97.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Assessment of how schoolchildren learn using self-regulated
 learning-supportive tools, what are the student’s interactions with the
 tool and the factors of learning effectiveness
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 What features are used most frequently and what features are neglected?
 What features are associated with learning gains in terms of knowledge
 and understanding of the domain? How does feature use change over time
 (i.e., from one unit to a later unit)?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 97.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: computer-based learning environments
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-computer-based learning environments
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Use of teachable agent system called Betty’s Brain.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Use of teachable agent system called Betty’s Brain.
 
 ## 97.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Tool outputs
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Statistics pre-post tests
 
-</td>
-<td style="text-align:left;">
+**Results**: Students who monitored the content and quality of their
+maps, and used such information to guide map generation, showed larger
+gains on learning assessments and constructed higher-quality maps.
+Negative impact on the mid term, which negatively impacted the efficacy
+of the system.
 
-Tool outputs
+**Improved?**: overall disappointing learning gains,
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 97.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Yes (*Worked?*: Unclear )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Yes (*Worked?*: unclear )
 
-Students who monitored the content and quality of their maps, and used
-such information to guide map generation, showed larger gains on
-learning assessments and constructed higher-quality maps. Negative
-impact on the mid term, which negatively impacted the efficacy of the
-system.
+## 97.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: NA
+
+**Message to keep:**: This computer-based learning environment (CBLE)
+called Betty’s brain has “disappointing learning gains” and scores
+weakened over time along with less use of all tool functionalities
+(“students’ feature use in SRL-supportive CBLEs appears limited”).
+Students did not become better at causal reasoning using the tool. An
+insufficiently scaffolded CBLE will likely exacerbate students’ tendency
+to “game” that system.
 
 # 98 Roychoudhury2017 ( ABP )
+
+**title** The Need to Introduce System Thinking in Teaching Climate
+Change
 
 ## 98.1 abstract
 
@@ -23093,135 +18889,71 @@ one urban and three rural schools participated in this study
 
 ## 98.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 finding patterns in student responses to open-ended items of a content
 knowledge test relevant to the topics taught by middle school teachers
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  Is there a signifi cant difference between middle school student
     knowledge of climate change before and after instruction as captured
     by free-response questions?
 2.  What are the educational implications of these fi ndings about
-    student knowledge of climate change? `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+    student knowledge of climate change?
 
 ## 98.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: curriculum intervention
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-curriculum intervention
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Over a 9-11 week period, the teachers taught the following topics: a.
-Earth’s Energy Budget; b. Differential Heating of the Earth’s Surface;
-c. Weather and Climate (including Climate Variability); d. Greenhouse
-Effect; e. Carbon Cycle; and f. Global Warming and Climate Change
-Impacts. Each topic consisted of multiple lessons that used a variety of
-materials such as hands-on experiments, readings, physical models,
-visuals, simulations, and extant data on climate factors. Interactions
-among the components of the climate system - the Sun, the Earth (ocean,
-land, and atmosphere), and human impact undergirded the curriculum
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Over a 9-11 week period, the teachers taught the
+following topics: a. Earth’s Energy Budget; b. Differential Heating of
+the Earth’s Surface; c. Weather and Climate (including Climate
+Variability); d. Greenhouse Effect; e. Carbon Cycle; and f. Global
+Warming and Climate Change Impacts. Each topic consisted of multiple
+lessons that used a variety of materials such as hands-on experiments,
+readings, physical models, visuals, simulations, and extant data on
+climate factors. Interactions among the components of the climate
+system - the Sun, the Earth (ocean, land, and atmosphere), and human
+impact undergirded the curriculum
 
 ## 98.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test / post-test compared statistically with paired
+t-tests
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: Students gained signifi cant (p\<.0001) knowledge about all
+the topics related to climate change that were tested with a large
+effect size (.92), however, their gains about different clusters of
+concepts varied (Table 2). Their knowledge gain was the highest in the
+GHE cluster and it also had the highest effect size.
 
-pre-test / post-test compared statistically with paired t-tests
+**Improved?**: conocimiento mejoro
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 98.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 98.7 Conclusions
 
-Students gained signifi cant (p\<.0001) knowledge about all the topics
-related to climate change that were tested with a large effect size
-(.92), however, their gains about different clusters of concepts varied
-(Table 2). Their knowledge gain was the highest in the GHE cluster and
-it also had the highest effect size.
+**Conclusions**: qualitative analysis of student responses showed that
+they learned that our climate is changing but had constructed a linear
+connection between variables such as surface temperature and drought.
+The students did not develop a connected body of knowledge or an
+understanding of climate as a system.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 99 Ruboon2012 ( BQ )
+
+**title** Development a Prototype Environmental Education Teacher
+through PAIC Process
 
 ## 99.1 abstract
 
@@ -23320,101 +19052,65 @@ Urban
 
 ## 99.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 develop a prototype of environmental education teacher for environmental
 conservation in order to accomplish sustainable development.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 99.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Professional development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons
 
-Professional development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Participatory-Appreciation-Influence-Control (PAIC) integrated with
-brain-storming and focus group discussion for developing trainer (TOT)
-to be a prototype.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Participatory-Appreciation-Influence-Control (PAIC)
+integrated with brain-storming and focus group discussion for developing
+trainer (TOT) to be a prototype.
 
 ## 99.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Questionnaires
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Questionnaires Statistics
 
-</td>
-<td style="text-align:left;">
+**Results**: NA
 
-Questionnaires
+**Improved?**: “scientific teachers gain knowledge of Environmental
+education (EE), knowledge of global warming, knowledge of EET,
+inspiration of environmental conservation, and environmental behavior
+after participating in the PAIC training”
 
-</td>
-</tr>
-</tbody>
-</table>
+## 99.6 Outcomes
+
+**knowledge**: Yes (*Worked?*: Yes )
+
+**awareness**: Yes (*Worked?*: Yes )
+
+## 99.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Training with PAIC technique is able to raise
+knowledge in various issues and for different target groups and it can
+be used for stimulation the attitude and behavior changing. Moreover, it
+is also able to stimulate inspiration of public consciousness for
+environmental conservation through practicing suitable behavior in their
+daily life activities for alleviating global warming. Awareness is
+affected to inspiration creation of public consciousness for
+environmental conservation and behaviors changing for global warming
+alleviation and environmental conservation to meet sustainable
+development through EET competency development with EE principle.
 
 # 100 Salas_Rueda2021 ( ABP )
+
+**title** Innovation in the teaching-learning process of global climate
+change through the collaborative wall
 
 ## 100.1 abstract
 
@@ -23545,29 +19241,13 @@ urban
 
 ## 100.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 to analyze the students’ perception about the use of the collaborative
 wall in the educational process of global climate change considering
 data science.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 What is the impact of the use of collaborative wall in the learning
 process of global climate change, motivation and interest of the
@@ -23576,112 +19256,64 @@ collaborative wall in the educational process about biology? • What are
 the perceptions of students about the use of the collaborative wall in
 the school activities?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 100.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: both
 
-</td>
-<td style="text-align:left;">
+**Type**: web application
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-web application
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The collaborative wall is a web application that allows the active
-participation of students and discussion of ideas in the classroom
-through the organization, dissemination and use of images and text. The
-students of the National Preparatory School No. 7 “Ezequiel A. Chávez”
-searched and analyzed the information about the global climate change at
-home. The students of the National Preparatory School No. 7 Ezequiel A.
-Chávez” used mobile devices to enter the information about the global
-climate change in the collaborative wall and continue with the
-discussion of the topicS.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The collaborative wall is a web application that allows
+the active participation of students and discussion of ideas in the
+classroom through the organization, dissemination and use of images and
+text. The students of the National Preparatory School No. 7 “Ezequiel A.
+Chávez” searched and analyzed the information about the global climate
+change at home. The students of the National Preparatory School No. 7
+Ezequiel A. Chávez” used mobile devices to enter the information about
+the global climate change in the collaborative wall and continue with
+the discussion of the topicS.
 
 ## 100.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pearson’s correlations about of the collaborative wall
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: The collaborative wall allows the construction of new
+educational spaces where students participates actively during the
+learning process. In fact, the collaborative wall facilitates very much
+(n = 59, 79.73%), much (n = 11, 14.86%) and little (n = 4,5.41%) the
+organization of ideas. Likewise, the collaborative wall facilitates very
+much (n = 57, 77.03%), much (n = 12, 16.22%) and little (n = 5, 6.76%)
+the dissemination of information.
 
-Pearson’s correlations about of the collaborative wall
+**Improved?**: understanding improved
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 100.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: raise awareness (*Worked?*: yes )
 
-The collaborative wall allows the construction of new educational spaces
-where students participates actively during the learning process. In
-fact, the collaborative wall facilitates very much (n = 59, 79.73%),
-much (n = 11, 14.86%) and little (n = 4,5.41%) the organization of
-ideas. Likewise, the collaborative wall facilitates very much (n = 57,
-77.03%), much (n = 12, 16.22%) and little (n = 5, 6.76%) the
-dissemination of information.
+## 100.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: In conclusion, technology allows the construction of
+new spaces for learning and teaching. In particular, the collaborative
+wall is a web application that allows the active participation of
+students and facilitates the discussion of ideas in the classroom
+through the organization, dissemination and use of images and
+information.
+
+**Message to keep:**: The results of machine learning indicate that the
+organization of ideas and dissemination of information in the
+collaborative wall positively influence the learning process of global
+climate change, motivation and interest of the students
 
 # 101 Salsabila2019 ( SC )
+
+**title** Using argument-driven inquiry to promote students’ concept
+mastery in learning global warming
 
 ## 101.1 abstract
 
@@ -23798,130 +19430,88 @@ Urban
 
 ## 101.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Objectives
+“The aim of this study is to investigate the impact of Argument-Driven
+Inquiry on students’ concept in learning global warming.”
 
-</td>
-<td style="text-align:left;">
+**Questions**:
 
-"The aim of this study is to investigate the impact of Argument-Driven
-Inquiry on students’ concept in learning global warming."
-
-</td>
-</tr>
-</tbody>
-</table>
+NA
 
 ## 101.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: NA, but authors state: “The experimental group was given
+Argument-Driven Inquiry that includes identifying the task and guiding
+question, design a method and generate data, production of tentative
+argument, argumentation session, write an investigation report,
+double-blind group peer review, revise and submit a report. While the
+control group was given Inquiry-Based Learning that includes
+Identification of the problem, questioning, making a hypothesis,
+collecting data, analyzing data, and making a conclusion.”
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-NA, but authors state: "The experimental group was given Argument-Driven
+**Description**: 1. “The experimental group was given Argument-Driven
 Inquiry that includes identifying the task and guiding question, design
 a method and generate data, production of tentative argument,
 argumentation session, write an investigation report, double-blind group
 peer review, revise and submit a report. While the control group was
 given Inquiry-Based Learning that includes Identification of the
 problem, questioning, making a hypothesis, collecting data, analyzing
-data, and making a conclusion."
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-1.  "The experimental group was given Argument-Driven Inquiry that
-    includes identifying the task and guiding question, design a method
-    and generate data, production of tentative argument, argumentation
-    session, write an investigation report, double-blind group peer
-    review, revise and submit a report. While the control group was
-    given Inquiry-Based Learning that includes Identification of the
-    problem, questioning, making a hypothesis, collecting data,
-    analyzing data, and making a conclusion."
-2.  "The subtopic of global warming is greenhouse effect, the impact of
-    global warming, and the prevention of global warming."
-3.  "Students’ concept mastery from both groups was measured before and
-    after the intervention to determine the effectiveness of the
-    implemented given Argument-Driven Inquiry and Inquiry-Based
-    Learning."
-4.  The research was done in four meetings: Pre-test (1st),
-    Implementation (2nd and 3dr) and posttest (4th) `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+data, and making a conclusion.” 2. “The subtopic of global warming is
+greenhouse effect, the impact of global warming, and the prevention of
+global warming.” 3. “Students’ concept mastery from both groups was
+measured before and after the intervention to determine the
+effectiveness of the implemented given Argument-Driven Inquiry and
+Inquiry-Based Learning.” 4. The research was done in four meetings:
+Pre-test (1st), Implementation (2nd and 3dr) and posttest (4th)
 
 ## 101.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: 20 question multiple choice test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: T-test on the pre- and post-game concept mastery
 
-</td>
-<td style="text-align:left;">
+**Results**: Increased students’ concept mastery (i.e., knowledge) in
+learning global warming after implementing Argument-Driven Inquiry.
 
-20 question multiple choice test
+**Improved?**: Cognition improved
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 101.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Students’ Concept Mastery in learning global warming
+(*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**other**: Cognitive level of Blooms’ Taxonomy: “In the experiment
+group, the N-Gain of each cognitive level from C4 until C6 is medium.
+While in control group, the N-Gain on analyzing (C4) is medium and the
+N-Gain on evaluating (C5) and creating (C6) is low.” (*Worked?*: Yes )
 
-Increased students’ concept mastery (i.e., knowledge) in learning global
-warming after implementing Argument-Driven Inquiry.
+## 101.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Argumentation in the inquiry process help student in
+explaining how and why the phenomenon happens. The students in the
+experimental group have N-Gain scored better than students in the
+control class. It can be concluded that Argument-Driven Inquiry improved
+students’ concept mastery in all cognitive level. Argument-Driven
+Inquiry can be one of the alternative teaching models that give more
+impact on students’ concept mastery in learning global warming.
+
+**Message to keep:**: Applying Argument-Driven Inquiry model during the
+learning process could increase students’ concept mastery regarding
+global warming. Adding argumentation to the inquiry process seemed to
+help students in explaining how and why the phenomenon happens. Also,
+students who were exposed to the Argument-Driven Inquiry session showed
+better N-Gain scores than students who were exposed to Inquiry-based
+learning.
 
 # 102 Saribaş2016 ( JGOP )
+
+**title** Evaluating Effects of an Exhibition Visit on Pre-Service
+Elementary Teachers’ Understandings of Climate Change
 
 ## 102.1 abstract
 
@@ -23994,28 +19584,12 @@ Urban
 
 ## 102.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This research aims to investigate the effects of an exhibition visit on
 pre-service elementary teachers’ understandings of climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  To what extent did the exhibition visit embedded within the
     environmental education program affect pre-service elementary
@@ -24024,116 +19598,77 @@ Questions
     climate change?
 3.  Was there any significant difference between the understandings of
     participants who attended the exhibition and those who did not?
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
 
 ## 102.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Basic concepts and participation on a exhibition visit
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Basic concepts and participation on a exhibition visit
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-During the first five weeks, basic concepts and information about
-ecology and the historical development and causes of environmental
-problems were introduced. During the next five weeks, worked in groups
-(with three or four members) to prepare and deliver presentations about
-current environmental problems as listed below. 1. Water pollution 2.
-Air pollution 3. Soil pollution and erosion 4. Radioactive pollution 5.
-The depletion of the ozone layer 6. The loss of biological diversity 7.
-Waste 8. Energy 9. Hormone-injected foods and genetically modified
-organisms 10. Global warming. At the beginning of the term, the
-pre-service teachers submitted pre-reflections on the issue of climate
-change. After the presentations, the participants attended an exhibition
-about climate change. Participation in the exhibition visit was
-voluntary, but all participants were required to submit their
-post-reflection on climate change at the end of the term. The main
-purpose of the exhibition was to increase attendees’ awareness and
-knowledge about climate change.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: During the first five weeks, basic concepts and
+information about ecology and the historical development and causes of
+environmental problems were introduced. During the next five weeks,
+worked in groups (with three or four members) to prepare and deliver
+presentations about current environmental problems as listed below. 1.
+Water pollution 2. Air pollution 3. Soil pollution and erosion 4.
+Radioactive pollution 5. The depletion of the ozone layer 6. The loss of
+biological diversity 7. Waste 8. Energy 9. Hormone-injected foods and
+genetically modified organisms 10. Global warming. At the beginning of
+the term, the pre-service teachers submitted pre-reflections on the
+issue of climate change. After the presentations, the participants
+attended an exhibition about climate change. Participation in the
+exhibition visit was voluntary, but all participants were required to
+submit their post-reflection on climate change at the end of the term.
+The main purpose of the exhibition was to increase attendees’ awareness
+and knowledge about climate change.
 
 ## 102.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Pre-and post-reflections
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Various codes emerged from the participants’ explanations
+for the definitions, causes, and consequences of climate change, and
+their suggestions for possible solutions. The McNemar test was used to
+analyze the codes that emerged from the participants’ pre- and
+post-reflections. The McNemar test was used to analyze the codes that
+emerged from the participants’ pre- and post-reflections.
 
-</td>
-<td style="text-align:left;">
+**Results**: Table 5 shows the statistically significant results of the
+changes in pre-service elementary teachers’ understandings of climate
+change throughout the course for those who attended the exhibition and
+those who did not, with a .05 confidence interval. It was found that the
+EE course resulted in significant changes in specified categories for
+both visitors and non-visitors to the exhibition.
 
-Pre-and post-reflections
+**Improved?**: Better understanding of climate change
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 102.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**other**: The effects of an exhibition visit on the understanding of
+climate change (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 102.7 Conclusions
 
-Table 5 shows the statistically significant results of the changes in
-pre-service elementary teachers’ understandings of climate change
-throughout the course for those who attended the exhibition and those
-who did not, with a .05 confidence interval. It was found that the EE
-course resulted in significant changes in specified categories for both
-visitors and non-visitors to the exhibition.
+**Conclusions**: The results of this study revealed that the EE course,
+with its focus on various environmental problems, seems to have had an
+impact on pre-service elementary teachers’ understandings of climate
+change. Throughout the course they also improved their understandings
+about reducing and coping with climate change, including the use of
+renewable energy sources, public transportation, and the importance of
+individual effort.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Using different approaches to understand climate
+change is recommend. This study findings support the idea that the use
+of outdoor activities (e.g. exhibition visit) could bring to the
+teachers more information and promixity to the climate change issue.
 
 # 103 Schrot2021a ( MB )
+
+**title** Potential of ‘future workshop’ method for educating
+adolescents about climate change mitigation and adaptation: a case from
+Freistadt, Upper Austria
 
 ## 103.1 abstract
 
@@ -24243,81 +19778,36 @@ Urban
 
 ## 103.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 - Examining whether such educational intervention $$Future workshop$$
   could raise upper-secondary school students’ levels of awareness of
   mitigation and adaptation
 - Examining the effect of ‘KLAR! – Zukunftswerkstatt’ on upper-secondary
   school students’ action knowledge for climate change mitigation and
-  adaptation behaviors? `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+  adaptation behaviors?
+
+**Questions**:
+
+NA
 
 ## 103.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Worshop consisting of lessons, investigation, and proposal
+from the students
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Worshop consisting of lessons, investigation, and proposal from the
-students
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Based on the "future workshop" method, the intervention consisted in a
-student centered activity in which students worked in small groups
-structured on 5 phase: - preparation phase (50 min): researchers
-developed learning content about climate-related risks in Muehlviertel
-region and established common rules for collaboration between
-researchers and students. - Critique phase (200 min): students were
-invited to investigate current and projected climate-related risks in
-regional human and natural systems using material from the Austrian
+**Description**: Based on the “future workshop” method, the intervention
+consisted in a student centered activity in which students worked in
+small groups structured on 5 phase: - preparation phase (50 min):
+researchers developed learning content about climate-related risks in
+Muehlviertel region and established common rules for collaboration
+between researchers and students. - Critique phase (200 min): students
+were invited to investigate current and projected climate-related risks
+in regional human and natural systems using material from the Austrian
 Assessment Report Climate Change 2014 (APCC, 2014) and other sources. -
 Fantasy phase (200 min): students developed their own ideas, a theorized
 future in which carbon emissions are reduced and adaptation to
@@ -24327,52 +19817,59 @@ region and they discussed their personal roles for increased climate
 action - Follow-up phase(200 min): final sham event in which students
 presented their outcomes to their school and community
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 103.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Questionnaire with quantitative (likert, awareness) and
+qualitative questions (free text, knowledge and intention)
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: One-tailed wilcoxon signed rank test on awareness (likert)
+questions, effect size are also calculated (Cohen r) - qualitative
+content analysis on questions where students had to redact test
 
-</td>
-<td style="text-align:left;">
-
-Questionnaire with quantitative (likert, awareness) and qualitative
-questions (free text, knowledge and intention)
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-$$AWARENESS$$: Signicative (p\<0.001) differences (pre vs post) with
-large effect size for awareness on importance of mitigation strategies,
-Signicative (p\<0.01) differences with medium effect size on the
-importance of adaptation strategies $$Action-knowledge (KNOWLEDGE +
+**Results**: $$AWARENESS$$: Signicative (p\<0.001) differences (pre vs
+post) with large effect size for awareness on importance of mitigation
+strategies, Signicative (p\<0.01) differences with medium effect size on
+the importance of adaptation strategies $$Action-knowledge (KNOWLEDGE +
 INTENTION)$$ : More mitigation strategies cited in post test in the
 qualitative content analysis. More adaptation strategies cited in the
 post-test in the qualitative content analysis. Note: here as well, when
 compared, students seem to have more difficulties integrating adaptation
 strategies than mitigation ones
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Awareness about importance of local mitigation/adaptation
+strategies improved Action-knowledge (knowledge + intention) about the
+implementation and specific strategies improved
+
+## 103.6 Outcomes
+
+**knowledge**: Knowledge about specific strategies for mitigation and
+adaptation (e.g. transport, diet, consumption) (*Worked?*: Yes )
+
+**awareness**: How important is that people of the region contribute to
+mitigation and adaptation? (*Worked?*: Yes )
+
+**intention**: “Action-knowledge” and personal/comunity role in local
+mitigation and adaptation (*Worked?*: Unclear )
+
+## 103.7 Conclusions
+
+**Conclusions**: “Future workshop” methodology raised awareness and
+action-knowledge about local mitigation and adaptation strategies, and
+should be used for other environmental issues. “Educators are
+specifically encouraged to frame climate change as a cultural challenge
+instead of a purely scientific or technocratic one.”
+
+**Message to keep:**: Future workshop, with place-based research and
+proposal of the students raised awareness and action-knowledge about
+local mitigation and adaptation strategies. Authors insist on the fact
+that mitigation is easier for the students to integrate than adaptation.
+Framing climate change as a cultural challenge instead of a purely
+technical one is encouraged
 
 # 104 Schubatzky2022 ( ABP )
+
+**title** Debunking Climate Myths Is Easy—Is It Really? An Explorative
+Case Study with Pre-Service Physics Teachers
 
 ## 104.1 abstract
 
@@ -24476,29 +19973,13 @@ urban
 
 ## 104.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To improve physics pre-service teachers’ (PSTs) skills to debunk climate
 change misinformation and to apply ideas of inoculation theory in their
 future teaching
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  Does an intervention based on active inoculation and debunking tasks
     in the context of climate change contribute to an increase in
@@ -24511,103 +19992,60 @@ Questions
     contribute to an increase in the participating physics pre-service
     teachers’ climate myth debunking self-efficacy?
 4.  How do students evaluate the learning environment based on active
-    inoculation and debunking? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    inoculation and debunking?
 
 ## 104.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: educational experience
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-educational experience
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The preservice physics teachers filled in a questionnaire on
-demographics, climate change beliefs, and their perceived knowledge
-about climate change. Furthermore, they completed a debunking task to
-measure their PSTs’ debunking skills. Additionally, we measured the
-PSTs’ climate myth debunking self-efficacy before and after completion
-of the debunking task as part of the measurement.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The preservice physics teachers filled in a
+questionnaire on demographics, climate change beliefs, and their
+perceived knowledge about climate change. Furthermore, they completed a
+debunking task to measure their PSTs’ debunking skills. Additionally, we
+measured the PSTs’ climate myth debunking self-efficacy before and after
+completion of the debunking task as part of the measurement.
 
 ## 104.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test / post-test compared statistically with paired
+t-tests
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: Through the intervention, we showed that the participants
+increased their debunking skills and they showed more accurate
+assessments of their own skills.
 
-pre-test / post-test compared statistically with paired t-tests
+**Improved?**: understanding improved
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 104.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Increased knowledge (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: yes (*Worked?*: yes )
 
-Through the intervention, we showed that the participants increased
-their debunking skills and they showed more accurate assessments of
-their own skills.
+## 104.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: We conclude that this approach is promising to foster
+pre-service teachers’ perceived competence to teach the demanding topic
+of climate change
+
+**Message to keep:**: we have shown that our debunking task, using real
+world climate change misinformation, is a feasible approach to measuring
+debunking skills. We want to encourage future studies to investigate
+other approaches to foster the development of debunking skills by using
+similar measurements. Furthermore, the relationship between conceptual
+understandings or attitudinal beliefs and PSTs’ debunking skills should
+especially be investigated in future studies.
 
 # 105 Schuster2008 ( JGOP )
+
+**title** Secondary Students’ Subject Matter Representations of Climate
+Change
 
 ## 105.1 abstract
 
@@ -24696,133 +20134,82 @@ Urban
 
 ## 105.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Prepare a diverse population of 11th and 12th grade students from a
 large urban high school in the Midwest to mentor 7th graders from a
 local feeder school.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 105.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Summer workshop
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Summer workshop
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-During Tier I, nine 11th and 12th grade students were split into four
-groups of two-to-three students each. During a one-week intensive summer
-workshop, each group was assigned to a certain aspect of climate change
-and then collaborated with the other groups to help them understand
-their topic. After the workshop, members of a university-based team
-consisting of university scientists and science educators, and secondary
-science teachers, continued to scaffold the 11th and 12th grade students
-on a weekly basis over the course of two months to help them prepare for
-Tier II an Tier III. During Tier II, the 11th and 12th grade students
-visited a feeder middle school approximately three times a week for five
-weeks where they facilitated a unit on climate change for 7th grade
-middle school students. During Tier III, the 11th and 12th grade student
-mentors worked with the 7th grade students to prepare and present a
-traveling exhibit to other 7th grade students. Both the 7th and 11th and
-12th grade students continued to be supported by the university-based
-team throughout Tier II and Tier III.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: During Tier I, nine 11th and 12th grade students were
+split into four groups of two-to-three students each. During a one-week
+intensive summer workshop, each group was assigned to a certain aspect
+of climate change and then collaborated with the other groups to help
+them understand their topic. After the workshop, members of a
+university-based team consisting of university scientists and science
+educators, and secondary science teachers, continued to scaffold the
+11th and 12th grade students on a weekly basis over the course of two
+months to help them prepare for Tier II an Tier III. During Tier II, the
+11th and 12th grade students visited a feeder middle school
+approximately three times a week for five weeks where they facilitated a
+unit on climate change for 7th grade middle school students. During Tier
+III, the 11th and 12th grade student mentors worked with the 7th grade
+students to prepare and present a traveling exhibit to other 7th grade
+students. Both the 7th and 11th and 12th grade students continued to be
+supported by the university-based team throughout Tier II and Tier III.
 
 ## 105.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Concept maps and interviews
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Representation analysis
 
-</td>
-<td style="text-align:left;">
+**Results**: The findings suggest that even when 11th and 12th grade
+students are able to perform certain assessment tasks in a school
+environment, their success on a task does not automatically indicate
+whether or not students will be able to clearly demonstrate
+understanding in an authentic situation. The use of both a concept map
+exercise and interviews allowed us to create a setting where students
+were encouraged to explore ideas and verbally articulate their
+understandings.
 
-Concept maps and interviews
+**Improved?**: Students involved in the summer workshop use new concepts
+to describe the climate change based on ths scientific knowledge
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 105.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Learn the basic concepts and teach them as peers to other
+students (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Be aware of climate change and its related concepts
+(*Worked?*: Yes )
 
-The findings suggest that even when 11th and 12th grade students are
-able to perform certain assessment tasks in a school environment, their
-success on a task does not automatically indicate whether or not
-students will be able to clearly demonstrate understanding in an
-authentic situation. The use of both a concept map exercise and
-interviews allowed us to create a setting where students were encouraged
-to explore ideas and verbally articulate their understandings.
+## 105.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: NA
+
+**Message to keep:**: This article presents an strategy in which
+students can become teachers of their peers. The most important issue is
+the creation of a collaborative learning using mentoring, coaching and
+modeling, on the base of scientific concepts and knowledge related to
+climate change. The authors remark the importance of the work between
+scientist, teachers and learners.
 
 # 106 Sellmann2013 ( ABP )
+
+**title** Climate change education: quantitatively assessing the impact
+of a botanical garden as an informal learning environment
 
 ## 106.1 abstract
 
@@ -24931,116 +20318,74 @@ Urban
 
 ## 106.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Evaluate whether botanical gardens can serve as effective educational
 institutions with regard to the issue of climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Can participation in a one-day environmental education intervention in a
 botanical garden enhance students’ knowledge on climate change? If there
 is a knowledge gain, will it be persistent over a long period of time?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 106.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: outdoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Intervention comprised of two learning units: the first one
+provided background information about the issue of climate change by
+learning at workstations
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-outdoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Intervention comprised of two learning units: the first one provided
-background information about the issue of climate change by learning at
-workstations
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: NA
 
 ## 106.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre post test and cohen´s and Cronbach’s
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: Comparing the test scores revealed a significant short-term
+knowledge gain as well as a long-term knowledge gain.
 
-pre post test and cohen´s and Cronbach’s
+**Improved?**: The implemented knowledge scale showed a high
+reliability, with Cronbach’s. The inner-group comparison of the pre-test
+and post-test knowledge scores (short-term) revealed a significant
+increase for the treatment group. Comparing the pre-test and retention
+test scores (long-term), we observed significantly higher knowledge
+scores for the retention test. The post- and retention test scoresdid
+not differ (persistence).
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 106.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Increased knowledge (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 106.7 Conclusions
 
-Comparing the test scores revealed a significant short-term knowledge
-gain as well as a long-term knowledge gain.
+**Conclusions**: The environmental education on climate change in
+botanical gardens cannot substitute for classroom instruction. It may
+provide a valuable addition to classroom instruction if the content is
+already addressed in the syllabi. If not, botanical gardens may even
+serve as the only suitable source of knowledge for students as it was
+the case in our study. Botanical gardens provide ideal preconditions for
+climate change education as they offer the opportunity to combine the
+biological and geographical aspects of the issue. In summary, we assume
+botanical gardens to be ideal sites for environmental education on
+global climate change and our results indicate that they are as
+effective as other out-of-school settings.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: The environmental education on climate change in
+botanical gardens cannot substitute for classroom instruction. It may
+provide a valuable addition to classroom instruction if the content is
+already addressed in the syllabi. If not, botanical gardens may even
+serve as the only suitable source of knowledge for students
 
 # 107 Sellmann2013a ( SB )
+
+**title** Effects of a 1-day environmental education intervention on
+environmental attitudes and connectedness with nature
 
 ## 107.1 abstract
 
@@ -25150,137 +20495,74 @@ age_max
 
 ## 107.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Observe effect of a short, 1-day outreach EE programme on global climate
 change on environmental attitudes and/or connectedness with nature.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Two major environmental values scale (2-MEV) and Inclusion of Self in
 Nature (ISN).
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 107.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Outdoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Two learning modules in an ecological-botanical garden.
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Outdoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Two learning modules in an ecological-botanical garden.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Two interventions: 1: 8 (and one optional) workstations in a seminar
-room. Up to four children had to solve tasks as presented in a workbook
-in each workstations. Tasks dealt with climate modelling, policy, energy
-savings, effect of CC in ecosystems, CC and earth’s history and
-greehouse gasses. Theory heavy. 2: In the public gardens and greenhouses
-students were given an explorer’s booklet directing taks across the
-whole garden. Tasks dealt with tropical rainforest (threat by
+**Description**: Two interventions: 1: 8 (and one optional) workstations
+in a seminar room. Up to four children had to solve tasks as presented
+in a workbook in each workstations. Tasks dealt with climate modelling,
+policy, energy savings, effect of CC in ecosystems, CC and earth’s
+history and greehouse gasses. Theory heavy. 2: In the public gardens and
+greenhouses students were given an explorer’s booklet directing taks
+across the whole garden. Tasks dealt with tropical rainforest (threat by
 deforestation and climate change), effects of CC on fire ecosystems, CC
 and German forestry, effects of CC on alpine ecosystems and economy (ski
 tourism), and renewable primary products as a means to reduce burning of
 fossil fuels. Taks were coupled with a specific plant that represented
 the intended content.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 107.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-2 psychometric instruments - 2-MEV measuring attitudes towards
+**Data**: 2 psychometric instruments - 2-MEV measuring attitudes towards
 preservation and utilization of nature - Inclusion of the self in nature
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: Compare mean attitutes and INS scores across experimental
+group and over three times (baseline, short-term and long-term).
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: Works in the expected direction in both cases, but only
+presetvation maintains its change in the “long term” (4 to 6 weeks).
 
-</td>
-<td style="text-align:left;">
+**Improved?**: Results appear to change over short vs long term.
 
-Works in the expected direction in both cases, but only presetvation
-maintains its change in the "long term" (4 to 6 weeks).
+## 107.6 Outcomes
 
-</td>
-</tr>
-</tbody>
-</table>
+**knowledge**: Preservation and Utilisation of nature scales (2-MEV) and
+Inclusion of Nature in the Self. (*Worked?*: Parcially, worked in the
+expected direction (both short and long term) for preservation but not
+so for utilization (scores returned to baseline in long-term
+measurement). )
+
+**emotions**: Inclusion of Nature in the Self (*Worked?*: Parcially,
+worked in the expected direction in the short term but returned to
+baselin in long-term follow-up. )
+
+## 107.7 Conclusions
+
+**Conclusions**: 1-day environmental education works well but its
+effects struggles to maintain over time.
+
+**Message to keep:**: Effective but not long-lasting intervention
+overall.
 
 # 108 Sellmann2015 ( MB )
+
+**title** Concept Maps in the Classroom: A New Approach to Reveal
+Students’ Conceptual Change
 
 ## 108.1 abstract
 
@@ -25382,15 +20664,7 @@ age_max
 
 ## 108.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Our study objective was not only (a) to reveal students’ conceptions on
 climate change and to monitor conceptual change due to an environmental
@@ -25398,15 +20672,7 @@ education program but also (b) to provide teachers and educators with an
 easily applicable approach to analyze the maps and thus, to get to know
 their students’ preconceptions.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Testing the 2 following hypotheses: Hypothesis 1 (H1): The frequency of
 students’ alternative conceptions exhibited in concept maps may decrease
@@ -25417,63 +20683,18 @@ alternative concepts and number of propositions using these concepts),
 thus allowing an analysis of conceptions and conceptual change in an
 easily applicable way suitable for everyday school life.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 108.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: lessons, group work, lab experiments
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-lessons, group work, lab experiments
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-A 2-day educational program on global climate change was designed to fit
-in the existing curriculum for 10th- grade students, including
-comprehensive ecological knowledge and environmental topics in biology
-and global (climate) change in geography. It consisted of
+**Description**: A 2-day educational program on global climate change
+was designed to fit in the existing curriculum for 10th- grade students,
+including comprehensive ecological knowledge and environmental topics in
+biology and global (climate) change in geography. It consisted of
 student-centered learning units focusing on an individual learning at
 workstations, group work and inquiry-based labexperiments. While the
 first part of the program was conducted in the classroom, the second,
@@ -25482,58 +20703,77 @@ from imparting knowledge about causes, mechanisms, andimpacts of climate
 change, the program units were designed to provide students with ways in
 which they could contribute to climate mitigation.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 108.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Concept mapping of the students, pre-post, made by groups of
+2-3 students (same groups pre-post) For students to complete their
+concept map, we provided them with five concepts referring to some of
+the most common alternative conceptions, as well as 20 concepts
+essential to explain the scientific view of global climate change. Each
+student group was provided with a blank sheet of paper and a list of the
+25 predefined concepts in order to portray global climate change, its
+causes, mechanisms, and impacts. Students were given 45 min to com plete
+the task.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Analyses were conducted (a) by counting the number of
+alternative concepts included in the maps (maximum of five) and (b) the
+number of propositions that used these concepts in pre- and postmaps
+(quantitative analyses). Also, (c) the propositions were analyzed for
+consistency with the common alternative conceptions (qualitative
+analysis). For our qualitative analysis, a reference concept map
+summarizes the alternative concepts described in the other studies we
+reviewed previously. Based on this reference map, we decided whether a
+proposition on a students’ map matched the alternative conception or
+not. If matching, the proposition was scored 1, if not 0. For every map,
+a sum score of alternative conceptions was formed. $$We calculated$$
+interrater reliabilities (Rye & Rubba, 2002) as well as intrarater
+reliabilities, which we calculated by using Cohen’s kappa (Cohen, 1960).
+The scoring ranged from .76 to .87 (Table 2), which is regarded as
+substantial to almost perfect (Wolf, 1997). Our first hypothesis was
+tested by using a Wilcoxon signed-rank test to compare sum scores for
+(a) alternative concepts used, (b) propositions using these concepts,
+and (c) alternative conceptions of pre- and postmaps. Effect sizes were
+calculated applying Pearson’s correlation coefficient r. To test the
+second hypothesis, we correlated the differences from pre- to postmaps
+for the three parameters. Because the data set was quite small, we
+decided for Kendall’s tau to calculate the correlations.
 
-</td>
-<td style="text-align:left;">
+**Results**: The three parameters analyzed (use of alternative concepts,
+propositions using these concepts, and student conceptions) showed
+significant decreases from pre- to post-maps in the treatment group
+(whereas no effects were found in the control group). $$Our qualitative
+analysis$$ revealed a significant decrease in propositions that match
+the common alternative conceptions \[As compared to student’s own
+alternative conceptions Correlations showed alternative concepts and
+propositions as strongly related to each other.
 
-Concept mapping of the students, pre-post, made by groups of 2-3
-students (same groups pre-post) For students to complete their concept
-map, we provided them with five concepts referring to some of the most
-common alternative conceptions, as well as 20 concepts essential to
-explain the scientific view of global climate change. Each student group
-was provided with a blank sheet of paper and a list of the 25 predefined
-concepts in order to portray global climate change, its causes,
-mechanisms, and impacts. Students were given 45 min to com plete the
-task.
+**Improved?**: The use of alternative concepts, propositions using these
+concepts, and student misconceptions decreased after intervention in the
+conceptual maps of the students
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 108.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Decrease of the use alternative conceptions in conceptual
+maps (misconceptions) (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+## 108.7 Conclusions
 
-The three parameters analyzed (use of alternative concepts, propositions
-using these concepts, and student conceptions) showed significant
-decreases from pre- to post-maps in the treatment group (whereas no
-effects were found in the control group). $$Our qualitative analysis$$
-revealed a significant decrease in propositions that match the common
-alternative conceptions \[As compared to student’s own alternative
-conceptions Correlations showed alternative concepts and propositions as
-strongly related to each other.
+**Conclusions**: Compared to the control group, students of the
+treatment group might have integrated the knowledge they achieved during
+our educational program into their individually existing knowledge
+structures: consequently, concep tual change has occurred, at least for
+the time period we analyzed.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: In this study, the authors use pre-post conceptual
+maps drawn by the high-school students and observe a decrease of common
+misconceptions concerning climate change. They show a conceptual change
+on a very short time horizon of change
 
 # 109 Shea2016 ( ABP )
+
+**title** Climate Change Professional Development: Design,
+Implementation, and Initial Outcomes on Teacher Learning, Practice, and
+Student Beliefs
 
 ## 109.1 abstract
 
@@ -25630,140 +20870,79 @@ Urban
 
 ## 109.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This hybrid professional development program intended to prepare formal
 and informal science teachers (grades 5–16) in teaching about climate
 change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 How can we support the design of PD programs grounded in the NGSS that
 promote changes in teacher learning, instructional practice, and student
 beliefs around climate change?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 109.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Educational activities
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Educational activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-A number of activities were conducted in the outdoor setting of the
-Climate Academy, which was surrounded by coastal wetlands ideal for
-conducting inquiry-based work on climate and demonstrating the effects
-of climate on one’s local context and earth’s spheres. Finally, to
-establish connections between new learning and practice, all teachers
+**Description**: A number of activities were conducted in the outdoor
+setting of the Climate Academy, which was surrounded by coastal wetlands
+ideal for conducting inquiry-based work on climate and demonstrating the
+effects of climate on one’s local context and earth’s spheres. Finally,
+to establish connections between new learning and practice, all teachers
 designed instructional units (3–5 h of instructional time) that
 integrated climate science in their curricula, reflected on their
 designs and shared ideas with peers.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 109.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-For the current data analysis, student pre- and post-responses were
-exported into excel and the Statistical Package for the Social Sciences
-(SPSS). Student profiles were calculated for both the pre- and
+**Data**: For the current data analysis, student pre- and post-responses
+were exported into excel and the Statistical Package for the Social
+Sciences (SPSS). Student profiles were calculated for both the pre- and
 post-administration of the survey.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: NA
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: Results indicated that the Climate Academy fostered
+increased learning among participants of both climate science content
+and pedagogical strategies for teaching about climate change.
+Additionally, results indicated that participants applied their new
+learning in the design of climate change instructional units.
 
-</td>
-<td style="text-align:left;">
+**Improved?**: results from the case study indicated positive impacts on
+student beliefs and greater awareness about climate change. Results have
+implications for the design of professional development programs on
+climate change, a topic included for the first time in national
+standards.
 
-Results indicated that the Climate Academy fostered increased learning
-among participants of both climate science content and pedagogical
-strategies for teaching about climate change. Additionally, results
-indicated that participants applied their new learning in the design of
-climate change instructional units.
+## 109.6 Outcomes
 
-</td>
-</tr>
-</tbody>
-</table>
+**awareness**: yes (*Worked?*: yes )
+
+## 109.7 Conclusions
+
+**Conclusions**: results from the case study indicated positive impacts
+on student beliefs and greater awareness about climate change. Results
+have implications for the design of professional development programs on
+climate change, a topic included for the first time in national
+standards.
+
+**Message to keep:**: implementation of climate change instructional
+units that focus on both content knowledge and practices advocated in
+the new standards (e.g., rich open-ended tasks, evidence, and data
+supporting conclusions around climate change) can begin to initiate a
+shift in student beliefs.
 
 # 110 Siegner2018 ( SB )
+
+**title** Experiential climate change education: Challenges of
+conducting mixed-methods, interdisciplinary research in San Juan
+Islands, WA and Oakland,CA
 
 ## 110.1 abstract
 
@@ -25858,148 +21037,94 @@ Both
 
 ## 110.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Objectives
-
-</td>
-<td style="text-align:left;">
-
-For students: " students learn climate change from a content expert" For
-teachers: "teachers increase knowledge and competence in climate change
+For students: ” students learn climate change from a content expert” For
+teachers: “teachers increase knowledge and competence in climate change
 instruction, allowing future students benefit from a better-trained
-instructor and serving as a form of professional development. "
+instructor and serving as a form of professional development.”
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Questions**:
 
-Questions
-
-</td>
-<td style="text-align:left;">
-
-"assesses the efficacy of implementing an interdisciplinary,
+“assesses the efficacy of implementing an interdisciplinary,
 experiential climate change curriculum in school garden classrooms in
-terms of student climate literacy and teacher professional development."
-
-</td>
-</tr>
-</tbody>
-</table>
+terms of student climate literacy and teacher professional development.”
 
 ## 110.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: six in-class lessons, specific content or methods is not
+clearly explained.
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-six in-class lessons, specific content or methods is not clearly
-explained.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Although it is precised that it deals with local issues of food
-production, water conservation and understanding clean energy systems.
-It also involves guest speakers trying to connect studentss with
-"change-makers" outside the school setting. Intervention presents CC as
-not "just" a science problem but as a societal problem that requires
-engaging "minds" (by learning scientific facts), "hearts"( by situating
-CC in the broader social and personal contexts and history) and "hands"
-(by fostering hands-on solutions and activities). Co-teaching with
-content experts was also implemented. A supplemental materials word doc
-whosw lesson content: - Lesson 1: What is climate change, what is
-evidence? What are indicators? Uses a direct instruction and outdoor
-learning methods. - Lesson 2: Causes of global temperature rise, role of
-agriculture. Uses a direct instruction and outdoor learning methods. -
-Lesson 3: Repercussions of climate change and what this means for
-global/local food production. Uses Socratic and outdoor learning. -
-Lesson 4: How to monitor repercussions in food system? Uses interactive,
-outdoor methods. - Lesson 5: How to minimize repercussions… SOLUTIONS.
-Uses active and collaborative methods. - Lesson 6: Student projects for
-monitoring and minimizing climate change through school garden. Uses
-active/ participatory methods.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Although it is precised that it deals with local issues
+of food production, water conservation and understanding clean energy
+systems. It also involves guest speakers trying to connect studentss
+with “change-makers” outside the school setting. Intervention presents
+CC as not “just” a science problem but as a societal problem that
+requires engaging “minds” (by learning scientific facts), “hearts”( by
+situating CC in the broader social and personal contexts and history)
+and “hands” (by fostering hands-on solutions and activities).
+Co-teaching with content experts was also implemented. A supplemental
+materials word doc whosw lesson content: - Lesson 1: What is climate
+change, what is evidence? What are indicators? Uses a direct instruction
+and outdoor learning methods. - Lesson 2: Causes of global temperature
+rise, role of agriculture. Uses a direct instruction and outdoor
+learning methods. - Lesson 3: Repercussions of climate change and what
+this means for global/local food production. Uses Socratic and outdoor
+learning. - Lesson 4: How to monitor repercussions in food system? Uses
+interactive, outdoor methods. - Lesson 5: How to minimize repercussions…
+SOLUTIONS. Uses active and collaborative methods. - Lesson 6: Student
+projects for monitoring and minimizing climate change through school
+garden. Uses active/ participatory methods.
 
 ## 110.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Survey on CC knowledge and attitues for students. In-depth
+interviews for teachers. Observations in both cases.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Quantitative for students knowledge about CC and attitudes
+towards it. Qualitative for teachers.
 
-</td>
-<td style="text-align:left;">
+**Results**: Intervention works in both samples.
 
-Survey on CC knowledge and attitues for students. In-depth interviews
-for teachers. Observations in both cases.
+**Improved?**: All of them. Although most of the qualitative results on
+teachers were centered on pedagogy (e.g. whether they felt co-teaching
+helped, whether they felt more empowered to teach about CC rather than
+directly content on CC).
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 110.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Students viewed CC as a more social problem (i.e. linked
+to forms of production, who CC impacts…), rather than a “simply” simply
+scientific one. (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Students were more aware of the effects of CC in their
+local environment. (*Worked?*: yes )
 
-Intervention works in both samples.
+**intention**: Students selected a larger number of environmental
+activites in the pre- compared to the post-intervention. (*Worked?*: yes
+)
 
-</td>
-</tr>
-</tbody>
-</table>
+**other**: Teachers self-efficacy to teach CC. Students attitudes
+towards CC (*Worked?*: Yes )
+
+## 110.7 Conclusions
+
+**Conclusions**: Intervention works in both samples although further
+information is neede to assess student’s actual engagement in behaviour
+and understanding of complex web of causes surrounding CC.
+
+**Message to keep:**: Effective in knowledge although more centered in
+pedagogical variables than in CC.
 
 # 111 Silva2021 ( SC )
+
+**title** O Conhecimento sobre Sismos e Mudanças Climáticas como
+Proposta Pedagógica: Estudo de Caso em uma escola Pública de
+Fortaleza/CE
 
 ## 111.1 abstract
 
@@ -26077,136 +21202,164 @@ urban
 
 ## 111.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Present the results of a pedagogical proposal with content on
 earthquakes and climate change.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 111.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Semestral course covering content on climate change and
+earthquakes, as well as practicing an action plan to reduce the risks of
+earthquakes.
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Semestral course covering content on climate change and earthquakes, as
-well as practicing an action plan to reduce the risks of earthquakes.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Semestral course covering content on climate change and earthquakes, as
-well as practicing an action plan to reduce the risks of earthquakes. At
-the end of the semester: 1. Students presented the knowledge they had
-acquired and its applicability to society. 2. Students responded to a
-questionnaire. 2.1. Did you learn anything new about earthquakes in this
-course? 2.2. What did you learn? 2.2.1. Definitions of epicenter and
-hypocenter. 2.2.2. Characteristics of earthquakes in plate edge regions
-and intra-plate regions. 2.2.3. Understanding seismic scales. 2.2.4.
-Understanding Brazilian and Ceará seismicity. 2.2.5. Preventive actions
-to avoid human and material damage. 3. Did the students change their
-preconceptions about the occurrence of earthquakes in Brazil and Ceará?
-4. Six questions about preventive actions to mitigate damage in
-earthquake events. 5. Questionnaire on the conception of the
-relationship between climate change and anthropogenic actions and on the
+**Description**: Semestral course covering content on climate change and
+earthquakes, as well as practicing an action plan to reduce the risks of
+earthquakes. At the end of the semester: 1. Students presented the
+knowledge they had acquired and its applicability to society. 2.
+Students responded to a questionnaire. 2.1. Did you learn anything new
+about earthquakes in this course? 2.2. What did you learn? 2.2.1.
+Definitions of epicenter and hypocenter. 2.2.2. Characteristics of
+earthquakes in plate edge regions and intra-plate regions. 2.2.3.
+Understanding seismic scales. 2.2.4. Understanding Brazilian and Ceará
+seismicity. 2.2.5. Preventive actions to avoid human and material
+damage. 3. Did the students change their preconceptions about the
+occurrence of earthquakes in Brazil and Ceará? 4. Six questions about
+preventive actions to mitigate damage in earthquake events. 5.
+Questionnaire on the conception of the relationship between climate
+change and anthropogenic actions and on the relationship between global
+warming and the increase in the occurrence of earthquakes. 5.1. Do you
+believe that the climate changes taking place on the planet are caused
+by predatory actions of human beings on nature? 5.2. If global warming
+continues to increase, could this influence the increase in the
+occurrence of natural disasters? 6. Questionnaire on the concept of the
 relationship between global warming and the increase in the occurrence
-of earthquakes. 5.1. Do you believe that the climate changes taking
-place on the planet are caused by predatory actions of human beings on
-nature? 5.2. If global warming continues to increase, could this
-influence the increase in the occurrence of natural disasters? 6.
-Questionnaire on the concept of the relationship between global warming
-and the increase in the occurrence of natural disasters. 6.1. Based on
-your knowledge, mark the natural phenomena that could become more
-frequent due to global warming and cause disasters: volcanic eruptions,
-droughts, earthquakes, floods, hurricanes, tsunamis, blizzards,
-avalanches. 7. Questionnaire on consumer habits and reducing human
-interference in climate change changes. 7.1. Select the options that
-show habits that can be adopted by the population to reduce humanity’s
-interference in the planet’s climate change. 7.1.1 Reduce the use of
-fossil fuels. 7.1.2 Maintain the current use of fossil fuels. 7.1.3
-Reduce the use of vehicles that use oil derivatives as fuel. 7.1.4
-Maintaining the current use of vehicles that use oil derivatives as
-fuels. 7.1.5 Use more renewable energy sources. 7.1.6. It is not
-necessary to use more renewable energy sources. 7.1.7 Reduce
-deforestation. 7.1.8. Maintain deforestation. 7.1.9 Planting more trees.
-7.1.10. There is no need for more trees. 7.1.11. Maintain conscious
-consumption habits, avoid overexploitation of natural resources. 7.1.12.
-Not worrying about conscious consumption habits, exploiting natural
-resources at will. 7.1.13. Reduce cattle farming. 7.1.14. Maintain
-current cattle farming.
-
-</td>
-</tr>
-</tbody>
-</table>
+of natural disasters. 6.1. Based on your knowledge, mark the natural
+phenomena that could become more frequent due to global warming and
+cause disasters: volcanic eruptions, droughts, earthquakes, floods,
+hurricanes, tsunamis, blizzards, avalanches. 7. Questionnaire on
+consumer habits and reducing human interference in climate change
+changes. 7.1. Select the options that show habits that can be adopted by
+the population to reduce humanity’s interference in the planet’s climate
+change. 7.1.1 Reduce the use of fossil fuels. 7.1.2 Maintain the current
+use of fossil fuels. 7.1.3 Reduce the use of vehicles that use oil
+derivatives as fuel. 7.1.4 Maintaining the current use of vehicles that
+use oil derivatives as fuels. 7.1.5 Use more renewable energy sources.
+7.1.6. It is not necessary to use more renewable energy sources. 7.1.7
+Reduce deforestation. 7.1.8. Maintain deforestation. 7.1.9 Planting more
+trees. 7.1.10. There is no need for more trees. 7.1.11. Maintain
+conscious consumption habits, avoid overexploitation of natural
+resources. 7.1.12. Not worrying about conscious consumption habits,
+exploiting natural resources at will. 7.1.13. Reduce cattle farming.
+7.1.14. Maintain current cattle farming.
 
 ## 111.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: At the end of the semester: 1. Students presented the
+knowledge they had acquired and its applicability to society. 2.
+Students responded to a questionnaire. 2.1. Did you learn anything new
+about earthquakes in this course? 2.2. What did you learn? 2.2.1.
+Definitions of epicenter and hypocenter. 2.2.2. Characteristics of
+earthquakes in plate edge regions and intra-plate regions. 2.2.3.
+Understanding seismic scales. 2.2.4. Understanding Brazilian and Ceará
+seismicity. 2.2.5. Preventive actions to avoid human and material
+damage. 3. Did the students change their preconceptions about the
+occurrence of earthquakes in Brazil and Ceará? 4. Six questions about
+preventive actions to mitigate damage in earthquake events. 5.
+Questionnaire on the conception of the relationship between climate
+change and anthropogenic actions and on the relationship between global
+warming and the increase in the occurrence of earthquakes. 5.1. Do you
+believe that the climate changes taking place on the planet are caused
+by predatory actions of human beings on nature? 5.2. If global warming
+continues to increase, could this influence the increase in the
+occurrence of natural disasters? 6. Questionnaire on the concept of the
+relationship between global warming and the increase in the occurrence
+of natural disasters. 6.1. Based on your knowledge, mark the natural
+phenomena that could become more frequent due to global warming and
+cause disasters: volcanic eruptions, droughts, earthquakes, floods,
+hurricanes, tsunamis, blizzards, avalanches. 7. Questionnaire on
+consumer habits and reducing human interference in climate change
+changes. 7.1. Select the options that show habits that can be adopted by
+the population to reduce humanity’s interference in the planet’s climate
+change. 7.1.1 Reduce the use of fossil fuels. 7.1.2 Maintain the current
+use of fossil fuels. 7.1.3 Reduce the use of vehicles that use oil
+derivatives as fuel. 7.1.4 Maintaining the current use of vehicles that
+use oil derivatives as fuels. 7.1.5 Use more renewable energy sources.
+7.1.6. It is not necessary to use more renewable energy sources. 7.1.7
+Reduce deforestation. 7.1.8. Maintain deforestation. 7.1.9 Planting more
+trees. 7.1.10. There is no need for more trees. 7.1.11. Maintain
+conscious consumption habits, avoid overexploitation of natural
+resources. 7.1.12. Not worrying about conscious consumption habits,
+exploiting natural resources at will. 7.1.13. Reduce cattle farming.
+7.1.14. Maintain current cattle farming.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Percentages of responses to each question.
 
-</td>
-<td style="text-align:left;">
+**Results**: Semestral course covering content on climate change and
+earthquakes, as well as practicing an action plan to reduce the risks of
+earthquakes. At the end of the semester: 1. Students presented the
+knowledge they had acquired and its applicability to society. 2.
+Students responded to a questionnaire. 2.1. Did you learn anything new
+about earthquakes in this course? - 100% said YES 2.2. What did you
+learn? 2.2.1. Definitions of epicenter and hypocenter. - 61% 2.2.2.
+Characteristics of earthquakes in plate edge regions and intra-plate
+regions. - 48% 2.2.3. Understanding seismic scales. - 64% 2.2.4.
+Understanding Brazilian and Ceará seismicity. - 76% 2.2.5. Preventive
+actions to avoid human and material damage. - 94% 3. Did the students
+change their preconceptions about the occurrence of earthquakes in
+Brazil and Ceará?- 100% 4. Six questions about preventive actions to
+mitigate damage in earthquake events.- Students correctly understood
+preventive actions. 5. Questionnaire on the conception of the
+relationship between climate change and anthropogenic actions and on the
+relationship between global warming and the increase in the occurrence
+of earthquakes. 5.1. Do you believe that the climate changes taking
+place on the planet are caused by predatory actions of human beings on
+nature? - 94% said YES 5.2. If global warming continues to increase,
+could this influence the increase in the occurrence of natural
+disasters? - 97% said YES 6. Questionnaire on the concept of the
+relationship between global warming and the increase in the occurrence
+of natural disasters. 6.1. Based on your knowledge, mark the natural
+phenomena that could become more frequent due to global warming and
+cause disasters: volcanic eruptions, droughts, earthquakes, floods,
+hurricanes, tsunamis, blizzards, avalanches. - 33%, 58%, 82%, 82%, 42%,
+64%, 12%, 36%, respectively. 7. Questionnaire on consumer habits and
+reducing human interference in climate change changes. 7.1. Select the
+options that show habits that can be adopted by the population to reduce
+humanity’s interference in the planet’s climate change. 7.1.1 Reduce the
+use of fossil fuels.- 94% 7.1.2 Maintain the current use of fossil
+fuels. - 6% 7.1.3 Reduce the use of vehicles that use oil derivatives as
+fuel. - 88% 7.1.4 Maintaining the current use of vehicles that use oil
+derivatives as fuels - 9%. 7.1.5 Use more renewable energy sources. -
+85% 7.1.6. It is not necessary to use more renewable energy sources. -
+3% 7.1.7 Reduce deforestation. - 91% 7.1.8. Maintain deforestation. - 0%
+7.1.9 Planting more trees. - 94% 7.1.10. There is no need for more
+trees. - 0% 7.1.11. Maintain conscious consumption habits, avoid
+overexploitation of natural resources. - 82% 7.1.12. Not worrying about
+conscious consumption habits, exploiting natural resources at will. - 3%
+7.1.13. Reduce cattle farming. - 67% 7.1.14. Maintain current cattle
+farming. - 18%
 
-At the end of the semester: 1. Students presented the knowledge they had
-acquired and its applicability to society. 2. Students responded to a
-questionnaire. 2.1. Did you learn anything new about earthquakes in this
-course? 2.2. What did you learn? 2.2.1. Definitions of epicenter and
-hypocenter. 2.2.2. Characteristics of earthquakes in plate edge regions
-and intra-plate regions. 2.2.3. Understanding seismic scales. 2.2.4.
+**Improved?**: Cognition improved
+
+## 111.6 Outcomes
+
+**knowledge**: Semestral course covering content on climate change and
+earthquakes, as well as practicing an action plan to reduce the risks of
+earthquakes. At the end of the semester: 1. Students presented the
+knowledge they had acquired and its applicability to society (oral
+exposition with maquetes). 2. Students responded to a questionnaire.
+2.1. Did you learn anything new about earthquakes in this course? 2.2.
+What did you learn? 2.2.1. Definitions of epicenter and hypocenter.
+2.2.2. Characteristics of earthquakes in plate edge regions and
+intra-plate regions. 2.2.3. Understanding seismic scales. 2.2.4.
 Understanding Brazilian and Ceará seismicity. 2.2.5. Preventive actions
 to avoid human and material damage. 3. Did the students change their
 preconceptions about the occurrence of earthquakes in Brazil and Ceará?
@@ -26237,67 +21390,41 @@ deforestation. 7.1.8. Maintain deforestation. 7.1.9 Planting more trees.
 consumption habits, avoid overexploitation of natural resources. 7.1.12.
 Not worrying about conscious consumption habits, exploiting natural
 resources at will. 7.1.13. Reduce cattle farming. 7.1.14. Maintain
-current cattle farming.
+current cattle farming. (*Worked?*: Yes )
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 111.7 Conclusions
 
-Resultados.obtenidos.por.cada.outcome
+**Conclusions**: “The students realize that they are exposed to dangers
+(disasters) related to climate change and seismic activity in the
+region. In addition, it is possible to identify in these students a
+concern, in the form of environmental awareness, about what needs to be
+done to live with this reality in a preventive and active way, knowing
+how to behave correctly in the event of disasters, natural or
+otherwise.”
 
-</td>
-<td style="text-align:left;">
-
-Semestral course covering content on climate change and earthquakes, as
-well as practicing an action plan to reduce the risks of earthquakes. At
-the end of the semester: 1. Students presented the knowledge they had
-acquired and its applicability to society. 2. Students responded to a
-questionnaire. 2.1. Did you learn anything new about earthquakes in this
-course? - 100% said YES 2.2. What did you learn? 2.2.1. Definitions of
-epicenter and hypocenter. - 61% 2.2.2. Characteristics of earthquakes in
-plate edge regions and intra-plate regions. - 48% 2.2.3. Understanding
-seismic scales. - 64% 2.2.4. Understanding Brazilian and Ceará
-seismicity. - 76% 2.2.5. Preventive actions to avoid human and material
-damage. - 94% 3. Did the students change their preconceptions about the
-occurrence of earthquakes in Brazil and Ceará?- 100% 4. Six questions
-about preventive actions to mitigate damage in earthquake events.-
-Students correctly understood preventive actions. 5. Questionnaire on
-the conception of the relationship between climate change and
-anthropogenic actions and on the relationship between global warming and
-the increase in the occurrence of earthquakes. 5.1. Do you believe that
-the climate changes taking place on the planet are caused by predatory
-actions of human beings on nature? - 94% said YES 5.2. If global warming
-continues to increase, could this influence the increase in the
-occurrence of natural disasters? - 97% said YES 6. Questionnaire on the
-concept of the relationship between global warming and the increase in
-the occurrence of natural disasters. 6.1. Based on your knowledge, mark
-the natural phenomena that could become more frequent due to global
-warming and cause disasters: volcanic eruptions, droughts, earthquakes,
-floods, hurricanes, tsunamis, blizzards, avalanches. - 33%, 58%, 82%,
-82%, 42%, 64%, 12%, 36%, respectively. 7. Questionnaire on consumer
-habits and reducing human interference in climate change changes. 7.1.
-Select the options that show habits that can be adopted by the
-population to reduce humanity’s interference in the planet’s climate
-change. 7.1.1 Reduce the use of fossil fuels.- 94% 7.1.2 Maintain the
-current use of fossil fuels. - 6% 7.1.3 Reduce the use of vehicles that
-use oil derivatives as fuel. - 88% 7.1.4 Maintaining the current use of
-vehicles that use oil derivatives as fuels - 9%. 7.1.5 Use more
-renewable energy sources. - 85% 7.1.6. It is not necessary to use more
-renewable energy sources. - 3% 7.1.7 Reduce deforestation. - 91% 7.1.8.
-Maintain deforestation. - 0% 7.1.9 Planting more trees. - 94% 7.1.10.
-There is no need for more trees. - 0% 7.1.11. Maintain conscious
-consumption habits, avoid overexploitation of natural resources. - 82%
-7.1.12. Not worrying about conscious consumption habits, exploiting
-natural resources at will. - 3% 7.1.13. Reduce cattle farming. - 67%
-7.1.14. Maintain current cattle farming. - 18%
-
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: The authors present the results of a post
+evaluation of a semester course implemented in a public school in
+Brazil. The course is focused on increasing knowledge about seismic
+activity in the Ceará region and the authors mention that climate change
+increases the chances of natural disasters occurring. The course is not
+described, so there is no way of knowing what they do during the
+semester that the course lasts. The results show that students end up
+with high levels of knowledge about seismic activity in the Ceará area
+(Brazil), as well as about preventive actions to mitigate damage in
+earthquakes. Ninety-four percent of the students reported believing that
+climate change is due to human actions and 97% indicated that if global
+warming continues to increase there could be an increase in the
+occurrence of natural disasters. Finally, students showed high levels of
+knowledge about consumption habits that could reduce human impact on
+climate change (e.g., reducing the use of fossil fuels, stopping
+deforestation, planting more trees, etc.). The only indicator that falls
+below 85% is the reduction of cattle consumption (only 67% see it as a
+habit that could reduce human-caused climate change).
 
 # 112 Skains2022 ( LR )
+
+**title** Playing for Change: Teens’ Attitudes Towards Climate Change
+Action as Expressed Through Interactive Digital Narrative Play
 
 ## 112.1 abstract
 
@@ -26397,118 +21524,80 @@ age_max
 
 ## 112.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To pilot test “You and CO2”, a program designed to encourage students to
 reﬂect on their personal impact on the environment
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 What are the trends in story selection choices for how they reﬂect
 students’ understandings and attitudes towards climate change and their
 own ability to make a difference in matters large and small pertaining
 to climate change
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 112.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: The YCO2 program consists of three workshops of 1to 2 hours
+each conducted by researchers. Depending on the school, class, and
+instructor needs. Likewise, according to needs and schedules,
+instructors may conduct the workshops on subsequent days, or spread them
+out over the course of several weeks or months.
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-The YCO2 program consists of three workshops of 1to 2 hours each
-conducted by researchers. Depending on the school, class, and instructor
-needs. Likewise, according to needs and schedules, instructors may
-conduct the workshops on subsequent days, or spread them out over the
-course of several weeks or months.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Intervention (fully described in a different paper) includes lesson
-plans, activity worksheets, discussion questions and prompts, and
-rubrics, as well as the program IDN No World 4 Tomorrow and tutorials
-for the students to create their own IDNs. This paper focuses on IDN
-program. 4 schools had different treatments around the IDN program:
-School 1: 3 x 1 hour sessions, separated by a month between each. School
-2: three workshops were taught on successive days as part of a special
-STEM week. School 3: workshops 1 and 2 were tought in dec 2020 the 3rd
-during pandemic in hybrid mode. School 4: students visited Swansea
-university as part of an eco-day and conducted a ceach litter pick
-activity and an energy-saving tour and then workshop 2.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Intervention (fully described in a different paper)
+includes lesson plans, activity worksheets, discussion questions and
+prompts, and rubrics, as well as the program IDN No World 4 Tomorrow and
+tutorials for the students to create their own IDNs. This paper focuses
+on IDN program. 4 schools had different treatments around the IDN
+program: School 1: 3 x 1 hour sessions, separated by a month between
+each. School 2: three workshops were taught on successive days as part
+of a special STEM week. School 3: workshops 1 and 2 were tought in dec
+2020 the 3rd during pandemic in hybrid mode. School 4: students visited
+Swansea university as part of an eco-day and conducted a ceach litter
+pick activity and an energy-saving tour and then workshop 2.
 
 ## 112.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: Researchers collected playthrough data every time a
+student played the project IDN, recording the links they clicked
+throughout the interactive story. Proportional analysis was manually
+conducted of the data from a grounded theory perspective, qualitatively
+reviewing the data to reveal patterns for further analysis. Prior to
+Workshop 1, students completed a survey measuring their knowledge of and
+attitudes regarding climate change. In addition to this (not reported on
+this paper) they surveyed the students regarding knowledge of and
+attitudes about climate change before and after the program intervention
+and collected the work of the students for qualitative analysis yielding
+
+**Results**: NA
+
+**Improved?**: students choices indicate positive attitudes towards
+climate change action, in line with the initial survey data we have
+analysed (Rudd et al., 2019; Horry et al. in review). It is likely,
+however, that these young people struggle with the notion of taking
+action as individuals, particularly when it comes to encouraging both
+their peers and their elders to do so as well.
+
+## 112.6 Outcomes
+
+**emotions**: attitudes (*Worked?*: no )
+
+## 112.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 113 Smith2019 ( SC )
+
+**title** Teaching climate change science to high school students using
+computer games in an intermedia narrative
 
 ## 113.1 abstract
 
@@ -26602,29 +21691,13 @@ urban, suburban, and rural
 
 ## 113.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 We explored how computer games developed as part of an innovative set of
 climate change education materials helped students learn and gain
 interest in global climate change
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Research question 1 - What is the impact of the CHANGE intervention on
 a) students’ learning of climate change science, and b) the validity of
@@ -26633,108 +21706,41 @@ educational computer games of the CHANGE curriculum contribute to
 understanding of two of the major effects of climate change on coastal
 regions: (1) sea level rise and (2) storms?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 113.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: The Climate Change Narrative Game Education (CHANGE)
+intervention includes “34 different activities including eBooks with
+embedded computer games, labs, and hands-on laboratory activities”. Not
+all the courses applied all the activities The paper focuses on two
+computer web games
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-The Climate Change Narrative Game Education (CHANGE) intervention
-includes “34 different activities including eBooks with embedded
-computer games, labs, and hands-on laboratory activities”. Not all the
-courses applied all the activities The paper focuses on two computer web
-games
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The Authors focus the intro and method on two activities (two computer
-games), but they are part of the Climate Change Narrative Game Education
-(CHANGE program), which includes “(a) computer games, (b) a
-scientifically web-based science fiction novel about future Gulf coast
-residents, and (c) hands-on laboratory activities”
+**Description**: The Authors focus the intro and method on two
+activities (two computer games), but they are part of the Climate Change
+Narrative Game Education (CHANGE program), which includes “(a) computer
+games, (b) a scientifically web-based science fiction novel about future
+Gulf coast residents, and (c) hands-on laboratory activities”
 
 Computer game 1: Glaciers vs. Icebergs (objective: learn the difference
 between glaciers and icebergs) Computer game 2: Hurricane Curling
 (objective: learn the development and movement of hurricanes in the Gulf
 of Mexico coast)
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 113.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: questionnaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Objectives 1a and 1b (quanti): ANOVA + pairwise
+comparisons Objective 2 (quali): grouped the answers by theme
 
-</td>
-<td style="text-align:left;">
-
-questionnaire
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-From Discussion: “The general pattern was that the students, whether
-honors or regular, scored significantly higher on the exams in the full
-usage group, than in the no usage group, however students with moderate
-or minimal usage of CHANGE materials did not score significantly higher
-than no usage”
+**Results**: From Discussion: “The general pattern was that the
+students, whether honors or regular, scored significantly higher on the
+exams in the full usage group, than in the no usage group, however
+students with moderate or minimal usage of CHANGE materials did not
+score significantly higher than no usage”
 
 However, in the Results: $$honor students$$ “Post hoc comparisons using
 the (Least significant Difference) LSD test indicated that the mean
@@ -26751,12 +21757,39 @@ significantly higher than for the no usage condition (M = 34.3, SD =
 14.62). Additionally, students who used the CHANGE materials moderately
 scored better than those who used the materials less.”
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: improved knowledge and beliefs
+
+## 113.6 Outcomes
+
+**knowledge**: “Research question 1 - What is the impact of the CHANGE
+intervention on a) students’ learning of climate change science, and b)
+the validity of their beliefs about climate change? Research question
+2 - How do the educational computer games of the CHANGE curriculum
+contribute to understanding of two of the major effects of climate
+change on coastal regions: (1) sea level rise and (2) storms?”
+(*Worked?*: yes )
+
+**other**: belief (pre-post design) Measured through true/probably
+true/probably false//false questions on facts objectively true or false,
+so it may be a measure of knowledge despite Authors writing about
+beliefs (*Worked?*: yes )
+
+## 113.7 Conclusions
+
+**Conclusions**: “…climate change science can be taught at the high
+school level in an interdisciplinary way, using a local place-based
+approach, and including media that specifically appeals to the current
+generation of high school students (educational computer games)” “This
+paper provides a case study on how educational computer games can fit
+meaningfully into climate change education.”
+
+**Message to keep:**: Computer games can be engaging for students and
+can be used to teach CC concepts
 
 # 114 Steffensen2022 ( ABP )
+
+**title** Using inquiry-based dialogues to explore controversial climate
+change issues with secondary students: An example from Norway
 
 ## 114.1 abstract
 
@@ -26874,28 +21907,12 @@ Urban
 
 ## 114.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To evaluate how teachers can facilitate students’ further engagement by
 addressing multiple aims of inquiry-based dialogues.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 After the invertention, the students will be able to: • Reason about
 global and local climate challenges related to fossil fuels and explain
@@ -26903,104 +21920,57 @@ different views on this. • See the connection between Norway’s oil
 production and the country as a welfare state. • Discuss Norway’s role
 as an oil and gas producing country
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 114.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Educational activities
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Educational activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-A class from a teacher was recorded and the teacher designed a dialogue
-game containing claims to be discussed in groups of 3–4 students.
-Teacher asks them to read a claim out loud, then place a board piece on
-one of the areas on the board saying ‘agree’, ‘partly agree’, or
-‘disagree’, and then present a reason for their choice.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: A class from a teacher was recorded and the teacher
+designed a dialogue game containing claims to be discussed in groups of
+3–4 students. Teacher asks them to read a claim out loud, then place a
+board piece on one of the areas on the board saying ‘agree’, ‘partly
+agree’, or ‘disagree’, and then present a reason for their choice.
 
 ## 114.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Recording the dialogues during the class and then described
+the results.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: The dialogues show that students bring knowledge, opinions
+and attitudes from outside school, characteristics that are crucial for
+students’ engagement.
 
-Recording the dialogues during the class and then described the results.
+**Improved?**: understanding and knowledge improved
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 114.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: increased knowledge (*Worked?*: no )
 
-</td>
-<td style="text-align:left;">
+## 114.7 Conclusions
 
-The dialogues show that students bring knowledge, opinions and attitudes
-from outside school, characteristics that are crucial for students’
-engagement.
+**Conclusions**: Dialogical listening is essential in inquiry-based
+dialogues, and students must learn to develop competencies as dialogical
+listeners. The students’ dialogues could have been more investigative,
+paying more attention to each other and exposing more
+counter-argumentation.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Further research should focus on how teachers can
+give space to explore contemporary societal issues, requiring a range of
+approaches. Dialogical listening and equal opportunities for all
+students should be emphasised. Young people’s voices matter, and
+inquiry-based dialogues can strengthen their agency and empowerment
 
 # 115 Sternang2012 ( SB )
+
+**title** Climate change and costs: investigating students’ reasoning on
+nature and economic development
 
 ## 115.1 abstract
 
@@ -27105,141 +22075,82 @@ Both
 
 ## 115.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Objectives
-
-</td>
-<td style="text-align:left;">
-
-"the aim of increasing students’ knowledge of environmental issues, and
+“the aim of increasing students’ knowledge of environmental issues, and
 transferring this knowledge into positive actions to affect the wider
-community."
+community.”
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Questions**:
 
-Questions
-
-</td>
-<td style="text-align:left;">
-
-"In the pre-interviews, the interview questions were: (1) Do you think a
+“In the pre-interviews, the interview questions were: (1) Do you think a
 car factory should be set up or not? Why? (2) Does a car factory have
 any impact on climate change? The interviews were conducted in a
 secluded room at the students’ respective schools and lasted about 30
 minutes. The post interviews were conducted immediately after the
 debate. The main questions were: Should a car factory be built or not?
-Why? This interview lasted 15–30 minutes."
-
-</td>
-</tr>
-</tbody>
-</table>
+Why? This interview lasted 15–30 minutes.”
 
 ## 115.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Role play.
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Role play.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Groups of grous students were instructed to role play a pannel of judges
-deciding whether to install a car factory in an economically depressed
-village. The factory will increase cO2 emission due to the manufacturing
-process and the emissions of cars themselves but will hellp out village
-and country’s economic growth. Different groups were instructed to
-roleplay ecologists (emphasizing environmental protection)m government
-officials (emphasizing social and economic benefits), UN representatives
-(emphasizing global CC) or village’s representatives (emphasizing
-outcome and welfare). Sample students listened to the debate and were
-instructed to reach a conclusion fairly and objectively. Pre-post
-evaluation deals with students decisions and reasoning behind allowing
-or not allowing for the car factory to be built.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Groups of grous students were instructed to role play a
+pannel of judges deciding whether to install a car factory in an
+economically depressed village. The factory will increase cO2 emission
+due to the manufacturing process and the emissions of cars themselves
+but will hellp out village and country’s economic growth. Different
+groups were instructed to roleplay ecologists (emphasizing environmental
+protection)m government officials (emphasizing social and economic
+benefits), UN representatives (emphasizing global CC) or village’s
+representatives (emphasizing outcome and welfare). Sample students
+listened to the debate and were instructed to reach a conclusion fairly
+and objectively. Pre-post evaluation deals with students decisions and
+reasoning behind allowing or not allowing for the car factory to be
+built.
 
 ## 115.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: in-depth interviews
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Code of utterances in pre-post interviews in 3 main
+aspects: economic develoment, natureand societal focus.
 
-</td>
-<td style="text-align:left;">
+**Results**: Both outcomes improved
 
-in-depth interviews
+**Improved?**: Both social impact of CC and decision (allowing for the
+construction of the car factory) outcomes improved after the
+intervention.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 115.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Yes, students reasoned more on a societal sense and
+taking into account negative consequences of CC on society rather than
+simply the economic benefits in the post-intervention compared to pre.
+(*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**action**: Yes, students decided NOT to build the factory in the
+post-intervention compared to the pre. (*Worked?*: yes )
 
-Both outcomes improved
+## 115.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Role playing as judges in a debate on the convenience
+of setting up an polluting factory seems to improve green behaviour and
+foster a societal view of economical issues rather than simply an
+economic mindset.
+
+**Message to keep:**: Role playing games on a realistic decision with
+both negative climate impact and positive economic impact allows to more
+easily understand both climate and social causes and impacts of CC.
 
 # 116 Stevenson2018 ( LR )
+
+**title** Developing a model of climate change behavior among
+adolescents
 
 ## 116.1 abstract
 
@@ -27358,29 +22269,13 @@ urban
 
 ## 116.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To test a model that incorporates insights about how knowledge, concern,
 and hope might relate to behavior and the potential for educational
 interventions to influence these factors.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 Authors hypothesized that: The intervention would directly and
 positively impact climate change science knowledge Increased climate
@@ -27388,101 +22283,82 @@ change knowledge would lead to increased climate change concern and hope
 Changes in concern and hope would be positively related to changes in
 climate change behavior
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 116.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Activities incorporated in the curriculum
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Activities incorporated in the curriculum
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The educational intervention included four activities modeled after
-Project WILD focusing on wildlife biology, ecology, and conservation
-(see projectwild.org) characterized by highly engaging, hands-on
-activities. Activities focused on (1) the difference between weather and
-climate, (2) how climate and weather relate to location of habitats and
-wildlife, (3) how wildlife managers can and are planning for climate
-change, and (4) how individual actions can mitigate climate change and
-improve climate resilience among wildlife
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The educational intervention included four activities
+modeled after Project WILD focusing on wildlife biology, ecology, and
+conservation (see projectwild.org) characterized by highly engaging,
+hands-on activities. Activities focused on (1) the difference between
+weather and climate, (2) how climate and weather relate to location of
+habitats and wildlife, (3) how wildlife managers can and are planning
+for climate change, and (4) how individual actions can mitigate climate
+change and improve climate resilience among wildlife
 
 ## 116.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: NA
 
-Resultados.obtenidos.por.cada.outcome
+**Analysis**: Statistical analysis to test a hipothesized Path model
+that allows to test direct and indirect relations
 
-</td>
-<td style="text-align:left;">
+**Results**: Increased knowledge predicted increased hope and concern,
+which together predicted increased levels of climate change mitigation
+behaviors More specifically,change in knowledge appeared more strongly
+associated with change in concern (β= 0.088) than change in hope
+(β=0.077) (Fig. 2, Fig. S1). Change in hope (β= 0.110) appeared to be a
+slightly stronger predictor of change in behavior than change in concern
+(β= 0.105) (Fig. 2, Fig. S2). Students attending Title I schools (lower
+SES) were less likely to display increased knowledge, concern, and
+behavior with all other variables held constant (Fig. 2, Figs. S1, S2).
 
-Increased knowledge predicted increased hope and concern, which together
-predicted increased levels of climate change mitigation behaviors More
-specifically,change in knowledge appeared more strongly associated with
-change in concern (β= 0.088) than change in hope (β=0.077) (Fig. 2, Fig.
-S1). Change in hope (β= 0.110) appeared to be a slightly stronger
-predictor of change in behavior than change in concern (β= 0.105) (Fig.
-2, Fig. S2). Students attending Title I schools (lower SES) were less
-likely to display increased knowledge, concern, and behavior with all
-other variables held constant (Fig. 2, Figs. S1, S2).
+**Improved?**: They found partial support for a causal relationship
+between the treatment and gains in knowledge, but not between treatment
+and behavior. But they found support for a path model whereby knowledge
+positively relates to increased climate change concern and hope, and
+increases in concern and hope predict changes in pro-environmental
+behavior
 
-</td>
-</tr>
-</tbody>
-</table>
+## 116.6 Outcomes
+
+**knowledge**: knowledge (climate change science, causes, and impacts
+(*Worked?*: yes )
+
+**awareness**: concern (e.g., communicating the impacts of climate
+change on wildlife), (*Worked?*: yes )
+
+**emotions**: hope (e.g., what others are doing, what you can do)
+(*Worked?*: yes )
+
+**action**: pro-environmental behavior (*Worked?*: Partially )
+
+**other**: Authors are testing a model of direct and indirect relations
+(*Worked?*: They found partial support for a causal relationship between
+the treatment and gains in knowledge, but not between treatment and
+behavior. But they found support for a path model whereby knowledge
+positively relates to increased climate change concern and hope, and
+increases in concern and hope predict changes in pro-environmental
+behavior )
+
+## 116.7 Conclusions
+
+**Conclusions**: This study provides empirical evidence of a
+relationship between knoledge, hope and concern, and behavior, and in
+particular that hope rather than concern predicts proenvironmental
+behavior. It also provides evidence of the diferent effects of
+interventions depending on socioeconomic status of students
+
+**Message to keep:**: NA
 
 # 117 Stevenson2018a ( MB )
+
+**title** Framing climate change communication to prompt individual and
+collective action among adolescents from agricultural communities
 
 ## 117.1 abstract
 
@@ -27572,154 +22448,119 @@ Rural
 
 ## 117.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This study begins to address the need to examine how message framing may
 affect emotional responses to climate change and subsequent individual
 and collective action among adolescents with a case study of
 agricultural students in North Carolina.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 117.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: $$The intervention is just the presentation to
+students of an article with different framings (agriculture, health
+etc), it is done in a school, but I am not sure the
+Curricular/Extracurricular makes sense in this case. If anything I would
+tend to extracurricular because it is not in the regular activity
+programme of the students$$
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Reading one article
 
-$$The intervention is just the presentation to students of an article
-with different framings (agriculture, health etc), it is done in a
-school, but I am not sure the Curricular/Extracurricular makes sense in
-this case. If anything I would tend to extracurricular because it is not
-in the regular activity programme of the students$$
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Reading one article
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-students were randomly presented with a climate news story presented in
-one of four frames: agriculture, community, health, and environment
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: students were randomly presented with a climate news
+story presented in one of four frames: agriculture, community, health,
+and environment
 
 ## 117.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-One questionnaire: - we asked respondents about the degree to which they
-agreed that climate change is (1) happening and (2) human caused -
-students were asked to respond to the degree to which the article
-$$randomly assigned framing (agriculture, community, health, and
+**Data**: One questionnaire: - we asked respondents about the degree to
+which they agreed that climate change is (1) happening and (2) human
+caused - students were asked to respond to the degree to which the
+article $$randomly assigned framing (agriculture, community, health, and
 environment)$$ made them feel worried or hopeful. - students were asked
 to respond to questions about support for adaptation and mitigation
 measures - We measured intentions to participate in individual actions
 with items addressing information seeking, individual energy saving
 behaviours, and transportation choices
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: ANOVA for testing for differences in emotional responses
+(i.e. hope and worry) associated with the different frames. Posthoc
+Tukey test - Path model analysis to test for a model including effect of
+the framing on worry and hope and then predicted support for adaptation,
+support for mitigation, intended individual behavior. Variables
+controlled for: gender, belief that global warming is happening, belief
+that it is human caused, and political affiliation (Republican,
+Democrat, Unaffiliated or Independent)
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: on average, students felt intermediate levels of hope (2.42
+out of 5, SD = 1.08) and worry (mean = 2.63/5, SD = 1.27) - Framing was
+related to changes in hopefulness (df = 3, F = 6.2, p \< 0.001), but not
+changes in worry (df = 3, F = 2.35, p = 0.071) or either measure of
+collective action (adaptation: df = 3, F = 0.50, p = 0.681; mitigation:
+df = 3, F = 0.70, p = 0.555) Path analysis: - We identified a mediating
+relationship where agricultural or environmental framing predicted the
+emotion of worry, which in turn predicted intended individual behaviour
+and support for collective action - We found no difference in
+hopefulness between those students who read the environment or community
+frames compared with those who read the agriculture frames - We also
+found partial support for our hypothesis that students who felt more
+worry and hope after reading the climate change news article would be
+more likely to report intended individual behaviour and support for
+collective action Uncontrolled variable: - Females were more worried and
+hopeful than males, as well as more likely to support adaptation and
+mitigation measures and report intended individual climate-friendly
+actions - the more likely students were to report that they thought
+global warming was happening, the more likely they were to report
+feelings of worry and hope, as well as support for adaptation, mit
+igation, and individual climate-friendly behaviours - Republicans were
+less likely than Independents or those politically unaffiliated students
+to support mitigation actions. - We found that those accepting of human
+causes had similar responses to framing as reflected in the overall
+summary statistics, with environment and community frames associated
+with a more hopeful response than health frames (Figure 3). However,
+among those sceptical of human causes, the agriculture frame was
+associated with greater levels of hopefulness than environment and
+health frames (Figure 3).
 
-</td>
-<td style="text-align:left;">
+**Improved?**: Framing was related to change in hopefulness but not in
+changes in worry. These analyses can’t really be analysed in terms of
+“improved or not”.
 
-- on average, students felt intermediate levels of hope (2.42 out of 5,
-  SD = 1.08) and worry (mean = 2.63/5, SD = 1.27)
-- Framing was related to changes in hopefulness (df = 3, F = 6.2, p \<
-  0.001), but not changes in worry (df = 3, F = 2.35, p = 0.071) or
-  either measure of collective action (adaptation: df = 3, F = 0.50, p =
-  0.681; mitigation: df = 3, F = 0.70, p = 0.555) Path analysis:
-- We identified a mediating relationship where agricultural or
-  environmental framing predicted the emotion of worry, which in turn
-  predicted intended individual behaviour and support for collective
-  action
-- We found no difference in hopefulness between those students who read
-  the environment or community frames compared with those who read the
-  agriculture frames
-- We also found partial support for our hypothesis that students who
-  felt more worry and hope after reading the climate change news article
-  would be more likely to report intended individual behaviour and
-  support for collective action Uncontrolled variable:
-- Females were more worried and hopeful than males, as well as more
-  likely to support adaptation and mitigation measures and report
-  intended individual climate-friendly actions
-- the more likely students were to report that they thought global
-  warming was happening, the more likely they were to report feelings of
-  worry and hope, as well as support for adaptation, mit igation, and
-  individual climate-friendly behaviours
-- Republicans were less likely than Independents or those politically
-  unaffiliated students to support mitigation actions.
-- We found that those accepting of human causes had similar responses to
-  framing as reflected in the overall summary statistics, with
-  environment and community frames associated with a more hopeful
-  response than health frames (Figure 3). However, among those sceptical
-  of human causes, the agriculture frame was associated with greater
-  levels of hopefulness than environment and health frames (Figure 3).
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-  `{=html}     </table>`
+## 117.6 Outcomes
+
+**intention**: - support for adaptation and mitigation measures -
+intentions to participate in individual actions with items addressing
+information seeking, individual energy saving behaviours, and
+transportation choices (*Worked?*: NA )
+
+**emotions**: degree to which the article made the students feel worried
+or hopeful (*Worked?*: Yes )
+
+## 117.7 Conclusions
+
+**Conclusions**: Agricultural students seem to respond most strongly to
+environment and agricultural frames, however the results are somewhat
+constrained by external variables such as gender and political views.
+
+**Message to keep:**: The intervention in this paper is very simple:
+agriculture students read a paper on Climate change with various
+framings (agriculture, community, health, and environment). When the
+framing is about agriculture/environment, it has a greater effect on
+students emotions (hopefulness). However this is mediated by other
+factors such as gender and political views (belief around anthropogenic
+climate change). Extra result which might be worth noting: -
+understanding human causes of climate change had no relationship with
+individual behaviour (encouraging according to authors)
 
 # 118 Sukardi2022 ( LR )
+
+**title** What Creative Ideas Came Up about Global Warming in RADEC
+Online Class?
 
 ## 118.1 abstract
 
@@ -27818,55 +22659,34 @@ urban
 
 ## 118.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 the purpose of this case study was to collect and describe students’
 creative ideas or projects related to handling environmental pollution
 problems when the RADEC model was delivered online.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  What are students’ initial ideas or projects in the RADEC learning
     model?
 2.  What are the chosen ideas or projects for each group in the RADEC
-    learning model? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    learning model?
 
 ## 118.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: NA
 
-Descripcion.de.intervención
+**Indoor/Outdoor**: NA
 
-</td>
-<td style="text-align:left;">
+**Type**: NA
 
-The RADEC is a learning model that integrates science content knowledge,
-engineering design, and creativity to help students understand the
-fundamental concepts of science in the science and other components of
-the required curriculum of Indonesia. It involves: 1. Read stage:
-reinforces the originality aspect by directing students to think about
-unique solutions that have not been thought of by others 2. Answer and
-Explain stages: intentionally engage students in solving problems
+**Description**: The RADEC is a learning model that integrates science
+content knowledge, engineering design, and creativity to help students
+understand the fundamental concepts of science in the science and other
+components of the required curriculum of Indonesia. It involves: 1. Read
+stage: reinforces the originality aspect by directing students to think
+about unique solutions that have not been thought of by others 2. Answer
+and Explain stages: intentionally engage students in solving problems
 through multiple ways and then present those solutions in public 3.
 Discuss stage: allows students opportunities in groups to interpret
 pictures, stories, or problems 4. Evaluation aspect: includes designing
@@ -27874,38 +22694,47 @@ a work plan of triggered ideas, and with the originality aspect in
 choosing another more distinctive method 5. Create stage: is compatible
 with the elaboration aspect in developing and enriching ideas
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 118.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: 1. Pre-learning questionnaires were used to determine
+students’ understanding of fundamental science concepts and possible
+solutions for solving local environmental pollution problems. The
+pre-learning questions were arranged and made based on the indicators of
+concept mastery and creative thinking skills. They also had a content
+judgement from experts. At the end of the pre-learning questions,
+students an open question on how to solve global warming. They
+communicated their ideas freely. 2. Worksheets were used to collect
+ideas or creative projects throughout the study, as well as tools,
+materials, and working procedures. Guided interviews, were used to
+confirm information that was unclear from student worksheets.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: The data obtained from this study is a description of the
+creative ideas generated by students. Therefore, the triangulation
+technique is suitable for use. Triangulation alludes to using different
+strategies or information sources in a subjective personal investigation
+to create a comprehensive understanding of marvels.
 
-</td>
-<td style="text-align:left;">
+**Results**: NA
 
-1.  Pre-learning questionnaires were used to determine students’
-    understanding of fundamental science concepts and possible solutions
-    for solving local environmental pollution problems. The pre-learning
-    questions were arranged and made based on the indicators of concept
-    mastery and creative thinking skills. They also had a content
-    judgement from experts. At the end of the pre-learning questions,
-    students an open question on how to solve global warming. They
-    communicated their ideas freely.
-2.  Worksheets were used to collect ideas or creative projects
-    throughout the study, as well as tools, materials, and working
-    procedures. Guided interviews, were used to confirm information that
-    was unclear from student worksheets. `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+**Improved?**: Students ideas for projects which was part of the post
+measure, increased in number and diversity (although not in originality)
+in comparison to those reported in the pre-intervention questionnaire
+
+## 118.6 Outcomes
+
+**knowledge**: Creative ideas addressing local environmental pollution.
+(*Worked?*: yes )
+
+## 118.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 119 Sumrall2021 ( BQ )
+
+**title** Changing attitude into behavior: How to reduce carbon dioxide
+emissions
 
 ## 119.1 abstract
 
@@ -28012,119 +22841,69 @@ Urban
 
 ## 119.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Transitioning middle grade students from the position of having a
 positive environmental attitude toward their exhibiting actual behaviors
 that address climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 How to change intention into behaviour concerning lcimate change?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 119.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Project-based learning
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Project-based learning
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-- engaging questions for discussion to differentiate between attitudes
-  and behaviors.
-- Building a knowledge base about the negative outcomes of climate
-  change as well as new technologies that exist to reduce carbon dioxide
-  emissions were the initial explorations and strategies used to move
-  students from attitude to behavior.
-- Discerning what was accurate Internet information and post
-  presentation discussions were some of the review strategies used for
-  explanation to occur.
-- two behavior-based activities (i.e., extension/elaboration) for the
-  purpose of moving students from positive attitudes to positive
-  behaviors `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+**Description**: - engaging questions for discussion to differentiate
+between attitudes and behaviors. - Building a knowledge base about the
+negative outcomes of climate change as well as new technologies that
+exist to reduce carbon dioxide emissions were the initial explorations
+and strategies used to move students from attitude to behavior. -
+Discerning what was accurate Internet information and post presentation
+discussions were some of the review strategies used for explanation to
+occur. - two behavior-based activities (i.e., extension/elaboration) for
+the purpose of moving students from positive attitudes to positive
+behaviors
 
 ## 119.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Observation of the two researchers
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Descriptive
 
-</td>
-<td style="text-align:left;">
+**Results**: NA
 
-Observation of the two researchers
+**Improved?**: NA
 
-</td>
-</tr>
-</tbody>
-</table>
+## 119.6 Outcomes
+
+**knowledge**: Yes (*Worked?*: NA )
+
+**awareness**: Yes (*Worked?*: NA )
+
+**intention**: Yes (*Worked?*: NA )
+
+**action**: Yes (*Worked?*: NA )
+
+## 119.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Not a paper with a clear and robust assessment,
+just descripbing a series of activities where schoolchildren were
+following. Activities are designed with the purpose that students
+understand the importance of both attitude and behavior if one is to
+make a change for the betterment of our planet.
 
 # 120 Sundberg2013 ( BQ )
+
+**title** Weather, Climate, Web 2.0: 21st Century Students Speak Climate
+Science Well
 
 ## 120.1 abstract
 
@@ -28202,15 +22981,7 @@ sample.size
 
 ## 120.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To describe workshops designed to increase the climate pedagogical
 content knowledge (CPCK) of upper elementary and secondary teachers
@@ -28218,15 +22989,7 @@ while providing initial and on-going scaffolding for successful
 implementation of PBL projects involving collaborative research on
 local, regional and global climate topics.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 What promise does the L2R Model CPCK PD hold for supporting effective
 communication by teachers and students as future citizen scientists
@@ -28239,87 +23002,52 @@ photographs of local events with ubiquitous tools like a cell phone? Are
 the students able to publish their citizen science news reports to
 suitable news venues?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 120.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular and extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Project-based learning
 
-Curricular and extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Project-based learning
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Workshops of seminar snips to teach teachers about project-based
-learning on climate topics
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Workshops of seminar snips to teach teachers about
+project-based learning on climate topics
 
 ## 120.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Descriptive survey
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Descriptive
 
-</td>
-<td style="text-align:left;">
+**Results**: NA
 
-Descriptive survey
+**Improved?**: “An increase in content knowledge of climate change was
+evidenced from the various student and teacher presentations in the
+webinars and online virtual conference.” “A survey of the dialogue and
+graphic representations provided by the students and teachers, offer a
+glimpse of the increased knowledge of global climate change and the
+impact on local ecosystems.”
 
-</td>
-</tr>
-</tbody>
-</table>
+## 120.6 Outcomes
+
+**knowledge**: Yes (*Worked?*: Yes )
+
+**awareness**: Yes (*Worked?*: Yes )
+
+## 120.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Project-based learning on climate change taught to
+teachers can demultiplicate the climate change education. Higher
+ordering skills are promoted through technological tools used for
+student’s research . Teacher and student’s knowledge are likely
+increased
 
 # 121 Sutela2023 ( JGOP )
+
+**title** Shapes of water—A multidisciplinary composing project
+visioning an eco-socially oriented approach to music education
 
 ## 121.1 abstract
 
@@ -28391,15 +23119,7 @@ Urban
 
 ## 121.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The aim of this composing project was to provide educators and teachers
 with concrete tools (in the form of songs) to address thoughts and
@@ -28408,137 +23128,61 @@ The aim was also to make visible how participation in making art can
 help music education students to contribute to the protection and care
 of things that are important to them, such as nature.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 How has the composing project raised your awareness of climate change
 and the possibilities of music in making a difference?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 121.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Composing project
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Composing project
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The starting point for the composing project was Shapes of Water, a
-contemporary circus work that took place in early 2022. The work talked
-about the changing states of water in northern surroundings through
-circus, contemporary dance, light and video photography, and projection.
-Shapes of Water described the relationship between human and water
-states through two dancing and mutually supportive bodies, stories, and
-images. The work was created by the circus and dance artist couple
-Katariina and Jared Van Earle, Kat&Jared. After their performance at the
-beginning of this composing project, Kat&Jared held a workshop for both
-groups (major and minor) to inspire students to discuss the feelings and
-ideas their performance evoked. Collaboration with Kat&Jared and Soiva
-Siili enabled ways to expand the effectiveness of contemporary circus
-work and share the artistic processes of professional artists with music
-education students. Students, in turn, composed children’s songs about
-climate change in workshops (40 hr for major students, 20 hr for minor
-students). The workshops included, for example: (a) introduction to and
-execution of the group composing method of Soiva Siili, (b) development
-of awareness in taking inspiration from other art forms and the
-environment, and (c) independent composing work in small groups (four to
-six students). After 3 months’ work, the results of the composing
-project were performed in two concerts at the University of Oulu. The
-concerts were named after one new song: “Holding on to Tomorrow With
-Both Hands.” The original idea was to target the concerts to 11- to
-12-year-old 6 children, but other age groups and other university
-students and staff were also invited. The concerts lasted for 1 hr and
-included 10 songs relating to climate change (five by major students,
-five by minor students). Kat&Jared choreographed three songs and also
-performed in the concerts. Accordingly, Soiva Siili and Professor
-Pursiainen had their own roles in the concerts. Most of the songs2 and
-their sheet music were sent to the schools that participated in the
-concerts so that the teachers could use the songs in their teaching. In
-addition, the students had an opportunity to record their songs in a
-studio if they wanted.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The starting point for the composing project was Shapes
+of Water, a contemporary circus work that took place in early 2022. The
+work talked about the changing states of water in northern surroundings
+through circus, contemporary dance, light and video photography, and
+projection. Shapes of Water described the relationship between human and
+water states through two dancing and mutually supportive bodies,
+stories, and images. The work was created by the circus and dance artist
+couple Katariina and Jared Van Earle, Kat&Jared. After their performance
+at the beginning of this composing project, Kat&Jared held a workshop
+for both groups (major and minor) to inspire students to discuss the
+feelings and ideas their performance evoked. Collaboration with
+Kat&Jared and Soiva Siili enabled ways to expand the effectiveness of
+contemporary circus work and share the artistic processes of
+professional artists with music education students. Students, in turn,
+composed children’s songs about climate change in workshops (40 hr for
+major students, 20 hr for minor students). The workshops included, for
+example: (a) introduction to and execution of the group composing method
+of Soiva Siili, (b) development of awareness in taking inspiration from
+other art forms and the environment, and (c) independent composing work
+in small groups (four to six students). After 3 months’ work, the
+results of the composing project were performed in two concerts at the
+University of Oulu. The concerts were named after one new song: “Holding
+on to Tomorrow With Both Hands.” The original idea was to target the
+concerts to 11- to 12-year-old 6 children, but other age groups and
+other university students and staff were also invited. The concerts
+lasted for 1 hr and included 10 songs relating to climate change (five
+by major students, five by minor students). Kat&Jared choreographed
+three songs and also performed in the concerts. Accordingly, Soiva Siili
+and Professor Pursiainen had their own roles in the concerts. Most of
+the songs2 and their sheet music were sent to the schools that
+participated in the concerts so that the teachers could use the songs in
+their teaching. In addition, the students had an opportunity to record
+their songs in a studio if they wanted.
 
 ## 121.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Questionnaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Thematic content analysis
 
-</td>
-<td style="text-align:left;">
-
-Questionnaire
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Art as a game changer was notable. All the students were aware of
-climate change, but the composing project strengthened their
+**Results**: Art as a game changer was notable. All the students were
+aware of climate change, but the composing project strengthened their
 understanding about the power of music in making a difference in daily
 educational practices. Composing itself was seen as a good way to
 educate children for a more sustainable way of living. The students also
@@ -28551,12 +23195,32 @@ emotional and even frightening themes. In many answers, awareness of
 climate change seemed to turn students’ gaze to the future and to the
 solutions that could promote a more sustainable lifestyle in school.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Rise awareness of climate change throw the composing
+project.
+
+## 121.6 Outcomes
+
+**awareness**: Rise awareness of climate change using music as a way of
+expression and disemination. (*Worked?*: Yes )
+
+## 121.7 Conclusions
+
+**Conclusions**: the composing project helped participating students to
+understand that instead of simply pointing out the problems of the
+current situations (or even dystopic views of the future), new
+perspectives and bold solutions in music education are needed, and, most
+importantly, they are possible.
+
+**Message to keep:**: This article focuses on the advantages of using
+music as a way to rise awareness of climate change, specifically, when
+it refers to give to music teachers tools to create activities in
+different educational contexts that could adress thoughts and feelings
+related to climate change.
 
 # 122 Svihla2012 ( SB )
+
+**title** A Design-based Approach to Fostering Understanding of Global
+Climate Change
 
 ## 122.1 abstract
 
@@ -28656,15 +23320,11 @@ age_max
 
 ## 122.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Questions
+NA
 
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 . make the content accessible (e.g., build on student ideas, connect to
 personally rel- evant experiences, focus attention on salient
@@ -28677,106 +23337,62 @@ collected by students); and . promote autonomous lifelong learning
 (Figure 1), include predictions and explanations, encourage reflection
 on alternatives, support problem finding)
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 122.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons and cooperative work in pairs of students
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons and cooperative work in pairs of students
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Web inquiry-based intervention in which pairs of students took turns
-resolving a number of task that required them to test theories on the
-mechanisms and consequences of CC. Activities deal with Radiation and
-Energy transformation, Radiation reflection, Earth’s Athmosphere,
-Natural greenhouse effect and the Human contribution to it.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Web inquiry-based intervention in which pairs of
+students took turns resolving a number of task that required them to
+test theories on the mechanisms and consequences of CC. Activities deal
+with Radiation and Energy transformation, Radiation reflection, Earth’s
+Athmosphere, Natural greenhouse effect and the Human contribution to it.
 
 ## 122.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Mainly quantitative (surveys and integrated knowledge scores
+taken from the MySystem and Energy Story assessments) complemented by
+in-depth interviews of students and professors.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: pre-post quantitative comparisons and coding of interviews
+with professor’s and students.
 
-</td>
-<td style="text-align:left;">
+**Results**: All assessments (multiple choice questions, Energy Story
+and MySystem assessments) showed significant and small to medium effect
+sizes differences between pre- and post-intervention phases.
 
-Mainly quantitative (surveys and integrated knowledge scores taken from
-the MySystem and Energy Story assessments) complemented by in-depth
-interviews of students and professors.
+**Improved?**: Complexity and coherence of CC knowledge significantly
+improved in the post-intervention phase compared to pre-intervention.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 122.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Several ways to assess integrated knowledge of CC filed
+out in dyads. -multiple choice and explanation questions about
+greenhouse effect and its consequences. - Energy Story: a narrative
+reflecting student’s understanding of energy creation, transformation
+and use. - MySystem: a computer interface allowing creation of diagrams
+reflecting how energy enters and exits and object and how it is
+consumed. All knowledge assessments were used identically in the pre-
+and post-intervention stages. All assessments aimed at Knowledge
+Integration, meaning that knowledge about CC is not only known but also
+allows students to better understand the wider impacts and causes of CC
+and its consequences. (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 122.7 Conclusions
 
-All assessments (multiple choice questions, Energy Story and MySystem
-assessments) showed significant and small to medium effect sizes
-differences between pre- and post-intervention phases.
+**Conclusions**: Proposed intervention appears to allow for a much more
+integrated understanding of CC, its causes and consequences. Study
+describes two iterations of the intervention.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 123 Taber2009 ( ABP )
+
+**title** Climate of Concern - A Search for Effective Strategies for
+Teaching Children about Global Warming
 
 ## 123.1 abstract
 
@@ -28871,30 +23487,14 @@ urban
 
 ## 123.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This study was undertaken to explore the prior knowledge and
 understanding that final year primary students had about the issue of
 global warming and whether a teaching intervention specifically
 addressing that issue could improve this.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  What alternatives or misconceptions do primary students have about
     global warming prior to intervention?
@@ -28902,110 +23502,66 @@ Questions
     learning and critical theory improve primary students’ understanding
     of global warming?
 3)  Will such an approach provide insight into students’ attitudes in
-    regards to global warming? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    regards to global warming?
 
 ## 123.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: true/false knowledge based survey instrument and semi
+structured interviews
 
-extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-true/false knowledge based survey instrument and semi structured
-interviews
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Phase 1 involved a pre-test, a teaching intervention and a post-test.
-True/false knowledge based survey instrument was developed and
-administration to final year primary school students. The second phase
-of the study involved interviewing a number of the participants from
-phase 1 using semi structured interviews
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Phase 1 involved a pre-test, a teaching intervention
+and a post-test. True/false knowledge based survey instrument was
+developed and administration to final year primary school students. The
+second phase of the study involved interviewing a number of the
+participants from phase 1 using semi structured interviews
 
 ## 123.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: The data from the pre and post administration of the survey
+were entered into a spreadsheet and graphs were produced showing the
+frequency of correct responses pre and post intervention. SPSS was used
+to test for statistical significance between pre and post responses and
+EXCEL to test for effect size. The two ‘attitude’ questions at the end
+of the survey were compared in a similar fashion.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: the quantitative results form the pre and post-test
+comparison did not show a dramatic improvement in knowledge, they were
+pleasing given the short period over which the teaching intervention
+took place and the level of complexity of some of the concepts
+associated with global warming
 
-The data from the pre and post administration of the survey were entered
-into a spreadsheet and graphs were produced showing the frequency of
-correct responses pre and post intervention. SPSS was used to test for
-statistical significance between pre and post responses and EXCEL to
-test for effect size. The two ‘attitude’ questions at the end of the
-survey were compared in a similar fashion.
+**Improved?**: understanging improved
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 123.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: yes (*Worked?*: no )
 
-</td>
-<td style="text-align:left;">
+## 123.7 Conclusions
 
-the quantitative results form the pre and post-test comparison did not
-show a dramatic improvement in knowledge, they were pleasing given the
-short period over which the teaching intervention took place and the
-level of complexity of some of the concepts associated with global
-warming
+**Conclusions**: Although the quantitative results form the pre and
+post-test comparison did not show a dramatic improvement in knowledge,
+they were pleasing given the short period over which the teaching
+intervention took place and the level of complexity of some of the
+concepts associated with global warming. This suggests that there is a
+place for teaching this subject explicitly towards the end of primary
+schooling.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Interesting to note that there was an overall
+increase in students’ belief about their ability to make a positive
+impact in relation to global warming and climate change
 
 # 124 Tasquier2015 ( MB )
+
+**title** How does epistemological knowledge on modelling influence
+students’ engagement in the issue of climate change?
 
 ## 124.1 abstract
 
@@ -29110,146 +23666,94 @@ age_max
 
 ## 124.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Questions
+NA
 
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 - Did the improvement of epistemological knowledge influence students’
   behavioural and social attitudes and their personal involvement in
   climate change issue?
-- If so, how? `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+- If so, how?
 
 ## 124.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Classes, modelling, physics laboratory
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Classes, modelling, physics laboratory
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The teaching experience consisted of an after-school laboratory course
-held in a science-oriented Italian secondary school. The teaching
-materials designed and implemented in the course aimed to foster (i)
-Deep understanding of the basic concepts involved in global warming and
-climate change (disciplinary dimension), (ii) Critical thinking about
-the Man-Nature-Society relationship in order to acquaint students with
-past or current political and economic debates (societal dimension),
-(iii)Appropriation of a refined epistemological discourse where: i)
-controversies and scientific debates find legitimacy; and ii) modelling
-in climate change is discussed and progressively framed within the
-epistemological perspective of complexity (epistemological dimension) 5
-lab courses: 1. Introduction to climate change: scientific research and
-new terms of the scientific controversy (general climate science) 2.
-Experiments on examples of interaction between radiation and matter
-(physics) 3. Experiments for the construction of a Greenhouse Model
-(physics) 4. The epistemological perspective of complexity: Introduction
-to the basic concepts for investigating complex systems (mathematics and
-physics) 5. Political and Economic scenarios: overview of climate
-treaties and proposals to cut emissions (political, economic and
-sociological science)
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The teaching experience consisted of an after-school
+laboratory course held in a science-oriented Italian secondary school.
+The teaching materials designed and implemented in the course aimed to
+foster (i) Deep understanding of the basic concepts involved in global
+warming and climate change (disciplinary dimension), (ii) Critical
+thinking about the Man-Nature-Society relationship in order to acquaint
+students with past or current political and economic debates (societal
+dimension), (iii)Appropriation of a refined epistemological discourse
+where: i) controversies and scientific debates find legitimacy; and ii)
+modelling in climate change is discussed and progressively framed within
+the epistemological perspective of complexity (epistemological
+dimension) 5 lab courses: 1. Introduction to climate change: scientific
+research and new terms of the scientific controversy (general climate
+science) 2. Experiments on examples of interaction between radiation and
+matter (physics) 3. Experiments for the construction of a Greenhouse
+Model (physics) 4. The epistemological perspective of complexity:
+Introduction to the basic concepts for investigating complex systems
+(mathematics and physics) 5. Political and Economic scenarios: overview
+of climate treaties and proposals to cut emissions (political, economic
+and sociological science)
 
 ## 124.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: During the implementation many different data were collected
+to trace students’ development along each of the three dimensions
+(disciplinary, societal, epistomological) $$studied more precisely in
+other papers$$. $$Here$$ we focused on the five interviews collected at
+the end of the teaching experience. The five students were chosen in
+order to represent different attitudes toward the activities. Student 6
+(S6) represents a “shy” person in the class, he actively took part in
+the lab activities but he was not pro-active in the collective
+discussions; student 13 (S13) represents the “excellent” student of the
+class, he was much appreciated by the teacher and recognized by the
+classmates as a leader; student 16 (S16) represents the “sceptic”
+attitude toward climate change, he was not interested in the issue and
+demonstrated mistrust toward the activities; student 25 (S25) represents
+the “outsider” of the class, he was not particularly interested in the
+activities in general and also in the climate change issue; finally,
+student 26 (S26) represents the “thoughtful” attitude toward knowledge,
+he was very heedful but silent throughout the whole process.
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: $$More precise in previous papers$$ a fine-grained
+analysis allowed us to identify some markers to make visible if and how
+students enriched and refined their epistemological knowledge (Tasquier
+et al., 2015). The markers concern: i) the use of the vocabulary,
+i.e. the number and quality of epistemological words used by the
+students in writing and talking about physical phenomena and their
+modelling; ii) the patterns of argumentation used by students in talking
+about the Model-Experiment-Reality relationship. $$Specific to this
+study$$ Very descriptive analysis of the interviews. $$There is no clear
+theoretical framework for the qualitative analysis, nor a very precise
+description of the method$$ 1. we took into account the temporal map of
+the single student in order to identify for each of them a specific
+pattern of interaction between the students and the interviewer; 2) we
+identified the main message expressed by the student about his personal
+experience in the course; 3) we identified words or expressions that
+each student repeated several times during the interview to express and
+articulate their main message.
 
-</td>
-<td style="text-align:left;">
-
-During the implementation many different data were collected to trace
-students’ development along each of the three dimensions (disciplinary,
-societal, epistomological) $$studied more precisely in other papers$$.
-$$Here$$ we focused on the five interviews collected at the end of the
-teaching experience. The five students were chosen in order to represent
-different attitudes toward the activities. Student 6 (S6) represents a
-“shy” person in the class, he actively took part in the lab activities
-but he was not pro-active in the collective discussions; student 13
-(S13) represents the “excellent” student of the class, he was much
-appreciated by the teacher and recognized by the classmates as a leader;
-student 16 (S16) represents the “sceptic” attitude toward climate
-change, he was not interested in the issue and demonstrated mistrust
-toward the activities; student 25 (S25) represents the “outsider” of the
-class, he was not particularly interested in the activities in general
-and also in the climate change issue; finally, student 26 (S26)
-represents the “thoughtful” attitude toward knowledge, he was very
-heedful but silent throughout the whole process.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Results pre-post (epistomological levels, disciplinary achievement, and
-behavioral level $$intent$$): except student S6 ("the Shy") all 5
-students accomplished a medium to high disciplinary achievement,
-improved both their epistomological levels and behavioral level
-$$intent$$). (results of each of the 5 students are analysed very
+**Results**: Results pre-post (epistomological levels, disciplinary
+achievement, and behavioral level $$intent$$): except student S6 (“the
+Shy”) all 5 students accomplished a medium to high disciplinary
+achievement, improved both their epistomological levels and behavioral
+level $$intent$$). (results of each of the 5 students are analysed very
 precisely, but it would take too much space to report here) Results from
 the interviews (results of each of the 5 students are analysed very
 precisely, but it would take too much space to report here): 2 groups of
-students: 1. S25 ("the outsider") , S16 ("the sceptic") and S26 ("the
-thoughtful"), both S25, and S26 accomplished a medium achievement level,
+students: 1. S25 (“the outsider”) , S16 (“the sceptic”) and S26 (“the
+thoughtful”), both S25, and S26 accomplished a medium achievement level,
 corresponding to a good epistomological improvement, but a low
 behavioral $$intent$$ improvement. S16 accomplished a high achievement
 level, coming from low levels on both epistomological level and behavior
@@ -29265,7 +23769,7 @@ create, for some students, a virtuous dynamic state among them.
 $$These$$ three cases concern students who had an initial distrust or
 resistance toward climate change issues and found personal new reasons
 for engagement in the epistemological perspective of complexity. 2. S13
-("the excellent") and S6 ("the shy"). They were quite embarassed during
+(“the excellent”) and S6 (“the shy”). They were quite embarassed during
 the interviews and did not enjoy so much, nor improved so much in
 relation to the epistomological new way to present science.The other two
 students acted as contrastive cases and allowed us to see some boundary
@@ -29276,12 +23780,51 @@ importance of feeling free from the teacher’s expectations before being
 able to explore and find one’s own position with respect to such complex
 issues.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: There were an improvement in both behavioral $$intent$$
+and epistomological knowledge. Moreover for 3 of the 5 students, the
+idea of epistomological complexity allowed us to lower skepticism, lack
+of interest, and distrust toward the topic of climate change.
+
+## 124.6 Outcomes
+
+**knowledge**: - Epistomological levels (e.g. understanding of
+complexity in the physical models) of the answers in the prepost test
+(*Worked?*: Yes )
+
+**awareness**: - decrease in the boredom, disinterest and distrust
+toward the topic of climate change (*Worked?*: Yes )
+
+**intention**: - the “behavioral level” corresponds to the willingness
+to take action and change one’s lifestyle in order to prevent climate
+change, together with a detailed explanation consistent with the content
+of the course (*Worked?*: Yes )
+
+## 124.7 Conclusions
+
+**Conclusions**: There were an improvement in both behavioral $$intent$$
+and epistomological knowledge. Moreover for 3 of the 5 students, the
+idea of epistomological complexity allowed us to lower skepticism, lack
+of interest, and distrust toward the topic of climate change. “Specific
+epistemological know-how can positively impact not only productive
+disciplinary engagement, but also a more personal and authentic
+involvement in climate change.”
+
+**Message to keep:**: The main idea of this paper is very interesting:
+showing how epistomological knowledge (en particular the idea of
+complexity in the physical modelling of climate change) can foster
+engagement $$awareness, intent$$ toward climate change mitigation. And
+it seems to work on 3 of the 5 students analysed here! $$My own
+reflection; Maybe changing the discourse toward this kind of knowledge
+on the roots of methodological controversies in science is more
+efficient than the real classical knowledge of climate change?$$ Note
+that it is difficult to use this paper alone because it is part of a
+series of papers describing different aspects of the same pedagogical
+experience
 
 # 125 Tasquier2017 ( LR )
+
+**title** The influence of causal knowledge on the willingness to change
+attitude towards climate change: results from an empirical study
 
 ## 125.1 abstract
 
@@ -29317,32 +23860,46 @@ the effect of the teaching experience on knowledge and behaviour.
 
 ## 125.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Objective**:
+
+NA
+
+**Questions**:
+
+NA
 
 ## 125.4 Intervention
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Curricular/Extra**: NA
+
+**Indoor/Outdoor**: NA
+
+**Type**: NA
+
+**Description**: NA
 
 ## 125.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: NA
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 125.6 Outcomes
+
+## 125.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 126 Tasti2021 ( MB )
+
+**title** Promoting Climate-friendly Actions of High School Students: A
+Case from Turkey
 
 ## 126.1 abstract
 
@@ -29462,133 +24019,96 @@ Urban
 
 ## 126.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Objective**:
 
-Objectives
-
-</td>
-<td style="text-align:left;">
-
-"This study intends to evaluate the impacts of student-initiated
+“This study intends to evaluate the impacts of student-initiated
 extracurricular activities in encouraging high school students’ action
-competence regarding CC."
+competence regarding CC.”
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Questions**:
 
-Questions
-
-</td>
-<td style="text-align:left;">
-
-"What is the role of extracurricular activities in promoting high school
-students’ climate-friendly actions?"
-
-</td>
-</tr>
-</tbody>
-</table>
+“What is the role of extracurricular activities in promoting high school
+students’ climate-friendly actions?”
 
 ## 126.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Student club, with various activities
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Student club, with various activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Activities from the Green club: - knowledge: attending interactive
-seminars, watching documentary videos, attending site visits, critical
-observation of the local environment - communication: poster preparation
-for school walls, article writing for public appeal - action: carbon
-footprint calculation, developing an action plan to reduce the carbone
-footprint of the school, adopting the action plan
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Activities from the Green club: - knowledge: attending
+interactive seminars, watching documentary videos, attending site
+visits, critical observation of the local environment - communication:
+poster preparation for school walls, article writing for public appeal -
+action: carbon footprint calculation, developing an action plan to
+reduce the carbone footprint of the school, adopting the action plan
 
 ## 126.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Interviews (main data collection instrument): individual and
+face-to-face pre, reflective, and final interviews. (notes: 8 open ended
+questions, reflective interview are conducted after each club session) -
+observation form from the researchers and teachers - analysis of student
+works (articles, posters etc)
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Qualitative content analysis
 
-</td>
-<td style="text-align:left;">
+**Results**: All the result are analysed quantitatively, therefore,
+expliciting here would be too long, however: - Knowledge improved
+through various activities where the students asked specific questions
+to the intervenants - Awareness improved, particularly on local CC
+issues concerning the school, and toward all the school community -
+Students took action and lowered the carbon footprint of the school -
+the transport habits of the school community, however the authors note
+that this was a very small improvement in the case of transport habits
+of the teachers
 
-- Interviews (main data collection instrument): individual and
-  face-to-face pre, reflective, and final interviews. (notes: 8 open
-  ended questions, reflective interview are conducted after each club
-  session)
-- observation form from the researchers and teachers
-- analysis of student works (articles, posters etc) `{=html}     </td>`
-  `{=html}     </tr>` `{=html}     <tr>`
-  `{=html}     <td style="text-align:left;">`
-  Resultados.obtenidos.por.cada.outcome `{=html}     </td>`
-  `{=html}     <td style="text-align:left;">` All the result are
-  analysed quantitatively, therefore, expliciting here would be too
-  long, however:
-- Knowledge improved through various activities where the students asked
-  specific questions to the intervenants
-- Awareness improved, particularly on local CC issues concerning the
-  school, and toward all the school community
-- Students took action and lowered the carbon footprint of the school
-- the transport habits of the school community, however the authors note
-  that this was a very small improvement in the case of transport habits
-  of the teachers `{=html}     </td>` `{=html}     </tr>`
-  `{=html}     </tbody>` `{=html}     </table>`
+**Improved?**: Knowledge improved through various activities where the
+students asked specific questions to the intervenants - Awareness
+improved, particularly on local CC issues concerning the school, and
+toward all the school community - Students took action and lowered the
+carbon footprint of the school - the transport habits of the school
+community, however the authors note that this was a very small
+improvement in the case of transport habits of the teachers
+
+## 126.6 Outcomes
+
+**knowledge**: - Understanding of carbon footprint - developping
+knowledge by asking question to intervenants concerning the activities
+(*Worked?*: Yes )
+
+**awareness**: consciousness about the school carbon footprint and local
+CC issues: - about the students themselves - toward the school
+community - toward the transport habit of the teachers and the students
+(*Worked?*: Yes )
+
+**action**: - communication (posters on school walls and articles) -
+designing and adopting a plan to reduce carbon footprint of the school
+(*Worked?*: Yes )
+
+**habit**: - personal habits of students and teachers (transport) -
+reducing carbon footprint of the school through various habits
+(*Worked?*: Yes )
+
+## 126.7 Conclusions
+
+**Conclusions**: “$$The authors show the positive$$ role of
+extracurricular activities in promoting high school students’
+climate-friendly actions”. “After active involvement in extracurricular
+activities, students were able to develop and adopt an action plan to
+reduce their school’s carbon footprint.”
+
+**Message to keep:**: The authors present here a real strategy to fill
+the knowledge-action gap, with extracurricular activities in a student
+club. What is particularly notable is that the activities of the
+students allowed to design and adopt a carbon footprint reduction plan
+for the school which had a measurable effect
 
 # 127 Taylor2020 ( BQ )
+
+**title** Tackling climate-science learning through futures thinking
 
 ## 127.1 abstract
 
@@ -29685,29 +24205,13 @@ Urban
 
 ## 127.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To examine the role of a future-oriented scenario with secondary school
 students using diorama construction which included climate-change
 knowledge and envisioning alternative futures.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  What existing ideas, experiences, and visions do students have about
     climate change?
@@ -29715,88 +24219,56 @@ Questions
     engage in future-oriented model construction?
 3.  How does future-oriented model construction, where students and
     teachers can communicate using climate- science ideas, impact on a
-    cross-curricular inquiry? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    cross-curricular inquiry?
 
 ## 127.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Future-oriented project
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Future-oriented project
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-A scenario was established where students used a technological design
-process to construct a diorama which modelled their visions of a future
-community set in the year 2100. The students studied climate science,
-alternative futures, the local history of their community, and practical
-model making, as integrated topics during the inquiry.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: A scenario was established where students used a
+technological design process to construct a diorama which modelled their
+visions of a future community set in the year 2100. The students studied
+climate science, alternative futures, the local history of their
+community, and practical model making, as integrated topics during the
+inquiry.
 
 ## 127.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Document content analysis and interviews
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: analysis of the planning documents undertaken during
+teacher’s workshop and semistructured interviews took place with the
+teachers and the students,
 
-</td>
-<td style="text-align:left;">
+**Results**: NA
 
-Document content analysis and interviews
+**Improved?**: students developed their understanding/knowledge of
+climate change
 
-</td>
-</tr>
-</tbody>
-</table>
+## 127.6 Outcomes
+
+**knowledge**: Yes (*Worked?*: Yes )
+
+**awareness**: Yes (*Worked?*: Yes )
+
+## 127.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: futures- thinking cross-curricular inquiry,
+particular through diorama, enhanced the understanding and relevance of
+climate change for students. Teachers considered the inquiry to have
+been effective in supporting aspects of science, social studies,
+technology, and health curricula.
 
 # 128 Trott2019 ( JGOP )
+
+**title** Reshaping our world: Collaborating with children for
+community-based climate change action
 
 ## 128.1 abstract
 
@@ -29923,15 +24395,7 @@ Urban
 
 ## 128.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 This study documents an after-school program designed for 10- to
 12-year-olds that combined transformative educational techniques with
@@ -29939,72 +24403,31 @@ arts-based and participatory methodologies to simultaneously explore and
 expand children’s role as agents of sustainable change within their
 families and communities through youthled projects.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 128.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Action research project
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Action research project
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The first four activities (i.e., introducing ecosystems, climate
-vs. weather, and and collaborative action) were action-focused.
-Activities were freely available online and compiled for their alignment
-with program format (e.g., target age, length) and goals (e.g.,
-children’s enjoyment, action). Weather-permitting, several activities
-took place outdoors, and some activities mirrored common children’s
-games (e.g., energy bingo; greenhouse gas tag)climate change). In SCA,
-photovoice methodology served to bridge educational program content with
-youth-led action through art (Q. Wang et al., 2017). Specifically,
-children were given digital cameras to capture and express their
-personal connections with program topics. During monthly photovoice
-discussions, participants, in small groups, told stories of their
-photographs’ content and meaning. Following photovoice sessions,
+**Description**: The first four activities (i.e., introducing
+ecosystems, climate vs. weather, and and collaborative action) were
+action-focused. Activities were freely available online and compiled for
+their alignment with program format (e.g., target age, length) and goals
+(e.g., children’s enjoyment, action). Weather-permitting, several
+activities took place outdoors, and some activities mirrored common
+children’s games (e.g., energy bingo; greenhouse gas tag)climate
+change). In SCA, photovoice methodology served to bridge educational
+program content with youth-led action through art (Q. Wang et al.,
+2017). Specifically, children were given digital cameras to capture and
+express their personal connections with program topics. During monthly
+photovoice discussions, participants, in small groups, told stories of
+their photographs’ content and meaning. Following photovoice sessions,
 children translated their collective commitments and visions into action
 plans. SCA’s action component included: (1) the development of “family
 action plans” to promote small-scale, everyday sustainable behaviors
@@ -30013,57 +24436,62 @@ implementation of “community action projects,” through which children
 were supported in realizing their visions for a collaborative project to
 advance sustainability in the wider community.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 128.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Focus group discussions
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Focus group discussions followed a semistructuredformat,
+and were audio-recorded, transcribed verbatim, and editedprior to
+analysis using NVivo 10 software. Thematic analysis was used to
+classify,organize, and describe children’s responses according to their
+shared thematicproperties (Braun & Clarke, 2006).
 
-</td>
-<td style="text-align:left;">
-
-Focus group discussions
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Throughout SCA, children’s sustained sense of enthusiasm for the program
-seemed to coexist alongside their growing climate change awareness and
-motivation for action. A key contributor to children’s enjoyment of the
-SCA program — and which undergirds its transformative, arts-based, and
-participatory dimensions — was the interactive (i.e., hands-on,
-experiential, action-oriented) nature of program activities. Children
-enjoyed playing an active role throughout the program, rather than being
-passive recipients of knowledge or mere “implementers” of pre-determined
-forms of action. In this study, learning about climate change
-strengthened children’s motivation for action, and their participation
-in youth-led action projects empowered their sense of agency (see Figure
-2). In this sense, a second critical dimension of children’s
-constructive climate change engagement was agentic action. In
+**Results**: Throughout SCA, children’s sustained sense of enthusiasm
+for the program seemed to coexist alongside their growing climate change
+awareness and motivation for action. A key contributor to children’s
+enjoyment of the SCA program — and which undergirds its transformative,
+arts-based, and participatory dimensions — was the interactive (i.e.,
+hands-on, experiential, action-oriented) nature of program activities.
+Children enjoyed playing an active role throughout the program, rather
+than being passive recipients of knowledge or mere “implementers” of
+pre-determined forms of action. In this study, learning about climate
+change strengthened children’s motivation for action, and their
+participation in youth-led action projects empowered their sense of
+agency (see Figure 2). In this sense, a second critical dimension of
+children’s constructive climate change engagement was agentic action. In
 particular, children’s sense of agency was supported by the “adult-like”
 responsibilities undertaken during their collaborative action projects.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Increase children’s engament on the climate change matter
+throw the awareness and taking action
+
+## 128.6 Outcomes
+
+**awareness**: Rise awareness of climate change (*Worked?*: Yes )
+
+**emotions**: Engagement and enjoyment of activities (*Worked?*: Yes )
+
+**action**: Raising awareness about climate change and inspiring action
+(*Worked?*: NA )
+
+## 128.7 Conclusions
+
+**Conclusions**: Following the program, children had acquired new
+knowledge about climate change and its local impacts, which gave them a
+sense of ownership of the problem and its solutions. Most significantly,
+the children in this study genuinely enjoyed themselves and developed
+stronger beliefs in their agentic capabilities, while taking tangible
+steps towards the sustainable transformation of their communities.
+
+**Message to keep:**: This study focus on the importance of introduce
+action reserch programs in wich students (children) can learn of climate
+change and enjoying activities, but most important, tranlaste this
+learning into action with their community and family.
 
 # 129 Trott2020 ( ABP )
+
+**title** Merging the arts and sciences for collaborative sustainability
+action: a methodological framework
 
 ## 129.1 abstract
 
@@ -30112,32 +24540,46 @@ pedagogical and research practices in building a sustainable future.
 
 ## 129.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Objective**:
+
+NA
+
+**Questions**:
+
+NA
 
 ## 129.4 Intervention
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Curricular/Extra**: NA
+
+**Indoor/Outdoor**: NA
+
+**Type**: NA
+
+**Description**: NA
 
 ## 129.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: NA
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 129.6 Outcomes
+
+## 129.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 130 Trott2020a ( MB )
+
+**title** Children’s constructive climate change engagement: Empowering
+awareness, agency, and action
 
 ## 130.1 abstract
 
@@ -30251,150 +24693,94 @@ Both
 
 ## 130.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Developing and evaluating methods that cultivate children’s constructive
 engagement
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 What were children’s perceptions of climate change before and after the
 program? How did the program impact children’s climate change knowledge?
 How did children experience their growing climate change awareness?
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 130.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Hands-on activities, digital photography, community projects
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Hands-on activities, digital photography, community projects
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-15 week after school programme - Science (6 weeks): 1h eductional
-hands-on activities compiled from climate change educational resources
-online - Camera : photovoice (photo-printing and discussion) process
-(once every month during 3 months, interlaced with science activities) -
-individual action (weeks 8-13) Family action plans (carbon footprint and
-planning sustainable habits in the household) - collaborative youth led
-action (weeks 11-15) depending on the 3 sites: city council presentation
-and tree planting, photovoice gallery exposition and program website, or
-community garden
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: 15 week after school programme - Science (6 weeks): 1h
+eductional hands-on activities compiled from climate change educational
+resources online - Camera : photovoice (photo-printing and discussion)
+process (once every month during 3 months, interlaced with science
+activities) - individual action (weeks 8-13) Family action plans (carbon
+footprint and planning sustainable habits in the household) -
+collaborative youth led action (weeks 11-15) depending on the 3 sites:
+city council presentation and tree planting, photovoice gallery
+exposition and program website, or community garden
 
 ## 130.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: before and after the programme surveys 2 additional post
+programme open ended questions 11 focus group with 4-5 children, 38min
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Quantitative: Dependent sample t-tests on questionnaire
+Cohen’s d effect size - Qualitative: Transcription of focus groups and
+open ended survey items were analysed according to thematic analysis
+(Braun and Clarke 2006)
 
-</td>
-<td style="text-align:left;">
+**Results**: Children perception $$AWARENESS$$ of climated change: - 16
+participants (29.6%) became more certain that climate change is
+happening now, and 4 participants (7.4%) became less certain. However,
+most participants (n 1⁄4 34; 63%) did not change their response over
+time. - After the program, fewer than 1 in 5 children (18.2%) thought
+about climate change ‘Not at all’ or ‘Not a lot,’ compared to 52.7% in
+the presurvey. Of 55 participants, 31 (56.4%) reported thinking more
+about climate change after the program than before, 11 (20%) less, and
+13 (23.6%) the same amount. - Children’s certainty and time spent
+thinking about climate change both showed statistically significant mean
+increases following SCA Chidren climate change knowledge: - This
+paired-samples t test showed a statistically significant mean increase
+in children’s climate change knowledge following their program
+participation - 68% of SCA children responded correctly to climate
+change knowledge questions, compared to 56 and 59% of U.S. teens and
+adults, respectively - quali: Compared to school, SCA was perceived to
+cover the causes and consequences of climate change in greater depth.
 
-before and after the programme surveys 2 additional post programme open
-ended questions 11 focus group with 4-5 children, 38min
+**Improved?**: Awareness improved in aspects of certainty and thoughts
+about climate change Knowledge improved
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 130.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Correctness of questions concerning CC in questionnaire
+(*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Certainty, thought and beliefs about CC as an
+environmental and social issue (*Worked?*: Yes )
 
-Children perception $$AWARENESS$$ of climated change: - 16 participants
-(29.6%) became more certain that climate change is happening now, and 4
-participants (7.4%) became less certain. However, most participants (n
-1⁄4 34; 63%) did not change their response over time. - After the
-program, fewer than 1 in 5 children (18.2%) thought about climate change
-‘Not at all’ or ‘Not a lot,’ compared to 52.7% in the presurvey. Of 55
-participants, 31 (56.4%) reported thinking more about climate change
-after the program than before, 11 (20%) less, and 13 (23.6%) the same
-amount. - Children’s certainty and time spent thinking about climate
-change both showed statistically significant mean increases following
-SCA Chidren climate change knowledge: - This paired-samples t test
-showed a statistically significant mean increase in children’s climate
-change knowledge following their program participation - 68% of SCA
-children responded correctly to climate change knowledge questions,
-compared to 56 and 59% of U.S. teens and adults, respectively - quali:
-Compared to school, SCA was perceived to cover the causes and
-consequences of climate change in greater depth.
+## 130.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Children’s average climate change awareness $$contains
+knowledge$$ post-program had expanded beyond their own pre-program
+knowledge, beyond the average U.S. teen or adult, and in some cases
+beyond the boundaries of program content.
+
+**Message to keep:**: In this after-school programme in somewhat low
+income communities, the combination of hands-on educational activities,
+photovoice process, and youth-led action projects allowed to reach a
+level of awareness and knowledge that goes beyond average in teenager
+and adult from USA. 2 details that may be interesting for the
+synthesis - action is a trigger for knowledge and awareness, it should
+not necesarily to be a later step in the awareness to action process -
+knowledge gains beyond the scope of the educational interventions
 
 # 131 Trott2020b ( BQ )
+
+**title** Science Education for Sustainability: Strengthening Children’s
+Science Engagement through Climate Change Learning and Action
 
 ## 131.1 abstract
 
@@ -30535,131 +24921,73 @@ Urban
 
 ## 131.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 examined how children’s climate change learning and action influenced
 their science engagement along cognitive, affective, and behavioral
 dimensions.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1.  How did SCA influence children’s perceptions of science?
 2.  How did children’s attitudes towards science change following SCA?
 3.  How did children describe the influence of SCA on their behavioral
-    engagement with science? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    engagement with science?
 
 ## 131.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Multi-activities: science contents, photograph images
+conveying their views, youth-led actions
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Multi-activities: science contents, photograph images conveying their
-views, youth-led actions
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Impact of the program Science Camera Action ! on children’s science
-engagement, children’s attitudes towards school science, attitudes
-towards the societal implications of science, and attitudes towards
-careers in science
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Impact of the program Science Camera Action ! on
+children’s science engagement, children’s attitudes towards school
+science, attitudes towards the societal implications of science, and
+attitudes towards careers in science
 
 ## 131.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Combined surveys and focus groups
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Combined survey and focus group
 
-</td>
-<td style="text-align:left;">
+**Results**: Children explained that understanding the scientific and
+social dimensions of climate change expanded their views of science.
+Perhaps most notably, the urgency of climate change solutions made
+science more interesting and important to children, and many reported
+greater confidence, participation, and achievement in school science.
 
-Combined surveys and focus groups
+**Improved?**: Children explained that understanding the scientific and
+social dimensions of climate change expanded their views of science.
+Perhaps most notably, the urgency of climate change solutions made
+science more interesting and important to children, and many reported
+greater confidence, participation, and achievement in school science.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 131.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Yes (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Yes (*Worked?*: Yes )
 
-Children explained that understanding the scientific and social
-dimensions of climate change expanded their views of science. Perhaps
-most notably, the urgency of climate change solutions made science more
-interesting and important to children, and many reported greater
-confidence, participation, and achievement in school science.
+**intention**: Yes (*Worked?*: Yes )
 
-</td>
-</tr>
-</tbody>
-</table>
+## 131.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: After a Science Camera Action on climate change
+topics, schoolchildren have enjoyed more science (i.e. more fun). Also,
+“urgency of climate change solutions made science more interesting and
+important to children”. Possibly more schoolchildren want to embrace a
+science career.
 
 # 132 Trott2022 ( JGOP )
+
+**title** Climate change education for transformation: exploring the
+affective and attitudinal dimensions of children’s learning and action
 
 ## 132.1 abstract
 
@@ -30785,15 +25113,7 @@ Urban
 
 ## 132.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The present mixed-methods research draws on survey and focus group data
 to examine affective and attitudinal program impacts, ranging from
@@ -30801,74 +25121,24 @@ children’s perspectives on the interconnectedness of the natural world
 and their place in it to their sense of urgency around climate action
 and whose actions are critical to building a more sustainable future.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  What were children’s climate change-relevant attitudes prior to the
     program, and how did these shift following their program
     participation?; and (2) How did children describe the attitudinal
     and affective dimensions of their program-based perspective shifts?
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
 
 ## 132.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Action research project
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Action research project
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Program activities took place for one hour per week across three
-research sites. Based on the ‘Head, Hands, and Heart’ model of
-Transformative Sustainability Learning (Sipos, Battisti, and Grimm
+**Description**: Program activities took place for one hour per week
+across three research sites. Based on the ‘Head, Hands, and Heart’ model
+of Transformative Sustainability Learning (Sipos, Battisti, and Grimm
 2008), activities consisted of three major program components: (1)
 Science: hands-on CCE activities intended to make visible and concrete
 the often invisible and abstract connections between Earth’s atmosphere,
@@ -30885,44 +25155,33 @@ children at each research site (e.g. tree-planting; city council
 presentation; community garden), focused on awareness-raising and action
 at a neighborhood scale.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 132.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Survey and focus group
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: To address this study’s first research question, a series
+of dependent samples t-tests were conducted to examine children’s
+climate change-relevant attitudes prior to the program as well as
+differences in these attitudes following their SCA participation. Before
+analysis using NVivo 10 qualitative data analysis software, each focus
+group discussion was recorded digitally, transcribed verbatim, and
+anonymized for participant confidentiality. Thematic analysis, a
+multi-step process, was used to analyze focus group data (Braun and
+Clarke 2006). This process consists of data familiarization, initial
+labeling of the data (i.e. ‘open coding’), identifying themes,
+organizing and combining thematic categories, and finally writing
+narrative descriptions of themes that ‘tell the story’ of children’s
+experiences identified through thematic analysis.
 
-</td>
-<td style="text-align:left;">
-
-Survey and focus group
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Overall, children felt greater urgency after the program (M = 4.07, SD =
-0.62), compared to before (M = 3.81, SD = 0.65). During post-program
-focus groups, children were asked how their perspectives on climate
-change shifted as a result of their program participation. Children
-attributed to their SCA participation an increased sense of respect for
-nature, feelings of intensified urgency about the need for climate
-action, and a mixture of positive and negative feelings about climate
-change rooted in their concerns and motivations to address the issue
-through their own actions. Findings of the present study build on
+**Results**: Overall, children felt greater urgency after the program (M
+= 4.07, SD = 0.62), compared to before (M = 3.81, SD = 0.65). During
+post-program focus groups, children were asked how their perspectives on
+climate change shifted as a result of their program participation.
+Children attributed to their SCA participation an increased sense of
+respect for nature, feelings of intensified urgency about the need for
+climate action, and a mixture of positive and negative feelings about
+climate change rooted in their concerns and motivations to address the
+issue through their own actions. Findings of the present study build on
 previous articles in this series to show a range of positive impacts on
 children who, through their program participation, gained awareness,
 shifted their climate-relevant attitudes, and acquired a sense of agency
@@ -30932,12 +25191,40 @@ Weinberg 2020). There was evidence that children’s feelings of concern
 were offset by positive emotions grounded in taking action on climate
 change.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Increase urgency of climate change after the program and
+a mixture of positive and negative emotions related to climate change.
+More positive emotions due to the hands-on project
+
+## 132.6 Outcomes
+
+**emotions**: Emotions are an important aspect of the climate change
+education as is not only a matter of knowledge. (*Worked?*: Yes )
+
+**other**: Change in the attitudes toward the urgency of climate change,
+Environmental responsibility, ecological worldview, connection with
+nature (*Worked?*: Yes )
+
+## 132.7 Conclusions
+
+**Conclusions**: Findings reported in this study make clear the critical
+importance of attitudinal and affective shifts in CCE. Whether or not
+they are measured in every classroom or context, children’s
+psychological and emotional realities are inevitably playing out
+alongside the learning process. As this study showed, children’s views
+of climate change are not always ‘doom and gloom,’ particularly when
+knowledge is paired with opportunities for critical reflection,
+dialogue, and action.
+
+**Message to keep:**: Positive emotions can offset the negative feelings
+of angry, fear, worry or sadness grounded on the use of yoth-lead
+programs that take action on climate change. Also, they can contribute
+to change attitudes toward different topics of climate change.
 
 # 133 Turner2022 ( LR )
+
+**title** Whose voices? Whose knowledge? Children and young people’s
+learning about climate change through local spaces and indigenous
+knowledge systems
 
 ## 133.1 abstract
 
@@ -30972,32 +25259,46 @@ identified as constraints for regular off-campus learning.
 
 ## 133.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Objective**:
+
+NA
+
+**Questions**:
+
+NA
 
 ## 133.4 Intervention
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Curricular/Extra**: NA
+
+**Indoor/Outdoor**: NA
+
+**Type**: NA
+
+**Description**: NA
 
 ## 133.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: NA
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 133.6 Outcomes
+
+## 133.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: NA
 
 # 134 Varma2012 ( ABP )
+
+**title** Using Interactive Technology to Support Students’
+Understanding of the Greenhouse Effect and Global Warming
 
 ## 134.1 abstract
 
@@ -31084,134 +25385,67 @@ Urban
 
 ## 134.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 ‘’How does students’ understanding of the greenhouse effect and global
 warming change after participating in a technology-enhanced learning
 environment featuring virtual experiments with an interactive
 visualization?
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 ‘’How does students’ understanding of the greenhouse effect and global
 warming change after participating in a technology-enhanced learning
 environment featuring virtual experiments with an interactive
 visualization?
-
-</td>
-</tr>
-</tbody>
-</table>
 
 ## 134.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: technology-enhanced curriculum module
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-technology-enhanced curriculum module
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Students participate in the week-long unit during their science classes.
-The analyses focus on characterizing students’ understanding following
-their participation in the curriculum unit activities
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Students participate in the week-long unit during their
+science classes. The analyses focus on characterizing students’
+understanding following their participation in the curriculum unit
+activities
 
 ## 134.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test / post-test compared statistically with paired
+t-tests
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: students’ understanding for each of the factors improved
+following their participation in the curriculum unit, Combined, these
+data show that students improved their knowledge of individual concepts
+and that improve their understanding of the greenhouse effect and global
+warming phenomena.
 
-pre-test / post-test compared statistically with paired t-tests
+**Improved?**: understanding improved
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 134.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: understanding (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 134.7 Conclusions
 
-students’ understanding for each of the factors improved following their
-participation in the curriculum unit, Combined, these data show that
-students improved their knowledge of individual concepts and that
-improve their understanding of the greenhouse effect and global warming
-phenomena.
+**Conclusions**: participating in the unit increases students’
+understanding of the science. Students integrate their ideas about
+global climate change as a result of using virtual experiments that
+allow them to explore meaningful complexities of the climate system
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: NA
 
 # 135 Veijalainen2013 ( BQ )
+
+**title** Free Public Species Naming to Promote Proenvironmental
+Behavior?
 
 ## 135.1 abstract
 
@@ -31322,90 +25556,60 @@ Urban
 
 ## 135.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 whether allowing the public to choose the name could have an indirect
 pos- itive effect on their view on nature conservation?
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 135.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Alternative
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons /Lectures
 
-Alternative
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons /Lectures
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-examine the impact of specie naming right on support for environ- mental
-protection
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: examine the impact of specie naming right on support
+for environ- mental protection
 
 ## 135.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: Pre- and post-questionnaires
+
+**Results**: NA
+
+**Improved?**: NA
+
+## 135.6 Outcomes
+
+**knowledge**: Yes (*Worked?*: At short term yes, not at mid term )
+
+**intention**: Yes (*Worked?*: At short term yes, mid term no (except
+for the Biocentric group) )
+
+## 135.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Things that are self-relevant attract more
+attention and are better remembered. Studies have shown that a greater
+sense of interde- pendence with environmental entities is associated
+with greater concern about, and actions in support of, protecting their
+well-being. Awareness of negative impacts might not be enough; one must
+actually value nature. Concern about nonhuman environmental entities not
+only predicts proenvironmental behavior but predicts continued increase
+in behavior over time.
 
 # 136 Vicente2020 ( MB )
+
+**title** “Sustainable City”: A Steam Project Using Robotics to Bring
+the City of the Future to Primary Education Students
 
 ## 136.1 abstract
 
@@ -31505,122 +25709,75 @@ age_max
 
 ## 136.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 To present $$ndlr: and to evaluate$$ an inclusive, resilient and
 sustainable model for the city of the future
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 136.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Robotic activity, lessons and debate
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Robotic activity, lessons and debate
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Creating a sustainable city robotic board, with the help of experts and
-teachers. Active methodologies are used in this project, such as
-project-based learning, collaborative learning and the flipped classroom
-(FC), in which the students become the protagonists of the
-teaching-learning process and build their own knowledge.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Creating a sustainable city robotic board, with the
+help of experts and teachers. Active methodologies are used in this
+project, such as project-based learning, collaborative learning and the
+flipped classroom (FC), in which the students become the protagonists of
+the teaching-learning process and build their own knowledge.
 
 ## 136.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test/ post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: The result of pre- and post- test are noted, and compared
+(no statistical test). Consistency of the survey results are tested with
+Cronbach’s alpha coefficient and Kurder-Richardson method. No
+statistical analysis is done for neither awareness nor motivation, it is
+only the author appreciation
 
-</td>
-<td style="text-align:left;">
+**Results**: We can see that the overall performance doubled, from 2.9
+in the pre-test to 6.1 in the post-test, with the efficiency concept
+being the one that increased the most and those of renewable energies
+and mobility the least.Table 3 shows the values obtained in both
+studies, observing high or very high results in the concepts evaluated,
+and very high results in the complete test in which a 0.96 was obtained
+in both studies; these results sufficiently guarantee the reliability of
+the test and its internal consistency.
 
-pre-test/ post-test
+**Improved?**: Better knowledge
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 136.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: improved student knowledge and concept, from a
+“Competence questionnaire on sustainability” (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Bring students closer to the problem of environmental
+change (*Worked?*: Yes )
 
-We can see that the overall performance doubled, from 2.9 in the
-pre-test to 6.1 in the post-test, with the efficiency concept being the
-one that increased the most and those of renewable energies and mobility
-the least.Table 3 shows the values obtained in both studies, observing
-high or very high results in the concepts evaluated, and very high
-results in the complete test in which a 0.96 was obtained in both
-studies; these results sufficiently guarantee the reliability of the
-test and its internal consistency.
+**other**: Motivation (*Worked?*: Yes )
 
-</td>
-</tr>
-</tbody>
-</table>
+## 136.7 Conclusions
+
+**Conclusions**: This STEAM project can be used by other teachers as a
+reference to bring their students closer to the problem of environmental
+change through educational robotics and the use of active methodologies.
+
+**Message to keep:**: What is particularly notable is the use of
+robotics to teach Climate Change to very young students Also the steAm
+(STEM + Art) framework is original, and the “sustainable city” idea as
+well.
 
 # 137 Visintainer2015 ( ABP )
+
+**title** Sixth-Grade Students’ Progress in Understanding the Mechanisms
+of Global Climate Change
 
 ## 137.1 abstract
 
@@ -31708,126 +25865,81 @@ sample.size
 
 ## 137.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 1.  Knowledge construction based on everyday experiences
 2.  Understanding of domain-specific mechanisms and processes
-3.  Scientific reasoning. `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     <tr>` `{=html}     <td style="text-align:left;">`
-    Questions `{=html}     </td>`
-    `{=html}     <td style="text-align:left;">`
-    1.  How do students conceptualize the scientific mechanisms
-        associated with global climate change before and after
-        interaction with the unit?
-4.  What evidence sources do students draw from to support their initial
+3.  Scientific reasoning.
+
+**Questions**:
+
+1.  How do students conceptualize the scientific mechanisms associated
+    with global climate change before and after interaction with the
+    unit?
+2.  What evidence sources do students draw from to support their initial
     ideas?
-5.  How do students negotiate their everyday and instructed ideas as
-    they study GCC? `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+3.  How do students negotiate their everyday and instructed ideas as
+    they study GCC?
 
 ## 137.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Extracurricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Web application
 
-Extracurricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Web application
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-This study draws on three data sources: (1) pre- and post-unit
-interviews, (2) analysis of embedded assessments following virtual
-investigations, and (3) contrasting cases of two students (normative
-vs. non-normative understanding of the greenhouse effect).
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: This study draws on three data sources: (1) pre- and
+post-unit interviews, (2) analysis of embedded assessments following
+virtual investigations, and (3) contrasting cases of two students
+(normative vs. non-normative understanding of the greenhouse effect).
 
 ## 137.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test/ post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
+**Results**: Results show the value of using virtual investigations for
+teaching the mechanisms associated with global climate change.
+Interviews document that students hold a wide range of ideas about the
+mechanisms driving global climate change. Results show that
+understanding the greenhouse effect offers a foundation for building
+connections between everyday energy use and increases in global
+temperature.
 
-pre-test/ post-test
+**Improved?**: understanding improved
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 137.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Increased knowledge (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+## 137.7 Conclusions
 
-Results show the value of using virtual investigations for teaching the
-mechanisms associated with global climate change. Interviews document
-that students hold a wide range of ideas about the mechanisms driving
-global climate change. Results show that understanding the greenhouse
-effect offers a foundation for building connections between everyday
-energy use and increases in global temperature.
+**Conclusions**: Findings show that developing a complete/normative
+understanding of particular natural mechanisms and an anthropogenic:
+energy-use-specific mechanism is necessary for students to integrate
+their ideas about how human actions involving energy use relate to
+increases in global temperature. This has implications for instructional
+design that aims to foster an understanding of the role of human
+activities in changes in global temperature and allows students to
+create innovative solutions to the complex problems of global climate
+change
 
-</td>
-</tr>
-</tbody>
-</table>
+**Message to keep:**: Future research is needed to explore the types of
+strategies students use to conduct virtual investigations and how
+interaction with models most effectively engages students in
+evidence-based reasoning about global climate change-related mechanisms.
+In addition, research is needed that informs the refinement of model
+features and design of guidance that helps students develop productive
+strategies to make sense of the mechanisms involved
 
 # 138 Walsh2018 ( MB )
+
+**title** “Thank You for Being Republican”: Negotiating Science and
+Political Identities in Climate Change Learning
 
 ## 138.1 abstract
 
@@ -31920,29 +26032,13 @@ Urban
 
 ## 138.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 In this study we examine how students’ identities as participants in
 political and scientific communities informed their participation in a
 unit on the ecological impacts of climate change.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 - What scientific and political knowledge, practices, and identities do
   the students leverage as they participate in the ecological impacts of
@@ -31953,143 +26049,117 @@ Questions
 - How do the ways in which learners situate themselves with respect to
   social and ecological process across timescales inform their
   perceptions and valuing of climate change science and responses?
-  `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-  `{=html}     </table>`
 
 ## 138.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons, class discussions, data analysis activities, citizen
+science participation, infographic communication
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons, class discussions, data analysis activities, citizen science
-participation, infographic communication
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-"Ecological impacts of climate change curriculum": 1, introduction and
-context (1 week): introductive class discussion, media exploration
-(youTube videos of scientists and politiicians), class discussions about
-arguments and evidences, questions to scientists on social media
-platform created for it 2. Evidence and Impacts (3 weeks): going to
-local park 3 times to conduct field work related to phenological shifts
-and contribute to the National Phenology Network, a citizen science
-effort, research on a case study of climate impacts on a local species
-using GIS and climate model data,experiment with Wisconsin Fast Plant,
-analyses of time series data on atmospheric and oceanic data with
-scientists, activity on ice core with scientist, calculation of economic
-costs of affected ecosystem services 3. Infographic (2 weeks): students
-used class data and their own research to construct an infographic or
-visual display of data, feedback of the scientists, revision and
-presentation
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: “Ecological impacts of climate change curriculum”: 1,
+introduction and context (1 week): introductive class discussion, media
+exploration (youTube videos of scientists and politiicians), class
+discussions about arguments and evidences, questions to scientists on
+social media platform created for it 2. Evidence and Impacts (3 weeks):
+going to local park 3 times to conduct field work related to
+phenological shifts and contribute to the National Phenology Network, a
+citizen science effort, research on a case study of climate impacts on a
+local species using GIS and climate model data,experiment with Wisconsin
+Fast Plant, analyses of time series data on atmospheric and oceanic data
+with scientists, activity on ice core with scientist, calculation of
+economic costs of affected ecosystem services 3. Infographic (2 weeks):
+students used class data and their own research to construct an
+infographic or visual display of data, feedback of the scientists,
+revision and presentation
 
 ## 138.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-
-</td>
-<td style="text-align:left;">
-
-Data sources included the following: ● Video observations of Mr. S’s
-classroom (~30 hr, October 17–December 6, 2011) ● Video-recorded exit
-interviews with the students at the end of the unit (30– 60 min per
+**Data**: Data sources included the following: ● Video observations of
+Mr. S’s classroom (~30 hr, October 17–December 6, 2011) ● Video-recorded
+exit interviews with the students at the end of the unit (30– 60 min per
 student, in groups of two or three) ● Curricular artifacts, including
 pre- and posttests, student work, student posts on the social media
 platform, responses by experts to student work, weekly engagement
 surveys, and digital photographs ● Qualitative field notes of classroom
 activities (~80 pages)
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+**Analysis**: (Qualitative) We analyze how learners enacted and
+constructed identities through a framework of Discourses that relate to
+societal Conversations (Gee, 2011).
 
-Resultados.obtenidos.por.cada.outcome
+**Results**: Results are difficult to synthetise (detailed analyses of
+the 3 cases over 42 pages, with quite a different objective from ours),
+however the main ideas are: - Luke (republican with a climate denier
+father) had to negotiate the conflict between the curriculum’s
+scientific content and the political beliefs of his family, but change
+his views about climate change and integrate knowledge about it -
+Timothy (republican) was also very critical about the reality of
+anthropogenic climate change. His personal identity as someone who was
+good at science helped support his engagement with the evidence. This
+continuity of this valued practice across settings ultimately supported
+Timothy in negotiating tensions between the communities to which he
+belonged and his continuing science identity work. Timothy participated
+a lot in the debate, integrated a lot of the scientific processes and
+knowledge and changed radically its view toward anthropogenic climate
+change - Gareth (democrats with eco-concerned parents) thought that he
+did not need to be convinced because of its democrat background. He did
+not participate very actively in discussions, and ended up more or less
+sure of the mechanisms of climate change, his statements demonstrate
+that his understanding of climate change was a dynamic one influenced
+both by the science he learned as well as by the controversy that he was
+exposed to through social interactions in the classroom. However, he
+deepened his understanding of both the scientific and political
+dimensions, and as a result he wanted to continue to learn more about
+thescientific evidence and the social controversy While actions and
+intents were not central in the analyses, the authors noted that the 3
+students were not very eager in taking actions against climate change,
+for various reasons
 
-</td>
-<td style="text-align:left;">
+**Improved?**: All students accepted the scientific reality of
+anthropogenic climate change, however with some doubts and difficulties
+to integrate this reality with their own political identities or the
+environment of political debate surrounding it in USA. All students
+improved in terms of scientific knowledge and understanding of the CC
+processes. None of the 3 students seems eager to take action.
 
-Results are difficult to synthetise (detailed analyses of the 3 cases
-over 42 pages, with quite a different objective from ours), however the
-main ideas are: - Luke (republican with a climate denier father) had to
-negotiate the conflict between the curriculum’s scientific content and
-the political beliefs of his family, but change his views about climate
-change and integrate knowledge about it - Timothy (republican) was also
-very critical about the reality of anthropogenic climate change. His
-personal identity as someone who was good at science helped support his
-engagement with the evidence. This continuity of this valued practice
-across settings ultimately supported Timothy in negotiating tensions
-between the communities to which he belonged and his continuing science
-identity work. Timothy participated a lot in the debate, integrated a
-lot of the scientific processes and knowledge and changed radically its
-view toward anthropogenic climate change - Gareth (democrats with
-eco-concerned parents) thought that he did not need to be convinced
-because of its democrat background. He did not participate very actively
-in discussions, and ended up more or less sure of the mechanisms of
-climate change, his statements demonstrate that his understanding of
-climate change was a dynamic one influenced both by the science he
-learned as well as by the controversy that he was exposed to through
-social interactions in the classroom. However, he deepened his
-understanding of both the scientific and political dimensions, and as a
-result he wanted to continue to learn more about thescientific evidence
-and the social controversy While actions and intents were not central in
-the analyses, the authors noted that the 3 students were not very eager
-in taking actions against climate change, for various reasons
+## 138.6 Outcomes
 
-</td>
-</tr>
-</tbody>
-</table>
+**knowledge**: Knowledge about the scientific processes and the
+associated evidencesconcerning CC (*Worked?*: Yes )
+
+**awareness**: - Belief about anthropogenic climate change -
+consciousness (and differenciation) of the political and scientific
+aspects of climate change (*Worked?*: Yes )
+
+**intention**: Willingness to take action or change habits (*Worked?*:
+No )
+
+## 138.7 Conclusions
+
+**Conclusions**: While the class and activities had a positive impact on
+the knowledge and awareness of the students concerning climate change,
+it is important to consider the difficult negociation between political,
+educative and social identities that CCE confront. To most effectively
+support learning of climate change, research must better explicate these
+interactions to support learners as they navigate communities and
+negotiate identities.
+
+**Message to keep:**: Very interesting and different article, the
+authors show some encouraging results concerning gain of knowledge and
+awareness, but what is really interesting is how this is accompanied by
+very complicated negociations of identities in middle-class-USA, where
+largely shared political positions are against the idea of anthropogenic
+climate change. Moreover the authors mention that none of the studied
+students is eager to take action, and it might be related to the
+political climate of USA.
 
 # 139 Walsh2019 ( JGOP )
+
+**title** Youth science expertise, environmental identity, and agency in
+climate action filmmaking
 
 ## 139.1 abstract
 
@@ -32177,29 +26247,13 @@ Urban
 
 ## 139.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The GENIE intervention was designed to give students the opportunity to
 tell their own stories about climate science in a meaningful way for
 their communities.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Questions
-
-</td>
-<td style="text-align:left;">
+**Questions**:
 
 1)  to what extent, if any, the integrated science and storytelling
     curriculum impacted climate science knowledge and practice, (b) to
@@ -32208,63 +26262,21 @@ Questions
     learners with varied initial interests and identification with the
     environment, and (c) what aspects of the curriculum most engaged or
     hindered student engagement with climate science and storytelling.
-    `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-    `{=html}     </table>`
 
 ## 139.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: Interdisciplinary curriculum development project
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Interdisciplinary curriculum development project
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Here, we use pre-post assessments of climate science disciplinary core
-ideas (DCIs) and practices, pre-post assessments of identification with
-climate science and interest in and perceptions of agency related to
-climate action, and interviews to examine the impact of the GENIE
-intervention. The GENIE curriculum combines Next Generation Science
-Standards-aligned climate science lessons with storytelling and
+**Description**: Here, we use pre-post assessments of climate science
+disciplinary core ideas (DCIs) and practices, pre-post assessments of
+identification with climate science and interest in and perceptions of
+agency related to climate action, and interviews to examine the impact
+of the GENIE intervention. The GENIE curriculum combines Next Generation
+Science Standards-aligned climate science lessons with storytelling and
 filmmaking and is designed to be completed in 4–8 weeks depending on the
 teacher and classroom schedule. The curriculum begins with a video that
 issues a challenge to students to learn about climate change and
@@ -32276,53 +26288,65 @@ Students use the Story Spine to break down a well-known folktale
 (e.g. The Three Little Pigs) and then use the Story Spine to write their
 own stories.
 
-</td>
-</tr>
-</tbody>
-</table>
-
 ## 139.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Assessments, interviews and films and portfolios
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Science assessment: Percentage correct for each question
+and mean scores on pre- and post-assessment science assessment for each
+student population for each year were calculated; Identity and agency
+assessment: Means of Likert-scale responses to items on the IAA were
+compared for the full student population for each year. Means were
+analyzed for statistically significant differences across the full
+student population, by teacher and by gender; Student films and
+portfolios: Student work was rubric-scored on a 12-item rubric with
+scores ranging from 1 to 4. The rubric included categories related to
+film content, technical aspects, and the science portfolio; Interviews:
+Student post-interviews were transcribed and coded using an emergent
+coding schema.
 
-</td>
-<td style="text-align:left;">
+**Results**: Students who reported high levels of initial or final
+identification with science also tended to report high levels of initial
+identification with the environment. Students with low initial
+environmental identification tended to have increased environmental
+identification in the post-assessment, However, students with high
+initial environmental identification tended to decrease in environmental
+identification by the end of the unit. Most students noted that they
+felt that they had an increased understanding of climate science after
+participating in the unit. Several groups of students reported that they
+appreciated learning about the science prior to making their films
+because it gave their films richness they would not otherwise have had.
 
-Assessments, interviews and films and portfolios
+**Improved?**: The findings report more engagement of students throw the
+curriculum activities, specially the filmaking.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 139.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Science explanation, the authors consider that the use of
+engaging activities in the intervention increase the capacity of science
+explanation (*Worked?*: Yes )
 
-</td>
-<td style="text-align:left;">
+**intention**: The students report feelings of take action in their
+lives and their community (*Worked?*: Yes )
 
-Students who reported high levels of initial or final identification
-with science also tended to report high levels of initial identification
-with the environment. Students with low initial environmental
-identification tended to have increased environmental identification in
-the post-assessment, However, students with high initial environmental
-identification tended to decrease in environmental identification by the
-end of the unit. Most students noted that they felt that they had an
-increased understanding of climate science after participating in the
-unit. Several groups of students reported that they appreciated learning
-about the science prior to making their films because it gave their
-films richness they would not otherwise have had.
+## 139.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Students demonstrated improved understandings of
+science, were engaged by the creativity and openendedness of the
+filmmaking project and were proud of the work they had accomplished.
+This work further suggests that this approach may be most successful for
+engaging students who did not already have strong environmental
+dentifications.
+
+**Message to keep:**: This study presents an implementation of a
+interdisciplinary curriculum that could help students to learn
+scientific knowledge (e.g. concepts) throw engaging activities as
+filmmaking and storytelling.
 
 # 140 Wang2022 ( BQ )
+
+**title** Fear emotion reduces reported mitigation behavior in
+adolescents subject to climate change education
 
 ## 140.1 abstract
 
@@ -32442,93 +26466,65 @@ Urban
 
 ## 140.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 exploring how fear or hope afects curriculum-based CCE.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 140.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: lecture videos, climate change lesson
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-lecture videos, climate change lesson
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-pre-questionnaires and post-questionnaires The control group only
-completed the pre-question- naires and post-questionnaires without any
-intervention. The lecture-only group watched the lecture videos but not
-the emotional clips. The lecture plus fear group watched one of the four
-fear clips before the lecture video, and the lecture plus hope group
-watched one of the four hope clips before the lecture video.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: pre-questionnaires and post-questionnaires The control
+group only completed the pre-question- naires and post-questionnaires
+without any intervention. The lecture-only group watched the lecture
+videos but not the emotional clips. The lecture plus fear group watched
+one of the four fear clips before the lecture video, and the lecture
+plus hope group watched one of the four hope clips before the lecture
+video.
 
 ## 140.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Data**: NA
+
+**Analysis**: Pre- and post-questionnaire
+
+**Results**: NA
+
+**Improved?**: Knowledge, self-reported behaviour (intent) improved BUT
+not with fear
+
+## 140.6 Outcomes
+
+**knowledge**: Yes (*Worked?*: Yes )
+
+**awareness**: Yes (*Worked?*: Yes )
+
+**intention**: Yes (*Worked?*: Yes )
+
+**other**: Learning and communication; Emission reduction activities
+(*Worked?*: Yes )
+
+## 140.7 Conclusions
+
+**Conclusions**: NA
+
+**Message to keep:**: Lecture-only increases knowledge, self-efficiency,
+positive intent concerning climate change. To achieve effective
+educational outcomes from CCE, especially in the younger generation,
+fear should be seriously considered as this can be counterproductive, at
+least in Eastern culture. Hope is not a key emotion to act more.
 
 # 141 White2022 ( MB )
+
+**title** Changes in teacher attitudes relating to climate science
 
 ## 141.1 abstract
 
@@ -32622,15 +26618,7 @@ Rural
 
 ## 141.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 The purpose of this case study was to describe changes in teacher
 attitudes toward climate change and inclusion of climate science lessons
@@ -32639,101 +26627,68 @@ professional development workshop and teaching two units infused with
 climate science principles focusing on soils and erosion presented as
 part of the workshop.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 141.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Professional development
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Lessons
 
-Professional development
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Lessons
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Teachers attended a workshop designed to provide laboratory experiences
-relating to climate change, soils, erosion, and ecological cycling.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Teachers attended a workshop designed to provide
+laboratory experiences relating to climate change, soils, erosion, and
+ecological cycling.
 
 ## 141.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: semi-structured interviews and qualitative analyses
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Qualitative semi structured interviews, before the
+workshop and after (by phone). Qualitative analyses of the teacher
+discourses
 
-</td>
-<td style="text-align:left;">
+**Results**: Gaps in the teacher knowledge base were filled and teachers
+felt more confident/motivated/concerned to integrate CCE in their
+curricular teachings. The inclusion of CCE was easier than expected
 
-semi-structured interviews and qualitative analyses
+**Improved?**: Qualitative arguments that the attitudes of the teachers
+change, their views were more in agreement with the science, they taught
+more about CC, this did not pose particular problems. Note that the
+authors insist on the relevance of teaching CC in agricultural science
+in such rural regions
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 141.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: Fill gaps in teacher’s knowledge base (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**awareness**: Change in professional attitudes toward more teaching of
+climate change, and consciousness that it is a topic that may be taught
+in their specialty, without the previously imagined dificulties.
+(*Worked?*: yes )
 
-Gaps in the teacher knowledge base were filled and teachers felt more
-confident/motivated/concerned to integrate CCE in their curricular
-teachings. The inclusion of CCE was easier than expected
+## 141.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Two factors emerged in this study: (a) agriculture was
+a good context for delivering the complex science concepts of climate
+change and (b) locally relevant climate science was accepted, even among
+those considered skeptical of its legitimacy. These pose opportunities
+for curriculum designers and teachers implementing the NGSS.
+Additionally, the combination of agriculture and climate science
+represents a good application of cross-cutting concepts and helps
+eliminate silos of instruction.
+
+**Message to keep:**: The authors analysed qualitatively the impact of a
+workshop on teaching CC in agriculture science, also after the teachers
+got back to classes and could apply their newly acquired knowledge
 
 # 142 Williams2017 ( ABP )
+
+**title** As the climate changes: Intergenerational actionbased learning
+in relation to flood education
 
 ## 142.1 abstract
 
@@ -32834,126 +26789,87 @@ age_max
 
 ## 142.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 1.  to evaluate the impact of a specific creative intervention on
     children’s learning and subsequent agency in flood preparedness
     within the household,
 2.  to explore the potential of young children to educate and affect
     change within their families and communities through
-    intergenerational and inter-community learning. `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     <tr>`
-    `{=html}     <td style="text-align:left;">` Questions
-    `{=html}     </td>` `{=html}     <td style="text-align:left;">` does
-    not specify `{=html}     </td>` `{=html}     </tr>`
-    `{=html}     </tbody>` `{=html}     </table>`
+    intergenerational and inter-community learning.
+
+**Questions**:
+
+does not specify
 
 ## 142.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Educational activities
 
-curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Educational activities
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-1.  Phase 1 included children working with the researcher in school in
-    small groups on a co-curricular activity facilitated by a PowerPoint
-    presentation constructed by the researcher and informed by guidance
-    from the environmental regulator providing local and global examples
-    of flooding.
-2.  In phase 2, one week later, the researcher returned to school and
-    children were individually interviewed. The researcher thanked the
-    class and explained how useful the children’s involvement in the
-    research had been, reassuring them that they had “helped us to
-    understand more about how to help families.” `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     </tbody>` `{=html}     </table>`
+**Description**: 1. Phase 1 included children working with the
+researcher in school in small groups on a co-curricular activity
+facilitated by a PowerPoint presentation constructed by the researcher
+and informed by guidance from the environmental regulator providing
+local and global examples of flooding. 2. In phase 2, one week later,
+the researcher returned to school and children were individually
+interviewed. The researcher thanked the class and explained how useful
+the children’s involvement in the research had been, reassuring them
+that they had “helped us to understand more about how to help families.”
 
 ## 142.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: pre-test/ post-test
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: participants were given a pre-test and a post-test. a
+paired t test on the difference between the pre-test and post-test
+results of each participant
 
-</td>
-<td style="text-align:left;">
-
-pre-test/ post-test
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Evaluation revealed that young children can learn about flooding and
-preparedness, and that intergenerational learning from child to parent
-can also occur, with children transferring the messages learned in
-school to home. However, thematic analysis suggests key factors such as
-family relationships (empowerment of children) and the parents’
-disconnection and dissociation from risk limit the success of
+**Results**: Evaluation revealed that young children can learn about
+flooding and preparedness, and that intergenerational learning from
+child to parent can also occur, with children transferring the messages
+learned in school to home. However, thematic analysis suggests key
+factors such as family relationships (empowerment of children) and the
+parents’ disconnection and dissociation from risk limit the success of
 intergenerational learning.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: better understanding
+
+## 142.6 Outcomes
+
+**knowledge**: Increased knowledge (*Worked?*: yes )
+
+## 142.7 Conclusions
+
+**Conclusions**: This article addresses an acknowledged gap in flood
+education research and learning for resilience by young children and
+their families. Using an action-based, participatory methodology, a
+creative and inclusive flood education resource was developed as a
+stimulus for learning. Children expressed interest and enjoyment during
+the classroom session, and parents and teachers reported that this
+enthusiasm had persisted beyond the initial engagement. Knowledge
+retention by children was high, with notable levels of empathy and
+understanding about the negative impacts of flooding evident during, and
+after, the initial session.
+
+**Message to keep:**: Public policy should explicitly recognize the
+value and potential contribution of children in household resilience
+planning. Secondly, similar approaches using a range of age-appropriate
+materials should be trialed for a greater range of ages, and in a
+variety of socioeconomic and flood-risk settings. These could include
+multiple learning interventions over a longer timeline, and more
+detailed evaluation of the factors promoting or limiting
+intergenerational learning and translation of knowledge into household
+action
 
 # 143 Xie2014 ( SB )
+
+**title** LINKING CLIMATE CHANGE EDUCATION THROUGH THE INTEGRATION OF A
+KITE-BORNE REMOTE SENSING SYSTEM: LINKING CLIMATE CHANGE EDUCATION AND
+REMOTE SENSING
 
 ## 143.1 abstract
 
@@ -33040,115 +26956,67 @@ sample.size
 
 ## 143.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 Assess usability, ease of implementation and impact of the ICCARS,
 AEROKATS intervention on CC education.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Questions**:
+
+NA
 
 ## 143.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Outdoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Outdoor activity.
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Outdoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Outdoor activity.
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Students flew a kite containing a number of equipment (AEROKATS)
-allowing them to measure different variables (light, temperature,
-geolocalization…). They collected and analyzed data to inform an
-open-ended project.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Students flew a kite containing a number of equipment
+(AEROKATS) allowing them to measure different variables (light,
+temperature, geolocalization…). They collected and analyzed data to
+inform an open-ended project.
 
 ## 143.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: A matter of degree, KQED Public Broadcasting, 2013
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Students: Mean comparison of knowledge scores as measured
+by Climate profiling questions “A matter of degree”. Teachers: in-depth
+interviews on usability, advantages and limitations of proposed
+intervention and the open-coding them.
 
-</td>
-<td style="text-align:left;">
+**Results**: Most schools showed a significant difference in knowledge
+comparing pre-post intervention.
 
-A matter of degree, KQED Public Broadcasting, 2013
+**Improved?**: General knowledge towards CC.
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 143.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**knowledge**: General attudes and knowledge about global climate change
+(“A matter of degree, KQED Public Broadcastingg, 2013). (*Worked?*: yes
+)
 
-</td>
-<td style="text-align:left;">
+**other**: A number of ease of implementation and usability questions
+allowing to know whether implementation is usable and escalable. Not
+centered on CC. (*Worked?*: yes )
 
-Most schools showed a significant difference in knowledge comparing
-pre-post intervention.
+## 143.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Intervention based on measuring, visualising and
+analyzing realsitic data with the ICCARS instruments appears to be
+usable, scalable help students change attitudes towards CC.
+
+**Message to keep:**: Outdoors, hands-on intervention seems to be
+effective and surprisingly is perceived to be relatively easy to
+implement if given proper materials.
 
 # 144 Zhong2021 ( JGOP )
+
+**title** An impact assessment of disaster education on children’s flood
+risk perceptions in China: Policy implications for adaptation to climate
+extremes
 
 ## 144.1 abstract
 
@@ -33253,15 +27121,7 @@ Urban
 
 ## 144.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Objectives
-
-</td>
-<td style="text-align:left;">
+**Objective**:
 
 1)  To identify and describe the key components of children’s risk
     perceptions and their impact factors; (2) to identify the three-year
@@ -33269,108 +27129,48 @@ Objectives
     interactions and left behind status; (3) to assess the effectiveness
     of school education and social-network based education on children’s
     risk perceptions; (4) to explore their co-influencing mechanisms
-    with risk-related parent-child interactions. `{=html}     </td>`
-    `{=html}     </tr>` `{=html}     <tr>`
-    `{=html}     <td style="text-align:left;">` Questions
-    `{=html}     </td>` `{=html}     <td style="text-align:left;">`
-    1)  school-based education, social-network based education, parent
-        accompaniment, and risk-related parent-child interactions have
-        direct positive effects on children’s flood risk perceptions; 2)
-        there is a positive interaction effect between disaster
-        education and risk-related parent-child interaction on
-        children’s flood risk perceptions; and, 3) risk-related
-        parent-child interaction has a moderation effect between the
-        disaster education and flood risk perceptions.
-        `{=html}     </td>` `{=html}     </tr>` `{=html}     </tbody>`
-        `{=html}     </table>`
+    with risk-related parent-child interactions.
+
+**Questions**:
+
+1)  school-based education, social-network based education, parent
+    accompaniment, and risk-related parent-child interactions have
+    direct positive effects on children’s flood risk perceptions; 2)
+    there is a positive interaction effect between disaster education
+    and risk-related parent-child interaction on children’s flood risk
+    perceptions; and, 3) risk-related parent-child interaction has a
+    moderation effect between the disaster education and flood risk
+    perceptions.
 
 ## 144.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Indoor
 
-</td>
-<td style="text-align:left;">
+**Type**: Disaster education program
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Indoor
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-Disaster education program
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-The disaster education program was implemented in three pilot areas, as
-these counties were exposed to risk of frequent floods, mudslides, and
-landslides, caused by heavy rain storms attributed to their mountainous
-areas and dense network of rivers. Disaster reduction education was
-explicitly incorporated into China’s education system after the Wenchuan
-earthquake in 2008.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: The disaster education program was implemented in three
+pilot areas, as these counties were exposed to risk of frequent floods,
+mudslides, and landslides, caused by heavy rain storms attributed to
+their mountainous areas and dense network of rivers. Disaster reduction
+education was explicitly incorporated into China’s education system
+after the Wenchuan earthquake in 2008.
 
 ## 144.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: Questionnaire
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: Ordinary Least Square Regression (OLSR) was applied to
+identify the effects, if any, of school education (classroomeducation,
+propaganda poster, and professional guidance), social-network based
+education (television, radio, friends, and internet), and risk-related
+parent-child interactions on the children’s flood risk perceptions in
+the year of 2018; Score Matching Method (PSM)
 
-</td>
-<td style="text-align:left;">
-
-Questionnaire
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Resultados.obtenidos.por.cada.outcome
-
-</td>
-<td style="text-align:left;">
-
-Our results implied that the disaster education including classroom
-education, propaganda posters, and professional guidance had a positive
-effect on children’s flood risk perceptions and, comparatively,
+**Results**: Our results implied that the disaster education including
+classroom education, propaganda posters, and professional guidance had a
+positive effect on children’s flood risk perceptions and, comparatively,
 classroom education had the most significant effect. School is not only
 a haven to protect children from risks, but also could provide an
 effective platform for the transfer of the information, knowledge and
@@ -33381,12 +27181,36 @@ significant effect on improving children’s flood disaster awareness,
 while received knowledge from television and from friends tended to
 promote children’s behaviors.
 
-</td>
-</tr>
-</tbody>
-</table>
+**Improved?**: Disaster education programa benefit children to the
+awareness and improving disaster resilience and climate change
+adaptarion. Increase knowlegde and promote discussion with community.
+
+## 144.6 Outcomes
+
+**knowledge**: Increase knowledge of children contributing to change
+their perceptions throw disaster education, making them more resilient
+and adaptative to extreme climates. (*Worked?*: Yes )
+
+**awareness**: Children’s flood risk perceptions (*Worked?*: Yes )
+
+## 144.7 Conclusions
+
+**Conclusions**: To improve children’s risk flood perceptions,
+social-networks and risk-related parent-child interaction should be
+considered to be jointly conducted in disaster education. Integrating
+parents into education programs is a more effective way to achieve
+disaster risk perception, resilience and climate adaptation, even for
+those left-behind children.
+
+**Message to keep:**: The use of different strategies in the classroom
+contributes to the awareness of students on risk perception, which is
+crucial for improving disaster resilience and adaptation. In addition,
+it is important the inteaction with parents in the process of risk
+perception education.
 
 # 145 Zografakis2008 ( SB )
+
+**title** Effective education for energy efficiency
 
 ## 145.1 abstract
 
@@ -33500,128 +27324,98 @@ both
 
 ## 145.3 Objective/questions
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+**Objective**:
+
+NA
+
+**Questions**:
+
+NA
 
 ## 145.4 Intervention
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Curricular/Extra**: Curricular
 
-Curricular/Extracurricular
+**Indoor/Outdoor**: Both
 
-</td>
-<td style="text-align:left;">
+**Type**: In-school lessons, field trips, games, artistic creation
+(e.g. theater plays, museums…)
 
-Curricular
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Outdoor/Indoor/Both
-
-</td>
-<td style="text-align:left;">
-
-Both
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Type.of.intervention
-
-</td>
-<td style="text-align:left;">
-
-In-school lessons, field trips, games, artistic creation (e.g. theater
-plays, museums…)
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Descripcion.de.intervención
-
-</td>
-<td style="text-align:left;">
-
-Intervention great number of possible interventions including specific
-lessons (includes specific audiovisual material, books… ), games,
-exercises, drawings, filed trips to classic and renevwable energy
-production units, art exhibitions… Specific interventions to specific
-groups were not described but were presumably adapted to student’s age
-and education.
-
-</td>
-</tr>
-</tbody>
-</table>
+**Description**: Intervention great number of possible interventions
+including specific lessons (includes specific audiovisual material,
+books… ), games, exercises, drawings, filed trips to classic and
+renevwable energy production units, art exhibitions… Specific
+interventions to specific groups were not described but were presumably
+adapted to student’s age and education.
 
 ## 145.5 Methods/Results
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+**Data**: self-administered survey completed both by students and
+parents. Do you turn off the lights when you leave your room for more
+than 2 min? Do you turn off the stand- by button of your TV set? Do you
+use rechargeable batteries in your toys? Do you know beforehand what you
+need from the fridge and therefore you open and close the fridge door
+quickly? Do you turn off the air condition in rooms where there are no
+people? Do you close the windows when the heating is on? Do you close
+the windows when the air condition is on? Do you close the shutters,
+shades or curtains to prevent the sunlight from coming in during summer?
+Do you leave your room window wide-open for a few minutes for the air to
+be renewed? Do you prefer showering to bathing in the bath? Do you check
+that the water heater is turned off in time? Do you prefer going on foot
+somewhere (e.g. school, afternoon private school, park) when it is
+nearby? Have you seen to curtains or furniture not standing in front of
+radiators? Do you fix your heating or air conditioning temperature at
+maximum 20 °C in winter? Do you fix your air condition temperature above
+25 °C in summer? Do you use special low electricity consumption lighting
+bulbs at home? Do you receive central heating systems maintenance every
+year? Do you check whether your fridge door closes properly? Do you cook
+in a pot of the same size as the one in the stove in the cooker? Do you
+put only as much water in the pot as you need? Do you fill up the
+washing machine with clothes before you operate it? Do you check your
+tyres’ pressure regularly? (Respondent answers if he has a car)
 
-Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
+**Analysis**: NA
 
-</td>
-<td style="text-align:left;">
+**Results**: Overall intervention appears to have worked in the expected
+direction. No substantive difference acording to measured behaviour
+except for few items: “Do you check that the water heater is turned off
+in time?”, “Do you receive central heating systems maintenance every
+year?”, “Do you check whether your fridge door closes properly?” and
+““Do you cook in a pot of the same size as the one in the stove in the
+cooker?” .
 
-self-administered survey completed both by students and parents. Do you
-turn off the lights when you leave your room for more than 2 min? Do you
-turn off the stand- by button of your TV set? Do you use rechargeable
-batteries in your toys? Do you know beforehand what you need from the
-fridge and therefore you open and close the fridge door quickly? Do you
-turn off the air condition in rooms where there are no people? Do you
-close the windows when the heating is on? Do you close the windows when
-the air condition is on? Do you close the shutters, shades or curtains
-to prevent the sunlight from coming in during summer? Do you leave your
-room window wide-open for a few minutes for the air to be renewed? Do
-you prefer showering to bathing in the bath? Do you check that the water
-heater is turned off in time? Do you prefer going on foot somewhere
-(e.g. school, afternoon private school, park) when it is nearby? Have
-you seen to curtains or furniture not standing in front of radiators? Do
-you fix your heating or air conditioning temperature at maximum 20 °C in
-winter? Do you fix your air condition temperature above 25 °C in summer?
-Do you use special low electricity consumption lighting bulbs at home?
-Do you receive central heating systems maintenance every year? Do you
-check whether your fridge door closes properly? Do you cook in a pot of
-the same size as the one in the stove in the cooker? Do you put only as
-much water in the pot as you need? Do you fill up the washing machine
-with clothes before you operate it? Do you check your tyres’ pressure
-regularly? (Respondent answers if he has a car)
+**Improved?**: NA
 
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
+## 145.6 Outcomes
 
-Resultados.obtenidos.por.cada.outcome
+**action**: They concentrate on the following topics: the use of
+electrical appliances at home, space temperature adjustment at home, the
+water consumption, transportation, space temperature adjustment in
+school, the rational use of heating installations, apparatus in school
+and recycling. Furthermore, questions can be divided in 2 broad types:
+one is questions about activities directly related to energy consumption
+(e.g. turn off the stand by button of the TV set) and another one with
+questions indirectly related to energy consumption (e.g. do you leave
+your room window wide-open for a few minutes for the air to be
+renewed?). (*Worked?*: yes )
 
-</td>
-<td style="text-align:left;">
+**habit**: They concentrate on the following topics: the use of
+electrical appliances at home, space temperature adjustment at home, the
+water consumption, transportation, space temperature adjustment in
+school, the rational use of heating installations, apparatus in school
+and recycling. Furthermore, questions can be divided in 2 broad types:
+one is questions about activities directly related to energy consumption
+(e.g. turn off the stand by button of the TV set) and another one with
+questions indirectly related to energy consumption (e.g. do you leave
+your room window wide-open for a few minutes for the air to be
+renewed?). (*Worked?*: yes )
 
-Overall intervention appears to have worked in the expected direction.
-No substantive difference acording to measured behaviour except for few
-items: "Do you check that the water heater is turned off in time?", "Do
-you receive central heating systems maintenance every year?", "Do you
-check whether your fridge door closes properly?" and ""Do you cook in a
-pot of the same size as the one in the stove in the cooker?" .
+## 145.7 Conclusions
 
-</td>
-</tr>
-</tbody>
-</table>
+**Conclusions**: Far reaching intervention seems to work by
+simultaneously intervening a great number of variables.
+
+**Message to keep:**: Very far reaching intervention using a great
+number of coordinated sections presumably adapted to different audiences
+seems to be effective. Could be difficult to implement and requires a
+large number of coordinated actors.
