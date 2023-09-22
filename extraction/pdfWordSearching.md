@@ -8,6 +8,7 @@ Marius Bottin
   - [2.1 Controvers](#21-controvers)
   - [2.2 Belief](#22-belief)
   - [2.3 Opinion](#23-opinion)
+  - [2.4 Republican](#24-republican)
 
 ``` r
 require(knitr)
@@ -235,3 +236,20 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 |      | ./Marius/White2022.pdf            | 25  |
 |      | ./Marius/Vicente2020.pdf          | 2   |
 |      | ./Marius/Parth2020.pdf            | 2   |
+
+## 2.4 Republican
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "republican" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+|      |                             |     |
+|:-----|:----------------------------|:----|
+| init | ./Sara/Lambert2013.pdf      | 3   |
+|      | ./Ana/Monroe2016.pdf        | 6   |
+|      | ./Marius/Walsh2018.pdf      | 27  |
+|      | ./Marius/Stevenson2018a.pdf | 3   |
+|      | ./Marius/White2022.pdf      | 2   |

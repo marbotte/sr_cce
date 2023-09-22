@@ -1,0 +1,213 @@
+---
+title: "Results from the extraction: graphs and numbers"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+```{r}
+require(openxlsx)&require(knitr)&require(kableExtra)
+names(loadWorkbook("../../extraction/20230921.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20230921.xlsx",sheet = "extraction ",startRow = 2)
+extract<-rawExtract
+
+```
+
+# Dates
+
+```{r}
+rawExtract$datepubl
+extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})","\\2",rawExtract$datepubl)))
+
+(datesById<-tapply(extract$datepubl,extract$id,unique))
+barplot(table(factor(datesById,levels=min(datesById):max(datesById))), las=2, main="Number of documents included in the analysis by year")
+```
+
+# Countries
+
+```{r}
+library(stringr)
+rawExtract$Countries.STUDY
+extract$Countries.STUDY[extract$id=="Arya2016"]<-"United States;China;New Zealand;Norway"
+extract$Countries.STUDY<-gsub("Puerto Rico \\(United States\\)","United States",gsub("Estados Unidos","United States",gsub("BRASIL","Brazil",gsub("UK","United Kingdom",gsub("USA","United States",extract$Countries.STUDY)))))
+sepCountry <- strsplit(extract$Countries.STUDY,"[,;]")
+countryStudy<-data.frame(id=rep(rawExtract$id,sapply(sepCountry,length)),
+           country=unlist(sepCountry))
+countryStudy$country<-str_to_title(gsub(" +$","",gsub("^and ","",gsub("^ +","",countryStudy$country))))
+(nbBycountry<-sort(tapply(countryStudy$id,countryStudy$country,function(x)length(unique(x))),decreasing = T))
+
+```
+
+
+
+
+## Making the map
+
+```{r}
+require(rnaturalearth)
+require(sf)
+worldMap_tot<-ne_countries(returnclass = "sf")
+namesCountries<-names(nbBycountry)
+pbs<-namesCountries[!(namesCountries%in%worldMap_tot$name_long|namesCountries%in%worldMap_tot$name)]
+if(length(pbs>0)){warning("the following countries are not found and will be ignored:",pbs)}
+nbBycountry<-nbBycountry[!namesCountries%in%pbs]
+namesCountries<-names(nbBycountry)
+orderCt<-match(namesCountries,worldMap_tot$name_long)
+orderCt[is.na(orderCt)]<-match(namesCountries[is.na(orderCt)],worldMap_tot$name)
+#Colors
+scaleNb<-rep(NA,length(nbBycountry))
+scaleNb[nbBycountry==1]<-1
+scaleNb[nbBycountry>1]<-2
+scaleNb[nbBycountry>3]<-3
+scaleNb[nbBycountry>5]<-4
+scaleNb[nbBycountry>10]<-5
+colorsScale<-c("#fafa6e","#f8cf55","#f6993c","#f35824","#ee0e0e")
+par(mar=c(1,1,1,1))
+plot(st_geometry(worldMap_tot),border="grey",lwd=0.5)
+plot(st_geometry(worldMap_tot[orderCt,]),border="black",lwd=0.7,col=colorsScale[scaleNb],add=T)
+legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5","5-10",">10"))
+
+countryStudy$FinalName<-NA
+countryStudy$FinalName<-worldMap_tot[match(countryStudy$country,worldMap_tot$name),]$name
+countryStudy$FinalName[is.na(countryStudy$FinalName)]<-worldMap_tot[match(countryStudy$country[is.na(countryStudy$FinalName)],worldMap_tot$name_long),]$name
+
+countryDoc <- tapply(countryStudy$FinalName,countryStudy$id,function(x)
+  {
+  if(length(unique(x))==1){return(x[1])}else{return("Multiple")}
+})
+```
+# Years/Region of the world
+
+```{r,fig.height=7,fig.width=10}
+REG<-factor(worldMap_tot$region_wb[worldMap_tot$region_wb!="Antarctica"])
+plot(st_geometry(worldMap_tot[worldMap_tot$region_wb!="Antarctica",]),col=rainbow(nlevels(REG))[REG])
+countryStudy$region<-NA
+countryStudy$region<-worldMap_tot[match(countryStudy$country,worldMap_tot$name_long),"region_wb"]$region_wb
+countryStudy$region[is.na(countryStudy$region)]<-worldMap_tot[match(countryStudy$country[is.na(countryStudy$region)],worldMap_tot$name),"region_wb"]$region_wb
+regionPapers<-factor(tapply(countryStudy$region,countryStudy$id,function(x){
+  if(length(unique(x))==1){return(x[1])}else{return("Multiple")}
+}),levels=c(levels(REG),"Multiple"))
+yearPaper<-factor(datesById,levels=min(datesById):max(datesById))
+TAB_year_region<-table(regionPapers,yearPaper[names(regionPapers)])
+TAB_year_region<-TAB_year_region[as.logical(rowSums(TAB_year_region)),]
+TAB_year_region<-TAB_year_region[order(rowSums(TAB_year_region),decreasing=T),]
+
+A<-barplot(TAB_year_region,las=2,col=rainbow(nrow(TAB_year_region)),legend=T,args.legend = list(x="topleft"))
+events <- c("United nations: Climate\nchange education framework","UNESCO: Climate Change\nEducation for Sustainable\nDevelopment program","Paris Agreement\nand SDG adoption")
+dates <- c(1994,2010,2015)
+events <-events[dates>min(as.numeric(colnames(TAB_year_region)))]
+dates<-dates[dates>min(as.numeric(colnames(TAB_year_region)))]
+datesOnGraph <-A[dates - as.numeric(min(as.numeric(colnames(TAB_year_region)), na.rm = T)) +1]
+arrows(x0=datesOnGraph,y0=c(5,13),y1=rep(0,2),x1=datesOnGraph,length = .2,col="black", lwd=2)
+text(datesOnGraph,c(6,13.5),events, cex=.7)
+```
+
+
+
+# Outcomes
+
+
+```{r}
+didItWork_col<-colnames(extract)[grep("it.work",colnames(extract))]
+barplot(colSums(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")])))
+withOutcome<-which(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")]),arr.ind=T)
+outcomeEffect<-data.frame(id=extract$id[withOutcome[,1]],
+           outcome=c("knowledge","awareness","intention","emotion","action","habit","Other")[withOutcome[,2]],
+           effect=extract[didItWork_col][withOutcome]
+           )
+outcomeEffect$effect_simp<-NA
+outcomeEffect$effect_simp[outcomeEffect$effect%in%c("yes","YES","Yes")]<-"Yes"
+outcomeEffect$effect_simp[outcomeEffect$effect%in%c("no","No","NO")]<-"No"
+outcomeEffect$effect_simp[is.na(outcomeEffect$effect_simp)]<-"Unclear"
+barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"))
+
+```
+
+# Population
+
+```{r}
+extract$TARGETED.SAMPLE<-gsub(" $","",extract$TARGETED.SAMPLE)
+sort(table(extract$TARGETED.SAMPLE),decreasing=T)
+extract$student<-extract$TARGETED.SAMPLE%in%c("Students","students")
+extract$age_min[extract$student]
+extract$age_max[extract$student]
+extract$mean.age[extract$student]
+extract$age_min_stud<-NA
+extract$age_max_stud<-NA
+extract$age_aver_stud<-NA
+extract$age_stud_no_info<-NA
+extract$age_min_stud[extract$student]<-as.numeric(gsub(" \\[Extracted from grade\\]","",extract$age_min[extract$student]))
+extract$age_max_stud[extract$student]<-as.numeric(gsub(" \\[Extracted from grade\\]","",extract$age_max[extract$student]))
+extract$age_aver_stud[extract$student]<-as.numeric(gsub("\\[Extracted from grade\\]","",extract$mean.age[extract$student]))
+extract[extract$student,"age_stud_no_info"]<-apply(extract[extract$student,c("age_min_stud","age_max_stud","age_aver_stud")],1,function(x)all(is.na(x)))
+extract[extract$student,"age_stud_type_info"]<-apply(extract[extract$student,c("age_min_stud","age_max_stud","age_aver_stud")],1,function(x){
+    if(!is.na(x[1]) & !is.na(x[2]) & !is.na(x[3])){return("all")}
+    if(!is.na(x[1]) & !is.na(x[2]) & is.na(x[3])){return("minmax")}
+    if(is.na(x[1]) & is.na(x[2]) & !is.na(x[3])){return("mean")}
+    if(sum(!is.na(x[1]) & !is.na(x[2]))==1 ){return("missingminmax")}else{return(NA)}
+    
+  })
+
+#extract[extract$student,c("age_min","age_max","mean.age","age_min_stud","age_max_stud","age_aver_stud","age_stud_no_info","age_stud_type_info")]
+table(extract$age_stud_type_info[extract$student],useNA = "always")
+age_order<- rep(NA,sum(!is.na(extract$age_stud_type_info)))
+age_order[extract$age_stud_type_info[!is.na(extract$age_stud_type_info)]%in%c("all","mean")]<- extract[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info%in%c("all","mean"),"age_aver_stud"]
+age_order[extract$age_stud_type_info[!is.na(extract$age_stud_type_info)]%in%c("minmax")]<-rowMeans( extract[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info%in%c("minmax"),c("age_min_stud","age_max_stud")])
+order(age_order)
+tabForPlot<-extract[!is.na(extract$age_stud_type_info),c("age_min_stud","age_max_stud","age_aver_stud","age_stud_no_info","age_stud_type_info")][order(age_order),]
+plot(x=age_order[order(age_order)],y=1:nrow(tabForPlot),type="n",xlim=range(tabForPlot[,c("age_min_stud","age_max_stud")],na.rm=T), xlab="Age",ylab="",yaxt="n")
+segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmax","all")], tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")])
+points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
+```
+
+# Controversy
+
+```{r}
+table(extract$Controversy,useNA="always")
+extract$controv_clean<-NA
+extract$controv_clean[grep("no",extract$Controversy,ignore.case=T)]<-"No"
+extract$controv_clean[grep("yes",extract$Controversy,ignore.case=T)]<-"Yes"
+#extract[c("controv_clean","Controversy")]
+table(extract$controv_clean,useNA="ifany")
+controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
+  {
+    if(any(na.omit(x)=="Yes")){return("Yes")}else if(any(na.omit(x)=="No")){return("No")}else{return(NA)}
+  })
+(A<-table(countryDoc[names(controvByDoc)],factor(controvByDoc,levels=c("No","Yes")),useNA="ifany"))
+(PercentageControversy<-A[,2]/rowSums(A))
+barplot(PercentageControversy,las=2)
+
+```
+
+
+# Mitigation/Adaptation
+
+```{r}
+table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$`Final.mitigation/adaptation`,useNA = 'always'))
+barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
+```
+
+
+# Educational framework
+
+We've got a problem, most of the extracted papers just do not have the information:
+
+```{r}
+edFrameNb<-table(extract$`Normative.Climate.Change.EDUCATIONAL.framework.(global/local)`,useNA="ifany")
+edFrameNb<-edFrameNb[order(edFrameNb,decreasing=T)]
+
+tabEdFrame<-data.frame(
+    EducationalFramework=names(edFrameNb),
+    nb=as.numeric(edFrameNb),
+    ids=sapply(names(edFrameNb),function(x,tab)paste(na.omit(tab$id[tab$`Normative.Climate.Change.EDUCATIONAL.framework.(global/local)`==x]),collapse=", "), tab=extract)
+  ,row.names = NULL)
+tabEdFrame[is.na(tabEdFrame$EducationalFramework),3]<-paste(extract$id[is.na(extract$`Normative.Climate.Change.EDUCATIONAL.framework.(global/local)`)],collapse=", ")
+kable(tabEdFrame)
+
+```
+
+
+

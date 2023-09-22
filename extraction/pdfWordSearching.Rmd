@@ -57,3 +57,11 @@ sep <- strsplit(raw,":")
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
+## Republican
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "republican" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
