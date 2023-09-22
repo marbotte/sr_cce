@@ -1,0 +1,59 @@
+---
+title: "Searching words in the pdfs"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+
+```{r}
+require(knitr)
+dos <- normalizePath("../../extraction/")
+```
+
+
+# Self-efficacy
+
+"Self-efficacy" or "self efficacy":
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "self[ -]efficacy" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+# Controversy
+
+## Controvers
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "controvers" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+## Belief
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "belief" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+## Opinion
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "opinion" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
