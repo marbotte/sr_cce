@@ -179,7 +179,9 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
 (A<-table(countryDoc[names(controvByDoc)],factor(controvByDoc,levels=c("No","Yes")),useNA="ifany"))
 (PercentageControversy<-A[,2]/rowSums(A))
 barplot(PercentageControversy,las=2)
-
+sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
+sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)/length(countryDoc)
+sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)
 ```
 
 
@@ -210,4 +212,17 @@ kable(tabEdFrame)
 ```
 
 
+# Monroe categories
+
+How many include "5:target climate science misconceptions":
+
+```{r}
+sum(grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`))
+```
+
+Which:
+
+```{r}
+extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
+```
 

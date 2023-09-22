@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-09-21
+2023-09-22
 
 - [1 Dates](#1-dates)
 - [2 Countries](#2-countries)
@@ -12,6 +12,7 @@ Marius Bottin
 - [6 Controversy](#6-controversy)
 - [7 Mitigation/Adaptation](#7-mitigationadaptation)
 - [8 Educational framework](#8-educational-framework)
+- [9 Monroe categories](#9-monroe-categories)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -735,6 +736,24 @@ barplot(PercentageControversy,las=2)
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
+``` r
+sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
+```
+
+    ## [1] 0.75
+
+``` r
+sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)/length(countryDoc)
+```
+
+    ## [1] 0.3900709
+
+``` r
+sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)
+```
+
+    ## [1] 0.3272727
+
 # 7 Mitigation/Adaptation
 
 ``` r
@@ -1290,3 +1309,32 @@ Bodzin2014
 </tr>
 </tbody>
 </table>
+
+# 9 Monroe categories
+
+How many include “5:target climate science misconceptions”:
+
+``` r
+sum(grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`))
+```
+
+    ## [1] 35
+
+Which:
+
+``` r
+extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
+```
+
+    ##  [1] "Bhattacharya2021"  "Schubatzky2022"    "da_Rocha2020"     
+    ##  [4] "Akaygun2021"       "White2022"         "Cebesoy2019"      
+    ##  [7] "Ratinen2013"       "Pruneau2003"       "Karpudewan2015a"  
+    ## [10] "Taylor2020"        "McGowan2022"       "Jin2013"          
+    ## [13] "Kern2017"          "Reinfried2012"     "Sellmann2013a"    
+    ## [16] "Lawson2019a"       "Lawson2019a"       "Walsh2018"        
+    ## [19] "Drewes2018"        "Drewes2018"        "Svihla2012"       
+    ## [22] "Silva2021"         "Markowitz2018"     "Smith2019"        
+    ## [25] "McNeill2012"       "Bodzin2014"        "Harker_Schuch2013"
+    ## [28] "Harker_Schuch2020" "Kabir2015"         "Lambert2013"      
+    ## [31] "Littrell2022"      "Tasquier2015"      "Tasquier2017"     
+    ## [34] "Sellmann2015"      "Pekel2019"

@@ -2,7 +2,7 @@ Reading the results of the assignments and extracting the interesting
 data (example of a full-text screening exercise)
 ================
 Marius Bottin
-2023-08-31
+2023-09-22
 
 - [1 Numbers](#1-numbers)
 - [2 Conflicts](#2-conflicts)
@@ -115,6 +115,8 @@ Marius Bottin
   - [3.104 Ouariachi2017a](#3104-ouariachi2017a)
   - [3.105 Sezen_Barrie2020](#3105-sezen_barrie2020)
   - [3.106 Walsh2018](#3106-walsh2018)
+  - [3.107 Bopardikar2021](#3107-bopardikar2021)
+  - [3.108 Turner2022](#3108-turner2022)
 - [4 Final Numbers](#4-final-numbers)
   - [4.1 Missing decisions](#41-missing-decisions)
 
@@ -20661,6 +20663,352 @@ NA
 </tbody>
 </table>
 
+## 3.107 Bopardikar2021
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+115
+
+</td>
+<td style="text-align:right;">
+
+18
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+452
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+107
+
+</td>
+<td style="text-align:left;">
+
+Bopardikar2021
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Ana found that there were no outcome during extraction
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.108 Turner2022
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+104
+
+</td>
+<td style="text-align:right;">
+
+17
+
+</td>
+<td style="text-align:left;">
+
+Luisa
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+Quali and quanti (pre-post surveys) on teachers and pupils. The survey
+asks about subjective perception of knowing and enjoying learning about
+CC. This maps on emotions and possibly self efficacy\*
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+499
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+108
+
+</td>
+<td style="text-align:left;">
+
+Turner2022
+
+</td>
+<td style="text-align:left;">
+
+Marius,Luisa
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Excluded during extraction (motivation toward intervention, not outcome)
+
+</td>
+</tr>
+</tbody>
+</table>
+
 # 4 Final Numbers
 
 ``` r
@@ -21893,6 +22241,30 @@ Outcome
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+Bopardikar2021
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Turner2022
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -21902,7 +22274,7 @@ table(RejectedFinal$reason)
 
     ## 
     ##          I+O Intervention   MissingPdf      Outcome          P+I        P+I+O 
-    ##            7            8            1           38            3            7 
+    ##            7            8            1           40            3            7 
     ##   Population    StudyType 
     ##           21           10
 

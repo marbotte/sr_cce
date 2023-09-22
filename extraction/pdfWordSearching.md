@@ -1,7 +1,7 @@
 Searching words in the pdfs
 ================
 Marius Bottin
-2023-09-21
+2023-09-22
 
 - [1 Self-efficacy](#1-self-efficacy)
 - [2 Controversy](#2-controversy)
@@ -9,6 +9,8 @@ Marius Bottin
   - [2.2 Belief](#22-belief)
   - [2.3 Opinion](#23-opinion)
   - [2.4 Republican](#24-republican)
+- [3 Earthquakes](#3-earthquakes)
+- [4 Misconception](#4-misconception)
 
 ``` r
 require(knitr)
@@ -253,3 +255,95 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 |      | ./Marius/Walsh2018.pdf      | 27  |
 |      | ./Marius/Stevenson2018a.pdf | 3   |
 |      | ./Marius/White2022.pdf      | 2   |
+
+# 3 Earthquakes
+
+“Earthq\*”
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "earthq" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+|      |                              |     |
+|:-----|:-----------------------------|:----|
+| init | ./Ana/Chang2018.pdf          | 3   |
+|      | ./Ana/Williams2017.pdf       | 2   |
+|      | ./JuanGabriel/Nkoana2020.pdf | 5   |
+|      | ./Benjamin/Silva2021.pdf     | 8   |
+
+“se?ism\*”
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "se?ism" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+| x                        |
+|:-------------------------|
+| ./Benjamin/Silva2021.pdf |
+| 59                       |
+
+# 4 Misconception
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "misconception" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+|      |                                   |     |
+|:-----|:----------------------------------|:----|
+| init | ./Sara/Pekel2019.pdf              | 14  |
+|      | ./Sara/McNeill2012.pdf            | 21  |
+|      | ./Sara/Smith2019.pdf              | 10  |
+|      | ./Sara/Bodzin2014.pdf             | 3   |
+|      | ./Ana/Taber2009.pdf               | 19  |
+|      | ./Ana/Baker2013.pdf               | 7   |
+|      | ./Ana/Monroe2016.pdf              | 2   |
+|      | ./Ana/Lambert2012.pdf             | 3   |
+|      | ./Ana/Porter2012.pdf              | 23  |
+|      | ./Ana/Lombardi2013.pdf            | 2   |
+|      | ./Ana/Boon2016.pdf                | 6   |
+|      | ./Ana/Aksut2016.pdf               | 5   |
+|      | ./Ana/Dormody2021.pdf             | 6   |
+|      | ./Ana/Shea2016.pdf                | 2   |
+|      | ./Ana/Bozdogan2011.pdf            | 43  |
+|      | ./Ana/DeWaters2014.pdf            | 3   |
+|      | ./Ana/Kubisch2022.pdf             | 3   |
+|      | ./Ana/Nakamura2019.pdf            | 2   |
+|      | ./Ana/Liu2015.pdf                 | 7   |
+|      | ./Ana/Bofferding2015.pdf          | 8   |
+|      | ./Ana/Roychoudhury2017.pdf        | 8   |
+|      | ./Ana/Chang2018.pdf               | 69  |
+|      | ./Sergio/Mason1998.pdf            | 3   |
+|      | ./Sergio/Reinfried2012.pdf        | 6   |
+|      | ./Sergio/Sternang2012.pdf         | 2   |
+|      | ./Sergio/Kolenaty2022.pdf         | 2   |
+|      | ./Sergio/Kumar2023.pdf            | 2   |
+|      | ./Luisa/McNeal2014a.pdf           | 8   |
+|      | ./Luisa/Nussbaum2015.pdf          | 4   |
+|      | ./Luisa/Tasquier2017.pdf          | 3   |
+|      | ./Luisa/Gold2015a.pdf             | 2   |
+|      | ./JuanGabriel/Dal2015a.pdf        | 3   |
+|      | ./JuanGabriel/Karpudewan2015a.pdf | 63  |
+|      | ./JuanGabriel/Saribaş2016.pdf     | 4   |
+|      | ./JuanGabriel/Klosterman2010.pdf  | 10  |
+|      | ./Benjamin/Sundberg2013.pdf       | 2   |
+|      | ./Benjamin/Ratinen2013.pdf        | 9   |
+|      | ./Benjamin/Taylor2020.pdf         | 2   |
+|      | ./Marius/Karpudewan2017.pdf       | 4   |
+|      | ./Marius/Tasti2021.pdf            | 4   |
+|      | ./Marius/Cebesoy2022.pdf          | 3   |
+|      | ./Marius/Sellmann2015.pdf         | 2   |
+|      | ./Marius/Gutierrez2022.pdf        | 12  |
+|      | ./Marius/Karpudewan2015.pdf       | 2   |
+|      | ./Marius/Faria2015.pdf            | 3   |
+|      | ./Marius/White2022.pdf            | 4   |
+|      | ./Marius/Korsager2015.pdf         | 2   |
+|      | ./Marius/Drewes2018.pdf           | 5   |
