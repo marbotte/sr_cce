@@ -12,6 +12,7 @@ always_allow_html: true
 
 ```{r}
 require(knitr)&require(kableExtra)
+knitr::opts_chunk$set(cache=T)
 dos <- normalizePath("../../extraction/")
 ```
 
@@ -99,14 +100,14 @@ allControv<-data.frame(
 )
 rownames(allControv)<-sapply(sep1,function(x)x[1])
 #allControv<-allControv[rowSums(allControv)>1,]
-allControv$SUM<-rowSums(allControv)
-allControv[1:5]<-lapply(allControv[1:5], function(x) {
-    cell_spec(x, bold = T, 
-              color = spec_color(x, end = 0.9),
-              font_size = spec_font_size(x))
-})
-allControv[6]<-cell_spec(allControv[[6]], color = "white", bold = T,
-    background = spec_color(1:10, end = 0.9, option = "A", direction = -1))
+ allControv$SUM<-rowSums(allControv)
+# allControv[1:5]<-lapply(allControv[1:5], function(x) {
+#     cell_spec(x, bold = T, 
+#               color = spec_color(x, end = 0.9),
+#               font_size = spec_font_size(x))
+# })
+# allControv[6]<-cell_spec(allControv[[6]], color = "white", bold = T,
+#     background = spec_color(1:10, end = 0.9, option = "A", direction = -1))
 kbl(allControv, escape = F, align = "c") %>%
   kable_classic("striped", full_width = F)
 ```

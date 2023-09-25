@@ -25,6 +25,7 @@ require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
+knitr::opts_chunk$set(cache=T)
 dos <- normalizePath("../../extraction/")
 ```
 
@@ -2667,14 +2668,14 @@ allControv<-data.frame(
 )
 rownames(allControv)<-sapply(sep1,function(x)x[1])
 #allControv<-allControv[rowSums(allControv)>1,]
-allControv$SUM<-rowSums(allControv)
-allControv[1:5]<-lapply(allControv[1:5], function(x) {
-    cell_spec(x, bold = T, 
-              color = spec_color(x, end = 0.9),
-              font_size = spec_font_size(x))
-})
-allControv[6]<-cell_spec(allControv[[6]], color = "white", bold = T,
-    background = spec_color(1:10, end = 0.9, option = "A", direction = -1))
+ allControv$SUM<-rowSums(allControv)
+# allControv[1:5]<-lapply(allControv[1:5], function(x) {
+#     cell_spec(x, bold = T, 
+#               color = spec_color(x, end = 0.9),
+#               font_size = spec_font_size(x))
+# })
+# allControv[6]<-cell_spec(allControv[[6]], color = "white", bold = T,
+#     background = spec_color(1:10, end = 0.9, option = "A", direction = -1))
 kbl(allControv, escape = F, align = "c") %>%
   kable_classic("striped", full_width = F)
 ```
@@ -2725,39 +2726,32 @@ SUM
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -2769,39 +2763,32 @@ SUM
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[115\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
-!important;font-size: 16px;“}
+115
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[118\]{style=” font-weight: bold; color: white
-!important;border-radius: 4px; padding-right: 4px; padding-left: 4px;
-background-color: rgba(254, 160, 109, 1) !important;“}
+118
 
 </td>
 </tr>
@@ -2813,39 +2800,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: rgba(72, 27, 109, 1)
-!important;font-size: 9px;“}
+9
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[12\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+12
 
 </td>
 </tr>
@@ -2857,39 +2837,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -2901,39 +2874,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -2945,39 +2911,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -2989,39 +2948,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 23, 105, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[15\]{style=” font-weight: bold; color: rgba(59, 82, 139, 1)
-!important;font-size: 10px;“}
+15
 
 </td>
 <td style="text-align:center;">
 
-\[11\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
-!important;font-size: 9px;“}
+11
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[30\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+30
 
 </td>
 </tr>
@@ -3033,39 +2985,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[20\]{style=” font-weight: bold; color: rgba(49, 104, 142, 1)
-!important;font-size: 11px;“}
+20
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[24\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+24
 
 </td>
 </tr>
@@ -3077,39 +3022,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -3121,39 +3059,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[20\]{style=” font-weight: bold; color: rgba(49, 104, 142, 1)
-!important;font-size: 11px;“}
+20
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[23\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+23
 
 </td>
 </tr>
@@ -3165,39 +3096,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[40\]{style=” font-weight: bold; color: rgba(53, 183, 121, 1)
-!important;font-size: 14px;“}
+40
 
 </td>
 <td style="text-align:center;">
 
-\[11\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
-!important;font-size: 9px;“}
+11
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 36, 117, 1)
-!important;font-size: 9px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[57\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+57
 
 </td>
 </tr>
@@ -3209,39 +3133,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -3253,39 +3170,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -3297,39 +3207,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: rgba(69, 54, 129, 1)
-!important;font-size: 9px;“}
+7
 
 </td>
 <td style="text-align:center;">
 
-\[10\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+10
 
 </td>
 </tr>
@@ -3341,39 +3244,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -3385,39 +3281,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -3429,39 +3318,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -3473,39 +3355,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -3517,39 +3392,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -3561,39 +3429,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -3605,39 +3466,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
-!important;font-size: 9px;“}
+7
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+7
 
 </td>
 </tr>
@@ -3649,39 +3503,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -3693,39 +3540,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: rgba(72, 38, 119, 1)
-!important;font-size: 9px;“}
+7
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
-!important;font-size: 8px;“}
+6
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: rgba(65, 68, 135, 1)
-!important;font-size: 10px;“}
+6
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[22\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+22
 
 </td>
 </tr>
@@ -3737,39 +3577,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[8\]{style=” font-weight: bold; color: rgba(71, 43, 122, 1)
-!important;font-size: 9px;“}
+8
 
 </td>
 <td style="text-align:center;">
 
-\[18\]{style=” font-weight: bold; color: rgba(53, 96, 141, 1)
-!important;font-size: 11px;“}
+18
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[27\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+27
 
 </td>
 </tr>
@@ -3781,39 +3614,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -3825,39 +3651,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -3869,39 +3688,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[8\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+8
 
 </td>
 </tr>
@@ -3913,39 +3725,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -3957,39 +3762,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -4001,39 +3799,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: rgba(72, 23, 104, 1)
-!important;font-size: 8px;“}
+7
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[10\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+10
 
 </td>
 </tr>
@@ -4045,39 +3836,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+4
 
 </td>
 </tr>
@@ -4089,39 +3873,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(71, 16, 99, 1)
-!important;font-size: 8px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -4133,39 +3910,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[60\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
-!important;font-size: 16px;“}
+60
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[13\]{style=” font-weight: bold; color: rgba(72, 37, 118, 1)
-!important;font-size: 9px;“}
+13
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[75\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+75
 
 </td>
 </tr>
@@ -4177,39 +3947,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -4221,39 +3984,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: rgba(72, 36, 117, 1)
-!important;font-size: 9px;“}
+6
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[41\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
-!important;font-size: 16px;“}
+41
 
 </td>
 <td style="text-align:center;">
 
-\[50\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+50
 
 </td>
 </tr>
@@ -4265,39 +4021,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[13\]{style=” font-weight: bold; color: rgba(63, 72, 137, 1)
-!important;font-size: 10px;“}
+13
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[16\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+16
 
 </td>
 </tr>
@@ -4309,39 +4058,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+4
 
 </td>
 </tr>
@@ -4353,39 +4095,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[15\]{style=” font-weight: bold; color: rgba(59, 82, 139, 1)
-!important;font-size: 10px;“}
+15
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[17\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+17
 
 </td>
 </tr>
@@ -4397,39 +4132,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -4441,39 +4169,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -4485,39 +4206,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[22\]{style=” font-weight: bold; color: rgba(45, 113, 142, 1)
-!important;font-size: 11px;“}
+22
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[25\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+25
 
 </td>
 </tr>
@@ -4529,39 +4243,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -4573,39 +4280,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+7
 
 </td>
 </tr>
@@ -4617,39 +4317,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 17, 100, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -4661,39 +4354,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -4705,39 +4391,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[12\]{style=” font-weight: bold; color: rgba(72, 35, 116, 1)
-!important;font-size: 9px;“}
+12
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[12\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+12
 
 </td>
 </tr>
@@ -4749,39 +4428,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+4
 
 </td>
 </tr>
@@ -4793,39 +4465,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
-!important;font-size: 9px;“}
+7
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[8\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+8
 
 </td>
 </tr>
@@ -4837,39 +4502,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -4881,39 +4539,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -4925,39 +4576,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -4969,39 +4613,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[37\]{style=” font-weight: bold; color: rgba(37, 173, 130, 1)
-!important;font-size: 13px;“}
+37
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: rgba(72, 27, 109, 1)
-!important;font-size: 9px;“}
+9
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 32, 114, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[51\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+51
 
 </td>
 </tr>
@@ -5013,39 +4650,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+4
 
 </td>
 </tr>
@@ -5057,39 +4687,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -5101,39 +4724,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -5145,39 +4761,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -5189,39 +4798,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -5233,39 +4835,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -5277,39 +4872,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -5321,39 +4909,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 17, 100, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -5365,39 +4946,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -5409,39 +4983,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
-!important;font-size: 8px;“}
+6
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+7
 
 </td>
 </tr>
@@ -5453,39 +5020,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -5497,39 +5057,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+7
 
 </td>
 </tr>
@@ -5541,39 +5094,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -5585,39 +5131,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+4
 
 </td>
 </tr>
@@ -5629,39 +5168,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -5673,39 +5205,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: rgba(72, 32, 114, 1)
-!important;font-size: 9px;“}
+6
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[10\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+10
 
 </td>
 </tr>
@@ -5717,39 +5242,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
-!important;font-size: 9px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+9
 
 </td>
 </tr>
@@ -5761,39 +5279,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[54\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
-!important;font-size: 16px;“}
+54
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[58\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+58
 
 </td>
 </tr>
@@ -5805,39 +5316,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
-!important;font-size: 9px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -5849,39 +5353,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[11\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
-!important;font-size: 9px;“}
+11
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[15\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+15
 
 </td>
 </tr>
@@ -5893,39 +5390,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: rgba(69, 53, 129, 1)
-!important;font-size: 9px;“}
+9
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+9
 
 </td>
 </tr>
@@ -5937,39 +5427,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+7
 
 </td>
 </tr>
@@ -5981,39 +5464,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -6025,39 +5501,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -6069,39 +5538,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -6113,39 +5575,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[13\]{style=” font-weight: bold; color: rgba(63, 72, 137, 1)
-!important;font-size: 10px;“}
+13
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[14\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+14
 
 </td>
 </tr>
@@ -6157,39 +5612,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -6201,39 +5649,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+4
 
 </td>
 </tr>
@@ -6245,39 +5686,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[8\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+8
 
 </td>
 </tr>
@@ -6289,39 +5723,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -6333,39 +5760,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -6377,39 +5797,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -6421,39 +5834,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -6465,39 +5871,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -6509,39 +5908,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -6553,39 +5945,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -6597,39 +5982,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 23, 105, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
-!important;font-size: 9px;“}
+7
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
-!important;font-size: 8px;“}
+6
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 17, 100, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[19\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+19
 
 </td>
 </tr>
@@ -6641,39 +6019,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -6685,39 +6056,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -6729,39 +6093,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -6773,39 +6130,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -6817,39 +6167,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -6861,39 +6204,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -6905,39 +6241,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+4
 
 </td>
 </tr>
@@ -6949,39 +6278,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
-!important;font-size: 9px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+7
 
 </td>
 </tr>
@@ -6993,39 +6315,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
-!important;font-size: 9px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -7037,39 +6352,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[35\]{style=” font-weight: bold; color: rgba(31, 150, 139, 1)
-!important;font-size: 13px;“}
+35
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[37\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+37
 
 </td>
 </tr>
@@ -7081,39 +6389,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[13\]{style=” font-weight: bold; color: rgba(63, 72, 137, 1)
-!important;font-size: 10px;“}
+13
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[14\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+14
 
 </td>
 </tr>
@@ -7125,39 +6426,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -7169,39 +6463,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+4
 
 </td>
 </tr>
@@ -7213,39 +6500,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: rgba(72, 38, 119, 1)
-!important;font-size: 9px;“}
+7
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+9
 
 </td>
 </tr>
@@ -7257,39 +6537,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -7301,39 +6574,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(72, 28, 110, 1)
-!important;font-size: 9px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+7
 
 </td>
 </tr>
@@ -7345,39 +6611,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -7389,39 +6648,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -7433,39 +6685,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+9
 
 </td>
 </tr>
@@ -7477,39 +6722,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -7521,39 +6759,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -7565,39 +6796,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -7609,39 +6833,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -7653,39 +6870,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
-!important;font-size: 9px;“}
+7
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[8\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+8
 
 </td>
 </tr>
@@ -7697,39 +6907,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -7741,39 +6944,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -7785,39 +6981,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -7829,39 +7018,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -7873,39 +7055,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -7917,39 +7092,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
-!important;font-size: 9px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -7961,39 +7129,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: rgba(72, 27, 109, 1)
-!important;font-size: 9px;“}
+9
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[13\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+13
 
 </td>
 </tr>
@@ -8005,39 +7166,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -8049,39 +7203,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -8093,39 +7240,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -8137,39 +7277,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[15\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
-!important;font-size: 9px;“}
+15
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[17\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+17
 
 </td>
 </tr>
@@ -8181,39 +7314,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
-!important;font-size: 9px;“}
+7
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+9
 
 </td>
 </tr>
@@ -8225,39 +7351,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -8269,39 +7388,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[10\]{style=” font-weight: bold; color: rgba(69, 53, 129, 1)
-!important;font-size: 9px;“}
+10
 
 </td>
 <td style="text-align:center;">
 
-\[24\]{style=” font-weight: bold; color: rgba(42, 120, 142, 1)
-!important;font-size: 12px;“}
+24
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: rgba(72, 27, 109, 1)
-!important;font-size: 9px;“}
+9
 
 </td>
 <td style="text-align:center;">
 
-\[27\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
-!important;font-size: 16px;“}
+27
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[70\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+70
 
 </td>
 </tr>
@@ -8313,39 +7425,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -8357,39 +7462,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[8\]{style=” font-weight: bold; color: rgba(72, 24, 106, 1)
-!important;font-size: 9px;“}
+8
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[8\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+8
 
 </td>
 </tr>
@@ -8401,39 +7499,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 23, 105, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[19\]{style=” font-weight: bold; color: rgba(50, 100, 142, 1)
-!important;font-size: 11px;“}
+19
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[24\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+24
 
 </td>
 </tr>
@@ -8445,39 +7536,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
-!important;font-size: 9px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[8\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+8
 
 </td>
 </tr>
@@ -8489,39 +7573,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -8533,39 +7610,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -8577,39 +7647,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -8621,39 +7684,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(71, 16, 99, 1)
-!important;font-size: 8px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[8\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+8
 
 </td>
 </tr>
@@ -8665,39 +7721,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -8709,39 +7758,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -8753,39 +7795,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[9\]{style=” font-weight: bold; color: rgba(69, 53, 129, 1)
-!important;font-size: 9px;“}
+9
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[10\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+10
 
 </td>
 </tr>
@@ -8797,39 +7832,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -8841,39 +7869,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+0
 
 </td>
 </tr>
@@ -8885,39 +7906,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[19\]{style=” font-weight: bold; color: rgba(50, 100, 142, 1)
-!important;font-size: 11px;“}
+19
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: rgba(71, 16, 99, 1)
-!important;font-size: 8px;“}
+5
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(72, 36, 117, 1)
-!important;font-size: 9px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[27\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+27
 
 </td>
 </tr>
@@ -8929,39 +7943,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -8973,39 +7980,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[5\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
-110, 92, 1) !important;“}
+5
 
 </td>
 </tr>
@@ -9017,39 +8017,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
-73, 104, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -9061,39 +8054,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[25\]{style=” font-weight: bold; color: rgba(65, 65, 134, 1)
-!important;font-size: 10px;“}
+25
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[33\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
-55, 121, 1) !important;“}
+33
 
 </td>
 </tr>
@@ -9105,39 +8091,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
-41, 129, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -9149,39 +8128,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
-!important;font-size: 9px;“}
+4
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[6\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
-26, 128, 1) !important;“}
+6
 
 </td>
 </tr>
@@ -9193,39 +8165,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
-15, 112, 1) !important;“}
+1
 
 </td>
 </tr>
@@ -9237,39 +8202,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
-14, 54, 1) !important;“}
+2
 
 </td>
 </tr>
@@ -9281,39 +8239,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
-4, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -9325,39 +8276,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-206, 145, 1) !important;“}
+3
 
 </td>
 </tr>
@@ -9369,39 +8313,32 @@ background-color: rgba(254, 160, 109, 1) !important;“}
 </td>
 <td style="text-align:center;">
 
-\[3\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
-!important;font-size: 8px;“}
+3
 
 </td>
 <td style="text-align:center;">
 
-\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
-!important;font-size: 8px;“}
+2
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
-!important;font-size: 8px;“}
+0
 
 </td>
 <td style="text-align:center;">
 
-\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
-!important;font-size: 8px;“}
+1
 
 </td>
 <td style="text-align:center;">
 
-\[7\]{style=” font-weight: bold; color: white !important;border-radius:
-4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
-160, 109, 1) !important;“}
+7
 
 </td>
 </tr>
