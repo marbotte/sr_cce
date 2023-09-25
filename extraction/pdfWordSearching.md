@@ -1,7 +1,7 @@
 Searching words in the pdfs
 ================
 Marius Bottin
-2023-09-22
+2023-09-25
 
 - [1 Self-efficacy](#1-self-efficacy)
 - [2 Controversy](#2-controversy)
@@ -9,14 +9,20 @@ Marius Bottin
   - [2.2 Belief](#22-belief)
   - [2.3 Opinion](#23-opinion)
   - [2.4 Republican](#24-republican)
+  - [2.5 Human-induced](#25-human-induced)
+  - [2.6 All controversy table](#26-all-controversy-table)
 - [3 Earthquakes](#3-earthquakes)
 - [4 Misconception](#4-misconception)
 
 ``` r
-require(knitr)
+require(knitr)&require(kableExtra)
 ```
 
     ## Loading required package: knitr
+
+    ## Loading required package: kableExtra
+
+    ## [1] TRUE
 
 ``` r
 dos <- normalizePath("../../extraction/")
@@ -33,26 +39,265 @@ sep <- strsplit(raw,":")
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-|      |                               |     |
-|:-----|:------------------------------|:----|
-| init | ./Sara/Muller2021a.pdf        | 2   |
-|      | ./Ana/Petersen2020.pdf        | 25  |
-|      | ./Ana/Schubatzky2022.pdf      | 48  |
-|      | ./Ana/Boon2016.pdf            | 4   |
-|      | ./Ana/DeWaters2014.pdf        | 21  |
-|      | ./Ana/Aksel_Stenberdt2023.pdf | 41  |
-|      | ./Sergio/Kolenaty2022.pdf     | 60  |
-|      | ./Luisa/Muller2021.pdf        | 2   |
-|      | ./Luisa/Stevenson2018.pdf     | 5   |
-|      | ./Luisa/Nussbaum2015.pdf      | 6   |
-|      | ./Luisa/Oberauer2023.pdf      | 2   |
-|      | ./JuanGabriel/Saribaş2016.pdf | 3   |
-|      | ./JuanGabriel/Trott2019.pdf   | 3   |
-|      | ./JuanGabriel/Flora2014.pdf   | 14  |
-|      | ./Benjamin/Wang2022.pdf       | 11  |
-|      | ./Marius/Gutierrez2022.pdf    | 8   |
-|      | ./Marius/Deisenrieder2020.pdf | 25  |
-|      | ./Marius/Ross2021.pdf         | 6   |
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Sara/Muller2021a.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Petersen2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+25
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Schubatzky2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+48
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Boon2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/DeWaters2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+21
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Aksel_Stenberdt2023.pdf
+
+</td>
+<td style="text-align:left;">
+
+41
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Kolenaty2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+60
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Muller2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Stevenson2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Nussbaum2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Oberauer2023.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Saribaş2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Trott2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Flora2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+14
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Wang2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+11
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Gutierrez2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Deisenrieder2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+25
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Ross2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+</tbody>
+</table>
 
 # 2 Controversy
 
@@ -62,34 +307,339 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "controvers" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+sep1<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-|      |                                         |     |
-|:-----|:----------------------------------------|:----|
-| init | ./Sara/Blaum2017.pdf                    | 4   |
-|      | ./Sara/McNeill2012.pdf                  | 3   |
-|      | ./Sara/Smith2019.pdf                    | 2   |
-|      | ./Sara/Lambert2013.pdf                  | 3   |
-|      | ./Ana/Monroe2016.pdf                    | 7   |
-|      | ./Ana/Schubatzky2022.pdf                | 8   |
-|      | ./Ana/Lester2006.pdf                    | 2   |
-|      | ./Ana/Steffensen2022.pdf                | 60  |
-|      | ./Ana/Porter2012.pdf                    | 2   |
-|      | ./Ana/Lombardi2013.pdf                  | 3   |
-|      | ./Ana/Khadka2021.pdf                    | 2   |
-|      | ./Sergio/McGowan2022.pdf                | 6   |
-|      | ./Luisa/Lawson2019a.pdf                 | 2   |
-|      | ./Luisa/Tasquier2017.pdf                | 4   |
-|      | ./Luisa/Gold2015a.pdf                   | 2   |
-|      | ./JuanGabriel/Walsh2019.pdf             | 2   |
-|      | ./JuanGabriel/Klosterman2010.pdf        | 35  |
-|      | ./JuanGabriel/Feldpausch_Parker2013.pdf | 7   |
-|      | ./JuanGabriel/Eggert2017.pdf            | 5   |
-|      | ./Marius/Walsh2018.pdf                  | 10  |
-|      | ./Marius/Gutierrez2022.pdf              | 4   |
-|      | ./Marius/Breslyn2019.pdf                | 2   |
-|      | ./Marius/Drewes2018.pdf                 | 3   |
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Sara/Blaum2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/McNeill2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Smith2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Lambert2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Monroe2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Schubatzky2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lester2006.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Steffensen2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+60
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Porter2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lombardi2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Khadka2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/McGowan2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Lawson2019a.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Tasquier2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Gold2015a.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Walsh2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Klosterman2010.pdf
+
+</td>
+<td style="text-align:left;">
+
+35
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Feldpausch_Parker2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Eggert2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Walsh2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+10
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Gutierrez2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Breslyn2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Drewes2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ## 2.2 Belief
 
@@ -97,81 +647,997 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "belief" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+sep2<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-|      |                                |     |
-|:-----|:-------------------------------|:----|
-| init | ./Sara/Muller2021a.pdf         | 4   |
-|      | ./Sara/Harker_Schuch2013.pdf   | 3   |
-|      | ./Sara/Harker_Schuch2020.pdf   | 3   |
-|      | ./Sara/Blaum2017.pdf           | 15  |
-|      | ./Sara/McNeill2012.pdf         | 20  |
-|      | ./Sara/Smith2019.pdf           | 20  |
-|      | ./Sara/Lambert2013.pdf         | 40  |
-|      | ./Sara/Bodzin2014.pdf          | 3   |
-|      | ./Ana/Petersen2020.pdf         | 3   |
-|      | ./Ana/Taber2009.pdf            | 7   |
-|      | ./Ana/Monroe2016.pdf           | 3   |
-|      | ./Ana/Schubatzky2022.pdf       | 18  |
-|      | ./Ana/Lester2006.pdf           | 2   |
-|      | ./Ana/Holthuis2014.pdf         | 3   |
-|      | ./Ana/Steffensen2022.pdf       | 2   |
-|      | ./Ana/Lombardi2013.pdf         | 6   |
-|      | ./Ana/Arya2016.pdf             | 13  |
-|      | ./Ana/Boon2016.pdf             | 15  |
-|      | ./Ana/Aksut2016.pdf            | 2   |
-|      | ./Ana/Shea2016.pdf             | 22  |
-|      | ./Ana/DeWaters2014.pdf         | 3   |
-|      | ./Ana/Parant2017.pdf           | 3   |
-|      | ./Ana/Aksel_Stenberdt2023.pdf  | 7   |
-|      | ./Ana/Liu2015.pdf              | 37  |
-|      | ./Ana/Bofferding2015.pdf       | 4   |
-|      | ./Ana/Roychoudhury2017.pdf     | 2   |
-|      | ./Ana/Chang2018.pdf            | 4   |
-|      | ./Ana/Bentz2020.pdf            | 2   |
-|      | ./Ana/Williams2017.pdf         | 2   |
-|      | ./Sergio/Mason1998.pdf         | 2   |
-|      | ./Sergio/Siegner2018.pdf       | 2   |
-|      | ./Sergio/McGowan2022.pdf       | 3   |
-|      | ./Sergio/Sternang2012.pdf      | 5   |
-|      | ./Sergio/Meya2018.pdf          | 54  |
-|      | ./Sergio/Xie2014.pdf           | 5   |
-|      | ./Sergio/Cebesoy2019.pdf       | 2   |
-|      | ./Sergio/Kolenaty2022.pdf      | 9   |
-|      | ./Sergio/Kumar2023.pdf         | 3   |
-|      | ./Luisa/Muller2021.pdf         | 4   |
-|      | ./Luisa/Stevenson2018.pdf      | 13  |
-|      | ./Luisa/Lawson2019a.pdf        | 2   |
-|      | ./Luisa/Oberauer2023.pdf       | 2   |
-|      | ./Luisa/Tasquier2017.pdf       | 7   |
-|      | ./Luisa/Gold2015a.pdf          | 2   |
-|      | ./JuanGabriel/Trott2022.pdf    | 4   |
-|      | ./JuanGabriel/Saribaş2016.pdf  | 5   |
-|      | ./JuanGabriel/Trott2019.pdf    | 5   |
-|      | ./JuanGabriel/Flora2014.pdf    | 13  |
-|      | ./JuanGabriel/Nkoana2020.pdf   | 3   |
-|      | ./JuanGabriel/da_Rocha2020.pdf | 2   |
-|      | ./Benjamin/Sundberg2013.pdf    | 3   |
-|      | ./Benjamin/Ratinen2013.pdf     | 3   |
-|      | ./Benjamin/Trott2020b.pdf      | 7   |
-|      | ./Benjamin/Sumrall2021.pdf     | 3   |
-|      | ./Benjamin/Wang2022.pdf        | 5   |
-|      | ./Benjamin/Pruneau2003.pdf     | 4   |
-|      | ./Marius/Tasti2021.pdf         | 4   |
-|      | ./Marius/Trott2020a.pdf        | 7   |
-|      | ./Marius/Jones2021.pdf         | 2   |
-|      | ./Marius/Walsh2018.pdf         | 24  |
-|      | ./Marius/Gutierrez2022.pdf     | 19  |
-|      | ./Marius/Goulah2017.pdf        | 5   |
-|      | ./Marius/Tasquier2015.pdf      | 2   |
-|      | ./Marius/Hu2016.pdf            | 9   |
-|      | ./Marius/Stevenson2018a.pdf    | 19  |
-|      | ./Marius/Deisenrieder2020.pdf  | 4   |
-|      | ./Marius/Ross2021.pdf          | 2   |
-|      | ./Marius/White2022.pdf         | 4   |
-|      | ./Marius/Parth2020.pdf         | 4   |
-|      | ./Marius/Drewes2018.pdf        | 2   |
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Sara/Muller2021a.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Harker_Schuch2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Harker_Schuch2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Blaum2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+15
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/McNeill2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+20
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Smith2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+20
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Lambert2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+40
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Bodzin2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Petersen2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Taber2009.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Monroe2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Schubatzky2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+18
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lester2006.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Holthuis2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Steffensen2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lombardi2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Arya2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+13
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Boon2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+15
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Aksut2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Shea2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+22
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/DeWaters2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Parant2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Aksel_Stenberdt2023.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Liu2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+37
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Bofferding2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Roychoudhury2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Chang2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Bentz2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Williams2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Mason1998.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Siegner2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/McGowan2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Sternang2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Meya2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+54
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Xie2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Cebesoy2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Kolenaty2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+9
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Kumar2023.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Muller2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Stevenson2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+13
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Lawson2019a.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Oberauer2023.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Tasquier2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Gold2015a.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Trott2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Saribaş2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Trott2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Flora2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+13
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Nkoana2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/da_Rocha2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Sundberg2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Ratinen2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Trott2020b.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Sumrall2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Wang2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Pruneau2003.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Tasti2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Trott2020a.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Jones2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Walsh2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Gutierrez2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+19
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Goulah2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Tasquier2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Hu2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+9
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Stevenson2018a.pdf
+
+</td>
+<td style="text-align:left;">
+
+19
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Deisenrieder2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Ross2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/White2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Parth2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Drewes2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ## 2.3 Opinion
 
@@ -179,65 +1645,773 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "opinion" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+sep3<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-|      |                                   |     |
-|:-----|:----------------------------------|:----|
-| init | ./Sara/Harker_Schuch2013.pdf      | 115 |
-|      | ./Sara/Harker_Schuch2020.pdf      | 9   |
-|      | ./Sara/Lozano2022.pdf             | 2   |
-|      | ./Sara/Blaum2017.pdf              | 11  |
-|      | ./Sara/Lambert2013.pdf            | 11  |
-|      | ./Ana/Sellmann2013.pdf            | 3   |
-|      | ./Ana/Gladwin2022.pdf             | 3   |
-|      | ./Ana/Baker2013.pdf               | 2   |
-|      | ./Ana/Monroe2016.pdf              | 6   |
-|      | ./Ana/Lester2006.pdf              | 4   |
-|      | ./Ana/Lambert2012.pdf             | 2   |
-|      | ./Ana/Holthuis2014.pdf            | 7   |
-|      | ./Ana/Bhattacharya2021.pdf        | 2   |
-|      | ./Ana/Feierabend2012.pdf          | 5   |
-|      | ./Ana/Steffensen2022.pdf          | 13  |
-|      | ./Ana/Porter2012.pdf              | 3   |
-|      | ./Ana/Arya2016.pdf                | 2   |
-|      | ./Ana/Shea2016.pdf                | 2   |
-|      | ./Ana/DeWaters2014.pdf            | 3   |
-|      | ./Ana/Choi2021.pdf                | 4   |
-|      | ./Ana/Salas_Rueda2021.pdf         | 12  |
-|      | ./Ana/Liu2015.pdf                 | 9   |
-|      | ./Sergio/Levrini2021.pdf          | 6   |
-|      | ./Sergio/Svihla2012.pdf           | 2   |
-|      | ./Sergio/Mason1998.pdf            | 4   |
-|      | ./Sergio/Reinfried2012.pdf        | 4   |
-|      | ./Sergio/Siegner2018.pdf          | 2   |
-|      | ./Sergio/Sternang2012.pdf         | 4   |
-|      | ./Sergio/Meya2018.pdf             | 4   |
-|      | ./Sergio/Cebesoy2019.pdf          | 11  |
-|      | ./Sergio/Kumar2023.pdf            | 3   |
-|      | ./Luisa/McNeal2014a.pdf           | 2   |
-|      | ./Luisa/Sukardi2022.pdf           | 4   |
-|      | ./Luisa/Lawson2019a.pdf           | 3   |
-|      | ./Luisa/Jin2013.pdf               | 2   |
-|      | ./Luisa/Pruneau2006a.pdf          | 3   |
-|      | ./Luisa/Tasquier2017.pdf          | 6   |
-|      | ./JuanGabriel/Karpudewan2015a.pdf | 2   |
-|      | ./JuanGabriel/Klosterman2010.pdf  | 2   |
-|      | ./JuanGabriel/da_Rocha2020.pdf    | 3   |
-|      | ./Benjamin/Sundberg2013.pdf       | 2   |
-|      | ./Benjamin/Ratinen2013.pdf        | 2   |
-|      | ./Benjamin/Pruneau2006.pdf        | 2   |
-|      | ./Benjamin/Pruneau2003.pdf        | 9   |
-|      | ./Marius/Cebesoy2022.pdf          | 15  |
-|      | ./Marius/Jones2021.pdf            | 2   |
-|      | ./Marius/Walsh2018.pdf            | 9   |
-|      | ./Marius/Sellmann2015.pdf         | 4   |
-|      | ./Marius/Chin2016.pdf             | 8   |
-|      | ./Marius/Tasquier2015.pdf         | 5   |
-|      | ./Marius/Stevenson2018a.pdf       | 5   |
-|      | ./Marius/White2022.pdf            | 25  |
-|      | ./Marius/Vicente2020.pdf          | 2   |
-|      | ./Marius/Parth2020.pdf            | 2   |
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Sara/Harker_Schuch2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+115
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Harker_Schuch2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+9
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Lozano2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Blaum2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+11
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Lambert2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+11
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Sellmann2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Gladwin2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Baker2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Monroe2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lester2006.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lambert2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Holthuis2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Bhattacharya2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Feierabend2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Steffensen2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+13
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Porter2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Arya2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Shea2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/DeWaters2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Choi2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Salas_Rueda2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+12
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Liu2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+9
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Levrini2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Svihla2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Mason1998.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Reinfried2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Siegner2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Sternang2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Meya2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Cebesoy2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+11
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Kumar2023.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/McNeal2014a.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Sukardi2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Lawson2019a.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Jin2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Pruneau2006a.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Tasquier2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Karpudewan2015a.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Klosterman2010.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/da_Rocha2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Sundberg2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Ratinen2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Pruneau2006.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Pruneau2003.pdf
+
+</td>
+<td style="text-align:left;">
+
+9
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Cebesoy2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+15
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Jones2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Walsh2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+9
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Sellmann2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Chin2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Tasquier2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Stevenson2018a.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/White2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+25
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Vicente2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Parth2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ## 2.4 Republican
 
@@ -245,16 +2419,6994 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "republican" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+sep4<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-|      |                             |     |
-|:-----|:----------------------------|:----|
-| init | ./Sara/Lambert2013.pdf      | 3   |
-|      | ./Ana/Monroe2016.pdf        | 6   |
-|      | ./Marius/Walsh2018.pdf      | 27  |
-|      | ./Marius/Stevenson2018a.pdf | 3   |
-|      | ./Marius/White2022.pdf      | 2   |
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Sara/Lambert2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Monroe2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Walsh2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+27
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Stevenson2018a.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/White2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 2.5 Human-induced
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "human-induced" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep5 <- sep
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Sara/Bodzin2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lambert2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lombardi2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+41
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Korfgen2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Liu2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Visintainer2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Tasquier2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Ratinen2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 2.6 All controversy table
+
+``` r
+all(sapply(sep1,function(x)x[1])==sapply(sep2,function(x)x[1]))
+```
+
+    ## [1] TRUE
+
+``` r
+all(sapply(sep1,function(x)x[1])==sapply(sep3,function(x)x[1]))
+```
+
+    ## [1] TRUE
+
+``` r
+all(sapply(sep1,function(x)x[1])==sapply(sep4,function(x)x[1]))
+```
+
+    ## [1] TRUE
+
+``` r
+all(sapply(sep1,function(x)x[1])==sapply(sep5,function(x)x[1]))
+```
+
+    ## [1] TRUE
+
+``` r
+allControv<-data.frame(
+  controvers=as.integer(sapply(sep1,function(x)x[2])),
+  belief=as.integer(sapply(sep2,function(x)x[2])),
+  opinion=as.integer(sapply(sep3,function(x)x[2])),
+  republican=as.integer(sapply(sep4,function(x)x[2])),
+  humanInduced=as.integer(sapply(sep5,function(x)x[2]))
+)
+rownames(allControv)<-sapply(sep1,function(x)x[1])
+#allControv<-allControv[rowSums(allControv)>1,]
+allControv$SUM<-rowSums(allControv)
+allControv[1:5]<-lapply(allControv[1:5], function(x) {
+    cell_spec(x, bold = T, 
+              color = spec_color(x, end = 0.9),
+              font_size = spec_font_size(x))
+})
+allControv[6]<-cell_spec(allControv[[6]], color = "white", bold = T,
+    background = spec_color(1:10, end = 0.9, option = "A", direction = -1))
+kbl(allControv, escape = F, align = "c") %>%
+  kable_classic("striped", full_width = F)
+```
+
+<table class=" lightable-classic lightable-striped" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+
+controvers
+
+</th>
+<th style="text-align:center;">
+
+belief
+
+</th>
+<th style="text-align:center;">
+
+opinion
+
+</th>
+<th style="text-align:center;">
+
+republican
+
+</th>
+<th style="text-align:center;">
+
+humanInduced
+
+</th>
+<th style="text-align:center;">
+
+SUM
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Muller2021a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Harker_Schuch2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[115\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
+!important;font-size: 16px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[118\]{style=” font-weight: bold; color: white
+!important;border-radius: 4px; padding-right: 4px; padding-left: 4px;
+background-color: rgba(254, 160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Harker_Schuch2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: rgba(72, 27, 109, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[12\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Lozano2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Pekel2019.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Littrell2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Blaum2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 23, 105, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[15\]{style=” font-weight: bold; color: rgba(59, 82, 139, 1)
+!important;font-size: 10px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[11\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[30\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/McNeill2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[20\]{style=” font-weight: bold; color: rgba(49, 104, 142, 1)
+!important;font-size: 11px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[24\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Cibik2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Smith2019.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[20\]{style=” font-weight: bold; color: rgba(49, 104, 142, 1)
+!important;font-size: 11px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[23\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Lambert2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[40\]{style=” font-weight: bold; color: rgba(53, 183, 121, 1)
+!important;font-size: 14px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[11\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 36, 117, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[57\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Salsabila2019.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Kabir2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Bodzin2014.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: rgba(69, 54, 129, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[10\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sara/Kern2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Sellmann2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Gladwin2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Kinsey2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Petersen2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Leckey2021a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Taber2009.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Baker2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Monroe2016.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: rgba(72, 38, 119, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: rgba(65, 68, 135, 1)
+!important;font-size: 10px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[22\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Schubatzky2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[8\]{style=” font-weight: bold; color: rgba(71, 43, 122, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[18\]{style=” font-weight: bold; color: rgba(53, 96, 141, 1)
+!important;font-size: 11px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[27\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Bopardikar2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Chattuchai2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Lester2006.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[8\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Trott2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Lambert2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Holthuis2014.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: rgba(72, 23, 104, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[10\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Bhattacharya2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Feierabend2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(71, 16, 99, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Steffensen2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[60\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
+!important;font-size: 16px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[13\]{style=” font-weight: bold; color: rgba(72, 37, 118, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[75\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Porter2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Lombardi2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: rgba(72, 36, 117, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[41\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
+!important;font-size: 16px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[50\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Arya2016.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[13\]{style=” font-weight: bold; color: rgba(63, 72, 137, 1)
+!important;font-size: 10px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[16\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Khadka2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Boon2016.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[15\]{style=” font-weight: bold; color: rgba(59, 82, 139, 1)
+!important;font-size: 10px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[17\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Aksut2016.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Dormody2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Shea2016.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[22\]{style=” font-weight: bold; color: rgba(45, 113, 142, 1)
+!important;font-size: 11px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[25\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Bozdogan2011.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/DeWaters2014.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Korfgen2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 17, 100, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Choi2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Salas_Rueda2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[12\]{style=” font-weight: bold; color: rgba(72, 35, 116, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[12\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Parant2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Aksel_Stenberdt2023.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[8\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Puttick2018.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Kubisch2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Nakamura2019.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Liu2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[37\]{style=” font-weight: bold; color: rgba(37, 173, 130, 1)
+!important;font-size: 13px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: rgba(72, 27, 109, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 32, 114, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[51\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Bofferding2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Roychoudhury2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Chang2018.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Nicholas_Figueroa2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Bentz2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Williams2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Varma2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Ana/Visintainer2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 17, 100, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Dormody2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Levrini2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Svihla2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Mason1998.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Reinfried2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Siegner2018.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Zografakis2008.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/McGowan2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: rgba(72, 32, 114, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[10\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Sternang2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Meya2018.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[54\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
+!important;font-size: 16px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[58\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Xie2014.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Cebesoy2019.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[11\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[15\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Kolenaty2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: rgba(69, 53, 129, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Kumar2023.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Sergio/Sellmann2013a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Skains2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Muller2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Stevenson2018.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[13\]{style=” font-weight: bold; color: rgba(63, 72, 137, 1)
+!important;font-size: 10px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[14\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/McNeal2014a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Sukardi2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Lawson2019a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[8\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Nussbaum2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Herrick2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Turner2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Jin2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Markowitz2018.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Oberauer2023.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Pruneau2006a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Tasquier2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 23, 105, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 17, 100, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[19\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Luisa/Gold2015a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./results_graphs_number.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Dal2015a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Trott2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Karpudewan2015a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Sutela2023.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Walsh2019.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Saribaş2016.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Trott2019.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Klosterman2010.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[35\]{style=” font-weight: bold; color: rgba(31, 150, 139, 1)
+!important;font-size: 13px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[37\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Flora2014.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[13\]{style=” font-weight: bold; color: rgba(63, 72, 137, 1)
+!important;font-size: 10px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[14\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Schuster2008.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Nkoana2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Feldpausch_Parker2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: rgba(72, 38, 119, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/da_Rocha2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(70, 10, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Eggert2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(72, 28, 110, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./JuanGabriel/Zhong2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Sundberg2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Ratinen2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Veijalainen2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Ruboon2012.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Roscoe2013.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Taylor2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Trott2020b.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[8\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Sumrall2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 20, 102, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Li2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Raes2016.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Silva2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Pruneau2006.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Wang2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Pruneau2003.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: rgba(72, 27, 109, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[13\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Miller2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Karpudewan2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Tasti2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Cebesoy2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[15\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[17\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Trott2020a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: rgba(71, 42, 122, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Jones2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Walsh2018.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[10\]{style=” font-weight: bold; color: rgba(69, 53, 129, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[24\]{style=” font-weight: bold; color: rgba(42, 120, 142, 1)
+!important;font-size: 12px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: rgba(72, 27, 109, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[27\]{style=” font-weight: bold; color: rgba(187, 223, 39, 1)
+!important;font-size: 16px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[70\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Sellmann2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Chin2016.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[8\]{style=” font-weight: bold; color: rgba(72, 24, 106, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[8\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Gutierrez2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 23, 105, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[19\]{style=” font-weight: bold; color: rgba(50, 100, 142, 1)
+!important;font-size: 11px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[24\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Goulah2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(72, 32, 112, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[8\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Leckey2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Karpudewan2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Faria2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Tasquier2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(71, 16, 99, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[8\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Schrot2021a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Leitao2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Hu2016.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[9\]{style=” font-weight: bold; color: rgba(69, 53, 129, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[10\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Park2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Keller2019.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Stevenson2018a.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[19\]{style=” font-weight: bold; color: rgba(50, 100, 142, 1)
+!important;font-size: 11px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: rgba(71, 16, 99, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(72, 36, 117, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[27\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Jacobson2017.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Deisenrieder2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[5\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246,
+110, 92, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Ross2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(222,
+73, 104, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/White2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[25\]{style=” font-weight: bold; color: rgba(65, 65, 134, 1)
+!important;font-size: 10px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[33\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183,
+55, 121, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Vicente2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140,
+41, 129, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Parth2020.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[4\]{style=” font-weight: bold; color: rgba(72, 26, 108, 1)
+!important;font-size: 9px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[6\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(100,
+26, 128, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Nafisah2022.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60,
+15, 112, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Korsager2015.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 6, 90, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(20,
+14, 54, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Breslyn2019.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(0, 0,
+4, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Akaygun2021.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 8, 91, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+206, 145, 1) !important;“}
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+./Marius/Drewes2018.pdf
+
+</td>
+<td style="text-align:center;">
+
+\[3\]{style=” font-weight: bold; color: rgba(71, 18, 101, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[2\]{style=” font-weight: bold; color: rgba(71, 13, 96, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(69, 4, 87, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[0\]{style=” font-weight: bold; color: rgba(68, 1, 84, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[1\]{style=” font-weight: bold; color: rgba(70, 9, 93, 1)
+!important;font-size: 8px;“}
+
+</td>
+<td style="text-align:center;">
+
+\[7\]{style=” font-weight: bold; color: white !important;border-radius:
+4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254,
+160, 109, 1) !important;“}
+
+</td>
+</tr>
+</tbody>
+</table>
 
 # 3 Earthquakes
 
@@ -267,12 +9419,69 @@ sep <- strsplit(raw,":")
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-|      |                              |     |
-|:-----|:-----------------------------|:----|
-| init | ./Ana/Chang2018.pdf          | 3   |
-|      | ./Ana/Williams2017.pdf       | 2   |
-|      | ./JuanGabriel/Nkoana2020.pdf | 5   |
-|      | ./Benjamin/Silva2021.pdf     | 8   |
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Ana/Chang2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Williams2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Nkoana2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Silva2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+</tr>
+</tbody>
+</table>
 
 “se?ism\*”
 
@@ -283,10 +9492,33 @@ sep <- strsplit(raw,":")
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-| x                        |
-|:-------------------------|
-| ./Benjamin/Silva2021.pdf |
-| 59                       |
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+
+x
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+./Benjamin/Silva2021.pdf
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+59
+
+</td>
+</tr>
+</tbody>
+</table>
 
 # 4 Misconception
 
@@ -297,53 +9529,682 @@ sep <- strsplit(raw,":")
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-|      |                                   |     |
-|:-----|:----------------------------------|:----|
-| init | ./Sara/Pekel2019.pdf              | 14  |
-|      | ./Sara/McNeill2012.pdf            | 21  |
-|      | ./Sara/Smith2019.pdf              | 10  |
-|      | ./Sara/Bodzin2014.pdf             | 3   |
-|      | ./Ana/Taber2009.pdf               | 19  |
-|      | ./Ana/Baker2013.pdf               | 7   |
-|      | ./Ana/Monroe2016.pdf              | 2   |
-|      | ./Ana/Lambert2012.pdf             | 3   |
-|      | ./Ana/Porter2012.pdf              | 23  |
-|      | ./Ana/Lombardi2013.pdf            | 2   |
-|      | ./Ana/Boon2016.pdf                | 6   |
-|      | ./Ana/Aksut2016.pdf               | 5   |
-|      | ./Ana/Dormody2021.pdf             | 6   |
-|      | ./Ana/Shea2016.pdf                | 2   |
-|      | ./Ana/Bozdogan2011.pdf            | 43  |
-|      | ./Ana/DeWaters2014.pdf            | 3   |
-|      | ./Ana/Kubisch2022.pdf             | 3   |
-|      | ./Ana/Nakamura2019.pdf            | 2   |
-|      | ./Ana/Liu2015.pdf                 | 7   |
-|      | ./Ana/Bofferding2015.pdf          | 8   |
-|      | ./Ana/Roychoudhury2017.pdf        | 8   |
-|      | ./Ana/Chang2018.pdf               | 69  |
-|      | ./Sergio/Mason1998.pdf            | 3   |
-|      | ./Sergio/Reinfried2012.pdf        | 6   |
-|      | ./Sergio/Sternang2012.pdf         | 2   |
-|      | ./Sergio/Kolenaty2022.pdf         | 2   |
-|      | ./Sergio/Kumar2023.pdf            | 2   |
-|      | ./Luisa/McNeal2014a.pdf           | 8   |
-|      | ./Luisa/Nussbaum2015.pdf          | 4   |
-|      | ./Luisa/Tasquier2017.pdf          | 3   |
-|      | ./Luisa/Gold2015a.pdf             | 2   |
-|      | ./JuanGabriel/Dal2015a.pdf        | 3   |
-|      | ./JuanGabriel/Karpudewan2015a.pdf | 63  |
-|      | ./JuanGabriel/Saribaş2016.pdf     | 4   |
-|      | ./JuanGabriel/Klosterman2010.pdf  | 10  |
-|      | ./Benjamin/Sundberg2013.pdf       | 2   |
-|      | ./Benjamin/Ratinen2013.pdf        | 9   |
-|      | ./Benjamin/Taylor2020.pdf         | 2   |
-|      | ./Marius/Karpudewan2017.pdf       | 4   |
-|      | ./Marius/Tasti2021.pdf            | 4   |
-|      | ./Marius/Cebesoy2022.pdf          | 3   |
-|      | ./Marius/Sellmann2015.pdf         | 2   |
-|      | ./Marius/Gutierrez2022.pdf        | 12  |
-|      | ./Marius/Karpudewan2015.pdf       | 2   |
-|      | ./Marius/Faria2015.pdf            | 3   |
-|      | ./Marius/White2022.pdf            | 4   |
-|      | ./Marius/Korsager2015.pdf         | 2   |
-|      | ./Marius/Drewes2018.pdf           | 5   |
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Sara/Pekel2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+14
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/McNeill2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+21
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Smith2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+10
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sara/Bodzin2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Taber2009.pdf
+
+</td>
+<td style="text-align:left;">
+
+19
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Baker2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Monroe2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lambert2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Porter2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+23
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Lombardi2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Boon2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Aksut2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Dormody2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Shea2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Bozdogan2011.pdf
+
+</td>
+<td style="text-align:left;">
+
+43
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/DeWaters2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Kubisch2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Nakamura2019.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Liu2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Bofferding2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Roychoudhury2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Chang2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+69
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Mason1998.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Reinfried2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Sternang2012.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Kolenaty2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Kumar2023.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/McNeal2014a.pdf
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Nussbaum2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Tasquier2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Luisa/Gold2015a.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Dal2015a.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Karpudewan2015a.pdf
+
+</td>
+<td style="text-align:left;">
+
+63
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Saribaş2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Klosterman2010.pdf
+
+</td>
+<td style="text-align:left;">
+
+10
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Sundberg2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Ratinen2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+9
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Benjamin/Taylor2020.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Karpudewan2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Tasti2021.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Cebesoy2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Sellmann2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Gutierrez2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+12
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Karpudewan2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Faria2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/White2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Korsager2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Drewes2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+</tbody>
+</table>

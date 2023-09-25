@@ -6,11 +6,12 @@ output:
   github_document:
      number_sections: true
      toc: true
+always_allow_html: true
 ---
 
 
 ```{r}
-require(knitr)
+require(knitr)&require(kableExtra)
 dos <- normalizePath("../../extraction/")
 ```
 
@@ -35,6 +36,7 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "controvers" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+sep1<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
@@ -45,6 +47,7 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "belief" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+sep2<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
@@ -54,6 +57,7 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "opinion" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+sep3<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
@@ -63,8 +67,50 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "republican" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+sep4<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
+
+
+## Human-induced
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "human-induced" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep5 <- sep
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+## All controversy table
+
+
+```{r}
+all(sapply(sep1,function(x)x[1])==sapply(sep2,function(x)x[1]))
+all(sapply(sep1,function(x)x[1])==sapply(sep3,function(x)x[1]))
+all(sapply(sep1,function(x)x[1])==sapply(sep4,function(x)x[1]))
+all(sapply(sep1,function(x)x[1])==sapply(sep5,function(x)x[1]))
+allControv<-data.frame(
+  controvers=as.integer(sapply(sep1,function(x)x[2])),
+  belief=as.integer(sapply(sep2,function(x)x[2])),
+  opinion=as.integer(sapply(sep3,function(x)x[2])),
+  republican=as.integer(sapply(sep4,function(x)x[2])),
+  humanInduced=as.integer(sapply(sep5,function(x)x[2]))
+)
+rownames(allControv)<-sapply(sep1,function(x)x[1])
+#allControv<-allControv[rowSums(allControv)>1,]
+allControv$SUM<-rowSums(allControv)
+allControv[1:5]<-lapply(allControv[1:5], function(x) {
+    cell_spec(x, bold = T, 
+              color = spec_color(x, end = 0.9),
+              font_size = spec_font_size(x))
+})
+allControv[6]<-cell_spec(allControv[[6]], color = "white", bold = T,
+    background = spec_color(1:10, end = 0.9, option = "A", direction = -1))
+kbl(allControv, escape = F, align = "c") %>%
+  kable_classic("striped", full_width = F)
+```
+
 
 
 # Earthquakes
