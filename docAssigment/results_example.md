@@ -2,7 +2,7 @@ Reading the results of the assignments and extracting the interesting
 data (example of a full-text screening exercise)
 ================
 Marius Bottin
-2023-09-22
+2023-09-27
 
 - [1 Numbers](#1-numbers)
 - [2 Conflicts](#2-conflicts)

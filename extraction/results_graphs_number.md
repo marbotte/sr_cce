@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-09-26
+2023-09-27
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -14,6 +14,7 @@ Marius Bottin
 - [8 Mitigation/Adaptation](#8-mitigationadaptation)
 - [9 Educational framework](#9-educational-framework)
 - [10 Monroe categories](#10-monroe-categories)
+- [11 Theoretical framework](#11-theoretical-framework)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -28,7 +29,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20230926.xlsx"))
+names(loadWorkbook("../../extraction/20230927.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -37,7 +38,7 @@ names(loadWorkbook("../../extraction/20230926.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20230926.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20230927.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -50,12 +51,12 @@ missin<-missin[missin!="Saribaş2016"]
 missin
 ```
 
-    ##            Ana19            Ana29            Ana32            Ana38 
-    ##    "Leckey2021a"    "Gladwin2022" "Bopardikar2021"    "Puttick2018" 
-    ##          Marius6         Marius10         Marius25         Marius32 
-    ##  "Gutierrez2022"       "Ross2021"     "Goulah2017"     "Miller2015" 
-    ##          Luisa11          Luisa15       Benjamin15 
-    ##     "Turner2022"   "Nussbaum2015"   "Schuster2018"
+    ##            Ana19            Ana29            Ana32            Ana36 
+    ##    "Leckey2021a"    "Gladwin2022" "Bopardikar2021"      "Trott2020" 
+    ##            Ana38          Marius6         Marius10         Marius25 
+    ##    "Puttick2018"  "Gutierrez2022"       "Ross2021"     "Goulah2017" 
+    ##         Marius32          Luisa11          Luisa15       Benjamin15 
+    ##     "Miller2015"     "Turner2022"   "Nussbaum2015"   "Schuster2018"
 
 # 2 Dates
 
@@ -72,34 +73,34 @@ rawExtract$datepubl
     ##  [25] "2019.0"         "2017.0"         "2017.0"         "2020.0"        
     ##  [29] "2020.0"         "2017.0"         "2021.0"         "2022.0"        
     ##  [33] "2012.0"         "2016.0"         "2022.0"         "2009.0"        
-    ##  [37] "2020.0"         "2012.0"         "2015.0"         "2016.0"        
-    ##  [41] "2017.0"         "2017.0"         "2017.0"         "2020.0"        
-    ##  [45] "2015.0"         "2020.0"         "2020.0"         "2015.0"        
-    ##  [49] "2022.0"         "2022.0"         "2017.0"         "January 2022"  
-    ##  [53] "March 2019"     "September 2022" "2019.0"         "November 2012" 
-    ##  [57] "March 2013"     "2020.0"         "2020.0"         "2022.0"        
-    ##  [61] "2023.0"         "2021.0"         "2006.0"         "2021.0"        
-    ##  [65] "2003.0"         "2021.0"         "1998.0"         "2013.0"        
-    ##  [69] "2014.0"         "2021.0"         "2020.0"         "2022.0"        
-    ##  [73] "2022.0"         "2013.0"         "2012.0"         "2021.0"        
-    ##  [77] "2014.0"         "2020.0"         "2012.0"         "2015.0"        
-    ##  [81] "2020.0"         "2021.0"         "2022.0"         "2020.0"        
-    ##  [85] "2017.0"         "2013.0"         "2010.0"         "2019.0"        
-    ##  [89] "2016.0"         "2017.0"         "2018.0"         "2020.0"        
-    ##  [93] "2012.0"         "2020.0"         "2013.0"         "2019.0"        
-    ##  [97] "2019.0"         "2019.0"         "2019.0"         "2019.0"        
-    ## [101] "2018.0"         "2008.0"         "2018.0"         "2017.0"        
-    ## [105] "2017.0"         "2012.0"         "2023.0"         "2017.0"        
-    ## [109] "2012.0"         "2017.0"         "2014.0"         "2008.0"        
-    ## [113] "2021.0"         "2019.0"         "2022.0"         "2015.0"        
-    ## [117] "2019.0"         "2018.0"         "2017.0"         "2014.0"        
-    ## [121] "2021.0"         "2016.0"         "2022.0"         "2019.0"        
-    ## [125] "2023.0"         "2010.0"         "2013.0"         "2022.0"        
-    ## [129] "2021.0"         "2015.0"         "2013.0"         "2019.0"        
-    ## [133] "2015.0"         "2013.0"         "2022.0"         "2021.0"        
-    ## [137] "2015.0"         "2015.0"         "2006.0"         "2022.0"        
-    ## [141] "2018.0"         "2022.0"         "2017.0"         "2015.0"        
-    ## [145] "2019.0"         NA
+    ##  [37] "2012.0"         "2015.0"         "2016.0"         "2017.0"        
+    ##  [41] "2017.0"         "2017.0"         "2020.0"         "2015.0"        
+    ##  [45] "2020.0"         "2020.0"         "2015.0"         "2022.0"        
+    ##  [49] "2022.0"         "2017.0"         "January 2022"   "March 2019"    
+    ##  [53] "September 2022" "2019.0"         "November 2012"  "March 2013"    
+    ##  [57] "2020.0"         "2020.0"         "2022.0"         "2023.0"        
+    ##  [61] "2021.0"         "2006.0"         "2021.0"         "2003.0"        
+    ##  [65] "2021.0"         "1998.0"         "2013.0"         "2014.0"        
+    ##  [69] "2021.0"         "2020.0"         "2022.0"         "2022.0"        
+    ##  [73] "2013.0"         "2012.0"         "2021.0"         "2014.0"        
+    ##  [77] "2020.0"         "2012.0"         "2015.0"         "2020.0"        
+    ##  [81] "2021.0"         "2022.0"         "2020.0"         "2017.0"        
+    ##  [85] "2013.0"         "2010.0"         "2019.0"         "2016.0"        
+    ##  [89] "2017.0"         "2018.0"         "2020.0"         "2012.0"        
+    ##  [93] "2020.0"         "2013.0"         "2019.0"         "2019.0"        
+    ##  [97] "2019.0"         "2019.0"         "2019.0"         "2018.0"        
+    ## [101] "2008.0"         "2018.0"         "2017.0"         "2017.0"        
+    ## [105] "2012.0"         "2023.0"         "2017.0"         "2012.0"        
+    ## [109] "2017.0"         "2014.0"         "2008.0"         "2021.0"        
+    ## [113] "2019.0"         "2022.0"         "2015.0"         "2019.0"        
+    ## [117] "2018.0"         "2017.0"         "2014.0"         "2021.0"        
+    ## [121] "2016.0"         "2022.0"         "2019.0"         "2023.0"        
+    ## [125] "2010.0"         "2013.0"         "2022.0"         "2021.0"        
+    ## [129] "2015.0"         "2013.0"         "2019.0"         "2015.0"        
+    ## [133] "2013.0"         "2022.0"         "2021.0"         "2015.0"        
+    ## [137] "2015.0"         "2006.0"         "2022.0"         "2018.0"        
+    ## [141] "2022.0"         "2017.0"         "2015.0"         "2019.0"        
+    ## [145] "2015.0"         NA
 
 ``` r
 extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})","\\2",rawExtract$datepubl)))
@@ -155,42 +156,42 @@ extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})
     ##                  2022                  2018                  1998 
     ##           McGowan2022           McNeal2014a           McNeill2012 
     ##                  2022                  2014                  2010 
-    ##              Meya2018            Monroe2016            Muller2021 
-    ##                  2018                  2016                  2021 
-    ##           Muller2021a           Nafisah2022          Nakamura2019 
-    ##                  2021                  2022                  2019 
-    ## Nicholas_Figueroa2017            Nkoana2020          Oberauer2023 
-    ##                  2017                  2019                  2023 
-    ##            Parant2017              Park2020             Parth2020 
-    ##                  2017                  2020                  2020 
-    ##             Pekel2019          Petersen2020            Porter2012 
-    ##                  2019                  2020                  2020 
-    ##           Pruneau2003           Pruneau2006          Pruneau2006a 
-    ##                  2003                  2006                  2006 
-    ##              Raes2016           Ratinen2013         Reinfried2012 
-    ##                  2015                  2012                  2012 
-    ##            Roscoe2013      Roychoudhury2017            Ruboon2012 
-    ##                  2012                  2017                  2012 
-    ##       Salas_Rueda2021         Salsabila2019          Saribaş2016  
-    ##                  2021                  2019                  2016 
-    ##           Schrot2021a        Schubatzky2022          Schuster2008 
-    ##                  2020                  2022                  2008 
-    ##          Sellmann2013         Sellmann2013a          Sellmann2015 
-    ##                  2012                  2013                  2015 
-    ##              Shea2016           Siegner2018             Silva2021 
-    ##                  2016                  2018                  2021 
-    ##            Skains2022             Smith2019        Steffensen2022 
-    ##                  2022                  2019                  2022 
-    ##          Sternang2012         Stevenson2018        Stevenson2018a 
-    ##                  2012                  2018                  2017 
-    ##           Sukardi2022           Sumrall2021          Sundberg2013 
-    ##                  2022                  2021                  2013 
-    ##            Sutela2023            Svihla2012             Taber2009 
-    ##                  2023                  2012                  2009 
-    ##          Tasquier2015          Tasquier2017             Tasti2021 
-    ##                  2015                  2017                  2021 
-    ##            Taylor2020             Trott2019             Trott2020 
+    ##              Meya2018           Miller 2015            Monroe2016 
+    ##                  2018                  2015                  2016 
+    ##            Muller2021           Muller2021a           Nafisah2022 
+    ##                  2021                  2021                  2022 
+    ##          Nakamura2019 Nicholas_Figueroa2017            Nkoana2020 
+    ##                  2019                  2017                  2019 
+    ##          Oberauer2023            Parant2017              Park2020 
+    ##                  2023                  2017                  2020 
+    ##             Parth2020             Pekel2019          Petersen2020 
     ##                  2020                  2019                  2020 
+    ##            Porter2012           Pruneau2003           Pruneau2006 
+    ##                  2020                  2003                  2006 
+    ##          Pruneau2006a              Raes2016           Ratinen2013 
+    ##                  2006                  2015                  2012 
+    ##         Reinfried2012            Roscoe2013      Roychoudhury2017 
+    ##                  2012                  2012                  2017 
+    ##            Ruboon2012       Salas_Rueda2021         Salsabila2019 
+    ##                  2012                  2021                  2019 
+    ##          Saribaş2016            Schrot2021a        Schubatzky2022 
+    ##                  2016                  2020                  2022 
+    ##          Schuster2008          Sellmann2013         Sellmann2013a 
+    ##                  2008                  2012                  2013 
+    ##          Sellmann2015              Shea2016           Siegner2018 
+    ##                  2015                  2016                  2018 
+    ##             Silva2021            Skains2022             Smith2019 
+    ##                  2021                  2022                  2019 
+    ##        Steffensen2022          Sternang2012         Stevenson2018 
+    ##                  2022                  2012                  2018 
+    ##        Stevenson2018a           Sukardi2022           Sumrall2021 
+    ##                  2017                  2022                  2021 
+    ##          Sundberg2013            Sutela2023            Svihla2012 
+    ##                  2013                  2023                  2012 
+    ##             Taber2009          Tasquier2015          Tasquier2017 
+    ##                  2009                  2015                  2017 
+    ##             Tasti2021            Taylor2020             Trott2019 
+    ##                  2021                  2020                  2019 
     ##            Trott2020a            Trott2020b             Trott2022 
     ##                  2019                  2020                  2022 
     ##             Varma2012       Veijalainen2013           Vicente2020 
@@ -226,7 +227,7 @@ rawExtract$Countries.STUDY
     ##   [9] "Turkey"                                    
     ##  [10] "Singapore"                                 
     ##  [11] "Thailand"                                  
-    ##  [12] "South korea, and australia"                
+    ##  [12] "South korea, Australia"                    
     ##  [13] "United States"                             
     ##  [14] "United States"                             
     ##  [15] "Germany"                                   
@@ -251,115 +252,115 @@ rawExtract$Countries.STUDY
     ##  [34] "United States"                             
     ##  [35] "Norway"                                    
     ##  [36] "Australia"                                 
-    ##  [37] NA                                          
+    ##  [37] "United States"                             
     ##  [38] "United States"                             
-    ##  [39] "United States"                             
-    ##  [40] "United Kingdom"                            
-    ##  [41] "Austria"                                   
+    ##  [39] "United Kingdom"                            
+    ##  [40] "Austria"                                   
+    ##  [41] "United States"                             
     ##  [42] "United States"                             
-    ##  [43] "United States"                             
-    ##  [44] "BRASIL"                                    
-    ##  [45] "Turkey"                                    
-    ##  [46] "Spain"                                     
-    ##  [47] "Turkey"                                    
-    ##  [48] "United States"                             
-    ##  [49] "Indonesia"                                 
-    ##  [50] "United States"                             
-    ##  [51] "Germany"                                   
-    ##  [52] "United States"                             
-    ##  [53] "Turkey"                                    
-    ##  [54] "China"                                     
-    ##  [55] "Indonesia"                                 
+    ##  [43] "BRASIL"                                    
+    ##  [44] "Turkey"                                    
+    ##  [45] "Spain"                                     
+    ##  [46] "Turkey"                                    
+    ##  [47] "United States"                             
+    ##  [48] "Indonesia"                                 
+    ##  [49] "United States"                             
+    ##  [50] "Germany"                                   
+    ##  [51] "United States"                             
+    ##  [52] "Turkey"                                    
+    ##  [53] "China"                                     
+    ##  [54] "Indonesia"                                 
+    ##  [55] "Finland"                                   
     ##  [56] "Finland"                                   
-    ##  [57] "Finland"                                   
-    ##  [58] "USA"                                       
-    ##  [59] "Turkey"                                    
-    ##  [60] "Czech Republic"                            
-    ##  [61] "UK"                                        
-    ##  [62] "United Kingdom;Portugal"                   
-    ##  [63] "Canada"                                    
-    ##  [64] "United Kingdom"                            
-    ##  [65] "Canada"                                    
-    ##  [66] "Italy, Finland, Iceland"                   
-    ##  [67] "Italy "                                    
+    ##  [57] "USA"                                       
+    ##  [58] "Turkey"                                    
+    ##  [59] "Czech Republic"                            
+    ##  [60] "UK"                                        
+    ##  [61] "United Kingdom;Portugal"                   
+    ##  [62] "Canada"                                    
+    ##  [63] "United Kingdom"                            
+    ##  [64] "Canada"                                    
+    ##  [65] "Italy, Finland, Iceland"                   
+    ##  [66] "Italy "                                    
+    ##  [67] "USA"                                       
     ##  [68] "USA"                                       
-    ##  [69] "USA"                                       
-    ##  [70] "Puerto Rico (United States)"               
-    ##  [71] "United States"                             
+    ##  [69] "Puerto Rico (United States)"               
+    ##  [70] "United States"                             
+    ##  [71] "China"                                     
     ##  [72] "China"                                     
-    ##  [73] "China"                                     
-    ##  [74] "United States"                             
-    ##  [75] "Thailand"                                  
-    ##  [76] "United States"                             
-    ##  [77] "Malaysia"                                  
-    ##  [78] "New Zealand"                               
-    ##  [79] "United States"                             
-    ##  [80] "Belgium"                                   
-    ##  [81] "Austria"                                   
-    ##  [82] "Turkey"                                    
-    ##  [83] "USA"                                       
-    ##  [84] "Germany"                                   
+    ##  [73] "United States"                             
+    ##  [74] "Thailand"                                  
+    ##  [75] "United States"                             
+    ##  [76] "Malaysia"                                  
+    ##  [77] "New Zealand"                               
+    ##  [78] "United States"                             
+    ##  [79] "Belgium"                                   
+    ##  [80] "Austria"                                   
+    ##  [81] "Turkey"                                    
+    ##  [82] "USA"                                       
+    ##  [83] "Germany"                                   
+    ##  [84] "United States"                             
     ##  [85] "United States"                             
-    ##  [86] "United States"                             
-    ##  [87] "USA"                                       
-    ##  [88] "South Africa"                              
-    ##  [89] "Turkey"                                    
-    ##  [90] "United States"                             
-    ##  [91] "Germany"                                   
-    ##  [92] "South Korea"                               
-    ##  [93] "Switzerland"                               
-    ##  [94] "Germany; Austria"                          
-    ##  [95] "Germany"                                   
-    ##  [96] "Austria"                                   
+    ##  [86] "USA"                                       
+    ##  [87] "South Africa"                              
+    ##  [88] "Turkey"                                    
+    ##  [89] "United States"                             
+    ##  [90] "Germany"                                   
+    ##  [91] "South Korea"                               
+    ##  [92] "Switzerland"                               
+    ##  [93] "Germany; Austria"                          
+    ##  [94] "Germany"                                   
+    ##  [95] "Austria"                                   
+    ##  [96] "United States"                             
     ##  [97] "United States"                             
     ##  [98] "United States"                             
     ##  [99] "United States"                             
     ## [100] "United States"                             
-    ## [101] "United States"                             
+    ## [101] "USA"                                       
     ## [102] "USA"                                       
-    ## [103] "USA"                                       
+    ## [103] "United States"                             
     ## [104] "United States"                             
-    ## [105] "United States"                             
-    ## [106] "Sweden"                                    
-    ## [107] "Finland"                                   
-    ## [108] "United States"                             
-    ## [109] "USA"                                       
-    ## [110] "Australia"                                 
-    ## [111] "USA"                                       
-    ## [112] "Greece"                                    
-    ## [113] "Brazil"                                    
+    ## [105] "Sweden"                                    
+    ## [106] "Finland"                                   
+    ## [107] "United States"                             
+    ## [108] "USA"                                       
+    ## [109] "Australia"                                 
+    ## [110] "USA"                                       
+    ## [111] "Greece"                                    
+    ## [112] "Brazil"                                    
+    ## [113] "USA"                                       
     ## [114] "USA"                                       
-    ## [115] "USA"                                       
-    ## [116] "Malaysia"                                  
-    ## [117] "USA"                                       
-    ## [118] "Estados Unidos"                            
-    ## [119] "Malaysia"                                  
-    ## [120] "United States"                             
-    ## [121] "South Africa"                              
-    ## [122] "China"                                     
-    ## [123] "Spain"                                     
-    ## [124] "United States"                             
-    ## [125] "Austria"                                   
+    ## [115] "Malaysia"                                  
+    ## [116] "USA"                                       
+    ## [117] "Estados Unidos"                            
+    ## [118] "Malaysia"                                  
+    ## [119] "United States"                             
+    ## [120] "South Africa"                              
+    ## [121] "China"                                     
+    ## [122] "Spain"                                     
+    ## [123] "United States"                             
+    ## [124] "Austria"                                   
+    ## [125] "United States"                             
     ## [126] "United States"                             
-    ## [127] "United States"                             
-    ## [128] "Turkey"                                    
-    ## [129] "CHINA"                                     
-    ## [130] "Taiwan"                                    
-    ## [131] "Austria; Denmark"                          
-    ## [132] "Austria; Australia"                        
-    ## [133] "Bangladesh"                                
+    ## [127] "Turkey"                                    
+    ## [128] "CHINA"                                     
+    ## [129] "Taiwan"                                    
+    ## [130] "Austria; Denmark"                          
+    ## [131] "Austria; Australia"                        
+    ## [132] "Bangladesh"                                
+    ## [133] "United States"                             
     ## [134] "United States"                             
-    ## [135] "United States"                             
-    ## [136] "South Africa"                              
-    ## [137] "Norway"                                    
-    ## [138] "Italy"                                     
-    ## [139] "Canada"                                    
-    ## [140] "United Kingdom"                            
-    ## [141] "United States"                             
-    ## [142] "Indonesia"                                 
-    ## [143] "Italy"                                     
-    ## [144] "Germany"                                   
-    ## [145] "Turkey"                                    
+    ## [135] "South Africa"                              
+    ## [136] "Norway"                                    
+    ## [137] "Italy"                                     
+    ## [138] "Canada"                                    
+    ## [139] "United Kingdom"                            
+    ## [140] "United States"                             
+    ## [141] "Indonesia"                                 
+    ## [142] "Italy"                                     
+    ## [143] "Germany"                                   
+    ## [144] "Turkey"                                    
+    ## [145] "Greenland; Denmark; United States"         
     ## [146] NA
 
 ``` r
@@ -373,19 +374,19 @@ countryStudy$country<-str_to_title(gsub(" +$","",gsub("^and ","",gsub("^ +","",c
 ```
 
     ##  United States         Turkey        Austria        Germany      Australia 
-    ##             56             10              9              8              5 
-    ##         Canada          China United Kingdom        Finland          Italy 
+    ##             57             10              9              8              5 
+    ##         Canada          China United Kingdom        Denmark        Finland 
     ##              5              5              5              4              4 
-    ##        Denmark      Indonesia       Malaysia         Norway   South Africa 
-    ##              3              3              3              3              3 
+    ##          Italy      Indonesia       Malaysia         Norway   South Africa 
+    ##              4              3              3              3              3 
     ##         Brazil    New Zealand       Portugal    South Korea          Spain 
     ##              2              2              2              2              2 
     ##       Thailand     Bangladesh        Belgium Czech Republic         France 
     ##              2              1              1              1              1 
-    ##         Greece        Iceland          Japan         Mexico      Singapore 
+    ##         Greece      Greenland        Iceland          Japan         Mexico 
     ##              1              1              1              1              1 
-    ##         Sweden    Switzerland         Taiwan 
-    ##              1              1              1
+    ##      Singapore         Sweden    Switzerland         Taiwan 
+    ##              1              1              1              1
 
 ## 3.1 Making the map
 
@@ -522,10 +523,10 @@ sort(table(extract$TARGETED.SAMPLE),decreasing=T)
     ## 
     ##              students  Entourage (Teachers)  pre-service teachers 
     ##                   111                    16                     9 
-    ##   Entourage (parents) students and teachers  students and parents 
+    ##   Entourage (parents) students and teachers              Students 
     ##                     4                     2                     1 
-    ## students and Teachers 
-    ##                     1
+    ##  students and parents students and Teachers 
+    ##                     1                     1
 
 ``` r
 extract$student<-extract$TARGETED.SAMPLE%in%c("Students","students")
@@ -543,7 +544,7 @@ extract$age_min[extract$student]
     ##  [81] NA     "11.0" NA     NA     "10.0" "10.0" NA     "16.0" "16.0" NA    
     ##  [91] NA     "10.0" "15.0" NA     "10.0" NA     "8.0"  NA     "16.0" "12.0"
     ## [101] NA     NA     NA     "17.0" "16.0" "12.0" "11.0" NA     "16.0" "15.0"
-    ## [111] "15.0"
+    ## [111] "15.0" NA
 
 ``` r
 extract$age_max[extract$student]
@@ -571,7 +572,7 @@ extract$age_max[extract$student]
     ##  [96] NA             "12.0"         NA             "17.0"         "13.0"        
     ## [101] NA             NA             NA             "17.0"         "17.0"        
     ## [106] "15.0"         "15 and older" NA             "18.0"         "19.0"        
-    ## [111] "16.0"
+    ## [111] "16.0"         NA
 
 ``` r
 extract$mean.age[extract$student]
@@ -590,7 +591,7 @@ extract$mean.age[extract$student]
     ##  [81] NA       NA       "14.0"   NA       "11.1"   "11.1"   "11.0"   " "     
     ##  [89] "16.0"   NA       NA       NA       "16.0"   NA       NA       NA      
     ##  [97] NA       NA       NA       NA       NA       NA       NA       "17.0"  
-    ## [105] NA       NA       NA       NA       NA       NA       "ND"
+    ## [105] NA       NA       NA       NA       NA       NA       "ND"     NA
 
 ``` r
 extract$age_min_stud<-NA
@@ -630,7 +631,7 @@ table(extract$age_stud_type_info[extract$student],useNA = "always")
 
     ## 
     ##    all   mean minmax   <NA> 
-    ##      9     11     46     45
+    ##      9     11     46     46
 
 ``` r
 age_order<- rep(NA,sum(!is.na(extract$age_stud_type_info)))
@@ -660,7 +661,7 @@ table(extract$Controversy,useNA="always")
 
     ## 
     ##   no   No   NO  no   yes  Yes <NA> 
-    ##   29   77    3    1    5   26    5
+    ##   29   80    3    1    5   26    2
 
 ``` r
 extract$controv_clean<-NA
@@ -672,7 +673,7 @@ table(extract$controv_clean,useNA="ifany")
 
     ## 
     ##   No  Yes <NA> 
-    ##  110   31    5
+    ##  113   31    2
 
 ``` r
 controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
@@ -702,7 +703,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##   Japan                     1   0    0
     ##   Malaysia                  3   0    0
     ##   Mexico                    1   0    0
-    ##   Multiple                  4   3    0
+    ##   Multiple                  5   3    0
     ##   New Zealand               1   0    0
     ##   Norway                    2   0    0
     ##   Portugal                  1   0    0
@@ -713,10 +714,10 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##   Switzerland               1   0    0
     ##   Taiwan                    1   0    0
     ##   Thailand                  2   0    0
-    ##   Turkey                    9   0    1
+    ##   Turkey                   10   0    0
     ##   United Kingdom            4   0    0
-    ##   United States of America 32  22    1
-    ##   <NA>                      0   1    1
+    ##   United States of America 33  22    0
+    ##   <NA>                      0   1    0
 
 ``` r
 (PercentageControversy<-A[,2]/rowSums(A))
@@ -735,7 +736,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##                    Japan                 Malaysia                   Mexico 
     ##                0.0000000                0.0000000                0.0000000 
     ##                 Multiple              New Zealand                   Norway 
-    ##                0.4285714                0.0000000                0.0000000 
+    ##                0.3750000                0.0000000                0.0000000 
     ##                 Portugal             South Africa              South Korea 
     ##                0.0000000                0.0000000                0.0000000 
     ##                    Spain                   Sweden              Switzerland 
@@ -743,7 +744,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##                   Taiwan                 Thailand                   Turkey 
     ##                0.0000000                0.0000000                0.0000000 
     ##           United Kingdom United States of America                     <NA> 
-    ##                0.0000000                0.4000000                0.5000000
+    ##                0.0000000                0.4000000                1.0000000
 
 ``` r
 barplot(PercentageControversy,las=2)
@@ -769,6 +770,13 @@ sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of Ameri
 
     ## [1] 0.4
 
+``` r
+par(mar=c(11,4,1,1))
+barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),las=2,legend=T,args.legend = list(title="Controversy"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
+
 # 8 Mitigation/Adaptation
 
 ``` r
@@ -777,7 +785,7 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 
     ## 
     ## Adaptation       Both Mitigation    Neither       <NA> 
-    ## 0.03424658 0.27397260 0.61643836 0.03424658 0.04109589
+    ## 0.03424658 0.27397260 0.61643836 0.04109589 0.03424658
 
 ``` r
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
@@ -832,7 +840,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-52
+49
 
 </td>
 <td style="text-align:left;">
@@ -840,14 +848,14 @@ NA
 Baker2013, Bentz2020, Bozdogan2011, Chang2018, Feierabend2012,
 Holthuis2014, Kinsey2012, Lambert2012, Lombardi2013,
 Nicholas_Figueroa2017, Petersen2020, Salas_Rueda2021, Schubatzky2022,
-Sellmann2013, Shea2016, Steffensen2022, Taber2009, Trott2020, Varma2012,
+Sellmann2013, Shea2016, Steffensen2022, Taber2009, Varma2012,
 Williams2017, Korfgen2017, Dormody2020, Kolenaty2022, Kumar2023,
 Mason1998, Feldpausch_Parker2013, Roscoe2013, Raes2016, McGowan2022,
 Klosterman2010, Saribaş2016 , Reinfried2012, Sellmann2013a,
-Sternang2012, Sutela2023, Stevenson2018a, Xie2014, Zografakis2008,
-Trott2019, Trott2022, Markowitz2018, Smith2019, Zhong2021,
-Harker_Schuch2013, Harker_Schuch2020, Lambert2013, Littrell2022,
-Skains2022, Stevenson2018, Sukardi2022, Pekel2019, NA
+Sternang2012, Sutela2023, Stevenson2018a, Xie2014, Trott2019, Trott2022,
+Markowitz2018, Zhong2021, Harker_Schuch2013, Harker_Schuch2020,
+Lambert2013, Littrell2022, Skains2022, Stevenson2018, Sukardi2022,
+Pekel2019, NA
 
 </td>
 </tr>
@@ -859,7 +867,7 @@ Local
 </td>
 <td style="text-align:right;">
 
-33
+34
 
 </td>
 <td style="text-align:left;">
@@ -869,7 +877,8 @@ Eggert2017, Herrick2022, Salsabila2019, Leitao2022, Pruneau2006,
 Jones2021, Pruneau2003, Flora2014, Leckey2021, Trott2020b, Li2022,
 Li2022, Sumrall2021, Taylor2020, Parth2020, Jin2013, Kern2017, Park2020,
 Deisenrieder2020, Trott2020a, Walsh2018, Drewes2018, Drewes2018,
-Karpudewan2015, Lozano2022, McNeill2012, Chin2016, Pruneau2006a
+Karpudewan2015, Lozano2022, Smith2019, McNeill2012, Chin2016,
+Pruneau2006a
 
 </td>
 </tr>
@@ -895,6 +904,24 @@ Veijalainen2013, Meya2018
 <tr>
 <td style="text-align:left;">
 
+Global
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:left;">
+
+Kubisch2022, da_Rocha2020, Wang2022, Cebesoy2022, Schrot2021a,
+Lawson2019a, Zografakis2008, Tasquier2015, Tasquier2017, Miller 2015
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 local
 
 </td>
@@ -907,24 +934,6 @@ local
 
 Bofferding2015, Dormody2021, Lester2006, Liu2015, Nakamura2019,
 Faria2015, Faria2015, Ratinen2013, Breslyn2019, Sellmann2015
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Global
-
-</td>
-<td style="text-align:right;">
-
-8
-
-</td>
-<td style="text-align:left;">
-
-Kubisch2022, da_Rocha2020, Wang2022, Cebesoy2022, Schrot2021a,
-Lawson2019a, Tasquier2015, Tasquier2017
 
 </td>
 </tr>
@@ -959,23 +968,6 @@ both
 <td style="text-align:left;">
 
 DeWaters2014, Porter2012
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-European
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-<td style="text-align:left;">
-
-Cebesoy2019, Levrini2021
 
 </td>
 </tr>
@@ -1079,6 +1071,23 @@ Critical pegagogy
 <td style="text-align:left;">
 
 Siegner2018
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+European
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Levrini2021
 
 </td>
 </tr>
@@ -1256,6 +1265,23 @@ Tasti2021
 <tr>
 <td style="text-align:left;">
 
+NA European
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Cebesoy2019
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 NA local
 
 </td>
@@ -1370,3 +1396,259 @@ extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
     ## [28] "Harker_Schuch2020" "Kabir2015"         "Lambert2013"      
     ## [31] "Littrell2022"      "Tasquier2015"      "Tasquier2017"     
     ## [34] "Sellmann2015"      "Pekel2019"
+
+# 11 Theoretical framework
+
+``` r
+sort(table(extract$`Theoretical.framework.(big.categories)`))
+```
+
+    ## 
+    ##                                                                                             
+    ##                                                                                           1 
+    ##                                         active learning; collaborative; technology enhanced 
+    ##                                                                                           1 
+    ##                                         active learning; system thinking hierarchical model 
+    ##                                                                                           1 
+    ##                                                                                 alternative 
+    ##                                                                                           1 
+    ##                                                                               argumentation 
+    ##                                                                                           1 
+    ##                                                                                  arts-based 
+    ##                                                                                           1 
+    ##                                                                            Bloom's taxonomy 
+    ##                                                                                           1 
+    ##                                                          Buddhist principles of instruction 
+    ##                                                                                           1 
+    ##                                                                             Constructivism  
+    ##                                                                                           1 
+    ##                                                             constructivism; active learning 
+    ##                                                                                           1 
+    ##                                                           constructivism; critical pedagogy 
+    ##                                                                                           1 
+    ##                                                                              constructivist 
+    ##                                                                                           1 
+    ##                                                               Critical education; art-based 
+    ##                                                                                           1 
+    ##                                                                          Disaster education 
+    ##                                                                                           1 
+    ##                                                                    Entertainment education  
+    ##                                                                                           1 
+    ##                                                                     environmental education 
+    ##                                                                                           1 
+    ##                                                                        experiential leaning 
+    ##                                                                                           1 
+    ##                                                      Experiential learning; active learning 
+    ##                                                                                           1 
+    ##                                               Experiential learning; collaborative learning 
+    ##                                                                                           1 
+    ##                                                  Experiential learning; technology enhanced 
+    ##                                                                                           1 
+    ##                                                              Experintial; transdisciplinary 
+    ##                                                                                           1 
+    ##                                       Future-oriented environment modelling Jensen's (2002) 
+    ##                                                                                           1 
+    ##                                                                                Gamification 
+    ##                                                                                           1 
+    ##                                                                                Green school 
+    ##                                                                                           1 
+    ##                                   Inquiry-based learning; professional development workshop 
+    ##                                                                                           1 
+    ##                                                                         Liberation pedagogy 
+    ##                                                                                           1 
+    ##                                                                     moderate constructivism 
+    ##                                                                                           1 
+    ##                                                                     Moderate constructivism 
+    ##                                                                                           1 
+    ##                                                                     Narrative (arts -based) 
+    ##                                                                                           1 
+    ##                                                                        narrative; melodrama 
+    ##                                                                                           1 
+    ##                                                                   pedagogy of argumentation 
+    ##                                                                                           1 
+    ##                                                          Professional development workshop  
+    ##                                                                                           1 
+    ##                                             Professional training workshop (project -based) 
+    ##                                                                                           1 
+    ##                                           Science, technology and society (STS) instruction 
+    ##                                                                                           1 
+    ##                                                                        Socio-constructivism 
+    ##                                                                                           1 
+    ## socio-constructivist model of learning and Teacher-enhanced scaffolding on different planes 
+    ##                                                                                           1 
+    ##                                                                           Socio-ecological  
+    ##                                                                                           1 
+    ##                                                                            Socio-scientific 
+    ##                                                                                           1 
+    ##                                                      Students as scientist (consisten with) 
+    ##                                                                                           1 
+    ##                                                     Tiered-mentoring (apprenticeship) model 
+    ##                                                                                           1 
+    ##                                                     transformativ learning (consisten with) 
+    ##                                                                                           1 
+    ##                                                                             Active learning 
+    ##                                                                                           2 
+    ##                                                                              Constructivism 
+    ##                                                                                           2 
+    ##                                                                       Experiential learning 
+    ##                                                                                           2 
+    ##                                                                  Intergenerational learning 
+    ##                                                                                           2 
+    ##                                                              Professional training workshop 
+    ##                                                                                           2 
+    ##                                                      socio constructivist (consistent with) 
+    ##                                                                                           2 
+    ##                                                                        socio-constructivism 
+    ##                                                                                           2 
+    ##                                                   Socio-constructivistl (socio-sccientific) 
+    ##                                                                                           2 
+    ##                                                                                Traditional  
+    ##                                                                                           2 
+    ##                                                           Professional development workshop 
+    ##                                                                                           3 
+    ##                                                                                 traditional 
+    ##                                                                                           3 
+    ##                                                                                 Traditional 
+    ##                                                                                           3 
+    ##                                                                     Transformative learning 
+    ##                                                                                           3 
+    ##                                                            Constructivism (consistent with) 
+    ##                                                                                           4 
+    ##                                                                              constructivism 
+    ##                                                                                           5 
+    ##                                                            constructivism (consistent with) 
+    ##                                                                                          10
+
+``` r
+clean<-function(x)
+{
+  if(grepl("^ *$",x)){x<-NA}
+  x<-gsub("^ +","",x)
+  x<-gsub(" +$","",x)
+  x<-gsub("^([a-z])","\\U\\1",x,perl=T)
+  return(x)
+}
+listTheoBack<-lapply(strsplit(extract$`Theoretical.framework.(big.categories)`,";"),sapply,clean)
+tabTheoBack<-data.frame(id=rep(extract$id,sapply(listTheoBack,length)),
+           theoBack=unlist(listTheoBack)
+           )
+tabTheoBack$consistentWith[grepl("consistent with",tabTheoBack$theoBack)]<-T
+tabTheoBack$consistentWith[!grepl("consistent with",tabTheoBack$theoBack)]<-F
+tabTheoBack$theoBack<-gsub(" \\(consistent with\\)","",tabTheoBack$theoBack)
+sort(table(tabTheoBack$theoBack,useNA="ifany"))
+```
+
+    ## 
+    ##                                                                                 Alternative 
+    ##                                                                                           1 
+    ##                                                                               Argumentation 
+    ##                                                                                           1 
+    ##                                                                                   Art-based 
+    ##                                                                                           1 
+    ##                                                                                  Arts-based 
+    ##                                                                                           1 
+    ##                                                                            Bloom's taxonomy 
+    ##                                                                                           1 
+    ##                                                          Buddhist principles of instruction 
+    ##                                                                                           1 
+    ##                                                                               Collaborative 
+    ##                                                                                           1 
+    ##                                                                      Collaborative learning 
+    ##                                                                                           1 
+    ##                                                                              Constructivist 
+    ##                                                                                           1 
+    ##                                                                          Critical education 
+    ##                                                                                           1 
+    ##                                                                           Critical pedagogy 
+    ##                                                                                           1 
+    ##                                                                          Disaster education 
+    ##                                                                                           1 
+    ##                                                                     Entertainment education 
+    ##                                                                                           1 
+    ##                                                                     Environmental education 
+    ##                                                                                           1 
+    ##                                                                        Experiential leaning 
+    ##                                                                                           1 
+    ##                                                                                 Experintial 
+    ##                                                                                           1 
+    ##                                       Future-oriented environment modelling Jensen's (2002) 
+    ##                                                                                           1 
+    ##                                                                                Gamification 
+    ##                                                                                           1 
+    ##                                                                                Green school 
+    ##                                                                                           1 
+    ##                                                                      Inquiry-based learning 
+    ##                                                                                           1 
+    ##                                                                         Liberation pedagogy 
+    ##                                                                                           1 
+    ##                                                                                   Melodrama 
+    ##                                                                                           1 
+    ##                                                                                   Narrative 
+    ##                                                                                           1 
+    ##                                                                     Narrative (arts -based) 
+    ##                                                                                           1 
+    ##                                                                   Pedagogy of argumentation 
+    ##                                                                                           1 
+    ##                                             Professional training workshop (project -based) 
+    ##                                                                                           1 
+    ##                                           Science, technology and society (STS) instruction 
+    ##                                                                                           1 
+    ## Socio-constructivist model of learning and Teacher-enhanced scaffolding on different planes 
+    ##                                                                                           1 
+    ##                                                                            Socio-ecological 
+    ##                                                                                           1 
+    ##                                                                            Socio-scientific 
+    ##                                                                                           1 
+    ##                                                      Students as scientist (consisten with) 
+    ##                                                                                           1 
+    ##                                                          System thinking hierarchical model 
+    ##                                                                                           1 
+    ##                                                     Tiered-mentoring (apprenticeship) model 
+    ##                                                                                           1 
+    ##                                                                           Transdisciplinary 
+    ##                                                                                           1 
+    ##                                                     Transformativ learning (consisten with) 
+    ##                                                                                           1 
+    ##                                                                  Intergenerational learning 
+    ##                                                                                           2 
+    ##                                                                     Moderate constructivism 
+    ##                                                                                           2 
+    ##                                                              Professional training workshop 
+    ##                                                                                           2 
+    ##                                                                        Socio constructivist 
+    ##                                                                                           2 
+    ##                                                   Socio-constructivistl (socio-sccientific) 
+    ##                                                                                           2 
+    ##                                                                         Technology enhanced 
+    ##                                                                                           2 
+    ##                                                                        Socio-constructivism 
+    ##                                                                                           3 
+    ##                                                                     Transformative learning 
+    ##                                                                                           3 
+    ##                                                                       Experiential learning 
+    ##                                                                                           5 
+    ##                                                           Professional development workshop 
+    ##                                                                                           5 
+    ##                                                                             Active learning 
+    ##                                                                                           6 
+    ##                                                                                 Traditional 
+    ##                                                                                           8 
+    ##                                                                              Constructivism 
+    ##                                                                                          24 
+    ##                                                                                        <NA> 
+    ##                                                                                          57
+
+``` r
+#Temporary plot
+forTempPlot<-table(tabTheoBack$theoBack,tabTheoBack$consistentWith)
+forTempPlot<-forTempPlot[order(rowSums(forTempPlot),decreasing=T),]
+other<-colSums(forTempPlot[6:nrow(forTempPlot),])
+forTempPlot<-forTempPlot[1:5,]
+forTempPlot<-rbind(forTempPlot,other)
+par(mar=c(15,4,1,1))
+bp<-barplot(t(forTempPlot),las=2, density=c(0,20))
+legend("topleft",density=18,"consistent with")
+text(bp[round(nrow(forTempPlot)/2)+1],max(forTempPlot),paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->

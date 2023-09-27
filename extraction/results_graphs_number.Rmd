@@ -10,8 +10,8 @@ output:
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20230926.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20230926.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20230927.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20230927.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -191,6 +191,8 @@ barplot(PercentageControversy,las=2)
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
 sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)/length(countryDoc)
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)
+par(mar=c(11,4,1,1))
+barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),las=2,legend=T,args.legend = list(title="Controversy"))
 ```
 
 
@@ -234,4 +236,41 @@ Which:
 ```{r}
 extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
 ```
+
+# Theoretical framework
+```{r fig.height=9,fig.width=6}
+sort(table(extract$`Theoretical.framework.(big.categories)`))
+clean<-function(x)
+{
+  if(grepl("^ *$",x)){x<-NA}
+  x<-gsub("^ +","",x)
+  x<-gsub(" +$","",x)
+  x<-gsub("^([a-z])","\\U\\1",x,perl=T)
+  return(x)
+}
+listTheoBack<-lapply(strsplit(extract$`Theoretical.framework.(big.categories)`,";"),sapply,clean)
+tabTheoBack<-data.frame(id=rep(extract$id,sapply(listTheoBack,length)),
+           theoBack=unlist(listTheoBack)
+           )
+tabTheoBack$consistentWith[grepl("consistent with",tabTheoBack$theoBack)]<-T
+tabTheoBack$consistentWith[!grepl("consistent with",tabTheoBack$theoBack)]<-F
+tabTheoBack$theoBack<-gsub(" \\(consistent with\\)","",tabTheoBack$theoBack)
+sort(table(tabTheoBack$theoBack,useNA="ifany"))
+
+#Temporary plot
+forTempPlot<-table(tabTheoBack$theoBack,tabTheoBack$consistentWith)
+forTempPlot<-forTempPlot[order(rowSums(forTempPlot),decreasing=T),]
+other<-colSums(forTempPlot[6:nrow(forTempPlot),])
+forTempPlot<-forTempPlot[1:5,]
+forTempPlot<-rbind(forTempPlot,other)
+par(mar=c(15,4,1,1))
+bp<-barplot(t(forTempPlot),las=2, density=c(0,20))
+legend("topleft",density=18,"consistent with")
+text(bp[round(nrow(forTempPlot)/2)+1],max(forTempPlot),paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
+
+```
+
+
+
+
 
