@@ -239,7 +239,7 @@ extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
 
 # Theoretical framework
 ```{r fig.height=9,fig.width=6}
-sort(table(extract$`Theoretical.framework.(big.categories)`))
+#sort(table(extract$`Theoretical.framework.(big.categories)`))
 clean<-function(x)
 {
   if(grepl("^ *$",x)){x<-NA}
@@ -255,7 +255,7 @@ tabTheoBack<-data.frame(id=rep(extract$id,sapply(listTheoBack,length)),
 tabTheoBack$consistentWith[grepl("consistent with",tabTheoBack$theoBack)]<-T
 tabTheoBack$consistentWith[!grepl("consistent with",tabTheoBack$theoBack)]<-F
 tabTheoBack$theoBack<-gsub(" \\(consistent with\\)","",tabTheoBack$theoBack)
-sort(table(tabTheoBack$theoBack,useNA="ifany"))
+#sort(table(tabTheoBack$theoBack,useNA="ifany"))
 
 #Temporary plot
 forTempPlot<-table(tabTheoBack$theoBack,tabTheoBack$consistentWith)
