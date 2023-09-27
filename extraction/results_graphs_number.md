@@ -1,18 +1,19 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-09-22
+2023-09-26
 
-- [1 Dates](#1-dates)
-- [2 Countries](#2-countries)
-  - [2.1 Making the map](#21-making-the-map)
-- [3 Years/Region of the world](#3-yearsregion-of-the-world)
-- [4 Outcomes](#4-outcomes)
-- [5 Population](#5-population)
-- [6 Controversy](#6-controversy)
-- [7 Mitigation/Adaptation](#7-mitigationadaptation)
-- [8 Educational framework](#8-educational-framework)
-- [9 Monroe categories](#9-monroe-categories)
+- [1 Missing extractions](#1-missing-extractions)
+- [2 Dates](#2-dates)
+- [3 Countries](#3-countries)
+  - [3.1 Making the map](#31-making-the-map)
+- [4 Years/Region of the world](#4-yearsregion-of-the-world)
+- [5 Outcomes](#5-outcomes)
+- [6 Population](#6-population)
+- [7 Controversy](#7-controversy)
+- [8 Mitigation/Adaptation](#8-mitigationadaptation)
+- [9 Educational framework](#9-educational-framework)
+- [10 Monroe categories](#10-monroe-categories)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -27,7 +28,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20230921.xlsx"))
+names(loadWorkbook("../../extraction/20230926.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -36,11 +37,27 @@ names(loadWorkbook("../../extraction/20230921.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20230921.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20230926.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
+load("../../extraction/docExtract.RData")
 ```
 
-# 1 Dates
+# 1 Missing extractions
+
+``` r
+missin<-unlist(docExtract)[!unlist(docExtract)%in%extract$id]
+missin<-missin[missin!="Saribaş2016"]
+missin
+```
+
+    ##            Ana19            Ana29            Ana32            Ana38 
+    ##    "Leckey2021a"    "Gladwin2022" "Bopardikar2021"    "Puttick2018" 
+    ##          Marius6         Marius10         Marius25         Marius32 
+    ##  "Gutierrez2022"       "Ross2021"     "Goulah2017"     "Miller2015" 
+    ##          Luisa11          Luisa15       Benjamin15 
+    ##     "Turner2022"   "Nussbaum2015"   "Schuster2018"
+
+# 2 Dates
 
 ``` r
 rawExtract$datepubl
@@ -81,8 +98,8 @@ rawExtract$datepubl
     ## [129] "2021.0"         "2015.0"         "2013.0"         "2019.0"        
     ## [133] "2015.0"         "2013.0"         "2022.0"         "2021.0"        
     ## [137] "2015.0"         "2015.0"         "2006.0"         "2022.0"        
-    ## [141] "2018.0"         "2022.0"         "2017.0"         "2022.0"        
-    ## [145] "2015.0"         "2019.0"
+    ## [141] "2018.0"         "2022.0"         "2017.0"         "2015.0"        
+    ## [145] "2019.0"         NA
 
 ``` r
 extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})","\\2",rawExtract$datepubl)))
@@ -140,42 +157,42 @@ extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})
     ##                  2022                  2014                  2010 
     ##              Meya2018            Monroe2016            Muller2021 
     ##                  2018                  2016                  2021 
-    ##           Nafisah2022          Nakamura2019 Nicholas_Figueroa2017 
-    ##                  2022                  2019                  2017 
-    ##            Nkoana2020          Oberauer2023            Parant2017 
-    ##                  2019                  2023                  2017 
-    ##              Park2020             Parth2020             Pekel2019 
-    ##                  2020                  2020                  2019 
-    ##          Petersen2020            Porter2012           Pruneau2003 
-    ##                  2020                  2020                  2003 
-    ##           Pruneau2006          Pruneau2006a              Raes2016 
-    ##                  2006                  2006                  2015 
-    ##           Ratinen2013         Reinfried2012            Roscoe2013 
-    ##                  2012                  2012                  2012 
-    ##      Roychoudhury2017            Ruboon2012       Salas_Rueda2021 
-    ##                  2017                  2012                  2021 
-    ##         Salsabila2019          Saribaş2016            Schrot2021a 
-    ##                  2019                  2016                  2020 
-    ##        Schubatzky2022          Schuster2008          Sellmann2013 
-    ##                  2022                  2008                  2012 
-    ##         Sellmann2013a          Sellmann2015              Shea2016 
-    ##                  2013                  2015                  2016 
-    ##           Siegner2018             Silva2021            Skains2022 
-    ##                  2018                  2021                  2022 
-    ##             Smith2019        Steffensen2022          Sternang2012 
-    ##                  2019                  2022                  2012 
-    ##         Stevenson2018        Stevenson2018a           Sukardi2022 
-    ##                  2018                  2017                  2022 
-    ##           Sumrall2021          Sundberg2013            Sutela2023 
-    ##                  2021                  2013                  2023 
-    ##            Svihla2012             Taber2009          Tasquier2015 
-    ##                  2012                  2009                  2015 
-    ##          Tasquier2017             Tasti2021            Taylor2020 
-    ##                  2017                  2021                  2020 
-    ##             Trott2019             Trott2020            Trott2020a 
-    ##                  2019                  2020                  2019 
-    ##            Trott2020b             Trott2022            Turner2022 
-    ##                  2020                  2022                  2022 
+    ##           Muller2021a           Nafisah2022          Nakamura2019 
+    ##                  2021                  2022                  2019 
+    ## Nicholas_Figueroa2017            Nkoana2020          Oberauer2023 
+    ##                  2017                  2019                  2023 
+    ##            Parant2017              Park2020             Parth2020 
+    ##                  2017                  2020                  2020 
+    ##             Pekel2019          Petersen2020            Porter2012 
+    ##                  2019                  2020                  2020 
+    ##           Pruneau2003           Pruneau2006          Pruneau2006a 
+    ##                  2003                  2006                  2006 
+    ##              Raes2016           Ratinen2013         Reinfried2012 
+    ##                  2015                  2012                  2012 
+    ##            Roscoe2013      Roychoudhury2017            Ruboon2012 
+    ##                  2012                  2017                  2012 
+    ##       Salas_Rueda2021         Salsabila2019          Saribaş2016  
+    ##                  2021                  2019                  2016 
+    ##           Schrot2021a        Schubatzky2022          Schuster2008 
+    ##                  2020                  2022                  2008 
+    ##          Sellmann2013         Sellmann2013a          Sellmann2015 
+    ##                  2012                  2013                  2015 
+    ##              Shea2016           Siegner2018             Silva2021 
+    ##                  2016                  2018                  2021 
+    ##            Skains2022             Smith2019        Steffensen2022 
+    ##                  2022                  2019                  2022 
+    ##          Sternang2012         Stevenson2018        Stevenson2018a 
+    ##                  2012                  2018                  2017 
+    ##           Sukardi2022           Sumrall2021          Sundberg2013 
+    ##                  2022                  2021                  2013 
+    ##            Sutela2023            Svihla2012             Taber2009 
+    ##                  2023                  2012                  2009 
+    ##          Tasquier2015          Tasquier2017             Tasti2021 
+    ##                  2015                  2017                  2021 
+    ##            Taylor2020             Trott2019             Trott2020 
+    ##                  2020                  2019                  2020 
+    ##            Trott2020a            Trott2020b             Trott2022 
+    ##                  2019                  2020                  2022 
     ##             Varma2012       Veijalainen2013           Vicente2020 
     ##                  2012                  2013                  2020 
     ##       Visintainer2015             Walsh2018             Walsh2019 
@@ -189,9 +206,9 @@ extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})
 barplot(table(factor(datesById,levels=min(datesById):max(datesById))), las=2, main="Number of documents included in the analysis by year")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-# 2 Countries
+# 3 Countries
 
 ``` r
 library(stringr)
@@ -341,9 +358,9 @@ rawExtract$Countries.STUDY
     ## [141] "United States"                             
     ## [142] "Indonesia"                                 
     ## [143] "Italy"                                     
-    ## [144] "Australia"                                 
-    ## [145] "Germany"                                   
-    ## [146] "Turkey"
+    ## [144] "Germany"                                   
+    ## [145] "Turkey"                                    
+    ## [146] NA
 
 ``` r
 extract$Countries.STUDY[extract$id=="Arya2016"]<-"United States;China;New Zealand;Norway"
@@ -356,12 +373,12 @@ countryStudy$country<-str_to_title(gsub(" +$","",gsub("^and ","",gsub("^ +","",c
 ```
 
     ##  United States         Turkey        Austria        Germany      Australia 
-    ##             56             10              9              8              6 
+    ##             56             10              9              8              5 
     ##         Canada          China United Kingdom        Finland          Italy 
     ##              5              5              5              4              4 
-    ##        Denmark      Indonesia       Malaysia         Norway         Brazil 
-    ##              3              3              3              3              2 
-    ##    New Zealand       Portugal   South Africa    South Korea          Spain 
+    ##        Denmark      Indonesia       Malaysia         Norway   South Africa 
+    ##              3              3              3              3              3 
+    ##         Brazil    New Zealand       Portugal    South Korea          Spain 
     ##              2              2              2              2              2 
     ##       Thailand     Bangladesh        Belgium Czech Republic         France 
     ##              2              1              1              1              1 
@@ -370,7 +387,7 @@ countryStudy$country<-str_to_title(gsub(" +$","",gsub("^and ","",gsub("^ +","",c
     ##         Sweden    Switzerland         Taiwan 
     ##              1              1              1
 
-## 2.1 Making the map
+## 3.1 Making the map
 
 ``` r
 require(rnaturalearth)
@@ -425,7 +442,7 @@ plot(st_geometry(worldMap_tot[orderCt,]),border="black",lwd=0.7,col=colorsScale[
 legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5","5-10",">10"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 countryStudy$FinalName<-NA
@@ -438,14 +455,14 @@ countryDoc <- tapply(countryStudy$FinalName,countryStudy$id,function(x)
 })
 ```
 
-# 3 Years/Region of the world
+# 4 Years/Region of the world
 
 ``` r
 REG<-factor(worldMap_tot$region_wb[worldMap_tot$region_wb!="Antarctica"])
 plot(st_geometry(worldMap_tot[worldMap_tot$region_wb!="Antarctica",]),col=rainbow(nlevels(REG))[REG])
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ``` r
 countryStudy$region<-NA
@@ -469,16 +486,16 @@ arrows(x0=datesOnGraph,y0=c(5,13),y1=rep(0,2),x1=datesOnGraph,length = .2,col="b
 text(datesOnGraph,c(6,13.5),events, cex=.7)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
 
-# 4 Outcomes
+# 5 Outcomes
 
 ``` r
 didItWork_col<-colnames(extract)[grep("it.work",colnames(extract))]
 barplot(colSums(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")])))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ``` r
 withOutcome<-which(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")]),arr.ind=T)
@@ -493,9 +510,9 @@ outcomeEffect$effect_simp[is.na(outcomeEffect$effect_simp)]<-"Unclear"
 barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
 
-# 5 Population
+# 6 Population
 
 ``` r
 extract$TARGETED.SAMPLE<-gsub(" $","",extract$TARGETED.SAMPLE)
@@ -503,16 +520,12 @@ sort(table(extract$TARGETED.SAMPLE),decreasing=T)
 ```
 
     ## 
-    ##                Students                students                Teachers 
-    ##                      67                      42                      10 
-    ##    Pre-service teachers                teachers     Entourage (parents) 
-    ##                       6                       6                       3 
-    ##    pre service teachers             Adolescents                 Parents 
-    ##                       2                       1                       1 
-    ##   pre- service Teachers                 Student    Students and parents 
-    ##                       1                       1                       1 
-    ## students and professors   Students and Teachers       Teachers/students 
-    ##                       1                       1                       1
+    ##              students  Entourage (Teachers)  pre-service teachers 
+    ##                   111                    16                     9 
+    ##   Entourage (parents) students and teachers  students and parents 
+    ##                     4                     2                     1 
+    ## students and Teachers 
+    ##                     1
 
 ``` r
 extract$student<-extract$TARGETED.SAMPLE%in%c("Students","students")
@@ -524,28 +537,41 @@ extract$age_min[extract$student]
     ##  [21] NA     NA     NA     NA     NA     "15.0" "15.0" "15.0" NA     NA    
     ##  [31] NA     "7.0"  "13.0" NA     "10.0" "10.0" NA     NA     NA     "11.0"
     ##  [41] "13.0" "16.0" NA     "12.0" "9.0"  "11.0" "9.0"  "9.0"  "13.0" "16.0"
-    ##  [51] NA     "11.0" NA     "12.0" "10.0" NA     NA     NA     "16.0" NA    
+    ##  [51] "10.0" "11.0" NA     "12.0" "10.0" NA     NA     NA     "16.0" NA    
     ##  [61] NA     "14.0" "17.0" "15.0" NA     NA     NA     NA     "13.0" "ND"  
     ##  [71] NA     "11.0" "15.0" "13.0" "10.0" NA     NA     NA     NA     "15.0"
     ##  [81] NA     "11.0" NA     NA     "10.0" "10.0" NA     "16.0" "16.0" NA    
     ##  [91] NA     "10.0" "15.0" NA     "10.0" NA     "8.0"  NA     "16.0" "12.0"
-    ## [101] NA     NA     NA     "17.0" "16.0" "12.0" NA     "16.0" "15.0"
+    ## [101] NA     NA     NA     "17.0" "16.0" "12.0" "11.0" NA     "16.0" "15.0"
+    ## [111] "15.0"
 
 ``` r
 extract$age_max[extract$student]
 ```
 
-    ##   [1] NA     "17.0" NA     "18.0" NA     "18.0" NA     NA     NA     NA    
-    ##  [11] NA     NA     NA     "16.0" NA     "16.0" NA     NA     "14.0" "15.0"
-    ##  [21] NA     "16.0" NA     NA     NA     "18.0" "19.0" "16.0" NA     NA    
-    ##  [31] NA     "9.0"  "15.0" NA     "11.0" "11.0" NA     NA     NA     "15.0"
-    ##  [41] "14.0" "18.0" NA     "17.0" "14.0" "14.0" "17.0" "10.0" "14.0" "19.0"
-    ##  [51] NA     "14.0" NA     "17.0" "12.0" NA     NA     NA     "17.0" NA    
-    ##  [61] NA     "17.0" "18.0" "18.0" NA     NA     NA     NA     "16.0" "ND"  
-    ##  [71] NA     "16.0" "19.0" "15.0" "12.0" NA     NA     NA     NA     "16.0"
-    ##  [81] NA     "12.0" NA     NA     "12.0" "12.0" NA     "18.0" "16.0" NA    
-    ##  [91] NA     "13.0" "17.0" NA     "19.0" NA     "12.0" NA     "17.0" "13.0"
-    ## [101] NA     NA     NA     "17.0" "17.0" "15.0" NA     "18.0" "19.0"
+    ##   [1] NA             "17.0"         NA             "18.0"         NA            
+    ##   [6] "18.0"         NA             NA             NA             NA            
+    ##  [11] NA             NA             NA             "16.0"         NA            
+    ##  [16] "16.0"         NA             NA             "14.0"         "15.0"        
+    ##  [21] NA             "16.0"         NA             NA             NA            
+    ##  [26] "18.0"         "19.0"         "16.0"         NA             NA            
+    ##  [31] NA             "9.0"          "15.0"         NA             "11.0"        
+    ##  [36] "11.0"         NA             NA             NA             "15.0"        
+    ##  [41] "14.0"         "18.0"         NA             "17.0"         "14.0"        
+    ##  [46] "14.0"         "17.0"         "10.0"         "14.0"         "19.0"        
+    ##  [51] "11.0"         "14.0"         NA             "17.0"         "12.0"        
+    ##  [56] NA             NA             NA             "17.0"         NA            
+    ##  [61] NA             "17.0"         "18.0"         "18.0"         NA            
+    ##  [66] NA             NA             NA             "16.0"         "ND"          
+    ##  [71] NA             "16.0"         "19.0"         "15.0"         "12.0"        
+    ##  [76] NA             NA             NA             NA             "16.0"        
+    ##  [81] NA             "12.0"         NA             NA             "12.0"        
+    ##  [86] "12.0"         NA             "18.0"         "16.0"         NA            
+    ##  [91] NA             "13.0"         "17.0"         NA             "19.0"        
+    ##  [96] NA             "12.0"         NA             "17.0"         "13.0"        
+    ## [101] NA             NA             NA             "17.0"         "17.0"        
+    ## [106] "15.0"         "15 and older" NA             "18.0"         "19.0"        
+    ## [111] "16.0"
 
 ``` r
 extract$mean.age[extract$student]
@@ -564,7 +590,7 @@ extract$mean.age[extract$student]
     ##  [81] NA       NA       "14.0"   NA       "11.1"   "11.1"   "11.0"   " "     
     ##  [89] "16.0"   NA       NA       NA       "16.0"   NA       NA       NA      
     ##  [97] NA       NA       NA       NA       NA       NA       NA       "17.0"  
-    ## [105] NA       NA       NA       NA       NA
+    ## [105] NA       NA       NA       NA       NA       NA       "ND"
 
 ``` r
 extract$age_min_stud<-NA
@@ -584,6 +610,11 @@ extract$age_max_stud[extract$student]<-as.numeric(gsub(" \\[Extracted from grade
 
 ``` r
 extract$age_aver_stud[extract$student]<-as.numeric(gsub("\\[Extracted from grade\\]","",extract$mean.age[extract$student]))
+```
+
+    ## Warning: NAs introduced by coercion
+
+``` r
 extract[extract$student,"age_stud_no_info"]<-apply(extract[extract$student,c("age_min_stud","age_max_stud","age_aver_stud")],1,function(x)all(is.na(x)))
 extract[extract$student,"age_stud_type_info"]<-apply(extract[extract$student,c("age_min_stud","age_max_stud","age_aver_stud")],1,function(x){
     if(!is.na(x[1]) & !is.na(x[2]) & !is.na(x[3])){return("all")}
@@ -599,7 +630,7 @@ table(extract$age_stud_type_info[extract$student],useNA = "always")
 
     ## 
     ##    all   mean minmax   <NA> 
-    ##      9     11     44     45
+    ##      9     11     46     45
 
 ``` r
 age_order<- rep(NA,sum(!is.na(extract$age_stud_type_info)))
@@ -608,9 +639,9 @@ age_order[extract$age_stud_type_info[!is.na(extract$age_stud_type_info)]%in%c("m
 order(age_order)
 ```
 
-    ##  [1] 12 25 57 14 15 31 45 51 30 49 50 22 47 54 23 28 35 59 18 24 39  7 19 26 32
-    ## [26] 34 42 62 13 16 41 44 48  4  6  8 21 29 56  2  5 11 40 46 36 53 55 33 38 58
-    ## [51] 61  3  9 10 20 43 52 60 63 64 17 27 37  1
+    ##  [1] 12 25 58 14 15 28 32 46 52 31 50 51 22 48 55 23 29 36 60 18 24 40  7 19 26
+    ## [26] 33 35 43 63 13 16 42 45 49  4  6  8 21 30 57  2  5 11 41 47 66 37 54 56 34
+    ## [51] 39 59 62  3  9 10 20 44 53 61 64 65 17 27 38  1
 
 ``` r
 tabForPlot<-extract[!is.na(extract$age_stud_type_info),c("age_min_stud","age_max_stud","age_aver_stud","age_stud_no_info","age_stud_type_info")][order(age_order),]
@@ -619,33 +650,17 @@ segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","al
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
-# 6 Controversy
+# 7 Controversy
 
 ``` r
 table(extract$Controversy,useNA="always")
 ```
 
     ## 
-    ##                                                                            no 
-    ##                                                                            26 
-    ##                                                                            No 
-    ##                                                                            70 
-    ##                                                                            NO 
-    ##                                                                             3 
-    ##                                                                           no  
-    ##                                                                             1 
-    ##                                                                       Unclear 
-    ##                                                                             1 
-    ##                                                                           yes 
-    ##                                                                             5 
-    ##                                                                           Yes 
-    ##                                                                            20 
-    ## Yes, but it does not appear particularly important in the pedagogical focuses 
-    ##                                                                             1 
-    ##                                                                          <NA> 
-    ##                                                                            19
+    ##   no   No   NO  no   yes  Yes <NA> 
+    ##   29   77    3    1    5   26    5
 
 ``` r
 extract$controv_clean<-NA
@@ -657,7 +672,7 @@ table(extract$controv_clean,useNA="ifany")
 
     ## 
     ##   No  Yes <NA> 
-    ##  100   26   20
+    ##  110   31    5
 
 ``` r
 controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
@@ -669,21 +684,21 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
 
     ##                           
     ##                            No Yes <NA>
-    ##   Australia                 3   0    1
+    ##   Australia                 3   0    0
     ##   Austria                   5   1    0
     ##   Bangladesh                1   0    0
     ##   Belgium                   1   0    0
     ##   Brazil                    2   0    0
-    ##   Canada                    3   0    2
+    ##   Canada                    5   0    0
     ##   China                     4   0    0
     ##   Czechia                   1   0    0
     ##   Denmark                   2   0    0
-    ##   Finland                   2   0    1
+    ##   Finland                   3   0    0
     ##   France                    1   0    0
-    ##   Germany                   4   0    3
+    ##   Germany                   6   0    1
     ##   Greece                    1   0    0
     ##   Indonesia                 3   0    0
-    ##   Italy                     1   1    1
+    ##   Italy                     1   2    0
     ##   Japan                     1   0    0
     ##   Malaysia                  3   0    0
     ##   Mexico                    1   0    0
@@ -691,16 +706,16 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##   New Zealand               1   0    0
     ##   Norway                    2   0    0
     ##   Portugal                  1   0    0
-    ##   South Africa              2   0    0
+    ##   South Africa              3   0    0
     ##   South Korea               1   0    0
     ##   Spain                     2   0    0
     ##   Sweden                    1   0    0
-    ##   Switzerland               0   0    1
+    ##   Switzerland               1   0    0
     ##   Taiwan                    1   0    0
     ##   Thailand                  2   0    0
     ##   Turkey                    9   0    1
-    ##   United Kingdom            3   0    1
-    ##   United States of America 30  18    7
+    ##   United Kingdom            4   0    0
+    ##   United States of America 32  22    1
     ##   <NA>                      0   1    1
 
 ``` r
@@ -716,7 +731,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##                  Finland                   France                  Germany 
     ##                0.0000000                0.0000000                0.0000000 
     ##                   Greece                Indonesia                    Italy 
-    ##                0.0000000                0.0000000                0.3333333 
+    ##                0.0000000                0.0000000                0.6666667 
     ##                    Japan                 Malaysia                   Mexico 
     ##                0.0000000                0.0000000                0.0000000 
     ##                 Multiple              New Zealand                   Norway 
@@ -728,19 +743,19 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##                   Taiwan                 Thailand                   Turkey 
     ##                0.0000000                0.0000000                0.0000000 
     ##           United Kingdom United States of America                     <NA> 
-    ##                0.0000000                0.3272727                0.5000000
+    ##                0.0000000                0.4000000                0.5000000
 
 ``` r
 barplot(PercentageControversy,las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ``` r
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
 ```
 
-    ## [1] 0.75
+    ## [1] 0.7586207
 
 ``` r
 sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)/length(countryDoc)
@@ -752,9 +767,9 @@ sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)/length(
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)
 ```
 
-    ## [1] 0.3272727
+    ## [1] 0.4
 
-# 7 Mitigation/Adaptation
+# 8 Mitigation/Adaptation
 
 ``` r
 table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$`Final.mitigation/adaptation`,useNA = 'always'))
@@ -762,15 +777,15 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 
     ## 
     ## Adaptation       Both Mitigation    Neither       <NA> 
-    ## 0.03424658 0.27397260 0.62328767 0.02739726 0.04109589
+    ## 0.03424658 0.27397260 0.61643836 0.03424658 0.04109589
 
 ``` r
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
-# 8 Educational framework
+# 9 Educational framework
 
 We’ve got a problem, most of the extracted papers just do not have the
 information:
@@ -832,7 +847,7 @@ Klosterman2010, Saribaş2016 , Reinfried2012, Sellmann2013a,
 Sternang2012, Sutela2023, Stevenson2018a, Xie2014, Zografakis2008,
 Trott2019, Trott2022, Markowitz2018, Smith2019, Zhong2021,
 Harker_Schuch2013, Harker_Schuch2020, Lambert2013, Littrell2022,
-Skains2022, Stevenson2018, Sukardi2022, Turner2022, Pekel2019
+Skains2022, Stevenson2018, Sukardi2022, Pekel2019, NA
 
 </td>
 </tr>
@@ -885,13 +900,13 @@ local
 </td>
 <td style="text-align:right;">
 
-11
+10
 
 </td>
 <td style="text-align:left;">
 
 Bofferding2015, Dormody2021, Lester2006, Liu2015, Nakamura2019,
-Faria2015, Faria2015, Dal2015a, Ratinen2013, Breslyn2019, Sellmann2015
+Faria2015, Faria2015, Ratinen2013, Breslyn2019, Sellmann2015
 
 </td>
 </tr>
@@ -1012,7 +1027,7 @@ Educational, Scientific and Cultural Organization (UNESCO)
 </td>
 <td style="text-align:left;">
 
-Muller2021
+Muller2021a
 
 </td>
 </tr>
@@ -1241,6 +1256,23 @@ Tasti2021
 <tr>
 <td style="text-align:left;">
 
+NA local
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Dal2015a
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 This is a chinese programme, but no real educational framework is
 mentionned
 
@@ -1310,7 +1342,7 @@ Bodzin2014
 </tbody>
 </table>
 
-# 9 Monroe categories
+# 10 Monroe categories
 
 How many include “5:target climate science misconceptions”:
 

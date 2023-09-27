@@ -10,11 +10,20 @@ output:
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20230921.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20230921.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20230926.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20230926.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
-
+load("../../extraction/docExtract.RData")
 ```
+# Missing extractions
+
+```{r}
+missin<-unlist(docExtract)[!unlist(docExtract)%in%extract$id]
+missin<-missin[missin!="Saribaş2016"]
+missin
+```
+
+
 
 # Dates
 

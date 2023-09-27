@@ -1,18 +1,19 @@
 Searching words in the pdfs
 ================
 Marius Bottin
-2023-09-25
+2023-09-27
 
 - [1 Self-efficacy](#1-self-efficacy)
-- [2 Controversy](#2-controversy)
-  - [2.1 Controvers](#21-controvers)
-  - [2.2 Belief](#22-belief)
-  - [2.3 Opinion](#23-opinion)
-  - [2.4 Republican](#24-republican)
-  - [2.5 Human-induced](#25-human-induced)
-  - [2.6 All controversy table](#26-all-controversy-table)
-- [3 Earthquakes](#3-earthquakes)
-- [4 Misconception](#4-misconception)
+- [2 Theory of planned behavior](#2-theory-of-planned-behavior)
+- [3 Controversy](#3-controversy)
+  - [3.1 Controvers](#31-controvers)
+  - [3.2 Belief](#32-belief)
+  - [3.3 Opinion](#33-opinion)
+  - [3.4 Republican](#34-republican)
+  - [3.5 Human-induced](#35-human-induced)
+  - [3.6 All controversy table](#36-all-controversy-table)
+- [4 Earthquakes](#4-earthquakes)
+- [5 Misconception](#5-misconception)
 
 ``` r
 require(knitr)&require(kableExtra)
@@ -300,9 +301,69 @@ init
 </tbody>
 </table>
 
-# 2 Controversy
+# 2 Theory of planned behavior
 
-## 2.1 Controvers
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "planned[ -]behaviou?r" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep1<-sep
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Ana/Williams2017.pdf
+
+</td>
+<td style="text-align:left;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Kolenaty2022.pdf
+
+</td>
+<td style="text-align:left;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Marius/Hu2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+5
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 3 Controversy
+
+## 3.1 Controvers
 
 ``` r
 setwd(dos)
@@ -642,7 +703,7 @@ init
 </tbody>
 </table>
 
-## 2.2 Belief
+## 3.2 Belief
 
 ``` r
 setwd(dos)
@@ -1640,7 +1701,7 @@ init
 </tbody>
 </table>
 
-## 2.3 Opinion
+## 3.3 Opinion
 
 ``` r
 setwd(dos)
@@ -2414,7 +2475,7 @@ init
 </tbody>
 </table>
 
-## 2.4 Republican
+## 3.4 Republican
 
 ``` r
 setwd(dos)
@@ -2502,7 +2563,7 @@ init
 </tbody>
 </table>
 
-## 2.5 Human-induced
+## 3.5 Human-induced
 
 ``` r
 setwd(dos)
@@ -2632,7 +2693,7 @@ init
 </tbody>
 </table>
 
-## 2.6 All controversy table
+## 3.6 All controversy table
 
 ``` r
 all(sapply(sep1,function(x)x[1])==sapply(sep2,function(x)x[1]))
@@ -8345,7 +8406,7 @@ SUM
 </tbody>
 </table>
 
-# 3 Earthquakes
+# 4 Earthquakes
 
 “Earthq\*”
 
@@ -8457,7 +8518,7 @@ x
 </tbody>
 </table>
 
-# 4 Misconception
+# 5 Misconception
 
 ``` r
 setwd(dos)
