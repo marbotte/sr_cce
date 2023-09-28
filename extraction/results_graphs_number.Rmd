@@ -10,8 +10,8 @@ output:
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20230927.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20230927.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20230928.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20230928.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -271,6 +271,62 @@ text(bp[round(nrow(forTempPlot)/2)+1],max(forTempPlot),paste("To evaluate:",sum(
 ```
 
 
+# Methods & design
 
+```{r}
+sort(table(extract$study.type),decreasing = T)
+extract$QuantQualClean<-NA
+extract$QuantQualClean[grep("quantitative",ignore.case = T, extract$study.type)]<-"Quantitative"
+extract$QuantQualClean[grep("qualitative",ignore.case = T, extract$study.type)]<-"Qualitative"
+extract$QuantQualClean[grepl("mixed",ignore.case = T, extract$study.type) | grepl("both",ignore.case = T, extract$study.type)]<-"Both/Mixed"
+sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
+barplot(sort(table(extract$QuantQualClean),decreasing = T))
+
+A<-sort(table(extract$design),decreasing=T)
+names(A)[nchar(names(A))>40]<-paste(substr(names(A)[nchar(names(A))>40],1,40),"...")
+A
+extract$prepostClean<-NA
+extract$`Pre/Post`[!extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","VERDADERO","Verdadero","Yes","yes","YES","FALSE","FALSO","FAUX","Falso","No","no")]
+extract$prepostClean[extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","VERDADERO","Verdadero","Yes","yes","YES")]<-T
+extract$prepostClean[extract$`Pre/Post`%in%c("FALSE","FALSO","FAUX","Falso","No","no")]<-F
+
+#table(extract$design[extract$prepostClean])
+#table(extract$design[!extract$prepostClean])
+
+#extract$design[grepl("pre ?-? ?post",extract$design,ignore.case = T)]
+desPrePost<-grepl("pre ?-? ?post",extract$design,ignore.case = T)
+pControl<-grepl("pre ?-? ?post",extract$design,ignore.case = T) & grepl("\\+",extract$design) & grepl("control",extract$design,ignore.case = T)
+pFactor <-grepl("pre ?-? ?post",extract$design,ignore.case = T) & grepl("\\+",extract$design) & grepl("factor",extract$design,ignore.case = T)
+pDuring <-grepl("pre ?-? ?post",extract$design,ignore.case = T) & grepl("\\+",extract$design) & grepl("during",extract$design,ignore.case = T)
+designClean<-character(nrow(extract))
+designClean[desPrePost &! pControl &! pFactor & !pDuring]<- "Pre-post"
+designClean[desPrePost & pControl & !pFactor & !pDuring]<- "Pre-post + Control"
+designClean[desPrePost & !pControl & pFactor & !pDuring]<- "Pre-post + Factor"
+designClean[desPrePost & !pControl & !pFactor & pDuring]<- "Pre-post + During"
+designClean[desPrePost & pControl & pFactor & !pDuring]<- "Pre-post + Factor + Control"
+extract$design[desPrePost&designClean==""]
+table(extract$design[!desPrePost])[table(extract$design[!desPrePost])>1]
+designClean[designClean==""&grepl("case study",extract$design,ignore.case = T)]<-"Case study"
+designClean[designClean==""&grepl("discourse analysis",extract$design,ignore.case = T)]<-"Discourse analysis"
+designClean[designClean==""]<-"Other"
+designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-post + Factor", "Pre-post + Factor + Control", "Pre-post + During", "Case study",  "Discourse analysis", "Other"))
+barplot(table(designClean),las=2)
+```
+
+
+```{r, fig.height=5,fig.width=7}
+par(mfrow=c(1,2))
+par(mar=c(11,4,1,1))
+barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
+barplot(table(designClean),las=2)
+```
+
+
+
+
+# Population
+
+
+# 
 
 

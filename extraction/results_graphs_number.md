@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-09-27
+2023-09-28
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -15,6 +15,9 @@ Marius Bottin
 - [9 Educational framework](#9-educational-framework)
 - [10 Monroe categories](#10-monroe-categories)
 - [11 Theoretical framework](#11-theoretical-framework)
+- [12 Methods & design](#12-methods--design)
+- [13 Population](#13-population)
+- [14](#14)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -29,7 +32,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20230927.xlsx"))
+names(loadWorkbook("../../extraction/20230928.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -38,7 +41,7 @@ names(loadWorkbook("../../extraction/20230927.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20230927.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20230928.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -1431,3 +1434,218 @@ text(bp[round(nrow(forTempPlot)/2)+1],max(forTempPlot),paste("To evaluate:",sum(
 ```
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+
+# 12 Methods & design
+
+``` r
+sort(table(extract$study.type),decreasing = T)
+```
+
+    ## 
+    ##  Quantitative  quantitative   Qualitative          Both         Mixed 
+    ##            35            31            29            19            11 
+    ##          both         mixed   qualitative  qualitative  quantitative  
+    ##             4             4             4             4             2 
+    ##            ND 
+    ##             1
+
+``` r
+extract$QuantQualClean<-NA
+extract$QuantQualClean[grep("quantitative",ignore.case = T, extract$study.type)]<-"Quantitative"
+extract$QuantQualClean[grep("qualitative",ignore.case = T, extract$study.type)]<-"Qualitative"
+extract$QuantQualClean[grepl("mixed",ignore.case = T, extract$study.type) | grepl("both",ignore.case = T, extract$study.type)]<-"Both/Mixed"
+sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
+```
+
+    ## 
+    ## Quantitative   Both/Mixed  Qualitative         <NA> 
+    ##           68           38           37            3
+
+``` r
+barplot(sort(table(extract$QuantQualClean),decreasing = T))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+
+``` r
+A<-sort(table(extract$design),decreasing=T)
+names(A)[nchar(names(A))>40]<-paste(substr(names(A)[nchar(names(A))>40],1,40),"...")
+A
+```
+
+    ##                                     Pre-post 
+    ##                                           76 
+    ##                          Pre-post + control  
+    ##                                            4 
+    ##                            Pre-post + factor 
+    ##                                            4 
+    ##                                     pre-post 
+    ##                                            3 
+    ##                                    Pre-post  
+    ##                                            3 
+    ##                           Pre-post + control 
+    ##                                            3 
+    ##                            Pre-post + during 
+    ##                                            3 
+    ##                                   Case study 
+    ##                                            2 
+    ##                           Discourse analysis 
+    ##                                            2 
+    ## 2 (methodology: problem-based learning,  ... 
+    ##                                            1 
+    ##                              Action research 
+    ##                                            1 
+    ##               Case study, quasi-experimental 
+    ##                                            1 
+    ##                               cluster random 
+    ##                                            1 
+    ##                           Composing project  
+    ##                                            1 
+    ##            Computational behavioral patterns 
+    ##                                            1 
+    ##                                Correlational 
+    ##                                            1 
+    ##                                 Critical PAR 
+    ##                                            1 
+    ##                        Cross-sectional study 
+    ##                                            1 
+    ## Descriptive, follows students improvemen ... 
+    ##                                            1 
+    ## Design was different for each of the 3 o ... 
+    ##                                            1 
+    ##                           Ethnographic study 
+    ##                                            1 
+    ## Experiment --- The experiment used a 2 D ... 
+    ##                                            1 
+    ##                          Experimental design 
+    ##                                            1 
+    ##                             Factorial design 
+    ##                                            1 
+    ##                  Factorial design, only post 
+    ##                                            1 
+    ##                                 Longitudinal 
+    ##                                            1 
+    ##                                 mixed method 
+    ##                                            1 
+    ##                       Mixed-methods research 
+    ##                                            1 
+    ##                Multi-level assessment design 
+    ##                                            1 
+    ##                                           ND 
+    ##                                            1 
+    ## Observational study (they made a compari ... 
+    ##                                            1 
+    ##                Participatory action research 
+    ##                                            1 
+    ##                          Pre -post + control 
+    ##                                            1 
+    ##                                     pre post 
+    ##                                            1 
+    ##                                    pre-post  
+    ##                                            1 
+    ##                          Pre-post +  control 
+    ##                                            1 
+    ##                  Pre-post + control + factor 
+    ##                                            1 
+    ##                Pre-post + discourse analysis 
+    ##                                            1 
+    ##                            pre-post + factor 
+    ##                                            1 
+    ##                         Pre-post + interview 
+    ##                                            1 
+    ## Pre-post on activity 1, with additional  ... 
+    ##                                            1 
+    ##                   Pre-post quasiexperimental 
+    ##                                            1 
+    ##                 Pre-post with two iterations 
+    ##                                            1 
+    ##                             pre-post+ factor 
+    ##                                            1 
+    ##                                   Pre/ post  
+    ##                                            1 
+    ##                  Pre/post quasi-experimental 
+    ##                                            1 
+    ##                                  QUALITATIVE 
+    ##                                            1 
+    ## Qualitative analysis using concept maps  ... 
+    ##                                            1 
+    ## Qualitative analysis, pre- post- questio ... 
+    ##                                            1 
+    ##                     Qualitative case studies 
+    ##                                            1 
+    ## Quasi-experimental design involving expe ... 
+    ##                                            1 
+    ## Quasi-experimental design with controlle ... 
+    ##                                            1 
+    ##                                          RCT 
+    ##                                            1 
+    ##         Systematic phenomenological analysis 
+    ##                                            1
+
+``` r
+extract$prepostClean<-NA
+extract$`Pre/Post`[!extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","VERDADERO","Verdadero","Yes","yes","YES","FALSE","FALSO","FAUX","Falso","No","no")]
+```
+
+    ## [1] "Not sure... (see previous cell)"                                                                             
+    ## [2] "Not exactly. more like a follow-up in several moments of the intervention but no baseline, pre-intervention."
+    ## [3] "(see problem previous cell)"                                                                                 
+    ## [4] "FALSE - Only post!!"                                                                                         
+    ## [5] "True (but there is no info on when the pre and post measures were taken)"                                    
+    ## [6] "See previous cell"                                                                                           
+    ## [7] NA                                                                                                            
+    ## [8] NA
+
+``` r
+extract$prepostClean[extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","VERDADERO","Verdadero","Yes","yes","YES")]<-T
+extract$prepostClean[extract$`Pre/Post`%in%c("FALSE","FALSO","FAUX","Falso","No","no")]<-F
+
+#table(extract$design[extract$prepostClean])
+#table(extract$design[!extract$prepostClean])
+
+#extract$design[grepl("pre ?-? ?post",extract$design,ignore.case = T)]
+desPrePost<-grepl("pre ?-? ?post",extract$design,ignore.case = T)
+pControl<-grepl("pre ?-? ?post",extract$design,ignore.case = T) & grepl("\\+",extract$design) & grepl("control",extract$design,ignore.case = T)
+pFactor <-grepl("pre ?-? ?post",extract$design,ignore.case = T) & grepl("\\+",extract$design) & grepl("factor",extract$design,ignore.case = T)
+pDuring <-grepl("pre ?-? ?post",extract$design,ignore.case = T) & grepl("\\+",extract$design) & grepl("during",extract$design,ignore.case = T)
+designClean<-character(nrow(extract))
+designClean[desPrePost &! pControl &! pFactor & !pDuring]<- "Pre-post"
+designClean[desPrePost & pControl & !pFactor & !pDuring]<- "Pre-post + Control"
+designClean[desPrePost & !pControl & pFactor & !pDuring]<- "Pre-post + Factor"
+designClean[desPrePost & !pControl & !pFactor & pDuring]<- "Pre-post + During"
+designClean[desPrePost & pControl & pFactor & !pDuring]<- "Pre-post + Factor + Control"
+extract$design[desPrePost&designClean==""]
+```
+
+    ## character(0)
+
+``` r
+table(extract$design[!desPrePost])[table(extract$design[!desPrePost])>1]
+```
+
+    ## 
+    ##         Case study Discourse analysis 
+    ##                  2                  2
+
+``` r
+designClean[designClean==""&grepl("case study",extract$design,ignore.case = T)]<-"Case study"
+designClean[designClean==""&grepl("discourse analysis",extract$design,ignore.case = T)]<-"Discourse analysis"
+designClean[designClean==""]<-"Other"
+designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-post + Factor", "Pre-post + Factor + Control", "Pre-post + During", "Case study",  "Discourse analysis", "Other"))
+barplot(table(designClean),las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-15-2.png)<!-- -->
+
+``` r
+par(mfrow=c(1,2))
+par(mar=c(11,4,1,1))
+barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
+barplot(table(designClean),las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+
+# 13 Population
+
+# 14
