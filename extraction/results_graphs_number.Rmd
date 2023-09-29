@@ -137,10 +137,58 @@ barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","i
 
 # Population
 
+
+## Rural/urban
+
+```{r}
+sort(table(extract$urban.vs.rural))
+rururbClean<-factor(rep(NA,nrow(extract)),levels=c("Urban","Rural","Both","Not given"))
+rururbClean[grep("^ ?urban ?$",extract$urban.vs.rural,ignore.case = T)]<-"Urban"
+rururbClean[grep("^ ?rural ?$",extract$urban.vs.rural,ignore.case = T)]<-"Rural"
+rururbClean[grep("^ ?both ?$",extract$urban.vs.rural,ignore.case = T)]<-"Both"
+rururbClean[grepl("urban",extract$urban.vs.rural,ignore.case = T)&grepl("rural",extract$urban.vs.rural,ignore.case = T)]<-"Both"
+table(extract$urban.vs.rural[is.na(rururbClean)])
+table(rururbClean,useNA="ifany")
+rururbClean[is.na(rururbClean)]<-"Not given"
+barplot(table(rururbClean))
+```
+
+## categories
+
+
 ```{r}
 extract$TARGETED.SAMPLE<-gsub(" $","",extract$TARGETED.SAMPLE)
-sort(table(extract$TARGETED.SAMPLE),decreasing=T)
+sort(table(extract$TARGETED.SAMPLE,useNA="ifany"),decreasing=T)
+#For student ages
 extract$student<-extract$TARGETED.SAMPLE%in%c("Students","students")
+
+# For population categories
+extract$students<-grepl("student",extract$TARGETED.SAMPLE,ignore.case = T)
+extract$teachers<-grepl("teacher",extract$TARGETED.SAMPLE,ignore.case = T)&extract$TARGETED.SAMPLE!="pre-service teachers"
+extract$PS_teachers<-extract$TARGETED.SAMPLE=="pre-service teachers"
+extract$parents<-grepl("parent",extract$TARGETED.SAMPLE,ignore.case = T)
+resPopul<-by(extract[c("students","teachers","PS_teachers","parents")],extract$id,function(tab)
+{
+  popul<-apply(tab,2,any)
+  if(length(popul[popul])>1){return("mixed")}else{return(names(popul)[popul])}
+},simplify = T
+  )
+populClean<-Reduce(c,resPopul)
+names(populClean)<-names(resPopul)
+populClean[populClean=="students"]<-"Students"
+populClean[populClean=="teachers"]<-"Teachers"
+populClean[populClean=="PS_teachers"]<-"Pre-service teachers"
+populClean[populClean=="parents"]<-"Parents"
+populClean[populClean=="mixed"]<-"Mixed"
+populClean<-factor(populClean,levels=names(sort(table(populClean),decreasing = T)))
+par(mar=c(10,4,1,1))
+barplot(table(populClean,useNA = "ifany"),las=2)
+
+```
+
+## Age 
+
+```{r}
 extract$age_min[extract$student]
 extract$age_max[extract$student]
 extract$mean.age[extract$student]
@@ -172,6 +220,44 @@ segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","al
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
 ```
 
+### Adding ages from grades
+
+```{r fig.height=6,fig.width=7}
+extract[is.na(extract[,"age_stud_type_info"])&!is.na(as.numeric(extract$Age_min.from.grade.))&!is.na(as.numeric(extract$Age_max.from.grade)),"age_stud_type_info"]<-"minmaxFromGrade"
+tabForPlot<-rbind(
+  tabForPlot,
+  data.frame(age_min_stud=as.numeric(extract$Age_min.from.grade.[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
+             age_max_stud=as.numeric(extract$Age_max.from.grade[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
+             age_aver_stud=NA,
+             age_stud_no_info=T,
+             age_stud_type_info="minmaxFromGrade")
+)
+tabForPlot$age_min_stud<-as.integer(tabForPlot$age_min_stud)
+tabForPlot$age_max_stud<-as.integer(tabForPlot$age_max_stud)
+
+age_order<- rep(NA,sum(!is.na(tabForPlot$age_stud_type_info)))
+age_order[tabForPlot$age_stud_type_info[!is.na(tabForPlot$age_stud_type_info)]%in%c("all","mean")]<- tabForPlot[!is.na(tabForPlot$age_stud_type_info)&tabForPlot$age_stud_type_info%in%c("all","mean"),"age_aver_stud"]
+age_order[tabForPlot$age_stud_type_info[!is.na(tabForPlot$age_stud_type_info)]%in%c("minmax","minmaxFromGrade")]<-rowMeans( tabForPlot[!is.na(tabForPlot$age_stud_type_info)&tabForPlot$age_stud_type_info%in%c("minmax","minmaxFromGrade"),c("age_min_stud","age_max_stud")])
+order(age_order)
+tabForPlot<-tabForPlot[order(age_order),]
+plot(x=age_order[order(age_order)],y=1:nrow(tabForPlot),type="n",xlim=range(tabForPlot[,c("age_min_stud","age_max_stud")],na.rm=T), xlab="Age",ylab="",yaxt="n")
+segments(
+  x0=tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")],
+  y0=(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmax","all")],
+  x1=tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")])
+segments(
+  x0=tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],
+  y0=(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],
+  x1=tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],lty=3,lwd=.5)
+
+points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
+legend("topleft",lwd=c(1,.5,NA),lty=c(1,3,NA),pch=c(NA,NA,3),legend=c("Range given","Range from grades","Average given"))
+```
+
+
+
+
+
 # Controversy
 
 ```{r}
@@ -201,6 +287,18 @@ barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),l
 ```{r}
 table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$`Final.mitigation/adaptation`,useNA = 'always'))
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
+```
+# Disciplines
+
+
+```{r}
+par(mar=c(8,4,1,1))
+sort(table(extract$Disciplin_2))
+disciplineClean<- extract$Disciplin_2
+disciplineClean[grepl("^Social",extract$Disciplin_2)]<-"Social Sciences"
+disciplineClean[grepl("STEAM",extract$Disciplin_2)]<-"Mixed"
+disciplineClean[grepl("NA",extract$Disciplin_2)|is.na(extract$Disciplin_2)]<-"ND"
+barplot(sort(table(disciplineClean),decreasing=T), las=2)
 ```
 
 
@@ -317,16 +415,26 @@ barplot(table(designClean),las=2)
 ```{r, fig.height=5,fig.width=7}
 par(mfrow=c(1,2))
 par(mar=c(11,4,1,1))
-barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 barplot(table(designClean),las=2)
+barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
+```
+
+# Pedagogical tools
+
+```{r}
+par(mar=c(9,4,1,1))
+barplot(c(
+  `Lesson based`=40,
+  `Combined strategy`=38,
+  `Project based`=19,
+  `Curriculum based`=15,
+  `Technology/Virtual`=9,
+  `Cultural based`=8,
+  `Game based`=4
+), las = 2
+)
 ```
 
 
 
-
 # Population
-
-
-# 
-
-

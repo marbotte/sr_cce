@@ -1,19 +1,20 @@
 Searching words in the pdfs
 ================
 Marius Bottin
-2023-09-27
+2023-09-28
 
-- [1 Self-efficacy](#1-self-efficacy)
-- [2 Theory of planned behavior](#2-theory-of-planned-behavior)
-- [3 Controversy](#3-controversy)
-  - [3.1 Controvers](#31-controvers)
-  - [3.2 Belief](#32-belief)
-  - [3.3 Opinion](#33-opinion)
-  - [3.4 Republican](#34-republican)
-  - [3.5 Human-induced](#35-human-induced)
-  - [3.6 All controversy table](#36-all-controversy-table)
-- [4 Earthquakes](#4-earthquakes)
-- [5 Misconception](#5-misconception)
+- [1 Number of pages](#1-number-of-pages)
+- [2 Self-efficacy](#2-self-efficacy)
+- [3 Theory of planned behavior](#3-theory-of-planned-behavior)
+- [4 Controversy](#4-controversy)
+  - [4.1 Controvers](#41-controvers)
+  - [4.2 Belief](#42-belief)
+  - [4.3 Opinion](#43-opinion)
+  - [4.4 Republican](#44-republican)
+  - [4.5 Human-induced](#45-human-induced)
+  - [4.6 All controversy table](#46-all-controversy-table)
+- [5 Earthquakes](#5-earthquakes)
+- [6 Misconception](#6-misconception)
 
 ``` r
 require(knitr)&require(kableExtra)
@@ -30,7 +31,17 @@ knitr::opts_chunk$set(cache=T)
 dos <- normalizePath("../../extraction/")
 ```
 
-# 1 Self-efficacy
+# 1 Number of pages
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-type d','-exec exiftool -T -filename -PageCount -s3 -ext pdf {} \\;'),intern = T)
+sum(as.numeric(sapply(strsplit(raw,"\t"),function(x)x[2])))
+```
+
+    ## [1] 2723
+
+# 2 Self-efficacy
 
 “Self-efficacy” or “self efficacy”:
 
@@ -301,7 +312,7 @@ init
 </tbody>
 </table>
 
-# 2 Theory of planned behavior
+# 3 Theory of planned behavior
 
 ``` r
 setwd(dos)
@@ -361,9 +372,9 @@ init
 </tbody>
 </table>
 
-# 3 Controversy
+# 4 Controversy
 
-## 3.1 Controvers
+## 4.1 Controvers
 
 ``` r
 setwd(dos)
@@ -703,7 +714,7 @@ init
 </tbody>
 </table>
 
-## 3.2 Belief
+## 4.2 Belief
 
 ``` r
 setwd(dos)
@@ -1701,7 +1712,7 @@ init
 </tbody>
 </table>
 
-## 3.3 Opinion
+## 4.3 Opinion
 
 ``` r
 setwd(dos)
@@ -2475,7 +2486,7 @@ init
 </tbody>
 </table>
 
-## 3.4 Republican
+## 4.4 Republican
 
 ``` r
 setwd(dos)
@@ -2563,7 +2574,7 @@ init
 </tbody>
 </table>
 
-## 3.5 Human-induced
+## 4.5 Human-induced
 
 ``` r
 setwd(dos)
@@ -2693,7 +2704,7 @@ init
 </tbody>
 </table>
 
-## 3.6 All controversy table
+## 4.6 All controversy table
 
 ``` r
 all(sapply(sep1,function(x)x[1])==sapply(sep2,function(x)x[1]))
@@ -8406,7 +8417,7 @@ SUM
 </tbody>
 </table>
 
-# 4 Earthquakes
+# 5 Earthquakes
 
 “Earthq\*”
 
@@ -8518,7 +8529,7 @@ x
 </tbody>
 </table>
 
-# 5 Misconception
+# 6 Misconception
 
 ``` r
 setwd(dos)

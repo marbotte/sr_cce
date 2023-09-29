@@ -10,6 +10,9 @@ Marius Bottin
 - [4 Years/Region of the world](#4-yearsregion-of-the-world)
 - [5 Outcomes](#5-outcomes)
 - [6 Population](#6-population)
+  - [6.1 Rural/urban](#61-ruralurban)
+  - [6.2 categories](#62-categories)
+  - [6.3 Age](#63-age)
 - [7 Controversy](#7-controversy)
 - [8 Mitigation/Adaptation](#8-mitigationadaptation)
 - [9 Educational framework](#9-educational-framework)
@@ -17,7 +20,6 @@ Marius Bottin
 - [11 Theoretical framework](#11-theoretical-framework)
 - [12 Methods & design](#12-methods--design)
 - [13 Population](#13-population)
-- [14](#14)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -518,9 +520,83 @@ barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","i
 
 # 6 Population
 
+## 6.1 Rural/urban
+
+``` r
+sort(table(extract$urban.vs.rural))
+```
+
+    ## 
+    ##                               one urban and three rural schools\nparticipated in this study 
+    ##                                                                                           1 
+    ## one was located in a small coastal village and the other situated in a town further inland. 
+    ##                                                                                           1 
+    ##                                                                                       rural 
+    ##                                                                                           1 
+    ##                                                     school that is located close to the sea 
+    ##                                                                                           1 
+    ##                                                                 Sub-urban and rural schools 
+    ##                                                                                           1 
+    ##                                                                                    suburban 
+    ##                                                                                           1 
+    ##                                                                                     Unknown 
+    ##                                                                                           1 
+    ##                                                                  urban, suburban, and rural 
+    ##                                                                                           1 
+    ##                                                                             Urban and rural 
+    ##                                                                                           2 
+    ##                                                                                        both 
+    ##                                                                                           3 
+    ##                                                                                      Urban  
+    ##                                                                                           3 
+    ##                                                                                       Rural 
+    ##                                                                                           4 
+    ##                                                                                        Both 
+    ##                                                                                           8 
+    ##                                                                                       urban 
+    ##                                                                                          36 
+    ##                                                                                       Urban 
+    ##                                                                                          49
+
+``` r
+rururbClean<-factor(rep(NA,nrow(extract)),levels=c("Urban","Rural","Both","Not given"))
+rururbClean[grep("^ ?urban ?$",extract$urban.vs.rural,ignore.case = T)]<-"Urban"
+rururbClean[grep("^ ?rural ?$",extract$urban.vs.rural,ignore.case = T)]<-"Rural"
+rururbClean[grep("^ ?both ?$",extract$urban.vs.rural,ignore.case = T)]<-"Both"
+rururbClean[grepl("urban",extract$urban.vs.rural,ignore.case = T)&grepl("rural",extract$urban.vs.rural,ignore.case = T)]<-"Both"
+table(extract$urban.vs.rural[is.na(rururbClean)])
+```
+
+    ## 
+    ## one was located in a small coastal village and the other situated in a town further inland. 
+    ##                                                                                           1 
+    ##                                                     school that is located close to the sea 
+    ##                                                                                           1 
+    ##                                                                                    suburban 
+    ##                                                                                           1 
+    ##                                                                                     Unknown 
+    ##                                                                                           1
+
+``` r
+table(rururbClean,useNA="ifany")
+```
+
+    ## rururbClean
+    ##     Urban     Rural      Both Not given      <NA> 
+    ##        88         5        16         0        37
+
+``` r
+rururbClean[is.na(rururbClean)]<-"Not given"
+barplot(table(rururbClean))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+## 6.2 categories
+
 ``` r
 extract$TARGETED.SAMPLE<-gsub(" $","",extract$TARGETED.SAMPLE)
-sort(table(extract$TARGETED.SAMPLE),decreasing=T)
+sort(table(extract$TARGETED.SAMPLE,useNA="ifany"),decreasing=T)
 ```
 
     ## 
@@ -528,11 +604,41 @@ sort(table(extract$TARGETED.SAMPLE),decreasing=T)
     ##                   111                    16                     9 
     ##   Entourage (parents) students and teachers              Students 
     ##                     4                     2                     1 
-    ##  students and parents students and Teachers 
-    ##                     1                     1
+    ##  students and parents students and Teachers                  <NA> 
+    ##                     1                     1                     1
 
 ``` r
+#For student ages
 extract$student<-extract$TARGETED.SAMPLE%in%c("Students","students")
+
+# For population categories
+extract$students<-grepl("student",extract$TARGETED.SAMPLE,ignore.case = T)
+extract$teachers<-grepl("teacher",extract$TARGETED.SAMPLE,ignore.case = T)&extract$TARGETED.SAMPLE!="pre-service teachers"
+extract$PS_teachers<-extract$TARGETED.SAMPLE=="pre-service teachers"
+extract$parents<-grepl("parent",extract$TARGETED.SAMPLE,ignore.case = T)
+resPopul<-by(extract[c("students","teachers","PS_teachers","parents")],extract$id,function(tab)
+{
+  popul<-apply(tab,2,any)
+  if(length(popul[popul])>1){return("mixed")}else{return(names(popul)[popul])}
+},simplify = T
+  )
+populClean<-Reduce(c,resPopul)
+names(populClean)<-names(resPopul)
+populClean[populClean=="students"]<-"Students"
+populClean[populClean=="teachers"]<-"Teachers"
+populClean[populClean=="PS_teachers"]<-"Pre-service teachers"
+populClean[populClean=="parents"]<-"Parents"
+populClean[populClean=="mixed"]<-"Mixed"
+populClean<-factor(populClean,levels=names(sort(table(populClean),decreasing = T)))
+par(mar=c(10,4,1,1))
+barplot(table(populClean,useNA = "ifany"),las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+## 6.3 Age
+
+``` r
 extract$age_min[extract$student]
 ```
 
@@ -654,7 +760,7 @@ segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","al
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 # 7 Controversy
 
@@ -753,7 +859,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
 barplot(PercentageControversy,las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ``` r
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
@@ -778,7 +884,7 @@ par(mar=c(11,4,1,1))
 barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),las=2,legend=T,args.legend = list(title="Controversy"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-11-2.png)<!-- -->
 
 # 8 Mitigation/Adaptation
 
@@ -794,7 +900,31 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+\# Disciplines
+
+``` r
+par(mar=c(8,4,1,1))
+sort(table(extract$Disciplin_2))
+```
+
+    ## 
+    ##            Other  Social Sciences  Social sciences            STEAM 
+    ##                1                1                2                2 
+    ##        Education             STEM            Mixed              NA  
+    ##                3                8               13               18 
+    ## Natural Sciences 
+    ##               70
+
+``` r
+disciplineClean<- extract$Disciplin_2
+disciplineClean[grepl("^Social",extract$Disciplin_2)]<-"Social Sciences"
+disciplineClean[grepl("STEAM",extract$Disciplin_2)]<-"Mixed"
+disciplineClean[grepl("NA",extract$Disciplin_2)|is.na(extract$Disciplin_2)]<-"ND"
+barplot(sort(table(disciplineClean),decreasing=T), las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 # 9 Educational framework
 
@@ -1433,7 +1563,7 @@ legend("topleft",density=18,"consistent with")
 text(bp[round(nrow(forTempPlot)/2)+1],max(forTempPlot),paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 # 12 Methods & design
 
@@ -1465,7 +1595,7 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 ``` r
 A<-sort(table(extract$design),decreasing=T)
@@ -1635,17 +1765,15 @@ designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-
 barplot(table(designClean),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-15-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-2.png)<!-- -->
 
 ``` r
 par(mfrow=c(1,2))
 par(mar=c(11,4,1,1))
-barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 barplot(table(designClean),las=2)
+barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
 # 13 Population
-
-# 14
