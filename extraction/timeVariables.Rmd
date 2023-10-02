@@ -1,0 +1,46 @@
+---
+title: "Time variables in the extraction table"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+```{r}
+require(openxlsx)&require(knitr)&require(kableExtra)
+completeFTS <- read.xlsx("../../screening/fullTextScreening/fullTextScreening.xlsx")
+names(loadWorkbook("../../extraction/20230928.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20230928.xlsx",sheet = "extraction ",startRow = 2)
+extract<-rawExtract
+#table(extract$`Validation.Mitigation/adaptation`)
+tabToWork<-extract[order(extract$id),]
+```
+
+```{r, results='asis'}
+for(i in 1:nrow(tabToWork))
+{
+  ref<-tabToWork$id[i]
+  title<-tabToWork$referencia[i]
+  person<-tabToWork$codifico[i]
+  abstract<-completeFTS[completeFTS$abbrev==ref,"abstract"]
+  cat("#", ref, "(",person,")\n\n")
+  
+  cat("**title**",tabToWork$referencia[i],"\n\n")
+  
+  TAB<-t(tabToWork[i,c("Curricular/extracurricular","Outdoor/indoor/Both","Type.of.intervention","Descripcion.de.intervención")])
+  # #cat(kable(TAB,col.names = c()))
+  # cat("**Curricular/Extra**:",TAB[1,],"\n\n")
+  # cat("**Indoor/Outdoor**:",TAB[2,],"\n\n")
+  # cat("**Type**:",TAB[3,],"\n\n")
+  cat("**Intervention**:",TAB[4,],"\n\n")
+  
+  TAB<-t(tabToWork[i,c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Analysis.technique","Resultados.obtenidos.por.cada.outcome","Which.aspect.has.improved.or.not?")])
+  # #cat(kable(TAB,col.names = c()))
+  cat("**Data**:",TAB[1,],"\n\n")
+  TAB<-t(tabToWork[i,c("Duración.INTERV","tiempo.transcurrido.entre.la.intervencion.y.prueba","tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad","Horizon.of.change")])
+  cat(kable(TAB,col.names = c()))
+}
+```
+
