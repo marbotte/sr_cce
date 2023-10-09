@@ -3,7 +3,7 @@ title: "Searching words in the pdfs"
 author: "Marius Bottin"
 date: "`r Sys.Date()`"
 output: 
-  github_document:
+  bookdown::github_document2:
      number_sections: true
      toc: true
 always_allow_html: true
@@ -160,3 +160,197 @@ raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "misconception
 sep <- strsplit(raw,":")
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
+
+# Outcomes
+
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "behaviou?r" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_behavior<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes<-data.frame(behavior=as.integer(sapply(sep,function(x)x[2])),
+                     row.names=sapply(sep,function(x)x[1]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "attitude" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_attitude<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$attitude<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "knowledge" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_knowledge<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$knowledge<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "understand*" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_understanding<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$understand<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "aware" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_awareness<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$aware<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "belief" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_belief<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$belief<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "conscious" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_conscious<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$conscious<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e " concern(ed)? " {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_concern<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$concern<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "emot" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_emot<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$emot<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "hope" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_emot<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$hope<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "fear" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_fear<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$fear<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "empath" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_empath<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$empath<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "worr" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_worr<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$worr<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "feeling" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_feeling<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$feeling<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "willingness to" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_willingness_to<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$willingness_to<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "intent" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_intent<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$intent<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e " habits? " {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_habit<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$habit<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e " actions? " {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+sep_habit<-sep
+#kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+outcomes$action<-as.integer(sapply(sep,function(x)x[2]))
+```
+
+
+## recapitulative table: outcomes
+
+
+```{r}
+kable(outcomes)%>%
+  add_header_above(c(" "=1,"General"=2,"Knowledge"=2,"awareness"=3,"emotion"=7,"intent"=2,"habit"=1,"action"=1))
+```
+

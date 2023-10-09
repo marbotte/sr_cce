@@ -6,12 +6,13 @@ output:
   github_document:
      number_sections: true
      toc: true
+always_allow_html: true
 ---
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20230928.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20230928.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231002.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231002.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -436,5 +437,58 @@ barplot(c(
 ```
 
 
+# Time variables
 
-# Population
+```{r}
+extract$Total.duration.of.the.intervention
+extract$Period.length
+extract$Number.of.sessions
+```
+
+```{r}
+hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number of sessions", ylab="Number of studies",nclass=50)
+legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
+```
+
+```{r}
+extract$Total.duration.of.the.intervention
+extract$Total.duration.of.the.intervention[!is.na(extract$Total.duration.of.the.intervention)&!grepl("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?",extract$Total.duration.of.the.intervention)]
+totalDur<-data.frame(
+  id=extract$id,
+  raw=extract$Total.duration.of.the.intervention,
+  ND=is.na(extract$Total.duration.of.the.intervention),
+  approx=gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\1",extract$Total.duration.of.the.intervention,perl=T)=="~",
+  h=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\3",extract$Total.duration.of.the.intervention,perl=T)),
+  min=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\6",extract$Total.duration.of.the.intervention,perl=T))
+)
+totalDur$totalMin=ifelse(totalDur$ND,NA,(60*ifelse(is.na(totalDur$h),0,totalDur$h))+ifelse(is.na(totalDur$min),0,totalDur$min))
+kbl(totalDur[!totalDur$ND,])
+hist(totalDur$totalMin,nclass=50,main="",xlab="Total intervention time",ylab="Number of studies",xaxt="n")
+axis(1,at=c(0,60*c(20,50,100,150)),labels=c("0","20h","50h","100h","150h"),las=1)
+legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
+```
+
+```{r}
+extract$Period.length
+all(is.na(extract$Period.length[!grepl("^(~)?(([0-9]+)([Y]))?(([0-9]+)(M))?(([0-9]+)(D))?(([0-9]+)(H))?$",extract$Period.length)]))
+perLen<-data.frame(
+  id=extract$id,
+  raw=extract$Period.length,
+  ND=is.na(extract$Period.length),
+  approx=gsub("^(~)?([0-9]+[Y])?([0-9]+M)?([0-9]+D)?([0-9]+H)?$","\\1",extract$Period.length,perl=T)=="~",
+  Y=as.integer(gsub("^(~)?(([0-9]+)([Y]))?([0-9]+M)?([0-9]+D)?([0-9]+H)?$","\\3",extract$Period.length,perl=T)),
+  M=as.integer(gsub("^(~)?([0-9]+[Y])?(([0-9]+)M)?([0-9]+D)?([0-9]+H)?$","\\4",extract$Period.length,perl=T)),
+  D=as.integer(gsub("^(~)?([0-9]+[Y])?([0-9]+M)?(([0-9]+)D)?([0-9]+H)?$","\\5",extract$Period.length,perl=T)),
+  H=as.integer(gsub("^(~)?([0-9]+[Y])?([0-9]+M)?([0-9]+D)?(([0-9]+)H)?$","\\6",extract$Period.length,perl=T))
+)
+perLen$totalHours=ifelse(perLen$ND,NA,
+                         (364*24*ifelse(is.na(perLen$Y),0,perLen$Y))
+                         +(30.5*24*ifelse(is.na(perLen$M),0,perLen$M))
+                         +(24*ifelse(is.na(perLen$D),0,perLen$D))
+                         +(ifelse(is.na(perLen$H),0,perLen$H))
+                         )
+kbl(perLen[!perLen$ND,])
+hist(perLen$totalHours,nclass=200,main="",xlab="Total intervention period length",ylab="Number of studies",xaxt="n")
+axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","month","year","2 years","3 years"),las=1)
+legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
+```

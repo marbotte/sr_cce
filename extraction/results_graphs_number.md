@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-09-28
+2023-10-02
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -13,13 +13,15 @@ Marius Bottin
   - [6.1 Rural/urban](#61-ruralurban)
   - [6.2 categories](#62-categories)
   - [6.3 Age](#63-age)
+    - [6.3.1 Adding ages from grades](#631-adding-ages-from-grades)
 - [7 Controversy](#7-controversy)
 - [8 Mitigation/Adaptation](#8-mitigationadaptation)
 - [9 Educational framework](#9-educational-framework)
 - [10 Monroe categories](#10-monroe-categories)
 - [11 Theoretical framework](#11-theoretical-framework)
 - [12 Methods & design](#12-methods--design)
-- [13 Population](#13-population)
+- [13 Pedagogical tools](#13-pedagogical-tools)
+- [14 Time variables](#14-time-variables)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -34,7 +36,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20230928.xlsx"))
+names(loadWorkbook("../../extraction/20231002.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -43,7 +45,7 @@ names(loadWorkbook("../../extraction/20230928.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20230928.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231002.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -60,8 +62,8 @@ missin
     ##    "Leckey2021a"    "Gladwin2022" "Bopardikar2021"      "Trott2020" 
     ##            Ana38          Marius6         Marius10         Marius25 
     ##    "Puttick2018"  "Gutierrez2022"       "Ross2021"     "Goulah2017" 
-    ##         Marius32          Luisa11          Luisa15       Benjamin15 
-    ##     "Miller2015"     "Turner2022"   "Nussbaum2015"   "Schuster2018"
+    ##         Marius32          Luisa11       Benjamin15 
+    ##     "Miller2015"     "Turner2022"   "Schuster2018"
 
 # 2 Dates
 
@@ -105,7 +107,7 @@ rawExtract$datepubl
     ## [133] "2013.0"         "2022.0"         "2021.0"         "2015.0"        
     ## [137] "2015.0"         "2006.0"         "2022.0"         "2018.0"        
     ## [141] "2022.0"         "2017.0"         "2015.0"         "2019.0"        
-    ## [145] "2015.0"         NA
+    ## [145] "2015.0"         NA               "2015.0"
 
 ``` r
 extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})","\\2",rawExtract$datepubl)))
@@ -167,46 +169,48 @@ extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})
     ##                  2021                  2021                  2022 
     ##          Nakamura2019 Nicholas_Figueroa2017            Nkoana2020 
     ##                  2019                  2017                  2019 
-    ##          Oberauer2023            Parant2017              Park2020 
-    ##                  2023                  2017                  2020 
-    ##             Parth2020             Pekel2019          Petersen2020 
-    ##                  2020                  2019                  2020 
-    ##            Porter2012           Pruneau2003           Pruneau2006 
-    ##                  2020                  2003                  2006 
-    ##          Pruneau2006a              Raes2016           Ratinen2013 
-    ##                  2006                  2015                  2012 
-    ##         Reinfried2012            Roscoe2013      Roychoudhury2017 
-    ##                  2012                  2012                  2017 
-    ##            Ruboon2012       Salas_Rueda2021         Salsabila2019 
-    ##                  2012                  2021                  2019 
-    ##          Saribaş2016            Schrot2021a        Schubatzky2022 
-    ##                  2016                  2020                  2022 
-    ##          Schuster2008          Sellmann2013         Sellmann2013a 
-    ##                  2008                  2012                  2013 
-    ##          Sellmann2015              Shea2016           Siegner2018 
-    ##                  2015                  2016                  2018 
-    ##             Silva2021            Skains2022             Smith2019 
-    ##                  2021                  2022                  2019 
-    ##        Steffensen2022          Sternang2012         Stevenson2018 
-    ##                  2022                  2012                  2018 
-    ##        Stevenson2018a           Sukardi2022           Sumrall2021 
-    ##                  2017                  2022                  2021 
-    ##          Sundberg2013            Sutela2023            Svihla2012 
-    ##                  2013                  2023                  2012 
-    ##             Taber2009          Tasquier2015          Tasquier2017 
-    ##                  2009                  2015                  2017 
-    ##             Tasti2021            Taylor2020             Trott2019 
-    ##                  2021                  2020                  2019 
-    ##            Trott2020a            Trott2020b             Trott2022 
-    ##                  2019                  2020                  2022 
-    ##             Varma2012       Veijalainen2013           Vicente2020 
-    ##                  2012                  2013                  2020 
-    ##       Visintainer2015             Walsh2018             Walsh2019 
-    ##                  2015                  2018                  2019 
-    ##              Wang2022             White2022          Williams2017 
-    ##                  2022                  2022                  2016 
-    ##               Xie2014             Zhong2021        Zografakis2008 
-    ##                  2014                  2021                  2008
+    ##          Nussbaum2015          Oberauer2023            Parant2017 
+    ##                  2015                  2023                  2017 
+    ##              Park2020             Parth2020             Pekel2019 
+    ##                  2020                  2020                  2019 
+    ##          Petersen2020            Porter2012           Pruneau2003 
+    ##                  2020                  2020                  2003 
+    ##           Pruneau2006          Pruneau2006a              Raes2016 
+    ##                  2006                  2006                  2015 
+    ##           Ratinen2013         Reinfried2012            Roscoe2013 
+    ##                  2012                  2012                  2012 
+    ##      Roychoudhury2017            Ruboon2012       Salas_Rueda2021 
+    ##                  2017                  2012                  2021 
+    ##         Salsabila2019          Saribaş2016            Schrot2021a 
+    ##                  2019                  2016                  2020 
+    ##        Schubatzky2022          Schuster2008          Sellmann2013 
+    ##                  2022                  2008                  2012 
+    ##         Sellmann2013a          Sellmann2015              Shea2016 
+    ##                  2013                  2015                  2016 
+    ##           Siegner2018             Silva2021            Skains2022 
+    ##                  2018                  2021                  2022 
+    ##             Smith2019        Steffensen2022          Sternang2012 
+    ##                  2019                  2022                  2012 
+    ##         Stevenson2018        Stevenson2018a           Sukardi2022 
+    ##                  2018                  2017                  2022 
+    ##           Sumrall2021          Sundberg2013            Sutela2023 
+    ##                  2021                  2013                  2023 
+    ##            Svihla2012             Taber2009          Tasquier2015 
+    ##                  2012                  2009                  2015 
+    ##          Tasquier2017             Tasti2021            Taylor2020 
+    ##                  2017                  2021                  2020 
+    ##             Trott2019            Trott2020a            Trott2020b 
+    ##                  2019                  2019                  2020 
+    ##             Trott2022             Varma2012       Veijalainen2013 
+    ##                  2022                  2012                  2013 
+    ##           Vicente2020       Visintainer2015             Walsh2018 
+    ##                  2020                  2015                  2018 
+    ##             Walsh2019              Wang2022             White2022 
+    ##                  2019                  2022                  2022 
+    ##          Williams2017               Xie2014             Zhong2021 
+    ##                  2016                  2014                  2021 
+    ##        Zografakis2008 
+    ##                  2008
 
 ``` r
 barplot(table(factor(datesById,levels=min(datesById):max(datesById))), las=2, main="Number of documents included in the analysis by year")
@@ -277,7 +281,7 @@ rawExtract$Countries.STUDY
     ##  [54] "Indonesia"                                 
     ##  [55] "Finland"                                   
     ##  [56] "Finland"                                   
-    ##  [57] "USA"                                       
+    ##  [57] "United States"                             
     ##  [58] "Turkey"                                    
     ##  [59] "Czech Republic"                            
     ##  [60] "UK"                                        
@@ -302,7 +306,7 @@ rawExtract$Countries.STUDY
     ##  [79] "Belgium"                                   
     ##  [80] "Austria"                                   
     ##  [81] "Turkey"                                    
-    ##  [82] "USA"                                       
+    ##  [82] "United States"                             
     ##  [83] "Germany"                                   
     ##  [84] "United States"                             
     ##  [85] "United States"                             
@@ -322,22 +326,22 @@ rawExtract$Countries.STUDY
     ##  [99] "United States"                             
     ## [100] "United States"                             
     ## [101] "USA"                                       
-    ## [102] "USA"                                       
+    ## [102] "United States"                             
     ## [103] "United States"                             
     ## [104] "United States"                             
     ## [105] "Sweden"                                    
     ## [106] "Finland"                                   
     ## [107] "United States"                             
-    ## [108] "USA"                                       
+    ## [108] "United States"                             
     ## [109] "Australia"                                 
-    ## [110] "USA"                                       
+    ## [110] "United States"                             
     ## [111] "Greece"                                    
     ## [112] "Brazil"                                    
     ## [113] "USA"                                       
     ## [114] "USA"                                       
     ## [115] "Malaysia"                                  
     ## [116] "USA"                                       
-    ## [117] "Estados Unidos"                            
+    ## [117] "United States"                             
     ## [118] "Malaysia"                                  
     ## [119] "United States"                             
     ## [120] "South Africa"                              
@@ -366,7 +370,8 @@ rawExtract$Countries.STUDY
     ## [143] "Germany"                                   
     ## [144] "Turkey"                                    
     ## [145] "Greenland; Denmark; United States"         
-    ## [146] NA
+    ## [146] NA                                          
+    ## [147] "United States"
 
 ``` r
 extract$Countries.STUDY[extract$id=="Arya2016"]<-"United States;China;New Zealand;Norway"
@@ -379,7 +384,7 @@ countryStudy$country<-str_to_title(gsub(" +$","",gsub("^and ","",gsub("^ +","",c
 ```
 
     ##  United States         Turkey        Austria        Germany      Australia 
-    ##             57             10              9              8              5 
+    ##             58             10              9              8              5 
     ##         Canada          China United Kingdom        Denmark        Finland 
     ##              5              5              5              4              4 
     ##          Italy      Indonesia       Malaysia         Norway   South Africa 
@@ -583,7 +588,7 @@ table(rururbClean,useNA="ifany")
 
     ## rururbClean
     ##     Urban     Rural      Both Not given      <NA> 
-    ##        88         5        16         0        37
+    ##        88         5        16         0        38
 
 ``` r
 rururbClean[is.na(rururbClean)]<-"Not given"
@@ -600,12 +605,14 @@ sort(table(extract$TARGETED.SAMPLE,useNA="ifany"),decreasing=T)
 ```
 
     ## 
-    ##              students  Entourage (Teachers)  pre-service teachers 
-    ##                   111                    16                     9 
-    ##   Entourage (parents) students and teachers              Students 
-    ##                     4                     2                     1 
-    ##  students and parents students and Teachers                  <NA> 
-    ##                     1                     1                     1
+    ##                students    Entourage (Teachers)    pre-service teachers 
+    ##                     111                      16                       9 
+    ##     Entourage (parents)   students and teachers                Students 
+    ##                       4                       2                       1 
+    ##    students and parents   students and Teachers students from 7th grade 
+    ##                       1                       1                       1 
+    ##                    <NA> 
+    ##                       1
 
 ``` r
 #For student ages
@@ -762,6 +769,54 @@ points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
+### 6.3.1 Adding ages from grades
+
+``` r
+extract[is.na(extract[,"age_stud_type_info"])&!is.na(as.numeric(extract$Age_min.from.grade.))&!is.na(as.numeric(extract$Age_max.from.grade)),"age_stud_type_info"]<-"minmaxFromGrade"
+tabForPlot<-rbind(
+  tabForPlot,
+  data.frame(age_min_stud=as.numeric(extract$Age_min.from.grade.[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
+             age_max_stud=as.numeric(extract$Age_max.from.grade[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
+             age_aver_stud=NA,
+             age_stud_no_info=T,
+             age_stud_type_info="minmaxFromGrade")
+)
+tabForPlot$age_min_stud<-as.integer(tabForPlot$age_min_stud)
+tabForPlot$age_max_stud<-as.integer(tabForPlot$age_max_stud)
+
+age_order<- rep(NA,sum(!is.na(tabForPlot$age_stud_type_info)))
+age_order[tabForPlot$age_stud_type_info[!is.na(tabForPlot$age_stud_type_info)]%in%c("all","mean")]<- tabForPlot[!is.na(tabForPlot$age_stud_type_info)&tabForPlot$age_stud_type_info%in%c("all","mean"),"age_aver_stud"]
+age_order[tabForPlot$age_stud_type_info[!is.na(tabForPlot$age_stud_type_info)]%in%c("minmax","minmaxFromGrade")]<-rowMeans( tabForPlot[!is.na(tabForPlot$age_stud_type_info)&tabForPlot$age_stud_type_info%in%c("minmax","minmaxFromGrade"),c("age_min_stud","age_max_stud")])
+order(age_order)
+```
+
+    ##   [1] 124   1  85 102 105  67  96   2   3   4   5   6   7  91   8   9  89  92
+    ##  [19]  10  11  12  13  14  15 109 110 111 113 122  73  74  75  76  82  84  86
+    ##  [37]  87  94 106 115 116  16  17  18  19  77  81 118 126 127 128  20  21  22
+    ##  [55]  23  24  25  26  27  28  29  80  90  93  99 100 121  30  31  32  33  34
+    ##  [73] 123  35  36  37  38  39  40  79  97  98 125  41  69  70  72  42  43  44
+    ##  [91]  45  46  78  83  88 103 104 114  47  48  49  68  95 101 107 112 117 119
+    ## [109]  50  51  52  53  71  54  55  56  57  58  59  60  61  62 108 120 129  63
+    ## [127]  64  65  66
+
+``` r
+tabForPlot<-tabForPlot[order(age_order),]
+plot(x=age_order[order(age_order)],y=1:nrow(tabForPlot),type="n",xlim=range(tabForPlot[,c("age_min_stud","age_max_stud")],na.rm=T), xlab="Age",ylab="",yaxt="n")
+segments(
+  x0=tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")],
+  y0=(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmax","all")],
+  x1=tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")])
+segments(
+  x0=tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],
+  y0=(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],
+  x1=tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],lty=3,lwd=.5)
+
+points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
+legend("topleft",lwd=c(1,.5,NA),lty=c(1,3,NA),pch=c(NA,NA,3),legend=c("Range given","Range from grades","Average given"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+
 # 7 Controversy
 
 ``` r
@@ -770,7 +825,7 @@ table(extract$Controversy,useNA="always")
 
     ## 
     ##   no   No   NO  no   yes  Yes <NA> 
-    ##   29   80    3    1    5   26    2
+    ##   29   80    3    1    5   26    3
 
 ``` r
 extract$controv_clean<-NA
@@ -782,7 +837,7 @@ table(extract$controv_clean,useNA="ifany")
 
     ## 
     ##   No  Yes <NA> 
-    ##  113   31    2
+    ##  113   31    3
 
 ``` r
 controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
@@ -825,7 +880,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##   Thailand                  2   0    0
     ##   Turkey                   10   0    0
     ##   United Kingdom            4   0    0
-    ##   United States of America 33  22    0
+    ##   United States of America 33  22    1
     ##   <NA>                      0   1    0
 
 ``` r
@@ -853,13 +908,13 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##                   Taiwan                 Thailand                   Turkey 
     ##                0.0000000                0.0000000                0.0000000 
     ##           United Kingdom United States of America                     <NA> 
-    ##                0.0000000                0.4000000                1.0000000
+    ##                0.0000000                0.3928571                1.0000000
 
 ``` r
 barplot(PercentageControversy,las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ``` r
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
@@ -871,20 +926,20 @@ sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of Ameri
 sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)/length(countryDoc)
 ```
 
-    ## [1] 0.3900709
+    ## [1] 0.3943662
 
 ``` r
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)
 ```
 
-    ## [1] 0.4
+    ## [1] 0.3928571
 
 ``` r
 par(mar=c(11,4,1,1))
 barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),las=2,legend=T,args.legend = list(title="Controversy"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-11-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-12-2.png)<!-- -->
 
 # 8 Mitigation/Adaptation
 
@@ -894,13 +949,13 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 
     ## 
     ## Adaptation       Both Mitigation    Neither       <NA> 
-    ## 0.03424658 0.27397260 0.61643836 0.04109589 0.03424658
+    ## 0.03401361 0.27210884 0.61224490 0.04081633 0.04081633
 
 ``` r
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 \# Disciplines
 
 ``` r
@@ -924,7 +979,7 @@ disciplineClean[grepl("NA",extract$Disciplin_2)|is.na(extract$Disciplin_2)]<-"ND
 barplot(sort(table(disciplineClean),decreasing=T), las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 # 9 Educational framework
 
@@ -973,7 +1028,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-49
+51
 
 </td>
 <td style="text-align:left;">
@@ -982,13 +1037,13 @@ Baker2013, Bentz2020, Bozdogan2011, Chang2018, Feierabend2012,
 Holthuis2014, Kinsey2012, Lambert2012, Lombardi2013,
 Nicholas_Figueroa2017, Petersen2020, Salas_Rueda2021, Schubatzky2022,
 Sellmann2013, Shea2016, Steffensen2022, Taber2009, Varma2012,
-Williams2017, Korfgen2017, Dormody2020, Kolenaty2022, Kumar2023,
-Mason1998, Feldpausch_Parker2013, Roscoe2013, Raes2016, McGowan2022,
-Klosterman2010, Saribaş2016 , Reinfried2012, Sellmann2013a,
+Williams2017, Korfgen2017, Cebesoy2019, Dormody2020, Kolenaty2022,
+Kumar2023, Mason1998, Feldpausch_Parker2013, Roscoe2013, Raes2016,
+McGowan2022, Klosterman2010, Saribaş2016 , Reinfried2012, Sellmann2013a,
 Sternang2012, Sutela2023, Stevenson2018a, Xie2014, Trott2019, Trott2022,
 Markowitz2018, Zhong2021, Harker_Schuch2013, Harker_Schuch2020,
 Lambert2013, Littrell2022, Skains2022, Stevenson2018, Sukardi2022,
-Pekel2019, NA
+Pekel2019, NA, Nussbaum2015
 
 </td>
 </tr>
@@ -1398,23 +1453,6 @@ Tasti2021
 <tr>
 <td style="text-align:left;">
 
-NA European
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-<td style="text-align:left;">
-
-Cebesoy2019
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 NA local
 
 </td>
@@ -1509,7 +1547,7 @@ How many include “5:target climate science misconceptions”:
 sum(grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`))
 ```
 
-    ## [1] 35
+    ## [1] 36
 
 Which:
 
@@ -1528,7 +1566,7 @@ extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
     ## [25] "McNeill2012"       "Bodzin2014"        "Harker_Schuch2013"
     ## [28] "Harker_Schuch2020" "Kabir2015"         "Lambert2013"      
     ## [31] "Littrell2022"      "Tasquier2015"      "Tasquier2017"     
-    ## [34] "Sellmann2015"      "Pekel2019"
+    ## [34] "Sellmann2015"      "Pekel2019"         "Nussbaum2015"
 
 # 11 Theoretical framework
 
@@ -1563,7 +1601,7 @@ legend("topleft",density=18,"consistent with")
 text(bp[round(nrow(forTempPlot)/2)+1],max(forTempPlot),paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 # 12 Methods & design
 
@@ -1573,7 +1611,7 @@ sort(table(extract$study.type),decreasing = T)
 
     ## 
     ##  Quantitative  quantitative   Qualitative          Both         Mixed 
-    ##            35            31            29            19            11 
+    ##            36            31            29            19            11 
     ##          both         mixed   qualitative  qualitative  quantitative  
     ##             4             4             4             4             2 
     ##            ND 
@@ -1589,13 +1627,13 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 
     ## 
     ## Quantitative   Both/Mixed  Qualitative         <NA> 
-    ##           68           38           37            3
+    ##           69           38           37            3
 
 ``` r
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
 ``` r
 A<-sort(table(extract$design),decreasing=T)
@@ -1604,7 +1642,7 @@ A
 ```
 
     ##                                     Pre-post 
-    ##                                           76 
+    ##                                           79 
     ##                          Pre-post + control  
     ##                                            4 
     ##                            Pre-post + factor 
@@ -1620,6 +1658,10 @@ A
     ##                                   Case study 
     ##                                            2 
     ##                           Discourse analysis 
+    ##                                            2 
+    ##                          Pre -post + control 
+    ##                                            2 
+    ##                  Pre-post + control + factor 
     ##                                            2 
     ## 2 (methodology: problem-based learning,  ... 
     ##                                            1 
@@ -1655,8 +1697,6 @@ A
     ##                                            1 
     ##                                 Longitudinal 
     ##                                            1 
-    ##                                 mixed method 
-    ##                                            1 
     ##                       Mixed-methods research 
     ##                                            1 
     ##                Multi-level assessment design 
@@ -1667,15 +1707,9 @@ A
     ##                                            1 
     ##                Participatory action research 
     ##                                            1 
-    ##                          Pre -post + control 
-    ##                                            1 
-    ##                                     pre post 
-    ##                                            1 
     ##                                    pre-post  
     ##                                            1 
     ##                          Pre-post +  control 
-    ##                                            1 
-    ##                  Pre-post + control + factor 
     ##                                            1 
     ##                Pre-post + discourse analysis 
     ##                                            1 
@@ -1691,11 +1725,7 @@ A
     ##                                            1 
     ##                             pre-post+ factor 
     ##                                            1 
-    ##                                   Pre/ post  
-    ##                                            1 
     ##                  Pre/post quasi-experimental 
-    ##                                            1 
-    ##                                  QUALITATIVE 
     ##                                            1 
     ## Qualitative analysis using concept maps  ... 
     ##                                            1 
@@ -1765,7 +1795,7 @@ designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-
 barplot(table(designClean),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-19-2.png)<!-- -->
 
 ``` r
 par(mfrow=c(1,2))
@@ -1774,6 +1804,8553 @@ barplot(table(designClean),las=2)
 barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
-# 13 Population
+# 13 Pedagogical tools
+
+``` r
+par(mar=c(9,4,1,1))
+barplot(c(
+  `Lesson based`=40,
+  `Combined strategy`=38,
+  `Project based`=19,
+  `Curriculum based`=15,
+  `Technology/Virtual`=9,
+  `Cultural based`=8,
+  `Game based`=4
+), las = 2
+)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+
+# 14 Time variables
+
+``` r
+extract$Total.duration.of.the.intervention
+```
+
+    ##   [1] "24min"    NA         NA         "6h"       NA         NA        
+    ##   [7] NA         NA         "28h"      NA         NA         NA        
+    ##  [13] NA         "5h"       NA         NA         NA         NA        
+    ##  [19] NA         NA         "24h"      NA         "1h30min"  "2h35min" 
+    ##  [25] "50min"    NA         "1h40min"  "50min"    NA         NA        
+    ##  [31] "2h30min"  NA         NA         NA         NA         NA        
+    ##  [37] NA         NA         NA         NA         "~35h"     "~14h"    
+    ##  [43] NA         "~21h"     "12h30min" "12h"      NA         NA        
+    ##  [49] "~21h"     "6h"       NA         "8h30min"  "1h"       NA        
+    ##  [55] "2h15min"  NA         "5h"       "~14h"     NA         "2h30min" 
+    ##  [61] "~1h30"    NA         NA         "20h"      "32H"      "40min"   
+    ##  [67] "45min"    "50min"    "~50h"     "15h"      NA         NA        
+    ##  [73] NA         NA         NA         "10h"      NA         NA        
+    ##  [79] "3h40min"  "15h"      "30h"      "80h"      NA         "~4h"     
+    ##  [85] NA         "15h"      NA         NA         NA         "1h"      
+    ##  [91] NA         "1H15min"  NA         "8H"       "150h"     "~20h"    
+    ##  [97] "5h30min"  NA         NA         "40h"      NA         "6h"      
+    ## [103] "60h"      NA         "~2h"      "40h"      "10min"    "~10h"    
+    ## [109] "4h"       "8h"       NA         NA         NA         NA        
+    ## [115] "~7h30min" NA         NA         "12h"      NA         NA        
+    ## [121] "1h"       NA         NA         NA         NA         NA        
+    ## [127] NA         NA         "8h"       "45min"    "50min"    "20h"     
+    ## [133] NA         NA         NA         NA         "15h"      "~42h"    
+    ## [139] "3h"       NA         NA         NA         "~14h"     "4h"      
+    ## [145] NA         NA         NA
+
+``` r
+extract$Period.length
+```
+
+    ##   [1] NA       NA       "2M"     NA       "5M"     "21D"    "1Y"     NA      
+    ##   [9] "4M"     NA       NA       NA       "1Y"     NA       NA       "1Y"    
+    ##  [17] NA       "1Y"     "1Y"     NA       NA       NA       NA       NA      
+    ##  [25] NA       "14D"    "2H"     "1H"     "14D"    "2M21D"  NA       "1D"    
+    ##  [33] "1D"     "1D"     "1D"     "1D"     "7D"     "7D"     "7D"     "5D"    
+    ##  [41] "5D"     "2D"     "6M"     "3D"     "2M"     NA       "1D"     NA      
+    ##  [49] "3D"     NA       "2M"     "1Y"     "14D"    NA       "1M"     "1D"    
+    ##  [57] NA       "2D"     "1Y"     "~7M"    "~2H"    "2M"     "1D"     "10M"   
+    ##  [65] "4D"     "1H"     "1H"     "1H"     "7D"     "4M"     "5M"     "5M"    
+    ##  [73] NA       NA       NA       "1M5D"   "3M"     "1M"     "1M"     "5D"    
+    ##  [81] "1Y"     "2M14D"  "11M"    "2D"     NA       "20D"    NA       "~3M"   
+    ##  [89] "3Y"     "1H"     "1M20D"  "2H"     "1Y"     "8H"     "1Y"     "4M"    
+    ##  [97] "14D"    "2Y"     "2Y"     "1M14D"  NA       "1M14D"  "1Y"     NA      
+    ## [105] "2H"     "3M"     "1H"     NA       "7D"     "8H"     "1Y"     "5M"    
+    ## [113] "3M13D"  "3M13D"  "1M7D"   "~2M"    "1M20D"  "1M14D"  NA       NA      
+    ## [121] "2D"     NA       NA       "1Y"     "~1M14D" "20D"    "2M"     NA      
+    ## [129] "1M"     "1H"     "1H"     "6M"     "5M"     NA       NA       "1M14D" 
+    ## [137] "1M7D"   "16D"    NA       "6M"     NA       NA       "2D"     "14D"   
+    ## [145] "1M"     NA       NA
+
+``` r
+extract$Number.of.sessions
+```
+
+    ##   [1] NA     NA     NA     "3.0"  NA     NA     NA     NA     "14.0" NA    
+    ##  [11] "5.0"  NA     NA     "6.0"  NA     NA     NA     NA     NA     NA    
+    ##  [21] "12.0" NA     "2.0"  "2.0"  NA     NA     "1.0"  "1.0"  NA     NA    
+    ##  [31] "3.0"  NA     NA     NA     NA     NA     NA     NA     NA     NA    
+    ##  [41] "10.0" "4.0"  "6.0"  "6.0"  "15.0" "6.0"  NA     NA     NA     "4.0" 
+    ##  [51] NA     "5.0"  "4.0"  "4.0"  "3.0"  NA     "6.0"  NA     NA     "5.0" 
+    ##  [61] "1.0"  NA     NA     "~10"  "~4"   "1.0"  "1.0"  "1.0"  "7.0"  "15.0"
+    ##  [71] "~40"  "~40"  NA     NA     NA     "5.0"  NA     NA     "4.0"  "5.0" 
+    ##  [81] "20.0" "5.0"  NA     "2.0"  NA     "7.0"  NA     NA     NA     "1.0" 
+    ##  [91] NA     "1.0"  NA     "1.0"  NA     "15.0" "2.0"  NA     NA     NA    
+    ## [101] NA     "6.0"  "~20"  NA     "1.0"  NA     "1.0"  "5.0"  "4.0"  "1.0" 
+    ## [111] NA     NA     NA     NA     "5.0"  NA     NA     "6.0"  NA     NA    
+    ## [121] "2.0"  "12.0" NA     NA     "11.0" NA     NA     NA     "4.0"  "1.0" 
+    ## [131] "1.0"  "26.0" NA     NA     NA     NA     "5.0"  "6.0"  NA     NA    
+    ## [141] NA     "5.0"  "2.0"  "6.0"  NA     NA     NA
+
+``` r
+hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number of sessions", ylab="Number of studies",nclass=50)
+legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+
+``` r
+extract$Total.duration.of.the.intervention
+```
+
+    ##   [1] "24min"    NA         NA         "6h"       NA         NA        
+    ##   [7] NA         NA         "28h"      NA         NA         NA        
+    ##  [13] NA         "5h"       NA         NA         NA         NA        
+    ##  [19] NA         NA         "24h"      NA         "1h30min"  "2h35min" 
+    ##  [25] "50min"    NA         "1h40min"  "50min"    NA         NA        
+    ##  [31] "2h30min"  NA         NA         NA         NA         NA        
+    ##  [37] NA         NA         NA         NA         "~35h"     "~14h"    
+    ##  [43] NA         "~21h"     "12h30min" "12h"      NA         NA        
+    ##  [49] "~21h"     "6h"       NA         "8h30min"  "1h"       NA        
+    ##  [55] "2h15min"  NA         "5h"       "~14h"     NA         "2h30min" 
+    ##  [61] "~1h30"    NA         NA         "20h"      "32H"      "40min"   
+    ##  [67] "45min"    "50min"    "~50h"     "15h"      NA         NA        
+    ##  [73] NA         NA         NA         "10h"      NA         NA        
+    ##  [79] "3h40min"  "15h"      "30h"      "80h"      NA         "~4h"     
+    ##  [85] NA         "15h"      NA         NA         NA         "1h"      
+    ##  [91] NA         "1H15min"  NA         "8H"       "150h"     "~20h"    
+    ##  [97] "5h30min"  NA         NA         "40h"      NA         "6h"      
+    ## [103] "60h"      NA         "~2h"      "40h"      "10min"    "~10h"    
+    ## [109] "4h"       "8h"       NA         NA         NA         NA        
+    ## [115] "~7h30min" NA         NA         "12h"      NA         NA        
+    ## [121] "1h"       NA         NA         NA         NA         NA        
+    ## [127] NA         NA         "8h"       "45min"    "50min"    "20h"     
+    ## [133] NA         NA         NA         NA         "15h"      "~42h"    
+    ## [139] "3h"       NA         NA         NA         "~14h"     "4h"      
+    ## [145] NA         NA         NA
+
+``` r
+extract$Total.duration.of.the.intervention[!is.na(extract$Total.duration.of.the.intervention)&!grepl("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?",extract$Total.duration.of.the.intervention)]
+```
+
+    ## character(0)
+
+``` r
+totalDur<-data.frame(
+  id=extract$id,
+  raw=extract$Total.duration.of.the.intervention,
+  ND=is.na(extract$Total.duration.of.the.intervention),
+  approx=gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\1",extract$Total.duration.of.the.intervention,perl=T)=="~",
+  h=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\3",extract$Total.duration.of.the.intervention,perl=T)),
+  min=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\6",extract$Total.duration.of.the.intervention,perl=T))
+)
+totalDur$totalMin=ifelse(totalDur$ND,NA,(60*ifelse(is.na(totalDur$h),0,totalDur$h))+ifelse(is.na(totalDur$min),0,totalDur$min))
+kbl(totalDur[!totalDur$ND,])
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+id
+
+</th>
+<th style="text-align:left;">
+
+raw
+
+</th>
+<th style="text-align:left;">
+
+ND
+
+</th>
+<th style="text-align:left;">
+
+approx
+
+</th>
+<th style="text-align:right;">
+
+h
+
+</th>
+<th style="text-align:right;">
+
+min
+
+</th>
+<th style="text-align:right;">
+
+totalMin
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Aksel_Stenberdt2023
+
+</td>
+<td style="text-align:left;">
+
+24min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+4
+
+</td>
+<td style="text-align:left;">
+
+Baker2013
+
+</td>
+<td style="text-align:left;">
+
+6h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+360
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+9
+
+</td>
+<td style="text-align:left;">
+
+Bozdogan2011
+
+</td>
+<td style="text-align:left;">
+
+28h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+28
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1680
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Dormody2021
+
+</td>
+<td style="text-align:left;">
+
+5h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+300
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Lester2006
+
+</td>
+<td style="text-align:left;">
+
+24h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1440
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+23
+
+</td>
+<td style="text-align:left;">
+
+Lombardi2013
+
+</td>
+<td style="text-align:left;">
+
+1h30min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+90
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+24
+
+</td>
+<td style="text-align:left;">
+
+Monroe2016
+
+</td>
+<td style="text-align:left;">
+
+2h35min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:right;">
+
+155
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+25
+
+</td>
+<td style="text-align:left;">
+
+Nakamura2019
+
+</td>
+<td style="text-align:left;">
+
+50min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+27
+
+</td>
+<td style="text-align:left;">
+
+Parant2017
+
+</td>
+<td style="text-align:left;">
+
+1h40min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+40
+
+</td>
+<td style="text-align:right;">
+
+100
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+28
+
+</td>
+<td style="text-align:left;">
+
+Petersen2020
+
+</td>
+<td style="text-align:left;">
+
+50min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
+Salas_Rueda2021
+
+</td>
+<td style="text-align:left;">
+
+2h30min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+150
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+41
+
+</td>
+<td style="text-align:left;">
+
+Faria2015
+
+</td>
+<td style="text-align:left;">
+
+~35h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2100
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+42
+
+</td>
+<td style="text-align:left;">
+
+Faria2015
+
+</td>
+<td style="text-align:left;">
+
+~14h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+840
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+44
+
+</td>
+<td style="text-align:left;">
+
+Dal2015a
+
+</td>
+<td style="text-align:left;">
+
+~21h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1260
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+45
+
+</td>
+<td style="text-align:left;">
+
+Vicente2020
+
+</td>
+<td style="text-align:left;">
+
+12h30min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+750
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+46
+
+</td>
+<td style="text-align:left;">
+
+Akaygun2021
+
+</td>
+<td style="text-align:left;">
+
+12h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+720
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+49
+
+</td>
+<td style="text-align:left;">
+
+White2022
+
+</td>
+<td style="text-align:left;">
+
+~21h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1260
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+50
+
+</td>
+<td style="text-align:left;">
+
+Eggert2017
+
+</td>
+<td style="text-align:left;">
+
+6h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+360
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+52
+
+</td>
+<td style="text-align:left;">
+
+Cebesoy2019
+
+</td>
+<td style="text-align:left;">
+
+8h30min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+510
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+53
+
+</td>
+<td style="text-align:left;">
+
+Wang2022
+
+</td>
+<td style="text-align:left;">
+
+1h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+60
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+55
+
+</td>
+<td style="text-align:left;">
+
+Ratinen2013
+
+</td>
+<td style="text-align:left;">
+
+2h15min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:right;">
+
+135
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+57
+
+</td>
+<td style="text-align:left;">
+
+Dormody2020
+
+</td>
+<td style="text-align:left;">
+
+5h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+300
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+58
+
+</td>
+<td style="text-align:left;">
+
+Cebesoy2022
+
+</td>
+<td style="text-align:left;">
+
+~14h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+840
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+60
+
+</td>
+<td style="text-align:left;">
+
+Kumar2023
+
+</td>
+<td style="text-align:left;">
+
+2h30min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+150
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+61
+
+</td>
+<td style="text-align:left;">
+
+Leitao2022
+
+</td>
+<td style="text-align:left;">
+
+~1h30
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+130
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+7830
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+64
+
+</td>
+<td style="text-align:left;">
+
+Pruneau2003
+
+</td>
+<td style="text-align:left;">
+
+20h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1200
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+65
+
+</td>
+<td style="text-align:left;">
+
+Levrini2021
+
+</td>
+<td style="text-align:left;">
+
+32H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+32
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1920
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+66
+
+</td>
+<td style="text-align:left;">
+
+Mason1998
+
+</td>
+<td style="text-align:left;">
+
+40min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+40
+
+</td>
+<td style="text-align:right;">
+
+40
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+67
+
+</td>
+<td style="text-align:left;">
+
+Feldpausch_Parker2013
+
+</td>
+<td style="text-align:left;">
+
+45min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+45
+
+</td>
+<td style="text-align:right;">
+
+45
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+68
+
+</td>
+<td style="text-align:left;">
+
+Flora2014
+
+</td>
+<td style="text-align:left;">
+
+50min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+69
+
+</td>
+<td style="text-align:left;">
+
+Leckey2021
+
+</td>
+<td style="text-align:left;">
+
+~50h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3000
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+70
+
+</td>
+<td style="text-align:left;">
+
+Trott2020b
+
+</td>
+<td style="text-align:left;">
+
+15h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+900
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+76
+
+</td>
+<td style="text-align:left;">
+
+Karpudewan2015a
+
+</td>
+<td style="text-align:left;">
+
+10h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+600
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+79
+
+</td>
+<td style="text-align:left;">
+
+Raes2016
+
+</td>
+<td style="text-align:left;">
+
+3h40min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+40
+
+</td>
+<td style="text-align:right;">
+
+220
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+80
+
+</td>
+<td style="text-align:left;">
+
+Schrot2021a
+
+</td>
+<td style="text-align:left;">
+
+15h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+900
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+81
+
+</td>
+<td style="text-align:left;">
+
+Tasti2021
+
+</td>
+<td style="text-align:left;">
+
+30h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1800
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+82
+
+</td>
+<td style="text-align:left;">
+
+McGowan2022
+
+</td>
+<td style="text-align:left;">
+
+80h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+80
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4800
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+84
+
+</td>
+<td style="text-align:left;">
+
+Blaum2017
+
+</td>
+<td style="text-align:left;">
+
+~4h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+240
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+86
+
+</td>
+<td style="text-align:left;">
+
+Klosterman2010
+
+</td>
+<td style="text-align:left;">
+
+15h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+900
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+90
+
+</td>
+<td style="text-align:left;">
+
+Meya2018
+
+</td>
+<td style="text-align:left;">
+
+1h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+60
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+92
+
+</td>
+<td style="text-align:left;">
+
+Reinfried2012
+
+</td>
+<td style="text-align:left;">
+
+1H15min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:right;">
+
+75
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+94
+
+</td>
+<td style="text-align:left;">
+
+Sellmann2013a
+
+</td>
+<td style="text-align:left;">
+
+8H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+480
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+95
+
+</td>
+<td style="text-align:left;">
+
+Keller2019
+
+</td>
+<td style="text-align:left;">
+
+150h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+150
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+9000
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+96
+
+</td>
+<td style="text-align:left;">
+
+Trott2020a
+
+</td>
+<td style="text-align:left;">
+
+~20h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1200
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+97
+
+</td>
+<td style="text-align:left;">
+
+Breslyn2019
+
+</td>
+<td style="text-align:left;">
+
+5h30min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+330
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+100
+
+</td>
+<td style="text-align:left;">
+
+Walsh2018
+
+</td>
+<td style="text-align:left;">
+
+40h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+40
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2400
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+102
+
+</td>
+<td style="text-align:left;">
+
+Siegner2018
+
+</td>
+<td style="text-align:left;">
+
+6h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+360
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+103
+
+</td>
+<td style="text-align:left;">
+
+Drewes2018
+
+</td>
+<td style="text-align:left;">
+
+60h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+60
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3600
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+105
+
+</td>
+<td style="text-align:left;">
+
+Sternang2012
+
+</td>
+<td style="text-align:left;">
+
+~2h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+120
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+106
+
+</td>
+<td style="text-align:left;">
+
+Sutela2023
+
+</td>
+<td style="text-align:left;">
+
+40h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+40
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2400
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+107
+
+</td>
+<td style="text-align:left;">
+
+Stevenson2018a
+
+</td>
+<td style="text-align:left;">
+
+10min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+108
+
+</td>
+<td style="text-align:left;">
+
+Svihla2012
+
+</td>
+<td style="text-align:left;">
+
+~10h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+600
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+109
+
+</td>
+<td style="text-align:left;">
+
+Jacobson2017
+
+</td>
+<td style="text-align:left;">
+
+4h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+240
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+110
+
+</td>
+<td style="text-align:left;">
+
+Xie2014
+
+</td>
+<td style="text-align:left;">
+
+8h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+480
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+115
+
+</td>
+<td style="text-align:left;">
+
+Karpudewan2015
+
+</td>
+<td style="text-align:left;">
+
+~7h30min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+450
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+118
+
+</td>
+<td style="text-align:left;">
+
+Karpudewan2017
+
+</td>
+<td style="text-align:left;">
+
+12h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+720
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+121
+
+</td>
+<td style="text-align:left;">
+
+Hu2016
+
+</td>
+<td style="text-align:left;">
+
+1h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+60
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+129
+
+</td>
+<td style="text-align:left;">
+
+Chin2016
+
+</td>
+<td style="text-align:left;">
+
+8h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+480
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+130
+
+</td>
+<td style="text-align:left;">
+
+Harker_Schuch2013
+
+</td>
+<td style="text-align:left;">
+
+45min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+45
+
+</td>
+<td style="text-align:right;">
+
+45
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+131
+
+</td>
+<td style="text-align:left;">
+
+Harker_Schuch2020
+
+</td>
+<td style="text-align:left;">
+
+50min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+132
+
+</td>
+<td style="text-align:left;">
+
+Kabir2015
+
+</td>
+<td style="text-align:left;">
+
+20h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1200
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+137
+
+</td>
+<td style="text-align:left;">
+
+Tasquier2015
+
+</td>
+<td style="text-align:left;">
+
+15h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+900
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+138
+
+</td>
+<td style="text-align:left;">
+
+Pruneau2006a
+
+</td>
+<td style="text-align:left;">
+
+~42h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+42
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2520
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+139
+
+</td>
+<td style="text-align:left;">
+
+Skains2022
+
+</td>
+<td style="text-align:left;">
+
+3h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+180
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+143
+
+</td>
+<td style="text-align:left;">
+
+Sellmann2015
+
+</td>
+<td style="text-align:left;">
+
+~14h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+840
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+144
+
+</td>
+<td style="text-align:left;">
+
+Pekel2019
+
+</td>
+<td style="text-align:left;">
+
+4h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+240
+
+</td>
+</tr>
+</tbody>
+</table>
+
+``` r
+hist(totalDur$totalMin,nclass=50,main="",xlab="Total intervention time (min)",ylab="Number of studies")
+legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+
+``` r
+extract$Period.length
+```
+
+    ##   [1] NA       NA       "2M"     NA       "5M"     "21D"    "1Y"     NA      
+    ##   [9] "4M"     NA       NA       NA       "1Y"     NA       NA       "1Y"    
+    ##  [17] NA       "1Y"     "1Y"     NA       NA       NA       NA       NA      
+    ##  [25] NA       "14D"    "2H"     "1H"     "14D"    "2M21D"  NA       "1D"    
+    ##  [33] "1D"     "1D"     "1D"     "1D"     "7D"     "7D"     "7D"     "5D"    
+    ##  [41] "5D"     "2D"     "6M"     "3D"     "2M"     NA       "1D"     NA      
+    ##  [49] "3D"     NA       "2M"     "1Y"     "14D"    NA       "1M"     "1D"    
+    ##  [57] NA       "2D"     "1Y"     "~7M"    "~2H"    "2M"     "1D"     "10M"   
+    ##  [65] "4D"     "1H"     "1H"     "1H"     "7D"     "4M"     "5M"     "5M"    
+    ##  [73] NA       NA       NA       "1M5D"   "3M"     "1M"     "1M"     "5D"    
+    ##  [81] "1Y"     "2M14D"  "11M"    "2D"     NA       "20D"    NA       "~3M"   
+    ##  [89] "3Y"     "1H"     "1M20D"  "2H"     "1Y"     "8H"     "1Y"     "4M"    
+    ##  [97] "14D"    "2Y"     "2Y"     "1M14D"  NA       "1M14D"  "1Y"     NA      
+    ## [105] "2H"     "3M"     "1H"     NA       "7D"     "8H"     "1Y"     "5M"    
+    ## [113] "3M13D"  "3M13D"  "1M7D"   "~2M"    "1M20D"  "1M14D"  NA       NA      
+    ## [121] "2D"     NA       NA       "1Y"     "~1M14D" "20D"    "2M"     NA      
+    ## [129] "1M"     "1H"     "1H"     "6M"     "5M"     NA       NA       "1M14D" 
+    ## [137] "1M7D"   "16D"    NA       "6M"     NA       NA       "2D"     "14D"   
+    ## [145] "1M"     NA       NA
+
+``` r
+all(is.na(extract$Period.length[!grepl("^(~)?(([0-9]+)([Y]))?(([0-9]+)(M))?(([0-9]+)(D))?(([0-9]+)(H))?$",extract$Period.length)]))
+```
+
+    ## [1] TRUE
+
+``` r
+perLen<-data.frame(
+  id=extract$id,
+  raw=extract$Period.length,
+  ND=is.na(extract$Period.length),
+  approx=gsub("^(~)?([0-9]+[Y])?([0-9]+M)?([0-9]+D)?([0-9]+H)?$","\\1",extract$Period.length,perl=T)=="~",
+  Y=as.integer(gsub("^(~)?(([0-9]+)([Y]))?([0-9]+M)?([0-9]+D)?([0-9]+H)?$","\\3",extract$Period.length,perl=T)),
+  M=as.integer(gsub("^(~)?([0-9]+[Y])?(([0-9]+)M)?([0-9]+D)?([0-9]+H)?$","\\4",extract$Period.length,perl=T)),
+  D=as.integer(gsub("^(~)?([0-9]+[Y])?([0-9]+M)?(([0-9]+)D)?([0-9]+H)?$","\\5",extract$Period.length,perl=T)),
+  H=as.integer(gsub("^(~)?([0-9]+[Y])?([0-9]+M)?([0-9]+D)?(([0-9]+)H)?$","\\6",extract$Period.length,perl=T))
+)
+perLen$totalHours=ifelse(perLen$ND,NA,
+                         (364*24*ifelse(is.na(perLen$Y),0,perLen$Y))
+                         +(30.5*24*ifelse(is.na(perLen$M),0,perLen$M))
+                         +(24*ifelse(is.na(perLen$D),0,perLen$D))
+                         +(ifelse(is.na(perLen$H),0,perLen$H))
+                         )
+kbl(perLen[!perLen$ND,])
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+id
+
+</th>
+<th style="text-align:left;">
+
+raw
+
+</th>
+<th style="text-align:left;">
+
+ND
+
+</th>
+<th style="text-align:left;">
+
+approx
+
+</th>
+<th style="text-align:right;">
+
+Y
+
+</th>
+<th style="text-align:right;">
+
+M
+
+</th>
+<th style="text-align:right;">
+
+D
+
+</th>
+<th style="text-align:right;">
+
+H
+
+</th>
+<th style="text-align:right;">
+
+totalHours
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+3
+
+</td>
+<td style="text-align:left;">
+
+Arya2016
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1464
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Bentz2020
+
+</td>
+<td style="text-align:left;">
+
+5M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3660
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+6
+
+</td>
+<td style="text-align:left;">
+
+Bhattacharya2021
+
+</td>
+<td style="text-align:left;">
+
+21D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+504
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+7
+
+</td>
+<td style="text-align:left;">
+
+Bofferding2015
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+9
+
+</td>
+<td style="text-align:left;">
+
+Bozdogan2011
+
+</td>
+<td style="text-align:left;">
+
+4M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2928
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+13
+
+</td>
+<td style="text-align:left;">
+
+DeWaters2014
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+16
+
+</td>
+<td style="text-align:left;">
+
+Holthuis2014
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+18
+
+</td>
+<td style="text-align:left;">
+
+Kinsey2012
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+19
+
+</td>
+<td style="text-align:left;">
+
+Kubisch2022
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+26
+
+</td>
+<td style="text-align:left;">
+
+Nicholas_Figueroa2017
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+336
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+27
+
+</td>
+<td style="text-align:left;">
+
+Parant2017
+
+</td>
+<td style="text-align:left;">
+
+2H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+28
+
+</td>
+<td style="text-align:left;">
+
+Petersen2020
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+29
+
+</td>
+<td style="text-align:left;">
+
+Porter2012
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+336
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+30
+
+</td>
+<td style="text-align:left;">
+
+Roychoudhury2017
+
+</td>
+<td style="text-align:left;">
+
+2M21D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1968
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+32
+
+</td>
+<td style="text-align:left;">
+
+Schubatzky2022
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+33
+
+</td>
+<td style="text-align:left;">
+
+Sellmann2013
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+34
+
+</td>
+<td style="text-align:left;">
+
+Shea2016
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Steffensen2022
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+36
+
+</td>
+<td style="text-align:left;">
+
+Taber2009
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+37
+
+</td>
+<td style="text-align:left;">
+
+Varma2012
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+168
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+38
+
+</td>
+<td style="text-align:left;">
+
+Visintainer2015
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+168
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+39
+
+</td>
+<td style="text-align:left;">
+
+Williams2017
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+168
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+40
+
+</td>
+<td style="text-align:left;">
+
+Korfgen2017
+
+</td>
+<td style="text-align:left;">
+
+5D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+120
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+41
+
+</td>
+<td style="text-align:left;">
+
+Faria2015
+
+</td>
+<td style="text-align:left;">
+
+5D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+120
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+42
+
+</td>
+<td style="text-align:left;">
+
+Faria2015
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+48
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+43
+
+</td>
+<td style="text-align:left;">
+
+da_Rocha2020
+
+</td>
+<td style="text-align:left;">
+
+6M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4392
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+44
+
+</td>
+<td style="text-align:left;">
+
+Dal2015a
+
+</td>
+<td style="text-align:left;">
+
+3D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+72
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+45
+
+</td>
+<td style="text-align:left;">
+
+Vicente2020
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1464
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+47
+
+</td>
+<td style="text-align:left;">
+
+Gold2015a
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+49
+
+</td>
+<td style="text-align:left;">
+
+White2022
+
+</td>
+<td style="text-align:left;">
+
+3D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+72
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+51
+
+</td>
+<td style="text-align:left;">
+
+Herrick2022
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1464
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+52
+
+</td>
+<td style="text-align:left;">
+
+Cebesoy2019
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+53
+
+</td>
+<td style="text-align:left;">
+
+Wang2022
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+336
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+55
+
+</td>
+<td style="text-align:left;">
+
+Ratinen2013
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+732
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+56
+
+</td>
+<td style="text-align:left;">
+
+Veijalainen2013
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+58
+
+</td>
+<td style="text-align:left;">
+
+Cebesoy2022
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+48
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+59
+
+</td>
+<td style="text-align:left;">
+
+Kolenaty2022
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+60
+
+</td>
+<td style="text-align:left;">
+
+Kumar2023
+
+</td>
+<td style="text-align:left;">
+
+~7M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5124
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+61
+
+</td>
+<td style="text-align:left;">
+
+Leitao2022
+
+</td>
+<td style="text-align:left;">
+
+~2H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+62
+
+</td>
+<td style="text-align:left;">
+
+Pruneau2006
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1464
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+63
+
+</td>
+<td style="text-align:left;">
+
+Jones2021
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+64
+
+</td>
+<td style="text-align:left;">
+
+Pruneau2003
+
+</td>
+<td style="text-align:left;">
+
+10M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7320
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+65
+
+</td>
+<td style="text-align:left;">
+
+Levrini2021
+
+</td>
+<td style="text-align:left;">
+
+4D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+96
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+66
+
+</td>
+<td style="text-align:left;">
+
+Mason1998
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+67
+
+</td>
+<td style="text-align:left;">
+
+Feldpausch_Parker2013
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+68
+
+</td>
+<td style="text-align:left;">
+
+Flora2014
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+69
+
+</td>
+<td style="text-align:left;">
+
+Leckey2021
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+168
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+70
+
+</td>
+<td style="text-align:left;">
+
+Trott2020b
+
+</td>
+<td style="text-align:left;">
+
+4M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2928
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+71
+
+</td>
+<td style="text-align:left;">
+
+Li2022
+
+</td>
+<td style="text-align:left;">
+
+5M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3660
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+72
+
+</td>
+<td style="text-align:left;">
+
+Li2022
+
+</td>
+<td style="text-align:left;">
+
+5M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3660
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+76
+
+</td>
+<td style="text-align:left;">
+
+Karpudewan2015a
+
+</td>
+<td style="text-align:left;">
+
+1M5D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+852
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+77
+
+</td>
+<td style="text-align:left;">
+
+Taylor2020
+
+</td>
+<td style="text-align:left;">
+
+3M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2196
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+78
+
+</td>
+<td style="text-align:left;">
+
+Roscoe2013
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+732
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+79
+
+</td>
+<td style="text-align:left;">
+
+Raes2016
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+732
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+80
+
+</td>
+<td style="text-align:left;">
+
+Schrot2021a
+
+</td>
+<td style="text-align:left;">
+
+5D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+120
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+81
+
+</td>
+<td style="text-align:left;">
+
+Tasti2021
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+82
+
+</td>
+<td style="text-align:left;">
+
+McGowan2022
+
+</td>
+<td style="text-align:left;">
+
+2M14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1800
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+83
+
+</td>
+<td style="text-align:left;">
+
+Parth2020
+
+</td>
+<td style="text-align:left;">
+
+11M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+11
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8052
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+84
+
+</td>
+<td style="text-align:left;">
+
+Blaum2017
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+48
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+86
+
+</td>
+<td style="text-align:left;">
+
+Klosterman2010
+
+</td>
+<td style="text-align:left;">
+
+20D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+480
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+88
+
+</td>
+<td style="text-align:left;">
+
+Saribaş2016
+
+</td>
+<td style="text-align:left;">
+
+~3M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2196
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+89
+
+</td>
+<td style="text-align:left;">
+
+Kern2017
+
+</td>
+<td style="text-align:left;">
+
+3Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+26208
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+90
+
+</td>
+<td style="text-align:left;">
+
+Meya2018
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+91
+
+</td>
+<td style="text-align:left;">
+
+Park2020
+
+</td>
+<td style="text-align:left;">
+
+1M20D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1212
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+92
+
+</td>
+<td style="text-align:left;">
+
+Reinfried2012
+
+</td>
+<td style="text-align:left;">
+
+2H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+93
+
+</td>
+<td style="text-align:left;">
+
+Deisenrieder2020
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+94
+
+</td>
+<td style="text-align:left;">
+
+Sellmann2013a
+
+</td>
+<td style="text-align:left;">
+
+8H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+95
+
+</td>
+<td style="text-align:left;">
+
+Keller2019
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+96
+
+</td>
+<td style="text-align:left;">
+
+Trott2020a
+
+</td>
+<td style="text-align:left;">
+
+4M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2928
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+97
+
+</td>
+<td style="text-align:left;">
+
+Breslyn2019
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+336
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+98
+
+</td>
+<td style="text-align:left;">
+
+Lawson2019a
+
+</td>
+<td style="text-align:left;">
+
+2Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+17472
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+99
+
+</td>
+<td style="text-align:left;">
+
+Lawson2019a
+
+</td>
+<td style="text-align:left;">
+
+2Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+17472
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+100
+
+</td>
+<td style="text-align:left;">
+
+Walsh2018
+
+</td>
+<td style="text-align:left;">
+
+1M14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1068
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+102
+
+</td>
+<td style="text-align:left;">
+
+Siegner2018
+
+</td>
+<td style="text-align:left;">
+
+1M14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1068
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+103
+
+</td>
+<td style="text-align:left;">
+
+Drewes2018
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+105
+
+</td>
+<td style="text-align:left;">
+
+Sternang2012
+
+</td>
+<td style="text-align:left;">
+
+2H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+106
+
+</td>
+<td style="text-align:left;">
+
+Sutela2023
+
+</td>
+<td style="text-align:left;">
+
+3M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2196
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+107
+
+</td>
+<td style="text-align:left;">
+
+Stevenson2018a
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+109
+
+</td>
+<td style="text-align:left;">
+
+Jacobson2017
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+168
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+110
+
+</td>
+<td style="text-align:left;">
+
+Xie2014
+
+</td>
+<td style="text-align:left;">
+
+8H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+111
+
+</td>
+<td style="text-align:left;">
+
+Zografakis2008
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+112
+
+</td>
+<td style="text-align:left;">
+
+Silva2021
+
+</td>
+<td style="text-align:left;">
+
+5M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3660
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+113
+
+</td>
+<td style="text-align:left;">
+
+Trott2019
+
+</td>
+<td style="text-align:left;">
+
+3M13D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+13
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2508
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+114
+
+</td>
+<td style="text-align:left;">
+
+Trott2022
+
+</td>
+<td style="text-align:left;">
+
+3M13D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+13
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2508
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+115
+
+</td>
+<td style="text-align:left;">
+
+Karpudewan2015
+
+</td>
+<td style="text-align:left;">
+
+1M7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+900
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+116
+
+</td>
+<td style="text-align:left;">
+
+Walsh2019
+
+</td>
+<td style="text-align:left;">
+
+~2M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1464
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+117
+
+</td>
+<td style="text-align:left;">
+
+Markowitz2018
+
+</td>
+<td style="text-align:left;">
+
+1M20D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1212
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+118
+
+</td>
+<td style="text-align:left;">
+
+Karpudewan2017
+
+</td>
+<td style="text-align:left;">
+
+1M14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1068
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+121
+
+</td>
+<td style="text-align:left;">
+
+Hu2016
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+48
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+124
+
+</td>
+<td style="text-align:left;">
+
+Oberauer2023
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+125
+
+</td>
+<td style="text-align:left;">
+
+McNeill2012
+
+</td>
+<td style="text-align:left;">
+
+~1M14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1068
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+126
+
+</td>
+<td style="text-align:left;">
+
+Bodzin2014
+
+</td>
+<td style="text-align:left;">
+
+20D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+480
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+127
+
+</td>
+<td style="text-align:left;">
+
+Cibik2022
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1464
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+129
+
+</td>
+<td style="text-align:left;">
+
+Chin2016
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+732
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+130
+
+</td>
+<td style="text-align:left;">
+
+Harker_Schuch2013
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+131
+
+</td>
+<td style="text-align:left;">
+
+Harker_Schuch2020
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+132
+
+</td>
+<td style="text-align:left;">
+
+Kabir2015
+
+</td>
+<td style="text-align:left;">
+
+6M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4392
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+133
+
+</td>
+<td style="text-align:left;">
+
+Lambert2013
+
+</td>
+<td style="text-align:left;">
+
+5M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3660
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+136
+
+</td>
+<td style="text-align:left;">
+
+Korsager2015
+
+</td>
+<td style="text-align:left;">
+
+1M14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1068
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+137
+
+</td>
+<td style="text-align:left;">
+
+Tasquier2015
+
+</td>
+<td style="text-align:left;">
+
+1M7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+900
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+138
+
+</td>
+<td style="text-align:left;">
+
+Pruneau2006a
+
+</td>
+<td style="text-align:left;">
+
+16D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+16
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+384
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+140
+
+</td>
+<td style="text-align:left;">
+
+Stevenson2018
+
+</td>
+<td style="text-align:left;">
+
+6M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4392
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+143
+
+</td>
+<td style="text-align:left;">
+
+Sellmann2015
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+48
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+144
+
+</td>
+<td style="text-align:left;">
+
+Pekel2019
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+336
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+145
+
+</td>
+<td style="text-align:left;">
+
+Miller 2015
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+732
+
+</td>
+</tr>
+</tbody>
+</table>
+
+``` r
+hist(perLen$totalHours,nclass=200,main="",xlab="Total intervention period length",ylab="Number of studies",xaxt="n")
+axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","month","year","2 years","3 years"),las=1)
+legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
