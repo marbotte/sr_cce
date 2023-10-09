@@ -64,6 +64,9 @@ for(i in 1:nrow(tabToWork))
   
   cat("## Outcome pdf words\n\n")
   cat(kable(t(pdfWords[ref,]),colnames=c()))
+  cat("\n\n")
+  
+  cat("**Controversy**:",tabToWork$Controversy[i],"\n\n")
   
   cat("##","abstract","\n\n")
   cat(abstract,"\n\n")

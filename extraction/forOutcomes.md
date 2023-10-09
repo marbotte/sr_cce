@@ -1157,6 +1157,9 @@ for(i in 1:nrow(tabToWork))
   
   cat("## Outcome pdf words\n\n")
   cat(kable(t(pdfWords[ref,]),colnames=c()))
+  cat("\n\n")
+  
+  cat("**Controversy**:",tabToWork$Controversy[i],"\n\n")
   
   cat("##","abstract","\n\n")
   cat(abstract,"\n\n")
@@ -1436,6 +1439,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 1.3 abstract
 
@@ -1760,6 +1765,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 2.3 abstract
 
 Although learning can occur in many environments e. g. science museum or
@@ -2065,6 +2072,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: yes
 
 ## 3.3 abstract
 
@@ -2380,6 +2389,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 4.3 abstract
 
 We report the results of a climate change module delivered to 48 Grade
@@ -2677,6 +2688,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 5.3 abstract
 
@@ -2988,6 +3001,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 6.3 abstract
 
@@ -3303,6 +3318,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 7.3 abstract
 
 Both scientists and policy-makers emphasize the importance of education
@@ -3614,6 +3631,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 8.3 abstract
 
 Findings from the second phase of a study of pre-service teachers’
@@ -3915,6 +3934,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 9.3 abstract
 
@@ -4232,6 +4253,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: yes
+
 ## 10.3 abstract
 
 This article discusses the implementation of a pedagogical tool aimed at
@@ -4541,6 +4564,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 11.3 abstract
 
@@ -4876,6 +4901,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: yes
+
 ## 12.3 abstract
 
 This study aims to investigate climate literacy among junior high school
@@ -5198,6 +5225,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 13.3 abstract
 
@@ -5527,6 +5556,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 14.3 abstract
 
 The researchers developed a youth weather and climate curriculum using a
@@ -5853,6 +5884,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: NA
+
 ## 15.3 abstract
 
 Up until now, very few models conceptualizing students’ competence in
@@ -6157,6 +6190,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 16.3 abstract
 
@@ -6473,6 +6508,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 17.3 abstract
 
 Climate change is the one of the most controversial issues in
@@ -6780,6 +6817,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 18.3 abstract
 
 The Jersey Roots, Global Reach 4-H Climate Science Program conducted in
@@ -7070,6 +7109,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 19.3 abstract
 
@@ -7374,6 +7415,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 20.3 abstract
 
 Global climate change, referred to as climate change in this paper, has
@@ -7670,6 +7713,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: yes
 
 ## 21.3 abstract
 
@@ -7986,6 +8031,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 22.3 abstract
 
 This study explores in-service teachers’ attitudes and knowledge about a
@@ -8300,6 +8347,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 23.3 abstract
 
 Plausibility is a central but under-examined topic in conceptual change
@@ -8606,6 +8655,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 24.3 abstract
 
 ABSTRACT: Climate change is a highly charged topic that some adults
@@ -8900,6 +8951,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 25.3 abstract
 
@@ -9211,6 +9264,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 26.3 abstract
 
 The incorporation of informal science modules with traditional
@@ -9507,6 +9562,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 27.3 abstract
 
@@ -9809,6 +9866,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 28.3 abstract
 
@@ -10115,6 +10174,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 29.3 abstract
 
@@ -10437,6 +10498,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: NO
+
 ## 30.3 abstract
 
 Science and computational practices such as modeling and abstraction are
@@ -10753,6 +10816,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 31.3 abstract
 
 Research related to teaching climate change, system thinking, current
@@ -11061,6 +11126,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 32.3 abstract
 
@@ -11384,6 +11451,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 33.3 abstract
 
 Climate change is a complex topic and hence makes teaching climate
@@ -11700,6 +11769,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 34.3 abstract
 
 Although informal learning environments have been studied extensively,
@@ -12013,6 +12084,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 35.3 abstract
 
@@ -12335,6 +12408,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 36.3 abstract
 
 Young people around the world show considerable engagement with climate
@@ -12646,6 +12721,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 37.3 abstract
 
@@ -12968,6 +13045,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 38.3 abstract
 
 In this work, we examine middle school students’ understanding of the
@@ -13268,6 +13347,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 39.3 abstract
 
@@ -13597,6 +13678,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: NO
+
 ## 40.3 abstract
 
 It is a concern that children represent an under-researched group in
@@ -13913,6 +13996,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 41.3 abstract
 
@@ -14248,6 +14333,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 42.3 abstract
 
 To explore the complexities of energy literacy in a global educational
@@ -14561,6 +14648,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 43.3 abstract
 
 Preparing a literate public to critically evaluate issues related to
@@ -14871,6 +14960,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 44.3 abstract
 
@@ -15191,6 +15282,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 45.3 abstract
 
@@ -15515,6 +15608,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 46.3 abstract
 
 This paper reports a study conducted to investigate social studies and
@@ -15838,6 +15933,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 47.3 abstract
 
 This article presents a STEAM project, “Sustainable City”, based on
@@ -16142,6 +16239,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 48.3 abstract
 
@@ -16485,6 +16584,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 49.3 abstract
 
@@ -16833,6 +16934,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 50.3 abstract
 
 Social studies learning is expected to integrate environmental
@@ -17155,6 +17258,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 51.3 abstract
 
 The establishment of the Next Generation Science Standards brought
@@ -17470,6 +17575,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: NO
 
 ## 52.3 abstract
 
@@ -17832,6 +17939,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 53.3 abstract
 
 Objectives: The largest Global Climate Strike in history was led and
@@ -18150,6 +18259,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 54.3 abstract
 
@@ -18484,6 +18595,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 55.3 abstract
 
 Emotion has been recognized as a significant factor affecting climate
@@ -18807,6 +18920,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 56.3 abstract
 
 The process of learning science in some schools is still in the form of
@@ -19120,6 +19235,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 57.3 abstract
 
@@ -19459,6 +19576,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 58.3 abstract
 
 To examine the impact of naming rights on support for environmental
@@ -19771,6 +19890,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 59.3 abstract
 
 At an Extension youth agricultural science center, our team developed
@@ -20071,6 +20192,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 60.3 abstract
 
@@ -20404,6 +20527,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 61.3 abstract
 
 There has been an intensive debate in the field of climate change
@@ -20715,6 +20840,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 62.3 abstract
 
 Providing children with a clear understanding of climate change drivers
@@ -21025,6 +21152,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 63.3 abstract
 
@@ -21350,6 +21479,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 64.3 abstract
 
 During a training program on climate change education, teachers were
@@ -21655,6 +21786,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 65.3 abstract
 
@@ -21996,6 +22129,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 66.3 abstract
 
 A socio-constructivist and experiential process for climate change
@@ -22317,6 +22452,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 67.3 abstract
 
 This article takes its point of departure from the younger generation’s
@@ -22631,6 +22768,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 68.3 abstract
 
 Summary: In environmental education the construction of appropriate
@@ -22942,6 +23081,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 69.3 abstract
 
@@ -23274,6 +23415,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 70.3 abstract
 
@@ -23631,6 +23774,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 71.3 abstract
 
 How can youth become leaders in their communities’ resilience efforts?
@@ -23978,6 +24123,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 72.3 abstract
 
 Scientists and sustainability scholars continue to make urgent calls for
@@ -24317,6 +24464,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 73.3 abstract
 
 Background: Evidence of the effectiveness of intervention against
@@ -24655,6 +24804,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 74.3 abstract
 
 Background: Evidence of the effectiveness of intervention against
@@ -24984,6 +25135,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 75.3 abstract
 
 Problem-based learning (PBL) and inquiry learning (IL) employ extensive
@@ -25304,6 +25457,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 76.3 abstract
 
@@ -25637,6 +25792,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 77.3 abstract
 
 This article’s focus was on transitioning middle grade students from the
@@ -25941,6 +26098,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 78.3 abstract
 
@@ -26260,6 +26419,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 79.3 abstract
 
 This study examined the role of a future-oriented scenario with
@@ -26570,6 +26731,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 80.3 abstract
 
@@ -26893,6 +27056,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 81.3 abstract
 
@@ -27227,6 +27392,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 82.3 abstract
 
 Using the ‘future workshop’ (FW) method, adolescents can be prepared for
@@ -27552,6 +27719,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 83.3 abstract
 
@@ -27885,6 +28054,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 84.3 abstract
 
@@ -28235,6 +28406,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 85.3 abstract
 
 The science-education cooperative venture “Our Common Future:
@@ -28583,6 +28756,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 86.3 abstract
 
@@ -28933,6 +29108,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 87.3 abstract
 
 Science educators have called for using the learning progression
@@ -29270,6 +29447,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 88.3 abstract
 
 This study explored the impact of using a socioscientific issue (SSI)
@@ -29581,6 +29760,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 89.3 abstract
 
@@ -29910,6 +30091,8 @@ NA
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 90.3 abstract
 
 ## 90.4 Objective/questions
@@ -30210,6 +30393,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 91.3 abstract
 
@@ -30529,6 +30714,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 92.3 abstract
 
 Games are increasingly proposed as an innovative way to convey
@@ -30843,6 +31030,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 93.3 abstract
 
@@ -31159,6 +31348,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 94.3 abstract
 
@@ -31477,6 +31668,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 95.3 abstract
 
@@ -31812,6 +32005,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 96.3 abstract
 
 Besides cognitive learning effects, short-term environmental education
@@ -32118,6 +32313,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 97.3 abstract
 
@@ -32463,6 +32660,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 98.3 abstract
 
 This mixed-methods study examined how ten- to twelve-year-old children
@@ -32786,6 +32985,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 99.3 abstract
 
@@ -33137,6 +33338,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 100.3 abstract
 
 The collective action that is required to mitigate and adapt to climate
@@ -33456,6 +33659,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 101.3 abstract
 
@@ -33784,6 +33989,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 102.3 abstract
 
@@ -34143,6 +34350,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 103.3 abstract
 
 Nine 11th and 12th grade students from a large urban high school
@@ -34458,6 +34667,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 104.3 abstract
 
 Transitioning food, energy and water systems for adaptation and
@@ -34767,6 +34978,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 105.3 abstract
 
@@ -35107,6 +35320,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 106.3 abstract
 
 Climate change is one of the most pressing challenges facing society,
@@ -35442,6 +35657,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 107.3 abstract
 
 The tensions between environmental protection and economic growth are
@@ -35749,6 +35966,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 108.3 abstract
 
@@ -36064,6 +36283,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 109.3 abstract
 
@@ -36421,6 +36642,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 110.3 abstract
 
 To prepare students to make informed decisions and gain coherent
@@ -36732,6 +36955,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 111.3 abstract
 
@@ -37087,6 +37312,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 112.3 abstract
 
 A majority of secondary science teachers are found to include the topic
@@ -37392,6 +37619,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: NA
 
 ## 113.3 abstract
 
@@ -37717,6 +37946,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 114.3 abstract
 
@@ -38058,6 +38289,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 115.3 abstract
 
@@ -38405,6 +38638,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 116.3 abstract
 
@@ -38801,6 +39036,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 117.3 abstract
 
 This paper documents a collaborative, multi-site participatory action
@@ -39125,6 +39362,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 118.3 abstract
 
@@ -39468,6 +39707,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 119.3 abstract
 
@@ -39829,6 +40070,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 120.3 abstract
 
 The Green Ninja Film Academy (GENIE) is an interdisciplinary curriculum
@@ -40157,6 +40400,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 121.3 abstract
 
 Across four studies, two controlled lab experiments and two field
@@ -40483,6 +40728,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 122.3 abstract
 
@@ -40827,6 +41074,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 123.3 abstract
 
 ABSTRACTThis study reports on an effort to illustrate the coupling of
@@ -41154,6 +41403,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 124.3 abstract
 
@@ -41485,6 +41736,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 125.3 abstract
 
@@ -41858,6 +42111,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: no
+
 ## 126.3 abstract
 
 Education for sustainable development (ESD) is a holistic and
@@ -42185,6 +42440,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 127.3 abstract
 
@@ -42516,6 +42773,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 128.3 abstract
 
@@ -42849,6 +43108,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 129.3 abstract
 
@@ -43200,6 +43461,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 130.3 abstract
 
 Climate change science is a challenging topic for student learning. This
@@ -43544,6 +43807,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 131.3 abstract
 
 The purpose of this paper is to integrate mathematical modeling and
@@ -43860,6 +44125,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: NO
 
 ## 132.3 abstract
 
@@ -44181,6 +44448,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 133.3 abstract
 
@@ -44559,6 +44828,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 134.3 abstract
 
 This study investigates the influence of knowledge on opinions about
@@ -44933,6 +45204,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 135.3 abstract
 
 Preparing students for their future and qualifying them to enter public
@@ -45284,6 +45557,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 136.3 abstract
 
 Background
@@ -45602,6 +45877,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 137.3 abstract
 
@@ -45933,6 +46210,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 138.3 abstract
 
@@ -46272,6 +46551,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 139.3 abstract
 
 The United Nations Children’s Fund 2008 report, Our Climate, Our
@@ -46609,6 +46890,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 140.3 abstract
 
@@ -47005,6 +47288,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 141.3 abstract
 
 Involvement in climate change has been proven to be hindered by
@@ -47386,6 +47671,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 142.3 abstract
 
 The authors invited teachers participating in a climate change education
@@ -47688,6 +47975,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 143.3 abstract
 
@@ -48010,6 +48299,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: yes
+
 ## 144.3 abstract
 
 Research on adolescent climate change perceptions has uncovered key
@@ -48327,6 +48618,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: no
 
 ## 145.3 abstract
 
@@ -48648,6 +48941,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 146.3 abstract
 
@@ -48993,6 +49288,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 147.3 abstract
 
@@ -49341,6 +49638,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: No
+
 ## 148.3 abstract
 
 This study aims to examine the effectiveness of argumentation-based
@@ -49675,6 +49974,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 149.3 abstract
 
@@ -50026,6 +50327,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: Yes
 
 ## 150.3 abstract
 
@@ -50437,6 +50740,8 @@ action
 </tbody>
 </table>
 
+**Controversy**: Yes
+
 ## 151.3 abstract
 
 This article calls on the field of TESOL to respond to the planet’s
@@ -50795,6 +51100,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: No
 
 ## 152.3 abstract
 
@@ -51167,6 +51474,8 @@ NA
 </tbody>
 </table>
 
+**Controversy**: NA
+
 ## 153.3 abstract
 
 NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
@@ -51459,6 +51768,8 @@ action
 </tr>
 </tbody>
 </table>
+
+**Controversy**: NA
 
 ## 154.3 abstract
 
