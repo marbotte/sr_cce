@@ -24307,10 +24307,6 @@ action
 
 ``` r
 require(openxlsx)
-```
-
-    ## Loading required package: openxlsx
-
-``` r
-write.xlsx(x=outcomes,file="outcomePdfWords.xlsx")
+papId<-gsub("\\.pdf$","",basename(rownames(outcomes)))
+write.xlsx(data.frame(id=papId,outcomes),file="outcomePdfWords.xlsx",)
 ```

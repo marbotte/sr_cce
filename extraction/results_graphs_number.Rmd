@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231002.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231002.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231009.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231009.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```

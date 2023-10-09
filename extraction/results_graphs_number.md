@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-02
+2023-10-09
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -36,7 +36,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231002.xlsx"))
+names(loadWorkbook("../../extraction/20231009.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -45,7 +45,7 @@ names(loadWorkbook("../../extraction/20231002.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231002.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231009.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -58,12 +58,10 @@ missin<-missin[missin!="Saribaş2016"]
 missin
 ```
 
-    ##            Ana19            Ana29            Ana32            Ana36 
-    ##    "Leckey2021a"    "Gladwin2022" "Bopardikar2021"      "Trott2020" 
-    ##            Ana38          Marius6         Marius10         Marius25 
-    ##    "Puttick2018"  "Gutierrez2022"       "Ross2021"     "Goulah2017" 
-    ##         Marius32          Luisa11       Benjamin15 
-    ##     "Miller2015"     "Turner2022"   "Schuster2018"
+    ##            Ana19            Ana32            Ana36         Marius10 
+    ##    "Leckey2021a" "Bopardikar2021"      "Trott2020"       "Ross2021" 
+    ##          Luisa11       Benjamin15 
+    ##     "Turner2022"   "Schuster2018"
 
 # 2 Dates
 
@@ -78,36 +76,38 @@ rawExtract$datepubl
     ##  [17] "2021.0"         "2012.0"         "2022.0"         "2012.0"        
     ##  [21] "2006.0"         "2015.0"         "2013.0"         "2016.0"        
     ##  [25] "2019.0"         "2017.0"         "2017.0"         "2020.0"        
-    ##  [29] "2020.0"         "2017.0"         "2021.0"         "2022.0"        
-    ##  [33] "2012.0"         "2016.0"         "2022.0"         "2009.0"        
-    ##  [37] "2012.0"         "2015.0"         "2016.0"         "2017.0"        
-    ##  [41] "2017.0"         "2017.0"         "2020.0"         "2015.0"        
-    ##  [45] "2020.0"         "2020.0"         "2015.0"         "2022.0"        
-    ##  [49] "2022.0"         "2017.0"         "January 2022"   "March 2019"    
-    ##  [53] "September 2022" "2019.0"         "November 2012"  "March 2013"    
-    ##  [57] "2020.0"         "2020.0"         "2022.0"         "2023.0"        
-    ##  [61] "2021.0"         "2006.0"         "2021.0"         "2003.0"        
-    ##  [65] "2021.0"         "1998.0"         "2013.0"         "2014.0"        
-    ##  [69] "2021.0"         "2020.0"         "2022.0"         "2022.0"        
-    ##  [73] "2013.0"         "2012.0"         "2021.0"         "2014.0"        
-    ##  [77] "2020.0"         "2012.0"         "2015.0"         "2020.0"        
-    ##  [81] "2021.0"         "2022.0"         "2020.0"         "2017.0"        
-    ##  [85] "2013.0"         "2010.0"         "2019.0"         "2016.0"        
-    ##  [89] "2017.0"         "2018.0"         "2020.0"         "2012.0"        
-    ##  [93] "2020.0"         "2013.0"         "2019.0"         "2019.0"        
-    ##  [97] "2019.0"         "2019.0"         "2019.0"         "2018.0"        
-    ## [101] "2008.0"         "2018.0"         "2017.0"         "2017.0"        
-    ## [105] "2012.0"         "2023.0"         "2017.0"         "2012.0"        
-    ## [109] "2017.0"         "2014.0"         "2008.0"         "2021.0"        
-    ## [113] "2019.0"         "2022.0"         "2015.0"         "2019.0"        
-    ## [117] "2018.0"         "2017.0"         "2014.0"         "2021.0"        
-    ## [121] "2016.0"         "2022.0"         "2019.0"         "2023.0"        
-    ## [125] "2010.0"         "2013.0"         "2022.0"         "2021.0"        
-    ## [129] "2015.0"         "2013.0"         "2019.0"         "2015.0"        
-    ## [133] "2013.0"         "2022.0"         "2021.0"         "2015.0"        
-    ## [137] "2015.0"         "2006.0"         "2022.0"         "2018.0"        
-    ## [141] "2022.0"         "2017.0"         "2015.0"         "2019.0"        
-    ## [145] "2015.0"         NA               "2015.0"
+    ##  [29] "2020.0"         "2018.0"         "2017.0"         "2021.0"        
+    ##  [33] "2022.0"         "2012.0"         "2016.0"         "2022.0"        
+    ##  [37] "2009.0"         "2012.0"         "2015.0"         "2016.0"        
+    ##  [41] "2017.0"         "2022.0"         "2017.0"         "2017.0"        
+    ##  [45] "2020.0"         "2015.0"         "2020.0"         "2020.0"        
+    ##  [49] "2015.0"         "2022.0"         "2022.0"         "2017.0"        
+    ##  [53] "January 2022"   "March 2019"     "September 2022" "2019.0"        
+    ##  [57] "November 2012"  "March 2013"     "2020.0"         "2020.0"        
+    ##  [61] "2022.0"         "2023.0"         "2021.0"         "2006.0"        
+    ##  [65] "2021.0"         "2003.0"         "2021.0"         "1998.0"        
+    ##  [69] "2013.0"         "2014.0"         "2021.0"         "2020.0"        
+    ##  [73] "2022.0"         "2022.0"         "2013.0"         "2012.0"        
+    ##  [77] "2021.0"         "2014.0"         "2020.0"         "2012.0"        
+    ##  [81] "2015.0"         "2020.0"         "2021.0"         "2022.0"        
+    ##  [85] "2020.0"         "2017.0"         "2013.0"         "2010.0"        
+    ##  [89] "2019.0"         "2016.0"         "2017.0"         "2018.0"        
+    ##  [93] "2020.0"         "2012.0"         "2020.0"         "2013.0"        
+    ##  [97] "2019.0"         "2019.0"         "2019.0"         "2019.0"        
+    ## [101] "2019.0"         "2018.0"         "2008.0"         "2018.0"        
+    ## [105] "2017.0"         "2017.0"         "2012.0"         "2023.0"        
+    ## [109] "2017.0"         "2012.0"         "2017.0"         "2014.0"        
+    ## [113] "2014.0"         "2008.0"         "2008.0"         "2021.0"        
+    ## [117] "2019.0"         "2022.0"         "2015.0"         "2019.0"        
+    ## [121] "2018.0"         "2017.0"         "2014.0"         "2021.0"        
+    ## [125] "2016.0"         "2022.0"         "2019.0"         "2023.0"        
+    ## [129] "2010.0"         "2013.0"         "2022.0"         "2021.0"        
+    ## [133] "2015.0"         "2013.0"         "2019.0"         "2015.0"        
+    ## [137] "2013.0"         "2022.0"         "2021.0"         "2015.0"        
+    ## [141] "2015.0"         "2006.0"         "2022.0"         "2018.0"        
+    ## [145] "2022.0"         "2017.0"         "2015.0"         "2019.0"        
+    ## [149] "2015.0"         "2022.0"         "2017.0"         "2022.0"        
+    ## [153] "2015.0"
 
 ``` r
 extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})","\\2",rawExtract$datepubl)))
@@ -135,8 +135,10 @@ extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})
     ##                  2020                  2021                  2017 
     ##            Eggert2017             Faria2015        Feierabend2012 
     ##                  2017                  2017                  2012 
-    ## Feldpausch_Parker2013             Flora2014             Gold2015a 
-    ##                  2013                  2014                  2015 
+    ## Feldpausch_Parker2013             Flora2014           Gladwin2022 
+    ##                  2013                  2014                  2022 
+    ##             Gold2015a            Goulah2017         Gutierrez2022 
+    ##                  2015                  2017                  2022 
     ##     Harker_Schuch2013     Harker_Schuch2020           Herrick2022 
     ##                  2013                  2019                  2022 
     ##          Holthuis2014                Hu2016          Jacobson2017 
@@ -163,7 +165,7 @@ extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})
     ##                  2022                  2018                  1998 
     ##           McGowan2022           McNeal2014a           McNeill2012 
     ##                  2022                  2014                  2010 
-    ##              Meya2018           Miller 2015            Monroe2016 
+    ##              Meya2018            Miller2015            Monroe2016 
     ##                  2018                  2015                  2016 
     ##            Muller2021           Muller2021a           Nafisah2022 
     ##                  2021                  2021                  2022 
@@ -175,42 +177,42 @@ extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})
     ##                  2020                  2020                  2019 
     ##          Petersen2020            Porter2012           Pruneau2003 
     ##                  2020                  2020                  2003 
-    ##           Pruneau2006          Pruneau2006a              Raes2016 
-    ##                  2006                  2006                  2015 
-    ##           Ratinen2013         Reinfried2012            Roscoe2013 
-    ##                  2012                  2012                  2012 
-    ##      Roychoudhury2017            Ruboon2012       Salas_Rueda2021 
-    ##                  2017                  2012                  2021 
-    ##         Salsabila2019          Saribaş2016            Schrot2021a 
-    ##                  2019                  2016                  2020 
-    ##        Schubatzky2022          Schuster2008          Sellmann2013 
-    ##                  2022                  2008                  2012 
-    ##         Sellmann2013a          Sellmann2015              Shea2016 
-    ##                  2013                  2015                  2016 
-    ##           Siegner2018             Silva2021            Skains2022 
-    ##                  2018                  2021                  2022 
-    ##             Smith2019        Steffensen2022          Sternang2012 
-    ##                  2019                  2022                  2012 
-    ##         Stevenson2018        Stevenson2018a           Sukardi2022 
-    ##                  2018                  2017                  2022 
-    ##           Sumrall2021          Sundberg2013            Sutela2023 
-    ##                  2021                  2013                  2023 
-    ##            Svihla2012             Taber2009          Tasquier2015 
-    ##                  2012                  2009                  2015 
-    ##          Tasquier2017             Tasti2021            Taylor2020 
-    ##                  2017                  2021                  2020 
-    ##             Trott2019            Trott2020a            Trott2020b 
-    ##                  2019                  2019                  2020 
-    ##             Trott2022             Varma2012       Veijalainen2013 
-    ##                  2022                  2012                  2013 
-    ##           Vicente2020       Visintainer2015             Walsh2018 
-    ##                  2020                  2015                  2018 
-    ##             Walsh2019              Wang2022             White2022 
-    ##                  2019                  2022                  2022 
-    ##          Williams2017               Xie2014             Zhong2021 
-    ##                  2016                  2014                  2021 
-    ##        Zografakis2008 
-    ##                  2008
+    ##           Pruneau2006          Pruneau2006a           Puttick2018 
+    ##                  2006                  2006                  2018 
+    ##              Raes2016           Ratinen2013         Reinfried2012 
+    ##                  2015                  2012                  2012 
+    ##            Roscoe2013      Roychoudhury2017            Ruboon2012 
+    ##                  2012                  2017                  2012 
+    ##       Salas_Rueda2021         Salsabila2019          Saribaş2016  
+    ##                  2021                  2019                  2016 
+    ##           Schrot2021a        Schubatzky2022          Schuster2008 
+    ##                  2020                  2022                  2008 
+    ##          Sellmann2013         Sellmann2013a          Sellmann2015 
+    ##                  2012                  2013                  2015 
+    ##              Shea2016           Siegner2018             Silva2021 
+    ##                  2016                  2018                  2021 
+    ##            Skains2022             Smith2019        Steffensen2022 
+    ##                  2022                  2019                  2022 
+    ##          Sternang2012         Stevenson2018        Stevenson2018a 
+    ##                  2012                  2018                  2017 
+    ##           Sukardi2022           Sumrall2021          Sundberg2013 
+    ##                  2022                  2021                  2013 
+    ##            Sutela2023            Svihla2012             Taber2009 
+    ##                  2023                  2012                  2009 
+    ##          Tasquier2015          Tasquier2017             Tasti2021 
+    ##                  2015                  2017                  2021 
+    ##            Taylor2020             Trott2019            Trott2020a 
+    ##                  2020                  2019                  2019 
+    ##            Trott2020b             Trott2022             Varma2012 
+    ##                  2020                  2022                  2012 
+    ##       Veijalainen2013           Vicente2020       Visintainer2015 
+    ##                  2013                  2020                  2015 
+    ##             Walsh2018             Walsh2019              Wang2022 
+    ##                  2018                  2019                  2022 
+    ##             White2022          Williams2017               Xie2014 
+    ##                  2022                  2016                  2014 
+    ##             Zhong2021        Zografakis2008 
+    ##                  2021                  2008
 
 ``` r
 barplot(table(factor(datesById,levels=min(datesById):max(datesById))), las=2, main="Number of documents included in the analysis by year")
@@ -225,153 +227,159 @@ library(stringr)
 rawExtract$Countries.STUDY
 ```
 
-    ##   [1] "Denmark"                                   
-    ##   [2] "Turkey"                                    
-    ##   [3] "United States; China; New Zealand;  Norway"
-    ##   [4] "CANADA"                                    
-    ##   [5] "PORTUGAL"                                  
-    ##   [6] "United States"                             
-    ##   [7] "United States"                             
-    ##   [8] "Australia"                                 
-    ##   [9] "Turkey"                                    
-    ##  [10] "Singapore"                                 
-    ##  [11] "Thailand"                                  
-    ##  [12] "South korea, Australia"                    
-    ##  [13] "United States"                             
-    ##  [14] "United States"                             
-    ##  [15] "Germany"                                   
-    ##  [16] "United States"                             
-    ##  [17] "United States"                             
-    ##  [18] "United States"                             
-    ##  [19] "Austria"                                   
-    ##  [20] "United States"                             
-    ##  [21] "United States"                             
-    ##  [22] "United States"                             
-    ##  [23] "United States"                             
-    ##  [24] "United States"                             
-    ##  [25] "Japan"                                     
-    ##  [26] "United States"                             
-    ##  [27] "France"                                    
-    ##  [28] "Denmark"                                   
-    ##  [29] "Canada"                                    
-    ##  [30] "United States"                             
-    ##  [31] "Mexico"                                    
-    ##  [32] "Austria"                                   
-    ##  [33] "Germany"                                   
-    ##  [34] "United States"                             
-    ##  [35] "Norway"                                    
-    ##  [36] "Australia"                                 
-    ##  [37] "United States"                             
-    ##  [38] "United States"                             
-    ##  [39] "United Kingdom"                            
-    ##  [40] "Austria"                                   
-    ##  [41] "United States"                             
-    ##  [42] "United States"                             
-    ##  [43] "BRASIL"                                    
-    ##  [44] "Turkey"                                    
-    ##  [45] "Spain"                                     
-    ##  [46] "Turkey"                                    
-    ##  [47] "United States"                             
-    ##  [48] "Indonesia"                                 
-    ##  [49] "United States"                             
-    ##  [50] "Germany"                                   
-    ##  [51] "United States"                             
-    ##  [52] "Turkey"                                    
-    ##  [53] "China"                                     
-    ##  [54] "Indonesia"                                 
-    ##  [55] "Finland"                                   
-    ##  [56] "Finland"                                   
-    ##  [57] "United States"                             
-    ##  [58] "Turkey"                                    
-    ##  [59] "Czech Republic"                            
-    ##  [60] "UK"                                        
-    ##  [61] "United Kingdom;Portugal"                   
-    ##  [62] "Canada"                                    
-    ##  [63] "United Kingdom"                            
-    ##  [64] "Canada"                                    
-    ##  [65] "Italy, Finland, Iceland"                   
-    ##  [66] "Italy "                                    
-    ##  [67] "USA"                                       
-    ##  [68] "USA"                                       
-    ##  [69] "Puerto Rico (United States)"               
-    ##  [70] "United States"                             
-    ##  [71] "China"                                     
-    ##  [72] "China"                                     
-    ##  [73] "United States"                             
-    ##  [74] "Thailand"                                  
-    ##  [75] "United States"                             
-    ##  [76] "Malaysia"                                  
-    ##  [77] "New Zealand"                               
-    ##  [78] "United States"                             
-    ##  [79] "Belgium"                                   
-    ##  [80] "Austria"                                   
-    ##  [81] "Turkey"                                    
-    ##  [82] "United States"                             
-    ##  [83] "Germany"                                   
-    ##  [84] "United States"                             
-    ##  [85] "United States"                             
-    ##  [86] "USA"                                       
-    ##  [87] "South Africa"                              
-    ##  [88] "Turkey"                                    
-    ##  [89] "United States"                             
-    ##  [90] "Germany"                                   
-    ##  [91] "South Korea"                               
-    ##  [92] "Switzerland"                               
-    ##  [93] "Germany; Austria"                          
-    ##  [94] "Germany"                                   
-    ##  [95] "Austria"                                   
-    ##  [96] "United States"                             
-    ##  [97] "United States"                             
-    ##  [98] "United States"                             
-    ##  [99] "United States"                             
-    ## [100] "United States"                             
-    ## [101] "USA"                                       
-    ## [102] "United States"                             
-    ## [103] "United States"                             
-    ## [104] "United States"                             
-    ## [105] "Sweden"                                    
-    ## [106] "Finland"                                   
-    ## [107] "United States"                             
-    ## [108] "United States"                             
-    ## [109] "Australia"                                 
-    ## [110] "United States"                             
-    ## [111] "Greece"                                    
-    ## [112] "Brazil"                                    
-    ## [113] "USA"                                       
-    ## [114] "USA"                                       
-    ## [115] "Malaysia"                                  
-    ## [116] "USA"                                       
-    ## [117] "United States"                             
-    ## [118] "Malaysia"                                  
-    ## [119] "United States"                             
-    ## [120] "South Africa"                              
-    ## [121] "China"                                     
-    ## [122] "Spain"                                     
-    ## [123] "United States"                             
-    ## [124] "Austria"                                   
-    ## [125] "United States"                             
-    ## [126] "United States"                             
-    ## [127] "Turkey"                                    
-    ## [128] "CHINA"                                     
-    ## [129] "Taiwan"                                    
-    ## [130] "Austria; Denmark"                          
-    ## [131] "Austria; Australia"                        
-    ## [132] "Bangladesh"                                
-    ## [133] "United States"                             
-    ## [134] "United States"                             
-    ## [135] "South Africa"                              
-    ## [136] "Norway"                                    
-    ## [137] "Italy"                                     
-    ## [138] "Canada"                                    
-    ## [139] "United Kingdom"                            
-    ## [140] "United States"                             
-    ## [141] "Indonesia"                                 
-    ## [142] "Italy"                                     
-    ## [143] "Germany"                                   
-    ## [144] "Turkey"                                    
-    ## [145] "Greenland; Denmark; United States"         
-    ## [146] NA                                          
-    ## [147] "United States"
+    ##   [1] "Denmark"                                                                                                                                                               
+    ##   [2] "Turkey"                                                                                                                                                                
+    ##   [3] "United States; China; New Zealand;  Norway"                                                                                                                            
+    ##   [4] "CANADA"                                                                                                                                                                
+    ##   [5] "PORTUGAL"                                                                                                                                                              
+    ##   [6] "United States"                                                                                                                                                         
+    ##   [7] "United States"                                                                                                                                                         
+    ##   [8] "Australia"                                                                                                                                                             
+    ##   [9] "Turkey"                                                                                                                                                                
+    ##  [10] "Singapore"                                                                                                                                                             
+    ##  [11] "Thailand"                                                                                                                                                              
+    ##  [12] "South korea, Australia"                                                                                                                                                
+    ##  [13] "United States"                                                                                                                                                         
+    ##  [14] "United States"                                                                                                                                                         
+    ##  [15] "Germany"                                                                                                                                                               
+    ##  [16] "United States"                                                                                                                                                         
+    ##  [17] "United States"                                                                                                                                                         
+    ##  [18] "United States"                                                                                                                                                         
+    ##  [19] "Austria"                                                                                                                                                               
+    ##  [20] "United States"                                                                                                                                                         
+    ##  [21] "United States"                                                                                                                                                         
+    ##  [22] "United States"                                                                                                                                                         
+    ##  [23] "United States"                                                                                                                                                         
+    ##  [24] "United States"                                                                                                                                                         
+    ##  [25] "Japan"                                                                                                                                                                 
+    ##  [26] "United States"                                                                                                                                                         
+    ##  [27] "France"                                                                                                                                                                
+    ##  [28] "Denmark"                                                                                                                                                               
+    ##  [29] "Canada"                                                                                                                                                                
+    ##  [30] "USA"                                                                                                                                                                   
+    ##  [31] "United States"                                                                                                                                                         
+    ##  [32] "Mexico"                                                                                                                                                                
+    ##  [33] "Austria"                                                                                                                                                               
+    ##  [34] "Germany"                                                                                                                                                               
+    ##  [35] "United States"                                                                                                                                                         
+    ##  [36] "Norway"                                                                                                                                                                
+    ##  [37] "Australia"                                                                                                                                                             
+    ##  [38] "United States"                                                                                                                                                         
+    ##  [39] "United States"                                                                                                                                                         
+    ##  [40] "United Kingdom"                                                                                                                                                        
+    ##  [41] "Austria"                                                                                                                                                               
+    ##  [42] "Brazil, Canada, Colombia, Costa Rica, Finland, Ghana, India, Indonesia, Kenya, Kuwait, Nigeria, Oman, Peru, the Philippines, Poland, Slovenia, South Korea, and Uganda"
+    ##  [43] "United States"                                                                                                                                                         
+    ##  [44] "United States"                                                                                                                                                         
+    ##  [45] "BRASIL"                                                                                                                                                                
+    ##  [46] "Turkey"                                                                                                                                                                
+    ##  [47] "Spain"                                                                                                                                                                 
+    ##  [48] "Turkey"                                                                                                                                                                
+    ##  [49] "United States"                                                                                                                                                         
+    ##  [50] "Indonesia"                                                                                                                                                             
+    ##  [51] "United States"                                                                                                                                                         
+    ##  [52] "Germany"                                                                                                                                                               
+    ##  [53] "United States"                                                                                                                                                         
+    ##  [54] "Turkey"                                                                                                                                                                
+    ##  [55] "China"                                                                                                                                                                 
+    ##  [56] "Indonesia"                                                                                                                                                             
+    ##  [57] "Finland"                                                                                                                                                               
+    ##  [58] "Finland"                                                                                                                                                               
+    ##  [59] "United States"                                                                                                                                                         
+    ##  [60] "Turkey"                                                                                                                                                                
+    ##  [61] "Czech Republic"                                                                                                                                                        
+    ##  [62] "UK"                                                                                                                                                                    
+    ##  [63] "United Kingdom;Portugal"                                                                                                                                               
+    ##  [64] "Canada"                                                                                                                                                                
+    ##  [65] "United Kingdom"                                                                                                                                                        
+    ##  [66] "Canada"                                                                                                                                                                
+    ##  [67] "Italy, Finland, Iceland"                                                                                                                                               
+    ##  [68] "Italy "                                                                                                                                                                
+    ##  [69] "USA"                                                                                                                                                                   
+    ##  [70] "USA"                                                                                                                                                                   
+    ##  [71] "Puerto Rico (United States)"                                                                                                                                           
+    ##  [72] "United States"                                                                                                                                                         
+    ##  [73] "China"                                                                                                                                                                 
+    ##  [74] "China"                                                                                                                                                                 
+    ##  [75] "United States"                                                                                                                                                         
+    ##  [76] "Thailand"                                                                                                                                                              
+    ##  [77] "United States"                                                                                                                                                         
+    ##  [78] "Malaysia"                                                                                                                                                              
+    ##  [79] "New Zealand"                                                                                                                                                           
+    ##  [80] "United States"                                                                                                                                                         
+    ##  [81] "Belgium"                                                                                                                                                               
+    ##  [82] "Austria"                                                                                                                                                               
+    ##  [83] "Turkey"                                                                                                                                                                
+    ##  [84] "United States"                                                                                                                                                         
+    ##  [85] "Germany"                                                                                                                                                               
+    ##  [86] "United States"                                                                                                                                                         
+    ##  [87] "United States"                                                                                                                                                         
+    ##  [88] "USA"                                                                                                                                                                   
+    ##  [89] "South Africa"                                                                                                                                                          
+    ##  [90] "Turkey"                                                                                                                                                                
+    ##  [91] "United States"                                                                                                                                                         
+    ##  [92] "Germany"                                                                                                                                                               
+    ##  [93] "South Korea"                                                                                                                                                           
+    ##  [94] "Switzerland"                                                                                                                                                           
+    ##  [95] "Germany; Austria"                                                                                                                                                      
+    ##  [96] "Germany"                                                                                                                                                               
+    ##  [97] "Austria"                                                                                                                                                               
+    ##  [98] "United States"                                                                                                                                                         
+    ##  [99] "United States"                                                                                                                                                         
+    ## [100] "United States"                                                                                                                                                         
+    ## [101] "United States"                                                                                                                                                         
+    ## [102] "United States"                                                                                                                                                         
+    ## [103] "USA"                                                                                                                                                                   
+    ## [104] "United States"                                                                                                                                                         
+    ## [105] "United States"                                                                                                                                                         
+    ## [106] "United States"                                                                                                                                                         
+    ## [107] "Sweden"                                                                                                                                                                
+    ## [108] "Finland"                                                                                                                                                               
+    ## [109] "United States"                                                                                                                                                         
+    ## [110] "United States"                                                                                                                                                         
+    ## [111] "Australia"                                                                                                                                                             
+    ## [112] "United States"                                                                                                                                                         
+    ## [113] "United States"                                                                                                                                                         
+    ## [114] "Greece"                                                                                                                                                                
+    ## [115] "Greece"                                                                                                                                                                
+    ## [116] "Brazil"                                                                                                                                                                
+    ## [117] "USA"                                                                                                                                                                   
+    ## [118] "USA"                                                                                                                                                                   
+    ## [119] "Malaysia"                                                                                                                                                              
+    ## [120] "USA"                                                                                                                                                                   
+    ## [121] "United States"                                                                                                                                                         
+    ## [122] "Malaysia"                                                                                                                                                              
+    ## [123] "United States"                                                                                                                                                         
+    ## [124] "South Africa"                                                                                                                                                          
+    ## [125] "China"                                                                                                                                                                 
+    ## [126] "Spain"                                                                                                                                                                 
+    ## [127] "United States"                                                                                                                                                         
+    ## [128] "Austria"                                                                                                                                                               
+    ## [129] "United States"                                                                                                                                                         
+    ## [130] "United States"                                                                                                                                                         
+    ## [131] "Turkey"                                                                                                                                                                
+    ## [132] "CHINA"                                                                                                                                                                 
+    ## [133] "Taiwan"                                                                                                                                                                
+    ## [134] "Austria; Denmark"                                                                                                                                                      
+    ## [135] "Austria; Australia"                                                                                                                                                    
+    ## [136] "Bangladesh"                                                                                                                                                            
+    ## [137] "United States"                                                                                                                                                         
+    ## [138] "United States"                                                                                                                                                         
+    ## [139] "South Africa"                                                                                                                                                          
+    ## [140] "Norway"                                                                                                                                                                
+    ## [141] "Italy"                                                                                                                                                                 
+    ## [142] "Canada"                                                                                                                                                                
+    ## [143] "United Kingdom"                                                                                                                                                        
+    ## [144] "United States"                                                                                                                                                         
+    ## [145] "Indonesia"                                                                                                                                                             
+    ## [146] "Italy"                                                                                                                                                                 
+    ## [147] "Germany"                                                                                                                                                               
+    ## [148] "Turkey"                                                                                                                                                                
+    ## [149] "Greenland; Denmark; United States"                                                                                                                                     
+    ## [150] "United States"                                                                                                                                                         
+    ## [151] "United States"                                                                                                                                                         
+    ## [152] "Brazil; Canada; Colombia; Costa Rica; Finland; Ghana; India; Indonesia; Kenya; Kuwait; Nigeria; Oman; Peru; Philippines; Poland; Slovenia; South Korea; Uganda"        
+    ## [153] "United States"
 
 ``` r
 extract$Countries.STUDY[extract$id=="Arya2016"]<-"United States;China;New Zealand;Norway"
@@ -383,20 +391,26 @@ countryStudy$country<-str_to_title(gsub(" +$","",gsub("^and ","",gsub("^ +","",c
 (nbBycountry<-sort(tapply(countryStudy$id,countryStudy$country,function(x)length(unique(x))),decreasing = T))
 ```
 
-    ##  United States         Turkey        Austria        Germany      Australia 
-    ##             58             10              9              8              5 
-    ##         Canada          China United Kingdom        Denmark        Finland 
-    ##              5              5              5              4              4 
-    ##          Italy      Indonesia       Malaysia         Norway   South Africa 
-    ##              4              3              3              3              3 
-    ##         Brazil    New Zealand       Portugal    South Korea          Spain 
-    ##              2              2              2              2              2 
-    ##       Thailand     Bangladesh        Belgium Czech Republic         France 
-    ##              2              1              1              1              1 
-    ##         Greece      Greenland        Iceland          Japan         Mexico 
-    ##              1              1              1              1              1 
-    ##      Singapore         Sweden    Switzerland         Taiwan 
-    ##              1              1              1              1
+    ##   United States          Turkey         Austria         Germany          Canada 
+    ##              61              10               9               8               6 
+    ##       Australia           China         Finland  United Kingdom         Denmark 
+    ##               5               5               5               5               4 
+    ##       Indonesia           Italy          Brazil        Malaysia          Norway 
+    ##               4               4               3               3               3 
+    ##    South Africa     South Korea     New Zealand        Portugal           Spain 
+    ##               3               3               2               2               2 
+    ##        Thailand      Bangladesh         Belgium        Colombia      Costa Rica 
+    ##               2               1               1               1               1 
+    ##  Czech Republic          France           Ghana          Greece       Greenland 
+    ##               1               1               1               1               1 
+    ##         Iceland           India           Japan           Kenya          Kuwait 
+    ##               1               1               1               1               1 
+    ##          Mexico         Nigeria            Oman            Peru     Philippines 
+    ##               1               1               1               1               1 
+    ##          Poland       Singapore        Slovenia          Sweden     Switzerland 
+    ##               1               1               1               1               1 
+    ##          Taiwan The Philippines          Uganda 
+    ##               1               1               1
 
 ## 3.1 Making the map
 
@@ -407,13 +421,11 @@ require(rnaturalearth)
     ## Loading required package: rnaturalearth
 
     ## The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,
-    ## which was just loaded, will retire in October 2023.
+    ## which was just loaded, were retired in October 2023.
     ## Please refer to R-spatial evolution reports for details, especially
     ## https://r-spatial.org/r/2023/05/15/evolution4.html.
     ## It may be desirable to make the sf package available;
     ## package maintainers should consider adding sf to Suggests:.
-    ## The sp package is now running under evolution status 2
-    ##      (status 2 uses the sf package in place of rgdal)
 
     ## Support for Spatial objects (`sp`) will be deprecated in {rnaturalearth} and will be removed in a future release of the package. Please use `sf` objects with {rnaturalearth}. For example: `ne_download(returnclass = 'sf')`
 
@@ -432,7 +444,8 @@ pbs<-namesCountries[!(namesCountries%in%worldMap_tot$name_long|namesCountries%in
 if(length(pbs>0)){warning("the following countries are not found and will be ignored:",pbs)}
 ```
 
-    ## Warning: the following countries are not found and will be ignored:Singapore
+    ## Warning: the following countries are not found and will be ignored:SingaporeThe
+    ## Philippines
 
 ``` r
 nbBycountry<-nbBycountry[!namesCountries%in%pbs]
@@ -532,6 +545,8 @@ sort(table(extract$urban.vs.rural))
 ```
 
     ## 
+    ##                                                                                          ND 
+    ##                                                                                           1 
     ##                               one urban and three rural schools\nparticipated in this study 
     ##                                                                                           1 
     ## one was located in a small coastal village and the other situated in a town further inland. 
@@ -550,18 +565,18 @@ sort(table(extract$urban.vs.rural))
     ##                                                                                           1 
     ##                                                                             Urban and rural 
     ##                                                                                           2 
-    ##                                                                                        both 
-    ##                                                                                           3 
     ##                                                                                      Urban  
     ##                                                                                           3 
-    ##                                                                                       Rural 
+    ##                                                                                        both 
     ##                                                                                           4 
+    ##                                                                                       Rural 
+    ##                                                                                           5 
     ##                                                                                        Both 
     ##                                                                                           8 
     ##                                                                                       urban 
-    ##                                                                                          36 
+    ##                                                                                          38 
     ##                                                                                       Urban 
-    ##                                                                                          49
+    ##                                                                                          51
 
 ``` r
 rururbClean<-factor(rep(NA,nrow(extract)),levels=c("Urban","Rural","Both","Not given"))
@@ -573,6 +588,8 @@ table(extract$urban.vs.rural[is.na(rururbClean)])
 ```
 
     ## 
+    ##                                                                                          ND 
+    ##                                                                                           1 
     ## one was located in a small coastal village and the other situated in a town further inland. 
     ##                                                                                           1 
     ##                                                     school that is located close to the sea 
@@ -588,7 +605,7 @@ table(rururbClean,useNA="ifany")
 
     ## rururbClean
     ##     Urban     Rural      Both Not given      <NA> 
-    ##        88         5        16         0        38
+    ##        92         6        17         0        38
 
 ``` r
 rururbClean[is.na(rururbClean)]<-"Not given"
@@ -605,14 +622,14 @@ sort(table(extract$TARGETED.SAMPLE,useNA="ifany"),decreasing=T)
 ```
 
     ## 
-    ##                students    Entourage (Teachers)    pre-service teachers 
-    ##                     111                      16                       9 
-    ##     Entourage (parents)   students and teachers                Students 
-    ##                       4                       2                       1 
-    ##    students and parents   students and Teachers students from 7th grade 
-    ##                       1                       1                       1 
-    ##                    <NA> 
-    ##                       1
+    ##              students  Entourage (Teachers)  pre-service teachers 
+    ##                   114                    16                     9 
+    ##              Students   Entourage (parents)               parents 
+    ##                     5                     4                     1 
+    ## students and teachers    students; teachers              teachers 
+    ##                     1                     1                     1 
+    ## Teachers and students 
+    ##                     1
 
 ``` r
 #For student ages
@@ -651,16 +668,16 @@ extract$age_min[extract$student]
 
     ##   [1] NA     "13.0" NA     "16.0" NA     "11.0" NA     NA     NA     NA    
     ##  [11] NA     NA     NA     "15.0" NA     "13.0" NA     NA     "13.0" "14.0"
-    ##  [21] NA     NA     NA     NA     NA     "15.0" "15.0" "15.0" NA     NA    
-    ##  [31] NA     "7.0"  "13.0" NA     "10.0" "10.0" NA     NA     NA     "11.0"
-    ##  [41] "13.0" "16.0" NA     "12.0" "9.0"  "11.0" "9.0"  "9.0"  "13.0" "16.0"
-    ##  [51] "10.0" "11.0" NA     "12.0" "10.0" NA     NA     NA     "16.0" NA    
-    ##  [61] NA     "14.0" "17.0" "15.0" NA     NA     NA     NA     "13.0" "ND"  
-    ##  [71] NA     "11.0" "15.0" "13.0" "10.0" NA     NA     NA     NA     "15.0"
-    ##  [81] NA     "11.0" NA     NA     "10.0" "10.0" NA     "16.0" "16.0" NA    
-    ##  [91] NA     "10.0" "15.0" NA     "10.0" NA     "8.0"  NA     "16.0" "12.0"
-    ## [101] NA     NA     NA     "17.0" "16.0" "12.0" "11.0" NA     "16.0" "15.0"
-    ## [111] "15.0" NA
+    ##  [21] NA     NA     NA     NA     NA     NA     "15.0" "15.0" "15.0" NA    
+    ##  [31] NA     NA     "7.0"  "13.0" "14.0" NA     "10.0" "10.0" NA     NA    
+    ##  [41] NA     "11.0" "13.0" "16.0" NA     "12.0" "9.0"  "11.0" "9.0"  "9.0" 
+    ##  [51] "13.0" "16.0" "10.0" "11.0" NA     "12.0" "10.0" NA     NA     "16.0"
+    ##  [61] NA     NA     "14.0" "17.0" "15.0" NA     NA     NA     NA     "13.0"
+    ##  [71] "ND"   NA     "11.0" "15.0" "13.0" "10.0" NA     NA     NA     NA    
+    ##  [81] "15.0" NA     "11.0" NA     NA     "13.0" NA     "10.0" "10.0" NA    
+    ##  [91] "16.0" "16.0" NA     NA     "10.0" "15.0" NA     "10.0" NA     "8.0" 
+    ## [101] NA     "16.0" "12.0" NA     NA     NA     "17.0" "16.0" "12.0" "11.0"
+    ## [111] NA     "16.0" "15.0" "15.0" NA     "11.0" "17.0" "14.0" NA
 
 ``` r
 extract$age_max[extract$student]
@@ -671,24 +688,25 @@ extract$age_max[extract$student]
     ##  [11] NA             NA             NA             "16.0"         NA            
     ##  [16] "16.0"         NA             NA             "14.0"         "15.0"        
     ##  [21] NA             "16.0"         NA             NA             NA            
-    ##  [26] "18.0"         "19.0"         "16.0"         NA             NA            
-    ##  [31] NA             "9.0"          "15.0"         NA             "11.0"        
-    ##  [36] "11.0"         NA             NA             NA             "15.0"        
-    ##  [41] "14.0"         "18.0"         NA             "17.0"         "14.0"        
-    ##  [46] "14.0"         "17.0"         "10.0"         "14.0"         "19.0"        
-    ##  [51] "11.0"         "14.0"         NA             "17.0"         "12.0"        
-    ##  [56] NA             NA             NA             "17.0"         NA            
-    ##  [61] NA             "17.0"         "18.0"         "18.0"         NA            
-    ##  [66] NA             NA             NA             "16.0"         "ND"          
-    ##  [71] NA             "16.0"         "19.0"         "15.0"         "12.0"        
-    ##  [76] NA             NA             NA             NA             "16.0"        
-    ##  [81] NA             "12.0"         NA             NA             "12.0"        
-    ##  [86] "12.0"         NA             "18.0"         "16.0"         NA            
-    ##  [91] NA             "13.0"         "17.0"         NA             "19.0"        
-    ##  [96] NA             "12.0"         NA             "17.0"         "13.0"        
-    ## [101] NA             NA             NA             "17.0"         "17.0"        
-    ## [106] "15.0"         "15 and older" NA             "18.0"         "19.0"        
-    ## [111] "16.0"         NA
+    ##  [26] NA             "18.0"         "19.0"         "16.0"         NA            
+    ##  [31] NA             NA             "9.0"          "15.0"         "18.0"        
+    ##  [36] NA             "11.0"         "11.0"         NA             NA            
+    ##  [41] NA             "15.0"         "14.0"         "18.0"         NA            
+    ##  [46] "17.0"         "14.0"         "14.0"         "17.0"         "10.0"        
+    ##  [51] "14.0"         "19.0"         "11.0"         "14.0"         NA            
+    ##  [56] "17.0"         "12.0"         NA             NA             "17.0"        
+    ##  [61] NA             NA             "17.0"         "18.0"         "18.0"        
+    ##  [66] NA             NA             NA             NA             "16.0"        
+    ##  [71] "ND"           NA             "16.0"         "19.0"         "15.0"        
+    ##  [76] "12.0"         NA             NA             NA             NA            
+    ##  [81] "16.0"         NA             "12.0"         NA             NA            
+    ##  [86] "18.0"         NA             "12.0"         "12.0"         NA            
+    ##  [91] "18.0"         "16.0"         NA             NA             "13.0"        
+    ##  [96] "17.0"         NA             "19.0"         NA             "12.0"        
+    ## [101] NA             "17.0"         "13.0"         NA             NA            
+    ## [106] NA             "17.0"         "17.0"         "15.0"         "15 and older"
+    ## [111] NA             "18.0"         "19.0"         "16.0"         NA            
+    ## [116] "14.0"         "17.0"         "18.0"         NA
 
 ``` r
 extract$mean.age[extract$student]
@@ -697,17 +715,18 @@ extract$mean.age[extract$student]
     ##   [1] "17.68 " NA       NA       NA       NA       NA       NA       NA      
     ##   [9] NA       NA       NA       NA       NA       NA       NA       NA      
     ##  [17] NA       NA       NA       NA       NA       "16.0"   NA       NA      
-    ##  [25] NA       "17.0"   NA       NA       NA       NA       NA       NA      
-    ##  [33] NA       NA       NA       NA       "14.0"   "17.16"  NA       NA      
+    ##  [25] NA       NA       "17.0"   NA       NA       NA       NA       NA      
+    ##  [33] NA       NA       NA       NA       NA       NA       "14.0"   "17.16" 
     ##  [41] NA       NA       NA       NA       NA       NA       NA       NA      
-    ##  [49] NA       NA       NA       NA       NA       NA       "11.1"   "10.5"  
-    ##  [57] NA       "13.5"   NA       "13.5"   "12.5"   "15.55"  NA       NA      
-    ##  [65] NA       "13.2"   NA       NA       "15.5"   NA       "14.0"   NA      
+    ##  [49] NA       NA       NA       NA       NA       NA       NA       NA      
+    ##  [57] "11.1"   "10.5"   "13.5"   NA       "13.5"   "12.5"   "15.55"  NA      
+    ##  [65] NA       NA       "13.2"   NA       NA       "15.5"   NA       "14.0"  
     ##  [73] NA       NA       NA       NA       NA       NA       NA       NA      
-    ##  [81] NA       NA       "14.0"   NA       "11.1"   "11.1"   "11.0"   " "     
-    ##  [89] "16.0"   NA       NA       NA       "16.0"   NA       NA       NA      
-    ##  [97] NA       NA       NA       NA       NA       NA       NA       "17.0"  
-    ## [105] NA       NA       NA       NA       NA       NA       "ND"     NA
+    ##  [81] NA       NA       NA       "14.0"   NA       NA       NA       "11.1"  
+    ##  [89] "11.1"   "11.0"   " "      "16.0"   NA       NA       NA       "16.0"  
+    ##  [97] NA       NA       NA       NA       NA       NA       NA       NA      
+    ## [105] NA       NA       "17.0"   NA       NA       NA       NA       NA      
+    ## [113] NA       "ND"     NA       NA       "17.0"   NA       NA
 
 ``` r
 extract$age_min_stud<-NA
@@ -747,7 +766,7 @@ table(extract$age_stud_type_info[extract$student],useNA = "always")
 
     ## 
     ##    all   mean minmax   <NA> 
-    ##      9     11     46     46
+    ##     10     11     50     48
 
 ``` r
 age_order<- rep(NA,sum(!is.na(extract$age_stud_type_info)))
@@ -756,9 +775,9 @@ age_order[extract$age_stud_type_info[!is.na(extract$age_stud_type_info)]%in%c("m
 order(age_order)
 ```
 
-    ##  [1] 12 25 58 14 15 28 32 46 52 31 50 51 22 48 55 23 29 36 60 18 24 40  7 19 26
-    ## [26] 33 35 43 63 13 16 42 45 49  4  6  8 21 30 57  2  5 11 41 47 66 37 54 56 34
-    ## [51] 39 59 62  3  9 10 20 44 53 61 64 65 17 27 38  1
+    ##  [1] 12 26 60 15 16 29 33 47 54 32 52 53 23 49 57 24 30 37 62 69 19 25 41  7 20
+    ## [26] 27 34 36 44 65 13 17 43 46 50  4  6  8 22 31 59  2  5 11 42 48 51 68 38 14
+    ## [51] 56 58 71 35 40 61 64  3  9 10 21 45 55 63 66 67 70 18 28 39  1
 
 ``` r
 tabForPlot<-extract[!is.na(extract$age_stud_type_info),c("age_min_stud","age_max_stud","age_aver_stud","age_stud_no_info","age_stud_type_info")][order(age_order),]
@@ -773,6 +792,15 @@ points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")
 
 ``` r
 extract[is.na(extract[,"age_stud_type_info"])&!is.na(as.numeric(extract$Age_min.from.grade.))&!is.na(as.numeric(extract$Age_max.from.grade)),"age_stud_type_info"]<-"minmaxFromGrade"
+```
+
+    ## Warning in `[<-.data.frame`(`*tmp*`, is.na(extract[, "age_stud_type_info"]) & :
+    ## NAs introduced by coercion
+
+    ## Warning in `[<-.data.frame`(`*tmp*`, is.na(extract[, "age_stud_type_info"]) & :
+    ## NAs introduced by coercion
+
+``` r
 tabForPlot<-rbind(
   tabForPlot,
   data.frame(age_min_stud=as.numeric(extract$Age_min.from.grade.[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
@@ -790,14 +818,14 @@ age_order[tabForPlot$age_stud_type_info[!is.na(tabForPlot$age_stud_type_info)]%i
 order(age_order)
 ```
 
-    ##   [1] 124   1  85 102 105  67  96   2   3   4   5   6   7  91   8   9  89  92
-    ##  [19]  10  11  12  13  14  15 109 110 111 113 122  73  74  75  76  82  84  86
-    ##  [37]  87  94 106 115 116  16  17  18  19  77  81 118 126 127 128  20  21  22
-    ##  [55]  23  24  25  26  27  28  29  80  90  93  99 100 121  30  31  32  33  34
-    ##  [73] 123  35  36  37  38  39  40  79  97  98 125  41  69  70  72  42  43  44
-    ##  [91]  45  46  78  83  88 103 104 114  47  48  49  68  95 101 107 112 117 119
-    ## [109]  50  51  52  53  71  54  55  56  57  58  59  60  61  62 108 120 129  63
-    ## [127]  64  65  66
+    ##   [1] 130   1  91 108 111  72 102   2   3   4   5   6   7  97   8   9  87  95
+    ##  [19]  98  10  11  12  13  14  15 115 116 117 119 120 128  78  79  80  81  88
+    ##  [37]  90  92  93 100 112 122 123  16  17  18  19  20  82  86 125 132 133 134
+    ##  [55]  21  22  23  24  25  26  27  28  29  30  85  96  99 105 106  31  32  33
+    ##  [73]  34  35 129  36  37  38  39  40  41  84 103 104 131  42  74  75  77  43
+    ##  [91]  44  45  46  47  48  83  89  94 109 110 121  49  50  51  52  53  73 101
+    ## [109] 107 113 118 124 126  54  55  56  57  76  58  59  60  61  62  63  64  65
+    ## [127]  66  67 114 127 135  68  69  70  71
 
 ``` r
 tabForPlot<-tabForPlot[order(age_order),]
@@ -825,7 +853,7 @@ table(extract$Controversy,useNA="always")
 
     ## 
     ##   no   No   NO  no   yes  Yes <NA> 
-    ##   29   80    3    1    5   26    3
+    ##   31   79    4    1    5   30    3
 
 ``` r
 extract$controv_clean<-NA
@@ -837,7 +865,7 @@ table(extract$controv_clean,useNA="ifany")
 
     ## 
     ##   No  Yes <NA> 
-    ##  113   31    3
+    ##  115   35    3
 
 ``` r
 controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
@@ -852,13 +880,13 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##   Australia                 3   0    0
     ##   Austria                   5   1    0
     ##   Bangladesh                1   0    0
-    ##   Belgium                   1   0    0
+    ##   Belgium                   0   1    0
     ##   Brazil                    2   0    0
     ##   Canada                    5   0    0
     ##   China                     4   0    0
     ##   Czechia                   1   0    0
     ##   Denmark                   2   0    0
-    ##   Finland                   3   0    0
+    ##   Finland                   2   1    0
     ##   France                    1   0    0
     ##   Germany                   6   0    1
     ##   Greece                    1   0    0
@@ -867,7 +895,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##   Japan                     1   0    0
     ##   Malaysia                  3   0    0
     ##   Mexico                    1   0    0
-    ##   Multiple                  5   3    0
+    ##   Multiple                  6   3    0
     ##   New Zealand               1   0    0
     ##   Norway                    2   0    0
     ##   Portugal                  1   0    0
@@ -880,7 +908,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##   Thailand                  2   0    0
     ##   Turkey                   10   0    0
     ##   United Kingdom            4   0    0
-    ##   United States of America 33  22    1
+    ##   United States of America 34  24    1
     ##   <NA>                      0   1    0
 
 ``` r
@@ -890,17 +918,17 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##                Australia                  Austria               Bangladesh 
     ##                0.0000000                0.1666667                0.0000000 
     ##                  Belgium                   Brazil                   Canada 
-    ##                0.0000000                0.0000000                0.0000000 
+    ##                1.0000000                0.0000000                0.0000000 
     ##                    China                  Czechia                  Denmark 
     ##                0.0000000                0.0000000                0.0000000 
     ##                  Finland                   France                  Germany 
-    ##                0.0000000                0.0000000                0.0000000 
+    ##                0.3333333                0.0000000                0.0000000 
     ##                   Greece                Indonesia                    Italy 
     ##                0.0000000                0.0000000                0.6666667 
     ##                    Japan                 Malaysia                   Mexico 
     ##                0.0000000                0.0000000                0.0000000 
     ##                 Multiple              New Zealand                   Norway 
-    ##                0.3750000                0.0000000                0.0000000 
+    ##                0.3333333                0.0000000                0.0000000 
     ##                 Portugal             South Africa              South Korea 
     ##                0.0000000                0.0000000                0.0000000 
     ##                    Spain                   Sweden              Switzerland 
@@ -908,7 +936,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##                   Taiwan                 Thailand                   Turkey 
     ##                0.0000000                0.0000000                0.0000000 
     ##           United Kingdom United States of America                     <NA> 
-    ##                0.0000000                0.3928571                1.0000000
+    ##                0.0000000                0.4067797                1.0000000
 
 ``` r
 barplot(PercentageControversy,las=2)
@@ -920,19 +948,19 @@ barplot(PercentageControversy,las=2)
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
 ```
 
-    ## [1] 0.7586207
+    ## [1] 0.7272727
 
 ``` r
 sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)/length(countryDoc)
 ```
 
-    ## [1] 0.3943662
+    ## [1] 0.4041096
 
 ``` r
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(countryDoc[names(controvByDoc)]=="United States of America",na.rm=T)
 ```
 
-    ## [1] 0.3928571
+    ## [1] 0.4067797
 
 ``` r
 par(mar=c(11,4,1,1))
@@ -948,8 +976,8 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 ```
 
     ## 
-    ## Adaptation       Both Mitigation    Neither       <NA> 
-    ## 0.03401361 0.27210884 0.61224490 0.04081633 0.04081633
+    ##  Adaptation        Both  mitigation  Mitigation     Neither        <NA> 
+    ## 0.032679739 0.267973856 0.006535948 0.620915033 0.039215686 0.032679739
 
 ``` r
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
@@ -964,12 +992,12 @@ sort(table(extract$Disciplin_2))
 ```
 
     ## 
-    ##            Other  Social Sciences  Social sciences            STEAM 
+    ##            Other  Social Sciences          Science  Social sciences 
     ##                1                1                2                2 
-    ##        Education             STEM            Mixed              NA  
-    ##                3                8               13               18 
-    ## Natural Sciences 
-    ##               70
+    ##            STEAM        Education             STEM            Mixed 
+    ##                2                3                8               15 
+    ##              NA  Natural Sciences 
+    ##               18               70
 
 ``` r
 disciplineClean<- extract$Disciplin_2
@@ -1033,17 +1061,17 @@ NA
 </td>
 <td style="text-align:left;">
 
-Baker2013, Bentz2020, Bozdogan2011, Chang2018, Feierabend2012,
-Holthuis2014, Kinsey2012, Lambert2012, Lombardi2013,
-Nicholas_Figueroa2017, Petersen2020, Salas_Rueda2021, Schubatzky2022,
-Sellmann2013, Shea2016, Steffensen2022, Taber2009, Varma2012,
-Williams2017, Korfgen2017, Cebesoy2019, Dormody2020, Kolenaty2022,
-Kumar2023, Mason1998, Feldpausch_Parker2013, Roscoe2013, Raes2016,
-McGowan2022, Klosterman2010, Saribaş2016 , Reinfried2012, Sellmann2013a,
-Sternang2012, Sutela2023, Stevenson2018a, Xie2014, Trott2019, Trott2022,
-Markowitz2018, Zhong2021, Harker_Schuch2013, Harker_Schuch2020,
-Lambert2013, Littrell2022, Skains2022, Stevenson2018, Sukardi2022,
-Pekel2019, NA, Nussbaum2015
+Baker2013, Bentz2020, Bozdogan2011, Chang2018, Holthuis2014, Kinsey2012,
+Lambert2012, Lombardi2013, Nicholas_Figueroa2017, Petersen2020,
+Puttick2018, Salas_Rueda2021, Schubatzky2022, Sellmann2013, Shea2016,
+Steffensen2022, Taber2009, Varma2012, Williams2017, Korfgen2017,
+Cebesoy2019, Dormody2020, Kolenaty2022, Kumar2023, Mason1998,
+Feldpausch_Parker2013, Roscoe2013, Raes2016, McGowan2022,
+Klosterman2010, Saribaş2016 , Reinfried2012, Sellmann2013a,
+Sternang2012, Sutela2023, Stevenson2018a, Xie2014, Xie2014, Trott2019,
+Trott2022, Markowitz2018, Zhong2021, Harker_Schuch2013,
+Harker_Schuch2020, Lambert2013, Littrell2022, Skains2022, Stevenson2018,
+Sukardi2022, Pekel2019, Nussbaum2015
 
 </td>
 </tr>
@@ -1078,32 +1106,14 @@ global
 </td>
 <td style="text-align:right;">
 
-12
+14
 
 </td>
 <td style="text-align:left;">
 
 Aksel_Stenberdt2023, Aksut2016, Arya2016, Bhattacharya2021, Boon2016,
 Choi2021, Khadka2021, Monroe2016, Parant2017, Roychoudhury2017,
-Veijalainen2013, Meya2018
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Global
-
-</td>
-<td style="text-align:right;">
-
-10
-
-</td>
-<td style="text-align:left;">
-
-Kubisch2022, da_Rocha2020, Wang2022, Cebesoy2022, Schrot2021a,
-Lawson2019a, Zografakis2008, Tasquier2015, Tasquier2017, Miller 2015
+Gladwin2022, Veijalainen2013, Meya2018, Gutierrez2022
 
 </td>
 </tr>
@@ -1115,13 +1125,33 @@ local
 </td>
 <td style="text-align:right;">
 
-10
+12
 
 </td>
 <td style="text-align:left;">
 
-Bofferding2015, Dormody2021, Lester2006, Liu2015, Nakamura2019,
-Faria2015, Faria2015, Ratinen2013, Breslyn2019, Sellmann2015
+Bofferding2015, Dormody2021, Feierabend2012, Lester2006, Liu2015,
+Nakamura2019, Faria2015, Faria2015, Ratinen2013, Breslyn2019,
+Sellmann2015, Goulah2017
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Global
+
+</td>
+<td style="text-align:right;">
+
+11
+
+</td>
+<td style="text-align:left;">
+
+Kubisch2022, da_Rocha2020, Wang2022, Cebesoy2022, Schrot2021a,
+Zografakis2008, Zografakis2008, Tasquier2015, Tasquier2017, Miller2015,
+Gladwin2022
 
 </td>
 </tr>
@@ -1156,6 +1186,23 @@ both
 <td style="text-align:left;">
 
 DeWaters2014, Porter2012
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Both
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:left;">
+
+Sundberg2013, Lawson2019a
 
 </td>
 </tr>
@@ -1214,40 +1261,6 @@ Muller2021a
 <tr>
 <td style="text-align:left;">
 
-2008 World Health Organization (WHO) manual
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-<td style="text-align:left;">
-
-Kabir2015
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Both
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-<td style="text-align:left;">
-
-Sundberg2013
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 Critical pegagogy
 
 </td>
@@ -1259,6 +1272,23 @@ Critical pegagogy
 <td style="text-align:left;">
 
 Siegner2018
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Education for Climate Action (EfCA)
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Cibik2022
 
 </td>
 </tr>
@@ -1402,6 +1432,26 @@ Keller2019
 <tr>
 <td style="text-align:left;">
 
+In 2008 the South East Asia Regional Office of the World Health
+Organization (WHO) developed a manual for school children to promote a
+child-centred approach to achieve a lifestyle adaptation for reducing
+the health vulnerability.
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Kabir2015
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 local
 
 </td>
@@ -1505,24 +1555,7 @@ Muller2021
 <tr>
 <td style="text-align:left;">
 
-United Nations’ agenda
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-<td style="text-align:left;">
-
-Cibik2022
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-US reform documents
+US science education curriculum frameworks
 
 </td>
 <td style="text-align:right;">
@@ -1547,7 +1580,7 @@ How many include “5:target climate science misconceptions”:
 sum(grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`))
 ```
 
-    ## [1] 36
+    ## [1] 38
 
 Which:
 
@@ -1556,17 +1589,18 @@ extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
 ```
 
     ##  [1] "Bhattacharya2021"  "Schubatzky2022"    "da_Rocha2020"     
-    ##  [4] "Akaygun2021"       "White2022"         "Cebesoy2019"      
-    ##  [7] "Ratinen2013"       "Pruneau2003"       "Karpudewan2015a"  
-    ## [10] "Taylor2020"        "McGowan2022"       "Jin2013"          
-    ## [13] "Kern2017"          "Reinfried2012"     "Sellmann2013a"    
-    ## [16] "Lawson2019a"       "Lawson2019a"       "Walsh2018"        
-    ## [19] "Drewes2018"        "Drewes2018"        "Svihla2012"       
-    ## [22] "Silva2021"         "Markowitz2018"     "Smith2019"        
-    ## [25] "McNeill2012"       "Bodzin2014"        "Harker_Schuch2013"
-    ## [28] "Harker_Schuch2020" "Kabir2015"         "Lambert2013"      
-    ## [31] "Littrell2022"      "Tasquier2015"      "Tasquier2017"     
-    ## [34] "Sellmann2015"      "Pekel2019"         "Nussbaum2015"
+    ##  [4] "Akaygun2021"       "Gold2015a"         "White2022"        
+    ##  [7] "Cebesoy2019"       "Ratinen2013"       "Pruneau2003"      
+    ## [10] "Karpudewan2015a"   "Taylor2020"        "McGowan2022"      
+    ## [13] "Jin2013"           "Kern2017"          "Reinfried2012"    
+    ## [16] "Sellmann2013a"     "Lawson2019a"       "Lawson2019a"      
+    ## [19] "Walsh2018"         "Drewes2018"        "Drewes2018"       
+    ## [22] "Svihla2012"        "Silva2021"         "Markowitz2018"    
+    ## [25] "Smith2019"         "McNeill2012"       "Bodzin2014"       
+    ## [28] "Harker_Schuch2013" "Harker_Schuch2020" "Kabir2015"        
+    ## [31] "Lambert2013"       "Littrell2022"      "Tasquier2015"     
+    ## [34] "Tasquier2017"      "Sellmann2015"      "Pekel2019"        
+    ## [37] "Gutierrez2022"     "Nussbaum2015"
 
 # 11 Theoretical framework
 
@@ -1611,9 +1645,9 @@ sort(table(extract$study.type),decreasing = T)
 
     ## 
     ##  Quantitative  quantitative   Qualitative          Both         Mixed 
-    ##            36            31            29            19            11 
-    ##          both         mixed   qualitative  qualitative  quantitative  
-    ##             4             4             4             4             2 
+    ##            36            33            31            19            12 
+    ##   qualitative          both         mixed  qualitative  quantitative  
+    ##             6             5             4             4             2 
     ##            ND 
     ##             1
 
@@ -1626,8 +1660,8 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 ```
 
     ## 
-    ## Quantitative   Both/Mixed  Qualitative         <NA> 
-    ##           69           38           37            3
+    ## Quantitative  Qualitative   Both/Mixed         <NA> 
+    ##           71           41           40            1
 
 ``` r
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
@@ -1642,23 +1676,21 @@ A
 ```
 
     ##                                     Pre-post 
-    ##                                           79 
+    ##                                           82 
+    ##                                   Case study 
+    ##                                            5 
+    ##                                     pre-post 
+    ##                                            5 
     ##                          Pre-post + control  
     ##                                            4 
     ##                            Pre-post + factor 
     ##                                            4 
-    ##                                     pre-post 
-    ##                                            3 
     ##                                    Pre-post  
     ##                                            3 
     ##                           Pre-post + control 
     ##                                            3 
     ##                            Pre-post + during 
     ##                                            3 
-    ##                                   Case study 
-    ##                                            2 
-    ##                           Discourse analysis 
-    ##                                            2 
     ##                          Pre -post + control 
     ##                                            2 
     ##                  Pre-post + control + factor 
@@ -1670,8 +1702,6 @@ A
     ##               Case study, quasi-experimental 
     ##                                            1 
     ##                               cluster random 
-    ##                                            1 
-    ##                           Composing project  
     ##                                            1 
     ##            Computational behavioral patterns 
     ##                                            1 
@@ -1685,11 +1715,13 @@ A
     ##                                            1 
     ## Design was different for each of the 3 o ... 
     ##                                            1 
+    ##                           Discourse analysis 
+    ##                                            1 
+    ## Discourse analysis/Qualitative interpret ... 
+    ##                                            1 
     ##                           Ethnographic study 
     ##                                            1 
     ## Experiment --- The experiment used a 2 D ... 
-    ##                                            1 
-    ##                          Experimental design 
     ##                                            1 
     ##                             Factorial design 
     ##                                            1 
@@ -1697,11 +1729,13 @@ A
     ##                                            1 
     ##                                 Longitudinal 
     ##                                            1 
+    ##                        Mathematical modeling 
+    ##                                            1 
     ##                       Mixed-methods research 
     ##                                            1 
-    ##                Multi-level assessment design 
+    ## Multi-level assessment design with pre-p ... 
     ##                                            1 
-    ##                                           ND 
+    ## Music composing project. Not describe a  ... 
     ##                                            1 
     ## Observational study (they made a compari ... 
     ##                                            1 
@@ -1737,7 +1771,7 @@ A
     ##                                            1 
     ## Quasi-experimental design with controlle ... 
     ##                                            1 
-    ##                                          RCT 
+    ## Randomized Control Trial with 2 experime ... 
     ##                                            1 
     ##         Systematic phenomenological analysis 
     ##                                            1
@@ -1753,8 +1787,7 @@ extract$`Pre/Post`[!extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","V
     ## [4] "FALSE - Only post!!"                                                                                         
     ## [5] "True (but there is no info on when the pre and post measures were taken)"                                    
     ## [6] "See previous cell"                                                                                           
-    ## [7] NA                                                                                                            
-    ## [8] NA
+    ## [7] NA
 
 ``` r
 extract$prepostClean[extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","VERDADERO","Verdadero","Yes","yes","YES")]<-T
@@ -1783,9 +1816,8 @@ extract$design[desPrePost&designClean==""]
 table(extract$design[!desPrePost])[table(extract$design[!desPrePost])>1]
 ```
 
-    ## 
-    ##         Case study Discourse analysis 
-    ##                  2                  2
+    ## Case study 
+    ##          5
 
 ``` r
 designClean[designClean==""&grepl("case study",extract$design,ignore.case = T)]<-"Case study"
@@ -1834,74 +1866,83 @@ extract$Total.duration.of.the.intervention
     ##   [7] NA         NA         "28h"      NA         NA         NA        
     ##  [13] NA         "5h"       NA         NA         NA         NA        
     ##  [19] NA         NA         "24h"      NA         "1h30min"  "2h35min" 
-    ##  [25] "50min"    NA         "1h40min"  "50min"    NA         NA        
-    ##  [31] "2h30min"  NA         NA         NA         NA         NA        
-    ##  [37] NA         NA         NA         NA         "~35h"     "~14h"    
-    ##  [43] NA         "~21h"     "12h30min" "12h"      NA         NA        
-    ##  [49] "~21h"     "6h"       NA         "8h30min"  "1h"       NA        
-    ##  [55] "2h15min"  NA         "5h"       "~14h"     NA         "2h30min" 
-    ##  [61] "~1h30"    NA         NA         "20h"      "32H"      "40min"   
-    ##  [67] "45min"    "50min"    "~50h"     "15h"      NA         NA        
-    ##  [73] NA         NA         NA         "10h"      NA         NA        
-    ##  [79] "3h40min"  "15h"      "30h"      "80h"      NA         "~4h"     
-    ##  [85] NA         "15h"      NA         NA         NA         "1h"      
-    ##  [91] NA         "1H15min"  NA         "8H"       "150h"     "~20h"    
-    ##  [97] "5h30min"  NA         NA         "40h"      NA         "6h"      
-    ## [103] "60h"      NA         "~2h"      "40h"      "10min"    "~10h"    
-    ## [109] "4h"       "8h"       NA         NA         NA         NA        
-    ## [115] "~7h30min" NA         NA         "12h"      NA         NA        
-    ## [121] "1h"       NA         NA         NA         NA         NA        
-    ## [127] NA         NA         "8h"       "45min"    "50min"    "20h"     
-    ## [133] NA         NA         NA         NA         "15h"      "~42h"    
-    ## [139] "3h"       NA         NA         NA         "~14h"     "4h"      
-    ## [145] NA         NA         NA
+    ##  [25] "50min"    NA         "1h40min"  "50min"    NA         "2h"      
+    ##  [31] NA         "2h30min"  NA         NA         NA         NA        
+    ##  [37] NA         NA         NA         NA         NA         NA        
+    ##  [43] "~35h"     "~14h"     NA         "~21h"     "12h30min" "12h"     
+    ##  [49] "~7h"      NA         "~21h"     "6h"       NA         "8h30min" 
+    ##  [55] "1h"       NA         "2h15min"  "6h"       "5h"       "~14h"    
+    ##  [61] NA         "2h30min"  "~1h30"    NA         NA         "20h"     
+    ##  [67] "32H"      "40min"    "45min"    "50min"    "~50h"     "15h"     
+    ##  [73] NA         NA         NA         NA         "20h"      "10h"     
+    ##  [79] NA         "~15h"     "3h40min"  "15h"      "30h"      "~80h"    
+    ##  [85] NA         "~4h"      NA         "15h"      NA         NA        
+    ##  [91] NA         "1h"       NA         "1H15min"  NA         "~8H"     
+    ##  [97] "150h"     "~20h"     "5h30min"  NA         NA         "40h"     
+    ## [103] "~30h"     "~6h"      "60h"      NA         "~2h"      "40h"     
+    ## [109] "10min"    "~10h"     "4h"       "~8h"      "~8h"      NA        
+    ## [115] NA         NA         NA         NA         "~7h30min" NA        
+    ## [121] NA         "12h"      NA         NA         "1h"       NA        
+    ## [127] NA         NA         "~22.5 h"  "ND"       "ND"       NA        
+    ## [133] "8h"       "45min"    "50min"    "~18h"     "ND"       NA        
+    ## [139] NA         NA         "15h"      "~42h"     "~3h"      NA        
+    ## [145] NA         NA         "~14h"     "4h"       "~20h"     "6h"      
+    ## [151] NA         NA         "50min"
 
 ``` r
 extract$Period.length
 ```
 
-    ##   [1] NA       NA       "2M"     NA       "5M"     "21D"    "1Y"     NA      
+    ##   [1] "1H"     NA       "2M"     NA       "5M"     "21D"    "1Y"     NA      
     ##   [9] "4M"     NA       NA       NA       "1Y"     NA       NA       "1Y"    
-    ##  [17] NA       "1Y"     "1Y"     NA       NA       NA       NA       NA      
-    ##  [25] NA       "14D"    "2H"     "1H"     "14D"    "2M21D"  NA       "1D"    
-    ##  [33] "1D"     "1D"     "1D"     "1D"     "7D"     "7D"     "7D"     "5D"    
-    ##  [41] "5D"     "2D"     "6M"     "3D"     "2M"     NA       "1D"     NA      
-    ##  [49] "3D"     NA       "2M"     "1Y"     "14D"    NA       "1M"     "1D"    
-    ##  [57] NA       "2D"     "1Y"     "~7M"    "~2H"    "2M"     "1D"     "10M"   
-    ##  [65] "4D"     "1H"     "1H"     "1H"     "7D"     "4M"     "5M"     "5M"    
-    ##  [73] NA       NA       NA       "1M5D"   "3M"     "1M"     "1M"     "5D"    
-    ##  [81] "1Y"     "2M14D"  "11M"    "2D"     NA       "20D"    NA       "~3M"   
-    ##  [89] "3Y"     "1H"     "1M20D"  "2H"     "1Y"     "8H"     "1Y"     "4M"    
-    ##  [97] "14D"    "2Y"     "2Y"     "1M14D"  NA       "1M14D"  "1Y"     NA      
-    ## [105] "2H"     "3M"     "1H"     NA       "7D"     "8H"     "1Y"     "5M"    
-    ## [113] "3M13D"  "3M13D"  "1M7D"   "~2M"    "1M20D"  "1M14D"  NA       NA      
-    ## [121] "2D"     NA       NA       "1Y"     "~1M14D" "20D"    "2M"     NA      
-    ## [129] "1M"     "1H"     "1H"     "6M"     "5M"     NA       NA       "1M14D" 
-    ## [137] "1M7D"   "16D"    NA       "6M"     NA       NA       "2D"     "14D"   
-    ## [145] "1M"     NA       NA
+    ##  [17] "7D"     "1Y"     "1Y"     "7D"     "3M"     "2D"     NA       NA      
+    ##  [25] NA       "14D"    "2H"     "1H"     "14D"    "4D"     "2M21D"  NA      
+    ##  [33] "1D"     "1D"     "1D"     "1D"     "1D"     "7D"     "7D"     "7D"    
+    ##  [41] "5D"     "7M"     "5D"     "2D"     "6M"     "3D"     "2M"     NA      
+    ##  [49] "1D"     NA       "3D"     NA       "2M"     "1Y"     "14D"    NA      
+    ##  [57] "1M"     "~1D"    NA       "2D"     "1Y"     "~7M"    "~2H"    "2M"    
+    ##  [65] "1D"     "10M"    "4D"     "1H"     "1H"     "1H"     "7D"     "4M"    
+    ##  [73] "5M"     "5M"     "1Y"     NA       "4D"     "1M5D"   "3M"     "~1M"   
+    ##  [81] "1M"     "5D"     "1Y"     "2M14D"  "11M"    "2D"     "~1Y"    "20D"   
+    ##  [89] NA       "~3M"    "3Y"     "1H"     "1M20D"  "2H"     "1Y"     "~8H"   
+    ##  [97] "1Y"     "4M"     "14D"    "2Y"     "2Y"     "1M14D"  "7D"     "1M14D" 
+    ## [105] "1Y"     NA       "2H"     "3M"     "1H"     NA       "~5D"    "1D"    
+    ## [113] "1D"     "1Y"     "1Y"     "5M"     "3M13D"  "3M13D"  "1M7D"   "~2M"   
+    ## [121] "1M20D"  "1M14D"  NA       NA       "2D"     NA       NA       "1Y"    
+    ## [129] "~1M14D" "20D"    "2M"     NA       "1M"     "1H"     "1H"     "6M"    
+    ## [137] "4M"     NA       NA       "1M14D"  "1M7D"   "16D"    NA       "6M"    
+    ## [145] NA       NA       "2D"     "14D"    "1M"     "2M"     "49D"    "7M"    
+    ## [153] "3D"
 
 ``` r
 extract$Number.of.sessions
 ```
 
-    ##   [1] NA     NA     NA     "3.0"  NA     NA     NA     NA     "14.0" NA    
+    ##   [1] "1.0"  "1.0"  "8.0"  "3.0"  NA     NA     NA     NA     "14.0" NA    
     ##  [11] "5.0"  NA     NA     "6.0"  NA     NA     NA     NA     NA     NA    
-    ##  [21] "12.0" NA     "2.0"  "2.0"  NA     NA     "1.0"  "1.0"  NA     NA    
-    ##  [31] "3.0"  NA     NA     NA     NA     NA     NA     NA     NA     NA    
-    ##  [41] "10.0" "4.0"  "6.0"  "6.0"  "15.0" "6.0"  NA     NA     NA     "4.0" 
-    ##  [51] NA     "5.0"  "4.0"  "4.0"  "3.0"  NA     "6.0"  NA     NA     "5.0" 
-    ##  [61] "1.0"  NA     NA     "~10"  "~4"   "1.0"  "1.0"  "1.0"  "7.0"  "15.0"
-    ##  [71] "~40"  "~40"  NA     NA     NA     "5.0"  NA     NA     "4.0"  "5.0" 
-    ##  [81] "20.0" "5.0"  NA     "2.0"  NA     "7.0"  NA     NA     NA     "1.0" 
-    ##  [91] NA     "1.0"  NA     "1.0"  NA     "15.0" "2.0"  NA     NA     NA    
-    ## [101] NA     "6.0"  "~20"  NA     "1.0"  NA     "1.0"  "5.0"  "4.0"  "1.0" 
-    ## [111] NA     NA     NA     NA     "5.0"  NA     NA     "6.0"  NA     NA    
-    ## [121] "2.0"  "12.0" NA     NA     "11.0" NA     NA     NA     "4.0"  "1.0" 
-    ## [131] "1.0"  "26.0" NA     NA     NA     NA     "5.0"  "6.0"  NA     NA    
-    ## [141] NA     "5.0"  "2.0"  "6.0"  NA     NA     NA
+    ##  [21] "12.0" NA     "2.0"  "2.0"  NA     NA     "1.0"  "1.0"  NA     "4.0" 
+    ##  [31] NA     "3.0"  NA     NA     NA     NA     NA     NA     NA     NA    
+    ##  [41] NA     NA     "10.0" "4.0"  "6.0"  "6.0"  "15.0" "6.0"  "1.0"  NA    
+    ##  [51] "~3"   "4.0"  NA     "5.0"  "4.0"  "4.0"  "3.0"  "~1"   "6.0"  "2.0" 
+    ##  [61] NA     "5.0"  "1.0"  NA     NA     "10.0" "~4"   "1.0"  "1.0"  "1.0" 
+    ##  [71] "7.0"  "15.0" "~40"  "~40"  NA     NA     "24.0" "5.0"  NA     "8.0" 
+    ##  [81] "4.0"  "5.0"  "20.0" "5.0"  NA     "2.0"  NA     "7.0"  NA     NA    
+    ##  [91] NA     "1.0"  NA     "1.0"  NA     "1.0"  NA     "15.0" "2.0"  NA    
+    ## [101] NA     NA     "~10"  "6.0"  "~20"  NA     "1.0"  NA     "1.0"  "5.0" 
+    ## [111] "4.0"  "1.0"  "1.0"  NA     NA     NA     NA     NA     "~5"   NA    
+    ## [121] NA     "6.0"  NA     NA     "2.0"  "12.0" NA     NA     "11.0" "20.0"
+    ## [131] "ND"   NA     "4.0"  "1.0"  "1.0"  "24.0" "ND"   NA     NA     NA    
+    ## [141] "5.0"  "6.0"  NA     NA     NA     "5.0"  "2.0"  "6.0"  "~10"  "3.0" 
+    ## [151] "~35"  NA     "2.0"
 
 ``` r
 hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number of sessions", ylab="Number of studies",nclass=50)
+```
+
+    ## Warning in hist(as.integer(gsub("^~", "", extract$Number.of.sessions)), : NAs
+    ## introduced by coercion
+
+``` r
 legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
 ```
 
@@ -1915,27 +1956,28 @@ extract$Total.duration.of.the.intervention
     ##   [7] NA         NA         "28h"      NA         NA         NA        
     ##  [13] NA         "5h"       NA         NA         NA         NA        
     ##  [19] NA         NA         "24h"      NA         "1h30min"  "2h35min" 
-    ##  [25] "50min"    NA         "1h40min"  "50min"    NA         NA        
-    ##  [31] "2h30min"  NA         NA         NA         NA         NA        
-    ##  [37] NA         NA         NA         NA         "~35h"     "~14h"    
-    ##  [43] NA         "~21h"     "12h30min" "12h"      NA         NA        
-    ##  [49] "~21h"     "6h"       NA         "8h30min"  "1h"       NA        
-    ##  [55] "2h15min"  NA         "5h"       "~14h"     NA         "2h30min" 
-    ##  [61] "~1h30"    NA         NA         "20h"      "32H"      "40min"   
-    ##  [67] "45min"    "50min"    "~50h"     "15h"      NA         NA        
-    ##  [73] NA         NA         NA         "10h"      NA         NA        
-    ##  [79] "3h40min"  "15h"      "30h"      "80h"      NA         "~4h"     
-    ##  [85] NA         "15h"      NA         NA         NA         "1h"      
-    ##  [91] NA         "1H15min"  NA         "8H"       "150h"     "~20h"    
-    ##  [97] "5h30min"  NA         NA         "40h"      NA         "6h"      
-    ## [103] "60h"      NA         "~2h"      "40h"      "10min"    "~10h"    
-    ## [109] "4h"       "8h"       NA         NA         NA         NA        
-    ## [115] "~7h30min" NA         NA         "12h"      NA         NA        
-    ## [121] "1h"       NA         NA         NA         NA         NA        
-    ## [127] NA         NA         "8h"       "45min"    "50min"    "20h"     
-    ## [133] NA         NA         NA         NA         "15h"      "~42h"    
-    ## [139] "3h"       NA         NA         NA         "~14h"     "4h"      
-    ## [145] NA         NA         NA
+    ##  [25] "50min"    NA         "1h40min"  "50min"    NA         "2h"      
+    ##  [31] NA         "2h30min"  NA         NA         NA         NA        
+    ##  [37] NA         NA         NA         NA         NA         NA        
+    ##  [43] "~35h"     "~14h"     NA         "~21h"     "12h30min" "12h"     
+    ##  [49] "~7h"      NA         "~21h"     "6h"       NA         "8h30min" 
+    ##  [55] "1h"       NA         "2h15min"  "6h"       "5h"       "~14h"    
+    ##  [61] NA         "2h30min"  "~1h30"    NA         NA         "20h"     
+    ##  [67] "32H"      "40min"    "45min"    "50min"    "~50h"     "15h"     
+    ##  [73] NA         NA         NA         NA         "20h"      "10h"     
+    ##  [79] NA         "~15h"     "3h40min"  "15h"      "30h"      "~80h"    
+    ##  [85] NA         "~4h"      NA         "15h"      NA         NA        
+    ##  [91] NA         "1h"       NA         "1H15min"  NA         "~8H"     
+    ##  [97] "150h"     "~20h"     "5h30min"  NA         NA         "40h"     
+    ## [103] "~30h"     "~6h"      "60h"      NA         "~2h"      "40h"     
+    ## [109] "10min"    "~10h"     "4h"       "~8h"      "~8h"      NA        
+    ## [115] NA         NA         NA         NA         "~7h30min" NA        
+    ## [121] NA         "12h"      NA         NA         "1h"       NA        
+    ## [127] NA         NA         "~22.5 h"  "ND"       "ND"       NA        
+    ## [133] "8h"       "45min"    "50min"    "~18h"     "ND"       NA        
+    ## [139] NA         NA         "15h"      "~42h"     "~3h"      NA        
+    ## [145] NA         NA         "~14h"     "4h"       "~20h"     "6h"      
+    ## [151] NA         NA         "50min"
 
 ``` r
 extract$Total.duration.of.the.intervention[!is.na(extract$Total.duration.of.the.intervention)&!grepl("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?",extract$Total.duration.of.the.intervention)]
@@ -1952,6 +1994,15 @@ totalDur<-data.frame(
   h=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\3",extract$Total.duration.of.the.intervention,perl=T)),
   min=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\6",extract$Total.duration.of.the.intervention,perl=T))
 )
+```
+
+    ## Warning in data.frame(id = extract$id, raw =
+    ## extract$Total.duration.of.the.intervention, : NAs introduced by coercion
+
+    ## Warning in data.frame(id = extract$id, raw =
+    ## extract$Total.duration.of.the.intervention, : NAs introduced by coercion
+
+``` r
 totalDur$totalMin=ifelse(totalDur$ND,NA,(60*ifelse(is.na(totalDur$h),0,totalDur$h))+ifelse(is.na(totalDur$min),0,totalDur$min))
 kbl(totalDur[!totalDur$ND,])
 ```
@@ -2422,7 +2473,49 @@ NA
 <tr>
 <td style="text-align:left;">
 
-31
+30
+
+</td>
+<td style="text-align:left;">
+
+Puttick2018
+
+</td>
+<td style="text-align:left;">
+
+2h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+120
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+32
 
 </td>
 <td style="text-align:left;">
@@ -2464,7 +2557,7 @@ FALSE
 <tr>
 <td style="text-align:left;">
 
-41
+43
 
 </td>
 <td style="text-align:left;">
@@ -2506,7 +2599,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-42
+44
 
 </td>
 <td style="text-align:left;">
@@ -2548,7 +2641,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-44
+46
 
 </td>
 <td style="text-align:left;">
@@ -2590,7 +2683,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-45
+47
 
 </td>
 <td style="text-align:left;">
@@ -2632,7 +2725,7 @@ FALSE
 <tr>
 <td style="text-align:left;">
 
-46
+48
 
 </td>
 <td style="text-align:left;">
@@ -2679,6 +2772,48 @@ NA
 </td>
 <td style="text-align:left;">
 
+Gold2015a
+
+</td>
+<td style="text-align:left;">
+
+~7h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+420
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+51
+
+</td>
+<td style="text-align:left;">
+
 White2022
 
 </td>
@@ -2716,7 +2851,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-50
+52
 
 </td>
 <td style="text-align:left;">
@@ -2758,7 +2893,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-52
+54
 
 </td>
 <td style="text-align:left;">
@@ -2800,7 +2935,7 @@ FALSE
 <tr>
 <td style="text-align:left;">
 
-53
+55
 
 </td>
 <td style="text-align:left;">
@@ -2842,7 +2977,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-55
+57
 
 </td>
 <td style="text-align:left;">
@@ -2884,7 +3019,49 @@ FALSE
 <tr>
 <td style="text-align:left;">
 
-57
+58
+
+</td>
+<td style="text-align:left;">
+
+Veijalainen2013
+
+</td>
+<td style="text-align:left;">
+
+6h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+360
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+59
 
 </td>
 <td style="text-align:left;">
@@ -2926,7 +3103,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-58
+60
 
 </td>
 <td style="text-align:left;">
@@ -2968,7 +3145,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-60
+62
 
 </td>
 <td style="text-align:left;">
@@ -3010,7 +3187,7 @@ FALSE
 <tr>
 <td style="text-align:left;">
 
-61
+63
 
 </td>
 <td style="text-align:left;">
@@ -3052,7 +3229,7 @@ FALSE
 <tr>
 <td style="text-align:left;">
 
-64
+66
 
 </td>
 <td style="text-align:left;">
@@ -3094,7 +3271,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-65
+67
 
 </td>
 <td style="text-align:left;">
@@ -3136,7 +3313,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-66
+68
 
 </td>
 <td style="text-align:left;">
@@ -3178,7 +3355,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-67
+69
 
 </td>
 <td style="text-align:left;">
@@ -3220,7 +3397,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-68
+70
 
 </td>
 <td style="text-align:left;">
@@ -3262,7 +3439,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-69
+71
 
 </td>
 <td style="text-align:left;">
@@ -3304,7 +3481,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-70
+72
 
 </td>
 <td style="text-align:left;">
@@ -3346,7 +3523,49 @@ NA
 <tr>
 <td style="text-align:left;">
 
-76
+77
+
+</td>
+<td style="text-align:left;">
+
+Sumrall2021
+
+</td>
+<td style="text-align:left;">
+
+20h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1200
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+78
 
 </td>
 <td style="text-align:left;">
@@ -3388,7 +3607,49 @@ NA
 <tr>
 <td style="text-align:left;">
 
-79
+80
+
+</td>
+<td style="text-align:left;">
+
+Roscoe2013
+
+</td>
+<td style="text-align:left;">
+
+~15h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+900
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+81
 
 </td>
 <td style="text-align:left;">
@@ -3430,7 +3691,7 @@ FALSE
 <tr>
 <td style="text-align:left;">
 
-80
+82
 
 </td>
 <td style="text-align:left;">
@@ -3472,7 +3733,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-81
+83
 
 </td>
 <td style="text-align:left;">
@@ -3514,7 +3775,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-82
+84
 
 </td>
 <td style="text-align:left;">
@@ -3524,7 +3785,7 @@ McGowan2022
 </td>
 <td style="text-align:left;">
 
-80h
+~80h
 
 </td>
 <td style="text-align:left;">
@@ -3534,7 +3795,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -3556,7 +3817,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-84
+86
 
 </td>
 <td style="text-align:left;">
@@ -3598,7 +3859,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-86
+88
 
 </td>
 <td style="text-align:left;">
@@ -3640,7 +3901,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-90
+92
 
 </td>
 <td style="text-align:left;">
@@ -3682,7 +3943,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-92
+94
 
 </td>
 <td style="text-align:left;">
@@ -3724,7 +3985,7 @@ FALSE
 <tr>
 <td style="text-align:left;">
 
-94
+96
 
 </td>
 <td style="text-align:left;">
@@ -3734,7 +3995,7 @@ Sellmann2013a
 </td>
 <td style="text-align:left;">
 
-8H
+~8H
 
 </td>
 <td style="text-align:left;">
@@ -3744,7 +4005,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -3766,7 +4027,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-95
+97
 
 </td>
 <td style="text-align:left;">
@@ -3808,7 +4069,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-96
+98
 
 </td>
 <td style="text-align:left;">
@@ -3850,7 +4111,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-97
+99
 
 </td>
 <td style="text-align:left;">
@@ -3892,7 +4153,7 @@ FALSE
 <tr>
 <td style="text-align:left;">
 
-100
+102
 
 </td>
 <td style="text-align:left;">
@@ -3934,7 +4195,49 @@ NA
 <tr>
 <td style="text-align:left;">
 
-102
+103
+
+</td>
+<td style="text-align:left;">
+
+Schuster2008
+
+</td>
+<td style="text-align:left;">
+
+~30h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1800
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+104
 
 </td>
 <td style="text-align:left;">
@@ -3944,7 +4247,7 @@ Siegner2018
 </td>
 <td style="text-align:left;">
 
-6h
+~6h
 
 </td>
 <td style="text-align:left;">
@@ -3954,7 +4257,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -3976,7 +4279,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-103
+105
 
 </td>
 <td style="text-align:left;">
@@ -4018,7 +4321,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-105
+107
 
 </td>
 <td style="text-align:left;">
@@ -4060,7 +4363,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-106
+108
 
 </td>
 <td style="text-align:left;">
@@ -4102,7 +4405,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-107
+109
 
 </td>
 <td style="text-align:left;">
@@ -4144,7 +4447,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-108
+110
 
 </td>
 <td style="text-align:left;">
@@ -4186,7 +4489,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-109
+111
 
 </td>
 <td style="text-align:left;">
@@ -4228,7 +4531,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-110
+112
 
 </td>
 <td style="text-align:left;">
@@ -4238,7 +4541,7 @@ Xie2014
 </td>
 <td style="text-align:left;">
 
-8h
+~8h
 
 </td>
 <td style="text-align:left;">
@@ -4248,7 +4551,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -4270,7 +4573,49 @@ NA
 <tr>
 <td style="text-align:left;">
 
-115
+113
+
+</td>
+<td style="text-align:left;">
+
+Xie2014
+
+</td>
+<td style="text-align:left;">
+
+~8h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+480
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+119
 
 </td>
 <td style="text-align:left;">
@@ -4312,7 +4657,7 @@ TRUE
 <tr>
 <td style="text-align:left;">
 
-118
+122
 
 </td>
 <td style="text-align:left;">
@@ -4354,7 +4699,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-121
+125
 
 </td>
 <td style="text-align:left;">
@@ -4401,6 +4746,132 @@ NA
 </td>
 <td style="text-align:left;">
 
+McNeill2012
+
+</td>
+<td style="text-align:left;">
+
+~22.5 h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+130
+
+</td>
+<td style="text-align:left;">
+
+Bodzin2014
+
+</td>
+<td style="text-align:left;">
+
+ND
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+131
+
+</td>
+<td style="text-align:left;">
+
+Cibik2022
+
+</td>
+<td style="text-align:left;">
+
+ND
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+133
+
+</td>
+<td style="text-align:left;">
+
 Chin2016
 
 </td>
@@ -4438,7 +4909,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-130
+134
 
 </td>
 <td style="text-align:left;">
@@ -4480,7 +4951,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-131
+135
 
 </td>
 <td style="text-align:left;">
@@ -4522,7 +4993,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-132
+136
 
 </td>
 <td style="text-align:left;">
@@ -4532,7 +5003,7 @@ Kabir2015
 </td>
 <td style="text-align:left;">
 
-20h
+~18h
 
 </td>
 <td style="text-align:left;">
@@ -4542,12 +5013,12 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
 
-20
+18
 
 </td>
 <td style="text-align:right;">
@@ -4557,7 +5028,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-1200
+1080
 
 </td>
 </tr>
@@ -4565,6 +5036,48 @@ NA
 <td style="text-align:left;">
 
 137
+
+</td>
+<td style="text-align:left;">
+
+Lambert2013
+
+</td>
+<td style="text-align:left;">
+
+ND
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+141
 
 </td>
 <td style="text-align:left;">
@@ -4606,7 +5119,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-138
+142
 
 </td>
 <td style="text-align:left;">
@@ -4648,7 +5161,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-139
+143
 
 </td>
 <td style="text-align:left;">
@@ -4658,7 +5171,7 @@ Skains2022
 </td>
 <td style="text-align:left;">
 
-3h
+~3h
 
 </td>
 <td style="text-align:left;">
@@ -4668,7 +5181,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -4690,7 +5203,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-143
+147
 
 </td>
 <td style="text-align:left;">
@@ -4732,7 +5245,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-144
+148
 
 </td>
 <td style="text-align:left;">
@@ -4771,11 +5284,138 @@ NA
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+149
+
+</td>
+<td style="text-align:left;">
+
+Miller2015
+
+</td>
+<td style="text-align:left;">
+
+~20h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+20
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1200
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+150
+
+</td>
+<td style="text-align:left;">
+
+Gutierrez2022
+
+</td>
+<td style="text-align:left;">
+
+6h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+360
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+153
+
+</td>
+<td style="text-align:left;">
+
+Nussbaum2015
+
+</td>
+<td style="text-align:left;">
+
+50min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+<td style="text-align:right;">
+
+50
+
+</td>
+</tr>
 </tbody>
 </table>
 
 ``` r
-hist(totalDur$totalMin,nclass=50,main="",xlab="Total intervention time (min)",ylab="Number of studies")
+hist(totalDur$totalMin,nclass=50,main="",xlab="Total intervention time",ylab="Number of studies",xaxt="n")
+axis(1,at=c(0,60*c(20,50,100,150)),labels=c("0","20h","50h","100h","150h"),las=1)
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
 ```
 
@@ -4785,25 +5425,26 @@ legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND)
 extract$Period.length
 ```
 
-    ##   [1] NA       NA       "2M"     NA       "5M"     "21D"    "1Y"     NA      
+    ##   [1] "1H"     NA       "2M"     NA       "5M"     "21D"    "1Y"     NA      
     ##   [9] "4M"     NA       NA       NA       "1Y"     NA       NA       "1Y"    
-    ##  [17] NA       "1Y"     "1Y"     NA       NA       NA       NA       NA      
-    ##  [25] NA       "14D"    "2H"     "1H"     "14D"    "2M21D"  NA       "1D"    
-    ##  [33] "1D"     "1D"     "1D"     "1D"     "7D"     "7D"     "7D"     "5D"    
-    ##  [41] "5D"     "2D"     "6M"     "3D"     "2M"     NA       "1D"     NA      
-    ##  [49] "3D"     NA       "2M"     "1Y"     "14D"    NA       "1M"     "1D"    
-    ##  [57] NA       "2D"     "1Y"     "~7M"    "~2H"    "2M"     "1D"     "10M"   
-    ##  [65] "4D"     "1H"     "1H"     "1H"     "7D"     "4M"     "5M"     "5M"    
-    ##  [73] NA       NA       NA       "1M5D"   "3M"     "1M"     "1M"     "5D"    
-    ##  [81] "1Y"     "2M14D"  "11M"    "2D"     NA       "20D"    NA       "~3M"   
-    ##  [89] "3Y"     "1H"     "1M20D"  "2H"     "1Y"     "8H"     "1Y"     "4M"    
-    ##  [97] "14D"    "2Y"     "2Y"     "1M14D"  NA       "1M14D"  "1Y"     NA      
-    ## [105] "2H"     "3M"     "1H"     NA       "7D"     "8H"     "1Y"     "5M"    
-    ## [113] "3M13D"  "3M13D"  "1M7D"   "~2M"    "1M20D"  "1M14D"  NA       NA      
-    ## [121] "2D"     NA       NA       "1Y"     "~1M14D" "20D"    "2M"     NA      
-    ## [129] "1M"     "1H"     "1H"     "6M"     "5M"     NA       NA       "1M14D" 
-    ## [137] "1M7D"   "16D"    NA       "6M"     NA       NA       "2D"     "14D"   
-    ## [145] "1M"     NA       NA
+    ##  [17] "7D"     "1Y"     "1Y"     "7D"     "3M"     "2D"     NA       NA      
+    ##  [25] NA       "14D"    "2H"     "1H"     "14D"    "4D"     "2M21D"  NA      
+    ##  [33] "1D"     "1D"     "1D"     "1D"     "1D"     "7D"     "7D"     "7D"    
+    ##  [41] "5D"     "7M"     "5D"     "2D"     "6M"     "3D"     "2M"     NA      
+    ##  [49] "1D"     NA       "3D"     NA       "2M"     "1Y"     "14D"    NA      
+    ##  [57] "1M"     "~1D"    NA       "2D"     "1Y"     "~7M"    "~2H"    "2M"    
+    ##  [65] "1D"     "10M"    "4D"     "1H"     "1H"     "1H"     "7D"     "4M"    
+    ##  [73] "5M"     "5M"     "1Y"     NA       "4D"     "1M5D"   "3M"     "~1M"   
+    ##  [81] "1M"     "5D"     "1Y"     "2M14D"  "11M"    "2D"     "~1Y"    "20D"   
+    ##  [89] NA       "~3M"    "3Y"     "1H"     "1M20D"  "2H"     "1Y"     "~8H"   
+    ##  [97] "1Y"     "4M"     "14D"    "2Y"     "2Y"     "1M14D"  "7D"     "1M14D" 
+    ## [105] "1Y"     NA       "2H"     "3M"     "1H"     NA       "~5D"    "1D"    
+    ## [113] "1D"     "1Y"     "1Y"     "5M"     "3M13D"  "3M13D"  "1M7D"   "~2M"   
+    ## [121] "1M20D"  "1M14D"  NA       NA       "2D"     NA       NA       "1Y"    
+    ## [129] "~1M14D" "20D"    "2M"     NA       "1M"     "1H"     "1H"     "6M"    
+    ## [137] "4M"     NA       NA       "1M14D"  "1M7D"   "16D"    NA       "6M"    
+    ## [145] NA       NA       "2D"     "14D"    "1M"     "2M"     "49D"    "7M"    
+    ## [153] "3D"
 
 ``` r
 all(is.na(extract$Period.length[!grepl("^(~)?(([0-9]+)([Y]))?(([0-9]+)(M))?(([0-9]+)(D))?(([0-9]+)(H))?$",extract$Period.length)]))
@@ -4884,6 +5525,58 @@ totalHours
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Aksel_Stenberdt2023
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 
@@ -5251,6 +5944,58 @@ NA
 <tr>
 <td style="text-align:left;">
 
+17
+
+</td>
+<td style="text-align:left;">
+
+Khadka2021
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+168
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 18
 
 </td>
@@ -5349,6 +6094,162 @@ NA
 <td style="text-align:right;">
 
 8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+20
+
+</td>
+<td style="text-align:left;">
+
+Lambert2012
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+168
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+21
+
+</td>
+<td style="text-align:left;">
+
+Lester2006
+
+</td>
+<td style="text-align:left;">
+
+3M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2196
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+22
+
+</td>
+<td style="text-align:left;">
+
+Liu2015
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+48
 
 </td>
 </tr>
@@ -5568,6 +6469,58 @@ NA
 </td>
 <td style="text-align:left;">
 
+Puttick2018
+
+</td>
+<td style="text-align:left;">
+
+4D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+96
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+31
+
+</td>
+<td style="text-align:left;">
+
 Roychoudhury2017
 
 </td>
@@ -5615,7 +6568,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-32
+33
 
 </td>
 <td style="text-align:left;">
@@ -5667,7 +6620,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-33
+34
 
 </td>
 <td style="text-align:left;">
@@ -5719,7 +6672,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-34
+35
 
 </td>
 <td style="text-align:left;">
@@ -5771,7 +6724,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-35
+36
 
 </td>
 <td style="text-align:left;">
@@ -5823,7 +6776,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-36
+37
 
 </td>
 <td style="text-align:left;">
@@ -5875,7 +6828,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-37
+38
 
 </td>
 <td style="text-align:left;">
@@ -5927,7 +6880,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-38
+39
 
 </td>
 <td style="text-align:left;">
@@ -5979,7 +6932,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-39
+40
 
 </td>
 <td style="text-align:left;">
@@ -6031,7 +6984,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-40
+41
 
 </td>
 <td style="text-align:left;">
@@ -6083,7 +7036,59 @@ NA
 <tr>
 <td style="text-align:left;">
 
-41
+42
+
+</td>
+<td style="text-align:left;">
+
+Gladwin2022
+
+</td>
+<td style="text-align:left;">
+
+7M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5124
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+43
 
 </td>
 <td style="text-align:left;">
@@ -6135,7 +7140,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-42
+44
 
 </td>
 <td style="text-align:left;">
@@ -6187,7 +7192,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-43
+45
 
 </td>
 <td style="text-align:left;">
@@ -6239,7 +7244,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-44
+46
 
 </td>
 <td style="text-align:left;">
@@ -6291,7 +7296,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-45
+47
 
 </td>
 <td style="text-align:left;">
@@ -6343,7 +7348,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-47
+49
 
 </td>
 <td style="text-align:left;">
@@ -6395,7 +7400,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-49
+51
 
 </td>
 <td style="text-align:left;">
@@ -6447,7 +7452,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-51
+53
 
 </td>
 <td style="text-align:left;">
@@ -6499,7 +7504,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-52
+54
 
 </td>
 <td style="text-align:left;">
@@ -6551,7 +7556,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-53
+55
 
 </td>
 <td style="text-align:left;">
@@ -6603,7 +7608,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-55
+57
 
 </td>
 <td style="text-align:left;">
@@ -6655,7 +7660,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-56
+58
 
 </td>
 <td style="text-align:left;">
@@ -6665,7 +7670,7 @@ Veijalainen2013
 </td>
 <td style="text-align:left;">
 
-1D
+~1D
 
 </td>
 <td style="text-align:left;">
@@ -6675,7 +7680,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -6707,7 +7712,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-58
+60
 
 </td>
 <td style="text-align:left;">
@@ -6759,7 +7764,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-59
+61
 
 </td>
 <td style="text-align:left;">
@@ -6811,7 +7816,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-60
+62
 
 </td>
 <td style="text-align:left;">
@@ -6863,7 +7868,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-61
+63
 
 </td>
 <td style="text-align:left;">
@@ -6915,7 +7920,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-62
+64
 
 </td>
 <td style="text-align:left;">
@@ -6967,7 +7972,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-63
+65
 
 </td>
 <td style="text-align:left;">
@@ -7019,7 +8024,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-64
+66
 
 </td>
 <td style="text-align:left;">
@@ -7071,7 +8076,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-65
+67
 
 </td>
 <td style="text-align:left;">
@@ -7123,7 +8128,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-66
+68
 
 </td>
 <td style="text-align:left;">
@@ -7175,7 +8180,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-67
+69
 
 </td>
 <td style="text-align:left;">
@@ -7227,7 +8232,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-68
+70
 
 </td>
 <td style="text-align:left;">
@@ -7279,7 +8284,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-69
+71
 
 </td>
 <td style="text-align:left;">
@@ -7331,7 +8336,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-70
+72
 
 </td>
 <td style="text-align:left;">
@@ -7383,7 +8388,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-71
+73
 
 </td>
 <td style="text-align:left;">
@@ -7435,7 +8440,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-72
+74
 
 </td>
 <td style="text-align:left;">
@@ -7487,7 +8492,111 @@ NA
 <tr>
 <td style="text-align:left;">
 
-76
+75
+
+</td>
+<td style="text-align:left;">
+
+Sundberg2013
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+77
+
+</td>
+<td style="text-align:left;">
+
+Sumrall2021
+
+</td>
+<td style="text-align:left;">
+
+4D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+96
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+78
 
 </td>
 <td style="text-align:left;">
@@ -7539,7 +8648,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-77
+79
 
 </td>
 <td style="text-align:left;">
@@ -7591,7 +8700,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-78
+80
 
 </td>
 <td style="text-align:left;">
@@ -7601,7 +8710,7 @@ Roscoe2013
 </td>
 <td style="text-align:left;">
 
-1M
+~1M
 
 </td>
 <td style="text-align:left;">
@@ -7611,7 +8720,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -7643,7 +8752,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-79
+81
 
 </td>
 <td style="text-align:left;">
@@ -7695,7 +8804,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-80
+82
 
 </td>
 <td style="text-align:left;">
@@ -7747,7 +8856,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-81
+83
 
 </td>
 <td style="text-align:left;">
@@ -7799,7 +8908,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-82
+84
 
 </td>
 <td style="text-align:left;">
@@ -7851,7 +8960,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-83
+85
 
 </td>
 <td style="text-align:left;">
@@ -7903,7 +9012,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-84
+86
 
 </td>
 <td style="text-align:left;">
@@ -7955,7 +9064,59 @@ NA
 <tr>
 <td style="text-align:left;">
 
-86
+87
+
+</td>
+<td style="text-align:left;">
+
+Jin2013
+
+</td>
+<td style="text-align:left;">
+
+~1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+88
 
 </td>
 <td style="text-align:left;">
@@ -8007,7 +9168,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-88
+90
 
 </td>
 <td style="text-align:left;">
@@ -8059,7 +9220,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-89
+91
 
 </td>
 <td style="text-align:left;">
@@ -8111,7 +9272,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-90
+92
 
 </td>
 <td style="text-align:left;">
@@ -8163,7 +9324,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-91
+93
 
 </td>
 <td style="text-align:left;">
@@ -8215,7 +9376,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-92
+94
 
 </td>
 <td style="text-align:left;">
@@ -8267,7 +9428,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-93
+95
 
 </td>
 <td style="text-align:left;">
@@ -8319,7 +9480,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-94
+96
 
 </td>
 <td style="text-align:left;">
@@ -8329,7 +9490,7 @@ Sellmann2013a
 </td>
 <td style="text-align:left;">
 
-8H
+~8H
 
 </td>
 <td style="text-align:left;">
@@ -8339,7 +9500,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -8371,7 +9532,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-95
+97
 
 </td>
 <td style="text-align:left;">
@@ -8423,7 +9584,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-96
+98
 
 </td>
 <td style="text-align:left;">
@@ -8475,7 +9636,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-97
+99
 
 </td>
 <td style="text-align:left;">
@@ -8527,111 +9688,111 @@ NA
 <tr>
 <td style="text-align:left;">
 
-98
-
-</td>
-<td style="text-align:left;">
-
-Lawson2019a
-
-</td>
-<td style="text-align:left;">
-
-2Y
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-17472
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-99
-
-</td>
-<td style="text-align:left;">
-
-Lawson2019a
-
-</td>
-<td style="text-align:left;">
-
-2Y
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-17472
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 100
+
+</td>
+<td style="text-align:left;">
+
+Lawson2019a
+
+</td>
+<td style="text-align:left;">
+
+2Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+17472
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+101
+
+</td>
+<td style="text-align:left;">
+
+Lawson2019a
+
+</td>
+<td style="text-align:left;">
+
+2Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+17472
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+102
 
 </td>
 <td style="text-align:left;">
@@ -8683,7 +9844,59 @@ NA
 <tr>
 <td style="text-align:left;">
 
-102
+103
+
+</td>
+<td style="text-align:left;">
+
+Schuster2008
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+168
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+104
 
 </td>
 <td style="text-align:left;">
@@ -8735,7 +9948,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-103
+105
 
 </td>
 <td style="text-align:left;">
@@ -8787,7 +10000,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-105
+107
 
 </td>
 <td style="text-align:left;">
@@ -8839,7 +10052,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-106
+108
 
 </td>
 <td style="text-align:left;">
@@ -8891,7 +10104,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-107
+109
 
 </td>
 <td style="text-align:left;">
@@ -8943,7 +10156,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-109
+111
 
 </td>
 <td style="text-align:left;">
@@ -8953,7 +10166,7 @@ Jacobson2017
 </td>
 <td style="text-align:left;">
 
-7D
+~5D
 
 </td>
 <td style="text-align:left;">
@@ -8963,7 +10176,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -8978,7 +10191,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-7
+5
 
 </td>
 <td style="text-align:right;">
@@ -8988,14 +10201,14 @@ NA
 </td>
 <td style="text-align:right;">
 
-168
+120
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-110
+112
 
 </td>
 <td style="text-align:left;">
@@ -9005,7 +10218,7 @@ Xie2014
 </td>
 <td style="text-align:left;">
 
-8H
+1D
 
 </td>
 <td style="text-align:left;">
@@ -9030,24 +10243,76 @@ NA
 </td>
 <td style="text-align:right;">
 
+1
+
+</td>
+<td style="text-align:right;">
+
 NA
 
 </td>
 <td style="text-align:right;">
 
-8
-
-</td>
-<td style="text-align:right;">
-
-8
+24
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-111
+113
+
+</td>
+<td style="text-align:left;">
+
+Xie2014
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+24
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+114
 
 </td>
 <td style="text-align:left;">
@@ -9099,7 +10364,59 @@ NA
 <tr>
 <td style="text-align:left;">
 
-112
+115
+
+</td>
+<td style="text-align:left;">
+
+Zografakis2008
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+116
 
 </td>
 <td style="text-align:left;">
@@ -9151,7 +10468,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-113
+117
 
 </td>
 <td style="text-align:left;">
@@ -9203,7 +10520,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-114
+118
 
 </td>
 <td style="text-align:left;">
@@ -9255,7 +10572,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-115
+119
 
 </td>
 <td style="text-align:left;">
@@ -9307,7 +10624,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-116
+120
 
 </td>
 <td style="text-align:left;">
@@ -9359,7 +10676,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-117
+121
 
 </td>
 <td style="text-align:left;">
@@ -9411,7 +10728,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-118
+122
 
 </td>
 <td style="text-align:left;">
@@ -9463,7 +10780,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-121
+125
 
 </td>
 <td style="text-align:left;">
@@ -9515,7 +10832,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-124
+128
 
 </td>
 <td style="text-align:left;">
@@ -9567,7 +10884,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-125
+129
 
 </td>
 <td style="text-align:left;">
@@ -9619,7 +10936,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-126
+130
 
 </td>
 <td style="text-align:left;">
@@ -9671,7 +10988,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-127
+131
 
 </td>
 <td style="text-align:left;">
@@ -9723,7 +11040,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-129
+133
 
 </td>
 <td style="text-align:left;">
@@ -9775,7 +11092,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-130
+134
 
 </td>
 <td style="text-align:left;">
@@ -9827,7 +11144,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-131
+135
 
 </td>
 <td style="text-align:left;">
@@ -9879,7 +11196,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-132
+136
 
 </td>
 <td style="text-align:left;">
@@ -9931,7 +11248,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-133
+137
 
 </td>
 <td style="text-align:left;">
@@ -9941,7 +11258,7 @@ Lambert2013
 </td>
 <td style="text-align:left;">
 
-5M
+4M
 
 </td>
 <td style="text-align:left;">
@@ -9961,7 +11278,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-5
+4
 
 </td>
 <td style="text-align:right;">
@@ -9976,14 +11293,14 @@ NA
 </td>
 <td style="text-align:right;">
 
-3660
+2928
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-136
+140
 
 </td>
 <td style="text-align:left;">
@@ -10035,7 +11352,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-137
+141
 
 </td>
 <td style="text-align:left;">
@@ -10087,7 +11404,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-138
+142
 
 </td>
 <td style="text-align:left;">
@@ -10139,7 +11456,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-140
+144
 
 </td>
 <td style="text-align:left;">
@@ -10191,7 +11508,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-143
+147
 
 </td>
 <td style="text-align:left;">
@@ -10243,7 +11560,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-144
+148
 
 </td>
 <td style="text-align:left;">
@@ -10295,12 +11612,12 @@ NA
 <tr>
 <td style="text-align:left;">
 
-145
+149
 
 </td>
 <td style="text-align:left;">
 
-Miller 2015
+Miller2015
 
 </td>
 <td style="text-align:left;">
@@ -10341,6 +11658,214 @@ NA
 <td style="text-align:right;">
 
 732
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+150
+
+</td>
+<td style="text-align:left;">
+
+Gutierrez2022
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1464
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+151
+
+</td>
+<td style="text-align:left;">
+
+Goulah2017
+
+</td>
+<td style="text-align:left;">
+
+49D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+49
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1176
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+152
+
+</td>
+<td style="text-align:left;">
+
+Gladwin2022
+
+</td>
+<td style="text-align:left;">
+
+7M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5124
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+153
+
+</td>
+<td style="text-align:left;">
+
+Nussbaum2015
+
+</td>
+<td style="text-align:left;">
+
+3D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+72
 
 </td>
 </tr>
