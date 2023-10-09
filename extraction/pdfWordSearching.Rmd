@@ -353,4 +353,8 @@ outcomes$action<-as.integer(sapply(sep,function(x)x[2]))
 kable(outcomes)%>%
   add_header_above(c(" "=1,"General"=2,"Knowledge"=2,"awareness"=3,"emotion"=7,"intent"=2,"habit"=1,"action"=1))
 ```
+```{r}
+require(openxlsx)
+write.xlsx(x=outcomes,file="outcomePdfWords.xlsx")
+```
 

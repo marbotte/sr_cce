@@ -24304,3 +24304,13 @@ action
 </tr>
 </tbody>
 </table>
+
+``` r
+require(openxlsx)
+```
+
+    ## Loading required package: openxlsx
+
+``` r
+write.xlsx(x=outcomes,file="outcomePdfWords.xlsx")
+```
