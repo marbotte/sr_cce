@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-09
+2023-10-10
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -36,7 +36,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231009.xlsx"))
+names(loadWorkbook("../../extraction/20231010.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -45,7 +45,7 @@ names(loadWorkbook("../../extraction/20231009.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231009.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231010.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -107,7 +107,7 @@ rawExtract$datepubl
     ## [141] "2015.0"         "2006.0"         "2022.0"         "2018.0"        
     ## [145] "2022.0"         "2017.0"         "2015.0"         "2019.0"        
     ## [149] "2015.0"         "2022.0"         "2017.0"         "2022.0"        
-    ## [153] "2015.0"
+    ## [153] NA               "2015.0"
 
 ``` r
 extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})","\\2",rawExtract$datepubl)))
@@ -379,7 +379,8 @@ rawExtract$Countries.STUDY
     ## [150] "United States"                                                                                                                                                         
     ## [151] "United States"                                                                                                                                                         
     ## [152] "Brazil; Canada; Colombia; Costa Rica; Finland; Ghana; India; Indonesia; Kenya; Kuwait; Nigeria; Oman; Peru; Philippines; Poland; Slovenia; South Korea; Uganda"        
-    ## [153] "United States"
+    ## [153] NA                                                                                                                                                                      
+    ## [154] "United States"
 
 ``` r
 extract$Countries.STUDY[extract$id=="Arya2016"]<-"United States;China;New Zealand;Norway"
@@ -605,7 +606,7 @@ table(rururbClean,useNA="ifany")
 
     ## rururbClean
     ##     Urban     Rural      Both Not given      <NA> 
-    ##        92         6        17         0        38
+    ##        92         6        17         0        39
 
 ``` r
 rururbClean[is.na(rururbClean)]<-"Not given"
@@ -628,8 +629,8 @@ sort(table(extract$TARGETED.SAMPLE,useNA="ifany"),decreasing=T)
     ##                     5                     4                     1 
     ## students and teachers    students; teachers              teachers 
     ##                     1                     1                     1 
-    ## Teachers and students 
-    ##                     1
+    ## Teachers and students                  <NA> 
+    ##                     1                     1
 
 ``` r
 #For student ages
@@ -853,7 +854,7 @@ table(extract$Controversy,useNA="always")
 
     ## 
     ##   no   No   NO  no   yes  Yes <NA> 
-    ##   31   79    4    1    5   30    3
+    ##   31   79    4    1    5   30    4
 
 ``` r
 extract$controv_clean<-NA
@@ -865,7 +866,7 @@ table(extract$controv_clean,useNA="ifany")
 
     ## 
     ##   No  Yes <NA> 
-    ##  115   35    3
+    ##  115   35    4
 
 ``` r
 controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
@@ -977,7 +978,7 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 
     ## 
     ##  Adaptation        Both  mitigation  Mitigation     Neither        <NA> 
-    ## 0.032679739 0.267973856 0.006535948 0.620915033 0.039215686 0.032679739
+    ## 0.032467532 0.266233766 0.006493506 0.616883117 0.038961039 0.038961039
 
 ``` r
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
@@ -997,7 +998,7 @@ sort(table(extract$Disciplin_2))
     ##            STEAM        Education             STEM            Mixed 
     ##                2                3                8               15 
     ##              NA  Natural Sciences 
-    ##               18               70
+    ##               18               71
 
 ``` r
 disciplineClean<- extract$Disciplin_2
@@ -1056,7 +1057,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-51
+52
 
 </td>
 <td style="text-align:left;">
@@ -1071,7 +1072,7 @@ Klosterman2010, Saribaş2016 , Reinfried2012, Sellmann2013a,
 Sternang2012, Sutela2023, Stevenson2018a, Xie2014, Xie2014, Trott2019,
 Trott2022, Markowitz2018, Zhong2021, Harker_Schuch2013,
 Harker_Schuch2020, Lambert2013, Littrell2022, Skains2022, Stevenson2018,
-Sukardi2022, Pekel2019, Nussbaum2015
+Sukardi2022, Pekel2019, NA, Nussbaum2015
 
 </td>
 </tr>
@@ -1631,11 +1632,454 @@ forTempPlot<-forTempPlot[1:5,]
 forTempPlot<-rbind(forTempPlot,other)
 par(mar=c(15,4,1,1))
 bp<-barplot(t(forTempPlot),las=2, density=c(0,20))
-legend("topleft",density=18,"consistent with")
-text(bp[round(nrow(forTempPlot)/2)+1],max(forTempPlot),paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
+legend("topright",density=18,"consistent with")
+text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 ```
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+
+``` r
+kable(sort(table(tabTheoBack$theoBack),decreasing=T))
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+
+Var1
+
+</th>
+<th style="text-align:right;">
+
+Freq
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+Learner centered approach
+
+</td>
+<td style="text-align:right;">
+
+103
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Relational
+
+</td>
+<td style="text-align:right;">
+
+18
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Promoting Social Awareness
+
+</td>
+<td style="text-align:right;">
+
+11
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Traditional
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Professional training workshop
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Professional development workshop
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Argument-driven
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Intergenerational learning
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Future-oriented imagery
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Teacher centered approach
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Technology enhanced
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Alternative
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Arts-based
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Collaborative approach
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Collaborative learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Constructivism
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Debunking
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Disaster education
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Entertainment education
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Environmental education
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Experiential learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Gamification
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Instructional model and geospatial learning technologies
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Intergenerational
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Learner centered approach vs. teacher centered
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Melodrama
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Narrative
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Narrative (arts -based)
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Pedagogy of argumentation
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Promoting Social Awareness ?
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Relational, Technology enhanced
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Science, technology and society (STS) instruction
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Socio-constructivism
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+TEacher centered approach
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+</tbody>
+</table>
 
 # 12 Methods & design
 
@@ -1661,7 +2105,7 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 
     ## 
     ## Quantitative  Qualitative   Both/Mixed         <NA> 
-    ##           71           41           40            1
+    ##           71           41           40            2
 
 ``` r
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
@@ -1753,8 +2197,6 @@ A
     ##                                            1 
     ## Pre-post on activity 1, with additional  ... 
     ##                                            1 
-    ##                   Pre-post quasiexperimental 
-    ##                                            1 
     ##                 Pre-post with two iterations 
     ##                                            1 
     ##                             pre-post+ factor 
@@ -1766,6 +2208,8 @@ A
     ## Qualitative analysis, pre- post- questio ... 
     ##                                            1 
     ##                     Qualitative case studies 
+    ##                                            1 
+    ##                           Quasi-experimental 
     ##                                            1 
     ## Quasi-experimental design involving expe ... 
     ##                                            1 
@@ -1787,7 +2231,8 @@ extract$`Pre/Post`[!extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","V
     ## [4] "FALSE - Only post!!"                                                                                         
     ## [5] "True (but there is no info on when the pre and post measures were taken)"                                    
     ## [6] "See previous cell"                                                                                           
-    ## [7] NA
+    ## [7] NA                                                                                                            
+    ## [8] NA
 
 ``` r
 extract$prepostClean[extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","VERDADERO","Verdadero","Yes","yes","YES")]<-T
@@ -1862,78 +2307,478 @@ barplot(c(
 extract$Total.duration.of.the.intervention
 ```
 
-    ##   [1] "24min"    NA         NA         "6h"       NA         NA        
-    ##   [7] NA         NA         "28h"      NA         NA         NA        
-    ##  [13] NA         "5h"       NA         NA         NA         NA        
-    ##  [19] NA         NA         "24h"      NA         "1h30min"  "2h35min" 
-    ##  [25] "50min"    NA         "1h40min"  "50min"    NA         "2h"      
-    ##  [31] NA         "2h30min"  NA         NA         NA         NA        
-    ##  [37] NA         NA         NA         NA         NA         NA        
-    ##  [43] "~35h"     "~14h"     NA         "~21h"     "12h30min" "12h"     
-    ##  [49] "~7h"      NA         "~21h"     "6h"       NA         "8h30min" 
-    ##  [55] "1h"       NA         "2h15min"  "6h"       "5h"       "~14h"    
-    ##  [61] NA         "2h30min"  "~1h30"    NA         NA         "20h"     
-    ##  [67] "32H"      "40min"    "45min"    "50min"    "~50h"     "15h"     
-    ##  [73] NA         NA         NA         NA         "20h"      "10h"     
-    ##  [79] NA         "~15h"     "3h40min"  "15h"      "30h"      "~80h"    
-    ##  [85] NA         "~4h"      NA         "15h"      NA         NA        
-    ##  [91] NA         "1h"       NA         "1H15min"  NA         "~8H"     
-    ##  [97] "150h"     "~20h"     "5h30min"  NA         NA         "40h"     
-    ## [103] "~30h"     "~6h"      "60h"      NA         "~2h"      "40h"     
-    ## [109] "10min"    "~10h"     "4h"       "~8h"      "~8h"      NA        
-    ## [115] NA         NA         NA         NA         "~7h30min" NA        
-    ## [121] NA         "12h"      NA         NA         "1h"       NA        
-    ## [127] NA         NA         "~22.5 h"  "ND"       "ND"       NA        
-    ## [133] "8h"       "45min"    "50min"    "~18h"     "ND"       NA        
-    ## [139] NA         NA         "15h"      "~42h"     "~3h"      NA        
-    ## [145] NA         NA         "~14h"     "4h"       "~20h"     "6h"      
-    ## [151] NA         NA         "50min"
+    ##   [1] "24min"                                                                                                                                               
+    ##   [2] NA                                                                                                                                                    
+    ##   [3] NA                                                                                                                                                    
+    ##   [4] "6h"                                                                                                                                                  
+    ##   [5] NA                                                                                                                                                    
+    ##   [6] NA                                                                                                                                                    
+    ##   [7] NA                                                                                                                                                    
+    ##   [8] NA                                                                                                                                                    
+    ##   [9] "28h"                                                                                                                                                 
+    ##  [10] NA                                                                                                                                                    
+    ##  [11] NA                                                                                                                                                    
+    ##  [12] NA                                                                                                                                                    
+    ##  [13] NA                                                                                                                                                    
+    ##  [14] "5h"                                                                                                                                                  
+    ##  [15] NA                                                                                                                                                    
+    ##  [16] NA                                                                                                                                                    
+    ##  [17] NA                                                                                                                                                    
+    ##  [18] NA                                                                                                                                                    
+    ##  [19] NA                                                                                                                                                    
+    ##  [20] NA                                                                                                                                                    
+    ##  [21] "24h"                                                                                                                                                 
+    ##  [22] NA                                                                                                                                                    
+    ##  [23] "1h30min"                                                                                                                                             
+    ##  [24] "2h35min"                                                                                                                                             
+    ##  [25] "50min"                                                                                                                                               
+    ##  [26] NA                                                                                                                                                    
+    ##  [27] "1h40min"                                                                                                                                             
+    ##  [28] "50min"                                                                                                                                               
+    ##  [29] NA                                                                                                                                                    
+    ##  [30] "2h"                                                                                                                                                  
+    ##  [31] NA                                                                                                                                                    
+    ##  [32] "2h30min"                                                                                                                                             
+    ##  [33] NA                                                                                                                                                    
+    ##  [34] NA                                                                                                                                                    
+    ##  [35] NA                                                                                                                                                    
+    ##  [36] NA                                                                                                                                                    
+    ##  [37] NA                                                                                                                                                    
+    ##  [38] NA                                                                                                                                                    
+    ##  [39] NA                                                                                                                                                    
+    ##  [40] NA                                                                                                                                                    
+    ##  [41] NA                                                                                                                                                    
+    ##  [42] NA                                                                                                                                                    
+    ##  [43] "~35h"                                                                                                                                                
+    ##  [44] "~14h"                                                                                                                                                
+    ##  [45] NA                                                                                                                                                    
+    ##  [46] "~21h"                                                                                                                                                
+    ##  [47] "12h30min"                                                                                                                                            
+    ##  [48] "12h"                                                                                                                                                 
+    ##  [49] "~7h"                                                                                                                                                 
+    ##  [50] NA                                                                                                                                                    
+    ##  [51] "~21h"                                                                                                                                                
+    ##  [52] "6h"                                                                                                                                                  
+    ##  [53] NA                                                                                                                                                    
+    ##  [54] "8h30min"                                                                                                                                             
+    ##  [55] "1h"                                                                                                                                                  
+    ##  [56] NA                                                                                                                                                    
+    ##  [57] "2h15min"                                                                                                                                             
+    ##  [58] "6h"                                                                                                                                                  
+    ##  [59] "5h"                                                                                                                                                  
+    ##  [60] "~14h"                                                                                                                                                
+    ##  [61] NA                                                                                                                                                    
+    ##  [62] "2h30min"                                                                                                                                             
+    ##  [63] "~1h30"                                                                                                                                               
+    ##  [64] NA                                                                                                                                                    
+    ##  [65] NA                                                                                                                                                    
+    ##  [66] "20h"                                                                                                                                                 
+    ##  [67] "32H"                                                                                                                                                 
+    ##  [68] "40min"                                                                                                                                               
+    ##  [69] "45min"                                                                                                                                               
+    ##  [70] "50min"                                                                                                                                               
+    ##  [71] "~50h"                                                                                                                                                
+    ##  [72] "15h"                                                                                                                                                 
+    ##  [73] NA                                                                                                                                                    
+    ##  [74] NA                                                                                                                                                    
+    ##  [75] NA                                                                                                                                                    
+    ##  [76] NA                                                                                                                                                    
+    ##  [77] "20h"                                                                                                                                                 
+    ##  [78] "10h"                                                                                                                                                 
+    ##  [79] NA                                                                                                                                                    
+    ##  [80] "~15h"                                                                                                                                                
+    ##  [81] "3h40min"                                                                                                                                             
+    ##  [82] "15h"                                                                                                                                                 
+    ##  [83] "30h"                                                                                                                                                 
+    ##  [84] "~80h"                                                                                                                                                
+    ##  [85] NA                                                                                                                                                    
+    ##  [86] "~4h"                                                                                                                                                 
+    ##  [87] NA                                                                                                                                                    
+    ##  [88] "15h"                                                                                                                                                 
+    ##  [89] NA                                                                                                                                                    
+    ##  [90] NA                                                                                                                                                    
+    ##  [91] NA                                                                                                                                                    
+    ##  [92] "1h"                                                                                                                                                  
+    ##  [93] NA                                                                                                                                                    
+    ##  [94] "1H15min"                                                                                                                                             
+    ##  [95] NA                                                                                                                                                    
+    ##  [96] "~8H"                                                                                                                                                 
+    ##  [97] "150h"                                                                                                                                                
+    ##  [98] "~20h"                                                                                                                                                
+    ##  [99] "5h30min"                                                                                                                                             
+    ## [100] NA                                                                                                                                                    
+    ## [101] NA                                                                                                                                                    
+    ## [102] "40h"                                                                                                                                                 
+    ## [103] "~30h"                                                                                                                                                
+    ## [104] "~6h"                                                                                                                                                 
+    ## [105] "60h"                                                                                                                                                 
+    ## [106] NA                                                                                                                                                    
+    ## [107] "~2h"                                                                                                                                                 
+    ## [108] "40h"                                                                                                                                                 
+    ## [109] "10min"                                                                                                                                               
+    ## [110] "~10h"                                                                                                                                                
+    ## [111] "4h"                                                                                                                                                  
+    ## [112] "~8h"                                                                                                                                                 
+    ## [113] "~8h"                                                                                                                                                 
+    ## [114] NA                                                                                                                                                    
+    ## [115] NA                                                                                                                                                    
+    ## [116] NA                                                                                                                                                    
+    ## [117] NA                                                                                                                                                    
+    ## [118] NA                                                                                                                                                    
+    ## [119] "~7h30min"                                                                                                                                            
+    ## [120] NA                                                                                                                                                    
+    ## [121] NA                                                                                                                                                    
+    ## [122] "12h"                                                                                                                                                 
+    ## [123] NA                                                                                                                                                    
+    ## [124] NA                                                                                                                                                    
+    ## [125] "1h"                                                                                                                                                  
+    ## [126] "600 minutes"                                                                                                                                         
+    ## [127] NA                                                                                                                                                    
+    ## [128] NA                                                                                                                                                    
+    ## [129] "~22.5 h"                                                                                                                                             
+    ## [130] "ND"                                                                                                                                                  
+    ## [131] "ND"                                                                                                                                                  
+    ## [132] NA                                                                                                                                                    
+    ## [133] "8h"                                                                                                                                                  
+    ## [134] "La intervención como tal es únicamente la lecture de aprox. 45 min. \nSi incluimos las sesiones de pre y post estaríamos hablando de 135 min. aprox."
+    ## [135] "50min"                                                                                                                                               
+    ## [136] "~18h"                                                                                                                                                
+    ## [137] "ND"                                                                                                                                                  
+    ## [138] NA                                                                                                                                                    
+    ## [139] NA                                                                                                                                                    
+    ## [140] NA                                                                                                                                                    
+    ## [141] "15h"                                                                                                                                                 
+    ## [142] "~42h"                                                                                                                                                
+    ## [143] "~3h"                                                                                                                                                 
+    ## [144] NA                                                                                                                                                    
+    ## [145] NA                                                                                                                                                    
+    ## [146] NA                                                                                                                                                    
+    ## [147] "~14h"                                                                                                                                                
+    ## [148] "4h"                                                                                                                                                  
+    ## [149] "~20h"                                                                                                                                                
+    ## [150] "6h"                                                                                                                                                  
+    ## [151] NA                                                                                                                                                    
+    ## [152] NA                                                                                                                                                    
+    ## [153] NA                                                                                                                                                    
+    ## [154] "50min"
 
 ``` r
 extract$Period.length
 ```
 
-    ##   [1] "1H"     NA       "2M"     NA       "5M"     "21D"    "1Y"     NA      
-    ##   [9] "4M"     NA       NA       NA       "1Y"     NA       NA       "1Y"    
-    ##  [17] "7D"     "1Y"     "1Y"     "7D"     "3M"     "2D"     NA       NA      
-    ##  [25] NA       "14D"    "2H"     "1H"     "14D"    "4D"     "2M21D"  NA      
-    ##  [33] "1D"     "1D"     "1D"     "1D"     "1D"     "7D"     "7D"     "7D"    
-    ##  [41] "5D"     "7M"     "5D"     "2D"     "6M"     "3D"     "2M"     NA      
-    ##  [49] "1D"     NA       "3D"     NA       "2M"     "1Y"     "14D"    NA      
-    ##  [57] "1M"     "~1D"    NA       "2D"     "1Y"     "~7M"    "~2H"    "2M"    
-    ##  [65] "1D"     "10M"    "4D"     "1H"     "1H"     "1H"     "7D"     "4M"    
-    ##  [73] "5M"     "5M"     "1Y"     NA       "4D"     "1M5D"   "3M"     "~1M"   
-    ##  [81] "1M"     "5D"     "1Y"     "2M14D"  "11M"    "2D"     "~1Y"    "20D"   
-    ##  [89] NA       "~3M"    "3Y"     "1H"     "1M20D"  "2H"     "1Y"     "~8H"   
-    ##  [97] "1Y"     "4M"     "14D"    "2Y"     "2Y"     "1M14D"  "7D"     "1M14D" 
-    ## [105] "1Y"     NA       "2H"     "3M"     "1H"     NA       "~5D"    "1D"    
-    ## [113] "1D"     "1Y"     "1Y"     "5M"     "3M13D"  "3M13D"  "1M7D"   "~2M"   
-    ## [121] "1M20D"  "1M14D"  NA       NA       "2D"     NA       NA       "1Y"    
-    ## [129] "~1M14D" "20D"    "2M"     NA       "1M"     "1H"     "1H"     "6M"    
-    ## [137] "4M"     NA       NA       "1M14D"  "1M7D"   "16D"    NA       "6M"    
-    ## [145] NA       NA       "2D"     "14D"    "1M"     "2M"     "49D"    "7M"    
-    ## [153] "3D"
+    ##   [1] "1H"                                                                                                         
+    ##   [2] NA                                                                                                           
+    ##   [3] "2M"                                                                                                         
+    ##   [4] NA                                                                                                           
+    ##   [5] "5M"                                                                                                         
+    ##   [6] "21D"                                                                                                        
+    ##   [7] "1Y"                                                                                                         
+    ##   [8] NA                                                                                                           
+    ##   [9] "4M"                                                                                                         
+    ##  [10] NA                                                                                                           
+    ##  [11] NA                                                                                                           
+    ##  [12] NA                                                                                                           
+    ##  [13] "1Y"                                                                                                         
+    ##  [14] NA                                                                                                           
+    ##  [15] NA                                                                                                           
+    ##  [16] "1Y"                                                                                                         
+    ##  [17] "7D"                                                                                                         
+    ##  [18] "1Y"                                                                                                         
+    ##  [19] "1Y"                                                                                                         
+    ##  [20] "7D"                                                                                                         
+    ##  [21] "3M"                                                                                                         
+    ##  [22] "2D"                                                                                                         
+    ##  [23] NA                                                                                                           
+    ##  [24] NA                                                                                                           
+    ##  [25] NA                                                                                                           
+    ##  [26] "14D"                                                                                                        
+    ##  [27] "2H"                                                                                                         
+    ##  [28] "1H"                                                                                                         
+    ##  [29] "14D"                                                                                                        
+    ##  [30] "4D"                                                                                                         
+    ##  [31] "2M21D"                                                                                                      
+    ##  [32] NA                                                                                                           
+    ##  [33] "1D"                                                                                                         
+    ##  [34] "1D"                                                                                                         
+    ##  [35] "1D"                                                                                                         
+    ##  [36] "1D"                                                                                                         
+    ##  [37] "1D"                                                                                                         
+    ##  [38] "7D"                                                                                                         
+    ##  [39] "7D"                                                                                                         
+    ##  [40] "7D"                                                                                                         
+    ##  [41] "5D"                                                                                                         
+    ##  [42] "7M"                                                                                                         
+    ##  [43] "5D"                                                                                                         
+    ##  [44] "2D"                                                                                                         
+    ##  [45] "6M"                                                                                                         
+    ##  [46] "3D"                                                                                                         
+    ##  [47] "2M"                                                                                                         
+    ##  [48] NA                                                                                                           
+    ##  [49] "1D"                                                                                                         
+    ##  [50] NA                                                                                                           
+    ##  [51] "3D"                                                                                                         
+    ##  [52] NA                                                                                                           
+    ##  [53] "2M"                                                                                                         
+    ##  [54] "1Y"                                                                                                         
+    ##  [55] "14D"                                                                                                        
+    ##  [56] NA                                                                                                           
+    ##  [57] "1M"                                                                                                         
+    ##  [58] "~1D"                                                                                                        
+    ##  [59] NA                                                                                                           
+    ##  [60] "2D"                                                                                                         
+    ##  [61] "1Y"                                                                                                         
+    ##  [62] "~7M"                                                                                                        
+    ##  [63] "~2H"                                                                                                        
+    ##  [64] "2M"                                                                                                         
+    ##  [65] "1D"                                                                                                         
+    ##  [66] "10M"                                                                                                        
+    ##  [67] "4D"                                                                                                         
+    ##  [68] "1H"                                                                                                         
+    ##  [69] "1H"                                                                                                         
+    ##  [70] "1H"                                                                                                         
+    ##  [71] "7D"                                                                                                         
+    ##  [72] "4M"                                                                                                         
+    ##  [73] "5M"                                                                                                         
+    ##  [74] "5M"                                                                                                         
+    ##  [75] "1Y"                                                                                                         
+    ##  [76] NA                                                                                                           
+    ##  [77] "4D"                                                                                                         
+    ##  [78] "1M5D"                                                                                                       
+    ##  [79] "3M"                                                                                                         
+    ##  [80] "~1M"                                                                                                        
+    ##  [81] "1M"                                                                                                         
+    ##  [82] "5D"                                                                                                         
+    ##  [83] "1Y"                                                                                                         
+    ##  [84] "2M14D"                                                                                                      
+    ##  [85] "11M"                                                                                                        
+    ##  [86] "2D"                                                                                                         
+    ##  [87] "~1Y"                                                                                                        
+    ##  [88] "20D"                                                                                                        
+    ##  [89] NA                                                                                                           
+    ##  [90] "~3M"                                                                                                        
+    ##  [91] "3Y"                                                                                                         
+    ##  [92] "1H"                                                                                                         
+    ##  [93] "1M20D"                                                                                                      
+    ##  [94] "2H"                                                                                                         
+    ##  [95] "1Y"                                                                                                         
+    ##  [96] "~8H"                                                                                                        
+    ##  [97] "1Y"                                                                                                         
+    ##  [98] "4M"                                                                                                         
+    ##  [99] "14D"                                                                                                        
+    ## [100] "2Y"                                                                                                         
+    ## [101] "2Y"                                                                                                         
+    ## [102] "1M14D"                                                                                                      
+    ## [103] "7D"                                                                                                         
+    ## [104] "1M14D"                                                                                                      
+    ## [105] "1Y"                                                                                                         
+    ## [106] NA                                                                                                           
+    ## [107] "2H"                                                                                                         
+    ## [108] "3M"                                                                                                         
+    ## [109] "1H"                                                                                                         
+    ## [110] "6 months"                                                                                                   
+    ## [111] "~5D"                                                                                                        
+    ## [112] "1D"                                                                                                         
+    ## [113] "1D"                                                                                                         
+    ## [114] "1Y"                                                                                                         
+    ## [115] "1Y"                                                                                                         
+    ## [116] "5M"                                                                                                         
+    ## [117] "3M13D"                                                                                                      
+    ## [118] "3M13D"                                                                                                      
+    ## [119] "1M7D"                                                                                                       
+    ## [120] "~2M"                                                                                                        
+    ## [121] "1M20D"                                                                                                      
+    ## [122] "1M14D"                                                                                                      
+    ## [123] NA                                                                                                           
+    ## [124] NA                                                                                                           
+    ## [125] "2D"                                                                                                         
+    ## [126] "10M"                                                                                                        
+    ## [127] "10M"                                                                                                        
+    ## [128] "1Y"                                                                                                         
+    ## [129] "~1M14D"                                                                                                     
+    ## [130] "20D"                                                                                                        
+    ## [131] "2M"                                                                                                         
+    ## [132] NA                                                                                                           
+    ## [133] "1M"                                                                                                         
+    ## [134] "The questionnaires were distributed and collected in the period from early March 2011 until late June 2011."
+    ## [135] "1H"                                                                                                         
+    ## [136] "6M"                                                                                                         
+    ## [137] "4M"                                                                                                         
+    ## [138] NA                                                                                                           
+    ## [139] NA                                                                                                           
+    ## [140] "1M14D"                                                                                                      
+    ## [141] "1M7D"                                                                                                       
+    ## [142] "16D"                                                                                                        
+    ## [143] NA                                                                                                           
+    ## [144] "6M"                                                                                                         
+    ## [145] NA                                                                                                           
+    ## [146] NA                                                                                                           
+    ## [147] "2D"                                                                                                         
+    ## [148] "14D"                                                                                                        
+    ## [149] "1M"                                                                                                         
+    ## [150] "2M"                                                                                                         
+    ## [151] "49D"                                                                                                        
+    ## [152] "7M"                                                                                                         
+    ## [153] NA                                                                                                           
+    ## [154] "3D"
 
 ``` r
 extract$Number.of.sessions
 ```
 
-    ##   [1] "1.0"  "1.0"  "8.0"  "3.0"  NA     NA     NA     NA     "14.0" NA    
-    ##  [11] "5.0"  NA     NA     "6.0"  NA     NA     NA     NA     NA     NA    
-    ##  [21] "12.0" NA     "2.0"  "2.0"  NA     NA     "1.0"  "1.0"  NA     "4.0" 
-    ##  [31] NA     "3.0"  NA     NA     NA     NA     NA     NA     NA     NA    
-    ##  [41] NA     NA     "10.0" "4.0"  "6.0"  "6.0"  "15.0" "6.0"  "1.0"  NA    
-    ##  [51] "~3"   "4.0"  NA     "5.0"  "4.0"  "4.0"  "3.0"  "~1"   "6.0"  "2.0" 
-    ##  [61] NA     "5.0"  "1.0"  NA     NA     "10.0" "~4"   "1.0"  "1.0"  "1.0" 
-    ##  [71] "7.0"  "15.0" "~40"  "~40"  NA     NA     "24.0" "5.0"  NA     "8.0" 
-    ##  [81] "4.0"  "5.0"  "20.0" "5.0"  NA     "2.0"  NA     "7.0"  NA     NA    
-    ##  [91] NA     "1.0"  NA     "1.0"  NA     "1.0"  NA     "15.0" "2.0"  NA    
-    ## [101] NA     NA     "~10"  "6.0"  "~20"  NA     "1.0"  NA     "1.0"  "5.0" 
-    ## [111] "4.0"  "1.0"  "1.0"  NA     NA     NA     NA     NA     "~5"   NA    
-    ## [121] NA     "6.0"  NA     NA     "2.0"  "12.0" NA     NA     "11.0" "20.0"
-    ## [131] "ND"   NA     "4.0"  "1.0"  "1.0"  "24.0" "ND"   NA     NA     NA    
-    ## [141] "5.0"  "6.0"  NA     NA     NA     "5.0"  "2.0"  "6.0"  "~10"  "3.0" 
-    ## [151] "~35"  NA     "2.0"
+    ##   [1] "1.0"                                                                                                 
+    ##   [2] "1.0"                                                                                                 
+    ##   [3] "8.0"                                                                                                 
+    ##   [4] "3.0"                                                                                                 
+    ##   [5] NA                                                                                                    
+    ##   [6] NA                                                                                                    
+    ##   [7] NA                                                                                                    
+    ##   [8] NA                                                                                                    
+    ##   [9] "14.0"                                                                                                
+    ##  [10] NA                                                                                                    
+    ##  [11] "5.0"                                                                                                 
+    ##  [12] NA                                                                                                    
+    ##  [13] NA                                                                                                    
+    ##  [14] "6.0"                                                                                                 
+    ##  [15] NA                                                                                                    
+    ##  [16] NA                                                                                                    
+    ##  [17] NA                                                                                                    
+    ##  [18] NA                                                                                                    
+    ##  [19] NA                                                                                                    
+    ##  [20] NA                                                                                                    
+    ##  [21] "12.0"                                                                                                
+    ##  [22] NA                                                                                                    
+    ##  [23] "2.0"                                                                                                 
+    ##  [24] "2.0"                                                                                                 
+    ##  [25] NA                                                                                                    
+    ##  [26] NA                                                                                                    
+    ##  [27] "1.0"                                                                                                 
+    ##  [28] "1.0"                                                                                                 
+    ##  [29] NA                                                                                                    
+    ##  [30] "4.0"                                                                                                 
+    ##  [31] NA                                                                                                    
+    ##  [32] "3.0"                                                                                                 
+    ##  [33] NA                                                                                                    
+    ##  [34] NA                                                                                                    
+    ##  [35] NA                                                                                                    
+    ##  [36] NA                                                                                                    
+    ##  [37] NA                                                                                                    
+    ##  [38] NA                                                                                                    
+    ##  [39] NA                                                                                                    
+    ##  [40] NA                                                                                                    
+    ##  [41] NA                                                                                                    
+    ##  [42] NA                                                                                                    
+    ##  [43] "10.0"                                                                                                
+    ##  [44] "4.0"                                                                                                 
+    ##  [45] "6.0"                                                                                                 
+    ##  [46] "6.0"                                                                                                 
+    ##  [47] "15.0"                                                                                                
+    ##  [48] "6.0"                                                                                                 
+    ##  [49] "1.0"                                                                                                 
+    ##  [50] NA                                                                                                    
+    ##  [51] "~3"                                                                                                  
+    ##  [52] "4.0"                                                                                                 
+    ##  [53] NA                                                                                                    
+    ##  [54] "5.0"                                                                                                 
+    ##  [55] "4.0"                                                                                                 
+    ##  [56] "4.0"                                                                                                 
+    ##  [57] "3.0"                                                                                                 
+    ##  [58] "~1"                                                                                                  
+    ##  [59] "6.0"                                                                                                 
+    ##  [60] "2.0"                                                                                                 
+    ##  [61] NA                                                                                                    
+    ##  [62] "5.0"                                                                                                 
+    ##  [63] "1.0"                                                                                                 
+    ##  [64] NA                                                                                                    
+    ##  [65] NA                                                                                                    
+    ##  [66] "10.0"                                                                                                
+    ##  [67] "~4"                                                                                                  
+    ##  [68] "1.0"                                                                                                 
+    ##  [69] "1.0"                                                                                                 
+    ##  [70] "1.0"                                                                                                 
+    ##  [71] "7.0"                                                                                                 
+    ##  [72] "15.0"                                                                                                
+    ##  [73] "~40"                                                                                                 
+    ##  [74] "~40"                                                                                                 
+    ##  [75] NA                                                                                                    
+    ##  [76] NA                                                                                                    
+    ##  [77] "24.0"                                                                                                
+    ##  [78] "5.0"                                                                                                 
+    ##  [79] NA                                                                                                    
+    ##  [80] "8.0"                                                                                                 
+    ##  [81] "4.0"                                                                                                 
+    ##  [82] "5.0"                                                                                                 
+    ##  [83] "20.0"                                                                                                
+    ##  [84] "5.0"                                                                                                 
+    ##  [85] NA                                                                                                    
+    ##  [86] "2.0"                                                                                                 
+    ##  [87] NA                                                                                                    
+    ##  [88] "7.0"                                                                                                 
+    ##  [89] NA                                                                                                    
+    ##  [90] NA                                                                                                    
+    ##  [91] NA                                                                                                    
+    ##  [92] "1.0"                                                                                                 
+    ##  [93] NA                                                                                                    
+    ##  [94] "1.0"                                                                                                 
+    ##  [95] NA                                                                                                    
+    ##  [96] "1.0"                                                                                                 
+    ##  [97] NA                                                                                                    
+    ##  [98] "15.0"                                                                                                
+    ##  [99] "2.0"                                                                                                 
+    ## [100] NA                                                                                                    
+    ## [101] "4 classroom activities and 1 field-based service-learning-project"                                   
+    ## [102] NA                                                                                                    
+    ## [103] "~10"                                                                                                 
+    ## [104] "6.0"                                                                                                 
+    ## [105] "~20"                                                                                                 
+    ## [106] NA                                                                                                    
+    ## [107] "1.0"                                                                                                 
+    ## [108] NA                                                                                                    
+    ## [109] "1.0"                                                                                                 
+    ## [110] "5.0"                                                                                                 
+    ## [111] "4.0"                                                                                                 
+    ## [112] "1.0"                                                                                                 
+    ## [113] "1.0"                                                                                                 
+    ## [114] NA                                                                                                    
+    ## [115] NA                                                                                                    
+    ## [116] NA                                                                                                    
+    ## [117] NA                                                                                                    
+    ## [118] NA                                                                                                    
+    ## [119] "~5"                                                                                                  
+    ## [120] NA                                                                                                    
+    ## [121] NA                                                                                                    
+    ## [122] "6.0"                                                                                                 
+    ## [123] NA                                                                                                    
+    ## [124] NA                                                                                                    
+    ## [125] "2.0"                                                                                                 
+    ## [126] "12.0"                                                                                                
+    ## [127] NA                                                                                                    
+    ## [128] NA                                                                                                    
+    ## [129] "11.0"                                                                                                
+    ## [130] "20.0"                                                                                                
+    ## [131] "ND"                                                                                                  
+    ## [132] NA                                                                                                    
+    ## [133] "4.0"                                                                                                 
+    ## [134] "DEPENDE DE QUÉ CONSIDEREMOS LA INTERVENCIÓN (1 SESIÓN - LECTURE O  3 SESIONES  - PRE, LECTURE, POST)"
+    ## [135] "1.0"                                                                                                 
+    ## [136] "24.0"                                                                                                
+    ## [137] "ND"                                                                                                  
+    ## [138] NA                                                                                                    
+    ## [139] NA                                                                                                    
+    ## [140] NA                                                                                                    
+    ## [141] "5.0"                                                                                                 
+    ## [142] "6.0"                                                                                                 
+    ## [143] NA                                                                                                    
+    ## [144] NA                                                                                                    
+    ## [145] NA                                                                                                    
+    ## [146] "5.0"                                                                                                 
+    ## [147] "2.0"                                                                                                 
+    ## [148] "6.0"                                                                                                 
+    ## [149] "~10"                                                                                                 
+    ## [150] "3.0"                                                                                                 
+    ## [151] "~35"                                                                                                 
+    ## [152] NA                                                                                                    
+    ## [153] NA                                                                                                    
+    ## [154] "2.0"
 
 ``` r
 hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number of sessions", ylab="Number of studies",nclass=50)
@@ -1952,32 +2797,160 @@ legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions))
 extract$Total.duration.of.the.intervention
 ```
 
-    ##   [1] "24min"    NA         NA         "6h"       NA         NA        
-    ##   [7] NA         NA         "28h"      NA         NA         NA        
-    ##  [13] NA         "5h"       NA         NA         NA         NA        
-    ##  [19] NA         NA         "24h"      NA         "1h30min"  "2h35min" 
-    ##  [25] "50min"    NA         "1h40min"  "50min"    NA         "2h"      
-    ##  [31] NA         "2h30min"  NA         NA         NA         NA        
-    ##  [37] NA         NA         NA         NA         NA         NA        
-    ##  [43] "~35h"     "~14h"     NA         "~21h"     "12h30min" "12h"     
-    ##  [49] "~7h"      NA         "~21h"     "6h"       NA         "8h30min" 
-    ##  [55] "1h"       NA         "2h15min"  "6h"       "5h"       "~14h"    
-    ##  [61] NA         "2h30min"  "~1h30"    NA         NA         "20h"     
-    ##  [67] "32H"      "40min"    "45min"    "50min"    "~50h"     "15h"     
-    ##  [73] NA         NA         NA         NA         "20h"      "10h"     
-    ##  [79] NA         "~15h"     "3h40min"  "15h"      "30h"      "~80h"    
-    ##  [85] NA         "~4h"      NA         "15h"      NA         NA        
-    ##  [91] NA         "1h"       NA         "1H15min"  NA         "~8H"     
-    ##  [97] "150h"     "~20h"     "5h30min"  NA         NA         "40h"     
-    ## [103] "~30h"     "~6h"      "60h"      NA         "~2h"      "40h"     
-    ## [109] "10min"    "~10h"     "4h"       "~8h"      "~8h"      NA        
-    ## [115] NA         NA         NA         NA         "~7h30min" NA        
-    ## [121] NA         "12h"      NA         NA         "1h"       NA        
-    ## [127] NA         NA         "~22.5 h"  "ND"       "ND"       NA        
-    ## [133] "8h"       "45min"    "50min"    "~18h"     "ND"       NA        
-    ## [139] NA         NA         "15h"      "~42h"     "~3h"      NA        
-    ## [145] NA         NA         "~14h"     "4h"       "~20h"     "6h"      
-    ## [151] NA         NA         "50min"
+    ##   [1] "24min"                                                                                                                                               
+    ##   [2] NA                                                                                                                                                    
+    ##   [3] NA                                                                                                                                                    
+    ##   [4] "6h"                                                                                                                                                  
+    ##   [5] NA                                                                                                                                                    
+    ##   [6] NA                                                                                                                                                    
+    ##   [7] NA                                                                                                                                                    
+    ##   [8] NA                                                                                                                                                    
+    ##   [9] "28h"                                                                                                                                                 
+    ##  [10] NA                                                                                                                                                    
+    ##  [11] NA                                                                                                                                                    
+    ##  [12] NA                                                                                                                                                    
+    ##  [13] NA                                                                                                                                                    
+    ##  [14] "5h"                                                                                                                                                  
+    ##  [15] NA                                                                                                                                                    
+    ##  [16] NA                                                                                                                                                    
+    ##  [17] NA                                                                                                                                                    
+    ##  [18] NA                                                                                                                                                    
+    ##  [19] NA                                                                                                                                                    
+    ##  [20] NA                                                                                                                                                    
+    ##  [21] "24h"                                                                                                                                                 
+    ##  [22] NA                                                                                                                                                    
+    ##  [23] "1h30min"                                                                                                                                             
+    ##  [24] "2h35min"                                                                                                                                             
+    ##  [25] "50min"                                                                                                                                               
+    ##  [26] NA                                                                                                                                                    
+    ##  [27] "1h40min"                                                                                                                                             
+    ##  [28] "50min"                                                                                                                                               
+    ##  [29] NA                                                                                                                                                    
+    ##  [30] "2h"                                                                                                                                                  
+    ##  [31] NA                                                                                                                                                    
+    ##  [32] "2h30min"                                                                                                                                             
+    ##  [33] NA                                                                                                                                                    
+    ##  [34] NA                                                                                                                                                    
+    ##  [35] NA                                                                                                                                                    
+    ##  [36] NA                                                                                                                                                    
+    ##  [37] NA                                                                                                                                                    
+    ##  [38] NA                                                                                                                                                    
+    ##  [39] NA                                                                                                                                                    
+    ##  [40] NA                                                                                                                                                    
+    ##  [41] NA                                                                                                                                                    
+    ##  [42] NA                                                                                                                                                    
+    ##  [43] "~35h"                                                                                                                                                
+    ##  [44] "~14h"                                                                                                                                                
+    ##  [45] NA                                                                                                                                                    
+    ##  [46] "~21h"                                                                                                                                                
+    ##  [47] "12h30min"                                                                                                                                            
+    ##  [48] "12h"                                                                                                                                                 
+    ##  [49] "~7h"                                                                                                                                                 
+    ##  [50] NA                                                                                                                                                    
+    ##  [51] "~21h"                                                                                                                                                
+    ##  [52] "6h"                                                                                                                                                  
+    ##  [53] NA                                                                                                                                                    
+    ##  [54] "8h30min"                                                                                                                                             
+    ##  [55] "1h"                                                                                                                                                  
+    ##  [56] NA                                                                                                                                                    
+    ##  [57] "2h15min"                                                                                                                                             
+    ##  [58] "6h"                                                                                                                                                  
+    ##  [59] "5h"                                                                                                                                                  
+    ##  [60] "~14h"                                                                                                                                                
+    ##  [61] NA                                                                                                                                                    
+    ##  [62] "2h30min"                                                                                                                                             
+    ##  [63] "~1h30"                                                                                                                                               
+    ##  [64] NA                                                                                                                                                    
+    ##  [65] NA                                                                                                                                                    
+    ##  [66] "20h"                                                                                                                                                 
+    ##  [67] "32H"                                                                                                                                                 
+    ##  [68] "40min"                                                                                                                                               
+    ##  [69] "45min"                                                                                                                                               
+    ##  [70] "50min"                                                                                                                                               
+    ##  [71] "~50h"                                                                                                                                                
+    ##  [72] "15h"                                                                                                                                                 
+    ##  [73] NA                                                                                                                                                    
+    ##  [74] NA                                                                                                                                                    
+    ##  [75] NA                                                                                                                                                    
+    ##  [76] NA                                                                                                                                                    
+    ##  [77] "20h"                                                                                                                                                 
+    ##  [78] "10h"                                                                                                                                                 
+    ##  [79] NA                                                                                                                                                    
+    ##  [80] "~15h"                                                                                                                                                
+    ##  [81] "3h40min"                                                                                                                                             
+    ##  [82] "15h"                                                                                                                                                 
+    ##  [83] "30h"                                                                                                                                                 
+    ##  [84] "~80h"                                                                                                                                                
+    ##  [85] NA                                                                                                                                                    
+    ##  [86] "~4h"                                                                                                                                                 
+    ##  [87] NA                                                                                                                                                    
+    ##  [88] "15h"                                                                                                                                                 
+    ##  [89] NA                                                                                                                                                    
+    ##  [90] NA                                                                                                                                                    
+    ##  [91] NA                                                                                                                                                    
+    ##  [92] "1h"                                                                                                                                                  
+    ##  [93] NA                                                                                                                                                    
+    ##  [94] "1H15min"                                                                                                                                             
+    ##  [95] NA                                                                                                                                                    
+    ##  [96] "~8H"                                                                                                                                                 
+    ##  [97] "150h"                                                                                                                                                
+    ##  [98] "~20h"                                                                                                                                                
+    ##  [99] "5h30min"                                                                                                                                             
+    ## [100] NA                                                                                                                                                    
+    ## [101] NA                                                                                                                                                    
+    ## [102] "40h"                                                                                                                                                 
+    ## [103] "~30h"                                                                                                                                                
+    ## [104] "~6h"                                                                                                                                                 
+    ## [105] "60h"                                                                                                                                                 
+    ## [106] NA                                                                                                                                                    
+    ## [107] "~2h"                                                                                                                                                 
+    ## [108] "40h"                                                                                                                                                 
+    ## [109] "10min"                                                                                                                                               
+    ## [110] "~10h"                                                                                                                                                
+    ## [111] "4h"                                                                                                                                                  
+    ## [112] "~8h"                                                                                                                                                 
+    ## [113] "~8h"                                                                                                                                                 
+    ## [114] NA                                                                                                                                                    
+    ## [115] NA                                                                                                                                                    
+    ## [116] NA                                                                                                                                                    
+    ## [117] NA                                                                                                                                                    
+    ## [118] NA                                                                                                                                                    
+    ## [119] "~7h30min"                                                                                                                                            
+    ## [120] NA                                                                                                                                                    
+    ## [121] NA                                                                                                                                                    
+    ## [122] "12h"                                                                                                                                                 
+    ## [123] NA                                                                                                                                                    
+    ## [124] NA                                                                                                                                                    
+    ## [125] "1h"                                                                                                                                                  
+    ## [126] "600 minutes"                                                                                                                                         
+    ## [127] NA                                                                                                                                                    
+    ## [128] NA                                                                                                                                                    
+    ## [129] "~22.5 h"                                                                                                                                             
+    ## [130] "ND"                                                                                                                                                  
+    ## [131] "ND"                                                                                                                                                  
+    ## [132] NA                                                                                                                                                    
+    ## [133] "8h"                                                                                                                                                  
+    ## [134] "La intervención como tal es únicamente la lecture de aprox. 45 min. \nSi incluimos las sesiones de pre y post estaríamos hablando de 135 min. aprox."
+    ## [135] "50min"                                                                                                                                               
+    ## [136] "~18h"                                                                                                                                                
+    ## [137] "ND"                                                                                                                                                  
+    ## [138] NA                                                                                                                                                    
+    ## [139] NA                                                                                                                                                    
+    ## [140] NA                                                                                                                                                    
+    ## [141] "15h"                                                                                                                                                 
+    ## [142] "~42h"                                                                                                                                                
+    ## [143] "~3h"                                                                                                                                                 
+    ## [144] NA                                                                                                                                                    
+    ## [145] NA                                                                                                                                                    
+    ## [146] NA                                                                                                                                                    
+    ## [147] "~14h"                                                                                                                                                
+    ## [148] "4h"                                                                                                                                                  
+    ## [149] "~20h"                                                                                                                                                
+    ## [150] "6h"                                                                                                                                                  
+    ## [151] NA                                                                                                                                                    
+    ## [152] NA                                                                                                                                                    
+    ## [153] NA                                                                                                                                                    
+    ## [154] "50min"
 
 ``` r
 extract$Total.duration.of.the.intervention[!is.na(extract$Total.duration.of.the.intervention)&!grepl("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?",extract$Total.duration.of.the.intervention)]
@@ -4741,6 +5714,48 @@ NA
 <tr>
 <td style="text-align:left;">
 
+126
+
+</td>
+<td style="text-align:left;">
+
+Lozano2022
+
+</td>
+<td style="text-align:left;">
+
+600 minutes
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 129
 
 </td>
@@ -4919,7 +5934,9 @@ Harker_Schuch2013
 </td>
 <td style="text-align:left;">
 
-45min
+La intervención como tal es únicamente la lecture de aprox. 45 min. Si
+incluimos las sesiones de pre y post estaríamos hablando de 135 min.
+aprox.
 
 </td>
 <td style="text-align:left;">
@@ -4939,12 +5956,12 @@ NA
 </td>
 <td style="text-align:right;">
 
-45
+NA
 
 </td>
 <td style="text-align:right;">
 
-45
+0
 
 </td>
 </tr>
@@ -5371,7 +6388,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-153
+154
 
 </td>
 <td style="text-align:left;">
@@ -5425,32 +6442,166 @@ legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND)
 extract$Period.length
 ```
 
-    ##   [1] "1H"     NA       "2M"     NA       "5M"     "21D"    "1Y"     NA      
-    ##   [9] "4M"     NA       NA       NA       "1Y"     NA       NA       "1Y"    
-    ##  [17] "7D"     "1Y"     "1Y"     "7D"     "3M"     "2D"     NA       NA      
-    ##  [25] NA       "14D"    "2H"     "1H"     "14D"    "4D"     "2M21D"  NA      
-    ##  [33] "1D"     "1D"     "1D"     "1D"     "1D"     "7D"     "7D"     "7D"    
-    ##  [41] "5D"     "7M"     "5D"     "2D"     "6M"     "3D"     "2M"     NA      
-    ##  [49] "1D"     NA       "3D"     NA       "2M"     "1Y"     "14D"    NA      
-    ##  [57] "1M"     "~1D"    NA       "2D"     "1Y"     "~7M"    "~2H"    "2M"    
-    ##  [65] "1D"     "10M"    "4D"     "1H"     "1H"     "1H"     "7D"     "4M"    
-    ##  [73] "5M"     "5M"     "1Y"     NA       "4D"     "1M5D"   "3M"     "~1M"   
-    ##  [81] "1M"     "5D"     "1Y"     "2M14D"  "11M"    "2D"     "~1Y"    "20D"   
-    ##  [89] NA       "~3M"    "3Y"     "1H"     "1M20D"  "2H"     "1Y"     "~8H"   
-    ##  [97] "1Y"     "4M"     "14D"    "2Y"     "2Y"     "1M14D"  "7D"     "1M14D" 
-    ## [105] "1Y"     NA       "2H"     "3M"     "1H"     NA       "~5D"    "1D"    
-    ## [113] "1D"     "1Y"     "1Y"     "5M"     "3M13D"  "3M13D"  "1M7D"   "~2M"   
-    ## [121] "1M20D"  "1M14D"  NA       NA       "2D"     NA       NA       "1Y"    
-    ## [129] "~1M14D" "20D"    "2M"     NA       "1M"     "1H"     "1H"     "6M"    
-    ## [137] "4M"     NA       NA       "1M14D"  "1M7D"   "16D"    NA       "6M"    
-    ## [145] NA       NA       "2D"     "14D"    "1M"     "2M"     "49D"    "7M"    
-    ## [153] "3D"
+    ##   [1] "1H"                                                                                                         
+    ##   [2] NA                                                                                                           
+    ##   [3] "2M"                                                                                                         
+    ##   [4] NA                                                                                                           
+    ##   [5] "5M"                                                                                                         
+    ##   [6] "21D"                                                                                                        
+    ##   [7] "1Y"                                                                                                         
+    ##   [8] NA                                                                                                           
+    ##   [9] "4M"                                                                                                         
+    ##  [10] NA                                                                                                           
+    ##  [11] NA                                                                                                           
+    ##  [12] NA                                                                                                           
+    ##  [13] "1Y"                                                                                                         
+    ##  [14] NA                                                                                                           
+    ##  [15] NA                                                                                                           
+    ##  [16] "1Y"                                                                                                         
+    ##  [17] "7D"                                                                                                         
+    ##  [18] "1Y"                                                                                                         
+    ##  [19] "1Y"                                                                                                         
+    ##  [20] "7D"                                                                                                         
+    ##  [21] "3M"                                                                                                         
+    ##  [22] "2D"                                                                                                         
+    ##  [23] NA                                                                                                           
+    ##  [24] NA                                                                                                           
+    ##  [25] NA                                                                                                           
+    ##  [26] "14D"                                                                                                        
+    ##  [27] "2H"                                                                                                         
+    ##  [28] "1H"                                                                                                         
+    ##  [29] "14D"                                                                                                        
+    ##  [30] "4D"                                                                                                         
+    ##  [31] "2M21D"                                                                                                      
+    ##  [32] NA                                                                                                           
+    ##  [33] "1D"                                                                                                         
+    ##  [34] "1D"                                                                                                         
+    ##  [35] "1D"                                                                                                         
+    ##  [36] "1D"                                                                                                         
+    ##  [37] "1D"                                                                                                         
+    ##  [38] "7D"                                                                                                         
+    ##  [39] "7D"                                                                                                         
+    ##  [40] "7D"                                                                                                         
+    ##  [41] "5D"                                                                                                         
+    ##  [42] "7M"                                                                                                         
+    ##  [43] "5D"                                                                                                         
+    ##  [44] "2D"                                                                                                         
+    ##  [45] "6M"                                                                                                         
+    ##  [46] "3D"                                                                                                         
+    ##  [47] "2M"                                                                                                         
+    ##  [48] NA                                                                                                           
+    ##  [49] "1D"                                                                                                         
+    ##  [50] NA                                                                                                           
+    ##  [51] "3D"                                                                                                         
+    ##  [52] NA                                                                                                           
+    ##  [53] "2M"                                                                                                         
+    ##  [54] "1Y"                                                                                                         
+    ##  [55] "14D"                                                                                                        
+    ##  [56] NA                                                                                                           
+    ##  [57] "1M"                                                                                                         
+    ##  [58] "~1D"                                                                                                        
+    ##  [59] NA                                                                                                           
+    ##  [60] "2D"                                                                                                         
+    ##  [61] "1Y"                                                                                                         
+    ##  [62] "~7M"                                                                                                        
+    ##  [63] "~2H"                                                                                                        
+    ##  [64] "2M"                                                                                                         
+    ##  [65] "1D"                                                                                                         
+    ##  [66] "10M"                                                                                                        
+    ##  [67] "4D"                                                                                                         
+    ##  [68] "1H"                                                                                                         
+    ##  [69] "1H"                                                                                                         
+    ##  [70] "1H"                                                                                                         
+    ##  [71] "7D"                                                                                                         
+    ##  [72] "4M"                                                                                                         
+    ##  [73] "5M"                                                                                                         
+    ##  [74] "5M"                                                                                                         
+    ##  [75] "1Y"                                                                                                         
+    ##  [76] NA                                                                                                           
+    ##  [77] "4D"                                                                                                         
+    ##  [78] "1M5D"                                                                                                       
+    ##  [79] "3M"                                                                                                         
+    ##  [80] "~1M"                                                                                                        
+    ##  [81] "1M"                                                                                                         
+    ##  [82] "5D"                                                                                                         
+    ##  [83] "1Y"                                                                                                         
+    ##  [84] "2M14D"                                                                                                      
+    ##  [85] "11M"                                                                                                        
+    ##  [86] "2D"                                                                                                         
+    ##  [87] "~1Y"                                                                                                        
+    ##  [88] "20D"                                                                                                        
+    ##  [89] NA                                                                                                           
+    ##  [90] "~3M"                                                                                                        
+    ##  [91] "3Y"                                                                                                         
+    ##  [92] "1H"                                                                                                         
+    ##  [93] "1M20D"                                                                                                      
+    ##  [94] "2H"                                                                                                         
+    ##  [95] "1Y"                                                                                                         
+    ##  [96] "~8H"                                                                                                        
+    ##  [97] "1Y"                                                                                                         
+    ##  [98] "4M"                                                                                                         
+    ##  [99] "14D"                                                                                                        
+    ## [100] "2Y"                                                                                                         
+    ## [101] "2Y"                                                                                                         
+    ## [102] "1M14D"                                                                                                      
+    ## [103] "7D"                                                                                                         
+    ## [104] "1M14D"                                                                                                      
+    ## [105] "1Y"                                                                                                         
+    ## [106] NA                                                                                                           
+    ## [107] "2H"                                                                                                         
+    ## [108] "3M"                                                                                                         
+    ## [109] "1H"                                                                                                         
+    ## [110] "6 months"                                                                                                   
+    ## [111] "~5D"                                                                                                        
+    ## [112] "1D"                                                                                                         
+    ## [113] "1D"                                                                                                         
+    ## [114] "1Y"                                                                                                         
+    ## [115] "1Y"                                                                                                         
+    ## [116] "5M"                                                                                                         
+    ## [117] "3M13D"                                                                                                      
+    ## [118] "3M13D"                                                                                                      
+    ## [119] "1M7D"                                                                                                       
+    ## [120] "~2M"                                                                                                        
+    ## [121] "1M20D"                                                                                                      
+    ## [122] "1M14D"                                                                                                      
+    ## [123] NA                                                                                                           
+    ## [124] NA                                                                                                           
+    ## [125] "2D"                                                                                                         
+    ## [126] "10M"                                                                                                        
+    ## [127] "10M"                                                                                                        
+    ## [128] "1Y"                                                                                                         
+    ## [129] "~1M14D"                                                                                                     
+    ## [130] "20D"                                                                                                        
+    ## [131] "2M"                                                                                                         
+    ## [132] NA                                                                                                           
+    ## [133] "1M"                                                                                                         
+    ## [134] "The questionnaires were distributed and collected in the period from early March 2011 until late June 2011."
+    ## [135] "1H"                                                                                                         
+    ## [136] "6M"                                                                                                         
+    ## [137] "4M"                                                                                                         
+    ## [138] NA                                                                                                           
+    ## [139] NA                                                                                                           
+    ## [140] "1M14D"                                                                                                      
+    ## [141] "1M7D"                                                                                                       
+    ## [142] "16D"                                                                                                        
+    ## [143] NA                                                                                                           
+    ## [144] "6M"                                                                                                         
+    ## [145] NA                                                                                                           
+    ## [146] NA                                                                                                           
+    ## [147] "2D"                                                                                                         
+    ## [148] "14D"                                                                                                        
+    ## [149] "1M"                                                                                                         
+    ## [150] "2M"                                                                                                         
+    ## [151] "49D"                                                                                                        
+    ## [152] "7M"                                                                                                         
+    ## [153] NA                                                                                                           
+    ## [154] "3D"
 
 ``` r
 all(is.na(extract$Period.length[!grepl("^(~)?(([0-9]+)([Y]))?(([0-9]+)(M))?(([0-9]+)(D))?(([0-9]+)(H))?$",extract$Period.length)]))
 ```
 
-    ## [1] TRUE
+    ## [1] FALSE
 
 ``` r
 perLen<-data.frame(
@@ -5463,6 +6614,21 @@ perLen<-data.frame(
   D=as.integer(gsub("^(~)?([0-9]+[Y])?([0-9]+M)?(([0-9]+)D)?([0-9]+H)?$","\\5",extract$Period.length,perl=T)),
   H=as.integer(gsub("^(~)?([0-9]+[Y])?([0-9]+M)?([0-9]+D)?(([0-9]+)H)?$","\\6",extract$Period.length,perl=T))
 )
+```
+
+    ## Warning in data.frame(id = extract$id, raw = extract$Period.length, ND =
+    ## is.na(extract$Period.length), : NAs introduced by coercion
+
+    ## Warning in data.frame(id = extract$id, raw = extract$Period.length, ND =
+    ## is.na(extract$Period.length), : NAs introduced by coercion
+
+    ## Warning in data.frame(id = extract$id, raw = extract$Period.length, ND =
+    ## is.na(extract$Period.length), : NAs introduced by coercion
+
+    ## Warning in data.frame(id = extract$id, raw = extract$Period.length, ND =
+    ## is.na(extract$Period.length), : NAs introduced by coercion
+
+``` r
 perLen$totalHours=ifelse(perLen$ND,NA,
                          (364*24*ifelse(is.na(perLen$Y),0,perLen$Y))
                          +(30.5*24*ifelse(is.na(perLen$M),0,perLen$M))
@@ -10156,6 +11322,58 @@ NA
 <tr>
 <td style="text-align:left;">
 
+110
+
+</td>
+<td style="text-align:left;">
+
+Svihla2012
+
+</td>
+<td style="text-align:left;">
+
+6 months
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 111
 
 </td>
@@ -10832,6 +12050,110 @@ NA
 <tr>
 <td style="text-align:left;">
 
+126
+
+</td>
+<td style="text-align:left;">
+
+Lozano2022
+
+</td>
+<td style="text-align:left;">
+
+10M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7320
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+127
+
+</td>
+<td style="text-align:left;">
+
+Smith2019
+
+</td>
+<td style="text-align:left;">
+
+10M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7320
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 128
 
 </td>
@@ -11102,7 +12424,8 @@ Harker_Schuch2013
 </td>
 <td style="text-align:left;">
 
-1H
+The questionnaires were distributed and collected in the period from
+early March 2011 until late June 2011.
 
 </td>
 <td style="text-align:left;">
@@ -11132,12 +12455,12 @@ NA
 </td>
 <td style="text-align:right;">
 
-1
+NA
 
 </td>
 <td style="text-align:right;">
 
-1
+0
 
 </td>
 </tr>
@@ -11820,7 +13143,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-153
+154
 
 </td>
 <td style="text-align:left;">

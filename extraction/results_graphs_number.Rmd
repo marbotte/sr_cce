@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231009.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231009.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231010.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231010.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -364,9 +364,11 @@ forTempPlot<-forTempPlot[1:5,]
 forTempPlot<-rbind(forTempPlot,other)
 par(mar=c(15,4,1,1))
 bp<-barplot(t(forTempPlot),las=2, density=c(0,20))
-legend("topleft",density=18,"consistent with")
-text(bp[round(nrow(forTempPlot)/2)+1],max(forTempPlot),paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
+legend("topright",density=18,"consistent with")
+text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 
+
+kable(sort(table(tabTheoBack$theoBack),decreasing=T))
 ```
 
 
