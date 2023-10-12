@@ -1,7 +1,7 @@
 Time variables in the extraction table
 ================
 Marius Bottin
-2023-10-02
+2023-10-12
 
 - [1 Akaygun2021 ( MB )](#1-akaygun2021--mb-)
 - [2 Aksel_Stenberdt2023 ( ABP )](#2-aksel_stenberdt2023--abp-)
@@ -37,118 +37,124 @@ Marius Bottin
 - [32 Feierabend2012 ( ABP )](#32-feierabend2012--abp-)
 - [33 Feldpausch_Parker2013 ( JGOP )](#33-feldpausch_parker2013--jgop-)
 - [34 Flora2014 ( JGOP )](#34-flora2014--jgop-)
-- [35 Gold2015a ( LR )](#35-gold2015a--lr-)
-- [36 Harker_Schuch2013 ( SC )](#36-harker_schuch2013--sc-)
-- [37 Harker_Schuch2020 ( SC )](#37-harker_schuch2020--sc-)
-- [38 Herrick2022 ( LR )](#38-herrick2022--lr-)
-- [39 Holthuis2014 ( ABP )](#39-holthuis2014--abp-)
-- [40 Hu2016 ( MB )](#40-hu2016--mb-)
-- [41 Jacobson2017 ( MB )](#41-jacobson2017--mb-)
-- [42 Jin2013 ( LR )](#42-jin2013--lr-)
-- [43 Jones2021 ( MB )](#43-jones2021--mb-)
-- [44 Kabir2015 ( SC )](#44-kabir2015--sc-)
-- [45 Karpudewan2015 ( MB )](#45-karpudewan2015--mb-)
-- [46 Karpudewan2015a ( JGOP )](#46-karpudewan2015a--jgop-)
-- [47 Karpudewan2017 ( MB )](#47-karpudewan2017--mb-)
-- [48 Keller2019 ( MB )](#48-keller2019--mb-)
-- [49 Kern2017 ( BQ )](#49-kern2017--bq-)
-- [50 Khadka2021 ( ABP )](#50-khadka2021--abp-)
-- [51 Kinsey2012 ( ABP )](#51-kinsey2012--abp-)
-- [52 Klosterman2010 ( JGOP )](#52-klosterman2010--jgop-)
-- [53 Kolenaty2022 ( SB )](#53-kolenaty2022--sb-)
-- [54 Korfgen2017 ( ABP )](#54-korfgen2017--abp-)
-- [55 Korsager2015 ( MB )](#55-korsager2015--mb-)
-- [56 Kubisch2022 ( ABP )](#56-kubisch2022--abp-)
-- [57 Kumar2023 ( SB )](#57-kumar2023--sb-)
-- [58 Lambert2012 ( ABP )](#58-lambert2012--abp-)
-- [59 Lambert2013 ( SC )](#59-lambert2013--sc-)
-- [60 Lawson2019a ( LR )](#60-lawson2019a--lr-)
-- [61 Lawson2019a ( LR )](#61-lawson2019a--lr-)
-- [62 Leckey2021 ( MB )](#62-leckey2021--mb-)
-- [63 Leitao2022 ( MB )](#63-leitao2022--mb-)
-- [64 Lester2006 ( ABP )](#64-lester2006--abp-)
-- [65 Levrini2021 ( SB )](#65-levrini2021--sb-)
-- [66 Li2022 ( BQ )](#66-li2022--bq-)
-- [67 Li2022 ( BQ )](#67-li2022--bq-)
-- [68 Littrell2022 ( SC )](#68-littrell2022--sc-)
-- [69 Liu2015 ( ABP )](#69-liu2015--abp-)
-- [70 Lombardi2013 ( ABP )](#70-lombardi2013--abp-)
-- [71 Lozano2022 ( SC )](#71-lozano2022--sc-)
-- [72 Markowitz2018 ( LR )](#72-markowitz2018--lr-)
-- [73 Mason1998 ( SB )](#73-mason1998--sb-)
-- [74 McGowan2022 ( SB )](#74-mcgowan2022--sb-)
-- [75 McNeal2014a ( LR )](#75-mcneal2014a--lr-)
-- [76 McNeill2012 ( SC )](#76-mcneill2012--sc-)
-- [77 Meya2018 ( SB )](#77-meya2018--sb-)
-- [78 Miller 2015 ( MB )](#78-miller-2015--mb-)
-- [79 Monroe2016 ( ABP )](#79-monroe2016--abp-)
-- [80 Muller2021 ( LR )](#80-muller2021--lr-)
-- [81 Muller2021a ( SC )](#81-muller2021a--sc-)
-- [82 Nafisah2022 ( MB )](#82-nafisah2022--mb-)
-- [83 Nakamura2019 ( ABP )](#83-nakamura2019--abp-)
-- [84 Nicholas_Figueroa2017 ( ABP )](#84-nicholas_figueroa2017--abp-)
-- [85 Nkoana2020 ( JGOP )](#85-nkoana2020--jgop-)
-- [86 Oberauer2023 ( LR )](#86-oberauer2023--lr-)
-- [87 Parant2017 ( ABP )](#87-parant2017--abp-)
-- [88 Park2020 ( MB )](#88-park2020--mb-)
-- [89 Parth2020 ( MB )](#89-parth2020--mb-)
-- [90 Pekel2019 ( SC )](#90-pekel2019--sc-)
-- [91 Petersen2020 ( ABP )](#91-petersen2020--abp-)
-- [92 Porter2012 ( ABP )](#92-porter2012--abp-)
-- [93 Pruneau2003 ( BQ )](#93-pruneau2003--bq-)
-- [94 Pruneau2006 ( BQ )](#94-pruneau2006--bq-)
-- [95 Pruneau2006a ( LR )](#95-pruneau2006a--lr-)
-- [96 Raes2016 ( BQ )](#96-raes2016--bq-)
-- [97 Ratinen2013 ( BQ )](#97-ratinen2013--bq-)
-- [98 Reinfried2012 ( SB )](#98-reinfried2012--sb-)
-- [99 Roscoe2013 ( BQ )](#99-roscoe2013--bq-)
-- [100 Roychoudhury2017 ( ABP )](#100-roychoudhury2017--abp-)
-- [101 Ruboon2012 ( BQ )](#101-ruboon2012--bq-)
-- [102 Salas_Rueda2021 ( ABP )](#102-salas_rueda2021--abp-)
-- [103 Salsabila2019 ( SC )](#103-salsabila2019--sc-)
-- [104 Saribaş2016 ( JGOP )](#104-saribaş2016--jgop-)
-- [105 Schrot2021a ( MB )](#105-schrot2021a--mb-)
-- [106 Schubatzky2022 ( ABP )](#106-schubatzky2022--abp-)
-- [107 Schuster2008 ( JGOP )](#107-schuster2008--jgop-)
-- [108 Sellmann2013 ( ABP )](#108-sellmann2013--abp-)
-- [109 Sellmann2013a ( SB )](#109-sellmann2013a--sb-)
-- [110 Sellmann2015 ( MB )](#110-sellmann2015--mb-)
-- [111 Shea2016 ( ABP )](#111-shea2016--abp-)
-- [112 Siegner2018 ( SB )](#112-siegner2018--sb-)
-- [113 Silva2021 ( SC )](#113-silva2021--sc-)
-- [114 Skains2022 ( LR )](#114-skains2022--lr-)
-- [115 Smith2019 ( SC )](#115-smith2019--sc-)
-- [116 Steffensen2022 ( ABP )](#116-steffensen2022--abp-)
-- [117 Sternang2012 ( SB )](#117-sternang2012--sb-)
-- [118 Stevenson2018 ( LR )](#118-stevenson2018--lr-)
-- [119 Stevenson2018a ( MB )](#119-stevenson2018a--mb-)
-- [120 Sukardi2022 ( LR )](#120-sukardi2022--lr-)
-- [121 Sumrall2021 ( BQ )](#121-sumrall2021--bq-)
-- [122 Sundberg2013 ( BQ )](#122-sundberg2013--bq-)
-- [123 Sutela2023 ( JGOP )](#123-sutela2023--jgop-)
-- [124 Svihla2012 ( SB )](#124-svihla2012--sb-)
-- [125 Taber2009 ( ABP )](#125-taber2009--abp-)
-- [126 Tasquier2015 ( MB )](#126-tasquier2015--mb-)
-- [127 Tasquier2017 ( LR )](#127-tasquier2017--lr-)
-- [128 Tasti2021 ( MB )](#128-tasti2021--mb-)
-- [129 Taylor2020 ( BQ )](#129-taylor2020--bq-)
-- [130 Trott2019 ( JGOP )](#130-trott2019--jgop-)
-- [131 Trott2020a ( MB )](#131-trott2020a--mb-)
-- [132 Trott2020b ( BQ )](#132-trott2020b--bq-)
-- [133 Trott2022 ( JGOP )](#133-trott2022--jgop-)
-- [134 Varma2012 ( ABP )](#134-varma2012--abp-)
-- [135 Veijalainen2013 ( BQ )](#135-veijalainen2013--bq-)
-- [136 Vicente2020 ( MB )](#136-vicente2020--mb-)
-- [137 Visintainer2015 ( ABP )](#137-visintainer2015--abp-)
-- [138 Walsh2018 ( MB )](#138-walsh2018--mb-)
-- [139 Walsh2019 ( JGOP )](#139-walsh2019--jgop-)
-- [140 Wang2022 ( BQ )](#140-wang2022--bq-)
-- [141 White2022 ( MB )](#141-white2022--mb-)
-- [142 Williams2017 ( ABP )](#142-williams2017--abp-)
-- [143 Xie2014 ( SB )](#143-xie2014--sb-)
-- [144 Zhong2021 ( JGOP )](#144-zhong2021--jgop-)
-- [145 Zografakis2008 ( SB )](#145-zografakis2008--sb-)
-- [146 NA ( NA )](#146-na--na-)
+- [35 Gladwin2022 ( MB )](#35-gladwin2022--mb-)
+- [36 Gold2015a ( LR )](#36-gold2015a--lr-)
+- [37 Goulah2017 ( MB )](#37-goulah2017--mb-)
+- [38 Gutierrez2022 ( MB )](#38-gutierrez2022--mb-)
+- [39 Harker_Schuch2013 ( SC )](#39-harker_schuch2013--sc-)
+- [40 Harker_Schuch2020 ( SC )](#40-harker_schuch2020--sc-)
+- [41 Herrick2022 ( LR )](#41-herrick2022--lr-)
+- [42 Holthuis2014 ( ABP )](#42-holthuis2014--abp-)
+- [43 Hu2016 ( MB )](#43-hu2016--mb-)
+- [44 Jacobson2017 ( MB )](#44-jacobson2017--mb-)
+- [45 Jin2013 ( LR )](#45-jin2013--lr-)
+- [46 Jones2021 ( MB )](#46-jones2021--mb-)
+- [47 Kabir2015 ( SC )](#47-kabir2015--sc-)
+- [48 Karpudewan2015 ( MB )](#48-karpudewan2015--mb-)
+- [49 Karpudewan2015a ( JGOP )](#49-karpudewan2015a--jgop-)
+- [50 Karpudewan2017 ( MB )](#50-karpudewan2017--mb-)
+- [51 Keller2019 ( MB )](#51-keller2019--mb-)
+- [52 Kern2017 ( BQ )](#52-kern2017--bq-)
+- [53 Khadka2021 ( ABP )](#53-khadka2021--abp-)
+- [54 Kinsey2012 ( ABP )](#54-kinsey2012--abp-)
+- [55 Klosterman2010 ( JGOP )](#55-klosterman2010--jgop-)
+- [56 Kolenaty2022 ( SB )](#56-kolenaty2022--sb-)
+- [57 Korfgen2017 ( ABP )](#57-korfgen2017--abp-)
+- [58 Korsager2015 ( MB )](#58-korsager2015--mb-)
+- [59 Kubisch2022 ( ABP )](#59-kubisch2022--abp-)
+- [60 Kumar2023 ( SB )](#60-kumar2023--sb-)
+- [61 Lambert2012 ( ABP )](#61-lambert2012--abp-)
+- [62 Lambert2013 ( SC )](#62-lambert2013--sc-)
+- [63 Lawson2019a ( LR )](#63-lawson2019a--lr-)
+- [64 Lawson2019a ( LR )](#64-lawson2019a--lr-)
+- [65 Leckey2021 ( MB )](#65-leckey2021--mb-)
+- [66 Leitao2022 ( MB )](#66-leitao2022--mb-)
+- [67 Lester2006 ( ABP )](#67-lester2006--abp-)
+- [68 Levrini2021 ( SB )](#68-levrini2021--sb-)
+- [69 Li2022 ( BQ )](#69-li2022--bq-)
+- [70 Li2022 ( BQ )](#70-li2022--bq-)
+- [71 Littrell2022 ( SC )](#71-littrell2022--sc-)
+- [72 Liu2015 ( ABP )](#72-liu2015--abp-)
+- [73 Lombardi2013 ( ABP )](#73-lombardi2013--abp-)
+- [74 Lozano2022 ( SC )](#74-lozano2022--sc-)
+- [75 Markowitz2018 ( LR )](#75-markowitz2018--lr-)
+- [76 Mason1998 ( SB )](#76-mason1998--sb-)
+- [77 McGowan2022 ( SB )](#77-mcgowan2022--sb-)
+- [78 McNeal2014a ( LR )](#78-mcneal2014a--lr-)
+- [79 McNeill2012 ( SC )](#79-mcneill2012--sc-)
+- [80 Meya2018 ( SB )](#80-meya2018--sb-)
+- [81 Miller2015 ( MB )](#81-miller2015--mb-)
+- [82 Monroe2016 ( ABP )](#82-monroe2016--abp-)
+- [83 Muller2021 ( LR )](#83-muller2021--lr-)
+- [84 Muller2021a ( SC )](#84-muller2021a--sc-)
+- [85 Nafisah2022 ( MB )](#85-nafisah2022--mb-)
+- [86 Nakamura2019 ( ABP )](#86-nakamura2019--abp-)
+- [87 Nicholas_Figueroa2017 ( ABP )](#87-nicholas_figueroa2017--abp-)
+- [88 Nkoana2020 ( JGOP )](#88-nkoana2020--jgop-)
+- [89 Nussbaum2015 ( LR )](#89-nussbaum2015--lr-)
+- [90 Oberauer2023 ( LR )](#90-oberauer2023--lr-)
+- [91 Parant2017 ( ABP )](#91-parant2017--abp-)
+- [92 Park2020 ( MB )](#92-park2020--mb-)
+- [93 Parth2020 ( MB )](#93-parth2020--mb-)
+- [94 Pekel2019 ( SC )](#94-pekel2019--sc-)
+- [95 Petersen2020 ( ABP )](#95-petersen2020--abp-)
+- [96 Porter2012 ( ABP )](#96-porter2012--abp-)
+- [97 Pruneau2003 ( BQ )](#97-pruneau2003--bq-)
+- [98 Pruneau2006 ( BQ )](#98-pruneau2006--bq-)
+- [99 Pruneau2006a ( LR )](#99-pruneau2006a--lr-)
+- [100 Puttick2018 ( ABP )](#100-puttick2018--abp-)
+- [101 Raes2016 ( BQ )](#101-raes2016--bq-)
+- [102 Ratinen2013 ( BQ )](#102-ratinen2013--bq-)
+- [103 Reinfried2012 ( SB )](#103-reinfried2012--sb-)
+- [104 Roscoe2013 ( BQ )](#104-roscoe2013--bq-)
+- [105 Roychoudhury2017 ( ABP )](#105-roychoudhury2017--abp-)
+- [106 Ruboon2012 ( BQ )](#106-ruboon2012--bq-)
+- [107 Salas_Rueda2021 ( ABP )](#107-salas_rueda2021--abp-)
+- [108 Salsabila2019 ( SC )](#108-salsabila2019--sc-)
+- [109 Saribaş2016 ( JGOP )](#109-saribaş2016--jgop-)
+- [110 Schrot2021a ( MB )](#110-schrot2021a--mb-)
+- [111 Schubatzky2022 ( ABP )](#111-schubatzky2022--abp-)
+- [112 Schuster2008 ( JGOP )](#112-schuster2008--jgop-)
+- [113 Sellmann2013 ( ABP )](#113-sellmann2013--abp-)
+- [114 Sellmann2013a ( SB )](#114-sellmann2013a--sb-)
+- [115 Sellmann2015 ( MB )](#115-sellmann2015--mb-)
+- [116 Shea2016 ( ABP )](#116-shea2016--abp-)
+- [117 Siegner2018 ( SB )](#117-siegner2018--sb-)
+- [118 Silva2021 ( SC )](#118-silva2021--sc-)
+- [119 Skains2022 ( LR )](#119-skains2022--lr-)
+- [120 Smith2019 ( SC )](#120-smith2019--sc-)
+- [121 Steffensen2022 ( ABP )](#121-steffensen2022--abp-)
+- [122 Sternang2012 ( SB )](#122-sternang2012--sb-)
+- [123 Stevenson2018 ( LR )](#123-stevenson2018--lr-)
+- [124 Stevenson2018a ( MB )](#124-stevenson2018a--mb-)
+- [125 Sukardi2022 ( LR )](#125-sukardi2022--lr-)
+- [126 Sumrall2021 ( BQ )](#126-sumrall2021--bq-)
+- [127 Sundberg2013 ( BQ )](#127-sundberg2013--bq-)
+- [128 Sutela2023 ( JGOP )](#128-sutela2023--jgop-)
+- [129 Svihla2012 ( SB )](#129-svihla2012--sb-)
+- [130 Taber2009 ( ABP )](#130-taber2009--abp-)
+- [131 Tasquier2015 ( MB )](#131-tasquier2015--mb-)
+- [132 Tasquier2017 ( LR )](#132-tasquier2017--lr-)
+- [133 Tasti2021 ( MB )](#133-tasti2021--mb-)
+- [134 Taylor2020 ( BQ )](#134-taylor2020--bq-)
+- [135 Trott2019 ( JGOP )](#135-trott2019--jgop-)
+- [136 Trott2020a ( MB )](#136-trott2020a--mb-)
+- [137 Trott2020b ( BQ )](#137-trott2020b--bq-)
+- [138 Trott2022 ( JGOP )](#138-trott2022--jgop-)
+- [139 Varma2012 ( ABP )](#139-varma2012--abp-)
+- [140 Veijalainen2013 ( BQ )](#140-veijalainen2013--bq-)
+- [141 Vicente2020 ( MB )](#141-vicente2020--mb-)
+- [142 Visintainer2015 ( ABP )](#142-visintainer2015--abp-)
+- [143 Walsh2018 ( MB )](#143-walsh2018--mb-)
+- [144 Walsh2019 ( JGOP )](#144-walsh2019--jgop-)
+- [145 Wang2022 ( BQ )](#145-wang2022--bq-)
+- [146 White2022 ( MB )](#146-white2022--mb-)
+- [147 Williams2017 ( ABP )](#147-williams2017--abp-)
+- [148 Xie2014 ( SB )](#148-xie2014--sb-)
+- [149 Xie2014 ( SB )](#149-xie2014--sb-)
+- [150 Zhong2021 ( JGOP )](#150-zhong2021--jgop-)
+- [151 Zografakis2008 ( SB )](#151-zografakis2008--sb-)
+- [152 Zografakis2008 ( SB )](#152-zografakis2008--sb-)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -164,7 +170,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
 
 ``` r
 completeFTS <- read.xlsx("../../screening/fullTextScreening/fullTextScreening.xlsx")
-names(loadWorkbook("../../extraction/20230928.xlsx"))
+names(loadWorkbook("../../extraction/20231012_2.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -173,7 +179,7 @@ names(loadWorkbook("../../extraction/20230928.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20230928.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231012_2.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 #table(extract$`Validation.Mitigation/adaptation`)
 tabToWork<-extract[order(extract$id),]
@@ -200,7 +206,7 @@ for(i in 1:nrow(tabToWork))
   TAB<-t(tabToWork[i,c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Analysis.technique","Resultados.obtenidos.por.cada.outcome","Which.aspect.has.improved.or.not?")])
   # #cat(kable(TAB,col.names = c()))
   cat("**Data**:",TAB[1,],"\n\n")
-  TAB<-t(tabToWork[i,c("Duración.INTERV","tiempo.transcurrido.entre.la.intervencion.y.prueba","tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad","Horizon.of.change")])
+  TAB<-t(tabToWork[i,c("All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH","Total.duration.of.the.intervention","Period.length", "Number.of.sessions", "tiempo.transcurrido.entre.la.intervencion.y.prueba","tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad","Horizon.of.change")])
   cat(kable(TAB,col.names = c()))
 }
 ```
@@ -227,12 +233,48 @@ science
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 6 lessons, 12 hours, on a period which is not given
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+12h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+6.0
 
 </td>
 </tr>
@@ -291,13 +333,49 @@ experiences in a classroom setting
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 15 min for the pre-test, 24 min for the simulation, and 15 min for the
 post-test
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+24min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -359,12 +437,48 @@ new energy alternatives, can make a meaningful impact in reducing GCC.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 20 mins drawing pre test, exhibition and 20 mins post test
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+1h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -425,12 +539,50 @@ question and all follow-up elicitations,
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-eight weeks
+eight weeks total, weekly classroom discussions, test of question and
+the drawing is estimated to be around 20 minutes $$Should we
+approximately consider 1h weekly?$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+8.0
 
 </td>
 </tr>
@@ -493,12 +645,48 @@ the classroom instructions were expanded to suggest “causes” or
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-three 2-hour classroom visits
+Over three 2-hour classroom visits
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+6h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+3.0
 
 </td>
 </tr>
@@ -562,12 +750,48 @@ shared beliefs, values, and worldviews.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-4-5 months
+Over a period of 4–5 months, within each class, (1 semester)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+5M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -630,12 +854,48 @@ average surface temperatures for making initial claim.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 3 weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+21D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+15.0
 
 </td>
 </tr>
@@ -708,12 +968,48 @@ comprehension.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-Two days
+Two days. No more details.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~4h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
 
 </td>
 </tr>
@@ -780,12 +1076,48 @@ and 3 open-ended response items
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-20 days
+20 days. No more details.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+20D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+20.0
 
 </td>
 </tr>
@@ -821,7 +1153,7 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-NA
+Short term
 
 </td>
 </tr>
@@ -858,12 +1190,49 @@ they completed a worksheet about mitigation strategies
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 year
+Participating teachers received a week-long training on the climate
+change curriculum and met throughout the year with the research team
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -924,12 +1293,51 @@ respectively.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 semester
+1 year total, the first year survey was administered by a research
+assistant during the latter half of an introductory lecture in semester
+1, during their first year and during the information session for their
+final practicum in semester 2, of their final year.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
 
 </td>
 </tr>
@@ -987,13 +1395,49 @@ TOWARDS GLOBAL WARMING
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 4 MONTHS (1 SEMESTER) two hours per week and the total contact hours
 were 28.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+28h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+4M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+14.0
 
 </td>
 </tr>
@@ -1081,12 +1525,48 @@ role of fossil fuels in climate change
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 5 hours and 30 min over 2 weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+5h30min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
 
 </td>
 </tr>
@@ -1150,12 +1630,48 @@ about CC
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 5 sessions of between 120 and 85 mins
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+8h30min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -1215,12 +1731,48 @@ post workshop reflection forms
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 2 days $$seems full time but no information$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~14h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
 
 </td>
 </tr>
@@ -1278,12 +1830,49 @@ weather and climate:
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+The intervention was divided into four sessions corresponding to four
+key topics on weather and climate - it doent say how long it took
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
 
 </td>
 <td style="text-align:left;">
 
 NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+4.0
 
 </td>
 </tr>
@@ -1345,12 +1934,48 @@ cessation of suffering which emphasizes problem solving by oneself
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-5 lessons
+5 assigned lesson plans for three weeks, 3 h each.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+15h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+21D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -1439,7 +2064,7 @@ randomly selected for interview by the second author as a case sample
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
@@ -1447,6 +2072,42 @@ Duración.INTERV
 7 weeks, 120 min/week, Note the the 3 last weeks are used to collect
 qualitative information and could be excluded because they are not
 really part of the intervention
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+8h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+4.0
 
 </td>
 </tr>
@@ -1508,14 +2169,50 @@ each group was asked to choose one of these regions.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 The pre-survey was conducted before the first class and took 15–20
-minutes. The post-survey was conducted after the last class, also taking
-15–20 minutes.
+minutes. 20 minutes intervention, The post-survey was conducted after
+the last class, also taking 15–20 minutes.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+1h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -1583,12 +2280,63 @@ observations and collecting real- world data.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-2 months
+"2 months: 1st week: The first week’s nature observation took 30 minutes
+and afterward the discussion was conducted. 2nd week: a Zoom meeting was
+conducted and mathematical modeling was introduced, this session took 30
+min. 3rd week: another 40-minute Zoom meeting was settled for discussing
+life in the forest and biohazards of the forest. 4th week: On the fourth
+week of the activity, the problem was introduced to groups, and PSTs
+were guided to search for the PPCs in addition to the information given
+the week before the Zoom meeting. (There is no information about session
+lenght) 5th week: PSTs were given one week to examine the problem and
+produce their strategies. 6th week: On the sixth day of the activity,
+the worksheet of the problem was divided into 8 parts for PSTs to
+analytically analyze the problem. 7th week: PSTs collected real-world
+data by counting the number of caterpillar sacs from the red pine
+forests they identified. 8th week: groups were gathered and presented
+their mathematical model to get a reasonable solution in a 40-minute
+session. "
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -1624,7 +2372,7 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-NA
+Short term
 
 </td>
 </tr>
@@ -1651,12 +2399,48 @@ significant
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 meeting per month during 6 months.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+6M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+6.0
 
 </td>
 </tr>
@@ -1723,12 +2507,48 @@ activities and field trips.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 Three days, morning and afternoon.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~21h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+6.0
 
 </td>
 </tr>
@@ -1792,12 +2612,48 @@ protests
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 One year (no intensity given)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -1854,12 +2710,48 @@ Educational Rigor and Relevance
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 year
+3-y project, only during summer institutes (3 weeks long)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -1922,12 +2814,48 @@ agricultural and natural ressources.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 6 days of 50 min classes
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+5h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+6D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+6.0
 
 </td>
 </tr>
@@ -1986,12 +2914,48 @@ hypotheses for local climate trends from online weather station data.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-six 50-minute periods per class
+five classes over six 50-minute periods per class
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+5h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~5M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+6.0
 
 </td>
 </tr>
@@ -2064,12 +3028,48 @@ pre- and post-instruction.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 60h over one year
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+60h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~20
 
 </td>
 </tr>
@@ -2139,12 +3139,48 @@ their reasoning beyond the basic multiple-choice selection.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 ND
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -2221,12 +3257,48 @@ socioscientific decision making
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 Four sessions of 90 minutes each.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+6h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+4.0
 
 </td>
 </tr>
@@ -2286,12 +3358,48 @@ t-tests
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 5 days $$sounds like complete days, but the information is not given$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~35h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+5D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+10.0
 
 </td>
 </tr>
@@ -2356,12 +3464,72 @@ t-tests
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 2 days $$complete days with morning and afternoon activities
+```{=html}
+</td>
+```
+```{=html}
+</tr>
+```
+```{=html}
+<tr>
+```
+```{=html}
+<td style="text-align:left;">
+```
+Total.duration.of.the.intervention
+```{=html}
+</td>
+```
+```{=html}
+<td style="text-align:left;">
+```
+\~14h
+```{=html}
+</td>
+```
+```{=html}
+</tr>
+```
+```{=html}
+<tr>
+```
+```{=html}
+<td style="text-align:left;">
+```
+Period.length
+```{=html}
+</td>
+```
+```{=html}
+<td style="text-align:left;">
+```
+2D
+```{=html}
+</td>
+```
+```{=html}
+</tr>
+```
+```{=html}
+<tr>
+```
+```{=html}
+<td style="text-align:left;">
+```
+Number.of.sessions
+```{=html}
+</td>
+```
+```{=html}
+<td style="text-align:left;">
+```
+4.0
 ```{=html}
 </td>
 ```
@@ -2417,7 +3585,12 @@ corto
 **title** Two approaches for analyzing students’ competence of
 ‘evaluation’ in group discussions about climate change
 
-**Intervention**: NA
+**Intervention**: two approaches for handling students’ evaluation
+capabilities in the context of multidimensional discussion situations.
+One approach focuses on the quality of learners’ arguments concerning
+levels of justification; the second reflects upon the quality of pupils’
+complexity of argumentation. Both approaches were created using group
+discussion data collected for evaluation purposes.
 
 **Data**: NA
 
@@ -2426,7 +3599,43 @@ corto
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -2508,13 +3717,49 @@ persona of Carbon Bond) as the heroes.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 The game play and two surveys took a total of 30 to 45 minutes, or one
 class period, to complete.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+45min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -2579,12 +3824,48 @@ answer follow-up questions.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 50 minutes
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+50min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -2627,7 +3908,152 @@ Short term
 </tbody>
 </table>
 
-# 35 Gold2015a ( LR )
+# 35 Gladwin2022 ( MB )
+
+**title** Collaborative learning on energy justice: International youth
+perspectives on energy literacy and climate justice
+
+**Intervention**: Tools: TakingITGlobal online education platform,
+virtual classroom containing curriculum material, student blog space,
+WhatsApp, Skype, Messenger, Zoom, Google Doc. - Students began by
+introducing themselves on the platform according to their own personal
+and community energy access, use, and generation - Locally-focused
+activities then drew students into their communities as they mapped
+local energy sources and flows - They also considered the
+interconnections between their individual energy footprints and those of
+their communities and countries. - They compared their learning across
+contexts through a series of collaborations with one another, studying
+how histories,cultures, economies, geopolitical relations, lands, and
+resources all situated them in relation to energyavailability, use, and
+transition. - Students then met in three continental groupings,
+consisting of (a) Africa and Europe, (b) Asia and Oceania, and (c) North
+and South America. For their continental meeting, students examined case
+studies and prepared presentations on key considerations for energy
+justice, which they discussed together at the videoconference. In a
+global videoconference, students reflected on their cumulative learning,
+returning to the pressing issue of climate change. - Following seven
+months of collaboration, a select group of youth, chosen by their peers
+and representing all schools (except Finland, Kuwait, and Oman), came
+together over video conference through a collaborative writer’s retreat
+in April 2020. They developed a presentation, essay, and opinion
+editorial piece to share with their home schools, communities, and the
+greater public. Students discussed their key themes, structured their
+various projects, and developed their ideas using content from the blog
+posts to ensure representation of the full student group. Youth wrote
+simultaneously and collaboratively using Google Docs over Zoom.
+
+**Data**: Data were collected from several sources, including student
+research artifacts, reflections on the project, and focus groups. The
+data sources consist of the students’ video, “Global youth demand energy
+justice: This is about YOU too,” their essay, “Together, we can make the
+change: International youth deliberation on energy futures,” and their
+opinion editorial, “Climate change as a pandemic: A pandemic called
+climate change”. We conducted two focus groupswith 11 of the students
+from the writer’s retreat workshops and gathered written responses from
+seven students who were unable to attend the focus groups. Interviewed
+students represented Brazil, Canada, Colombia, Costa Rica, Ghana, India,
+Kenya, Nigeria, Peru, the Philippines, Poland, Slovenia, South Korea,
+and Uganda. Student interview questions focused on the impacts of the
+curriculum on students’ understanding of energy justice, the role of
+international collaboration on student learning, and youth visions for
+the future, including their understanding of their roles in building
+those futures. As interviews were conducted only with student
+participants of the writers’ retreat, we supplemented analysis by
+examining work and responses by the full group of students in the online
+classroom. We added our own research reflections with our experiences as
+facilitators of the real-time international videoconferences and online
+writer’s retreat workshops.
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+7 months, no indication of intensity
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+7M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.intervencion.y.prueba
+
+</td>
+<td style="text-align:left;">
+
+Concurrent
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Horizon.of.change
+
+</td>
+<td style="text-align:left;">
+
+very short term
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 36 Gold2015a ( LR )
 
 **title** Arctic Climate Connections Curriculum: A Model for Bringing
 Authentic Data Into the Classroom
@@ -2638,19 +4064,62 @@ used throughout the curriculum. It included interactive lectures with
 two research scientists on the sciences of the Artic and data collection
 in the Artic’s extreme environment
 
-**Data**: NA
+**Data**: The survey was developed to measure four constructs: (1)
+personal views on global warming, (2) climate content knowledge, (3)
+nature of science understanding, and (4) quantitative skills (Table II).
+We strived to include questions from most levels of Bloom’s taxonomy,
+from basic knowledge questions to evaluation questions (Anderson and
+Krathwohl, 2001). The survey contained questions created speciﬁcally for
+the ACC workshop, along with questions derived from others (Leiserowitz
+et al., 2011; Gormally et al., 2012; Morrow, 2013).
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 day
+1- day long workshop
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~7h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -2687,14 +4156,276 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-corto
+Short term
 
 </td>
 </tr>
 </tbody>
 </table>
 
-# 36 Harker_Schuch2013 ( SC )
+# 37 Goulah2017 ( MB )
+
+**title** Climate Change and TESOL: Language, Literacies, and the
+Creation of Eco-Ethical Consciousness
+
+**Intervention**: The ESL teacher, Mr. Ross, engaged students in two
+types of curricular interaction with climate change: critical
+consumption and critical composition of “texts,” which he defined in
+multiple forms and genres. Texts for critical consumption included (as
+presented) “Climate Change” in Easy English News (Claire, 2007), which
+also provided vocabulary and material for content quizzes; the film An
+Inconvenient Truth (Guggenheim, 2006); two magazine advertisements
+centered on climate change (for Honda and for Diesel clothing); three
+online articles about sustainability perspectives and practices of
+Evangelicals, Muslims, and Buddhists; product and political commercials;
+the video “George Bush on Global Warming—Spoof by Will Ferrell”
+(Buzzpal, 2007); and a reading comprehension worksheet on “Spaceship
+Earth.” Critical composition involved short writing activities (e.g.,
+posing questions about texts, personal narratives) and, as the final
+project, composing digital video (DV) political commercials for or
+against “being ‘green.’”
+
+**Data**: Data were collected daily for 7 weeks and included multiple
+semistructured and audio-recorded interviews with individual
+participants, ethnographic fieldnotes from daily classroom visits and
+interactions with participants, daily video recordings of classes, and
+student work (including digital video projects, quizzes, homework, and
+in-class notes and assignments).
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+No indication of duration concerning intervention, but the author
+mention that "Data were collected daily for 7 weeks", so we can assume
+that it is the period of the intervention, there is no mention of the
+intensity though. If needed we could assume at least one hour daily, but
+there is no indication that is really the case
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~35h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+49D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~35
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.intervencion.y.prueba
+
+</td>
+<td style="text-align:left;">
+
+Concurrent (no final test)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Horizon.of.change
+
+</td>
+<td style="text-align:left;">
+
+Very short term
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 38 Gutierrez2022 ( MB )
+
+**title** What effective design strategies do rural, underserved
+students in STEM clubs value while learning about climate change?
+
+**Intervention**: 3 sessions of STEM club over 2 months concerning
+climate change: - Weather vs. climate - Greenhouse gases and Carbon
+footprinting - Alternative energies In each session, there are different
+activities classified in general strategies: - Personnaly relevant and
+meaningful intervention (e.g. personal articles for club newsletters) -
+Using active and engaging teaching methods (e.g. videos, set up carbon
+dioxide greenhouse to model warming) - Engaging in deliberative
+discussions (e.g. card sort & discussion, station labs) - Interacting
+with scientists to experience the scientific process for themselves
+(e.g. state climatologist via zoom, guest speaker from WWF, fisheries
+PhD students) - uncovering and addressing misconceptions (e.g. national
+geographic videos, quizzes in the newsletters) - implementing school or
+community projects (e.g. poster in school to reduce impact, newsletters
+written and sent every week)
+
+**Data**: $$Quantitative$$ A survey was given both pre- and
+post-intervention, administered to individuals online through Qualtrics.
+Students took the pre-survey at the beginning of the first climate
+change STEM Club and took the post-survey at school during an
+enrichment/study hall period within a month following the final climate
+change-focused club meeting. Students completed the surveys within 18
+min, on average. The survey was developed using items selected from the
+Yale Project on Climate Change Communication’s American Teens’ Knowledge
+of Climate Change survey (Leiserowitz, Smith, and Marlon 2010, 2011) to
+assess objective knowledge, attitudes, and subjective knowledge The
+survey was modified to both measure the constructs of interest and to
+reduce the number of items, reduce the length of the survey, and
+eliminate overly difficult content items. - Objective knowledge: climate
+literacy. Objective knowledge was measured via 76 items, grouped to
+represent the seven Essential Principles of Climate Science (USGCRP
+2009). - Beliefs/attitudes. The survey included 4 items assessing
+students’ attitudes about climate change: belief that it is happening,
+confidence in that belief, worry, and their understanding of the
+scientific consensus. - Subjective knowledge. Students’ subjective
+knowledge – how much someone thinks they know about a topic – about
+climate principles 2, 6, and 7 was assessed using 5 items
+$$Qualitative$$ Following each club meeting, all students were invited
+to complete a three-item reflection questionnaire, in which they
+examined their perceptions about collaboration and offered their general
+thoughts. A codebook was co-developed to capture samples of how the
+students’ responses mapped onto the constructs with approximately 25% of
+the sample; then, students’ statements were coded, guided by the
+codebook, by the first two authors. After independent coding of the rest
+of the data, all codes were reviewed and differences in interpretation
+were negotiated until there was 100% agreement
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+3 STEM club 2h-sessions over 2 months,
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+6h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+3.0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.intervencion.y.prueba
+
+</td>
+<td style="text-align:left;">
+
+"Within a month"
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Horizon.of.change
+
+</td>
+<td style="text-align:left;">
+
+Middle term
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 39 Harker_Schuch2013 ( SC )
 
 **title** Opinions and Knowledge About Climate Change Science in High
 School Students
@@ -2713,20 +4444,64 @@ approximately 30–40 s for each slide to be shown. After the lecture
 students continued their usual courses within their respective
 disciplines.
 
-**Data**: Pre-post questionnaire right after the lecture and 1 month
-later.
+**Data**: Pre-post questionnaire 1 month later.
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-45 min
+Pre-questionnaire: 45 min Lecture: 45 min Post-questionnaire: 45 min -
+The follow-up questionnaire was given within approximately 1 month of
+the lecture. La intervención como tal es únicamente la lecture de aprox.
+45 min. Si incluimos las sesiones de pre y post estaríamos hablando de
+135 min. aprox. La intervención como tal es únicamente la lecture de
+aprox. 45 min. Si incluimos las sesiones de pre y post estaríamos
+hablando de 135 min. aprox. The questionnaires were distributed and
+collected in the period from early March 2011 until late June 2011.
+Number of sessions:DEPENDE DE QUÉ CONSIDEREMOS LA INTERVENCIÓN (1
+SESIÓN - LECTURE O 3 SESIONES - PRE, LECTURE, POST) No more details.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~45min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~1
 
 </td>
 </tr>
@@ -2738,7 +4513,7 @@ tiempo.transcurrido.entre.la.intervencion.y.prueba
 </td>
 <td style="text-align:left;">
 
-Immediate
+1 month
 
 </td>
 </tr>
@@ -2750,7 +4525,7 @@ tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
 </td>
 <td style="text-align:left;">
 
-1 month
+NA
 
 </td>
 </tr>
@@ -2769,7 +4544,7 @@ Long term
 </tbody>
 </table>
 
-# 37 Harker_Schuch2020 ( SC )
+# 40 Harker_Schuch2020 ( SC )
 
 **title** CO2peration – Structuring a 3D interactive digital game to
 improve climate literacy in the 12-13-year-old age group
@@ -2804,12 +4579,48 @@ science questions
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 45-50 min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+50min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -2845,14 +4656,14 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-Middle term
+Short term
 
 </td>
 </tr>
 </tbody>
 </table>
 
-# 38 Herrick2022 ( LR )
+# 41 Herrick2022 ( LR )
 
 **title** Through the eyes of a child: exploring and engaging elementary
 students’ climate conceptions through photovoice
@@ -2871,12 +4682,48 @@ conversation. Quatitatively: Post-TE survey shortened and adapted for
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 8 weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -2912,14 +4759,14 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-Corto
+Short
 
 </td>
 </tr>
 </tbody>
 </table>
 
-# 39 Holthuis2014 ( ABP )
+# 42 Holthuis2014 ( ABP )
 
 **title** Supporting and Understanding Students’ Epistemological
 Discourse About Climate Change
@@ -2943,12 +4790,48 @@ change to both physical and biological systems.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 year
+three times during implementation of the 4–5 week, 1 year
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+3.0
 
 </td>
 </tr>
@@ -2991,7 +4874,7 @@ long term
 </tbody>
 </table>
 
-# 40 Hu2016 ( MB )
+# 43 Hu2016 ( MB )
 
 **title** Place-based inter-generational communication on local climate
 improves adolescents’ perceptions and willingness to mitigate climate
@@ -3019,12 +4902,48 @@ purposive sampling after the post-tests
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1h on 2 days
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+1h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
 
 </td>
 </tr>
@@ -3067,7 +4986,7 @@ Short term
 </tbody>
 </table>
 
-# 41 Jacobson2017 ( MB )
+# 44 Jacobson2017 ( MB )
 
 **title** Designs for learning about climate change as a complex system
 
@@ -3099,12 +5018,48 @@ quantitative analyses
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 4 one-hour activities, on different days
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+4h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~5D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+4.0
 
 </td>
 </tr>
@@ -3147,7 +5102,7 @@ Short term
 </tbody>
 </table>
 
-# 42 Jin2013 ( LR )
+# 45 Jin2013 ( LR )
 
 **title** Developing a Fine-Grained Learning Progression Framework for
 Carbon-Transforming Processes
@@ -3156,14 +5111,63 @@ Carbon-Transforming Processes
 and scale (tools for reasoning Plants Unit Animal Unit Decomposers Unit
 Ecosystem Unit Human Energy Systems Unit
 
-**Data**: NA
+**Data**: Two assessment instruments: a semi-structured clinical
+interview contained eight tasks. Seven tasks required students to
+explain individual macroscopic processes: tree growth, baby girl growth,
+girl running, tree decay, flame burning, car running, and lamp
+lightning. The other, a written Assessment assessed students’
+understanding of large-scale systems.
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+we conducted teaching interventions and assessment studies in iterative
+research cycles. We began curriculum development in the 2007–2008 school
+year and have completed three cycles of research. Findings reported in
+this article are based on data collected in the third research cycle
+(2009–2010 school year). Based on the upper anchor (Figure 1) and the
+findings of students’ reasoning in the first two research cycles, we
+have developed six units to teach students carbon-transforming processes
+<https://edr1.educ.msu.edu/EnvironmentalLit/publicsite/html/cc_tm_0910.html>.
+$$Intensity and number of session not given$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -3180,7 +5184,7 @@ tiempo.transcurrido.entre.la.intervencion.y.prueba
 </td>
 <td style="text-align:left;">
 
-NA
+immediate
 
 </td>
 </tr>
@@ -3204,14 +5208,15 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-NA
+I am guessing long term because authos talk about 3 cycles in the
+2009-2010 school year
 
 </td>
 </tr>
 </tbody>
 </table>
 
-# 43 Jones2021 ( MB )
+# 46 Jones2021 ( MB )
 
 **title** “It makes me angry. REALLY angry”: exploring emotional
 responses to climate change education
@@ -3242,12 +5247,48 @@ teachers where they write their impressions
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 day $$no indication of duration$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -3291,7 +5332,7 @@ Very short term
 </tbody>
 </table>
 
-# 44 Kabir2015 ( SC )
+# 47 Kabir2015 ( SC )
 
 **title** Child Centred Approach to Climate Change and Health Adaptation
 through Schools in Bangladesh: A Cluster Randomised Intervention Trial
@@ -3325,12 +5366,48 @@ minutes to complete.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 6 months
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~18h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+6M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+24.0
 
 </td>
 </tr>
@@ -3366,14 +5443,14 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-NA
+Very short term
 
 </td>
 </tr>
 </tbody>
 </table>
 
-# 45 Karpudewan2015 ( MB )
+# 48 Karpudewan2015 ( MB )
 
 **title** Enhancing Primary School Students’ Knowledge about Global
 Warming and Environmental Attitude Using Climate Change Activities
@@ -3397,13 +5474,49 @@ semi-structured interviews on 10 students $$5 in each group$$
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 5 weeks, no indication of intensity, but seem to be one lesson/week
 probably around 1-2h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~7h30min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M7D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~5
 
 </td>
 </tr>
@@ -3446,7 +5559,7 @@ Middle term
 </tbody>
 </table>
 
-# 46 Karpudewan2015a ( JGOP )
+# 49 Karpudewan2015a ( JGOP )
 
 **title** Remediating misconception on climate change among secondary
 school students in Malaysia
@@ -3469,12 +5582,48 @@ discussing in groups, and presentation of the outcome of discussion.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 Five weeks each group
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+10h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M5D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -3517,7 +5666,7 @@ Short term
 </tbody>
 </table>
 
-# 47 Karpudewan2017 ( MB )
+# 50 Karpudewan2017 ( MB )
 
 **title** Experiential-based climate change education: fostering
 students’ knowledge and motivation towards the environment
@@ -3559,12 +5708,48 @@ items.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 2 hours each week over 6 weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+12h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+6.0
 
 </td>
 </tr>
@@ -3607,7 +5792,7 @@ Short term
 </tbody>
 </table>
 
-# 48 Keller2019 ( MB )
+# 51 Keller2019 ( MB )
 
 **title** Changing Climate Change Education. Exploring moderate
 constructivist and transdisciplinary approaches through the
@@ -3628,12 +5813,48 @@ students
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 150h on one academic year
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+150h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -3676,26 +5897,78 @@ Short term
 </tbody>
 </table>
 
-# 49 Kern2017 ( BQ )
+# 52 Kern2017 ( BQ )
 
 **title** A culturally relevant teacher professional development for
 Teaching climate change to Native American Students
 
-**Intervention**: NA
+**Intervention**: The teachers also with both science education experts
+and indigenous cultural leaders and experts, and they were given
+examples of how to align course materials and classroom teaching
+practices with the Indigenous students’ ethnic and tribal memberships,
+backgrounds, and cultures. Interventions include: - Summer Workshops and
+Follow-Up Activities (In the first summer workshops (June and August
+–Year I) the project team involved participants in structured
+instructional experiences, including presentation and lectures,
+interacting with computer modeling programs, and field-based examples of
+climate change) - Online Support ( ICE-Net program leaders and
+scientists demonstrated and employed online teacher support programs
+with project teachers) - The ICE-Net Climate Concepts Matrix is a
+publically available resource for educators via the ICE-Net website,
+<http://icenetmatrix.com/>.
 
-**Data**: NA
+**Data**: 1. Content knowledge - ICE-Net Climate Change Content
+Knowledge Survey. (Appendix. A) 2. Culturally relevant instruction
+awareness - Culturally Congruent Inventory (CCI) (Sievert & LaFrance,
+2011). (Appendix B)
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-3 years
+3 years, no more data on number of sessions nor duration of sessions
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -3738,7 +6011,7 @@ Long term
 </tbody>
 </table>
 
-# 50 Khadka2021 ( ABP )
+# 53 Khadka2021 ( ABP )
 
 **title** Unpacking the power of place-based education in climate change
 communication
@@ -3765,12 +6038,48 @@ track, and 25-32 1⁄4 keep it up.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 WEEK
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -3813,7 +6122,7 @@ short term
 </tbody>
 </table>
 
-# 51 Kinsey2012 ( ABP )
+# 54 Kinsey2012 ( ABP )
 
 **title** Using Rain Gardens to Promote Service Learning and Climate
 Science Education with Urban Youth
@@ -3837,12 +6146,48 @@ aesthetically leasing, and require minimal maintenance.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 year
+2 school years, 1 year each, no much information
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -3885,7 +6230,7 @@ long term
 </tbody>
 </table>
 
-# 52 Klosterman2010 ( JGOP )
+# 55 Klosterman2010 ( JGOP )
 
 **title** Multi‐level Assessment of Scientific Content Knowledge Gains
 Associated with Socioscientific Issues‐based Instruction
@@ -3911,12 +6256,48 @@ Test
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 Three weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+15h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+20D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+7.0
 
 </td>
 </tr>
@@ -3959,7 +6340,7 @@ Short term
 </tbody>
 </table>
 
-# 53 Kolenaty2022 ( SB )
+# 56 Kolenaty2022 ( SB )
 
 **title** What Triggers Climate Action: The Impact of a Climate Change
 Education Program on Students’ Climate Literacy and Their Willingness to
@@ -3980,12 +6361,49 @@ and national stakeholders to present adapt/ mitigation proposals
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 school year
+1 school year, 4 missions with various activities per mission. No
+further precision.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -4028,7 +6446,7 @@ very short term
 </tbody>
 </table>
 
-# 54 Korfgen2017 ( ABP )
+# 57 Korfgen2017 ( ABP )
 
 **title** (Climate) Change in young people’s minds – From categories
 towards interconnections between the anthroposphere and natural sphere
@@ -4048,12 +6466,48 @@ with an authentic high mountain environment.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 5 days
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+5D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -4096,7 +6550,7 @@ short term
 </tbody>
 </table>
 
-# 55 Korsager2015 ( MB )
+# 58 Korsager2015 ( MB )
 
 **title** International Peer Collaboration to Learn about Global Climate
 Changes
@@ -4150,13 +6604,49 @@ platform.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 6 weeks $$No indication of intensity, seems to be free, depending on the
 student motivation$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -4199,7 +6689,7 @@ short term
 </tbody>
 </table>
 
-# 56 Kubisch2022 ( ABP )
+# 59 Kubisch2022 ( ABP )
 
 **title** Rethinking Quality Science Education for Climate Action:
 Transdisciplinary Education for Transformative Learning and Engagement
@@ -4216,12 +6706,50 @@ FAR IT SEEMS AS THOUGH INTERVENTION DOESN METION CLIMATE CHANGE
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 year
+Over the course of one school year, The collaboration started at the
+beginning of the school year in September 2020 and ended in July 2021.
+No info on number of sessions/contact time
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -4264,7 +6792,7 @@ long term
 </tbody>
 </table>
 
-# 57 Kumar2023 ( SB )
+# 60 Kumar2023 ( SB )
 
 **title** Using empirical science education in schools to improve
 climate change literacy
@@ -4285,12 +6813,50 @@ consequences and possible mitigations of CC.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-5 sessions with a 5/6 week interval.
+5, 30 minutes sessions with a 5/6 week interval. $$Interval is the total
+span? (in my estimation I took interval as the time between 2
+sessions)$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+2h30min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~7M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -4333,7 +6899,7 @@ very short term
 </tbody>
 </table>
 
-# 58 Lambert2012 ( ABP )
+# 61 Lambert2012 ( ABP )
 
 **title** Assessing Elementary Science Methods Students’ Understanding
 About Global Climate Change
@@ -4348,12 +6914,48 @@ science methods course.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 week
+4 weeks, 25-min video segment
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+10.0
 
 </td>
 </tr>
@@ -4396,7 +6998,7 @@ short term
 </tbody>
 </table>
 
-# 59 Lambert2013 ( SC )
+# 62 Lambert2013 ( SC )
 
 **title** Climate Change in the Preservice Teacher’s Mind
 
@@ -4426,31 +7028,20 @@ the issue of climate change, and (8) trust of sources of information.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 Semester
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-tiempo.transcurrido.entre.la.intervencion.y.prueba
-
-</td>
-<td style="text-align:left;">
-
-Inmediatly
+1 Semester, no more info $$Do you have any info/estimation, just to know
+whether this is a regular activity or just punctual$$
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+Total.duration.of.the.intervention
 
 </td>
 <td style="text-align:left;">
@@ -4462,177 +7053,24 @@ NA
 <tr>
 <td style="text-align:left;">
 
-Horizon.of.change
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+4M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
 
 NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-# 60 Lawson2019a ( LR )
-
-**title** Children can foster climate change concern among their parents
-
-**Intervention**: Discussions with parents and family on the basis of
-students´service projects
-
-**Data**: NA
-
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Duración.INTERV
-
-</td>
-<td style="text-align:left;">
-
-two years
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-tiempo.transcurrido.entre.la.intervencion.y.prueba
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Horizon.of.change
-
-</td>
-<td style="text-align:left;">
-
-Largo término
-
-</td>
-</tr>
-</tbody>
-</table>
-
-# 61 Lawson2019a ( LR )
-
-**title** Children can foster climate change concern among their parents
-
-**Intervention**: The original activities focused on the difference
-between weather and climate, how climate and weather relate to wildlife
-habitat, how wildlife managers can make use of adaptive management to
-deal with climate change, and how individual actions can impact the
-effect of climate change on wildlife17 . We added three components:
-engagement with parents through an interview conducted by students, a
-field-based service-learning project in conjunction with a community
-partner, and a reflective blog post (Supplementary Tables 1 and 3).
-
-**Data**: NA
-
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Duración.INTERV
-
-</td>
-<td style="text-align:left;">
-
-two years
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-tiempo.transcurrido.entre.la.intervencion.y.prueba
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Horizon.of.change
-
-</td>
-<td style="text-align:left;">
-
-Largo término
-
-</td>
-</tr>
-</tbody>
-</table>
-
-# 62 Leckey2021 ( MB )
-
-**title** Exploring local environmental change through filmmaking: the
-Lentes en Cambio Climatico program
-
-**Intervention**: LECC workshops consisted of seven-days of informal
-science learning. In these workshops, students learned about climate
-change and filmmaking techniques before engaging with other students to
-create their own films. The LECC workshops were divided into three
-phases of filmmaking: pre-production (research and scripting),
-production (filming), and post-production (editing)
-
-**Data**: - pre and post workshop surveys (Awareness, 2018 and 2019) -
-Transformative Experience questionnaire (Awareness, intention) -
-post-workshop focus groups (2018) - individual student interviews
-Interviews and post workshop interviews were transcribed and translated,
-then coded by the researchers
-
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Duración.INTERV
-
-</td>
-<td style="text-align:left;">
-
-7 days (not precised but we can assume full time)
 
 </td>
 </tr>
@@ -4675,7 +7113,339 @@ Short term
 </tbody>
 </table>
 
-# 63 Leitao2022 ( MB )
+# 63 Lawson2019a ( LR )
+
+**title** Children can foster climate change concern among their parents
+
+**Intervention**: Discussions with parents and family on the basis of
+students´service projects
+
+**Data**: Both child and adult climate change concern was measured using
+a scale developed from the 2011 nationwide climate change adolescent
+survey33 and used in several subsequent studies (Supplementary Tables 6
+and 7). Level of climate change discussion in the family was measured
+through a single question, ‘how often have you discussed climate change
+at home with your family?’
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+two years
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.intervencion.y.prueba
+
+</td>
+<td style="text-align:left;">
+
+immediate
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Horizon.of.change
+
+</td>
+<td style="text-align:left;">
+
+Long term
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 64 Lawson2019a ( LR )
+
+**title** Children can foster climate change concern among their parents
+
+**Intervention**: The original activities focused on the difference
+between weather and climate, how climate and weather relate to wildlife
+habitat, how wildlife managers can make use of adaptive management to
+deal with climate change, and how individual actions can impact the
+effect of climate change on wildlife17 . We added three components:
+engagement with parents through an interview conducted by students, a
+field-based service-learning project in conjunction with a community
+partner, and a reflective blog post (Supplementary Tables 1 and 3).
+
+**Data**: developed two assessment instruments: a semi-structured
+clinical interview and a written assessment. The interview contained
+eight tasks. Seven tasks required students to explain individual
+macroscopic processes: tree growth, baby girl growth, girl running, tree
+decay, ﬂame burning, car running, and lamp lightning. The other task
+assessed students’ understanding of large-scale systems.
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+We trained all teachers in the curriculum following a delayed- treatment
+model31 in summer 2016 (year 1 treatment teachers) and summer 2017 (year
+1 control teachers), and used an in-person format allowing for
+discussion and reflection, which follows best practices for teacher
+professional development32. In year one, we asked the treatment teachers
+to integrate the lessons during the school year after pre-testing, and
+control teachers were asked to teach their regularly planned curriculum.
+All teachers integrated the curriculum lessons into their regular
+classrooms during year two (Supplementary Table 5 shows measures of
+fidelity of curriculum implementation). The curriculum consisted of four
+classroom activities and a field-based service-learning proj- ect, as
+well as an interview with parents (see Supplementary Table 1). Number of
+session: 4 classroom activities and 1 field-based
+service-learning-project
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.intervencion.y.prueba
+
+</td>
+<td style="text-align:left;">
+
+immediate
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Horizon.of.change
+
+</td>
+<td style="text-align:left;">
+
+Long term
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 65 Leckey2021 ( MB )
+
+**title** Exploring local environmental change through filmmaking: the
+Lentes en Cambio Climatico program
+
+**Intervention**: LECC workshops consisted of seven-days of informal
+science learning. In these workshops, students learned about climate
+change and filmmaking techniques before engaging with other students to
+create their own films. The LECC workshops were divided into three
+phases of filmmaking: pre-production (research and scripting),
+production (filming), and post-production (editing)
+
+**Data**: - pre and post workshop surveys (Awareness, 2018 and 2019) -
+Transformative Experience questionnaire (Awareness, intention) -
+post-workshop focus groups (2018) - individual student interviews
+Interviews and post workshop interviews were transcribed and translated,
+then coded by the researchers
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+7 days (not precised but we can assume full time)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~50h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+7.0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.intervencion.y.prueba
+
+</td>
+<td style="text-align:left;">
+
+Immediate
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Horizon.of.change
+
+</td>
+<td style="text-align:left;">
+
+Short term
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 66 Leitao2022 ( MB )
 
 **title** Ocean literacy gamified: A systematic evaluation of the effect
 of game elements on students’ learning experience
@@ -4695,12 +7465,48 @@ treatments.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 session by group $$probably 1-2 h but not given$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~1h30
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~2H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -4743,7 +7549,7 @@ Short term
 </tbody>
 </table>
 
-# 64 Lester2006 ( ABP )
+# 67 Lester2006 ( ABP )
 
 **title** Social Activism in Elementary Science Education: A science,
 technology, and society approach to teach global warming
@@ -4765,12 +7571,48 @@ endangered species.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-2hrs a week
+2hrs a week, from January through mid-March
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+24h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+12.0
 
 </td>
 </tr>
@@ -4813,7 +7655,7 @@ middle term
 </tbody>
 </table>
 
-# 65 Levrini2021 ( SB )
+# 68 Levrini2021 ( SB )
 
 **title** Recognition and operationalization of Future-Scaffolding
 Skills: Results from an empirical study of a teaching-learning module on
@@ -4850,12 +7692,48 @@ recordings of the summer school’s activities.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 4 days full-time
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+32H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+4D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~4
 
 </td>
 </tr>
@@ -4900,7 +7778,7 @@ Very short term
 </tbody>
 </table>
 
-# 66 Li2022 ( BQ )
+# 69 Li2022 ( BQ )
 
 **title** Effectiveness Evaluation of a Primary School-Based
 Intervention against Heatwaves in China
@@ -4919,12 +7797,48 @@ prevent and treat heatstroke in summer.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 aprox. 40 activities within 5 months
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+5M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~40
 
 </td>
 </tr>
@@ -4967,7 +7881,7 @@ Corto
 </tbody>
 </table>
 
-# 67 Li2022 ( BQ )
+# 70 Li2022 ( BQ )
 
 **title** Effectiveness Evaluation of a Primary School-Based
 Intervention against Heatwaves in China
@@ -4986,12 +7900,48 @@ prevent and treat heatstroke in summer.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 aprox. 40 activities within 5 months
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+5M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~40
 
 </td>
 </tr>
@@ -5034,7 +7984,7 @@ Corto
 </tbody>
 </table>
 
-# 68 Littrell2022 ( SC )
+# 71 Littrell2022 ( SC )
 
 **title** Transformative experience in an informal science learning
 program about climate change
@@ -5054,12 +8004,48 @@ year and as an intensive, one-week summer program.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 2016 - 2019
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -5102,7 +8088,7 @@ NA
 </tbody>
 </table>
 
-# 69 Liu2015 ( ABP )
+# 72 Liu2015 ( ABP )
 
 **title** In-service Teachers’ Attitudes, Knowledge and Classroom
 Teaching of Global Climate Change
@@ -5117,12 +8103,48 @@ understanding and classroom teaching of GCC.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-weekend
+weeklong summer workshop and fi ve follow-up daily workshops
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~49h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+7.0
 
 </td>
 </tr>
@@ -5165,7 +8187,7 @@ short term
 </tbody>
 </table>
 
-# 70 Lombardi2013 ( ABP )
+# 73 Lombardi2013 ( ABP )
 
 **title** Plausibility reappraisals and shifts in middle school
 students’ climate change conceptions
@@ -5184,13 +8206,49 @@ promoting critical evaluation
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 The instructional activities occurred over two class periods (about 90
 min of instructional time total).
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+1h30min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
 
 </td>
 </tr>
@@ -5233,7 +8291,7 @@ very short term
 </tbody>
 </table>
 
-# 71 Lozano2022 ( SC )
+# 74 Lozano2022 ( SC )
 
 **title** Impact of cooperative learning and project-based learning
 through emotional intelligence: A comparison of methodologies for
@@ -5257,12 +8315,49 @@ was correct.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-12 sessions
+12 sessions of 50 minutes each. The research was carried out during the
+2020/2021 academic year.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+600min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+10M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+12.0
 
 </td>
 </tr>
@@ -5298,14 +8393,14 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-NA
+long-term
 
 </td>
 </tr>
 </tbody>
 </table>
 
-# 72 Markowitz2018 ( LR )
+# 75 Markowitz2018 ( LR )
 
 **title** Immersive Virtual Reality Field Trips Facilitate Learning
 About Climate Change
@@ -5337,13 +8432,65 @@ balance of nature is very delicate and easily upset
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 a month and three weeks (leaving out measure application times.
-Everything was aproximately 2.5 months
+Everything was aproximately 2.5 months. More specifically, 6 clasroom
+meetings where they: 1.Day one. Participated in a VR demonstration
+unrelated to ocean acidiﬁcation or science. 2. filled baseline
+questionnaire (2 weeks later) 3. DIVE 1: Went to two open water scuba
+diving trips (following day) 4. re-administration of all quationnaire
+materials (a week later) 5. Virtual inmersion experience, and assigned
+to experimental conditions and immediate application of 6-question
+questionnaire on ocean acidification, NEP, and self-reported measure of
+presence (1 month later) 6. DIVE 2: (following day) 7. Questionare
+administration (next week): Experimental condition:3 (Dives and IVR),
+control group: 2 (Dives only) 8. Delayed post test (Four weeks later)
+Total duration:1D (there a re three activities but dives are traditional
+activities for this class. The only difference is the introduction of
+the Inmersive Virtual Reality experience (Dive1, IVR, Dive2)) Period
+length:1M1W1D (including Dive 1-IMR- Dive 2) Number of
+sessionExperimental condition:3 (Dives and IVR), control group: 2 (Dives
+only):
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~6h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M8D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+3.0
 
 </td>
 </tr>
@@ -5355,7 +8502,7 @@ tiempo.transcurrido.entre.la.intervencion.y.prueba
 </td>
 <td style="text-align:left;">
 
-NA
+immediate after IVR
 
 </td>
 </tr>
@@ -5386,7 +8533,7 @@ Corto término
 </tbody>
 </table>
 
-# 73 Mason1998 ( SB )
+# 76 Mason1998 ( SB )
 
 **title** Discussing the Greenhouse Effect: children’s collaborative
 discourse reasoning and conceptual change
@@ -5404,12 +8551,48 @@ on the main topics and creation of a shared representation.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 40 min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+40min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -5452,7 +8635,7 @@ Very short term
 </tbody>
 </table>
 
-# 74 McGowan2022 ( SB )
+# 77 McGowan2022 ( SB )
 
 **title** “I now deeply care about the effects humans are having on the
 world”: cultivating ecological care and responsibility through complex
@@ -5477,12 +8660,48 @@ a larger audience.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-10 weeks
+10 weeks divided in 5 bi-weekly sessions. No further information.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~80h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2M14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -5525,13 +8744,10 @@ Short
 </tbody>
 </table>
 
-# 75 McNeal2014a ( LR )
+# 78 McNeal2014a ( LR )
 
-**title** Karen S. McNeal, Julie C. Libarkin, Tamara Shapiro Ledley,
-Erin Bardar, Nick Haddad, Kathy Ellins & Saranee Dutta (2014) The Role
-of Research in Online Curriculum Development: The Case of EarthLabs
-Climate Change and Earth System Modules, Journal of Geoscience
-Education, 62:4, 560-577, DOI: 10.5408/13-060.1
+**title** The Role of Research in Online Curriculum Development: The
+Case of EarthLabs Climate Change and Earth System Modules
 
 **Intervention**: “Earth Science and environmental science curriculum
 materials that engage high school students in a combination of Web-based
@@ -5557,7 +8773,43 @@ materials).
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -5605,7 +8857,7 @@ NA
 </tbody>
 </table>
 
-# 76 McNeill2012 ( SC )
+# 79 McNeill2012 ( SC )
 
 **title** Urban High School Students’ Critical Science Agency:
 Conceptual Understandings and Environmental Actions Around Climate
@@ -5628,12 +8880,48 @@ energy and climate change.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-11 sessions in four to six weeks
+11 sessions in four to six weeks. No more details.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~23h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~1M14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+11.0
 
 </td>
 </tr>
@@ -5669,14 +8957,14 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-NA
+Short term
 
 </td>
 </tr>
 </tbody>
 </table>
 
-# 77 Meya2018 ( SB )
+# 80 Meya2018 ( SB )
 
 **title** Effectiveness of gaming for communicating and teaching climate
 change
@@ -5698,12 +8986,48 @@ player wins when they achieve a number or arbitary objectives.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 60 min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+1h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -5746,7 +9070,7 @@ Very short term
 </tbody>
 </table>
 
-# 78 Miller 2015 ( MB )
+# 81 Miller2015 ( MB )
 
 **title** Adventure learning as a curricular approach that transcends
 geographies and connects people to place
@@ -5773,7 +9097,7 @@ following <AL@GL> activities and prior to students departing for home.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
@@ -5781,6 +9105,42 @@ Duración.INTERV
 One month (no indication of intensity, except that student from Idaho
 met two evenings by week to discover the inquiries and results, and to
 discuss with them)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~20h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~10
 
 </td>
 </tr>
@@ -5825,7 +9185,7 @@ Very short term
 </tbody>
 </table>
 
-# 79 Monroe2016 ( ABP )
+# 82 Monroe2016 ( ABP )
 
 **title** Can climate change enhance biology lessons? A quasi-experiment
 
@@ -5840,12 +9200,48 @@ sequestra tion in various land uses.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-10 min Pretest 7 question, 155 mins intervention
+10 min Pretest 7 question, 155 mins intervention, 10 Mins post test
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+2h45min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
 
 </td>
 </tr>
@@ -5888,12 +9284,10 @@ very short term
 </tbody>
 </table>
 
-# 80 Muller2021 ( LR )
+# 83 Muller2021 ( LR )
 
-**title** Muller, I. and Wood, L. (2021). Raising Awareness of Agency to
-Address Climate Change: The Do One Thing (DOT) Strategy. Educational
-Research for Social Change, 10 (2), 47-62.
-<http://dx.doi.org/10.17159/2221-4070/2021/v10i2a4>
+**title** Raising Awareness of Agency to Address Climate Change: The Do
+One Thing (DOT) Strategy
 
 **Intervention**: “The project was conducted in cycles of action and
 reflection. In Cycle 3, learners, as citizen scientists, shared their
@@ -5908,7 +9302,43 @@ also initiating ideas for action for change).
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -5956,7 +9386,7 @@ NA
 </tbody>
 </table>
 
-# 81 Muller2021a ( SC )
+# 84 Muller2021a ( SC )
 
 **title** Raising Awareness of Agency to Address Climate Change: The Do
 One Thing (DOT) Strategy
@@ -5984,7 +9414,43 @@ the leaves on a “DOT tree”.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -6032,7 +9498,7 @@ NA
 </tbody>
 </table>
 
-# 82 Nafisah2022 ( MB )
+# 85 Nafisah2022 ( MB )
 
 **title** The Integration of Environmental Pollution Materials in Social
 Studies Learning in School for Anticipation of Climate Change
@@ -6049,7 +9515,43 @@ questionnaire, t-test
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -6098,7 +9600,7 @@ Short term
 </tbody>
 </table>
 
-# 83 Nakamura2019 ( ABP )
+# 86 Nakamura2019 ( ABP )
 
 **title** Multi-Timescale Education Program for Temporal Expansion in
 Ecocentric Education: Using Fixed-Point Time-Lapse Images for Phenology
@@ -6124,12 +9626,48 @@ conditions of each year.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-50 mins
+50 mins everyday for 5 days
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+4h10min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+5D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -6172,7 +9710,7 @@ very short term
 </tbody>
 </table>
 
-# 84 Nicholas_Figueroa2017 ( ABP )
+# 87 Nicholas_Figueroa2017 ( ABP )
 
 **title** Iḷisaġvik Tribal College’s summer climate program: teaching
 STEM concepts to North Slope Alaska high school and middle-school
@@ -6196,12 +9734,48 @@ from the assignments, scientists, Elders, and fieldtrips.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-2 weeks
+2 weeks CAMP , NO MORE INFO
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -6244,7 +9818,7 @@ short term
 </tbody>
 </table>
 
-# 85 Nkoana2020 ( JGOP )
+# 88 Nkoana2020 ( JGOP )
 
 **title** Exploring the effects of an environmental education course on
 the awareness and perceptions of climate change risks among seventh and
@@ -6272,7 +9846,43 @@ matrix
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -6320,7 +9930,136 @@ Short term
 </tbody>
 </table>
 
-# 86 Oberauer2023 ( LR )
+# 89 Nussbaum2015 ( LR )
+
+**title** Losing the Lake: Simulations to Promote Gains in Student
+Knowledge and Interest about Climate Change
+
+**Intervention**: The ‘Losing the Lake’ game was designed with five
+modules/activities to help break down the complex topic of climate
+change. This specific design was employed with the idea that the game
+could be used as a whole or as modules for teaching the concepts of
+climate change and water conservation. Module 1: Building background
+knowledge regarding snowfall, drought, climate change, greenhouse gases.
+Module 2 and 3: Building knowledge of conservation activities; enhancing
+self-efficacy. Module 4: Build a mental model regarding why lake levels
+are declining and connect it to climate change. Module 5: Apply previous
+concepts to a context like Lake Mead; illustrate how scientific models
+are used.
+
+**Data**: We used a pretest/posttest (and delayed posttest) randomized
+two-group experimental design…each applicable testing session,
+participants received scores for: (a) the objective items on the quiz,
+(b) each of the two constructed response items, (c) the interest survey,
+and (d) the student feedback survey (Likert items). The student feedback
+survey constructed responses were coded for emerging themes using
+nonhierarchical coding (Johnson & Christensen, 2004), with frequency
+counts tabulated for different categories.
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+During the first session (25 min in duration), participating students
+completed a short demographics form, the pretest, and an interest
+survey. During the second session, which took place a day or two later,
+students were randomly divided—within each class—into experimental and
+control groups. (Assignments were made the day before using a random
+number generator in Excel.) Students in the experimental group went to
+the school’s computer lab and played “Losing the Lake” for 25 min while
+the other students worked on unrelated schoolwork (e.g., reading their
+textbooks). Then students switched, with the control group going to the
+computer lab, where they explored the earth science website while the
+experimental group participants unrelated schoolwork. Session three
+occurred the following day and lasted 25 min; all participants completed
+the posttest, the interest survey and student feedback survey. Lastly,
+during the fourth and final session, which occurred a week or two later,
+all participants were given 25 min to complete the delayed posttest.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+50min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.intervencion.y.prueba
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+
+</td>
+<td style="text-align:left;">
+
+11D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Horizon.of.change
+
+</td>
+<td style="text-align:left;">
+
+short term
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 90 Oberauer2023 ( LR )
 
 **title** The impact of teenagers’ emotions on their complexity thinking
 competence related to climate change and its consequences on their
@@ -6340,12 +10079,48 @@ project.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 year
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -6388,7 +10163,7 @@ NA
 </tbody>
 </table>
 
-# 87 Parant2017 ( ABP )
+# 91 Parant2017 ( ABP )
 
 **title** Raising Students Awareness to Climate Change: An Illustration
 With Binding Communication
@@ -6408,12 +10183,48 @@ the end of the intervention.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-NA
+2h 1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+1h40min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -6456,7 +10267,7 @@ very short term
 </tbody>
 </table>
 
-# 88 Park2020 ( MB )
+# 92 Park2020 ( MB )
 
 **title** The Impact of Project Activities on the Cultivation of
 Ecological Citizenship in a High School Climate Change Club
@@ -6481,12 +10292,48 @@ used to prepare the interview which were then analysed.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 7 weeks (intensity not given)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M20D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -6529,7 +10376,7 @@ Short term
 </tbody>
 </table>
 
-# 89 Parth2020 ( MB )
+# 93 Parth2020 ( MB )
 
 **title** Quality Child–Parent Relationships and Their Impact on
 Intergenerational Learning and Multiplier Effects in Climate Change
@@ -6551,7 +10398,7 @@ to extract them is not explicited
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
@@ -6559,6 +10406,42 @@ Duración.INTERV
 "Intervention" is difficult to define here, since it could be the one
 for the kids, or the communication between kids and parents. However,
 the time between pre-test and post test is 11 months
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+11M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -6601,7 +10484,7 @@ Short (but long period between pre and post: 11 months)
 </tbody>
 </table>
 
-# 90 Pekel2019 ( SC )
+# 94 Pekel2019 ( SC )
 
 **title** EFFECTIVENESS OF ARGUMENTATION-BASED CONCEPT CARTOONS ON
 TEACHING GLOBAL WARMING, OZONE LAYER DEPLETION, AND ACID RAIN
@@ -6628,12 +10511,48 @@ regarding demographic information.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 2 weeks (three 40-min lessons per week)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+4h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+6.0
 
 </td>
 </tr>
@@ -6669,14 +10588,14 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-NA
+Short term
 
 </td>
 </tr>
 </tbody>
 </table>
 
-# 91 Petersen2020 ( ABP )
+# 95 Petersen2020 ( ABP )
 
 **title** The virtual field trip: Investigating how to optimize
 immersive virtual learning in climate change education
@@ -6694,12 +10613,48 @@ the IVR exploration.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 50 mins
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+50min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -6742,7 +10697,7 @@ very short term
 </tbody>
 </table>
 
-# 92 Porter2012 ( ABP )
+# 96 Porter2012 ( ABP )
 
 **title** Assessing students’ learning about fundamental concepts of
 climate change under two different conditions
@@ -6759,12 +10714,49 @@ global warming and the greenhouse effect
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-two weeks
+two separate classes over approximately a two-week period during the
+science periods.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
 
 </td>
 </tr>
@@ -6807,7 +10799,7 @@ middle term
 </tbody>
 </table>
 
-# 93 Pruneau2003 ( BQ )
+# 97 Pruneau2003 ( BQ )
 
 **title** Experimentation with a socio- constructivist process for
 climate change education
@@ -6834,12 +10826,48 @@ through climate change.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-2 hours/month for 10 months (September-June)
+Two 60-minute periods/month for 10 months (September-June)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+20h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+10M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+10.0
 
 </td>
 </tr>
@@ -6882,16 +10910,23 @@ Corto
 </tbody>
 </table>
 
-# 94 Pruneau2006 ( BQ )
+# 98 Pruneau2006 ( BQ )
 
 **title** The Process of Change Experimented by Teachers and Students
 when Voluntarily Trying Environmental Behaviors
 
-**Intervention**: 25 participating teachers were chosen at random and
-individually interviewed two month after the start of the trial period.
-Open ended questions were aimed at making them recount their personal
-experience during the attempt at change. 75 students were interrogated
-two months after the start of their new behaviors’ trial period.
+**Intervention**: Open ended questions were aimed at making them recount
+their personal experience during the attempt at change.: Tell us about
+your experience when you tried a new behavior. What difficulties did you
+encounter? What helped you persevere in the under- taken change? What
+feelings did you experience? Students were interrogated two months after
+the start of their new behaviors’ trial period. The students filled out
+questionnaires and some participated in individual interviews. Both
+questionnaires and interviews used the same questions that the teachers
+had been asked. Similarly, students were invited to talk about their
+experiences in an essay, where they presented themselves as heroes that,
+during an adventure, encounter various elements, either helpful or
+limiting.
 
 **Data**: NA
 
@@ -6900,12 +10935,48 @@ two months after the start of their new behaviors’ trial period.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-2 months
+2 months (no further information)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -6948,7 +11019,7 @@ NA
 </tbody>
 </table>
 
-# 95 Pruneau2006a ( LR )
+# 99 Pruneau2006a ( LR )
 
 **title** When Teachers Adopt Environmental Behaviors in the Aim of
 Protecting the Climate
@@ -6971,12 +11042,48 @@ behaviors to reduce their impact on the climate
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 6 days split over 3 weekends
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~42h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+16D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+6.0
 
 </td>
 </tr>
@@ -7019,7 +11126,113 @@ Short term
 </tbody>
 </table>
 
-# 96 Raes2016 ( BQ )
+# 100 Puttick2018 ( ABP )
+
+**title** Building Systems from Scratch: an Exploratory Study of
+Students Learning About Climate Change
+
+**Intervention**: free 4-day intensive workshop for middle school girls
+that focused on using the visual programming environment, Scratch, to
+create their games. Girls worked alone when programming their games, but
+came together to discuss the science topics and to show their progress
+to the group. Girls gave a final presentation attended by family and
+community members.
+
+**Data**: five girls used a visual programming environment, Scratch, to
+create their games. In Scratch, designers create projects by snapping
+together color-coded command blocks to control 2D graphical objects,
+called sprites, that move on a background, called the stage
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+The workshop ran 6 h a day; total contact time was 24 h. for 4 days
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+24h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+4D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+4.0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.intervencion.y.prueba
+
+</td>
+<td style="text-align:left;">
+
+immediate
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Horizon.of.change
+
+</td>
+<td style="text-align:left;">
+
+short term
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 101 Raes2016 ( BQ )
 
 **title** The effects of teacher-led class interventions during
 technology-enhanced science inquiry on students’ knowledge integration
@@ -7037,12 +11250,48 @@ on group level and on class level) and 2) the low-structured condition
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 4 sessions of 50 minutes during one month
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+3h40min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+4.0
 
 </td>
 </tr>
@@ -7085,28 +11334,80 @@ Corto
 </tbody>
 </table>
 
-# 97 Ratinen2013 ( BQ )
+# 102 Ratinen2013 ( BQ )
 
 **title** Primary School Student Teachers’ Understanding of Climate
 Change: Comparing the Results Given by Concept Maps and Communication
 Analysis
 
-**Intervention**: Inclusion of climate change conceptualization in
-curricular disciplines (Biology, Chemistry, Physics and Geography)
+**Intervention**: inquiry-based teaching module that we have prepared
+aims at linking four sessions -physics, chemistry, biology and physical
+geography—that are closely connected from a conceptual and scientific
+point of view Essay Writing and Drawing helped us to gain insight into
+the respondents’ thinking about climate change because the students were
+able to give spontaneous responses: No answers were suggested or
+imposed.The open-ended question was as follows: ‘What does climate
+change mean?’ Concept Mapping was used to represent schematically
+students’ knowledge about the elements of climate change and the
+interdependence between these elements. Video Recording and
+Communication Analysis The science sessions were video recorded, which
+allowed us to analyse the communication that took place during the
+sessions. Inclusion of climate change conceptualization in curricular
+disciplines (Biology, Chemistry, Physics and Geography)
 
-**Data**: NA
+**Data**: Pre- and post- communication and conceptual maps
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-4 weeks with 2h15 (in 3 sessions of 45min) each week
+The total length of the teaching period was 4 weeks, with one triple
+period. of 45 min (i.e. 2 h 15 min) for each session each week. Students
+were asked not to study climate change outside the sessions. The same
+teacher designed and guided all four sessions. 4 weeks with 2h15 (in 3
+sessions of 45min) each week
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+2h15min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+3.0
 
 </td>
 </tr>
@@ -7149,7 +11450,7 @@ Corto
 </tbody>
 </table>
 
-# 98 Reinfried2012 ( SB )
+# 103 Reinfried2012 ( SB )
 
 **title** Improving students’ conceptual understanding of the greenhouse
 effect using theory-based learning materials that promote deep learning
@@ -7173,12 +11474,48 @@ questionnaires with no greenhouse instruction.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 75 mins (90 mins including pre- and post-tests)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+1H15min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -7221,12 +11558,19 @@ Long term
 </tbody>
 </table>
 
-# 99 Roscoe2013 ( BQ )
+# 104 Roscoe2013 ( BQ )
 
 **title** Shallow strategy development in a teachable agent environment
 designed to support self-regulated learning
 
 **Intervention**: Use of teachable agent system called Betty’s Brain.
+The teacher chose the curriculum units and helped to develop expert
+causal maps incorporating key processes, concepts, and causal relations.
+These expert causal maps were embedded within the system to enable
+automated assessment of students’ constructed causal concept maps.
+However, students did not view or edit the expert causal maps. Due to
+scheduling restrictions, Unit 1 (6 sessions) was longer than Unit 2 (4
+sessions).
 
 **Data**: Tool outputs
 
@@ -7235,12 +11579,63 @@ designed to support self-regulated learning
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 month
+Study duration was about one month. In the week before each unit, the
+classroom teacher led two to three lessons about each topic. Once the
+Betty’s Brain instruction began, students received no further class
+lectures on that topic. Students also received a one-session tutorial on
+how to use the software, which was embedded in the teaching narrative.
+Within two days of the tutorial, students completed the Unit 1 pretest,
+and then worked with the software for six sessions (45 min per session).
+Approximately 2 weeks after the pretest, students completed the
+posttest, which included the same questions as the pretest in a
+different order. A one-week break separated the climate change and
+thermoregulation units. During that time, the teacher concluded the
+climate change unit and introduced background on thermoregulation. The
+following week, the thermoregulation unit (Unit 2) began with the
+pretest. On subsequent days, students used the software over four
+sessions, and then completed the posttest about 1.5 weeks after the
+pretest.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~15h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~1M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+8.0
 
 </td>
 </tr>
@@ -7283,7 +11678,7 @@ Corto
 </tbody>
 </table>
 
-# 100 Roychoudhury2017 ( ABP )
+# 105 Roychoudhury2017 ( ABP )
 
 **title** The Need to Introduce System Thinking in Teaching Climate
 Change
@@ -7307,12 +11702,48 @@ t-tests
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-11 weeks
+Over a 9-11 week period,
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2M21D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -7355,7 +11786,7 @@ long term
 </tbody>
 </table>
 
-# 101 Ruboon2012 ( BQ )
+# 106 Ruboon2012 ( BQ )
 
 **title** Development a Prototype Environmental Education Teacher
 through PAIC Process
@@ -7371,7 +11802,43 @@ trainer (TOT) to be a prototype.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+NA (no info at all)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -7419,7 +11886,7 @@ Corto
 </tbody>
 </table>
 
-# 102 Salas_Rueda2021 ( ABP )
+# 107 Salas_Rueda2021 ( ABP )
 
 **title** Innovation in the teaching-learning process of global climate
 change through the collaborative wall
@@ -7441,13 +11908,49 @@ and continue with the discussion of the topicS.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 3 face-to-face sessions with a duration of 50 minutes in each
 face-to-face session
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+2h30min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+3.0
 
 </td>
 </tr>
@@ -7490,7 +11993,7 @@ short term
 </tbody>
 </table>
 
-# 103 Salsabila2019 ( SC )
+# 108 Salsabila2019 ( SC )
 
 **title** Using argument-driven inquiry to promote students’ concept
 mastery in learning global warming
@@ -7517,13 +12020,49 @@ Pre-test (1st), Implementation (2nd and 3dr) and posttest (4th)
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 The research was done in four meetings: Pre-test (1st), Implementation
-(2nd and 3rd) and posttest (4th)
+(2nd and 3rd) and posttest (4th). No more details.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+4.0
 
 </td>
 </tr>
@@ -7566,7 +12105,7 @@ NA
 </tbody>
 </table>
 
-# 104 Saribaş2016 ( JGOP )
+# 109 Saribaş2016 ( JGOP )
 
 **title** Evaluating Effects of an Exhibition Visit on Pre-Service
 Elementary Teachers’ Understandings of Climate Change
@@ -7595,12 +12134,48 @@ and knowledge about climate change.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 13 weeks. First 5 weeks on basic concepts, next 5 weeks work in groups.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~3M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -7643,7 +12218,7 @@ Short term
 </tbody>
 </table>
 
-# 105 Schrot2021a ( MB )
+# 110 Schrot2021a ( MB )
 
 **title** Potential of ‘future workshop’ method for educating
 adolescents about climate change mitigation and adaptation: a case from
@@ -7674,12 +12249,48 @@ qualitative questions (free text, knowledge and intention)
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 15 hours over 1 week
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+15h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+5D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -7722,7 +12333,7 @@ Short term
 </tbody>
 </table>
 
-# 106 Schubatzky2022 ( ABP )
+# 111 Schubatzky2022 ( ABP )
 
 **title** Debunking Climate Myths Is Easy—Is It Really? An Explorative
 Case Study with Pre-Service Physics Teachers
@@ -7742,12 +12353,48 @@ t-tests
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 day
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -7790,7 +12437,7 @@ short term
 </tbody>
 </table>
 
-# 107 Schuster2008 ( JGOP )
+# 112 Schuster2008 ( JGOP )
 
 **title** Secondary Students’ Subject Matter Representations of Climate
 Change
@@ -7819,12 +12466,49 @@ supported by the university-based team throughout Tier II and Tier III.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-One week
+One week intensive program $$Can you confirm what I wrote in the
+following columns?$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~30h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~10
 
 </td>
 </tr>
@@ -7867,7 +12551,7 @@ Short term
 </tbody>
 </table>
 
-# 108 Sellmann2013 ( ABP )
+# 113 Sellmann2013 ( ABP )
 
 **title** Climate change education: quantitatively assessing the impact
 of a botanical garden as an informal learning environment
@@ -7885,12 +12569,48 @@ the garden and in the public greenhouses.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 day
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -7933,7 +12653,7 @@ short term
 </tbody>
 </table>
 
-# 109 Sellmann2013a ( SB )
+# 114 Sellmann2013a ( SB )
 
 **title** Effects of a 1-day environmental education intervention on
 environmental attitudes and connectedness with nature
@@ -7959,12 +12679,48 @@ preservation and utilization of nature - Inclusion of the self in nature
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 day
+1 schoolday
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~8H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~8H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -8007,7 +12763,7 @@ Very short term
 </tbody>
 </table>
 
-# 110 Sellmann2015 ( MB )
+# 115 Sellmann2015 ( MB )
 
 **title** Concept Maps in the Classroom: A New Approach to Reveal
 Students’ Conceptual Change
@@ -8039,13 +12795,49 @@ the task.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 2 days $$probably full time, but the information is not explicitly
 given$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~14h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+2.0
 
 </td>
 </tr>
@@ -8088,7 +12880,7 @@ Very short term
 </tbody>
 </table>
 
-# 111 Shea2016 ( ABP )
+# 116 Shea2016 ( ABP )
 
 **title** Climate Change Professional Development: Design,
 Implementation, and Initial Outcomes on Teacher Learning, Practice, and
@@ -8113,12 +12905,48 @@ post-administration of the survey.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 day
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -8161,7 +12989,7 @@ short term
 </tbody>
 </table>
 
-# 112 Siegner2018 ( SB )
+# 117 Siegner2018 ( SB )
 
 **title** Experiential climate change education: Challenges of
 conducting mixed-methods, interdisciplinary research in San Juan
@@ -8196,12 +13024,49 @@ interviews for teachers. Observations in both cases.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-6 weeks
+1 lesson weekly during 6 weeks. No info is given on how long each lesson
+is. We assume an hour/ lesson.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~6h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+6.0
 
 </td>
 </tr>
@@ -8244,7 +13109,7 @@ Very short term
 </tbody>
 </table>
 
-# 113 Silva2021 ( SC )
+# 118 Silva2021 ( SC )
 
 **title** O conhecimento sobre sismos e mudanças climáticas como
 proposta pedagógica: Estudo de caso em uma escola pública de
@@ -8333,12 +13198,49 @@ exploiting natural resources at will. 7.1.13. Reduce cattle farming.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-Semester
+Semester (authors only mention that it is a semestral course, but there
+is no further information regarding the intensity)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+5M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -8381,7 +13283,7 @@ long term
 </tbody>
 </table>
 
-# 114 Skains2022 ( LR )
+# 119 Skains2022 ( LR )
 
 **title** Playing for Change: Teens’ Attitudes Towards Climate Change
 Action as Expressed Through Interactive Digital Narrative Play
@@ -8405,7 +13307,43 @@ pick activity and an energy-saving tour and then workshop 2.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+4 different cases (see intervention description)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~3h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -8453,7 +13391,7 @@ NA
 </tbody>
 </table>
 
-# 115 Smith2019 ( SC )
+# 120 Smith2019 ( SC )
 
 **title** Teaching climate change science to high school students using
 computer games in an intermedia narrative
@@ -8476,12 +13414,54 @@ of Mexico coast)
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-intervention delivered through the course
+intervention delivered through the course —- The materials consist of 34
+different activities including eBooks with embedded computer games,
+labs, and hands-on laboratory activities for nine marine science units.
+The teachers’ usage of these materials varied. Throughout the 2016-2017
+school year, some teachers completed as many as 28 of these 34
+activities. Some of them only completed six or seven activities. Others
+did not report any use of them.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+10M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -8524,7 +13504,7 @@ NA
 </tbody>
 </table>
 
-# 116 Steffensen2022 ( ABP )
+# 121 Steffensen2022 ( ABP )
 
 **title** Using inquiry-based dialogues to explore controversial climate
 change issues with secondary students: An example from Norway
@@ -8543,12 +13523,48 @@ the results.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 day
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -8591,7 +13607,7 @@ short term
 </tbody>
 </table>
 
-# 117 Sternang2012 ( SB )
+# 122 Sternang2012 ( SB )
 
 **title** Climate change and costs: investigating students’ reasoning on
 nature and economic development
@@ -8617,12 +13633,50 @@ built.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-Not stated, i estimate two hours at much
+Not stated, i estimate two hours at the most. Pre-test interview took 30
+minutes per participant and post-test interview between 15 and 30
+minutes.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~2h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -8665,7 +13719,7 @@ Very short term
 </tbody>
 </table>
 
-# 118 Stevenson2018 ( LR )
+# 123 Stevenson2018 ( LR )
 
 **title** Developing a model of climate change behavior among
 adolescents
@@ -8686,13 +13740,49 @@ change and improve climate resilience among wildlife
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 It varied depending on the teacher but everything happened aproximately
-within 6 months
+within 6 months \[Any indication of an approximate total time?
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+6M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -8740,7 +13830,7 @@ Short term
 </tbody>
 </table>
 
-# 119 Stevenson2018a ( MB )
+# 124 Stevenson2018a ( MB )
 
 **title** Framing climate change communication to prompt individual and
 collective action among adolescents from agricultural communities
@@ -8764,12 +13854,48 @@ behaviours, and transportation choices
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 10 min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+10min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1H
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -8812,7 +13938,7 @@ Very short term
 </tbody>
 </table>
 
-# 120 Sukardi2022 ( LR )
+# 125 Sukardi2022 ( LR )
 
 **title** What Creative Ideas Came Up about Global Warming in RADEC
 Online Class?
@@ -8848,7 +13974,43 @@ confirm information that was unclear from student worksheets.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -8896,7 +14058,7 @@ Short term
 </tbody>
 </table>
 
-# 121 Sumrall2021 ( BQ )
+# 126 Sumrall2021 ( BQ )
 
 **title** Changing attitude into behavior: How to reduce carbon dioxide
 emissions
@@ -8919,12 +14081,52 @@ behaviors
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-4 class days
+Some of the requirements for both presentations included 10-minute
+minimal presentations, photographable evidence, and understandable
+slides. Based on a class size of 24 and class time of 50 minutes it will
+take approximately three to four class days to get through both of the
+presentation assignments.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+20h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+4D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+24.0
 
 </td>
 </tr>
@@ -8967,7 +14169,7 @@ Short
 </tbody>
 </table>
 
-# 122 Sundberg2013 ( BQ )
+# 127 Sundberg2013 ( BQ )
 
 **title** Weather, Climate, Web 2.0: 21st Century Students Speak Climate
 Science Well
@@ -8982,7 +14184,46 @@ project-based learning on climate topics
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+During the year, the students were able to collaborate with
+contemporaries at other schools, comparing and contrasting data
+collection/analysis and preliminary conclusions, as illustrated by
+online webinars and YouTube videos.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -9030,7 +14271,7 @@ Corto
 </tbody>
 </table>
 
-# 123 Sutela2023 ( JGOP )
+# 128 Sutela2023 ( JGOP )
 
 **title** Shapes of water—A multidisciplinary composing project
 visioning an eco-socially oriented approach to music education
@@ -9076,12 +14317,49 @@ opportunity to record their songs in a studio if they wanted.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-40 hr for major students, 20 hr for minor students
+40 hr for major students, 20 hr for minor students $$any idea for the
+number of sessions? and total period span$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+40h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -9124,7 +14402,7 @@ Short term
 </tbody>
 </table>
 
-# 124 Svihla2012 ( SB )
+# 129 Svihla2012 ( SB )
 
 **title** A Design-based Approach to Fostering Understanding of Global
 Climate Change
@@ -9134,6 +14412,15 @@ students took turns resolving a number of task that required them to
 test theories on the mechanisms and consequences of CC. Activities deal
 with Radiation and Energy transformation, Radiation reflection, Earth’s
 Athmosphere, Natural greenhouse effect and the Human contribution to it.
+Intervention had two designs: GCC1 was first developped and was then
+refined to design and apply GCC” in a second student sample. Students
+were instructed to complete 5 computer lessons in pairs. Their
+explanation oon CC and comprehension on energy creation and use were
+assessed pre- and post-intervention using Energy story, MySystem and
+Knowledge integration open-ended instruments. Lesson 1: Radiation and
+transformation of heat. Lesson 2: Heat reflection and albedo. Lesson 3:
+Athmosphere. Lesson 4: Natural greenhouse effect. Lesson 5: Human
+contribution to greenhouse effect.
 
 **Data**: Mainly quantitative (surveys and integrated knowledge scores
 taken from the MySystem and Energy Story assessments) complemented by
@@ -9144,17 +14431,50 @@ in-depth interviews of students and professors.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-Intervention had two designs: GCC1 was first developped and was then
-refined to design and apply GCC" in a second student sample. Students
-were instructed to complete 5 computer lessons in pairs. Their
-explanation oon CC and comprehension on energy creation and use were
-assessed pre- and post-intervention using Energy story, MySystem and
-Knowledge integration open-ended instruments.
+5 activities and one pre- and one post-intervention observation. Each
+phase was implemented during a single session. No information is given
+on how long each activity is.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~10h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+6 months
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -9197,7 +14517,7 @@ Very short term
 </tbody>
 </table>
 
-# 125 Taber2009 ( ABP )
+# 130 Taber2009 ( ABP )
 
 **title** Climate of Concern - A Search for Effective Strategies for
 Teaching Children about Global Warming
@@ -9220,12 +14540,48 @@ of the survey were compared in a similar fashion.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1 day
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -9268,7 +14624,7 @@ short term
 </tbody>
 </table>
 
-# 126 Tasquier2015 ( MB )
+# 131 Tasquier2015 ( MB )
 
 **title** How does epistemological knowledge on modelling influence
 students’ engagement in the issue of climate change?
@@ -9317,12 +14673,48 @@ he was very heedful but silent throughout the whole process.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 15 hours over 5 weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+15h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M7D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -9366,7 +14758,7 @@ Short term
 </tbody>
 </table>
 
-# 127 Tasquier2017 ( LR )
+# 132 Tasquier2017 ( LR )
 
 **title** The influence of causal knowledge on the willingness to change
 attitude towards climate change: results from an empirical study
@@ -9403,12 +14795,48 @@ behaviour (and, if so, what).
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 5 lessons but doesn´t specify time
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+5.0
 
 </td>
 </tr>
@@ -9451,7 +14879,7 @@ NA
 </tbody>
 </table>
 
-# 128 Tasti2021 ( MB )
+# 133 Tasti2021 ( MB )
 
 **title** Promoting Climate-friendly Actions of High School Students: A
 Case from Turkey
@@ -9474,13 +14902,49 @@ works (articles, posters etc)
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 90 minute periods each week, during 20 weeks, throughout 2 school
 semesters
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+30h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+20.0
 
 </td>
 </tr>
@@ -9523,7 +14987,7 @@ Very short term
 </tbody>
 </table>
 
-# 129 Taylor2020 ( BQ )
+# 134 Taylor2020 ( BQ )
 
 **title** Tackling climate-science learning through futures thinking
 
@@ -9541,12 +15005,51 @@ inquiry.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-12 weeks
+NO MORE INFO: 12 weeks - This specific case study involved a 12-week
+cross-curricular (science, social studies, health and technology)
+inquiry using a future-oriented scenario, with students working in pairs
+or threes.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -9589,7 +15092,7 @@ Corto
 </tbody>
 </table>
 
-# 130 Trott2019 ( JGOP )
+# 135 Trott2019 ( JGOP )
 
 **title** Reshaping our world: Collaborating with children for
 community-based climate change action
@@ -9622,12 +15125,48 @@ advance sustainability in the wider community.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 15 weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3M13D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -9670,7 +15209,7 @@ Short term
 </tbody>
 </table>
 
-# 131 Trott2020a ( MB )
+# 136 Trott2020a ( MB )
 
 **title** Children’s constructive climate change engagement: Empowering
 awareness, agency, and action
@@ -9693,13 +15232,49 @@ programme open ended questions 11 focus group with 4-5 children, 38min
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 During 15 weeks, science session seem to be 1h/week, other activities
 probably more
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~20h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+4M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+15.0
 
 </td>
 </tr>
@@ -9742,7 +15317,7 @@ Short term
 </tbody>
 </table>
 
-# 132 Trott2020b ( BQ )
+# 137 Trott2020b ( BQ )
 
 **title** Science Education for Sustainability: Strengthening Children’s
 Science Engagement through Climate Change Learning and Action
@@ -9759,12 +15334,48 @@ attitudes towards careers in science
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 1h/week for 15 weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+15h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+4M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+15.0
 
 </td>
 </tr>
@@ -9807,7 +15418,7 @@ Corto
 </tbody>
 </table>
 
-# 133 Trott2022 ( JGOP )
+# 138 Trott2022 ( JGOP )
 
 **title** Climate change education for transformation: exploring the
 affective and attitudinal dimensions of children’s learning and action
@@ -9838,12 +15449,48 @@ at a neighborhood scale.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 15 weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3M13D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -9886,7 +15533,7 @@ Short term
 </tbody>
 </table>
 
-# 134 Varma2012 ( ABP )
+# 139 Varma2012 ( ABP )
 
 **title** Using Interactive Technology to Support Students’
 Understanding of the Greenhouse Effect and Global Warming
@@ -9904,12 +15551,48 @@ t-tests
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 one week
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -9952,27 +15635,82 @@ short term
 </tbody>
 </table>
 
-# 135 Veijalainen2013 ( BQ )
+# 140 Veijalainen2013 ( BQ )
 
 **title** Free Public Species Naming to Promote Proenvironmental
 Behavior?
 
-**Intervention**: examine the impact of specie naming right on support
-for environ- mental protection
+**Intervention**: First, all the groups were given the same lecture on
+the concept, importance, and extent of the known and unknown
+biodiversity, also explaining the current threats to biodiversity with a
+special focus on climate change. Second, the classes were given an
+example of a new undescribed species of parasitoid wasp collected in the
+Peruvian rain forests. The speaker explained what was known about the
+species’ biology and role in the ecosystem, also discussing the possible
+threats of climate change to its survival. Third, the classes were
+briefly informed about what actions they could take to control climate
+change and thus promote the species’ existence, underlining each
+individual’s freedom to choose his or her own actions. Next, the
+experimental class was told that they could decide the name for the new
+species. The class was divided into six groups, each group suggested a
+name, the winning name was elected in a secret ballot, and finally only
+the chosen name was announced to the students. The students chose to
+name the species after their school. Last, all the students in each
+class answered a questionnaire independently (School 1 control: 26
+students, School 2 control: 19, School 2 experiment: 18).
 
-**Data**: NA
+**Data**: Per-iterm-scores of Pre- and post-questionnaires analyzed
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 day
+Estimate of 1 day for the session (1) given the three short lectures
+(Time 1). The same questionnaire was repeated after 4 months. Students
+had been assigned a number at time 1 (T1) that was used again at time 2
+(T2), allowing us to pair responses.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+6h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~1
 
 </td>
 </tr>
@@ -10015,7 +15753,7 @@ Corto
 </tbody>
 </table>
 
-# 136 Vicente2020 ( MB )
+# 141 Vicente2020 ( MB )
 
 **title** “Sustainable City”: A Steam Project Using Robotics to Bring
 the City of the Future to Primary Education Students
@@ -10033,12 +15771,48 @@ the teaching-learning process and build their own knowledge.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 15 sessions of 50 minutes (two weekly sessions: 7-8 weeks)
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+12h30min
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+2M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+15.0
 
 </td>
 </tr>
@@ -10081,7 +15855,7 @@ Short term
 </tbody>
 </table>
 
-# 137 Visintainer2015 ( ABP )
+# 142 Visintainer2015 ( ABP )
 
 **title** Sixth-Grade Students’ Progress in Understanding the Mechanisms
 of Global Climate Change
@@ -10098,12 +15872,48 @@ virtual investigations, and (3) contrasting cases of two students
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 7 days
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -10146,7 +15956,7 @@ short term
 </tbody>
 </table>
 
-# 138 Walsh2018 ( MB )
+# 143 Walsh2018 ( MB )
 
 **title** “Thank You for Being Republican”: Negotiating Science and
 Political Identities in Climate Change Learning
@@ -10181,12 +15991,48 @@ activities (~80 pages)
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-6 weeks, at least 30h of classes (recorded)
+6 weeks, at least 30h of classes (recorded), no number of session given
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~40h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1M14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -10229,7 +16075,7 @@ Very short term
 </tbody>
 </table>
 
-# 139 Walsh2019 ( JGOP )
+# 144 Walsh2019 ( JGOP )
 
 **title** Youth science expertise, environmental identity, and agency in
 climate action filmmaking
@@ -10258,12 +16104,48 @@ own stories.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 4 to 8 weeks
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+~2M
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -10306,32 +16188,75 @@ Short term
 </tbody>
 </table>
 
-# 140 Wang2022 ( BQ )
+# 145 Wang2022 ( BQ )
 
 **title** Fear emotion reduces reported mitigation behavior in
 adolescents subject to climate change education
 
-**Intervention**: pre-questionnaires and post-questionnaires The control
-group only completed the pre-question- naires and post-questionnaires
+**Intervention**: Data collection in this study adapted pre-intervention
+and post-intervention surveys and a con- trol group design. The control
+group only completed the pre-questionnaires and post-questionnaires
 without any intervention. The lecture-only group watched the lecture
 videos but not the emotional clips. The lecture plus fear group watched
 one of the four fear clips before the lecture video, and the lecture
 plus hope group watched one of the four hope clips before the lecture
-video.
+video. The emotional clips used in the experiment originated from two
+documentaries on climate change
 
-**Data**: NA
+**Data**: Surveys before and after with tens of questions
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-four session of 15 min
+The formal study was conducted from September 2019 to December 2019 in
+nine junior schools. For the lecture-only group, we provided four
+lectures in 2 weeks; each lecture consisted of a 15-min presentation
+video (total intervention time=(15 min×4)). For the other two classes,
+we provided 2-min emotional videos before each presentation (total
+intervention time=(2 min+15 min)×4).
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+1h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+14D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+4.0
 
 </td>
 </tr>
@@ -10374,7 +16299,7 @@ Corto
 </tbody>
 </table>
 
-# 141 White2022 ( MB )
+# 146 White2022 ( MB )
 
 **title** Changes in teacher attitudes relating to climate science
 
@@ -10389,12 +16314,48 @@ ecological cycling.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 3 days $$seems full time but the info is not there$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~21h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+3D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+~3
 
 </td>
 </tr>
@@ -10439,7 +16400,7 @@ Long term
 </tbody>
 </table>
 
-# 142 Williams2017 ( ABP )
+# 147 Williams2017 ( ABP )
 
 **title** As the climate changes: Intergenerational actionbased learning
 in relation to flood education
@@ -10461,12 +16422,48 @@ that they had “helped us to understand more about how to help families.”
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
 7 days
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -10509,7 +16506,7 @@ short term
 </tbody>
 </table>
 
-# 143 Xie2014 ( SB )
+# 148 Xie2014 ( SB )
 
 **title** LINKING CLIMATE CHANGE EDUCATION THROUGH THE INTEGRATION OF A
 KITE-BORNE REMOTE SENSING SYSTEM: LINKING CLIMATE CHANGE EDUCATION AND
@@ -10527,12 +16524,48 @@ inform an open-ended project.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-NA
+1 class trip over 1 schooday
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~8h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
 
 </td>
 </tr>
@@ -10575,7 +16608,109 @@ Very short term
 </tbody>
 </table>
 
-# 144 Zhong2021 ( JGOP )
+# 149 Xie2014 ( SB )
+
+**title** LINKING CLIMATE CHANGE EDUCATION THROUGH THE INTEGRATION OF A
+KITE-BORNE REMOTE SENSING SYSTEM: LINKING CLIMATE CHANGE EDUCATION AND
+REMOTE SENSING
+
+**Intervention**: Students flew a kite containing a number of equipment
+(AEROKATS) allowing them to measure different variables (light,
+temperature, geolocalization…). They collected and analyzed data to
+inform an open-ended project.
+
+**Data**: Usability survey and in-depth interview
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+1 class trip over 1 schooday
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+~8h
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1D
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+1.0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.intervencion.y.prueba
+
+</td>
+<td style="text-align:left;">
+
+inmediate
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad
+
+</td>
+<td style="text-align:left;">
+
+inmediate
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Horizon.of.change
+
+</td>
+<td style="text-align:left;">
+
+Very short term
+
+</td>
+</tr>
+</tbody>
+</table>
+
+# 150 Zhong2021 ( JGOP )
 
 **title** An impact assessment of disaster education on children’s flood
 risk perceptions in China: Policy implications for adaptation to climate
@@ -10595,12 +16730,49 @@ education system after the Wenchuan earthquake in 2008.
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-Not declared. The study takes place in 2016 and 2018.
+Not declared. The study takes place in 2016 and 2018. $$Could you make
+some estimation?$$
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -10643,7 +16815,7 @@ Short term
 </tbody>
 </table>
 
-# 145 Zografakis2008 ( SB )
+# 151 Zografakis2008 ( SB )
 
 **title** Effective education for energy efficiency
 
@@ -10654,41 +16826,79 @@ renevwable energy production units, art exhibitions… Specific
 interventions to specific groups were not described but were presumably
 adapted to student’s age and education.
 
-**Data**: self-administered survey completed both by students and
-parents. Do you turn off the lights when you leave your room for more
-than 2 min? Do you turn off the stand- by button of your TV set? Do you
-use rechargeable batteries in your toys? Do you know beforehand what you
+**Data**: self-administered survey completed both by students: 1: Do you
+turn off the lights when you leave your room for more than 2 min? 2: Do
+you turn off the stand- by button of your TV set? 3: Do you use
+rechargeable batteries in your toys? 4: Do you know beforehand what you
 need from the fridge and therefore you open and close the fridge door
-quickly? Do you turn off the air condition in rooms where there are no
-people? Do you close the windows when the heating is on? Do you close
-the windows when the air condition is on? Do you close the shutters,
-shades or curtains to prevent the sunlight from coming in during summer?
-Do you leave your room window wide-open for a few minutes for the air to
-be renewed? Do you prefer showering to bathing in the bath? Do you check
-that the water heater is turned off in time? Do you prefer going on foot
-somewhere (e.g. school, afternoon private school, park) when it is
-nearby? Have you seen to curtains or furniture not standing in front of
-radiators? Do you fix your heating or air conditioning temperature at
-maximum 20 °C in winter? Do you fix your air condition temperature above
-25 °C in summer? Do you use special low electricity consumption lighting
-bulbs at home? Do you receive central heating systems maintenance every
-year? Do you check whether your fridge door closes properly? Do you cook
-in a pot of the same size as the one in the stove in the cooker? Do you
-put only as much water in the pot as you need? Do you fill up the
-washing machine with clothes before you operate it? Do you check your
-tyres’ pressure regularly? (Respondent answers if he has a car)
+quickly? 5: Do you turn off the air condition in rooms where there are
+no people? 6: Do you close the windows when the heating is on? 7: Do you
+close the windows when the air condition is on? 8: Do you close the
+shutters, shades or curtains to prevent the sunlight from coming in
+during summer? 9: Do you leave your room window wide-open for a few
+minutes for the air to be renewed? 10: Do you prefer showering to
+bathing in the bath? 11: Do you check that the water heater is turned
+off in time? 12:Do you prefer going on foot somewhere (e.g. school,
+afternoon private school, park) when it is nearby? 13: Have you seen to
+curtains or furniture not standing in front of radiators? 14: Do you fix
+your heating or air conditioning temperature at maximum 20 °C in winter?
+15: Do you fix your air condition temperature above 25 °C in summer? 16:
+Do you use special low electricity consumption lighting bulbs at home?
+17: Do you receive central heating systems maintenance every year? 18:
+Do you check whether your fridge door closes properly? 19: Do you cook
+in a pot of the same size as the one in the stove in the cooker? 20: Do
+you put only as much water in the pot as you need? 21: Do you fill up
+the washing machine with clothes before you operate it? 22: Do you check
+your tyres’ pressure regularly? (Respondent answers if he has a car)
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
 
 </td>
 <td style="text-align:left;">
 
-1 school year
+1 school year. A great number of activities that were assigned but no
+precision on how long or how many they were per participant.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -10724,27 +16934,81 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-long term
+Very short term
 
 </td>
 </tr>
 </tbody>
 </table>
 
-# 146 NA ( NA )
+# 152 Zografakis2008 ( SB )
 
-**title** NA
+**title** Effective education for energy efficiency
 
-**Intervention**: NA
+**Intervention**: Intervention great number of possible interventions
+including specific lessons (includes specific audiovisual material,
+books… ), games, exercises, drawings, filed trips to classic and
+renevwable energy production units, art exhibitions… Specific
+interventions to specific groups were not described but were presumably
+adapted to student’s age and education.
 
-**Data**: NA
+**Data**: self-administered survey completed both by student’s parents:
+1: Have you seen to curtains or furniture not standing in front of
+radiators? 2: Do you fix your heating or air conditioning temperature at
+maximum 20 1C in winter? 3: Do you fix your air condition temperature
+above 25 1C in summer? 4: Do you use special low electricity consumption
+lighting bulbs at home? 5: Do you receive central heating systems
+maintenance every year? (This question is answered only if the house has
+central heating) 6: Do you check whether your fridge door closes
+properly? 7: Do you cook in a pot of the same size as the one in the
+stove in the cooker? 8: Do you put only as much water in the pot as you
+need? 9: Do you fill up the washing machine with clothes before you
+operate it? 10: Do you check your tyres’ pressure regularly? (Respondent
+answers if he has a car)
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:left;">
 
-Duración.INTERV
+All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH
+
+</td>
+<td style="text-align:left;">
+
+1 school year. A great number of activities that were assigned but no
+precision on how long or how many they were per participant.
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Total.duration.of.the.intervention
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Period.length
+
+</td>
+<td style="text-align:left;">
+
+1Y
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Number.of.sessions
 
 </td>
 <td style="text-align:left;">
@@ -10761,7 +17025,7 @@ tiempo.transcurrido.entre.la.intervencion.y.prueba
 </td>
 <td style="text-align:left;">
 
-NA
+inmediate
 
 </td>
 </tr>
@@ -10785,7 +17049,7 @@ Horizon.of.change
 </td>
 <td style="text-align:left;">
 
-NA
+Very short term
 
 </td>
 </tr>

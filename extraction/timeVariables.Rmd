@@ -11,8 +11,8 @@ output:
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
 completeFTS <- read.xlsx("../../screening/fullTextScreening/fullTextScreening.xlsx")
-names(loadWorkbook("../../extraction/20230928.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20230928.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231012_2.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231012_2.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 #table(extract$`Validation.Mitigation/adaptation`)
 tabToWork<-extract[order(extract$id),]
@@ -39,7 +39,7 @@ for(i in 1:nrow(tabToWork))
   TAB<-t(tabToWork[i,c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Analysis.technique","Resultados.obtenidos.por.cada.outcome","Which.aspect.has.improved.or.not?")])
   # #cat(kable(TAB,col.names = c()))
   cat("**Data**:",TAB[1,],"\n\n")
-  TAB<-t(tabToWork[i,c("Duración.INTERV","tiempo.transcurrido.entre.la.intervencion.y.prueba","tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad","Horizon.of.change")])
+  TAB<-t(tabToWork[i,c("All.details.of.DURATION,.INTENSITY.and.PERIOD.LENGTH","Total.duration.of.the.intervention","Period.length", "Number.of.sessions", "tiempo.transcurrido.entre.la.intervencion.y.prueba","tiempo.transcurrido.entre.la.medicion.post.(ultima).y.sostenibilidad","Horizon.of.change")])
   cat(kable(TAB,col.names = c()))
 }
 ```

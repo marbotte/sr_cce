@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231010.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231010.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231012_2.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231012_2.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -351,20 +351,15 @@ listTheoBack<-lapply(strsplit(extract$`Theoretical.framework.(big.categories)`,"
 tabTheoBack<-data.frame(id=rep(extract$id,sapply(listTheoBack,length)),
            theoBack=unlist(listTheoBack)
            )
-tabTheoBack$consistentWith[grepl("consistent with",tabTheoBack$theoBack)]<-T
-tabTheoBack$consistentWith[!grepl("consistent with",tabTheoBack$theoBack)]<-F
-tabTheoBack$theoBack<-gsub(" \\(consistent with\\)","",tabTheoBack$theoBack)
-#sort(table(tabTheoBack$theoBack,useNA="ifany"))
-
 #Temporary plot
-forTempPlot<-table(tabTheoBack$theoBack,tabTheoBack$consistentWith)
-forTempPlot<-forTempPlot[order(rowSums(forTempPlot),decreasing=T),]
-other<-colSums(forTempPlot[6:nrow(forTempPlot),])
-forTempPlot<-forTempPlot[1:5,]
-forTempPlot<-rbind(forTempPlot,other)
+forTempPlot<-table(tabTheoBack$theoBack)
+forTempPlot<-forTempPlot[order(forTempPlot,decreasing=T)]
+other<-(forTempPlot[6:nrow(forTempPlot)])
+forTempPlot<-forTempPlot[1:5]
+forTempPlot<-c(forTempPlot,other)
 par(mar=c(15,4,1,1))
 bp<-barplot(t(forTempPlot),las=2, density=c(0,20))
-legend("topright",density=18,"consistent with")
+#legend("topright",density=18,"consistent with")
 text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 
 
@@ -424,6 +419,8 @@ barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 
 # Pedagogical tools
 
+
+## From manuscript 1 text
 ```{r}
 par(mar=c(9,4,1,1))
 barplot(c(
@@ -437,6 +434,15 @@ barplot(c(
 ), las = 2
 )
 ```
+
+## From table
+
+```{r, fig.height=5, fig.width=5}
+par(mar=c(14,4,1,1))
+barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
+```
+
+
 
 
 # Time variables
@@ -494,3 +500,41 @@ hist(perLen$totalHours,nclass=200,main="",xlab="Total intervention period length
 axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","month","year","2 years","3 years"),las=1)
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
 ```
+
+```{r}
+recapTempInterv <- data.frame(
+id=extract$id,
+nbSessions = as.integer(gsub("^~","",extract$Number.of.sessions)),
+totalDur_min = totalDur$totalMin,
+perLen_h = perLen$totalHours
+)
+kable(recapTempInterv)
+recapTempInterv$category<-NA
+recapTempInterv$category[recapTempInterv$nbSessions==1&recapTempInterv$totalDur_min<=180]<-"1 session of 3h or less"
+recapTempInterv$category[recapTempInterv$nbSessions>1&recapTempInterv$totalDur_min<=180]<-"multiples sessions total contact time of 3h or less"
+recapTempInterv$category[is.na(recapTempInterv$category) & (recapTempInterv$perLen_h > 3 & recapTempInterv$perLen_h <= 24*7 )] <- "Total period 1 week or less"
+recapTempInterv$category[is.na(recapTempInterv$category) & ( recapTempInterv$perLen_h > 7*24 & recapTempInterv$perLen_h <= 30*24)] <- "Total period span more than 1 week"
+recapTempInterv$category[is.na(recapTempInterv$category) & ( recapTempInterv$perLen_h > 30*24 )] <- "Total period span more than 1 month"
+recapTempInterv$category<-factor(recapTempInterv$category,levels=c(
+  "1 session of 3h or less",
+  "multiples sessions total contact time of 3h or less",
+  "Total period 1 week or less",
+  "Total period span more than 1 week",
+  "Total period span more than 1 month"
+), labels = c("very short unique", "very short multiple", "week period", "month period", "large period"))
+
+table(recapTempInterv$category,useNA = "ifany")
+
+kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$category=="very short unique",])
+kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$category=="very short multiple",])
+kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$category=="week period",])
+kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$category=="month period",])
+kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$category=="large period",])
+kable(recapTempInterv[is.na(recapTempInterv$category),])
+
+```
+
+
+
+
+
