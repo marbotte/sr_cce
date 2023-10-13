@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231012_4.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231012_4.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231013.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231013.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -337,6 +337,8 @@ extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
 ```
 
 # Theoretical framework
+
+
 ```{r fig.height=9,fig.width=6}
 #sort(table(extract$`Theoretical.framework.(big.categories)`))
 clean<-function(x)
@@ -347,7 +349,7 @@ clean<-function(x)
   x<-gsub("^([a-z])","\\U\\1",x,perl=T)
   return(x)
 }
-listTheoBack<-lapply(strsplit(extract$`Theoretical.framework.(big.categories)`,";"),sapply,clean)
+listTheoBack<-lapply(strsplit(extract$`Theoretical.framework.(big.categories)`,"[,;]"),sapply,clean)
 tabTheoBack<-data.frame(id=rep(extract$id,sapply(listTheoBack,length)),
            theoBack=unlist(listTheoBack)
            )
@@ -362,10 +364,14 @@ bp<-barplot(t(forTempPlot),las=2, density=c(0,20))
 #legend("topright",density=18,"consistent with")
 text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 
-
 kable(sort(table(tabTheoBack$theoBack),decreasing=T))
 ```
 
+## Subcategorias: Learner centered approach
+
+```{r}
+kable(sort(table(subcatLearnerCentered<-extract$X38),decreasing = T))
+```
 
 # Methods & design
 
@@ -585,5 +591,48 @@ barplot(table(didItWork_outcomes[tf_outcomes[,"intention"],"intention"],extract$
 barplot(table(didItWork_outcomes[tf_outcomes[,"emotion"],"emotion"],extract$Intervention.time.category[tf_outcomes[,"emotion"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Emotion")
 barplot(table(didItWork_outcomes[tf_outcomes[,"action"],"action"],extract$Intervention.time.category[tf_outcomes[,"action"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Action")
 barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Intervention.time.category[tf_outcomes[,"habit"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Habit")
+```
+
+
+### Simplified
+
+```{r fig.width=12}
+simp_timeIntervention<-factor(NA,levels=c("short contact time", "days to month","> month"),ordered=T)
+simp_timeIntervention[as.numeric(extract$Intervention.time.category) %in% c(1,2)] <- "short contact time"
+simp_timeIntervention[as.numeric(extract$Intervention.time.category) %in% c(3,4)] <- "days to month"
+simp_timeIntervention[as.numeric(extract$Intervention.time.category) == 5] <- "> month"
+table(simp_timeIntervention)
+tf_outcomes_bigCat<-cbind(
+  cognition=tf_outcomes[,"knowledge"]|tf_outcomes[,"awareness"],
+  attitude=tf_outcomes[,"emotion"]|tf_outcomes[,"intention"],
+  behavior=tf_outcomes[,"action"]|tf_outcomes[,"habit"]
+)
+concatenateDidItWork <- function(x)
+{
+  x<-unique(na.omit(x))
+  if(length(x)==1){return(x)}
+  if(length(x)==0){return(NA)}
+  if(length(x)>1){return("Unclear")}
+}
+didItWork_outcomes_bigCat <- cbind(
+  cognition=apply(didItWork_outcomes[,c("knowledge","awareness")],1,concatenateDidItWork),
+  attitude=apply(didItWork_outcomes[,c("emotion","intention")],1,concatenateDidItWork),
+  behavior=apply(didItWork_outcomes[,c("action","habit")],1,concatenateDidItWork))
+tf_outcomes_bigCat_vector<-rep(NA,3*nrow(tf_outcomes_bigCat))
+tf_outcomes_bigCat_vector[tf_outcomes_bigCat]<-rep(colnames(tf_outcomes_bigCat),each=nrow(tf_outcomes_bigCat))[tf_outcomes_bigCat]
+A<-table(data.frame(
+  didItWork=as.vector(didItWork_outcomes_bigCat),
+  timeIntervention=rep(simp_timeIntervention,3),
+  outcome=factor(tf_outcomes_bigCat_vector,levels=c("cognition","attitude","behavior"))
+           )
+)
+par(mfrow=c(1,3))
+YLIM<-c(0,70)
+barplot(A[,,1],  xlab = "Cognition", ylim=YLIM)
+PARMAR<-par("mar")
+PARMAR[2]<-1
+par(mar=PARMAR)
+barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
+barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
 ```
 

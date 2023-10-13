@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-12
+2023-10-13
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -19,6 +19,8 @@ Marius Bottin
 - [9 Educational framework](#9-educational-framework)
 - [10 Monroe categories](#10-monroe-categories)
 - [11 Theoretical framework](#11-theoretical-framework)
+  - [11.1 Subcategorias: Learner centered
+    approach](#111-subcategorias-learner-centered-approach)
 - [12 Methods & design](#12-methods--design)
 - [13 Pedagogical tools](#13-pedagogical-tools)
   - [13.1 From manuscript 1 text](#131-from-manuscript-1-text)
@@ -31,6 +33,7 @@ Marius Bottin
   - [14.3 Comparison](#143-comparison)
     - [14.3.1 Between time aspects](#1431-between-time-aspects)
     - [14.3.2 With outcomes](#1432-with-outcomes)
+    - [14.3.3 Simplified](#1433-simplified)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -45,7 +48,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231012_4.xlsx"))
+names(loadWorkbook("../../extraction/20231013.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -54,7 +57,7 @@ names(loadWorkbook("../../extraction/20231012_4.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231012_4.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231013.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -1062,22 +1065,21 @@ NA
 </td>
 <td style="text-align:right;">
 
-51
+50
 
 </td>
 <td style="text-align:left;">
 
-Baker2013, Bentz2020, Bozdogan2011, Chang2018, Holthuis2014, Kinsey2012,
-Lambert2012, Lombardi2013, Nicholas_Figueroa2017, Petersen2020,
-Puttick2018, Salas_Rueda2021, Schubatzky2022, Sellmann2013, Shea2016,
-Steffensen2022, Taber2009, Varma2012, Williams2017, Korfgen2017,
-Cebesoy2019, Dormody2020, Kolenaty2022, Kumar2023, Mason1998,
-Feldpausch_Parker2013, Roscoe2013, Raes2016, McGowan2022,
-Klosterman2010, Saribaş2016 , Reinfried2012, Sellmann2013a,
-Sternang2012, Sutela2023, Stevenson2018a, Xie2014, Xie2014, Trott2019,
-Trott2022, Markowitz2018, Zhong2021, Harker_Schuch2013,
-Harker_Schuch2020, Lambert2013, Littrell2022, Skains2022, Stevenson2018,
-Sukardi2022, Pekel2019, Nussbaum2015
+Baker2013, Bentz2020, Chang2018, Holthuis2014, Kinsey2012, Lambert2012,
+Lombardi2013, Nicholas_Figueroa2017, Petersen2020, Puttick2018,
+Salas_Rueda2021, Schubatzky2022, Sellmann2013, Shea2016, Steffensen2022,
+Taber2009, Varma2012, Williams2017, Korfgen2017, Cebesoy2019,
+Dormody2020, Kolenaty2022, Kumar2023, Mason1998, Feldpausch_Parker2013,
+Roscoe2013, Raes2016, McGowan2022, Klosterman2010, Saribaş2016 ,
+Reinfried2012, Sellmann2013a, Sternang2012, Sutela2023, Stevenson2018a,
+Xie2014, Xie2014, Trott2019, Trott2022, Markowitz2018, Zhong2021,
+Harker_Schuch2013, Harker_Schuch2020, Lambert2013, Littrell2022,
+Skains2022, Stevenson2018, Sukardi2022, Pekel2019, Nussbaum2015
 
 </td>
 </tr>
@@ -1107,7 +1109,7 @@ Pruneau2006a
 <tr>
 <td style="text-align:left;">
 
-global
+local
 
 </td>
 <td style="text-align:right;">
@@ -1117,16 +1119,16 @@ global
 </td>
 <td style="text-align:left;">
 
-Aksel_Stenberdt2023, Aksut2016, Arya2016, Bhattacharya2021, Boon2016,
-Choi2021, Khadka2021, Monroe2016, Parant2017, Roychoudhury2017,
-Veijalainen2013, Meya2018, Gutierrez2022
+Bofferding2015, Bozdogan2011, Dormody2021, Feierabend2012, Lester2006,
+Liu2015, Nakamura2019, Faria2015, Faria2015, Ratinen2013, Breslyn2019,
+Sellmann2015, Goulah2017
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-local
+global
 
 </td>
 <td style="text-align:right;">
@@ -1136,9 +1138,9 @@ local
 </td>
 <td style="text-align:left;">
 
-Bofferding2015, Dormody2021, Feierabend2012, Lester2006, Liu2015,
-Nakamura2019, Faria2015, Faria2015, Ratinen2013, Breslyn2019,
-Sellmann2015, Goulah2017
+Aksel_Stenberdt2023, Aksut2016, Arya2016, Bhattacharya2021, Choi2021,
+Khadka2021, Monroe2016, Parant2017, Roychoudhury2017, Veijalainen2013,
+Meya2018, Gutierrez2022
 
 </td>
 </tr>
@@ -1387,6 +1389,23 @@ Nkoana2020
 <tr>
 <td style="text-align:left;">
 
+global; local
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+Boon2016
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Global/European
 
 </td>
@@ -1620,7 +1639,7 @@ clean<-function(x)
   x<-gsub("^([a-z])","\\U\\1",x,perl=T)
   return(x)
 }
-listTheoBack<-lapply(strsplit(extract$`Theoretical.framework.(big.categories)`,";"),sapply,clean)
+listTheoBack<-lapply(strsplit(extract$`Theoretical.framework.(big.categories)`,"[,;]"),sapply,clean)
 tabTheoBack<-data.frame(id=rep(extract$id,sapply(listTheoBack,length)),
            theoBack=unlist(listTheoBack)
            )
@@ -1666,7 +1685,7 @@ Learner centered approach
 </td>
 <td style="text-align:right;">
 
-104
+98
 
 </td>
 </tr>
@@ -1678,7 +1697,7 @@ Teacher centered approach
 </td>
 <td style="text-align:right;">
 
-19
+21
 
 </td>
 </tr>
@@ -1690,7 +1709,7 @@ Relational
 </td>
 <td style="text-align:right;">
 
-18
+19
 
 </td>
 </tr>
@@ -1702,7 +1721,7 @@ Promoting social awareness
 </td>
 <td style="text-align:right;">
 
-10
+9
 
 </td>
 </tr>
@@ -1750,7 +1769,7 @@ Intergenerational learning
 </td>
 <td style="text-align:right;">
 
-4
+3
 
 </td>
 </tr>
@@ -1762,7 +1781,7 @@ Argument-driven
 </td>
 <td style="text-align:right;">
 
-3
+2
 
 </td>
 </tr>
@@ -1793,44 +1812,8 @@ Gaming
 <tr>
 <td style="text-align:left;">
 
-Promoting Social Awareness
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Traditional
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 (field trips) vs. Learner centered approach (field trips + technology
 enhanced)
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Arts-based
 
 </td>
 <td style="text-align:right;">
@@ -1902,7 +1885,377 @@ NA
 <tr>
 <td style="text-align:left;">
 
-Relational, Technology enhanced
+Promoting Social Awareness
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Traditional
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 11.1 Subcategorias: Learner centered approach
+
+``` r
+kable(sort(table(subcatLearnerCentered<-extract$X38),decreasing = T))
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+
+Var1
+
+</th>
+<th style="text-align:right;">
+
+Freq
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+Constructivism
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Active learning
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Socio-constructivism
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Experiential learning
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Moderate constructivism
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Socio-scientific
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Experiencial learning
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Expert learner
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+inquiry-based learning
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Instruction
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Action competence (jensen & Snack, 1997)
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Alternative (Art-based)
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Alternative (Visual Material)
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Argument driven inquiry
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Bloom’s taxonomy
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Buddhist principles of instruction
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Conceptual change (misconceptions and scaffold)
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Existential and epistemological
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+experiential learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Gamification
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Gestalt and Behaviorist learning theories
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Inquiry-based learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Intergenerational learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Moderate constructivist
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Problem-based learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Scaffolding
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+socio-ecological
 
 </td>
 <td style="text-align:right;">
@@ -1923,7 +2276,7 @@ sort(table(extract$study.type),decreasing = T)
     ## 
     ##  Quantitative  quantitative   Qualitative          Both         Mixed 
     ##            36            33            31            19            12 
-    ##          both   qualitative         mixed  qualitative  quantitative  
+    ##         mixed   qualitative          both  qualitative  quantitative  
     ##             5             5             4             4             2 
     ##            ND 
     ##             1
@@ -1944,7 +2297,7 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ``` r
 A<-sort(table(extract$design),decreasing=T)
@@ -2104,7 +2457,7 @@ designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-
 barplot(table(designClean),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-19-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-2.png)<!-- -->
 
 ``` r
 par(mfrow=c(1,2))
@@ -2113,7 +2466,7 @@ barplot(table(designClean),las=2)
 barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
 
 # 13 Pedagogical tools
 
@@ -2133,7 +2486,7 @@ barplot(c(
 )
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 
 ## 13.2 From table
 
@@ -2142,7 +2495,7 @@ par(mar=c(14,4,1,1))
 barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 ``` r
 extract$Categories.type.of.intervention <- extract$Categories.type.of.intervention <-factor(extract$Categories.type.of.intervention, levels = names(sort(table(extract$Categories.type.of.intervention), decreasing=T)))
@@ -2155,7 +2508,7 @@ opar <- par(lwd = 0.4)
 barplot(table(extract$Categories.type.of.intervention,factor(extract$datepubl,levels=min(extract$datepubl):max(extract$datepubl))),beside=T,col=rainbow(nlevels(extract$Categories.type.of.intervention)), legend=T, args.legend=list(x="topleft"), lwd=.1, cex.names=.8)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
 # 14 Time variables
 
@@ -2247,7 +2600,7 @@ hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number o
 legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ``` r
 extract$Total.duration.of.the.intervention
@@ -6299,7 +6652,7 @@ axis(1,at=c(0,60*c(20,50,100,150)),labels=c("0","20h","50h","100h","150h"),las=1
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ``` r
 extract$Period.length
@@ -13299,7 +13652,7 @@ axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","m
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ## 14.1 intervention time categories
 
@@ -22095,4 +22448,55 @@ barplot(table(didItWork_outcomes[tf_outcomes[,"action"],"action"],extract$Interv
 barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Intervention.time.category[tf_outcomes[,"habit"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Habit")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
+
+### 14.3.3 Simplified
+
+``` r
+simp_timeIntervention<-factor(NA,levels=c("short contact time", "days to month","> month"),ordered=T)
+simp_timeIntervention[as.numeric(extract$Intervention.time.category) %in% c(1,2)] <- "short contact time"
+simp_timeIntervention[as.numeric(extract$Intervention.time.category) %in% c(3,4)] <- "days to month"
+simp_timeIntervention[as.numeric(extract$Intervention.time.category) == 5] <- "> month"
+table(simp_timeIntervention)
+```
+
+    ## simp_timeIntervention
+    ## short contact time      days to month            > month 
+    ##                 24                 41                 70
+
+``` r
+tf_outcomes_bigCat<-cbind(
+  cognition=tf_outcomes[,"knowledge"]|tf_outcomes[,"awareness"],
+  attitude=tf_outcomes[,"emotion"]|tf_outcomes[,"intention"],
+  behavior=tf_outcomes[,"action"]|tf_outcomes[,"habit"]
+)
+concatenateDidItWork <- function(x)
+{
+  x<-unique(na.omit(x))
+  if(length(x)==1){return(x)}
+  if(length(x)==0){return(NA)}
+  if(length(x)>1){return("Unclear")}
+}
+didItWork_outcomes_bigCat <- cbind(
+  cognition=apply(didItWork_outcomes[,c("knowledge","awareness")],1,concatenateDidItWork),
+  attitude=apply(didItWork_outcomes[,c("emotion","intention")],1,concatenateDidItWork),
+  behavior=apply(didItWork_outcomes[,c("action","habit")],1,concatenateDidItWork))
+tf_outcomes_bigCat_vector<-rep(NA,3*nrow(tf_outcomes_bigCat))
+tf_outcomes_bigCat_vector[tf_outcomes_bigCat]<-rep(colnames(tf_outcomes_bigCat),each=nrow(tf_outcomes_bigCat))[tf_outcomes_bigCat]
+A<-table(data.frame(
+  didItWork=as.vector(didItWork_outcomes_bigCat),
+  timeIntervention=rep(simp_timeIntervention,3),
+  outcome=factor(tf_outcomes_bigCat_vector,levels=c("cognition","attitude","behavior"))
+           )
+)
+par(mfrow=c(1,3))
+YLIM<-c(0,70)
+barplot(A[,,1],  xlab = "Cognition", ylim=YLIM)
+PARMAR<-par("mar")
+PARMAR[2]<-1
+par(mar=PARMAR)
+barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
+barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
