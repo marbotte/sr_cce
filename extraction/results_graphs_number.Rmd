@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231012_2.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231012_2.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231012_4.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231012_4.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -440,9 +440,14 @@ barplot(c(
 ```{r, fig.height=5, fig.width=5}
 par(mar=c(14,4,1,1))
 barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
+extract$Categories.type.of.intervention <- extract$Categories.type.of.intervention <-factor(extract$Categories.type.of.intervention, levels = names(sort(table(extract$Categories.type.of.intervention), decreasing=T)))
 ```
 
-
+## Over time
+```{r,fig.width=15, fig.height=7}
+opar <- par(lwd = 0.4)
+barplot(table(extract$Categories.type.of.intervention,factor(extract$datepubl,levels=min(extract$datepubl):max(extract$datepubl))),beside=T,col=rainbow(nlevels(extract$Categories.type.of.intervention)), legend=T, args.legend=list(x="topleft"), lwd=.1, cex.names=.8)
+```
 
 
 # Time variables
@@ -501,6 +506,8 @@ axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","m
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
 ```
 
+## intervention time categories
+
 ```{r}
 recapTempInterv <- data.frame(
 id=extract$id,
@@ -532,9 +539,51 @@ kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$categor
 kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$category=="large period",])
 kable(recapTempInterv[is.na(recapTempInterv$category),])
 
+write.xlsx(recapTempInterv,file="../../extraction/timeIntervWork.xlsx")
+
 ```
 
 
 
+```{r}
+extract$Intervention.time.category<-factor(extract$Intervention.time.category,levels=c("very short unique", "very short multiple", "week period", "month period", "large period"), ordered=T)
+table(extract$Intervention.time.category)
+```
 
+## Horizon of change
+
+```{r}
+extract$Horizon.of.change<-factor(tolower(extract$Horizon.of.change), levels=c("very short term", "short term", "middle term", "long term"))
+table(extract$Horizon.of.change)
+```
+
+## Comparison
+
+### Between time aspects
+
+```{r}
+kable(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"))
+```
+
+
+### With outcomes
+
+```{r fig.height=15, fig.width=10}
+tf_outcomes <- !is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")])
+didItWork_outcomes <- matrix(factor("Unclear",levels=c("Yes","No","Unclear")),nrow=nrow(tf_outcomes),ncol=ncol(tf_outcomes))
+dimnames(didItWork_outcomes)<-dimnames(tf_outcomes)
+didItWork_outcomes[which(as.matrix(extract[,didItWork_col])%in%c("Yes","yes","YES"),arr.ind=T)]<-"Yes"
+didItWork_outcomes[which(as.matrix(extract[didItWork_col])%in%c("no","No","NO"),arr.ind=T)]<-"No"
+didItWork_outcomes[which(!tf_outcomes,arr.ind=T)]<-NA
+
+
+
+par(mar=c(8,4,3,1),mfrow=c(3,2))
+barplot(table(didItWork_outcomes[tf_outcomes[,"knowledge"],"knowledge"],extract$Intervention.time.category[tf_outcomes[,"knowledge"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Knowledge")
+barplot(table(didItWork_outcomes[tf_outcomes[,"awareness"],"awareness"],extract$Intervention.time.category[tf_outcomes[,"awareness"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Awareness")
+barplot(table(didItWork_outcomes[tf_outcomes[,"intention"],"intention"],extract$Intervention.time.category[tf_outcomes[,"intention"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Intent")
+barplot(table(didItWork_outcomes[tf_outcomes[,"emotion"],"emotion"],extract$Intervention.time.category[tf_outcomes[,"emotion"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Emotion")
+barplot(table(didItWork_outcomes[tf_outcomes[,"action"],"action"],extract$Intervention.time.category[tf_outcomes[,"action"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Action")
+barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Intervention.time.category[tf_outcomes[,"habit"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Habit")
+```
 

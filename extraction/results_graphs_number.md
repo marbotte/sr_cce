@@ -23,7 +23,14 @@ Marius Bottin
 - [13 Pedagogical tools](#13-pedagogical-tools)
   - [13.1 From manuscript 1 text](#131-from-manuscript-1-text)
   - [13.2 From table](#132-from-table)
+  - [13.3 Over time](#133-over-time)
 - [14 Time variables](#14-time-variables)
+  - [14.1 intervention time
+    categories](#141-intervention-time-categories)
+  - [14.2 Horizon of change](#142-horizon-of-change)
+  - [14.3 Comparison](#143-comparison)
+    - [14.3.1 Between time aspects](#1431-between-time-aspects)
+    - [14.3.2 With outcomes](#1432-with-outcomes)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -38,7 +45,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231012_2.xlsx"))
+names(loadWorkbook("../../extraction/20231012_4.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -47,7 +54,7 @@ names(loadWorkbook("../../extraction/20231012_2.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231012_2.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231012_4.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -1659,7 +1666,7 @@ Learner centered approach
 </td>
 <td style="text-align:right;">
 
-106
+104
 
 </td>
 </tr>
@@ -1671,7 +1678,7 @@ Teacher centered approach
 </td>
 <td style="text-align:right;">
 
-20
+19
 
 </td>
 </tr>
@@ -1707,19 +1714,7 @@ Professional training workshop
 </td>
 <td style="text-align:right;">
 
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Technology enhanced
-
-</td>
-<td style="text-align:right;">
-
-6
+8
 
 </td>
 </tr>
@@ -1727,6 +1722,18 @@ Technology enhanced
 <td style="text-align:left;">
 
 Professional development workshop
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Technology enhanced
 
 </td>
 <td style="text-align:right;">
@@ -1835,18 +1842,6 @@ Arts-based
 <tr>
 <td style="text-align:left;">
 
-Collaborative learning
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 Debunking
 
 </td>
@@ -1908,18 +1903,6 @@ NA
 <td style="text-align:left;">
 
 Relational, Technology enhanced
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Transformative
 
 </td>
 <td style="text-align:right;">
@@ -2161,19 +2144,32 @@ barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 
+``` r
+extract$Categories.type.of.intervention <- extract$Categories.type.of.intervention <-factor(extract$Categories.type.of.intervention, levels = names(sort(table(extract$Categories.type.of.intervention), decreasing=T)))
+```
+
+## 13.3 Over time
+
+``` r
+opar <- par(lwd = 0.4)
+barplot(table(extract$Categories.type.of.intervention,factor(extract$datepubl,levels=min(extract$datepubl):max(extract$datepubl))),beside=T,col=rainbow(nlevels(extract$Categories.type.of.intervention)), legend=T, args.legend=list(x="topleft"), lwd=.1, cex.names=.8)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+
 # 14 Time variables
 
 ``` r
 extract$Total.duration.of.the.intervention
 ```
 
-    ##   [1] "24min"    "1h"       NA         "6h"       NA         NA        
-    ##   [7] NA         NA         "28h"      NA         "15h"      "1h"      
+    ##   [1] "24min"    "60min"    "8h"       "6h"       "~40h"     NA        
+    ##   [7] "~10h"     NA         "28h"      NA         "15h"      "1h"      
     ##  [13] NA         "5h"       NA         NA         NA         NA        
-    ##  [19] NA         NA         "24h"      "~49h"     "1h30min"  "2h45min" 
-    ##  [25] "4h10min"  "14D"      "1h40min"  "50min"    NA         "24h"     
-    ##  [31] NA         "2h30min"  NA         NA         NA         NA        
-    ##  [37] NA         NA         NA         NA         NA         "~35h"    
+    ##  [19] NA         "4h10min"  "24h"      "~49h"     "1h30min"  "2h45min" 
+    ##  [25] "4h10min"  "~60h"     "1h40min"  "1h"       NA         "24h"     
+    ##  [31] NA         "2h30min"  NA         "~7h"      "64h"      "2h"      
+    ##  [37] NA         "5h"       NA         "30min"    NA         "~35h"    
     ##  [43] "~14h"     NA         "~21h"     "12h30min" "12h"      "~7h"     
     ##  [49] NA         "~21h"     "6h"       NA         "8h30min"  "1h"      
     ##  [55] NA         "2h15min"  "6h"       "5h"       "~14h"     NA        
@@ -2198,13 +2194,13 @@ extract$Total.duration.of.the.intervention
 extract$Period.length
 ```
 
-    ##   [1] "1H"       "2H"       "2M"       "3D"       "5M"       "21D"     
-    ##   [7] "1Y"       "1Y"       "4M"       NA         "21D"      "1H"      
-    ##  [13] "3Y"       "~5M"      NA         "1Y"       "7D"       "1Y"      
+    ##   [1] "1H"       "2H"       "2M"       NA         "5M"       "21D"     
+    ##   [7] "~1M"      "1Y"       "4M"       NA         "21D"      "1H"      
+    ##  [13] "~21D"     "~5M"      NA         "1Y"       "7D"       "1Y"      
     ##  [19] "1Y"       "1M"       "3M"       "7D"       "2D"       "1D"      
-    ##  [25] "5D"       "14D"      "2H"       "1H"       "14D"      "4D"      
-    ##  [31] "2M21D"    NA         "1D"       "1D"       "1D"       "1D"      
-    ##  [37] "1D"       "7D"       "7D"       "7D"       "5D"       "5D"      
+    ##  [25] "5D"       "14D"      "14D"      "1H"       "14D"      "4D"      
+    ##  [31] "2M21D"    NA         NA         "1D"       "7D"       "2H"      
+    ##  [37] "2M"       "7D"       "7D"       "1H"       "5D"       "5D"      
     ##  [43] "2D"       "6M"       "3D"       "2M"       NA         "1D"      
     ##  [49] NA         "3D"       NA         "2M"       "1Y"       "14D"     
     ##  [55] NA         "1M"       "~1D"      "6D"       "2D"       "1Y"      
@@ -2229,12 +2225,12 @@ extract$Period.length
 extract$Number.of.sessions
 ```
 
-    ##   [1] "1.0"  "1.0"  "8.0"  "3.0"  NA     "15.0" NA     "2.0"  "14.0" "4.0" 
-    ##  [11] "5.0"  "1.0"  NA     "6.0"  NA     "3.0"  NA     NA     NA     "10.0"
-    ##  [21] "12.0" "7.0"  "2.0"  "2.0"  "5.0"  NA     "1.0"  "1.0"  "2.0"  "4.0" 
-    ##  [31] NA     "3.0"  NA     NA     NA     NA     NA     NA     NA     NA    
+    ##   [1] "1.0"  "1.0"  "8.0"  "3.0"  "~40"  "~15"  "~15"  "2.0"  "14.0" "4.0" 
+    ##  [11] "5.0"  "1.0"  NA     "5.0"  NA     "3.0"  NA     NA     NA     "10.0"
+    ##  [21] "12.0" "7.0"  "2.0"  "2.0"  "5.0"  "~10"  "1.0"  "1.0"  "2.0"  "4.0" 
+    ##  [31] NA     "3.0"  NA     "1.0"  "~10"  "1.0"  NA     "5.0"  NA     "1.0" 
     ##  [41] NA     "10.0" "4.0"  "6.0"  "6.0"  "15.0" "6.0"  "1.0"  NA     "~3"  
-    ##  [51] "4.0"  NA     "5.0"  "4.0"  "4.0"  "3.0"  "~1"   "6.0"  "2.0"  NA    
+    ##  [51] "4.0"  NA     "5.0"  "4.0"  "2.0"  "3.0"  "~1"   "6.0"  "2.0"  NA    
     ##  [61] "5.0"  "1.0"  NA     NA     "10.0" "~4"   "1.0"  "1.0"  "1.0"  "7.0" 
     ##  [71] "15.0" "~40"  "~40"  NA     NA     "24.0" "5.0"  NA     "8.0"  "4.0" 
     ##  [81] "5.0"  "20.0" "5.0"  NA     "2.0"  NA     "7.0"  NA     NA     NA    
@@ -2251,19 +2247,19 @@ hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number o
 legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 ``` r
 extract$Total.duration.of.the.intervention
 ```
 
-    ##   [1] "24min"    "1h"       NA         "6h"       NA         NA        
-    ##   [7] NA         NA         "28h"      NA         "15h"      "1h"      
+    ##   [1] "24min"    "60min"    "8h"       "6h"       "~40h"     NA        
+    ##   [7] "~10h"     NA         "28h"      NA         "15h"      "1h"      
     ##  [13] NA         "5h"       NA         NA         NA         NA        
-    ##  [19] NA         NA         "24h"      "~49h"     "1h30min"  "2h45min" 
-    ##  [25] "4h10min"  "14D"      "1h40min"  "50min"    NA         "24h"     
-    ##  [31] NA         "2h30min"  NA         NA         NA         NA        
-    ##  [37] NA         NA         NA         NA         NA         "~35h"    
+    ##  [19] NA         "4h10min"  "24h"      "~49h"     "1h30min"  "2h45min" 
+    ##  [25] "4h10min"  "~60h"     "1h40min"  "1h"       NA         "24h"     
+    ##  [31] NA         "2h30min"  NA         "~7h"      "64h"      "2h"      
+    ##  [37] NA         "5h"       NA         "30min"    NA         "~35h"    
     ##  [43] "~14h"     NA         "~21h"     "12h30min" "12h"      "~7h"     
     ##  [49] NA         "~21h"     "6h"       NA         "8h30min"  "1h"      
     ##  [55] NA         "2h15min"  "6h"       "5h"       "~14h"     NA        
@@ -2299,15 +2295,6 @@ totalDur<-data.frame(
   h=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\3",extract$Total.duration.of.the.intervention,perl=T)),
   min=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\6",extract$Total.duration.of.the.intervention,perl=T))
 )
-```
-
-    ## Warning in data.frame(id = extract$id, raw =
-    ## extract$Total.duration.of.the.intervention, : NAs introduced by coercion
-
-    ## Warning in data.frame(id = extract$id, raw =
-    ## extract$Total.duration.of.the.intervention, : NAs introduced by coercion
-
-``` r
 totalDur$totalMin=ifelse(totalDur$ND,NA,(60*ifelse(is.na(totalDur$h),0,totalDur$h))+ifelse(is.na(totalDur$min),0,totalDur$min))
 kbl(totalDur[!totalDur$ND,])
 ```
@@ -2410,7 +2397,7 @@ Aksut2016
 </td>
 <td style="text-align:left;">
 
-1h
+60min
 
 </td>
 <td style="text-align:left;">
@@ -2421,11 +2408,6 @@ FALSE
 <td style="text-align:left;">
 
 FALSE
-
-</td>
-<td style="text-align:right;">
-
-1
 
 </td>
 <td style="text-align:right;">
@@ -2436,6 +2418,53 @@ NA
 <td style="text-align:right;">
 
 60
+
+</td>
+<td style="text-align:right;">
+
+60
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+3
+
+</td>
+<td style="text-align:left;">
+
+Arya2016
+
+</td>
+<td style="text-align:left;">
+
+8h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+480
 
 </td>
 </tr>
@@ -2478,6 +2507,90 @@ NA
 <td style="text-align:right;">
 
 360
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Bentz2020
+
+</td>
+<td style="text-align:left;">
+
+~40h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+40
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2400
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+7
+
+</td>
+<td style="text-align:left;">
+
+Bofferding2015
+
+</td>
+<td style="text-align:left;">
+
+~10h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+600
 
 </td>
 </tr>
@@ -2646,6 +2759,48 @@ NA
 <td style="text-align:right;">
 
 300
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+20
+
+</td>
+<td style="text-align:left;">
+
+Lambert2012
+
+</td>
+<td style="text-align:left;">
+
+4h10min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+250
 
 </td>
 </tr>
@@ -2872,7 +3027,7 @@ Nicholas_Figueroa2017
 </td>
 <td style="text-align:left;">
 
-14D
+~60h
 
 </td>
 <td style="text-align:left;">
@@ -2882,7 +3037,12 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+60
 
 </td>
 <td style="text-align:right;">
@@ -2892,12 +3052,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-NA
-
-</td>
-<td style="text-align:right;">
-
-0
+3600
 
 </td>
 </tr>
@@ -2956,7 +3111,7 @@ Petersen2020
 </td>
 <td style="text-align:left;">
 
-50min
+1h
 
 </td>
 <td style="text-align:left;">
@@ -2967,6 +3122,11 @@ FALSE
 <td style="text-align:left;">
 
 FALSE
+
+</td>
+<td style="text-align:right;">
+
+1
 
 </td>
 <td style="text-align:right;">
@@ -2976,12 +3136,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-50
-
-</td>
-<td style="text-align:right;">
-
-50
+60
 
 </td>
 </tr>
@@ -3066,6 +3221,216 @@ FALSE
 <td style="text-align:right;">
 
 150
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+34
+
+</td>
+<td style="text-align:left;">
+
+Sellmann2013
+
+</td>
+<td style="text-align:left;">
+
+~7h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+420
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+35
+
+</td>
+<td style="text-align:left;">
+
+Shea2016
+
+</td>
+<td style="text-align:left;">
+
+64h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+64
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3840
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+36
+
+</td>
+<td style="text-align:left;">
+
+Steffensen2022
+
+</td>
+<td style="text-align:left;">
+
+2h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+120
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+38
+
+</td>
+<td style="text-align:left;">
+
+Varma2012
+
+</td>
+<td style="text-align:left;">
+
+5h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+300
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+40
+
+</td>
+<td style="text-align:left;">
+
+Williams2017
+
+</td>
+<td style="text-align:left;">
+
+30min
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+30
+
+</td>
+<td style="text-align:right;">
+
+30
 
 </td>
 </tr>
@@ -5934,19 +6299,19 @@ axis(1,at=c(0,60*c(20,50,100,150)),labels=c("0","20h","50h","100h","150h"),las=1
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ``` r
 extract$Period.length
 ```
 
-    ##   [1] "1H"       "2H"       "2M"       "3D"       "5M"       "21D"     
-    ##   [7] "1Y"       "1Y"       "4M"       NA         "21D"      "1H"      
-    ##  [13] "3Y"       "~5M"      NA         "1Y"       "7D"       "1Y"      
+    ##   [1] "1H"       "2H"       "2M"       NA         "5M"       "21D"     
+    ##   [7] "~1M"      "1Y"       "4M"       NA         "21D"      "1H"      
+    ##  [13] "~21D"     "~5M"      NA         "1Y"       "7D"       "1Y"      
     ##  [19] "1Y"       "1M"       "3M"       "7D"       "2D"       "1D"      
-    ##  [25] "5D"       "14D"      "2H"       "1H"       "14D"      "4D"      
-    ##  [31] "2M21D"    NA         "1D"       "1D"       "1D"       "1D"      
-    ##  [37] "1D"       "7D"       "7D"       "7D"       "5D"       "5D"      
+    ##  [25] "5D"       "14D"      "14D"      "1H"       "14D"      "4D"      
+    ##  [31] "2M21D"    NA         NA         "1D"       "7D"       "2H"      
+    ##  [37] "2M"       "7D"       "7D"       "1H"       "5D"       "5D"      
     ##  [43] "2D"       "6M"       "3D"       "2M"       NA         "1D"      
     ##  [49] NA         "3D"       NA         "2M"       "1Y"       "14D"     
     ##  [55] NA         "1M"       "~1D"      "6D"       "2D"       "1Y"      
@@ -6220,58 +6585,6 @@ NA
 <tr>
 <td style="text-align:left;">
 
-4
-
-</td>
-<td style="text-align:left;">
-
-Baker2013
-
-</td>
-<td style="text-align:left;">
-
-3D
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-72
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 5
 
 </td>
@@ -6386,7 +6699,7 @@ Bofferding2015
 </td>
 <td style="text-align:left;">
 
-1Y
+~1M
 
 </td>
 <td style="text-align:left;">
@@ -6396,7 +6709,12 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+NA
 
 </td>
 <td style="text-align:right;">
@@ -6416,12 +6734,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-NA
-
-</td>
-<td style="text-align:right;">
-
-8736
+732
 
 </td>
 </tr>
@@ -6646,7 +6959,7 @@ DeWaters2014
 </td>
 <td style="text-align:left;">
 
-3Y
+~21D
 
 </td>
 <td style="text-align:left;">
@@ -6656,12 +6969,7 @@ FALSE
 </td>
 <td style="text-align:left;">
 
-FALSE
-
-</td>
-<td style="text-align:right;">
-
-3
+TRUE
 
 </td>
 <td style="text-align:right;">
@@ -6676,12 +6984,17 @@ NA
 </td>
 <td style="text-align:right;">
 
+21
+
+</td>
+<td style="text-align:right;">
+
 NA
 
 </td>
 <td style="text-align:right;">
 
-26208
+504
 
 </td>
 </tr>
@@ -7322,7 +7635,7 @@ Parant2017
 </td>
 <td style="text-align:left;">
 
-2H
+14D
 
 </td>
 <td style="text-align:left;">
@@ -7347,17 +7660,17 @@ NA
 </td>
 <td style="text-align:right;">
 
+14
+
+</td>
+<td style="text-align:right;">
+
 NA
 
 </td>
 <td style="text-align:right;">
 
-2
-
-</td>
-<td style="text-align:right;">
-
-2
+336
 
 </td>
 </tr>
@@ -7572,58 +7885,6 @@ NA
 <tr>
 <td style="text-align:left;">
 
-33
-
-</td>
-<td style="text-align:left;">
-
-Schubatzky2022
-
-</td>
-<td style="text-align:left;">
-
-1D
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-24
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 34
 
 </td>
@@ -7686,7 +7947,7 @@ Shea2016
 </td>
 <td style="text-align:left;">
 
-1D
+7D
 
 </td>
 <td style="text-align:left;">
@@ -7711,7 +7972,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-1
+7
 
 </td>
 <td style="text-align:right;">
@@ -7721,7 +7982,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-24
+168
 
 </td>
 </tr>
@@ -7738,7 +7999,7 @@ Steffensen2022
 </td>
 <td style="text-align:left;">
 
-1D
+2H
 
 </td>
 <td style="text-align:left;">
@@ -7763,17 +8024,17 @@ NA
 </td>
 <td style="text-align:right;">
 
-1
-
-</td>
-<td style="text-align:right;">
-
 NA
 
 </td>
 <td style="text-align:right;">
 
-24
+2
+
+</td>
+<td style="text-align:right;">
+
+2
 
 </td>
 </tr>
@@ -7790,7 +8051,7 @@ Taber2009
 </td>
 <td style="text-align:left;">
 
-1D
+2M
 
 </td>
 <td style="text-align:left;">
@@ -7810,12 +8071,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-NA
-
-</td>
-<td style="text-align:right;">
-
-1
+2
 
 </td>
 <td style="text-align:right;">
@@ -7825,7 +8081,12 @@ NA
 </td>
 <td style="text-align:right;">
 
-24
+NA
+
+</td>
+<td style="text-align:right;">
+
+1464
 
 </td>
 </tr>
@@ -7946,7 +8207,7 @@ Williams2017
 </td>
 <td style="text-align:left;">
 
-7D
+1H
 
 </td>
 <td style="text-align:left;">
@@ -7971,17 +8232,17 @@ NA
 </td>
 <td style="text-align:right;">
 
-7
-
-</td>
-<td style="text-align:right;">
-
 NA
 
 </td>
 <td style="text-align:right;">
 
-168
+1
+
+</td>
+<td style="text-align:right;">
+
+1
 
 </td>
 </tr>
@@ -13038,7 +13299,9 @@ axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","m
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+
+## 14.1 intervention time categories
 
 ``` r
 recapTempInterv <- data.frame(
@@ -13133,7 +13396,7 @@ Arya2016
 </td>
 <td style="text-align:right;">
 
-NA
+480
 
 </td>
 <td style="text-align:right;">
@@ -13160,7 +13423,7 @@ Baker2013
 </td>
 <td style="text-align:right;">
 
-72
+NA
 
 </td>
 </tr>
@@ -13172,12 +13435,12 @@ Bentz2020
 </td>
 <td style="text-align:right;">
 
-NA
+40
 
 </td>
 <td style="text-align:right;">
 
-NA
+2400
 
 </td>
 <td style="text-align:right;">
@@ -13216,17 +13479,17 @@ Bofferding2015
 </td>
 <td style="text-align:right;">
 
-NA
+15
 
 </td>
 <td style="text-align:right;">
 
-NA
+600
 
 </td>
 <td style="text-align:right;">
 
-8736
+732
 
 </td>
 </tr>
@@ -13358,7 +13621,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-26208
+504
 
 </td>
 </tr>
@@ -13370,7 +13633,7 @@ Dormody2021
 </td>
 <td style="text-align:right;">
 
-6
+5
 
 </td>
 <td style="text-align:right;">
@@ -13507,7 +13770,7 @@ Lambert2012
 </td>
 <td style="text-align:right;">
 
-NA
+250
 
 </td>
 <td style="text-align:right;">
@@ -13634,12 +13897,12 @@ Nicholas_Figueroa2017
 </td>
 <td style="text-align:right;">
 
-NA
+10
 
 </td>
 <td style="text-align:right;">
 
-0
+3600
 
 </td>
 <td style="text-align:right;">
@@ -13666,7 +13929,7 @@ Parant2017
 </td>
 <td style="text-align:right;">
 
-2
+336
 
 </td>
 </tr>
@@ -13683,7 +13946,7 @@ Petersen2020
 </td>
 <td style="text-align:right;">
 
-50
+60
 
 </td>
 <td style="text-align:right;">
@@ -13798,7 +14061,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-24
+NA
 
 </td>
 </tr>
@@ -13810,12 +14073,12 @@ Sellmann2013
 </td>
 <td style="text-align:right;">
 
-NA
+1
 
 </td>
 <td style="text-align:right;">
 
-NA
+420
 
 </td>
 <td style="text-align:right;">
@@ -13832,17 +14095,17 @@ Shea2016
 </td>
 <td style="text-align:right;">
 
-NA
+10
 
 </td>
 <td style="text-align:right;">
 
-NA
+3840
 
 </td>
 <td style="text-align:right;">
 
-24
+168
 
 </td>
 </tr>
@@ -13854,17 +14117,17 @@ Steffensen2022
 </td>
 <td style="text-align:right;">
 
-NA
+1
 
 </td>
 <td style="text-align:right;">
 
-NA
+120
 
 </td>
 <td style="text-align:right;">
 
-24
+2
 
 </td>
 </tr>
@@ -13886,7 +14149,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-24
+1464
 
 </td>
 </tr>
@@ -13898,12 +14161,12 @@ Varma2012
 </td>
 <td style="text-align:right;">
 
-NA
+5
 
 </td>
 <td style="text-align:right;">
 
-NA
+300
 
 </td>
 <td style="text-align:right;">
@@ -13942,17 +14205,17 @@ Williams2017
 </td>
 <td style="text-align:right;">
 
-NA
+1
 
 </td>
 <td style="text-align:right;">
 
-NA
+30
 
 </td>
 <td style="text-align:right;">
 
-168
+1
 
 </td>
 </tr>
@@ -14272,7 +14535,7 @@ Salsabila2019
 </td>
 <td style="text-align:right;">
 
-4
+2
 
 </td>
 <td style="text-align:right;">
@@ -16443,9 +16706,9 @@ table(recapTempInterv$category,useNA = "ifany")
 
     ## 
     ##   very short unique very short multiple         week period        month period 
-    ##                  14                   8                  34                   9 
+    ##                  16                   8                  29                  10 
     ##        large period                <NA> 
-    ##                  68                  19
+    ##                  68                  21
 
 ``` r
 kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$category=="very short unique",])
@@ -16603,7 +16866,7 @@ Parant2017
 </td>
 <td style="text-align:right;">
 
-2
+336
 
 </td>
 <td style="text-align:left;">
@@ -16630,7 +16893,71 @@ Petersen2020
 </td>
 <td style="text-align:right;">
 
-50
+60
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+very short unique
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+36
+
+</td>
+<td style="text-align:left;">
+
+Steffensen2022
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+120
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:left;">
+
+very short unique
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+40
+
+</td>
+<td style="text-align:left;">
+
+Williams2017
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+30
 
 </td>
 <td style="text-align:right;">
@@ -17271,38 +17598,6 @@ category
 <tr>
 <td style="text-align:left;">
 
-4
-
-</td>
-<td style="text-align:left;">
-
-Baker2013
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-<td style="text-align:right;">
-
-360
-
-</td>
-<td style="text-align:right;">
-
-72
-
-</td>
-<td style="text-align:left;">
-
-week period
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 17
 
 </td>
@@ -17431,38 +17726,6 @@ week period
 <tr>
 <td style="text-align:left;">
 
-33
-
-</td>
-<td style="text-align:left;">
-
-Schubatzky2022
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-24
-
-</td>
-<td style="text-align:left;">
-
-week period
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 34
 
 </td>
@@ -17473,12 +17736,12 @@ Sellmann2013
 </td>
 <td style="text-align:right;">
 
-NA
+1
 
 </td>
 <td style="text-align:right;">
 
-NA
+420
 
 </td>
 <td style="text-align:right;">
@@ -17505,81 +17768,17 @@ Shea2016
 </td>
 <td style="text-align:right;">
 
-NA
+10
 
 </td>
 <td style="text-align:right;">
 
-NA
+3840
 
 </td>
 <td style="text-align:right;">
 
-24
-
-</td>
-<td style="text-align:left;">
-
-week period
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-36
-
-</td>
-<td style="text-align:left;">
-
-Steffensen2022
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-24
-
-</td>
-<td style="text-align:left;">
-
-week period
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-37
-
-</td>
-<td style="text-align:left;">
-
-Taber2009
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-24
+168
 
 </td>
 <td style="text-align:left;">
@@ -17601,12 +17800,12 @@ Varma2012
 </td>
 <td style="text-align:right;">
 
-NA
+5
 
 </td>
 <td style="text-align:right;">
 
-NA
+300
 
 </td>
 <td style="text-align:right;">
@@ -17629,38 +17828,6 @@ week period
 <td style="text-align:left;">
 
 Visintainer2015
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-168
-
-</td>
-<td style="text-align:left;">
-
-week period
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-40
-
-</td>
-<td style="text-align:left;">
-
-Williams2017
 
 </td>
 <td style="text-align:right;">
@@ -18463,6 +18630,38 @@ month period
 <tr>
 <td style="text-align:left;">
 
+13
+
+</td>
+<td style="text-align:left;">
+
+DeWaters2014
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+504
+
+</td>
+<td style="text-align:left;">
+
+month period
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 26
 
 </td>
@@ -18473,12 +18672,12 @@ Nicholas_Figueroa2017
 </td>
 <td style="text-align:right;">
 
-NA
+10
 
 </td>
 <td style="text-align:right;">
 
-0
+3600
 
 </td>
 <td style="text-align:right;">
@@ -18742,7 +18941,7 @@ Arya2016
 </td>
 <td style="text-align:right;">
 
-NA
+480
 
 </td>
 <td style="text-align:right;">
@@ -18769,12 +18968,12 @@ Bentz2020
 </td>
 <td style="text-align:right;">
 
-NA
+40
 
 </td>
 <td style="text-align:right;">
 
-NA
+2400
 
 </td>
 <td style="text-align:right;">
@@ -18801,17 +19000,17 @@ Bofferding2015
 </td>
 <td style="text-align:right;">
 
-NA
+15
 
 </td>
 <td style="text-align:right;">
 
-NA
+600
 
 </td>
 <td style="text-align:right;">
 
-8736
+732
 
 </td>
 <td style="text-align:left;">
@@ -18887,38 +19086,6 @@ large period
 <tr>
 <td style="text-align:left;">
 
-13
-
-</td>
-<td style="text-align:left;">
-
-DeWaters2014
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-26208
-
-</td>
-<td style="text-align:left;">
-
-large period
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 14
 
 </td>
@@ -18929,7 +19096,7 @@ Dormody2021
 </td>
 <td style="text-align:right;">
 
-6
+5
 
 </td>
 <td style="text-align:right;">
@@ -19062,7 +19229,7 @@ Lambert2012
 </td>
 <td style="text-align:right;">
 
-NA
+250
 
 </td>
 <td style="text-align:right;">
@@ -19132,6 +19299,38 @@ NA
 <td style="text-align:right;">
 
 1968
+
+</td>
+<td style="text-align:left;">
+
+large period
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+37
+
+</td>
+<td style="text-align:left;">
+
+Taber2009
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1464
 
 </td>
 <td style="text-align:left;">
@@ -20943,6 +21142,38 @@ category
 <tr>
 <td style="text-align:left;">
 
+4
+
+</td>
+<td style="text-align:left;">
+
+Baker2013
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+360
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 10
 
 </td>
@@ -20981,6 +21212,38 @@ NA
 <td style="text-align:left;">
 
 Feierabend2012
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+33
+
+</td>
+<td style="text-align:left;">
+
+Schubatzky2022
 
 </td>
 <td style="text-align:right;">
@@ -21113,7 +21376,7 @@ Salsabila2019
 </td>
 <td style="text-align:right;">
 
-4
+2
 
 </td>
 <td style="text-align:right;">
@@ -21550,3 +21813,286 @@ NA
 </tr>
 </tbody>
 </table>
+
+``` r
+write.xlsx(recapTempInterv,file="../../extraction/timeIntervWork.xlsx")
+```
+
+``` r
+extract$Intervention.time.category<-factor(extract$Intervention.time.category,levels=c("very short unique", "very short multiple", "week period", "month period", "large period"), ordered=T)
+table(extract$Intervention.time.category)
+```
+
+    ## 
+    ##   very short unique very short multiple         week period        month period 
+    ##                  16                   8                  32                   9 
+    ##        large period 
+    ##                  70
+
+## 14.2 Horizon of change
+
+``` r
+extract$Horizon.of.change<-factor(tolower(extract$Horizon.of.change), levels=c("very short term", "short term", "middle term", "long term"))
+table(extract$Horizon.of.change)
+```
+
+    ## 
+    ## very short term      short term     middle term       long term 
+    ##              41              53              13              16
+
+## 14.3 Comparison
+
+### 14.3.1 Between time aspects
+
+``` r
+kable(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"))
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+very short unique
+
+</th>
+<th style="text-align:right;">
+
+very short multiple
+
+</th>
+<th style="text-align:right;">
+
+week period
+
+</th>
+<th style="text-align:right;">
+
+month period
+
+</th>
+<th style="text-align:right;">
+
+large period
+
+</th>
+<th style="text-align:right;">
+
+NA
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+very short term
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+13
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+short term
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+19
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+middle term
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+long term
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+13
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+16
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### 14.3.2 With outcomes
+
+``` r
+tf_outcomes <- !is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")])
+didItWork_outcomes <- matrix(factor("Unclear",levels=c("Yes","No","Unclear")),nrow=nrow(tf_outcomes),ncol=ncol(tf_outcomes))
+dimnames(didItWork_outcomes)<-dimnames(tf_outcomes)
+didItWork_outcomes[which(as.matrix(extract[,didItWork_col])%in%c("Yes","yes","YES"),arr.ind=T)]<-"Yes"
+didItWork_outcomes[which(as.matrix(extract[didItWork_col])%in%c("no","No","NO"),arr.ind=T)]<-"No"
+didItWork_outcomes[which(!tf_outcomes,arr.ind=T)]<-NA
+
+
+
+par(mar=c(8,4,3,1),mfrow=c(3,2))
+barplot(table(didItWork_outcomes[tf_outcomes[,"knowledge"],"knowledge"],extract$Intervention.time.category[tf_outcomes[,"knowledge"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Knowledge")
+barplot(table(didItWork_outcomes[tf_outcomes[,"awareness"],"awareness"],extract$Intervention.time.category[tf_outcomes[,"awareness"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Awareness")
+barplot(table(didItWork_outcomes[tf_outcomes[,"intention"],"intention"],extract$Intervention.time.category[tf_outcomes[,"intention"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Intent")
+barplot(table(didItWork_outcomes[tf_outcomes[,"emotion"],"emotion"],extract$Intervention.time.category[tf_outcomes[,"emotion"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Emotion")
+barplot(table(didItWork_outcomes[tf_outcomes[,"action"],"action"],extract$Intervention.time.category[tf_outcomes[,"action"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Action")
+barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Intervention.time.category[tf_outcomes[,"habit"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Habit")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
