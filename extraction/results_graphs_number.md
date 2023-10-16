@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-13
+2023-10-16
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -21,6 +21,7 @@ Marius Bottin
 - [11 Theoretical framework](#11-theoretical-framework)
   - [11.1 Subcategorias: Learner centered
     approach](#111-subcategorias-learner-centered-approach)
+  - [11.2](#112)
 - [12 Methods & design](#12-methods--design)
 - [13 Pedagogical tools](#13-pedagogical-tools)
   - [13.1 From manuscript 1 text](#131-from-manuscript-1-text)
@@ -48,7 +49,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231013.xlsx"))
+names(loadWorkbook("../../extraction/20231016_2.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -57,7 +58,7 @@ names(loadWorkbook("../../extraction/20231013.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231013.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231016_2.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -84,7 +85,7 @@ rawExtract$datepubl
     ##   [1] "2023.0"         "2016.0"         "2016.0"         "2013.0"        
     ##   [5] "2020.0"         "2021.0"         "2015.0"         "2016.0"        
     ##   [9] "2011.0"         "2018.0"         "2015.0"         "2021.0"        
-    ##  [13] "2014.0"         "2021.0"         "2012.0"         "2014.0"        
+    ##  [13] "2014.0"         "2014.0"         "2021.0"         "2012.0"        
     ##  [17] "2021.0"         "2012.0"         "2022.0"         "2012.0"        
     ##  [21] "2006.0"         "2015.0"         "2013.0"         "2016.0"        
     ##  [25] "2019.0"         "2017.0"         "2017.0"         "2020.0"        
@@ -252,8 +253,8 @@ rawExtract$Countries.STUDY
     ##  [12] "South korea, Australia"                                                                                                                                        
     ##  [13] "United States"                                                                                                                                                 
     ##  [14] "United States"                                                                                                                                                 
-    ##  [15] "Germany"                                                                                                                                                       
-    ##  [16] "United States"                                                                                                                                                 
+    ##  [15] "United States"                                                                                                                                                 
+    ##  [16] "Germany"                                                                                                                                                       
     ##  [17] "United States"                                                                                                                                                 
     ##  [18] "United States"                                                                                                                                                 
     ##  [19] "Austria"                                                                                                                                                       
@@ -449,18 +450,18 @@ require(sf)
 
 ``` r
 worldMap_tot<-ne_countries(returnclass = "sf")
+tinyCountries<-ne_download(type="admin_0_tiny_countries",returnclass = "sf")
 namesCountries<-names(nbBycountry)
-pbs<-namesCountries[!(namesCountries%in%worldMap_tot$name_long|namesCountries%in%worldMap_tot$name)]
+pbs<-namesCountries[!(namesCountries%in%worldMap_tot$name_long|namesCountries%in%worldMap_tot$name|namesCountries%in%tinyCountries$NAME)]
+InTinyCountries <- namesCountries[!(namesCountries%in%worldMap_tot$name_long|namesCountries%in%worldMap_tot$name)&namesCountries %in% tinyCountries$NAME]
+
 if(length(pbs>0)){warning("the following countries are not found and will be ignored:",pbs)}
-```
-
-    ## Warning: the following countries are not found and will be ignored:Singapore
-
-``` r
 nbBycountry<-nbBycountry[!namesCountries%in%pbs]
 namesCountries<-names(nbBycountry)
 orderCt<-match(namesCountries,worldMap_tot$name_long)
 orderCt[is.na(orderCt)]<-match(namesCountries[is.na(orderCt)],worldMap_tot$name)
+orderTinyCountries<-match(InTinyCountries,tinyCountries$NAME)
+indexTinyCountries<-which(names(nbBycountry)%in%InTinyCountries)
 #Colors
 scaleNb<-rep(NA,length(nbBycountry))
 scaleNb[nbBycountry==1]<-1
@@ -472,6 +473,7 @@ colorsScale<-c("#fafa6e","#f8cf55","#f6993c","#f35824","#ee0e0e")
 par(mar=c(1,1,1,1))
 plot(st_geometry(worldMap_tot),border="grey",lwd=0.5)
 plot(st_geometry(worldMap_tot[orderCt,]),border="black",lwd=0.7,col=colorsScale[scaleNb],add=T)
+plot(st_geometry(tinyCountries[orderTinyCountries,]),pch=22,bg = colorsScale[scaleNb[indexTinyCountries]],add=T,cex=.7)
 legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5","5-10",">10"))
 ```
 
@@ -480,6 +482,7 @@ legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5
 ``` r
 countryStudy$FinalName<-NA
 countryStudy$FinalName<-worldMap_tot[match(countryStudy$country,worldMap_tot$name),]$name
+countryStudy$FinalName[countryStudy$country%in%InTinyCountries] <- tinyCountries$NAME[match(countryStudy$country[countryStudy$country%in%InTinyCountries],tinyCountries$NAME)]
 countryStudy$FinalName[is.na(countryStudy$FinalName)]<-worldMap_tot[match(countryStudy$country[is.na(countryStudy$FinalName)],worldMap_tot$name_long),]$name
 
 countryDoc <- tapply(countryStudy$FinalName,countryStudy$id,function(x)
@@ -500,6 +503,7 @@ plot(st_geometry(worldMap_tot[worldMap_tot$region_wb!="Antarctica",]),col=rainbo
 ``` r
 countryStudy$region<-NA
 countryStudy$region<-worldMap_tot[match(countryStudy$country,worldMap_tot$name_long),"region_wb"]$region_wb
+countryStudy$region[countryStudy$country%in%InTinyCountries] <- tinyCountries[match(countryStudy$country[countryStudy$country%in%InTinyCountries],tinyCountries$NAME),"REGION_WB"]$REGION_WB
 countryStudy$region[is.na(countryStudy$region)]<-worldMap_tot[match(countryStudy$country[is.na(countryStudy$region)],worldMap_tot$name),"region_wb"]$region_wb
 regionPapers<-factor(tapply(countryStudy$region,countryStudy$id,function(x){
   if(length(unique(x))==1){return(x[1])}else{return("Multiple")}
@@ -515,8 +519,8 @@ dates <- c(1994,2010,2015)
 events <-events[dates>min(as.numeric(colnames(TAB_year_region)))]
 dates<-dates[dates>min(as.numeric(colnames(TAB_year_region)))]
 datesOnGraph <-A[dates - as.numeric(min(as.numeric(colnames(TAB_year_region)), na.rm = T)) +1]
-arrows(x0=datesOnGraph,y0=c(5,13),y1=rep(0,2),x1=datesOnGraph,length = .2,col="black", lwd=2)
-text(datesOnGraph,c(6,13.5),events, cex=.7)
+arrows(x0=datesOnGraph,y0=c(5,16),y1=rep(0,2),x1=datesOnGraph,length = .2,col="black", lwd=2)
+text(datesOnGraph,c(6,16.5),events, cex=.7)
 ```
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
@@ -579,11 +583,11 @@ sort(table(extract$urban.vs.rural))
     ##                                                                                        both 
     ##                                                                                           4 
     ##                                                                                       Rural 
-    ##                                                                                           5 
+    ##                                                                                           6 
     ##                                                                                        Both 
     ##                                                                                           8 
     ##                                                                                       urban 
-    ##                                                                                          38 
+    ##                                                                                          37 
     ##                                                                                       Urban 
     ##                                                                                          50
 
@@ -614,7 +618,7 @@ table(rururbClean,useNA="ifany")
 
     ## rururbClean
     ##     Urban     Rural      Both Not given      <NA> 
-    ##        91         6        17         0        38
+    ##        90         7        17         0        38
 
 ``` r
 rururbClean[is.na(rururbClean)]<-"Not given"
@@ -862,7 +866,7 @@ table(extract$Controversy,useNA="always")
 
     ## 
     ##   no   No   NO  no   yes  Yes <NA> 
-    ##   30   79    4    1    6   30    2
+    ##   30   80    4    1    6   30    1
 
 ``` r
 extract$controv_clean<-NA
@@ -874,7 +878,7 @@ table(extract$controv_clean,useNA="ifany")
 
     ## 
     ##   No  Yes <NA> 
-    ##  114   36    2
+    ##  115   36    1
 
 ``` r
 controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
@@ -908,6 +912,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##   New Zealand               1   0    0
     ##   Norway                    2   0    0
     ##   Portugal                  1   0    0
+    ##   Singapore                 0   1    0
     ##   South Africa              3   0    0
     ##   South Korea               1   0    0
     ##   Spain                     2   0    0
@@ -918,7 +923,6 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##   Turkey                   10   0    0
     ##   United Kingdom            4   0    0
     ##   United States of America 34  24    1
-    ##   <NA>                      0   1    0
 
 ``` r
 (PercentageControversy<-A[,2]/rowSums(A))
@@ -938,14 +942,14 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
     ##                0.0000000                0.0000000                0.0000000 
     ##                 Multiple              New Zealand                   Norway 
     ##                0.3333333                0.0000000                0.0000000 
-    ##                 Portugal             South Africa              South Korea 
+    ##                 Portugal                Singapore             South Africa 
+    ##                0.0000000                1.0000000                0.0000000 
+    ##              South Korea                    Spain                   Sweden 
     ##                0.0000000                0.0000000                0.0000000 
-    ##                    Spain                   Sweden              Switzerland 
+    ##              Switzerland                   Taiwan                 Thailand 
     ##                0.0000000                0.0000000                0.0000000 
-    ##                   Taiwan                 Thailand                   Turkey 
-    ##                0.0000000                0.0000000                0.0000000 
-    ##           United Kingdom United States of America                     <NA> 
-    ##                0.0000000                0.4067797                1.0000000
+    ##                   Turkey           United Kingdom United States of America 
+    ##                0.0000000                0.0000000                0.4067797
 
 ``` r
 barplot(PercentageControversy,las=2)
@@ -1685,7 +1689,7 @@ Learner centered approach
 </td>
 <td style="text-align:right;">
 
-98
+79
 
 </td>
 </tr>
@@ -1697,7 +1701,7 @@ Teacher centered approach
 </td>
 <td style="text-align:right;">
 
-21
+23
 
 </td>
 </tr>
@@ -1709,31 +1713,7 @@ Relational
 </td>
 <td style="text-align:right;">
 
-19
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Promoting social awareness
-
-</td>
-<td style="text-align:right;">
-
-9
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Professional training workshop
-
-</td>
-<td style="text-align:right;">
-
-8
+18
 
 </td>
 </tr>
@@ -1745,14 +1725,14 @@ Professional development workshop
 </td>
 <td style="text-align:right;">
 
-5
+16
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-Technology enhanced
+Promoting social awareness
 
 </td>
 <td style="text-align:right;">
@@ -1764,36 +1744,12 @@ Technology enhanced
 <tr>
 <td style="text-align:left;">
 
-Intergenerational learning
+Alternative
 
 </td>
 <td style="text-align:right;">
 
 3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Argument-driven
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Future-oriented imagery
-
-</td>
-<td style="text-align:right;">
-
-2
 
 </td>
 </tr>
@@ -1812,73 +1768,12 @@ Gaming
 <tr>
 <td style="text-align:left;">
 
-(field trips) vs. Learner centered approach (field trips + technology
-enhanced)
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Debunking
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Experiential learning
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 Intergenerational
 
 </td>
 <td style="text-align:right;">
 
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Learner centered approach vs. teacher centered
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-1
+2
 
 </td>
 </tr>
@@ -1890,19 +1785,7 @@ Promoting Social Awareness
 </td>
 <td style="text-align:right;">
 
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Traditional
-
-</td>
-<td style="text-align:right;">
-
-1
+2
 
 </td>
 </tr>
@@ -1939,7 +1822,31 @@ Constructivism
 </td>
 <td style="text-align:right;">
 
-8
+10
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Experiential learning
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Socio-constructivism
+
+</td>
+<td style="text-align:right;">
+
+7
 
 </td>
 </tr>
@@ -1958,7 +1865,7 @@ Active learning
 <tr>
 <td style="text-align:left;">
 
-Socio-constructivism
+Conceptual change
 
 </td>
 <td style="text-align:right;">
@@ -1970,12 +1877,48 @@ Socio-constructivism
 <tr>
 <td style="text-align:left;">
 
-Experiential learning
+COnstructivism
 
 </td>
 <td style="text-align:right;">
 
-5
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Intergenerational
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+inquiry-based learning
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Inquiry-based learning
+
+</td>
+<td style="text-align:right;">
+
+3
 
 </td>
 </tr>
@@ -2006,6 +1949,30 @@ Socio-scientific
 <tr>
 <td style="text-align:left;">
 
+Technology enhanced
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Art-based
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Experiencial learning
 
 </td>
@@ -2030,7 +1997,19 @@ Expert learner
 <tr>
 <td style="text-align:left;">
 
-inquiry-based learning
+Future-oriented imagery
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Gaming
 
 </td>
 <td style="text-align:right;">
@@ -2053,17 +2032,32 @@ Instruction
 </tr>
 <tr>
 <td style="text-align:left;">
+
+Project-based learning
+
 </td>
 <td style="text-align:right;">
 
-1
+2
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-Action competence (jensen & Snack, 1997)
+Tranformative learning
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Action competence
 
 </td>
 <td style="text-align:right;">
@@ -2111,6 +2105,18 @@ Argument driven inquiry
 <tr>
 <td style="text-align:left;">
 
+Argument-driven
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Bloom’s taxonomy
 
 </td>
@@ -2135,7 +2141,55 @@ Buddhist principles of instruction
 <tr>
 <td style="text-align:left;">
 
+Collaborative-learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Conceptual change (misconceptions and scaffold)
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Conceptual mobility
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Constructive climate engagement
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Critical pedagogy
 
 </td>
 <td style="text-align:right;">
@@ -2159,7 +2213,7 @@ Existential and epistemological
 <tr>
 <td style="text-align:left;">
 
-experiential learning
+Experiencial learning
 
 </td>
 <td style="text-align:right;">
@@ -2171,7 +2225,7 @@ experiential learning
 <tr>
 <td style="text-align:left;">
 
-Gamification
+experiential learning ( technology enhanced)
 
 </td>
 <td style="text-align:right;">
@@ -2195,7 +2249,31 @@ Gestalt and Behaviorist learning theories
 <tr>
 <td style="text-align:left;">
 
-Inquiry-based learning
+Green School
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Inquirybased learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Intergenerational
 
 </td>
 <td style="text-align:right;">
@@ -2219,7 +2297,43 @@ Intergenerational learning
 <tr>
 <td style="text-align:left;">
 
+Liberation pedagogy
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Moderate constructivist
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+pedagogy of argumentation
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Place-based education
 
 </td>
 <td style="text-align:right;">
@@ -2255,7 +2369,79 @@ Scaffolding
 <tr>
 <td style="text-align:left;">
 
+Self-regulated learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 socio-ecological
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+technology enhanced
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Tiered-mentoring (apprenticeship) model
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Transformative
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Transformative learning
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Workshop
 
 </td>
 <td style="text-align:right;">
@@ -2266,6 +2452,8 @@ socio-ecological
 </tr>
 </tbody>
 </table>
+
+## 11.2
 
 # 12 Methods & design
 
@@ -2518,14 +2706,14 @@ extract$Total.duration.of.the.intervention
 
     ##   [1] "24min"    "60min"    "8h"       "6h"       "~40h"     NA        
     ##   [7] "~10h"     NA         "28h"      NA         "15h"      "1h"      
-    ##  [13] NA         "5h"       NA         NA         NA         NA        
+    ##  [13] NA         NA         "5h"       NA         NA         NA        
     ##  [19] NA         "4h10min"  "24h"      "~49h"     "1h30min"  "2h45min" 
     ##  [25] "4h10min"  "~60h"     "1h40min"  "1h"       NA         "24h"     
     ##  [31] NA         "2h30min"  NA         "~7h"      "64h"      "2h"      
     ##  [37] NA         "5h"       NA         "30min"    NA         "~35h"    
     ##  [43] "~14h"     NA         "~21h"     "12h30min" "12h"      "~7h"     
     ##  [49] NA         "~21h"     "6h"       NA         "8h30min"  "1h"      
-    ##  [55] NA         "2h15min"  "6h"       "5h"       "~14h"     NA        
+    ##  [55] NA         "7h"       "6h"       "5h"       "~14h"     NA        
     ##  [61] "2h30min"  "~1h30"    NA         NA         "20h"      "32H"     
     ##  [67] "40min"    "45min"    "50min"    "~50h"     "15h"      NA        
     ##  [73] NA         NA         NA         "20h"      "10h"      NA        
@@ -2549,7 +2737,7 @@ extract$Period.length
 
     ##   [1] "1H"       "2H"       "2M"       NA         "5M"       "21D"     
     ##   [7] "~1M"      "1Y"       "4M"       NA         "21D"      "1H"      
-    ##  [13] "~21D"     "~5M"      NA         "1Y"       "7D"       "1Y"      
+    ##  [13] "~21D"     "1Y"       "~5M"      NA         "7D"       "1Y"      
     ##  [19] "1Y"       "1M"       "3M"       "7D"       "2D"       "1D"      
     ##  [25] "5D"       "14D"      "14D"      "1H"       "14D"      "4D"      
     ##  [31] "2M21D"    NA         NA         "1D"       "7D"       "2H"      
@@ -2579,7 +2767,7 @@ extract$Number.of.sessions
 ```
 
     ##   [1] "1.0"  "1.0"  "8.0"  "3.0"  "~40"  "~15"  "~15"  "2.0"  "14.0" "4.0" 
-    ##  [11] "5.0"  "1.0"  NA     "5.0"  NA     "3.0"  NA     NA     NA     "10.0"
+    ##  [11] "5.0"  "1.0"  NA     "3.0"  "5.0"  NA     NA     NA     NA     "10.0"
     ##  [21] "12.0" "7.0"  "2.0"  "2.0"  "5.0"  "~10"  "1.0"  "1.0"  "2.0"  "4.0" 
     ##  [31] NA     "3.0"  NA     "1.0"  "~10"  "1.0"  NA     "5.0"  NA     "1.0" 
     ##  [41] NA     "10.0" "4.0"  "6.0"  "6.0"  "15.0" "6.0"  "1.0"  NA     "~3"  
@@ -2608,14 +2796,14 @@ extract$Total.duration.of.the.intervention
 
     ##   [1] "24min"    "60min"    "8h"       "6h"       "~40h"     NA        
     ##   [7] "~10h"     NA         "28h"      NA         "15h"      "1h"      
-    ##  [13] NA         "5h"       NA         NA         NA         NA        
+    ##  [13] NA         NA         "5h"       NA         NA         NA        
     ##  [19] NA         "4h10min"  "24h"      "~49h"     "1h30min"  "2h45min" 
     ##  [25] "4h10min"  "~60h"     "1h40min"  "1h"       NA         "24h"     
     ##  [31] NA         "2h30min"  NA         "~7h"      "64h"      "2h"      
     ##  [37] NA         "5h"       NA         "30min"    NA         "~35h"    
     ##  [43] "~14h"     NA         "~21h"     "12h30min" "12h"      "~7h"     
     ##  [49] NA         "~21h"     "6h"       NA         "8h30min"  "1h"      
-    ##  [55] NA         "2h15min"  "6h"       "5h"       "~14h"     NA        
+    ##  [55] NA         "7h"       "6h"       "5h"       "~14h"     NA        
     ##  [61] "2h30min"  "~1h30"    NA         NA         "20h"      "32H"     
     ##  [67] "40min"    "45min"    "50min"    "~50h"     "15h"      NA        
     ##  [73] NA         NA         NA         "20h"      "10h"      NA        
@@ -3076,7 +3264,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-14
+15
 
 </td>
 <td style="text-align:left;">
@@ -4220,7 +4408,7 @@ Ratinen2013
 </td>
 <td style="text-align:left;">
 
-2h15min
+7h
 
 </td>
 <td style="text-align:left;">
@@ -4235,17 +4423,17 @@ FALSE
 </td>
 <td style="text-align:right;">
 
-2
+7
 
 </td>
 <td style="text-align:right;">
 
-15
+NA
 
 </td>
 <td style="text-align:right;">
 
-135
+420
 
 </td>
 </tr>
@@ -6660,7 +6848,7 @@ extract$Period.length
 
     ##   [1] "1H"       "2H"       "2M"       NA         "5M"       "21D"     
     ##   [7] "~1M"      "1Y"       "4M"       NA         "21D"      "1H"      
-    ##  [13] "~21D"     "~5M"      NA         "1Y"       "7D"       "1Y"      
+    ##  [13] "~21D"     "1Y"       "~5M"      NA         "7D"       "1Y"      
     ##  [19] "1Y"       "1M"       "3M"       "7D"       "2D"       "1D"      
     ##  [25] "5D"       "14D"      "14D"      "1H"       "14D"      "4D"      
     ##  [31] "2M21D"    NA         NA         "1D"       "7D"       "2H"      
@@ -7359,58 +7547,6 @@ NA
 </td>
 <td style="text-align:left;">
 
-Dormody2021
-
-</td>
-<td style="text-align:left;">
-
-~5M
-
-</td>
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-5
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-3660
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-16
-
-</td>
-<td style="text-align:left;">
-
 Holthuis2014
 
 </td>
@@ -7452,6 +7588,58 @@ NA
 <td style="text-align:right;">
 
 8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+15
+
+</td>
+<td style="text-align:left;">
+
+Dormody2021
+
+</td>
+<td style="text-align:left;">
+
+~5M
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+3660
 
 </td>
 </tr>
@@ -13981,6 +14169,28 @@ NA
 <tr>
 <td style="text-align:left;">
 
+Holthuis2014
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+8736
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Dormody2021
 
 </td>
@@ -14019,28 +14229,6 @@ NA
 <td style="text-align:right;">
 
 NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Holthuis2014
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-8736
 
 </td>
 </tr>
@@ -14915,7 +15103,7 @@ Ratinen2013
 </td>
 <td style="text-align:right;">
 
-135
+420
 
 </td>
 <td style="text-align:right;">
@@ -17059,9 +17247,9 @@ table(recapTempInterv$category,useNA = "ifany")
 
     ## 
     ##   very short unique very short multiple         week period        month period 
-    ##                  16                   8                  29                  10 
+    ##                  16                   7                  29                  10 
     ##        large period                <NA> 
-    ##                  68                  21
+    ##                  69                  21
 
 ``` r
 kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$category=="very short unique",])
@@ -17772,38 +17960,6 @@ Wang2022
 <td style="text-align:right;">
 
 336
-
-</td>
-<td style="text-align:left;">
-
-very short multiple
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-56
-
-</td>
-<td style="text-align:left;">
-
-Ratinen2013
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-<td style="text-align:right;">
-
-135
-
-</td>
-<td style="text-align:right;">
-
-732
 
 </td>
 <td style="text-align:left;">
@@ -19444,38 +19600,6 @@ large period
 </td>
 <td style="text-align:left;">
 
-Dormody2021
-
-</td>
-<td style="text-align:right;">
-
-5
-
-</td>
-<td style="text-align:right;">
-
-300
-
-</td>
-<td style="text-align:right;">
-
-3660
-
-</td>
-<td style="text-align:left;">
-
-large period
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-16
-
-</td>
-<td style="text-align:left;">
-
 Holthuis2014
 
 </td>
@@ -19492,6 +19616,38 @@ NA
 <td style="text-align:right;">
 
 8736
+
+</td>
+<td style="text-align:left;">
+
+large period
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+15
+
+</td>
+<td style="text-align:left;">
+
+Dormody2021
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+300
+
+</td>
+<td style="text-align:right;">
+
+3660
 
 </td>
 <td style="text-align:left;">
@@ -19812,6 +19968,38 @@ Cebesoy2019
 <td style="text-align:right;">
 
 8736
+
+</td>
+<td style="text-align:left;">
+
+large period
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+56
+
+</td>
+<td style="text-align:left;">
+
+Ratinen2013
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+420
+
+</td>
+<td style="text-align:right;">
+
+732
 
 </td>
 <td style="text-align:left;">
@@ -21559,7 +21747,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-15
+16
 
 </td>
 <td style="text-align:left;">
@@ -22178,20 +22366,22 @@ table(extract$Intervention.time.category)
 
     ## 
     ##   very short unique very short multiple         week period        month period 
-    ##                  16                   8                  32                   9 
+    ##                  16                   7                  32                  10 
     ##        large period 
     ##                  70
 
 ## 14.2 Horizon of change
 
 ``` r
-extract$Horizon.of.change<-factor(tolower(extract$Horizon.of.change), levels=c("very short term", "short term", "middle term", "long term"))
+extract$Horizon.of.change<-gsub("^([a-z])" , replacement= "\\U\\1" , extract$Horizon.of.change, perl=T)
+extract$Horizon.of.change<-gsub("-" , replacement= " " , extract$Horizon.of.change, perl=T)
+extract$Horizon.of.change<-factor(extract$Horizon.of.change, levels=c("Very short term", "Short term", "Middle term", "Long term"))
 table(extract$Horizon.of.change)
 ```
 
     ## 
-    ## very short term      short term     middle term       long term 
-    ##              41              53              13              16
+    ## Very short term      Short term     Middle term       Long term 
+    ##              41              53              13              17
 
 ## 14.3 Comparison
 
@@ -22242,7 +22432,7 @@ NA
 <tr>
 <td style="text-align:left;">
 
-very short term
+Very short term
 
 </td>
 <td style="text-align:right;">
@@ -22279,7 +22469,7 @@ very short term
 <tr>
 <td style="text-align:left;">
 
-short term
+Short term
 
 </td>
 <td style="text-align:right;">
@@ -22316,7 +22506,7 @@ short term
 <tr>
 <td style="text-align:left;">
 
-middle term
+Middle term
 
 </td>
 <td style="text-align:right;">
@@ -22353,7 +22543,7 @@ middle term
 <tr>
 <td style="text-align:left;">
 
-long term
+Long term
 
 </td>
 <td style="text-align:right;">
@@ -22378,7 +22568,7 @@ long term
 </td>
 <td style="text-align:right;">
 
-13
+14
 
 </td>
 <td style="text-align:right;">
@@ -22400,7 +22590,7 @@ NA
 </td>
 <td style="text-align:right;">
 
-2
+1
 
 </td>
 <td style="text-align:right;">
@@ -22410,12 +22600,12 @@ NA
 </td>
 <td style="text-align:right;">
 
-0
+1
 
 </td>
 <td style="text-align:right;">
 
-16
+15
 
 </td>
 <td style="text-align:right;">
@@ -22426,6 +22616,12 @@ NA
 </tr>
 </tbody>
 </table>
+
+``` r
+barplot(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"),beside = T,legend=T, args.legend = list(title="Horizon of change"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
 
 ### 14.3.2 With outcomes
 
@@ -22462,7 +22658,7 @@ table(simp_timeIntervention)
 
     ## simp_timeIntervention
     ## short contact time      days to month            > month 
-    ##                 24                 41                 70
+    ##                 23                 42                 70
 
 ``` r
 tf_outcomes_bigCat<-cbind(

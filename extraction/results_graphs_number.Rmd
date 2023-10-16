@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231013.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231013.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231016_2.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231016_2.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -60,13 +60,18 @@ countryStudy$country<-str_to_title(gsub(" +$","",gsub("^and ","",gsub("^ +","",c
 require(rnaturalearth)
 require(sf)
 worldMap_tot<-ne_countries(returnclass = "sf")
+tinyCountries<-ne_download(type="admin_0_tiny_countries",returnclass = "sf")
 namesCountries<-names(nbBycountry)
-pbs<-namesCountries[!(namesCountries%in%worldMap_tot$name_long|namesCountries%in%worldMap_tot$name)]
+pbs<-namesCountries[!(namesCountries%in%worldMap_tot$name_long|namesCountries%in%worldMap_tot$name|namesCountries%in%tinyCountries$NAME)]
+InTinyCountries <- namesCountries[!(namesCountries%in%worldMap_tot$name_long|namesCountries%in%worldMap_tot$name)&namesCountries %in% tinyCountries$NAME]
+
 if(length(pbs>0)){warning("the following countries are not found and will be ignored:",pbs)}
 nbBycountry<-nbBycountry[!namesCountries%in%pbs]
 namesCountries<-names(nbBycountry)
 orderCt<-match(namesCountries,worldMap_tot$name_long)
 orderCt[is.na(orderCt)]<-match(namesCountries[is.na(orderCt)],worldMap_tot$name)
+orderTinyCountries<-match(InTinyCountries,tinyCountries$NAME)
+indexTinyCountries<-which(names(nbBycountry)%in%InTinyCountries)
 #Colors
 scaleNb<-rep(NA,length(nbBycountry))
 scaleNb[nbBycountry==1]<-1
@@ -78,10 +83,13 @@ colorsScale<-c("#fafa6e","#f8cf55","#f6993c","#f35824","#ee0e0e")
 par(mar=c(1,1,1,1))
 plot(st_geometry(worldMap_tot),border="grey",lwd=0.5)
 plot(st_geometry(worldMap_tot[orderCt,]),border="black",lwd=0.7,col=colorsScale[scaleNb],add=T)
+plot(st_geometry(tinyCountries[orderTinyCountries,]),pch=22,bg = colorsScale[scaleNb[indexTinyCountries]],add=T,cex=.7)
 legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5","5-10",">10"))
+
 
 countryStudy$FinalName<-NA
 countryStudy$FinalName<-worldMap_tot[match(countryStudy$country,worldMap_tot$name),]$name
+countryStudy$FinalName[countryStudy$country%in%InTinyCountries] <- tinyCountries$NAME[match(countryStudy$country[countryStudy$country%in%InTinyCountries],tinyCountries$NAME)]
 countryStudy$FinalName[is.na(countryStudy$FinalName)]<-worldMap_tot[match(countryStudy$country[is.na(countryStudy$FinalName)],worldMap_tot$name_long),]$name
 
 countryDoc <- tapply(countryStudy$FinalName,countryStudy$id,function(x)
@@ -96,6 +104,7 @@ REG<-factor(worldMap_tot$region_wb[worldMap_tot$region_wb!="Antarctica"])
 plot(st_geometry(worldMap_tot[worldMap_tot$region_wb!="Antarctica",]),col=rainbow(nlevels(REG))[REG])
 countryStudy$region<-NA
 countryStudy$region<-worldMap_tot[match(countryStudy$country,worldMap_tot$name_long),"region_wb"]$region_wb
+countryStudy$region[countryStudy$country%in%InTinyCountries] <- tinyCountries[match(countryStudy$country[countryStudy$country%in%InTinyCountries],tinyCountries$NAME),"REGION_WB"]$REGION_WB
 countryStudy$region[is.na(countryStudy$region)]<-worldMap_tot[match(countryStudy$country[is.na(countryStudy$region)],worldMap_tot$name),"region_wb"]$region_wb
 regionPapers<-factor(tapply(countryStudy$region,countryStudy$id,function(x){
   if(length(unique(x))==1){return(x[1])}else{return("Multiple")}
@@ -111,8 +120,8 @@ dates <- c(1994,2010,2015)
 events <-events[dates>min(as.numeric(colnames(TAB_year_region)))]
 dates<-dates[dates>min(as.numeric(colnames(TAB_year_region)))]
 datesOnGraph <-A[dates - as.numeric(min(as.numeric(colnames(TAB_year_region)), na.rm = T)) +1]
-arrows(x0=datesOnGraph,y0=c(5,13),y1=rep(0,2),x1=datesOnGraph,length = .2,col="black", lwd=2)
-text(datesOnGraph,c(6,13.5),events, cex=.7)
+arrows(x0=datesOnGraph,y0=c(5,16),y1=rep(0,2),x1=datesOnGraph,length = .2,col="black", lwd=2)
+text(datesOnGraph,c(6,16.5),events, cex=.7)
 ```
 
 
@@ -373,6 +382,10 @@ kable(sort(table(tabTheoBack$theoBack),decreasing=T))
 kable(sort(table(subcatLearnerCentered<-extract$X38),decreasing = T))
 ```
 
+
+##
+
+
 # Methods & design
 
 ```{r}
@@ -559,7 +572,9 @@ table(extract$Intervention.time.category)
 ## Horizon of change
 
 ```{r}
-extract$Horizon.of.change<-factor(tolower(extract$Horizon.of.change), levels=c("very short term", "short term", "middle term", "long term"))
+extract$Horizon.of.change<-gsub("^([a-z])" , replacement= "\\U\\1" , extract$Horizon.of.change, perl=T)
+extract$Horizon.of.change<-gsub("-" , replacement= " " , extract$Horizon.of.change, perl=T)
+extract$Horizon.of.change<-factor(extract$Horizon.of.change, levels=c("Very short term", "Short term", "Middle term", "Long term"))
 table(extract$Horizon.of.change)
 ```
 
@@ -567,8 +582,9 @@ table(extract$Horizon.of.change)
 
 ### Between time aspects
 
-```{r}
+```{r, fig.width=12}
 kable(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"))
+barplot(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"),beside = T,legend=T, args.legend = list(title="Horizon of change"))
 ```
 
 
