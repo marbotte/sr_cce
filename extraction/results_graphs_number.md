@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-16
+2023-10-17
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -35,6 +35,9 @@ Marius Bottin
     - [14.3.1 Between time aspects](#1431-between-time-aspects)
     - [14.3.2 With outcomes](#1432-with-outcomes)
     - [14.3.3 Simplified](#1433-simplified)
+- [15 Sankey Diagrams](#15-sankey-diagrams)
+  - [15.1 First try: Pedagogical tools, outcomes, did it
+    work](#151-first-try-pedagogical-tools-outcomes-did-it-work)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -49,7 +52,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231016_2.xlsx"))
+names(loadWorkbook("../../extraction/20231016_3.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -58,7 +61,7 @@ names(loadWorkbook("../../extraction/20231016_2.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231016_2.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231016_3.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -231,6 +234,21 @@ barplot(table(factor(datesById,levels=min(datesById):max(datesById))), las=2, ma
 ```
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+``` r
+A <- table(factor(datesById,levels=min(datesById):max(datesById)))
+A[as.numeric(names(A))>=2012]
+```
+
+    ## 
+    ## 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 
+    ##   11   10    6   15    8   14    7   13   14   15   18    4
+
+``` r
+sum(A[as.numeric(names(A))>=2012])/sum(A)
+```
+
+    ## [1] 0.9246575
 
 # 3 Countries
 
@@ -477,7 +495,7 @@ plot(st_geometry(tinyCountries[orderTinyCountries,]),pch=22,bg = colorsScale[sca
 legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5","5-10",">10"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ``` r
 countryStudy$FinalName<-NA
@@ -498,7 +516,7 @@ REG<-factor(worldMap_tot$region_wb[worldMap_tot$region_wb!="Antarctica"])
 plot(st_geometry(worldMap_tot[worldMap_tot$region_wb!="Antarctica",]),col=rainbow(nlevels(REG))[REG])
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ``` r
 countryStudy$region<-NA
@@ -523,7 +541,7 @@ arrows(x0=datesOnGraph,y0=c(5,16),y1=rep(0,2),x1=datesOnGraph,length = .2,col="b
 text(datesOnGraph,c(6,16.5),events, cex=.7)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
 
 # 5 Outcomes
 
@@ -532,7 +550,7 @@ didItWork_col<-colnames(extract)[grep("it.work",colnames(extract))]
 barplot(colSums(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")])))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ``` r
 withOutcome<-which(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")]),arr.ind=T)
@@ -547,7 +565,7 @@ outcomeEffect$effect_simp[is.na(outcomeEffect$effect_simp)]<-"Unclear"
 barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
 
 # 6 Population
 
@@ -625,7 +643,7 @@ rururbClean[is.na(rururbClean)]<-"Not given"
 barplot(table(rururbClean))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ## 6.2 categories
 
@@ -671,7 +689,35 @@ par(mar=c(10,4,1,1))
 barplot(table(populClean,useNA = "ifany"),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+
+**Calculated for manuscript**:
+
+``` r
+table(populClean,useNA = "ifany")
+```
+
+    ## populClean
+    ##             Students             Teachers Pre-service teachers 
+    ##                  113                   14                    9 
+    ##                Mixed              Parents 
+    ##                    8                    2
+
+``` r
+table(populClean,useNA = "ifany")/sum(table(populClean,useNA = "ifany"))
+```
+
+    ## populClean
+    ##             Students             Teachers Pre-service teachers 
+    ##           0.77397260           0.09589041           0.06164384 
+    ##                Mixed              Parents 
+    ##           0.05479452           0.01369863
+
+``` r
+sum(table(populClean,useNA = "ifany")[c("Teachers","Pre-service teachers")])/sum(table(populClean,useNA = "ifany"))
+```
+
+    ## [1] 0.1575342
 
 ## 6.3 Age
 
@@ -799,7 +845,7 @@ segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","al
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ### 6.3.1 Adding ages from grades
 
@@ -856,7 +902,7 @@ points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")
 legend("topleft",lwd=c(1,.5,NA),lty=c(1,3,NA),pch=c(NA,NA,3),legend=c("Range given","Range from grades","Average given"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 # 7 Controversy
 
@@ -866,7 +912,7 @@ table(extract$Controversy,useNA="always")
 
     ## 
     ##   no   No   NO  no   yes  Yes <NA> 
-    ##   30   80    4    1    6   30    1
+    ##   30   81    4    1    6   30    0
 
 ``` r
 extract$controv_clean<-NA
@@ -877,8 +923,8 @@ table(extract$controv_clean,useNA="ifany")
 ```
 
     ## 
-    ##   No  Yes <NA> 
-    ##  115   36    1
+    ##  No Yes 
+    ## 116  36
 
 ``` r
 controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
@@ -889,40 +935,40 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
 ```
 
     ##                           
-    ##                            No Yes <NA>
-    ##   Australia                 3   0    0
-    ##   Austria                   5   1    0
-    ##   Bangladesh                1   0    0
-    ##   Belgium                   0   1    0
-    ##   Brazil                    2   0    0
-    ##   Canada                    5   0    0
-    ##   China                     4   0    0
-    ##   Czechia                   1   0    0
-    ##   Denmark                   2   0    0
-    ##   Finland                   2   1    0
-    ##   France                    1   0    0
-    ##   Germany                   6   1    0
-    ##   Greece                    1   0    0
-    ##   Indonesia                 3   0    0
-    ##   Italy                     1   2    0
-    ##   Japan                     1   0    0
-    ##   Malaysia                  3   0    0
-    ##   Mexico                    1   0    0
-    ##   Multiple                  6   3    0
-    ##   New Zealand               1   0    0
-    ##   Norway                    2   0    0
-    ##   Portugal                  1   0    0
-    ##   Singapore                 0   1    0
-    ##   South Africa              3   0    0
-    ##   South Korea               1   0    0
-    ##   Spain                     2   0    0
-    ##   Sweden                    1   0    0
-    ##   Switzerland               1   0    0
-    ##   Taiwan                    1   0    0
-    ##   Thailand                  2   0    0
-    ##   Turkey                   10   0    0
-    ##   United Kingdom            4   0    0
-    ##   United States of America 34  24    1
+    ##                            No Yes
+    ##   Australia                 3   0
+    ##   Austria                   5   1
+    ##   Bangladesh                1   0
+    ##   Belgium                   0   1
+    ##   Brazil                    2   0
+    ##   Canada                    5   0
+    ##   China                     4   0
+    ##   Czechia                   1   0
+    ##   Denmark                   2   0
+    ##   Finland                   2   1
+    ##   France                    1   0
+    ##   Germany                   6   1
+    ##   Greece                    1   0
+    ##   Indonesia                 3   0
+    ##   Italy                     1   2
+    ##   Japan                     1   0
+    ##   Malaysia                  3   0
+    ##   Mexico                    1   0
+    ##   Multiple                  6   3
+    ##   New Zealand               1   0
+    ##   Norway                    2   0
+    ##   Portugal                  1   0
+    ##   Singapore                 0   1
+    ##   South Africa              3   0
+    ##   South Korea               1   0
+    ##   Spain                     2   0
+    ##   Sweden                    1   0
+    ##   Switzerland               1   0
+    ##   Taiwan                    1   0
+    ##   Thailand                  2   0
+    ##   Turkey                   10   0
+    ##   United Kingdom            4   0
+    ##   United States of America 35  24
 
 ``` r
 (PercentageControversy<-A[,2]/rowSums(A))
@@ -955,7 +1001,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
 barplot(PercentageControversy,las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ``` r
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
@@ -980,7 +1026,229 @@ par(mar=c(11,4,1,1))
 barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),las=2,legend=T,args.legend = list(title="Controversy"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-12-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->
+
+**Calculations for text**
+
+``` r
+A["United States of America","Yes"]/sum(A[,"Yes"])
+```
+
+    ## [1] 0.7058824
+
+``` r
+sum(A["United States of America",])/sum(A)
+```
+
+    ## [1] 0.4041096
+
+``` r
+A["United States of America",]/sum(A["United States of America",])
+```
+
+    ##        No       Yes 
+    ## 0.5932203 0.4067797
+
+``` r
+A[as.logical(A[,"Yes"]),]
+```
+
+    ##                           
+    ##                            No Yes
+    ##   Austria                   5   1
+    ##   Belgium                   0   1
+    ##   Finland                   2   1
+    ##   Germany                   6   1
+    ##   Italy                     1   2
+    ##   Multiple                  6   3
+    ##   Singapore                 0   1
+    ##   United States of America 35  24
+
+``` r
+docMultipleCountries <- names(countryDoc)[countryDoc=="Multiple"]
+countriesMultipleCountries<-countryStudy[countryStudy$id %in% docMultipleCountries,]
+kbl(data.frame(
+  controversy=controvByDoc[docMultipleCountries],
+  countries=tapply(countriesMultipleCountries$country,countriesMultipleCountries$id,paste,collapse=", ")[docMultipleCountries],
+  row.names = docMultipleCountries
+))
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+controversy
+
+</th>
+<th style="text-align:left;">
+
+countries
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+Arya2016
+
+</td>
+<td style="text-align:left;">
+
+Yes
+
+</td>
+<td style="text-align:left;">
+
+United States, China, New Zealand, Norway
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Choi2021
+
+</td>
+<td style="text-align:left;">
+
+Yes
+
+</td>
+<td style="text-align:left;">
+
+South Korea, Australia
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Deisenrieder2020
+
+</td>
+<td style="text-align:left;">
+
+No
+
+</td>
+<td style="text-align:left;">
+
+Germany, Austria
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Gladwin2022
+
+</td>
+<td style="text-align:left;">
+
+No
+
+</td>
+<td style="text-align:left;">
+
+Brazil, Canada, Colombia, Costa Rica, Finland, Ghana, India, Indonesia,
+Kenya, Kuwait, Nigeria, Oman, Peru, Philippines, Poland, Slovenia, South
+Korea, Uganda
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Harker_Schuch2013
+
+</td>
+<td style="text-align:left;">
+
+Yes
+
+</td>
+<td style="text-align:left;">
+
+Austria, Denmark
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Harker_Schuch2020
+
+</td>
+<td style="text-align:left;">
+
+No
+
+</td>
+<td style="text-align:left;">
+
+Austria, Australia
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Leitao2022
+
+</td>
+<td style="text-align:left;">
+
+No
+
+</td>
+<td style="text-align:left;">
+
+United Kingdom, Portugal
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Levrini2021
+
+</td>
+<td style="text-align:left;">
+
+No
+
+</td>
+<td style="text-align:left;">
+
+Italy, Finland, Iceland
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Miller2015
+
+</td>
+<td style="text-align:left;">
+
+No
+
+</td>
+<td style="text-align:left;">
+
+Greenland, Denmark, United States
+
+</td>
+</tr>
+</tbody>
+</table>
 
 # 8 Mitigation/Adaptation
 
@@ -990,13 +1258,13 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 
     ## 
     ## Adaptation       Both Mitigation    Neither       <NA> 
-    ## 0.03289474 0.26973684 0.62500000 0.03947368 0.03289474
+    ## 0.03289474 0.27631579 0.62500000 0.03947368 0.02631579
 
 ``` r
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 \# Disciplines
 
 ``` r
@@ -1020,7 +1288,7 @@ disciplineClean[grepl("NA",extract$Disciplin_2)|is.na(extract$Disciplin_2)]<-"ND
 barplot(sort(table(disciplineClean),decreasing=T), las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 # 9 Educational framework
 
@@ -1659,7 +1927,7 @@ bp<-barplot(t(forTempPlot),las=2, density=c(0,20))
 text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
 
 ``` r
 kable(sort(table(tabTheoBack$theoBack),decreasing=T))
@@ -2485,7 +2753,7 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 ``` r
 A<-sort(table(extract$design),decreasing=T)
@@ -2645,7 +2913,7 @@ designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-
 barplot(table(designClean),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-2.png)<!-- -->
 
 ``` r
 par(mfrow=c(1,2))
@@ -2654,7 +2922,7 @@ barplot(table(designClean),las=2)
 barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
 # 13 Pedagogical tools
 
@@ -2674,7 +2942,7 @@ barplot(c(
 )
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 ## 13.2 From table
 
@@ -2683,7 +2951,7 @@ par(mar=c(14,4,1,1))
 barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ``` r
 extract$Categories.type.of.intervention <- extract$Categories.type.of.intervention <-factor(extract$Categories.type.of.intervention, levels = names(sort(table(extract$Categories.type.of.intervention), decreasing=T)))
@@ -2696,7 +2964,7 @@ opar <- par(lwd = 0.4)
 barplot(table(extract$Categories.type.of.intervention,factor(extract$datepubl,levels=min(extract$datepubl):max(extract$datepubl))),beside=T,col=rainbow(nlevels(extract$Categories.type.of.intervention)), legend=T, args.legend=list(x="topleft"), lwd=.1, cex.names=.8)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 # 14 Time variables
 
@@ -2788,7 +3056,7 @@ hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number o
 legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 ``` r
 extract$Total.duration.of.the.intervention
@@ -6840,7 +7108,7 @@ axis(1,at=c(0,60*c(20,50,100,150)),labels=c("0","20h","50h","100h","150h"),las=1
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 ``` r
 extract$Period.length
@@ -13840,7 +14108,7 @@ axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","m
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 ## 14.1 intervention time categories
 
@@ -22621,7 +22889,7 @@ NA
 barplot(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"),beside = T,legend=T, args.legend = list(title="Horizon of change"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
 
 ### 14.3.2 With outcomes
 
@@ -22644,7 +22912,7 @@ barplot(table(didItWork_outcomes[tf_outcomes[,"action"],"action"],extract$Interv
 barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Intervention.time.category[tf_outcomes[,"habit"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Habit")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
 
 ### 14.3.3 Simplified
 
@@ -22695,4 +22963,23 @@ barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
 barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
+
+# 15 Sankey Diagrams
+
+## 15.1 First try: Pedagogical tools, outcomes, did it work
+
+The example they show in the package is:
+
+``` r
+# Load package
+library(networkD3)
+ 
+# Load energy projection data
+URL <- "https://cdn.rawgit.com/christophergandrud/networkD3/master/JSONdata/energy.json"
+Energy <- jsonlite::fromJSON(URL)
+# Thus we can plot it
+#sankeyNetwork(Links = Energy$links, Nodes = Energy$nodes, Source = "source",
+#              Target = "target", Value = "value", NodeID = "name",
+#              units = "TWh", fontSize = 12, nodeWidth = 30)
+```

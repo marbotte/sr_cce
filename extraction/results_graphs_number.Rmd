@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231016_2.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231016_2.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231016_3.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231016_3.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -35,6 +35,16 @@ extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})
 (datesById<-tapply(extract$datepubl,extract$id,unique))
 barplot(table(factor(datesById,levels=min(datesById):max(datesById))), las=2, main="Number of documents included in the analysis by year")
 ```
+
+
+```{r}
+A <- table(factor(datesById,levels=min(datesById):max(datesById)))
+A[as.numeric(names(A))>=2012]
+sum(A[as.numeric(names(A))>=2012])/sum(A)
+```
+
+
+
 
 # Countries
 
@@ -196,6 +206,17 @@ barplot(table(populClean,useNA = "ifany"),las=2)
 
 ```
 
+**Calculated for manuscript**:
+
+```{r}
+table(populClean,useNA = "ifany")
+table(populClean,useNA = "ifany")/sum(table(populClean,useNA = "ifany"))
+sum(table(populClean,useNA = "ifany")[c("Teachers","Pre-service teachers")])/sum(table(populClean,useNA = "ifany"))
+```
+
+
+
+
 ## Age 
 
 ```{r}
@@ -290,6 +311,23 @@ sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of Ameri
 par(mar=c(11,4,1,1))
 barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),las=2,legend=T,args.legend = list(title="Controversy"))
 ```
+
+**Calculations for text**
+
+```{r}
+A["United States of America","Yes"]/sum(A[,"Yes"])
+sum(A["United States of America",])/sum(A)
+A["United States of America",]/sum(A["United States of America",])
+A[as.logical(A[,"Yes"]),]
+docMultipleCountries <- names(countryDoc)[countryDoc=="Multiple"]
+countriesMultipleCountries<-countryStudy[countryStudy$id %in% docMultipleCountries,]
+kbl(data.frame(
+  controversy=controvByDoc[docMultipleCountries],
+  countries=tapply(countriesMultipleCountries$country,countriesMultipleCountries$id,paste,collapse=", ")[docMultipleCountries],
+  row.names = docMultipleCountries
+))
+```
+
 
 
 # Mitigation/Adaptation
@@ -652,3 +690,20 @@ barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
 barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
 ```
 
+# Sankey Diagrams
+
+## First try: Pedagogical tools, outcomes, did it work
+
+The example they show in the package is:
+```r
+# Load package
+library(networkD3)
+ 
+# Load energy projection data
+URL <- "https://cdn.rawgit.com/christophergandrud/networkD3/master/JSONdata/energy.json"
+Energy <- jsonlite::fromJSON(URL)
+# Thus we can plot it
+#sankeyNetwork(Links = Energy$links, Nodes = Energy$nodes, Source = "source",
+#              Target = "target", Value = "value", NodeID = "name",
+#              units = "TWh", fontSize = 12, nodeWidth = 30)
+```
