@@ -109,7 +109,7 @@ countryDoc <- tapply(countryStudy$FinalName,countryStudy$id,function(x)
 ```
 # Years/Region of the world
 
-```{r,fig.height=7,fig.width=10}
+```{r yearRegions,fig.height=7,fig.width=10}
 REG<-factor(worldMap_tot$region_wb[worldMap_tot$region_wb!="Antarctica"])
 plot(st_geometry(worldMap_tot[worldMap_tot$region_wb!="Antarctica",]),col=rainbow(nlevels(REG))[REG])
 countryStudy$region<-NA
@@ -136,7 +136,7 @@ text(datesOnGraph,c(6,16.5),events, cex=.7)
 
 ## Income group
 
-```{r}
+```{r incomegroup}
 #countryDoc
 incomeGrpDoc<-worldMap_tot[match(countryDoc,worldMap_tot$name),"income_grp"]$income_grp
 incomeGrpDoc[is.na(incomeGrpDoc)&countryDoc%in%tinyCountries$NAME]<-tinyCountries[match(countryDoc[is.na(incomeGrpDoc)&countryDoc%in%tinyCountries$NAME],tinyCountries$NAME),"INCOME_GRP"]$INCOME_GRP
@@ -148,7 +148,7 @@ countryDoc[is.na(incomeGrpDoc)]
 
 Para referencia, number of countries with the different categories in the world
 
-```{r}
+```{r countryOutcomes}
 table(c(worldMap_tot$income_grp,tinyCountries$INCOME_GRP))
 par(mar=c(12,4,1,1))
 barplot(table(c(worldMap_tot$income_grp,tinyCountries$INCOME_GRP)),las=2)
@@ -158,7 +158,7 @@ barplot(table(c(worldMap_tot$income_grp,tinyCountries$INCOME_GRP)),las=2)
 # Outcomes
 
 
-```{r}
+```{r outcomes}
 didItWork_col<-colnames(extract)[grep("it.work",colnames(extract))]
 barplot(colSums(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")])))
 withOutcome<-which(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")]),arr.ind=T)
@@ -181,7 +181,7 @@ barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","i
 
 ## Rural/urban
 
-```{r}
+```{r rururb}
 sort(table(extract$urban.vs.rural))
 rururbClean<-factor(rep(NA,nrow(extract)),levels=c("Urban","Rural","Both","Not given"))
 rururbClean[grep("^ ?urban ?$",extract$urban.vs.rural,ignore.case = T)]<-"Urban"
