@@ -936,13 +936,13 @@ byRowDIW<-sqldf(
   GROUP BY idRow,population,TheoFra,mitAda,controv
   ORDER BY CAST(idRow as int)",
   drv = "SQLite")
-byOutcomeTot<-na.omit(sqldf(
-  "SELECT idRow,id,person,population,pop,ageCat,TheoFra,mitAda,controv,outcome,didItWork
+byOutcomeTot<-sqldf(
+  "SELECT idRow,id,person,population,pop,ageCat,TheoFra,mitAda,controv,outcome,didItWork,curri,outIn
   FROM byRow
   LEFT JOIN byOutcome USING (idRow)
   JOIN AgeByRow USING (idRow)
   ORDER BY CAST(idRow as int)
-  ",drv = "SQLite"))
+  ",drv = "SQLite")
 
 ```
 
@@ -1033,5 +1033,65 @@ sqldf(
   FROM byOutcome
   ")
 ```
+
+## Effectiveness
+
+
+```{r fig.height=12}
+
+tabPopTheoFraTot<-tablify(sqldf(
+  "SELECT population, TheoFra, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  GROUP BY population,TheoFra
+  "),"population","TheoFra","nbPapers")
+tabPopTheoFraYes<-tablify(sqldf(
+  "SELECT population, TheoFra, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  WHERE didItWork='Yes'
+  GROUP BY population,TheoFra
+  "),"population","TheoFra","nbPapers")
+tabPopTheoFraNo<-tablify(sqldf(
+  "SELECT population, TheoFra, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  WHERE didItWork='No'
+  GROUP BY population,TheoFra
+  "),"population","TheoFra","nbPapers")
+tabPopTheoFraUnclear<-tablify(sqldf(
+  "SELECT population, TheoFra, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  WHERE didItWork='Unclear'
+  GROUP BY population,TheoFra
+  "),"population","TheoFra","nbPapers")
+colComplete<-unique(c(colnames(tabPopTheoFraYes),colnames(tabPopTheoFraUnclear),colnames(tabPopTheoFraNo)))
+rowComplete<-unique(c(rownames(tabPopTheoFraYes),rownames(tabPopTheoFraUnclear),rownames(tabPopTheoFraNo)))
+tabPopTheoFraYes_comp<-tabPopTheoFraNo_comp<-tabPopTheoFraUnclear_comp<-matrix(0,nrow=length(rowComplete),ncol=length(colComplete),dimnames=list(rowComplete,colComplete))
+for(i in rownames(tabPopTheoFraYes_comp)){
+  for(j in colnames(tabPopTheoFraYes_comp)){
+    if(i %in% rownames(tabPopTheoFraYes) & j %in% colnames(tabPopTheoFraYes))
+    {
+      tabPopTheoFraYes_comp[i,j]<-tabPopTheoFraYes[i,j]
+    }
+    if(i %in% rownames(tabPopTheoFraUnclear) & j %in% colnames(tabPopTheoFraUnclear))
+    {
+      tabPopTheoFraUnclear_comp[i,j]<-tabPopTheoFraUnclear[i,j]
+    }
+    if(i %in% rownames(tabPopTheoFraNo) & j %in% colnames(tabPopTheoFraNo))
+    {
+      tabPopTheoFraNo_comp[i,j]<-tabPopTheoFraNo[i,j]
+    }
+  }
+}
+layout.matrix=matrix(1:4,nrow=4)
+layout(layout.matrix,heights=c(1,1,1,1.7))
+par(mar=c(0,4,4,1))
+barplot(t(tabPopTheoFraYes_comp),beside=T,names.arg = rep("",nrow(tabPopTheoFraYes_comp)),col=rainbow(ncol(tabPopTheoFraYes_comp)),main="Yes",ylim=c(0,max(tabPopTheoFraTot)))
+barplot(t(tabPopTheoFraNo_comp),beside=T,names.arg = rep("",nrow(tabPopTheoFraYes_comp)),col=rainbow(ncol(tabPopTheoFraYes_comp)),main="No",ylim=c(0,max(tabPopTheoFraTot)),legend=T,args.legend = list(x="topleft"))
+barplot(t(tabPopTheoFraUnclear_comp),beside=T,names.arg = rep("",nrow(tabPopTheoFraYes_comp)),col=rainbow(ncol(tabPopTheoFraYes_comp)),main="Unclear",ylim=c(0,max(tabPopTheoFraTot)),las=2)
+par(mar=c(12,4,4,1))
+barplot(t(tabPopTheoFraTot),beside=T,col=rainbow(ncol(tabPopTheoFraYes_comp)),main="Total",las=2)
+
+```
+ 
+
 
 

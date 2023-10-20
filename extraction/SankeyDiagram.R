@@ -141,34 +141,34 @@ df_outcomeT
 # We create 2 tables, one considering only one value for each row, and one considering one value by outcome
 
 
-byRow<-data.frame(
-  idRow=rownames(extract),
-  population=popTot,
-  pop=pop,
-  TheoFra=extract$`Theoretical.framework.(big.categories)`,
-  mitAda=extract$`Final.mitigation/adaptation`,
-  controv=ifelse(extract$controv_clean=="Yes","Controversy","No Controversy")
-)
-byOutcome<-df_outcomeT
+# byRow<-data.frame(
+#   idRow=rownames(extract),
+#   population=popTot,
+#   pop=pop,
+#   TheoFra=extract$`Theoretical.framework.(big.categories)`,
+#   mitAda=extract$`Final.mitigation/adaptation`,
+#   controv=ifelse(extract$controv_clean=="Yes","Controversy","No Controversy")
+# )
+# byOutcome<-df_outcomeT
 
 require(sqldf)
-byOutcomeTot<-na.omit(sqldf(
-  "SELECT idRow,population,TheoFra,mitAda,controv,outcome,didItWork
-  FROM byRow
-  LEFT JOIN byOutcome USING (idRow)
-  ORDER BY CAST(idRow as int)
-  ",drv = "SQLite"))
-byRowDIW<-sqldf(
-  "SELECT idRow,population,TheoFra,mitAda,controv,
-    CASE 
-      WHEN GROUP_CONCAT(DISTINCT didItWork) LIKE '%,%' THEN 'Unclear'
-      ELSE GROUP_CONCAT(DISTINCT didItWork)
-    END didItWork
-  FROM byRow
-  LEFT JOIN byOutcome USING (idRow)
-  GROUP BY idRow,population,TheoFra,mitAda,controv
-  ORDER BY CAST(idRow as int)",
-  drv = "SQLite")
+# byOutcomeTot<-na.omit(sqldf(
+#   "SELECT idRow,population,TheoFra,mitAda,controv,outcome,didItWork
+#   FROM byRow
+#   LEFT JOIN byOutcome USING (idRow)
+#   ORDER BY CAST(idRow as int)
+#   ",drv = "SQLite"))
+# byRowDIW<-sqldf(
+#   "SELECT idRow,population,TheoFra,mitAda,controv,
+#     CASE 
+#       WHEN GROUP_CONCAT(DISTINCT didItWork) LIKE '%,%' THEN 'Unclear'
+#       ELSE GROUP_CONCAT(DISTINCT didItWork)
+#     END didItWork
+#   FROM byRow
+#   LEFT JOIN byOutcome USING (idRow)
+#   GROUP BY idRow,population,TheoFra,mitAda,controv
+#   ORDER BY CAST(idRow as int)",
+#   drv = "SQLite")
 
 
 # SN2 Complete by outcome value ----
@@ -432,13 +432,13 @@ SN3
 
 ## New table ----
 
-byOutcomeTot<-na.omit(sqldf(
-  "SELECT idRow,population,pop,ageCat,TheoFra,mitAda,controv,outcome,didItWork
-  FROM byRow
-  LEFT JOIN byOutcome USING (idRow)
-  JOIN AgeByRow USING (idRow)
-  ORDER BY CAST(idRow as int)
-  ",drv = "SQLite"))
+# byOutcomeTot<-na.omit(sqldf(
+#   "SELECT idRow,population,pop,ageCat,TheoFra,mitAda,controv,outcome,didItWork
+#   FROM byRow
+#   LEFT JOIN byOutcome USING (idRow)
+#   JOIN AgeByRow USING (idRow)
+#   ORDER BY CAST(idRow as int)
+#   ",drv = "SQLite"))
 
 ## nodes and links ----
 
@@ -600,4 +600,257 @@ sqldf(
   FROM a
   ")
 
+# Sankey diagram 5 adding curricular extracurricular over SN3----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT curri name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT population name, 'node' gp_node, 1 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT TheoFra name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT didItWork name, 'node' gp_node, 6 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                 nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON curri=n1.name
+  JOIN nodes n2 ON population=n2.name
+  WHERE didItWork='Yes'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON curri=n1.name
+  JOIN nodes n2 ON population=n2.name
+  WHERE didItWork='No'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON curri=n1.name
+  JOIN nodes n2 ON population=n2.name
+  WHERE didItWork='Unclear'
+  GROUP BY n1.ID,n2.ID
+  
+  UNION
+  
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON population=n1.name
+  JOIN nodes n2 ON TheoFra=n2.name
+  WHERE didItWork='Yes'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON population=n1.name
+  JOIN nodes n2 ON TheoFra=n2.name
+  WHERE didItWork='No'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON population=n1.name
+  JOIN nodes n2 ON TheoFra=n2.name
+  WHERE didItWork='Unclear'
+  GROUP BY n1.ID,n2.ID
+  
+  UNION
+  
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  WHERE didItWork='Yes'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  WHERE didItWork='No'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  WHERE didItWork='Unclear'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  WHERE didItWork='Yes'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  WHERE didItWork='No'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  WHERE didItWork='Unclear'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+SN5<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(SN5,"SN5.html", selfcontained = T)
+SN5
+
+
+
+# Sankey diagram 6 adding curricular indoor/outdoor over SN3----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT outIn name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT population name, 'node' gp_node, 1 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT TheoFra name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT didItWork name, 'node' gp_node, 6 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                 nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outIn=n1.name
+  JOIN nodes n2 ON population=n2.name
+  WHERE didItWork='Yes'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outIn=n1.name
+  JOIN nodes n2 ON population=n2.name
+  WHERE didItWork='No'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outIn=n1.name
+  JOIN nodes n2 ON population=n2.name
+  WHERE didItWork='Unclear'
+  GROUP BY n1.ID,n2.ID
+  
+  UNION
+  
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON population=n1.name
+  JOIN nodes n2 ON TheoFra=n2.name
+  WHERE didItWork='Yes'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON population=n1.name
+  JOIN nodes n2 ON TheoFra=n2.name
+  WHERE didItWork='No'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON population=n1.name
+  JOIN nodes n2 ON TheoFra=n2.name
+  WHERE didItWork='Unclear'
+  GROUP BY n1.ID,n2.ID
+  
+  UNION
+  
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  WHERE didItWork='Yes'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  WHERE didItWork='No'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  WHERE didItWork='Unclear'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  WHERE didItWork='Yes'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  WHERE didItWork='No'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  WHERE didItWork='Unclear'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+SN6<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(SN6,"SN6.html", selfcontained = T)
+SN6
 
