@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231016_3.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231016_3.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231019_3.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231019_3.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -134,6 +134,16 @@ arrows(x0=datesOnGraph,y0=c(5,16),y1=rep(0,2),x1=datesOnGraph,length = .2,col="b
 text(datesOnGraph,c(6,16.5),events, cex=.7)
 ```
 
+## Income group
+
+```{r}
+countryDoc
+incomeGrpDoc<-worldMap_tot[match(countryDoc,worldMap_tot$name),"income_grp"]$income_grp
+incomeGrpDoc[is.na(incomeGrpDoc)&countryDoc%in%tinyCountries$NAME]<-tinyCountries[match(countryDoc[is.na(incomeGrpDoc)&countryDoc%in%tinyCountries$NAME],tinyCountries$NAME),"INCOME_GRP"]$INCOME_GRP
+table(incomeGrpDoc,useNA="ifany")
+par(mar=c(12,4,1,1))
+barplot(table(incomeGrpDoc,useNA="ifany"),las=2)
+```
 
 
 # Outcomes
@@ -287,6 +297,96 @@ legend("topleft",lwd=c(1,.5,NA),lty=c(1,3,NA),pch=c(NA,NA,3),legend=c("Range giv
 
 
 
+## Population final categories
+
+```{r}
+extract[c("age_stud_type_info","age_min_stud","age_max_stud","age_aver_stud","TARGETED.SAMPLE")]
+
+table(extract$age_stud_type_info,tolower(extract$TARGETED.SAMPLE))
+pop <- factor(rep(NA,nrow(extract)),c("Students","Teachers","Pre-service teachers","Parents"))
+pop[tolower(extract$TARGETED.SAMPLE)=="students"]<-"Students"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("teachers","entourage (teachers)")] <- "Teachers"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("pre-service teachers")] <- "Pre-service teachers"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("parents","entourage (parents)")] <- "Parents"
+table(extract$age_stud_type_info,pop,useNA="ifany")
+extract$age_min_stud[is.na(extract$age_min_stud)]<-as.integer(extract$Age_min.from.grade.[is.na(extract$age_min_stud)])
+extract$age_max_stud[is.na(extract$age_max_stud)]<-as.integer(extract$Age_max.from.grade[is.na(extract$age_max_stud)])
+ageConcerned<-t(sapply(
+  mapply(function(a,b)if(is.na(a)){return(NA)}else{return(a:b)},extract$age_min_stud,extract$age_max_stud),
+  function(x,a,b)a:b%in%x,a=min(extract$age_min_stud,na.rm = T),b=max(extract$age_max_stud, na.rm = T)
+                                ))
+colnames(ageConcerned)<- min(extract$age_min_stud,na.rm = T): max(extract$age_max_stud, na.rm = T)
+stopifnot(nrow(ageConcerned[is.na(extract$age_min_stud)&!is.na(extract$age_aver_stud),])==0)
+agesThreshold<-c(4,11,15,19)
+categoriesCol <- cut(
+  min(extract$age_min_stud,na.rm = T): max(extract$age_max_stud, na.rm = T),
+  breaks=agesThreshold+c(rep(0,length(agesThreshold)-1),0.0000001),
+  right = T,include.lowest = T,
+  labels=paste(agesThreshold[1:(length(agesThreshold)-1)]+c(0,rep(1,length(agesThreshold)-2)),agesThreshold[2:length(agesThreshold)],sep="-")
+                  )
+catAgeConcerned<-sapply(tapply(colnames(ageConcerned),categoriesCol,function(x)x),
+       function(x,mat)apply(mat[,x],1,any),mat=ageConcerned)
+catAgeConcernedWeight<-sapply(tapply(colnames(ageConcerned),categoriesCol,function(x)x),
+       function(x,mat)apply(mat[,x],1,sum),mat=ageConcerned)
+```
+
+
+```{r}
+barplot(colSums(catAgeConcerned))
+```
+
+
+Number of age categories by study:
+
+```{r}
+barplot(table(rowSums(catAgeConcerned)))
+```
+
+
+```{r}
+rangeByStudyText<-apply(catAgeConcerned,1,function(x,cat)paste(paste(cat[x],sep=""),collapse=", "),cat=colnames(catAgeConcerned))
+popTot<-mapply(function(a,b)
+  {
+    if(is.na(a)){return(NA)}
+    if(a=="Students"){return(paste0("Students (",ifelse(b=="","no age information",b),")"))}else{return(as.character(a))}
+  },pop,rangeByStudyText)
+par(mar=c(12,4,1,1))
+unique(popTot)
+popTot<-factor(popTot,
+               levels=c("Students (4-11)",
+                        "Students (4-11, 12-15)",
+                        "Students (4-11, 12-15, 16-19)",
+                        "Students (12-15)",
+                        "Students (12-15, 16-19)",
+                        "Students (16-19)",
+                        "Students (no age information)",
+                        "Teachers",
+                        "Pre-service teachers",
+                        "Parents"
+                        ),
+               labels=c("Students (4-11)",
+                        "Students (4-15)",
+                        "Students (4-19)",
+                        "Students (12-15)",
+                        "Students (12-19)",
+                        "Students (16-19)",
+                        "Students (no age information)",
+                        "Teachers",
+                        "Pre-service teachers",
+                        "Parents"
+                        ))
+barplot(table(popTot,useNA = "ifany"),las=2)
+```
+
+```{r}
+catAgeConcerned<-cbind(catAgeConcerned,`No age information`=(apply(catAgeConcerned,1,sum)==0))
+w_age<-which(catAgeConcerned,arr.ind=T)
+AgeByRow<-data.frame(
+  idRow=w_age[,"row"],
+  ageCat=colnames(catAgeConcerned)[w_age[,"col"]]
+)
+```
+
 
 
 # Controversy
@@ -396,28 +496,56 @@ clean<-function(x)
   x<-gsub("^([a-z])","\\U\\1",x,perl=T)
   return(x)
 }
+extract$`Theoretical.framework.(big.categories)`<-gsub("^ ","",gsub(" $","",gsub("^([a-zA-Z])(.*)","\\U\\1\\L\\2",extract$`Theoretical.framework.(big.categories)`,perl=T),perl=T),perl=T)
 listTheoBack<-lapply(strsplit(extract$`Theoretical.framework.(big.categories)`,"[,;]"),sapply,clean)
-tabTheoBack<-data.frame(id=rep(extract$id,sapply(listTheoBack,length)),
+tabTheoBack<-data.frame(
+  idRow=rep(rownames(extract),sapply(listTheoBack,length)),
+  id=rep(extract$id,sapply(listTheoBack,length)),
            theoBack=unlist(listTheoBack)
            )
 #Temporary plot
 forTempPlot<-table(tabTheoBack$theoBack)
 forTempPlot<-forTempPlot[order(forTempPlot,decreasing=T)]
-other<-(forTempPlot[6:nrow(forTempPlot)])
-forTempPlot<-forTempPlot[1:5]
-forTempPlot<-c(forTempPlot,other)
+#other<-(forTempPlot[6:nrow(forTempPlot)])
+#forTempPlot<-forTempPlot[1:5]
+#forTempPlot<-c(forTempPlot,other)
 par(mar=c(15,4,1,1))
-bp<-barplot(t(forTempPlot),las=2, density=c(0,20))
+bp<-barplot(forTempPlot,las=2)
 #legend("topright",density=18,"consistent with")
 text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 
 kable(sort(table(tabTheoBack$theoBack),decreasing=T))
 ```
 
-## Subcategorias: Learner centered approach
+## Comparison with population
+```{r fig.height=7,fig.width=6}
+par(mar=c(15,4,1,1))
+barplot(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`)),col=rainbow(nlevels(popTot)), las=2, legend=T)
+kable(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`,useNA="ifany")))
+```
+
+There are some professional development workshop for young students:
 
 ```{r}
-kable(sort(table(subcatLearnerCentered<-extract$X38),decreasing = T))
+extract$id[grepl("Students",popTot)&extract$`Theoretical.framework.(big.categories)`=="Professional development workshop"]
+```
+
+## Comparison with pedagogical tools
+
+```{r fig.height=7,fig.width=6}
+par(mar=c(15,4,1,1))
+extract$Categories.type.of.intervention<-factor(extract$Categories.type.of.intervention)
+barplot(table(extract$Categories.type.of.intervention,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(extract$Categories.type.of.intervention)),las=2,legend=T)
+```
+
+
+## Subcategorias
+
+```{r,fig.height=15,fig.width=15}
+kable(sort(table(subcatLearnerCentered<-factor(extract$X38)),decreasing = T))
+subcatLearnerCentered
+par(mar=c(13,4,1,1))
+barplot(table(subcatLearnerCentered,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(subcatLearnerCentered)),las=2,legend=T)
 ```
 
 
@@ -426,6 +554,7 @@ kable(sort(table(subcatLearnerCentered<-extract$X38),decreasing = T))
 
 # Methods & design
 
+## Quanti/Quali
 ```{r}
 sort(table(extract$study.type),decreasing = T)
 extract$QuantQualClean<-NA
@@ -434,7 +563,22 @@ extract$QuantQualClean[grep("qualitative",ignore.case = T, extract$study.type)]<
 extract$QuantQualClean[grepl("mixed",ignore.case = T, extract$study.type) | grepl("both",ignore.case = T, extract$study.type)]<-"Both/Mixed"
 sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
+```
 
+## Pre-post
+
+```{r,fig.height=5}
+table(extract$`Pre/Post`)
+extract$`Pre/Post`<-(grepl("true",extract$`Pre/Post`, ignore.case = T) | grepl("verdadero",extract$`Pre/Post`, ignore.case = T) | grepl("vrai",extract$`Pre/Post`, ignore.case = T) | grepl("yes",extract$`Pre/Post`, ignore.case = T))
+(tabMetodosAnalyses <- table(extract$`Pre/Post`,extract$QuantQualClean,useNA="ifany"))
+colSums(tabMetodosAnalyses)/sum(tabMetodosAnalyses)
+barplot(table(extract$`Pre/Post`,extract$QuantQualClean,useNA="ifany"), legend=T,args.legend = list(x="topleft",title="Pre/post"))
+```
+
+
+
+
+```{r}
 A<-sort(table(extract$design),decreasing=T)
 names(A)[nchar(names(A))>40]<-paste(substr(names(A)[nchar(names(A))>40],1,40),"...")
 A
@@ -474,10 +618,11 @@ barplot(table(designClean),las=2)
 barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 ```
 
-# Pedagogical tools
+# Characteristics of interventions
+## Pedagogical tools
 
 
-## From manuscript 1 text
+### From manuscript 1 text
 ```{r}
 par(mar=c(9,4,1,1))
 barplot(c(
@@ -492,7 +637,7 @@ barplot(c(
 )
 ```
 
-## From table
+### From table
 
 ```{r, fig.height=5, fig.width=5}
 par(mar=c(14,4,1,1))
@@ -500,11 +645,37 @@ barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
 extract$Categories.type.of.intervention <- extract$Categories.type.of.intervention <-factor(extract$Categories.type.of.intervention, levels = names(sort(table(extract$Categories.type.of.intervention), decreasing=T)))
 ```
 
-## Over time
+### Over time
 ```{r,fig.width=15, fig.height=7}
 opar <- par(lwd = 0.4)
 barplot(table(extract$Categories.type.of.intervention,factor(extract$datepubl,levels=min(extract$datepubl):max(extract$datepubl))),beside=T,col=rainbow(nlevels(extract$Categories.type.of.intervention)), legend=T, args.legend=list(x="topleft"), lwd=.1, cex.names=.8)
 ```
+
+
+## Curricular/extracurricular
+
+```{r}
+table(extract$`Curricular/Extracurricular`)
+curExtraCur<-rep(NA,nrow(extract))
+curExtraCur[extract$`Curricular/Extracurricular`%in%c("Curricular","Extracurricular")]<-extract$`Curricular/Extracurricular`[extract$`Curricular/Extracurricular`%in%c("Curricular","Extracurricular")]
+curExtraCur[extract$`Curricular/Extracurricular`%in%c("CurricularandExtracurricular")] <- "Curricular/Extracurricular" 
+curExtraCur[extract$`Curricular/Extracurricular`%in%c("ProfessionalDevelopment")] <- "Professional development" 
+extract[c("Curricular/Extracurricular","id")][is.na(curExtraCur),][c(3,6,7),]
+curExtraCur[extract$id=="Leitao2022"]<- c("Curricular/Extracurricular")
+curExtraCur[extract$id=="Hu2016"]<-"Extracurricular"
+curExtraCur[extract$id=="Korsager2015"]<-"Curricular"
+par(mar=c(12,4,1,1))
+barplot(table(curExtraCur,useNA="ifany"),las=2)
+```
+
+
+## Indoor/outdoor
+
+```{r}
+extract$`Outdoor/Indoor/Both`<-gsub("^([a-zA-Z])(.*)$","\\U\\1\\L\\2",extract$`Outdoor/Indoor/Both`,perl=T)
+table(extract$`Outdoor/Indoor/Both`,useNA="ifany")
+```
+
 
 
 # Time variables
@@ -690,20 +861,166 @@ barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
 barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
 ```
 
-# Sankey Diagrams
 
-## First try: Pedagogical tools, outcomes, did it work
+# Analisis
 
-The example they show in the package is:
-```r
-# Load package
-library(networkD3)
- 
-# Load energy projection data
-URL <- "https://cdn.rawgit.com/christophergandrud/networkD3/master/JSONdata/energy.json"
-Energy <- jsonlite::fromJSON(URL)
-# Thus we can plot it
-#sankeyNetwork(Links = Energy$links, Nodes = Energy$nodes, Source = "source",
-#              Target = "target", Value = "value", NodeID = "name",
-#              units = "TWh", fontSize = 12, nodeWidth = 30)
+
+
+
+# SQL style
+
+
+```{r}
+
+tablify<-function(dfSQL, row, col, content, changeNA=T, valNA=c(row="No information",col="No information"))
+{
+  if(changeNA)
+  {
+    dfSQL[is.na(dfSQL[,row]),row]<-valNA["row"]
+    dfSQL[is.na(dfSQL[,col]),col]<-valNA["col"]
+  }
+  res<-matrix(0,nrow=length(unique(dfSQL[,row])),ncol=length(unique(dfSQL[,col])),dimnames=list(unique(dfSQL[,row]),unique(dfSQL[,col])))
+  w_SQL<-as.matrix(dfSQL[,c(row,col)])
+  colnames(w_SQL)<-c("row","col")
+  res[w_SQL]<-dfSQL[,content]
+  return(res)
+}
+
+tf_outcomeT<-which(tf_outcomes[,1:6],arr.ind=T)
+df_outcomeT<-data.frame(
+  idRow=rownames(extract)[tf_outcomeT[,1]],
+  outcome=factor(colnames(tf_outcomes[,1:6])[tf_outcomeT[,2]]),
+  didItWork=factor(didItWork_outcomes[tf_outcomeT])
+  )
+
+byRow<-data.frame(
+  idRow=rownames(extract),
+  id=extract$id,
+  person=extract$codifico,
+  population=popTot,
+  curri=curExtraCur,
+  outIn=extract$`Outdoor/Indoor/Both`,
+  pop=pop,
+  TheoFra=extract$`Theoretical.framework.(big.categories)`,
+  mitAda=extract$`Final.mitigation/adaptation`,
+  controv=ifelse(extract$controv_clean=="Yes","Controversy","No Controversy")
+)
+byOutcome<-df_outcomeT
+
+require(sqldf)
+byOutcomeTot<-na.omit(sqldf(
+  "SELECT idRow,id,population,TheoFra,mitAda,controv,outcome,didItWork
+  FROM byRow
+  LEFT JOIN byOutcome USING (idRow)
+  ORDER BY CAST(idRow as int)
+  ",drv = "SQLite"))
+byRowDIW<-sqldf(
+  "SELECT idRow,id,population,TheoFra,mitAda,controv,
+    CASE 
+      WHEN GROUP_CONCAT(DISTINCT didItWork) LIKE '%,%' THEN 'Unclear'
+      ELSE GROUP_CONCAT(DISTINCT didItWork)
+    END didItWork
+  FROM byRow
+  LEFT JOIN byOutcome USING (idRow)
+  GROUP BY idRow,population,TheoFra,mitAda,controv
+  ORDER BY CAST(idRow as int)",
+  drv = "SQLite")
+byOutcomeTot<-na.omit(sqldf(
+  "SELECT idRow,id,person,population,pop,ageCat,TheoFra,mitAda,controv,outcome,didItWork
+  FROM byRow
+  LEFT JOIN byOutcome USING (idRow)
+  JOIN AgeByRow USING (idRow)
+  ORDER BY CAST(idRow as int)
+  ",drv = "SQLite"))
+
 ```
+
+
+
+```{r}
+require(sqldf)
+sqldf(
+  "SELECT count(DISTINCT id) 
+  FROM extract"
+  )
+```
+```{r}
+sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT idRow,outcome
+  FROM byOutcomeTot
+  )
+  SELECT count(*)
+  FROM a
+  ")
+```
+
+
+
+
+```{r}
+barplot(tablify(sqldf("SELECT curri,population,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"curri","population","nbPaper"),las=2,legend=T)
+```
+
+```{r,fig.height=7}
+par(mar=c(12,4,1,1))
+barplot(tablify(sqldf("SELECT TheoFra,curri,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"TheoFra","curri","nbPaper"),las=2,legend=T,col=rainbow(6))
+```
+
+## Innovative?
+
+```{r}
+sqldf(
+  "SELECT count(DISTINCT idRow)
+  FROM byRow
+  WHERE TheoFra<>'Teacher centered approach' OR outIn <> 'Indoor' OR curri <> 'Curricular'")
+sqldf(
+  "SELECT count(DISTINCT idRow)
+  FROM byRow
+  WHERE NOT (TheoFra<>'Teacher centered approach' OR outIn <> 'Indoor' OR curri <> 'Curricular')")
+sqldf(
+  "SELECT count(DISTINCT id)
+  FROM byRow
+  WHERE TheoFra='Teacher centered approach' AND outIn = 'Indoor' --AND curri = 'Curricular'")
+sqldf(
+  "SELECT count(DISTINCT idRow)
+  FROM byRow"
+)
+```
+
+## problem profesor
+
+```{r}
+sqldf(
+  "SELECT GROUP_CONCAT(id, ', ')
+  FROM byRow
+  WHERE (TheoFra='Professional development workshop' OR pop IN ('Teachers','Pre-service teachers')) AND curri<> 'Professional development'
+  "
+)
+sqldf(
+  "SELECT id,pop,person,TheoFra,curri
+  FROM byRow
+  WHERE (TheoFra='Professional development workshop' OR pop IN ('Teachers','Pre-service teachers')) AND curri<> 'Professional development'
+  "
+)
+
+```
+
+```{r}
+
+sqldf(
+  "SELECT 
+  didItWork,count(*)
+  FROM byOutcome
+  Group by didItWork
+  ")
+
+sqldf(
+  "SELECT 
+  count(*)
+  FROM byOutcome
+  ")
+```
+
+

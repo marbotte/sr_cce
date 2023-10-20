@@ -1,7 +1,7 @@
 Searching words in the pdfs
 ================
 Marius Bottin
-2023-10-09
+2023-10-19
 
 - [1 Number of pages](#1-number-of-pages)
 - [2 Self-efficacy](#2-self-efficacy)
@@ -18,6 +18,7 @@ Marius Bottin
 - [7 Outcomes](#7-outcomes)
   - [7.1 recapitulative table:
     outcomes](#71-recapitulative-table-outcomes)
+- [8 6 Americas](#8-6-americas)
 
 ``` r
 require(knitr)&require(kableExtra)
@@ -24310,3 +24311,203 @@ require(openxlsx)
 papId<-gsub("\\.pdf$","",basename(rownames(outcomes)))
 write.xlsx(data.frame(id=papId,outcomes),file="outcomePdfWords.xlsx",)
 ```
+
+# 8 6 Americas
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "((6)|(six)) americas" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Sara/Lambert2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Holthuis2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Shea2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Liu2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Siegner2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Flora2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+27
+
+</td>
+</tr>
+</tbody>
+</table>
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "((6)|(six)) americas" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+init
+
+</td>
+<td style="text-align:left;">
+
+./Sara/Lambert2013.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Holthuis2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Shea2016.pdf
+
+</td>
+<td style="text-align:left;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Ana/Liu2015.pdf
+
+</td>
+<td style="text-align:left;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./Sergio/Siegner2018.pdf
+
+</td>
+<td style="text-align:left;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+
+./JuanGabriel/Flora2014.pdf
+
+</td>
+<td style="text-align:left;">
+
+27
+
+</td>
+</tr>
+</tbody>
+</table>

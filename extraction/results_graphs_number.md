@@ -1,32 +1,42 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-17
+2023-10-20
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
 - [3 Countries](#3-countries)
   - [3.1 Making the map](#31-making-the-map)
 - [4 Years/Region of the world](#4-yearsregion-of-the-world)
+  - [4.1 Income group](#41-income-group)
 - [5 Outcomes](#5-outcomes)
 - [6 Population](#6-population)
   - [6.1 Rural/urban](#61-ruralurban)
   - [6.2 categories](#62-categories)
   - [6.3 Age](#63-age)
     - [6.3.1 Adding ages from grades](#631-adding-ages-from-grades)
+  - [6.4 Population final categories](#64-population-final-categories)
 - [7 Controversy](#7-controversy)
 - [8 Mitigation/Adaptation](#8-mitigationadaptation)
 - [9 Educational framework](#9-educational-framework)
 - [10 Monroe categories](#10-monroe-categories)
 - [11 Theoretical framework](#11-theoretical-framework)
-  - [11.1 Subcategorias: Learner centered
-    approach](#111-subcategorias-learner-centered-approach)
-  - [11.2](#112)
+  - [11.1 Comparison with population](#111-comparison-with-population)
+  - [11.2 Comparison with pedagogical
+    tools](#112-comparison-with-pedagogical-tools)
+  - [11.3 Subcategorias](#113-subcategorias)
+  - [11.4](#114)
 - [12 Methods & design](#12-methods--design)
-- [13 Pedagogical tools](#13-pedagogical-tools)
-  - [13.1 From manuscript 1 text](#131-from-manuscript-1-text)
-  - [13.2 From table](#132-from-table)
-  - [13.3 Over time](#133-over-time)
+  - [12.1 Quanti/Quali](#121-quantiquali)
+  - [12.2 Pre-post](#122-pre-post)
+- [13 Characteristics of
+  interventions](#13-characteristics-of-interventions)
+  - [13.1 Pedagogical tools](#131-pedagogical-tools)
+    - [13.1.1 From manuscript 1 text](#1311-from-manuscript-1-text)
+    - [13.1.2 From table](#1312-from-table)
+    - [13.1.3 Over time](#1313-over-time)
+  - [13.2 Curricular/extracurricular](#132-curricularextracurricular)
+  - [13.3 Indoor/outdoor](#133-indooroutdoor)
 - [14 Time variables](#14-time-variables)
   - [14.1 intervention time
     categories](#141-intervention-time-categories)
@@ -35,9 +45,10 @@ Marius Bottin
     - [14.3.1 Between time aspects](#1431-between-time-aspects)
     - [14.3.2 With outcomes](#1432-with-outcomes)
     - [14.3.3 Simplified](#1433-simplified)
-- [15 Sankey Diagrams](#15-sankey-diagrams)
-  - [15.1 First try: Pedagogical tools, outcomes, did it
-    work](#151-first-try-pedagogical-tools-outcomes-did-it-work)
+- [15 Analisis](#15-analisis)
+- [16 SQL style](#16-sql-style)
+  - [16.1 Innovative?](#161-innovative)
+  - [16.2 problem profesor](#162-problem-profesor)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -52,7 +63,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231016_3.xlsx"))
+names(loadWorkbook("../../extraction/20231019_3.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -61,7 +72,7 @@ names(loadWorkbook("../../extraction/20231016_3.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231016_3.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231019_3.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -449,13 +460,6 @@ require(rnaturalearth)
 
     ## Loading required package: rnaturalearth
 
-    ## The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,
-    ## which was just loaded, were retired in October 2023.
-    ## Please refer to R-spatial evolution reports for details, especially
-    ## https://r-spatial.org/r/2023/05/15/evolution4.html.
-    ## It may be desirable to make the sf package available;
-    ## package maintainers should consider adding sf to Suggests:.
-
     ## Support for Spatial objects (`sp`) will be deprecated in {rnaturalearth} and will be removed in a future release of the package. Please use `sf` objects with {rnaturalearth}. For example: `ne_download(returnclass = 'sf')`
 
 ``` r
@@ -543,6 +547,178 @@ text(datesOnGraph,c(6,16.5),events, cex=.7)
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
 
+## 4.1 Income group
+
+``` r
+countryDoc
+```
+
+    ##                Akaygun2021        Aksel_Stenberdt2023 
+    ##                   "Turkey"                  "Denmark" 
+    ##                  Aksut2016                   Arya2016 
+    ##                   "Turkey"                 "Multiple" 
+    ##                  Baker2013                  Bentz2020 
+    ##                   "Canada"                 "Portugal" 
+    ##           Bhattacharya2021                  Blaum2017 
+    ## "United States of America" "United States of America" 
+    ##                 Bodzin2014             Bofferding2015 
+    ## "United States of America" "United States of America" 
+    ##                   Boon2016               Bozdogan2011 
+    ##                "Australia"                   "Turkey" 
+    ##                Breslyn2019                Cebesoy2019 
+    ## "United States of America"                   "Turkey" 
+    ##                Cebesoy2022                  Chang2018 
+    ##                   "Turkey"                "Singapore" 
+    ##             Chattuchai2015                   Chin2016 
+    ##                 "Thailand"                   "Taiwan" 
+    ##                   Choi2021                  Cibik2022 
+    ##                 "Multiple"                   "Turkey" 
+    ##               da_Rocha2020                   Dal2015a 
+    ##                   "Brazil"                   "Turkey" 
+    ##           Deisenrieder2020               DeWaters2014 
+    ##                 "Multiple" "United States of America" 
+    ##                Dormody2020                Dormody2021 
+    ## "United States of America" "United States of America" 
+    ##                 Drewes2018                 Eggert2017 
+    ## "United States of America"                  "Germany" 
+    ##                  Faria2015             Feierabend2012 
+    ## "United States of America"                  "Germany" 
+    ##      Feldpausch_Parker2013                  Flora2014 
+    ## "United States of America" "United States of America" 
+    ##                Gladwin2022                  Gold2015a 
+    ##                 "Multiple" "United States of America" 
+    ##                 Goulah2017              Gutierrez2022 
+    ## "United States of America" "United States of America" 
+    ##          Harker_Schuch2013          Harker_Schuch2020 
+    ##                 "Multiple"                 "Multiple" 
+    ##                Herrick2022               Holthuis2014 
+    ## "United States of America" "United States of America" 
+    ##                     Hu2016               Jacobson2017 
+    ##                    "China"                "Australia" 
+    ##                    Jin2013                  Jones2021 
+    ## "United States of America"           "United Kingdom" 
+    ##                  Kabir2015             Karpudewan2015 
+    ##               "Bangladesh"                 "Malaysia" 
+    ##            Karpudewan2015a             Karpudewan2017 
+    ##                 "Malaysia"                 "Malaysia" 
+    ##                 Keller2019                   Kern2017 
+    ##                  "Austria" "United States of America" 
+    ##                 Khadka2021                 Kinsey2012 
+    ## "United States of America" "United States of America" 
+    ##             Klosterman2010               Kolenaty2022 
+    ## "United States of America"                  "Czechia" 
+    ##                Korfgen2017               Korsager2015 
+    ##                  "Austria"                   "Norway" 
+    ##                Kubisch2022                  Kumar2023 
+    ##                  "Austria"           "United Kingdom" 
+    ##                Lambert2012                Lambert2013 
+    ## "United States of America" "United States of America" 
+    ##                Lawson2019a                 Leckey2021 
+    ## "United States of America" "United States of America" 
+    ##                 Leitao2022                 Lester2006 
+    ##                 "Multiple" "United States of America" 
+    ##                Levrini2021                     Li2022 
+    ##                 "Multiple"                    "China" 
+    ##               Littrell2022                    Liu2015 
+    ## "United States of America" "United States of America" 
+    ##               Lombardi2013                 Lozano2022 
+    ## "United States of America"                    "Spain" 
+    ##              Markowitz2018                  Mason1998 
+    ## "United States of America"                    "Italy" 
+    ##                McGowan2022                McNeal2014a 
+    ## "United States of America" "United States of America" 
+    ##                McNeill2012                   Meya2018 
+    ## "United States of America"                  "Germany" 
+    ##                 Miller2015                 Monroe2016 
+    ##                 "Multiple" "United States of America" 
+    ##                 Muller2021                Muller2021a 
+    ##             "South Africa"             "South Africa" 
+    ##                Nafisah2022               Nakamura2019 
+    ##                "Indonesia"                    "Japan" 
+    ##      Nicholas_Figueroa2017                 Nkoana2020 
+    ## "United States of America"             "South Africa" 
+    ##               Nussbaum2015               Oberauer2023 
+    ## "United States of America"                  "Austria" 
+    ##                 Parant2017                   Park2020 
+    ##                   "France"              "South Korea" 
+    ##                  Parth2020                  Pekel2019 
+    ##                  "Germany"                   "Turkey" 
+    ##               Petersen2020                 Porter2012 
+    ##                  "Denmark"                   "Canada" 
+    ##                Pruneau2003                Pruneau2006 
+    ##                   "Canada"                   "Canada" 
+    ##               Pruneau2006a                Puttick2018 
+    ##                   "Canada" "United States of America" 
+    ##                   Raes2016                Ratinen2013 
+    ##                  "Belgium"                  "Finland" 
+    ##              Reinfried2012                 Roscoe2013 
+    ##              "Switzerland" "United States of America" 
+    ##           Roychoudhury2017                 Ruboon2012 
+    ## "United States of America"                 "Thailand" 
+    ##            Salas_Rueda2021              Salsabila2019 
+    ##                   "Mexico"                "Indonesia" 
+    ##               Saribaş2016                 Schrot2021a 
+    ##                   "Turkey"                  "Austria" 
+    ##             Schubatzky2022               Schuster2008 
+    ##                  "Austria" "United States of America" 
+    ##               Sellmann2013              Sellmann2013a 
+    ##                  "Germany"                  "Germany" 
+    ##               Sellmann2015                   Shea2016 
+    ##                  "Germany" "United States of America" 
+    ##                Siegner2018                  Silva2021 
+    ## "United States of America"                   "Brazil" 
+    ##                 Skains2022                  Smith2019 
+    ##           "United Kingdom" "United States of America" 
+    ##             Steffensen2022               Sternang2012 
+    ##                   "Norway"                   "Sweden" 
+    ##              Stevenson2018             Stevenson2018a 
+    ## "United States of America" "United States of America" 
+    ##                Sukardi2022                Sumrall2021 
+    ##                "Indonesia" "United States of America" 
+    ##               Sundberg2013                 Sutela2023 
+    ## "United States of America"                  "Finland" 
+    ##                 Svihla2012                  Taber2009 
+    ## "United States of America"                "Australia" 
+    ##               Tasquier2015               Tasquier2017 
+    ##                    "Italy"                    "Italy" 
+    ##                  Tasti2021                 Taylor2020 
+    ##                   "Turkey"              "New Zealand" 
+    ##                  Trott2019                 Trott2020a 
+    ## "United States of America" "United States of America" 
+    ##                 Trott2020b                  Trott2022 
+    ## "United States of America" "United States of America" 
+    ##                  Varma2012            Veijalainen2013 
+    ## "United States of America"                  "Finland" 
+    ##                Vicente2020            Visintainer2015 
+    ##                    "Spain" "United States of America" 
+    ##                  Walsh2018                  Walsh2019 
+    ## "United States of America" "United States of America" 
+    ##                   Wang2022                  White2022 
+    ##                    "China" "United States of America" 
+    ##               Williams2017                    Xie2014 
+    ##           "United Kingdom" "United States of America" 
+    ##                  Zhong2021             Zografakis2008 
+    ##                    "China"                   "Greece"
+
+``` r
+incomeGrpDoc<-worldMap_tot[match(countryDoc,worldMap_tot$name),"income_grp"]$income_grp
+incomeGrpDoc[is.na(incomeGrpDoc)&countryDoc%in%tinyCountries$NAME]<-tinyCountries[match(countryDoc[is.na(incomeGrpDoc)&countryDoc%in%tinyCountries$NAME],tinyCountries$NAME),"INCOME_GRP"]$INCOME_GRP
+table(incomeGrpDoc,useNA="ifany")
+```
+
+    ## incomeGrpDoc
+    ##    1. High income: OECD 2. High income: nonOECD  3. Upper middle income 
+    ##                     106                       2                      25 
+    ##  4. Lower middle income           5. Low income                    <NA> 
+    ##                       3                       1                       9
+
+``` r
+par(mar=c(12,4,1,1))
+barplot(table(incomeGrpDoc,useNA="ifany"),las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
 # 5 Outcomes
 
 ``` r
@@ -550,7 +726,7 @@ didItWork_col<-colnames(extract)[grep("it.work",colnames(extract))]
 barplot(colSums(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")])))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ``` r
 withOutcome<-which(!is.na(extract[c("knowledge","awareness","intention","emotion","action","habit","Other")]),arr.ind=T)
@@ -565,7 +741,7 @@ outcomeEffect$effect_simp[is.na(outcomeEffect$effect_simp)]<-"Unclear"
 barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
 
 # 6 Population
 
@@ -605,7 +781,7 @@ sort(table(extract$urban.vs.rural))
     ##                                                                                        Both 
     ##                                                                                           8 
     ##                                                                                       urban 
-    ##                                                                                          37 
+    ##                                                                                          38 
     ##                                                                                       Urban 
     ##                                                                                          50
 
@@ -636,14 +812,14 @@ table(rururbClean,useNA="ifany")
 
     ## rururbClean
     ##     Urban     Rural      Both Not given      <NA> 
-    ##        90         7        17         0        38
+    ##        91         7        17         0        37
 
 ``` r
 rururbClean[is.na(rururbClean)]<-"Not given"
 barplot(table(rururbClean))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ## 6.2 categories
 
@@ -655,12 +831,10 @@ sort(table(extract$TARGETED.SAMPLE,useNA="ifany"),decreasing=T)
     ## 
     ##              students  Entourage (Teachers)  pre-service teachers 
     ##                   114                    16                     9 
-    ##   Entourage (parents)              Students               parents 
-    ##                     4                     4                     1 
-    ## students and teachers    students; teachers              teachers 
-    ##                     1                     1                     1 
-    ## Teachers and students 
-    ##                     1
+    ##              Students   Entourage (parents)               parents 
+    ##                     5                     4                     1 
+    ## students and teachers              teachers Teachers and students 
+    ##                     1                     1                     1
 
 ``` r
 #For student ages
@@ -689,7 +863,7 @@ par(mar=c(10,4,1,1))
 barplot(table(populClean,useNA = "ifany"),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 **Calculated for manuscript**:
 
@@ -699,9 +873,9 @@ table(populClean,useNA = "ifany")
 
     ## populClean
     ##             Students             Teachers Pre-service teachers 
-    ##                  113                   14                    9 
+    ##                  114                   14                    9 
     ##                Mixed              Parents 
-    ##                    8                    2
+    ##                    7                    2
 
 ``` r
 table(populClean,useNA = "ifany")/sum(table(populClean,useNA = "ifany"))
@@ -709,9 +883,9 @@ table(populClean,useNA = "ifany")/sum(table(populClean,useNA = "ifany"))
 
     ## populClean
     ##             Students             Teachers Pre-service teachers 
-    ##           0.77397260           0.09589041           0.06164384 
+    ##           0.78082192           0.09589041           0.06164384 
     ##                Mixed              Parents 
-    ##           0.05479452           0.01369863
+    ##           0.04794521           0.01369863
 
 ``` r
 sum(table(populClean,useNA = "ifany")[c("Teachers","Pre-service teachers")])/sum(table(populClean,useNA = "ifany"))
@@ -730,13 +904,13 @@ extract$age_min[extract$student]
     ##  [21] NA     NA     NA     NA     NA     NA     "15.0" "15.0" "15.0" NA    
     ##  [31] NA     NA     "7.0"  "13.0" NA     "10.0" "10.0" NA     NA     NA    
     ##  [41] "11.0" "13.0" "16.0" NA     "12.0" "9.0"  "11.0" "9.0"  "9.0"  "13.0"
-    ##  [51] "16.0" "10.0" "11.0" NA     "12.0" "10.0" NA     NA     "16.0" NA    
-    ##  [61] NA     "14.0" "17.0" "15.0" NA     NA     NA     NA     "13.0" "ND"  
-    ##  [71] NA     "11.0" "15.0" "13.0" "10.0" NA     NA     NA     NA     "15.0"
-    ##  [81] NA     "11.0" NA     NA     "13.0" NA     "10.0" "10.0" NA     "16.0"
-    ##  [91] "16.0" NA     NA     "10.0" "15.0" NA     "10.0" NA     "8.0"  NA    
-    ## [101] "16.0" "12.0" NA     NA     NA     "17.0" "16.0" "12.0" "11.0" NA    
-    ## [111] "16.0" "15.0" "15.0" NA     "11.0" "17.0" "14.0" NA
+    ##  [51] "16.0" "10.0" "11.0" NA     "12.0" "10.0" NA     NA     NA     "16.0"
+    ##  [61] NA     NA     "14.0" "17.0" "15.0" NA     NA     NA     NA     "13.0"
+    ##  [71] "ND"   NA     "11.0" "15.0" "13.0" "10.0" NA     NA     NA     NA    
+    ##  [81] "15.0" NA     "11.0" NA     NA     "13.0" NA     "10.0" "10.0" NA    
+    ##  [91] "16.0" "16.0" NA     NA     "10.0" "15.0" NA     "10.0" NA     "8.0" 
+    ## [101] NA     "16.0" "12.0" NA     NA     NA     "17.0" "16.0" "12.0" "11.0"
+    ## [111] NA     "16.0" "15.0" "15.0" NA     "11.0" "17.0" "14.0" NA
 
 ``` r
 extract$age_max[extract$student]
@@ -753,19 +927,19 @@ extract$age_max[extract$student]
     ##  [41] "15.0"         "14.0"         "18.0"         NA             "17.0"        
     ##  [46] "14.0"         "14.0"         "17.0"         "10.0"         "14.0"        
     ##  [51] "19.0"         "11.0"         "14.0"         NA             "17.0"        
-    ##  [56] "12.0"         NA             NA             "17.0"         NA            
-    ##  [61] NA             "17.0"         "18.0"         "18.0"         NA            
-    ##  [66] NA             NA             NA             "16.0"         "ND"          
-    ##  [71] NA             "16.0"         "19.0"         "15.0"         "12.0"        
-    ##  [76] NA             NA             NA             NA             "16.0"        
-    ##  [81] NA             "12.0"         NA             NA             "18.0"        
-    ##  [86] NA             "12.0"         "12.0"         NA             "18.0"        
-    ##  [91] "16.0"         NA             NA             "13.0"         "17.0"        
-    ##  [96] NA             "19.0"         NA             "12.0"         NA            
-    ## [101] "17.0"         "13.0"         NA             NA             NA            
-    ## [106] "17.0"         "17.0"         "15.0"         "15 and older" NA            
-    ## [111] "18.0"         "19.0"         "16.0"         NA             "14.0"        
-    ## [116] "17.0"         "18.0"         NA
+    ##  [56] "12.0"         NA             NA             NA             "17.0"        
+    ##  [61] NA             NA             "17.0"         "18.0"         "18.0"        
+    ##  [66] NA             NA             NA             NA             "16.0"        
+    ##  [71] "ND"           NA             "16.0"         "19.0"         "15.0"        
+    ##  [76] "12.0"         NA             NA             NA             NA            
+    ##  [81] "16.0"         NA             "12.0"         NA             NA            
+    ##  [86] "18.0"         NA             "12.0"         "12.0"         NA            
+    ##  [91] "18.0"         "16.0"         NA             NA             "13.0"        
+    ##  [96] "17.0"         NA             "19.0"         NA             "12.0"        
+    ## [101] NA             "17.0"         "13.0"         NA             NA            
+    ## [106] NA             "17.0"         "17.0"         "15.0"         "15 and older"
+    ## [111] NA             "18.0"         "19.0"         "16.0"         NA            
+    ## [116] "14.0"         "17.0"         "18.0"         NA
 
 ``` r
 extract$mean.age[extract$student]
@@ -778,14 +952,14 @@ extract$mean.age[extract$student]
     ##  [33] NA       NA       NA       NA       NA       "14.0"   "17.16"  NA      
     ##  [41] NA       NA       NA       NA       NA       NA       NA       NA      
     ##  [49] NA       NA       NA       NA       NA       NA       NA       "11.1"  
-    ##  [57] "10.5"   "13.5"   NA       "13.5"   "12.5"   "15.55"  NA       NA      
-    ##  [65] NA       "13.2"   NA       NA       "15.5"   NA       "14.0"   NA      
+    ##  [57] "10.5"   NA       "13.5"   NA       "13.5"   "12.5"   "15.55"  NA      
+    ##  [65] NA       NA       "13.2"   NA       NA       "15.5"   NA       "14.0"  
     ##  [73] NA       NA       NA       NA       NA       NA       NA       NA      
-    ##  [81] NA       NA       "14.0"   NA       NA       NA       "11.1"   "11.1"  
-    ##  [89] "11.0"   NA       "16.0"   NA       NA       NA       "16.0"   NA      
+    ##  [81] NA       NA       NA       "14.0"   NA       NA       NA       "11.1"  
+    ##  [89] "11.1"   "11.0"   NA       "16.0"   NA       NA       NA       "16.0"  
     ##  [97] NA       NA       NA       NA       NA       NA       NA       NA      
-    ## [105] NA       "17.0"   NA       NA       NA       NA       NA       NA      
-    ## [113] "ND"     NA       NA       "17.0"   NA       NA
+    ## [105] NA       NA       "17.0"   NA       NA       NA       NA       NA      
+    ## [113] NA       NA       NA       NA       "17.0"   NA       NA
 
 ``` r
 extract$age_min_stud<-NA
@@ -805,11 +979,6 @@ extract$age_max_stud[extract$student]<-as.numeric(gsub(" \\[Extracted from grade
 
 ``` r
 extract$age_aver_stud[extract$student]<-as.numeric(gsub("\\[Extracted from grade\\]","",extract$mean.age[extract$student]))
-```
-
-    ## Warning: NAs introduced by coercion
-
-``` r
 extract[extract$student,"age_stud_no_info"]<-apply(extract[extract$student,c("age_min_stud","age_max_stud","age_aver_stud")],1,function(x)all(is.na(x)))
 extract[extract$student,"age_stud_type_info"]<-apply(extract[extract$student,c("age_min_stud","age_max_stud","age_aver_stud")],1,function(x){
     if(!is.na(x[1]) & !is.na(x[2]) & !is.na(x[3])){return("all")}
@@ -825,7 +994,7 @@ table(extract$age_stud_type_info[extract$student],useNA = "always")
 
     ## 
     ##    all   mean minmax   <NA> 
-    ##     10     11     49     48
+    ##     10     11     49     49
 
 ``` r
 age_order<- rep(NA,sum(!is.na(extract$age_stud_type_info)))
@@ -845,21 +1014,12 @@ segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","al
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ### 6.3.1 Adding ages from grades
 
 ``` r
 extract[is.na(extract[,"age_stud_type_info"])&!is.na(as.numeric(extract$Age_min.from.grade.))&!is.na(as.numeric(extract$Age_max.from.grade)),"age_stud_type_info"]<-"minmaxFromGrade"
-```
-
-    ## Warning in `[<-.data.frame`(`*tmp*`, is.na(extract[, "age_stud_type_info"]) & :
-    ## NAs introduced by coercion
-
-    ## Warning in `[<-.data.frame`(`*tmp*`, is.na(extract[, "age_stud_type_info"]) & :
-    ## NAs introduced by coercion
-
-``` r
 tabForPlot<-rbind(
   tabForPlot,
   data.frame(age_min_stud=as.numeric(extract$Age_min.from.grade.[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
@@ -902,7 +1062,452 @@ points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")
 legend("topleft",lwd=c(1,.5,NA),lty=c(1,3,NA),pch=c(NA,NA,3),legend=c("Range given","Range from grades","Average given"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+
+## 6.4 Population final categories
+
+``` r
+extract[c("age_stud_type_info","age_min_stud","age_max_stud","age_aver_stud","TARGETED.SAMPLE")]
+```
+
+    ##     age_stud_type_info age_min_stud age_max_stud age_aver_stud
+    ## 1                 mean           NA           NA         17.68
+    ## 2                 <NA>           NA           NA            NA
+    ## 3               minmax           13           17            NA
+    ## 4      minmaxFromGrade           NA           NA            NA
+    ## 5               minmax           16           18            NA
+    ## 6      minmaxFromGrade           NA           NA            NA
+    ## 7               minmax           11           18            NA
+    ## 8                 <NA>           NA           NA            NA
+    ## 9                 <NA>           NA           NA            NA
+    ## 10     minmaxFromGrade           NA           NA            NA
+    ## 11     minmaxFromGrade           NA           NA            NA
+    ## 12     minmaxFromGrade           NA           NA            NA
+    ## 13     minmaxFromGrade           NA           NA            NA
+    ## 14     minmaxFromGrade           NA           NA            NA
+    ## 15     minmaxFromGrade           NA           NA            NA
+    ## 16                <NA>           NA           NA            NA
+    ## 17              minmax           15           16            NA
+    ## 18     minmaxFromGrade           NA           NA            NA
+    ## 19              minmax           13           16            NA
+    ## 20                <NA>           NA           NA            NA
+    ## 21     minmaxFromGrade           NA           NA            NA
+    ## 22                <NA>           NA           NA            NA
+    ## 23     minmaxFromGrade           NA           NA            NA
+    ## 24              minmax           13           14            NA
+    ## 25              minmax           14           15            NA
+    ## 26     minmaxFromGrade           NA           NA            NA
+    ## 27     minmaxFromGrade           NA           16         16.00
+    ## 28     minmaxFromGrade           NA           NA            NA
+    ## 29     minmaxFromGrade           NA           NA            NA
+    ## 30     minmaxFromGrade           NA           NA            NA
+    ## 31     minmaxFromGrade           NA           NA            NA
+    ## 32                 all           15           18         17.00
+    ## 33     minmaxFromGrade           NA           NA            NA
+    ## 34              minmax           15           19            NA
+    ## 35     minmaxFromGrade           NA           NA            NA
+    ## 36              minmax           15           16            NA
+    ## 37     minmaxFromGrade           NA           NA            NA
+    ## 38     minmaxFromGrade           NA           NA            NA
+    ## 39     minmaxFromGrade           NA           NA            NA
+    ## 40              minmax            7            9            NA
+    ## 41              minmax           13           15            NA
+    ## 42     minmaxFromGrade           NA           NA            NA
+    ## 43     minmaxFromGrade           NA           NA            NA
+    ## 44                <NA>           NA           NA            NA
+    ## 45                <NA>           NA           NA            NA
+    ## 46              minmax           10           11            NA
+    ## 47              minmax           10           11            NA
+    ## 48                <NA>           NA           NA            NA
+    ## 49                mean           NA           NA         14.00
+    ## 50     minmaxFromGrade           NA           NA            NA
+    ## 51                mean           NA           NA         17.16
+    ## 52     minmaxFromGrade           NA           NA            NA
+    ## 53                <NA>           NA           NA            NA
+    ## 54              minmax           11           15            NA
+    ## 55              minmax           13           14            NA
+    ## 56     minmaxFromGrade           NA           NA            NA
+    ## 57              minmax           16           18            NA
+    ## 58     minmaxFromGrade           NA           NA            NA
+    ## 59     minmaxFromGrade           NA           NA            NA
+    ## 60              minmax           12           17            NA
+    ## 61              minmax            9           14            NA
+    ## 62              minmax           11           14            NA
+    ## 63              minmax            9           17            NA
+    ## 64              minmax            9           10            NA
+    ## 65              minmax           13           14            NA
+    ## 66              minmax           16           19            NA
+    ## 67              minmax           10           11            NA
+    ## 68              minmax           11           14            NA
+    ## 69     minmaxFromGrade           NA           NA            NA
+    ## 70              minmax           12           17            NA
+    ## 71                 all           10           12         11.10
+    ## 72                mean           NA           NA         10.50
+    ## 73     minmaxFromGrade           NA           NA            NA
+    ## 74     minmaxFromGrade           NA           NA            NA
+    ## 75                <NA>           NA           NA            NA
+    ## 76                mean           NA           NA         13.50
+    ## 77              minmax           16           17            NA
+    ## 78                mean           NA           NA         13.50
+    ## 79                mean           NA           NA         12.50
+    ## 80                 all           14           17         15.55
+    ## 81              minmax           17           18            NA
+    ## 82              minmax           15           18            NA
+    ## 83     minmaxFromGrade           NA           NA            NA
+    ## 84     minmaxFromGrade           NA           NA            NA
+    ## 85                mean           NA           NA         13.20
+    ## 86     minmaxFromGrade           NA           NA            NA
+    ## 87     minmaxFromGrade           NA           NA            NA
+    ## 88                <NA>           NA           NA            NA
+    ## 89     minmaxFromGrade           NA           NA            NA
+    ## 90     minmaxFromGrade           NA           NA            NA
+    ## 91                 all           13           16         15.50
+    ## 92     minmaxFromGrade           NA           NA            NA
+    ## 93                mean           NA           NA         14.00
+    ## 94              minmax           11           16            NA
+    ## 95              minmax           15           19            NA
+    ## 96              minmax           13           15            NA
+    ## 97              minmax           10           12            NA
+    ## 98     minmaxFromGrade           NA           NA            NA
+    ## 99                <NA>           NA           NA            NA
+    ## 100    minmaxFromGrade           NA           NA            NA
+    ## 101    minmaxFromGrade           NA           NA            NA
+    ## 102    minmaxFromGrade           NA           NA            NA
+    ## 103    minmaxFromGrade           NA           NA            NA
+    ## 104    minmaxFromGrade           NA           NA            NA
+    ## 105    minmaxFromGrade           NA           NA            NA
+    ## 106             minmax           15           16            NA
+    ## 107               <NA>           NA           NA            NA
+    ## 108    minmaxFromGrade           NA           NA            NA
+    ## 109             minmax           11           12            NA
+    ## 110               mean           NA           NA         14.00
+    ## 111    minmaxFromGrade           NA           NA            NA
+    ## 112    minmaxFromGrade           NA           NA            NA
+    ## 113             minmax           13           18            NA
+    ## 114    minmaxFromGrade           NA           NA            NA
+    ## 115    minmaxFromGrade           NA           NA            NA
+    ## 116                all           10           12         11.10
+    ## 117                all           10           12         11.10
+    ## 118               mean           NA           NA         11.00
+    ## 119    minmaxFromGrade           NA           NA            NA
+    ## 120             minmax           16           18            NA
+    ## 121                all           16           16         16.00
+    ## 122    minmaxFromGrade           NA           NA            NA
+    ## 123    minmaxFromGrade           NA           NA            NA
+    ## 124             minmax           10           13            NA
+    ## 125                all           15           17         16.00
+    ## 126    minmaxFromGrade           NA           NA            NA
+    ## 127             minmax           10           19            NA
+    ## 128    minmaxFromGrade           NA           NA            NA
+    ## 129               <NA>           NA           NA            NA
+    ## 130               <NA>           NA           NA            NA
+    ## 131             minmax            8           12            NA
+    ## 132    minmaxFromGrade           NA           NA            NA
+    ## 133             minmax           16           17            NA
+    ## 134             minmax           12           13            NA
+    ## 135    minmaxFromGrade           NA           NA            NA
+    ## 136    minmaxFromGrade           NA           NA            NA
+    ## 137    minmaxFromGrade           NA           NA            NA
+    ## 138    minmaxFromGrade           NA           NA            NA
+    ## 139                all           17           17         17.00
+    ## 140             minmax           16           17            NA
+    ## 141               <NA>           NA           NA            NA
+    ## 142             minmax           12           15            NA
+    ## 143    minmaxFromGrade           11           NA            NA
+    ## 144    minmaxFromGrade           NA           NA            NA
+    ## 145             minmax           16           18            NA
+    ## 146             minmax           15           19            NA
+    ## 147             minmax           15           16            NA
+    ## 148    minmaxFromGrade           NA           NA            NA
+    ## 149             minmax           11           14            NA
+    ## 150                all           17           17         17.00
+    ## 151             minmax           14           18            NA
+    ## 152               <NA>           NA           NA            NA
+    ##           TARGETED.SAMPLE
+    ## 1                students
+    ## 2    Entourage (Teachers)
+    ## 3                students
+    ## 4                students
+    ## 5                students
+    ## 6                students
+    ## 7                students
+    ## 8    pre-service teachers
+    ## 9    pre-service teachers
+    ## 10               students
+    ## 11               students
+    ## 12               students
+    ## 13               students
+    ## 14               students
+    ## 15               students
+    ## 16               students
+    ## 17               students
+    ## 18               students
+    ## 19               students
+    ## 20   Entourage (Teachers)
+    ## 21               students
+    ## 22   Entourage (Teachers)
+    ## 23               students
+    ## 24               students
+    ## 25               students
+    ## 26               students
+    ## 27               students
+    ## 28               students
+    ## 29               students
+    ## 30               students
+    ## 31               students
+    ## 32               students
+    ## 33   Entourage (Teachers)
+    ## 34               students
+    ## 35   Entourage (Teachers)
+    ## 36               students
+    ## 37               students
+    ## 38               students
+    ## 39               students
+    ## 40               students
+    ## 41               students
+    ## 42               students
+    ## 43   Entourage (Teachers)
+    ## 44   Entourage (Teachers)
+    ## 45   Entourage (Teachers)
+    ## 46               students
+    ## 47               students
+    ## 48   Entourage (Teachers)
+    ## 49               students
+    ## 50   Entourage (Teachers)
+    ## 51               students
+    ## 52               students
+    ## 53   Entourage (Teachers)
+    ## 54               students
+    ## 55               students
+    ## 56   pre-service teachers
+    ## 57               students
+    ## 58               students
+    ## 59   pre-service teachers
+    ## 60               students
+    ## 61               students
+    ## 62               students
+    ## 63               students
+    ## 64               students
+    ## 65               students
+    ## 66               students
+    ## 67               students
+    ## 68               students
+    ## 69               students
+    ## 70               students
+    ## 71               students
+    ## 72               students
+    ## 73    Entourage (parents)
+    ## 74               Students
+    ## 75   Entourage (Teachers)
+    ## 76               students
+    ## 77               students
+    ## 78               students
+    ## 79               students
+    ## 80               students
+    ## 81               students
+    ## 82               students
+    ## 83               students
+    ## 84    Entourage (parents)
+    ## 85               students
+    ## 86               students
+    ## 87               students
+    ## 88   Entourage (Teachers)
+    ## 89   pre-service teachers
+    ## 90   pre-service teachers
+    ## 91               students
+    ## 92               students
+    ## 93               students
+    ## 94               students
+    ## 95               students
+    ## 96               students
+    ## 97               students
+    ## 98   pre-service teachers
+    ## 99    Entourage (parents)
+    ## 100   Entourage (parents)
+    ## 101              students
+    ## 102              students
+    ## 103              students
+    ## 104  Entourage (Teachers)
+    ## 105              students
+    ## 106              students
+    ## 107  Entourage (Teachers)
+    ## 108              students
+    ## 109              students
+    ## 110              students
+    ## 111              students
+    ## 112              teachers
+    ## 113              students
+    ## 114               parents
+    ## 115              students
+    ## 116              students
+    ## 117              students
+    ## 118              students
+    ## 119 students and teachers
+    ## 120              students
+    ## 121              students
+    ## 122              students
+    ## 123              students
+    ## 124              students
+    ## 125              students
+    ## 126              students
+    ## 127              students
+    ## 128              students
+    ## 129 Teachers and students
+    ## 130  pre-service teachers
+    ## 131              students
+    ## 132              students
+    ## 133              students
+    ## 134              students
+    ## 135              students
+    ## 136  pre-service teachers
+    ## 137              students
+    ## 138              students
+    ## 139              students
+    ## 140              students
+    ## 141  Entourage (Teachers)
+    ## 142              students
+    ## 143              students
+    ## 144              students
+    ## 145              students
+    ## 146              students
+    ## 147              students
+    ## 148              Students
+    ## 149              Students
+    ## 150              Students
+    ## 151              Students
+    ## 152              students
+
+``` r
+table(extract$age_stud_type_info,tolower(extract$TARGETED.SAMPLE))
+```
+
+    ##                  
+    ##                   entourage (parents) entourage (teachers) parents
+    ##   all                               0                    0       0
+    ##   mean                              0                    0       0
+    ##   minmax                            0                    0       0
+    ##   minmaxFromGrade                   3                    5       1
+    ##                  
+    ##                   pre-service teachers students students and teachers teachers
+    ##   all                                0       10                     0        0
+    ##   mean                               0       11                     0        0
+    ##   minmax                             0       49                     0        0
+    ##   minmaxFromGrade                    6       47                     1        1
+    ##                  
+    ##                   teachers and students
+    ##   all                                 0
+    ##   mean                                0
+    ##   minmax                              0
+    ##   minmaxFromGrade                     0
+
+``` r
+pop <- factor(rep(NA,nrow(extract)),c("Students","Teachers","Pre-service teachers","Parents"))
+pop[tolower(extract$TARGETED.SAMPLE)=="students"]<-"Students"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("teachers","entourage (teachers)")] <- "Teachers"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("pre-service teachers")] <- "Pre-service teachers"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("parents","entourage (parents)")] <- "Parents"
+table(extract$age_stud_type_info,pop,useNA="ifany")
+```
+
+    ##                  pop
+    ##                   Students Teachers Pre-service teachers Parents <NA>
+    ##   all                   10        0                    0       0    0
+    ##   mean                  11        0                    0       0    0
+    ##   minmax                49        0                    0       0    0
+    ##   minmaxFromGrade       47        6                    6       4    1
+    ##   <NA>                   2       11                    3       1    1
+
+``` r
+extract$age_min_stud[is.na(extract$age_min_stud)]<-as.integer(extract$Age_min.from.grade.[is.na(extract$age_min_stud)])
+extract$age_max_stud[is.na(extract$age_max_stud)]<-as.integer(extract$Age_max.from.grade[is.na(extract$age_max_stud)])
+ageConcerned<-t(sapply(
+  mapply(function(a,b)if(is.na(a)){return(NA)}else{return(a:b)},extract$age_min_stud,extract$age_max_stud),
+  function(x,a,b)a:b%in%x,a=min(extract$age_min_stud,na.rm = T),b=max(extract$age_max_stud, na.rm = T)
+                                ))
+colnames(ageConcerned)<- min(extract$age_min_stud,na.rm = T): max(extract$age_max_stud, na.rm = T)
+stopifnot(nrow(ageConcerned[is.na(extract$age_min_stud)&!is.na(extract$age_aver_stud),])==0)
+agesThreshold<-c(4,11,15,19)
+categoriesCol <- cut(
+  min(extract$age_min_stud,na.rm = T): max(extract$age_max_stud, na.rm = T),
+  breaks=agesThreshold+c(rep(0,length(agesThreshold)-1),0.0000001),
+  right = T,include.lowest = T,
+  labels=paste(agesThreshold[1:(length(agesThreshold)-1)]+c(0,rep(1,length(agesThreshold)-2)),agesThreshold[2:length(agesThreshold)],sep="-")
+                  )
+catAgeConcerned<-sapply(tapply(colnames(ageConcerned),categoriesCol,function(x)x),
+       function(x,mat)apply(mat[,x],1,any),mat=ageConcerned)
+catAgeConcernedWeight<-sapply(tapply(colnames(ageConcerned),categoriesCol,function(x)x),
+       function(x,mat)apply(mat[,x],1,sum),mat=ageConcerned)
+```
+
+``` r
+barplot(colSums(catAgeConcerned))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+
+Number of age categories by study:
+
+``` r
+barplot(table(rowSums(catAgeConcerned)))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+
+``` r
+rangeByStudyText<-apply(catAgeConcerned,1,function(x,cat)paste(paste(cat[x],sep=""),collapse=", "),cat=colnames(catAgeConcerned))
+popTot<-mapply(function(a,b)
+  {
+    if(is.na(a)){return(NA)}
+    if(a=="Students"){return(paste0("Students (",ifelse(b=="","no age information",b),")"))}else{return(as.character(a))}
+  },pop,rangeByStudyText)
+par(mar=c(12,4,1,1))
+unique(popTot)
+```
+
+    ##  [1] "Students (12-15, 16-19)"       "Teachers"                     
+    ##  [3] "Students (4-11)"               "Students (16-19)"             
+    ##  [5] "Students (4-11, 12-15, 16-19)" "Pre-service teachers"         
+    ##  [7] "Students (4-11, 12-15)"        "Students (no age information)"
+    ##  [9] "Students (12-15)"              "Parents"                      
+    ## [11] NA
+
+``` r
+popTot<-factor(popTot,
+               levels=c("Students (4-11)",
+                        "Students (4-11, 12-15)",
+                        "Students (4-11, 12-15, 16-19)",
+                        "Students (12-15)",
+                        "Students (12-15, 16-19)",
+                        "Students (16-19)",
+                        "Students (no age information)",
+                        "Teachers",
+                        "Pre-service teachers",
+                        "Parents"
+                        ),
+               labels=c("Students (4-11)",
+                        "Students (4-15)",
+                        "Students (4-19)",
+                        "Students (12-15)",
+                        "Students (12-19)",
+                        "Students (16-19)",
+                        "Students (no age information)",
+                        "Teachers",
+                        "Pre-service teachers",
+                        "Parents"
+                        ))
+barplot(table(popTot,useNA = "ifany"),las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+
+``` r
+catAgeConcerned<-cbind(catAgeConcerned,`No age information`=(apply(catAgeConcerned,1,sum)==0))
+w_age<-which(catAgeConcerned,arr.ind=T)
+AgeByRow<-data.frame(
+  idRow=w_age[,"row"],
+  ageCat=colnames(catAgeConcerned)[w_age[,"col"]]
+)
+```
 
 # 7 Controversy
 
@@ -1001,7 +1606,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
 barplot(PercentageControversy,las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ``` r
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
@@ -1026,7 +1631,7 @@ par(mar=c(11,4,1,1))
 barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),las=2,legend=T,args.legend = list(title="Controversy"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-2.png)<!-- -->
 
 **Calculations for text**
 
@@ -1258,13 +1863,13 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 
     ## 
     ## Adaptation       Both Mitigation    Neither       <NA> 
-    ## 0.03289474 0.27631579 0.62500000 0.03947368 0.02631579
+    ## 0.03289474 0.27631579 0.63815789 0.03947368 0.01315789
 
 ``` r
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 \# Disciplines
 
 ``` r
@@ -1276,9 +1881,9 @@ sort(table(extract$Disciplin_2))
     ##            Other  Social Sciences          Science  Social sciences 
     ##                1                1                2                2 
     ##            STEAM        Education             STEM            Mixed 
-    ##                2                3                8               15 
+    ##                2                3                8               16 
     ##              NA  Natural Sciences 
-    ##               18               71
+    ##               18               72
 
 ``` r
 disciplineClean<- extract$Disciplin_2
@@ -1288,7 +1893,7 @@ disciplineClean[grepl("NA",extract$Disciplin_2)|is.na(extract$Disciplin_2)]<-"ND
 barplot(sort(table(disciplineClean),decreasing=T), las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 # 9 Educational framework
 
@@ -1541,6 +2146,24 @@ Muller2021a
 <tr>
 <td style="text-align:left;">
 
+Climate and Energy Awareness Network (CLEAN) Geography education
+standards project, 1994
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:left;">
+
+McNeal2014a
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 Critical pegagogy
 
 </td>
@@ -1604,23 +2227,6 @@ al., 1990)
 <td style="text-align:left;">
 
 Schuster2008
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Geography education standards project, 1994
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-<td style="text-align:left;">
-
-McNeal2014a
 
 </td>
 </tr>
@@ -1877,7 +2483,7 @@ How many include “5:target climate science misconceptions”:
 sum(grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`))
 ```
 
-    ## [1] 38
+    ## [1] 39
 
 Which:
 
@@ -1893,11 +2499,11 @@ extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
     ## [16] "Sellmann2013a"     "Lawson2019a"       "Lawson2019a"      
     ## [19] "Walsh2018"         "Drewes2018"        "Drewes2018"       
     ## [22] "Svihla2012"        "Silva2021"         "Markowitz2018"    
-    ## [25] "Smith2019"         "McNeill2012"       "Bodzin2014"       
-    ## [28] "Harker_Schuch2013" "Harker_Schuch2020" "Kabir2015"        
-    ## [31] "Lambert2013"       "Littrell2022"      "Tasquier2015"     
-    ## [34] "Tasquier2017"      "Sellmann2015"      "Pekel2019"        
-    ## [37] "Gutierrez2022"     "Nussbaum2015"
+    ## [25] "McNeal2014a"       "Smith2019"         "McNeill2012"      
+    ## [28] "Bodzin2014"        "Harker_Schuch2013" "Harker_Schuch2020"
+    ## [31] "Kabir2015"         "Lambert2013"       "Littrell2022"     
+    ## [34] "Tasquier2015"      "Tasquier2017"      "Sellmann2015"     
+    ## [37] "Pekel2019"         "Gutierrez2022"     "Nussbaum2015"
 
 # 11 Theoretical framework
 
@@ -1911,23 +2517,26 @@ clean<-function(x)
   x<-gsub("^([a-z])","\\U\\1",x,perl=T)
   return(x)
 }
+extract$`Theoretical.framework.(big.categories)`<-gsub("^ ","",gsub(" $","",gsub("^([a-zA-Z])(.*)","\\U\\1\\L\\2",extract$`Theoretical.framework.(big.categories)`,perl=T),perl=T),perl=T)
 listTheoBack<-lapply(strsplit(extract$`Theoretical.framework.(big.categories)`,"[,;]"),sapply,clean)
-tabTheoBack<-data.frame(id=rep(extract$id,sapply(listTheoBack,length)),
+tabTheoBack<-data.frame(
+  idRow=rep(rownames(extract),sapply(listTheoBack,length)),
+  id=rep(extract$id,sapply(listTheoBack,length)),
            theoBack=unlist(listTheoBack)
            )
 #Temporary plot
 forTempPlot<-table(tabTheoBack$theoBack)
 forTempPlot<-forTempPlot[order(forTempPlot,decreasing=T)]
-other<-(forTempPlot[6:nrow(forTempPlot)])
-forTempPlot<-forTempPlot[1:5]
-forTempPlot<-c(forTempPlot,other)
+#other<-(forTempPlot[6:nrow(forTempPlot)])
+#forTempPlot<-forTempPlot[1:5]
+#forTempPlot<-c(forTempPlot,other)
 par(mar=c(15,4,1,1))
-bp<-barplot(t(forTempPlot),las=2, density=c(0,20))
+bp<-barplot(forTempPlot,las=2)
 #legend("topright",density=18,"consistent with")
 text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ``` r
 kable(sort(table(tabTheoBack$theoBack),decreasing=T))
@@ -1957,55 +2566,7 @@ Learner centered approach
 </td>
 <td style="text-align:right;">
 
-79
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Teacher centered approach
-
-</td>
-<td style="text-align:right;">
-
-23
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Relational
-
-</td>
-<td style="text-align:right;">
-
-18
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Professional development workshop
-
-</td>
-<td style="text-align:right;">
-
-16
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Promoting social awareness
-
-</td>
-<td style="text-align:right;">
-
-5
+64
 
 </td>
 </tr>
@@ -2017,53 +2578,604 @@ Alternative
 </td>
 <td style="text-align:right;">
 
-3
+34
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-Gaming
+Teacher centered approach
 
 </td>
 <td style="text-align:right;">
 
-2
+19
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-Intergenerational
+Professional development workshop
 
 </td>
 <td style="text-align:right;">
 
-2
+14
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-Promoting Social Awareness
+Relational
 
 </td>
 <td style="text-align:right;">
 
-2
+11
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Promoting social awareness
+
+</td>
+<td style="text-align:right;">
+
+6
 
 </td>
 </tr>
 </tbody>
 </table>
 
-## 11.1 Subcategorias: Learner centered approach
+## 11.1 Comparison with population
 
 ``` r
-kable(sort(table(subcatLearnerCentered<-extract$X38),decreasing = T))
+par(mar=c(15,4,1,1))
+barplot(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`)),col=rainbow(nlevels(popTot)), las=2, legend=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+
+``` r
+kable(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`,useNA="ifany")))
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+Alternative
+
+</th>
+<th style="text-align:right;">
+
+Learner centered approach
+
+</th>
+<th style="text-align:right;">
+
+Professional development workshop
+
+</th>
+<th style="text-align:right;">
+
+Promoting social awareness
+
+</th>
+<th style="text-align:right;">
+
+Relational
+
+</th>
+<th style="text-align:right;">
+
+Teacher centered approach
+
+</th>
+<th style="text-align:right;">
+
+NA
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+Students (4-11)
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Students (4-15)
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+13
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Students (4-19)
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Students (12-15)
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Students (12-19)
+
+</td>
+<td style="text-align:right;">
+
+11
+
+</td>
+<td style="text-align:right;">
+
+17
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Students (16-19)
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Students (no age information)
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Teachers
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Pre-service teachers
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Parents
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+</tbody>
+</table>
+
+There are some professional development workshop for young students:
+
+``` r
+extract$id[grepl("Students",popTot)&extract$`Theoretical.framework.(big.categories)`=="Professional development workshop"]
+```
+
+    ## [1] NA NA NA
+
+## 11.2 Comparison with pedagogical tools
+
+``` r
+par(mar=c(15,4,1,1))
+extract$Categories.type.of.intervention<-factor(extract$Categories.type.of.intervention)
+barplot(table(extract$Categories.type.of.intervention,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(extract$Categories.type.of.intervention)),las=2,legend=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+
+## 11.3 Subcategorias
+
+``` r
+kable(sort(table(subcatLearnerCentered<-factor(extract$X38)),decreasing = T))
 ```
 
 <table>
@@ -2085,19 +3197,43 @@ Freq
 <tr>
 <td style="text-align:left;">
 
-Constructivism
+Lectures/lessons/instruction
 
 </td>
 <td style="text-align:right;">
 
-10
+17
 
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 
-Experiential learning
+Constructivism
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Socio-scientific/socio-constructivist/socio-ecological
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Combination of active-learning/experiential learning strategies
 
 </td>
 <td style="text-align:right;">
@@ -2109,7 +3245,43 @@ Experiential learning
 <tr>
 <td style="text-align:left;">
 
-Socio-constructivism
+Conceptual change
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Inquiry-based learning
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Intergenerational learning
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Technology enhanced
 
 </td>
 <td style="text-align:right;">
@@ -2133,7 +3305,7 @@ Active learning
 <tr>
 <td style="text-align:left;">
 
-Conceptual change
+Experiential learning
 
 </td>
 <td style="text-align:right;">
@@ -2145,48 +3317,60 @@ Conceptual change
 <tr>
 <td style="text-align:left;">
 
-COnstructivism
+Visual arts
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Arts-based
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+combination of active-learning/experiential learning strategies
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Gaming/gamification
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Argument-driven
 
 </td>
 <td style="text-align:right;">
 
 4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Intergenerational
-
-</td>
-<td style="text-align:right;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-inquiry-based learning
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Inquiry-based learning
-
-</td>
-<td style="text-align:right;">
-
-3
 
 </td>
 </tr>
@@ -2198,55 +3382,7 @@ Moderate constructivism
 </td>
 <td style="text-align:right;">
 
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Socio-scientific
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Technology enhanced
-
-</td>
-<td style="text-align:right;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Art-based
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Experiencial learning
-
-</td>
-<td style="text-align:right;">
-
-2
+4
 
 </td>
 </tr>
@@ -2277,7 +3413,7 @@ Future-oriented imagery
 <tr>
 <td style="text-align:left;">
 
-Gaming
+Place/community-based
 
 </td>
 <td style="text-align:right;">
@@ -2289,103 +3425,7 @@ Gaming
 <tr>
 <td style="text-align:left;">
 
-Instruction
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Project-based learning
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Tranformative learning
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Action competence
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Alternative (Art-based)
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Alternative (Visual Material)
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Argument driven inquiry
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Argument-driven
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Bloom’s taxonomy
+individual worksheets
 
 </td>
 <td style="text-align:right;">
@@ -2421,7 +3461,7 @@ Collaborative-learning
 <tr>
 <td style="text-align:left;">
 
-Conceptual change (misconceptions and scaffold)
+Entertainment education
 
 </td>
 <td style="text-align:right;">
@@ -2433,67 +3473,7 @@ Conceptual change (misconceptions and scaffold)
 <tr>
 <td style="text-align:left;">
 
-Conceptual mobility
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Constructive climate engagement
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Critical pedagogy
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Existential and epistemological
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Experiencial learning
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-experiential learning ( technology enhanced)
+Experiential learning
 
 </td>
 <td style="text-align:right;">
@@ -2517,102 +3497,6 @@ Gestalt and Behaviorist learning theories
 <tr>
 <td style="text-align:left;">
 
-Green School
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Inquirybased learning
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Intergenerational
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Intergenerational learning
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Liberation pedagogy
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Moderate constructivist
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-pedagogy of argumentation
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Place-based education
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 Problem-based learning
 
 </td>
@@ -2625,7 +3509,7 @@ Problem-based learning
 <tr>
 <td style="text-align:left;">
 
-Scaffolding
+Project-based learning
 
 </td>
 <td style="text-align:right;">
@@ -2637,7 +3521,7 @@ Scaffolding
 <tr>
 <td style="text-align:left;">
 
-Self-regulated learning
+Socio-constructivism
 
 </td>
 <td style="text-align:right;">
@@ -2649,55 +3533,7 @@ Self-regulated learning
 <tr>
 <td style="text-align:left;">
 
-socio-ecological
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-technology enhanced
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Tiered-mentoring (apprenticeship) model
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Transformative
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Transformative learning
+Visual Material
 
 </td>
 <td style="text-align:right;">
@@ -2721,9 +3557,176 @@ Workshop
 </tbody>
 </table>
 
-## 11.2
+``` r
+subcatLearnerCentered
+```
+
+    ##   [1] Technology enhanced                                            
+    ##   [2] Lectures/lessons/instruction                                   
+    ##   [3] Lectures/lessons/instruction                                   
+    ##   [4] Arts-based                                                     
+    ##   [5] Arts-based                                                     
+    ##   [6] Constructivism                                                 
+    ##   [7] Lectures/lessons/instruction                                   
+    ##   [8] <NA>                                                           
+    ##   [9] Visual Material                                                
+    ##  [10] Conceptual change                                              
+    ##  [11] Buddhist principles of instruction                             
+    ##  [12] Combination of active-learning/experiential learning strategies
+    ##  [13] Conceptual change                                              
+    ##  [14] Inquiry-based learning                                         
+    ##  [15] Experiential learning                                          
+    ##  [16] Argument-driven                                                
+    ##  [17] Place/community-based                                          
+    ##  [18] <NA>                                                           
+    ##  [19] Constructivism                                                 
+    ##  [20] Inquiry-based learning                                         
+    ##  [21] Arts-based                                                     
+    ##  [22] Workshop                                                       
+    ##  [23] Conceptual change                                              
+    ##  [24] Lectures/lessons/instruction                                   
+    ##  [25] Experiential learning                                          
+    ##  [26] Place/community-based                                          
+    ##  [27] <NA>                                                           
+    ##  [28] Technology enhanced                                            
+    ##  [29] Conceptual change                                              
+    ##  [30] Socio-scientific/socio-constructivist/socio-ecological         
+    ##  [31] Active learning                                                
+    ##  [32] Active learning                                                
+    ##  [33] <NA>                                                           
+    ##  [34] Experiential learning                                          
+    ##  [35] combination of active-learning/experiential learning strategies
+    ##  [36] Socio-scientific/socio-constructivist/socio-ecological         
+    ##  [37] Constructivism                                                 
+    ##  [38] Socio-scientific/socio-constructivist/socio-ecological         
+    ##  [39] Constructivism                                                 
+    ##  [40] Intergenerational learning                                     
+    ##  [41] Moderate constructivism                                        
+    ##  [42] <NA>                                                           
+    ##  [43] <NA>                                                           
+    ##  [44] <NA>                                                           
+    ##  [45] <NA>                                                           
+    ##  [46] Constructivism                                                 
+    ##  [47] Constructivism                                                 
+    ##  [48] Combination of active-learning/experiential learning strategies
+    ##  [49] Gestalt and Behaviorist learning theories                      
+    ##  [50] <NA>                                                           
+    ##  [51] Socio-scientific/socio-constructivist/socio-ecological         
+    ##  [52] Experiential learning                                          
+    ##  [53] combination of active-learning/experiential learning strategies
+    ##  [54] Lectures/lessons/instruction                                   
+    ##  [55] Argument-driven                                                
+    ##  [56] <NA>                                                           
+    ##  [57] <NA>                                                           
+    ##  [58] Combination of active-learning/experiential learning strategies
+    ##  [59] Conceptual change                                              
+    ##  [60] Moderate constructivism                                        
+    ##  [61] Active learning                                                
+    ##  [62] Gaming/gamification                                            
+    ##  [63] <NA>                                                           
+    ##  [64] Expert learner                                                 
+    ##  [65] Conceptual change                                              
+    ##  [66] Socio-scientific/socio-constructivist/socio-ecological         
+    ##  [67] Socio-scientific/socio-constructivist/socio-ecological         
+    ##  [68] Gaming/gamification                                            
+    ##  [69] Entertainment education                                        
+    ##  [70] Visual arts                                                    
+    ##  [71] Visual arts                                                    
+    ##  [72] Lectures/lessons/instruction                                   
+    ##  [73] Lectures/lessons/instruction                                   
+    ##  [74] combination of active-learning/experiential learning strategies
+    ##  [75] combination of active-learning/experiential learning strategies
+    ##  [76] Active learning                                                
+    ##  [77] Constructivism                                                 
+    ##  [78] Future-oriented imagery                                        
+    ##  [79] Technology enhanced                                            
+    ##  [80] Technology enhanced                                            
+    ##  [81] Future-oriented imagery                                        
+    ##  [82] combination of active-learning/experiential learning strategies
+    ##  [83] Socio-scientific/socio-constructivist/socio-ecological         
+    ##  [84] Intergenerational learning                                     
+    ##  [85] Inquiry-based learning                                         
+    ##  [86] Inquiry-based learning                                         
+    ##  [87] Socio-scientific/socio-constructivist/socio-ecological         
+    ##  [88] <NA>                                                           
+    ##  [89] Lectures/lessons/instruction                                   
+    ##  [90] Experiential learning                                          
+    ##  [91] Gaming/gamification                                            
+    ##  [92] Lectures/lessons/instruction                                   
+    ##  [93] Constructivism                                                 
+    ##  [94] Moderate constructivism                                        
+    ##  [95] Active learning                                                
+    ##  [96] Moderate constructivism                                        
+    ##  [97] Visual arts                                                    
+    ##  [98] Lectures/lessons/instruction                                   
+    ##  [99] Intergenerational learning                                     
+    ## [100] Project-based learning                                         
+    ## [101] Expert learner                                                 
+    ## [102] Combination of active-learning/experiential learning strategies
+    ## [103] Lectures/lessons/instruction                                   
+    ## [104] Inquiry-based learning                                         
+    ## [105] <NA>                                                           
+    ## [106] Problem-based learning                                         
+    ## [107] Arts-based                                                     
+    ## [108] <NA>                                                           
+    ## [109] Inquiry-based learning                                         
+    ## [110] Technology enhanced                                            
+    ## [111] Combination of active-learning/experiential learning strategies
+    ## [112] Combination of active-learning/experiential learning strategies
+    ## [113] Intergenerational learning                                     
+    ## [114] Intergenerational learning                                     
+    ## [115] Lectures/lessons/instruction                                   
+    ## [116] Visual arts                                                    
+    ## [117] Visual arts                                                    
+    ## [118] Inquiry-based learning                                         
+    ## [119] Arts-based                                                     
+    ## [120] Technology enhanced                                            
+    ## [121] Experiential learning                                          
+    ## [122] Constructivism                                                 
+    ## [123] Socio-constructivism                                           
+    ## [124] Intergenerational learning                                     
+    ## [125] Constructivism                                                 
+    ## [126] Gaming/gamification                                            
+    ## [127] Constructivism                                                 
+    ## [128] Intergenerational learning                                     
+    ## [129] Technology enhanced                                            
+    ## [130]  individual worksheets                                         
+    ## [131] Lectures/lessons/instruction                                   
+    ## [132] Argument-driven                                                
+    ## [133] Lectures/lessons/instruction                                   
+    ## [134] Gaming/gamification                                            
+    ## [135] Lectures/lessons/instruction                                   
+    ## [136] Lectures/lessons/instruction                                   
+    ## [137] Visual arts                                                    
+    ## [138] Experiential learning                                          
+    ## [139] Constructivism                                                 
+    ## [140] Lectures/lessons/instruction                                   
+    ## [141] Collaborative-learning                                         
+    ## [142] <NA>                                                           
+    ## [143] <NA>                                                           
+    ## [144] Constructivism                                                 
+    ## [145] <NA>                                                           
+    ## [146] Conceptual change                                              
+    ## [147] Argument-driven                                                
+    ## [148] Combination of active-learning/experiential learning strategies
+    ## [149] Constructivism                                                 
+    ## [150] <NA>                                                           
+    ## [151] <NA>                                                           
+    ## [152] Active learning                                                
+    ## 30 Levels:  individual worksheets Active learning ... Workshop
+
+``` r
+par(mar=c(13,4,1,1))
+barplot(table(subcatLearnerCentered,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(subcatLearnerCentered)),las=2,legend=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
+
+## 11.4
 
 # 12 Methods & design
+
+## 12.1 Quanti/Quali
 
 ``` r
 sort(table(extract$study.type),decreasing = T)
@@ -2753,7 +3756,42 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+
+## 12.2 Pre-post
+
+``` r
+table(extract$`Pre/Post`)
+```
+
+    ## 
+    ##     FALSE     Falso      FAUX        no        No      TRUE     TRUE  Verdadero 
+    ##        27         1         1         1         1        98         1         4 
+    ## VERDADERO      VRAI       yes       Yes       YES 
+    ##         4        10         1         1         1
+
+``` r
+extract$`Pre/Post`<-(grepl("true",extract$`Pre/Post`, ignore.case = T) | grepl("verdadero",extract$`Pre/Post`, ignore.case = T) | grepl("vrai",extract$`Pre/Post`, ignore.case = T) | grepl("yes",extract$`Pre/Post`, ignore.case = T))
+(tabMetodosAnalyses <- table(extract$`Pre/Post`,extract$QuantQualClean,useNA="ifany"))
+```
+
+    ##        
+    ##         Both/Mixed Qualitative Quantitative <NA>
+    ##   FALSE          5          22            4    1
+    ##   TRUE          35          18           67    0
+
+``` r
+colSums(tabMetodosAnalyses)/sum(tabMetodosAnalyses)
+```
+
+    ##   Both/Mixed  Qualitative Quantitative         <NA> 
+    ##  0.263157895  0.263157895  0.467105263  0.006578947
+
+``` r
+barplot(table(extract$`Pre/Post`,extract$QuantQualClean,useNA="ifany"), legend=T,args.legend = list(x="topleft",title="Pre/post"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
 
 ``` r
 A<-sort(table(extract$design),decreasing=T)
@@ -2762,7 +3800,7 @@ A
 ```
 
     ##                                     Pre-post 
-    ##                                           82 
+    ##                                           84 
     ##                                     pre-post 
     ##                                            5 
     ##                                   Case study 
@@ -2771,8 +3809,6 @@ A
     ##                                            4 
     ##                          Pre-post + control  
     ##                                            4 
-    ##                            Pre-post + factor 
-    ##                                            4 
     ##                            Pre-post + during 
     ##                                            3 
     ##                          Pre -post + control 
@@ -2780,6 +3816,8 @@ A
     ##                                    Pre-post  
     ##                                            2 
     ##                  Pre-post + control + factor 
+    ##                                            2 
+    ##                            Pre-post + factor 
     ##                                            2 
     ## 2 (methodology: problem-based learning,  ... 
     ##                                            1 
@@ -2867,13 +3905,7 @@ extract$prepostClean<-NA
 extract$`Pre/Post`[!extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","VERDADERO","Verdadero","Yes","yes","YES","FALSE","FALSO","FAUX","Falso","No","no")]
 ```
 
-    ## [1] "Not sure... (see previous cell)"                                                                             
-    ## [2] "Not exactly. more like a follow-up in several moments of the intervention but no baseline, pre-intervention."
-    ## [3] "(see problem previous cell)"                                                                                 
-    ## [4] "FALSE - Only post!!"                                                                                         
-    ## [5] "True (but there is no info on when the pre and post measures were taken)"                                    
-    ## [6] "See previous cell"                                                                                           
-    ## [7] NA
+    ## logical(0)
 
 ``` r
 extract$prepostClean[extract$`Pre/Post`%in%c("TRUE","TRUE ","VRAI","verdadero","VERDADERO","Verdadero","Yes","yes","YES")]<-T
@@ -2913,7 +3945,7 @@ designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-
 barplot(table(designClean),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
 
 ``` r
 par(mfrow=c(1,2))
@@ -2922,11 +3954,13 @@ barplot(table(designClean),las=2)
 barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
 
-# 13 Pedagogical tools
+# 13 Characteristics of interventions
 
-## 13.1 From manuscript 1 text
+## 13.1 Pedagogical tools
+
+### 13.1.1 From manuscript 1 text
 
 ``` r
 par(mar=c(9,4,1,1))
@@ -2942,29 +3976,89 @@ barplot(c(
 )
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
 
-## 13.2 From table
+### 13.1.2 From table
 
 ``` r
 par(mar=c(14,4,1,1))
 barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
 
 ``` r
 extract$Categories.type.of.intervention <- extract$Categories.type.of.intervention <-factor(extract$Categories.type.of.intervention, levels = names(sort(table(extract$Categories.type.of.intervention), decreasing=T)))
 ```
 
-## 13.3 Over time
+### 13.1.3 Over time
 
 ``` r
 opar <- par(lwd = 0.4)
 barplot(table(extract$Categories.type.of.intervention,factor(extract$datepubl,levels=min(extract$datepubl):max(extract$datepubl))),beside=T,col=rainbow(nlevels(extract$Categories.type.of.intervention)), legend=T, args.legend=list(x="topleft"), lwd=.1, cex.names=.8)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
+
+## 13.2 Curricular/extracurricular
+
+``` r
+table(extract$`Curricular/Extracurricular`)
+```
+
+    ## 
+    ##                                                                                                                                                     Curricular 
+    ##                                                                                                                                                             80 
+    ##                                                  Curricular[supported by teachers, it might even be part of the study plan, but that is not clear in the paper 
+    ##                                                                                                                                                              1 
+    ##                                                                                                                                   CurricularandExtracurricular 
+    ##                                                                                                                                                              4 
+    ##                                                                                                                                                Extracurricular 
+    ##                                                                                                                                                             49 
+    ## Extracurricular, but I have a doubt:"we introduced an educational programme for climate change that included inviting adolescents to communicate with seniors" 
+    ##                                                                                                                                                              1 
+    ##                                                                                                                        Portugal:Extracurricular\nUK:Curricular 
+    ##                                                                                                                                                              1 
+    ##                                                                                                                                        ProfessionalDevelopment 
+    ##                                                                                                                                                             11
+
+``` r
+curExtraCur<-rep(NA,nrow(extract))
+curExtraCur[extract$`Curricular/Extracurricular`%in%c("Curricular","Extracurricular")]<-extract$`Curricular/Extracurricular`[extract$`Curricular/Extracurricular`%in%c("Curricular","Extracurricular")]
+curExtraCur[extract$`Curricular/Extracurricular`%in%c("CurricularandExtracurricular")] <- "Curricular/Extracurricular" 
+curExtraCur[extract$`Curricular/Extracurricular`%in%c("ProfessionalDevelopment")] <- "Professional development" 
+extract[c("Curricular/Extracurricular","id")][is.na(curExtraCur),][c(3,6,7),]
+```
+
+    ##                                                                                                                                         Curricular/Extracurricular
+    ## 62                                                                                                                         Portugal:Extracurricular\nUK:Curricular
+    ## 124 Extracurricular, but I have a doubt:"we introduced an educational programme for climate change that included inviting adolescents to communicate with seniors"
+    ## 139                                                  Curricular[supported by teachers, it might even be part of the study plan, but that is not clear in the paper
+    ##               id
+    ## 62    Leitao2022
+    ## 124       Hu2016
+    ## 139 Korsager2015
+
+``` r
+curExtraCur[extract$id=="Leitao2022"]<- c("Curricular/Extracurricular")
+curExtraCur[extract$id=="Hu2016"]<-"Extracurricular"
+curExtraCur[extract$id=="Korsager2015"]<-"Curricular"
+par(mar=c(12,4,1,1))
+barplot(table(curExtraCur,useNA="ifany"),las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
+
+## 13.3 Indoor/outdoor
+
+``` r
+extract$`Outdoor/Indoor/Both`<-gsub("^([a-zA-Z])(.*)$","\\U\\1\\L\\2",extract$`Outdoor/Indoor/Both`,perl=T)
+table(extract$`Outdoor/Indoor/Both`,useNA="ifany")
+```
+
+    ## 
+    ##    Both  Indoor Outdoor    <NA> 
+    ##      38     105       7       2
 
 # 14 Time variables
 
@@ -2992,9 +4086,9 @@ extract$Total.duration.of.the.intervention
     ## [103] "~6h"      "60h"      NA         "~2h"      "40h"      "10min"   
     ## [109] "~10h"     "4h"       "~8h"      "~8h"      NA         NA        
     ## [115] NA         NA         NA         "~7h30min" NA         "~6h"     
-    ## [121] "12h"      NA         NA         "1h"       "600min"   NA        
+    ## [121] "12h"      "9h or 7S" "3D"       "1h"       "600min"   NA        
     ## [127] NA         "~23h"     NA         NA         NA         "8h"      
-    ## [133] "~45min"   "50min"    "~18h"     NA         NA         NA        
+    ## [133] "~45min"   "50min"    "~18h"     NA         "40h"      NA        
     ## [139] NA         "15h"      "~42h"     "~3h"      NA         NA        
     ## [145] NA         "~14h"     "4h"       "~20h"     "6h"       "~35h"    
     ## [151] NA         "50min"
@@ -3023,9 +4117,9 @@ extract$Period.length
     ## [103] "1M14D"    "1Y"       NA         "2H"       "3M"       "1H"      
     ## [109] "6 months" "~5D"      "1D"       "1D"       "1Y"       "1Y"      
     ## [115] "5M"       "3M13D"    "3M13D"    "1M7D"     "~2M"      "1M8D"    
-    ## [121] "1M14D"    NA         NA         "2D"       "10M"      "10M"     
+    ## [121] "1M14D"    "1M3W"     NA         "2D"       "10M"      "10M"     
     ## [127] "1Y"       "~1M14D"   "20D"      "2M"       NA         "1M"      
-    ## [133] "1H"       "1H"       "6M"       "4M"       NA         NA        
+    ## [133] "1H"       "1H"       "6M"       "4M"       "7D"       NA        
     ## [139] "1M14D"    "1M7D"     "16D"      NA         "6M"       NA        
     ## [145] NA         "2D"       "14D"      "1M"       "2M"       "49D"     
     ## [151] "7M"       "3D"
@@ -3046,7 +4140,7 @@ extract$Number.of.sessions
     ##  [91] "1.0"  NA     "1.0"  NA     "1.0"  NA     "15.0" "2.0"  NA     "~5"  
     ## [101] NA     "~10"  "6.0"  "~20"  NA     "1.0"  NA     "1.0"  "5.0"  "4.0" 
     ## [111] "1.0"  "1.0"  NA     NA     NA     NA     NA     "~5"   NA     "3.0" 
-    ## [121] "6.0"  NA     NA     "2.0"  "12.0" NA     NA     "11.0" "20.0" NA    
+    ## [121] "6.0"  "7.0"  "3.0"  "2.0"  "12.0" NA     NA     "11.0" "20.0" NA    
     ## [131] NA     "4.0"  "~1"   "1.0"  "24.0" NA     NA     NA     NA     "5.0" 
     ## [141] "6.0"  NA     NA     NA     "5.0"  "2.0"  "6.0"  "~10"  "3.0"  "~35" 
     ## [151] NA     "2.0"
@@ -3056,7 +4150,7 @@ hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number o
 legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-42-1.png)<!-- -->
 
 ``` r
 extract$Total.duration.of.the.intervention
@@ -3082,9 +4176,9 @@ extract$Total.duration.of.the.intervention
     ## [103] "~6h"      "60h"      NA         "~2h"      "40h"      "10min"   
     ## [109] "~10h"     "4h"       "~8h"      "~8h"      NA         NA        
     ## [115] NA         NA         NA         "~7h30min" NA         "~6h"     
-    ## [121] "12h"      NA         NA         "1h"       "600min"   NA        
+    ## [121] "12h"      "9h or 7S" "3D"       "1h"       "600min"   NA        
     ## [127] NA         "~23h"     NA         NA         NA         "8h"      
-    ## [133] "~45min"   "50min"    "~18h"     NA         NA         NA        
+    ## [133] "~45min"   "50min"    "~18h"     NA         "40h"      NA        
     ## [139] NA         "15h"      "~42h"     "~3h"      NA         NA        
     ## [145] NA         "~14h"     "4h"       "~20h"     "6h"       "~35h"    
     ## [151] NA         "50min"
@@ -3104,6 +4198,15 @@ totalDur<-data.frame(
   h=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\3",extract$Total.duration.of.the.intervention,perl=T)),
   min=as.integer(gsub("^(~)?(([0-9]+)([hH]))?(([0-9]+)(min))?","\\6",extract$Total.duration.of.the.intervention,perl=T))
 )
+```
+
+    ## Warning in data.frame(id = extract$id, raw =
+    ## extract$Total.duration.of.the.intervention, : NAs introduced by coercion
+
+    ## Warning in data.frame(id = extract$id, raw =
+    ## extract$Total.duration.of.the.intervention, : NAs introduced by coercion
+
+``` r
 totalDur$totalMin=ifelse(totalDur$ND,NA,(60*ifelse(is.na(totalDur$h),0,totalDur$h))+ifelse(is.na(totalDur$min),0,totalDur$min))
 kbl(totalDur[!totalDur$ND,])
 ```
@@ -6430,6 +7533,90 @@ NA
 <tr>
 <td style="text-align:left;">
 
+122
+
+</td>
+<td style="text-align:left;">
+
+McNeal2014a
+
+</td>
+<td style="text-align:left;">
+
+9h or 7S
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+123
+
+</td>
+<td style="text-align:left;">
+
+Muller2021
+
+</td>
+<td style="text-align:left;">
+
+3D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 124
 
 </td>
@@ -6718,6 +7905,48 @@ NA
 <td style="text-align:right;">
 
 1080
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+137
+
+</td>
+<td style="text-align:left;">
+
+Littrell2022
+
+</td>
+<td style="text-align:left;">
+
+40h
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+40
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2400
 
 </td>
 </tr>
@@ -7108,7 +8337,7 @@ axis(1,at=c(0,60*c(20,50,100,150)),labels=c("0","20h","50h","100h","150h"),las=1
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-43-1.png)<!-- -->
 
 ``` r
 extract$Period.length
@@ -7134,9 +8363,9 @@ extract$Period.length
     ## [103] "1M14D"    "1Y"       NA         "2H"       "3M"       "1H"      
     ## [109] "6 months" "~5D"      "1D"       "1D"       "1Y"       "1Y"      
     ## [115] "5M"       "3M13D"    "3M13D"    "1M7D"     "~2M"      "1M8D"    
-    ## [121] "1M14D"    NA         NA         "2D"       "10M"      "10M"     
+    ## [121] "1M14D"    "1M3W"     NA         "2D"       "10M"      "10M"     
     ## [127] "1Y"       "~1M14D"   "20D"      "2M"       NA         "1M"      
-    ## [133] "1H"       "1H"       "6M"       "4M"       NA         NA        
+    ## [133] "1H"       "1H"       "6M"       "4M"       "7D"       NA        
     ## [139] "1M14D"    "1M7D"     "16D"      NA         "6M"       NA        
     ## [145] NA         "2D"       "14D"      "1M"       "2M"       "49D"     
     ## [151] "7M"       "3D"
@@ -12906,6 +14135,58 @@ NA
 <tr>
 <td style="text-align:left;">
 
+122
+
+</td>
+<td style="text-align:left;">
+
+McNeal2014a
+
+</td>
+<td style="text-align:left;">
+
+1M3W
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 124
 
 </td>
@@ -13530,6 +14811,58 @@ NA
 <tr>
 <td style="text-align:left;">
 
+137
+
+</td>
+<td style="text-align:left;">
+
+Littrell2022
+
+</td>
+<td style="text-align:left;">
+
+7D
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+168
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
 139
 
 </td>
@@ -14108,7 +15441,7 @@ axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","m
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-44-1.png)<!-- -->
 
 ## 14.1 intervention time categories
 
@@ -16818,17 +18151,17 @@ McNeal2014a
 </td>
 <td style="text-align:right;">
 
-NA
+7
 
 </td>
 <td style="text-align:right;">
 
-NA
+0
 
 </td>
 <td style="text-align:right;">
 
-NA
+0
 
 </td>
 </tr>
@@ -16840,12 +18173,12 @@ Muller2021
 </td>
 <td style="text-align:right;">
 
-NA
+3
 
 </td>
 <td style="text-align:right;">
 
-NA
+0
 
 </td>
 <td style="text-align:right;">
@@ -17153,12 +18486,12 @@ NA
 </td>
 <td style="text-align:right;">
 
-NA
+2400
 
 </td>
 <td style="text-align:right;">
 
-NA
+168
 
 </td>
 </tr>
@@ -17515,9 +18848,9 @@ table(recapTempInterv$category,useNA = "ifany")
 
     ## 
     ##   very short unique very short multiple         week period        month period 
-    ##                  16                   7                  29                  10 
+    ##                  16                   9                  30                  10 
     ##        large period                <NA> 
-    ##                  69                  21
+    ##                  69                  18
 
 ``` r
 kable(recapTempInterv[!is.na(recapTempInterv$category) & recapTempInterv$category=="very short unique",])
@@ -18260,6 +19593,70 @@ Kumar2023
 <td style="text-align:right;">
 
 5124
+
+</td>
+<td style="text-align:left;">
+
+very short multiple
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+122
+
+</td>
+<td style="text-align:left;">
+
+McNeal2014a
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:left;">
+
+very short multiple
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+123
+
+</td>
+<td style="text-align:left;">
+
+Muller2021
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+NA
 
 </td>
 <td style="text-align:left;">
@@ -19260,6 +20657,38 @@ Xie2014
 <td style="text-align:right;">
 
 24
+
+</td>
+<td style="text-align:left;">
+
+week period
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+137
+
+</td>
+<td style="text-align:left;">
+
+Littrell2022
+
+</td>
+<td style="text-align:right;">
+
+NA
+
+</td>
+<td style="text-align:right;">
+
+2400
+
+</td>
+<td style="text-align:right;">
+
+168
 
 </td>
 <td style="text-align:left;">
@@ -22367,108 +23796,12 @@ NA
 <tr>
 <td style="text-align:left;">
 
-122
-
-</td>
-<td style="text-align:left;">
-
-McNeal2014a
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-123
-
-</td>
-<td style="text-align:left;">
-
-Muller2021
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
 131
 
 </td>
 <td style="text-align:left;">
 
 Zhong2021
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:right;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-137
-
-</td>
-<td style="text-align:left;">
-
-Littrell2022
 
 </td>
 <td style="text-align:right;">
@@ -22649,7 +23982,7 @@ table(extract$Horizon.of.change)
 
     ## 
     ## Very short term      Short term     Middle term       Long term 
-    ##              41              53              13              17
+    ##              41              53              14              19
 
 ## 14.3 Comparison
 
@@ -22762,12 +24095,12 @@ Short term
 </td>
 <td style="text-align:right;">
 
-19
+18
 
 </td>
 <td style="text-align:right;">
 
-6
+7
 
 </td>
 </tr>
@@ -22804,7 +24137,7 @@ Middle term
 </td>
 <td style="text-align:right;">
 
-1
+2
 
 </td>
 </tr>
@@ -22836,7 +24169,7 @@ Long term
 </td>
 <td style="text-align:right;">
 
-14
+16
 
 </td>
 <td style="text-align:right;">
@@ -22873,12 +24206,12 @@ NA
 </td>
 <td style="text-align:right;">
 
-15
+14
 
 </td>
 <td style="text-align:right;">
 
-8
+6
 
 </td>
 </tr>
@@ -22889,7 +24222,7 @@ NA
 barplot(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"),beside = T,legend=T, args.legend = list(title="Horizon of change"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-48-1.png)<!-- -->
 
 ### 14.3.2 With outcomes
 
@@ -22912,7 +24245,7 @@ barplot(table(didItWork_outcomes[tf_outcomes[,"action"],"action"],extract$Interv
 barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Intervention.time.category[tf_outcomes[,"habit"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Habit")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-49-1.png)<!-- -->
 
 ### 14.3.3 Simplified
 
@@ -22963,23 +24296,240 @@ barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
 barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-50-1.png)<!-- -->
 
-# 15 Sankey Diagrams
+# 15 Analisis
 
-## 15.1 First try: Pedagogical tools, outcomes, did it work
-
-The example they show in the package is:
+# 16 SQL style
 
 ``` r
-# Load package
-library(networkD3)
- 
-# Load energy projection data
-URL <- "https://cdn.rawgit.com/christophergandrud/networkD3/master/JSONdata/energy.json"
-Energy <- jsonlite::fromJSON(URL)
-# Thus we can plot it
-#sankeyNetwork(Links = Energy$links, Nodes = Energy$nodes, Source = "source",
-#              Target = "target", Value = "value", NodeID = "name",
-#              units = "TWh", fontSize = 12, nodeWidth = 30)
+tablify<-function(dfSQL, row, col, content, changeNA=T, valNA=c(row="No information",col="No information"))
+{
+  if(changeNA)
+  {
+    dfSQL[is.na(dfSQL[,row]),row]<-valNA["row"]
+    dfSQL[is.na(dfSQL[,col]),col]<-valNA["col"]
+  }
+  res<-matrix(0,nrow=length(unique(dfSQL[,row])),ncol=length(unique(dfSQL[,col])),dimnames=list(unique(dfSQL[,row]),unique(dfSQL[,col])))
+  w_SQL<-as.matrix(dfSQL[,c(row,col)])
+  colnames(w_SQL)<-c("row","col")
+  res[w_SQL]<-dfSQL[,content]
+  return(res)
+}
+
+tf_outcomeT<-which(tf_outcomes[,1:6],arr.ind=T)
+df_outcomeT<-data.frame(
+  idRow=rownames(extract)[tf_outcomeT[,1]],
+  outcome=factor(colnames(tf_outcomes[,1:6])[tf_outcomeT[,2]]),
+  didItWork=factor(didItWork_outcomes[tf_outcomeT])
+  )
+
+byRow<-data.frame(
+  idRow=rownames(extract),
+  id=extract$id,
+  person=extract$codifico,
+  population=popTot,
+  curri=curExtraCur,
+  outIn=extract$`Outdoor/Indoor/Both`,
+  pop=pop,
+  TheoFra=extract$`Theoretical.framework.(big.categories)`,
+  mitAda=extract$`Final.mitigation/adaptation`,
+  controv=ifelse(extract$controv_clean=="Yes","Controversy","No Controversy")
+)
+byOutcome<-df_outcomeT
+
+require(sqldf)
 ```
+
+    ## Loading required package: sqldf
+
+    ## Loading required package: gsubfn
+
+    ## Loading required package: proto
+
+    ## Loading required package: RSQLite
+
+``` r
+byOutcomeTot<-na.omit(sqldf(
+  "SELECT idRow,id,population,TheoFra,mitAda,controv,outcome,didItWork
+  FROM byRow
+  LEFT JOIN byOutcome USING (idRow)
+  ORDER BY CAST(idRow as int)
+  ",drv = "SQLite"))
+byRowDIW<-sqldf(
+  "SELECT idRow,id,population,TheoFra,mitAda,controv,
+    CASE 
+      WHEN GROUP_CONCAT(DISTINCT didItWork) LIKE '%,%' THEN 'Unclear'
+      ELSE GROUP_CONCAT(DISTINCT didItWork)
+    END didItWork
+  FROM byRow
+  LEFT JOIN byOutcome USING (idRow)
+  GROUP BY idRow,population,TheoFra,mitAda,controv
+  ORDER BY CAST(idRow as int)",
+  drv = "SQLite")
+byOutcomeTot<-na.omit(sqldf(
+  "SELECT idRow,id,person,population,pop,ageCat,TheoFra,mitAda,controv,outcome,didItWork
+  FROM byRow
+  LEFT JOIN byOutcome USING (idRow)
+  JOIN AgeByRow USING (idRow)
+  ORDER BY CAST(idRow as int)
+  ",drv = "SQLite"))
+```
+
+``` r
+require(sqldf)
+sqldf(
+  "SELECT count(DISTINCT id) 
+  FROM extract"
+  )
+```
+
+    ##   count(DISTINCT id)
+    ## 1                146
+
+``` r
+sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT idRow,outcome
+  FROM byOutcomeTot
+  )
+  SELECT count(*)
+  FROM a
+  ")
+```
+
+    ##   count(*)
+    ## 1      275
+
+``` r
+barplot(tablify(sqldf("SELECT curri,population,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"curri","population","nbPaper"),las=2,legend=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-54-1.png)<!-- -->
+
+``` r
+par(mar=c(12,4,1,1))
+barplot(tablify(sqldf("SELECT TheoFra,curri,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"TheoFra","curri","nbPaper"),las=2,legend=T,col=rainbow(6))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-55-1.png)<!-- -->
+
+## 16.1 Innovative?
+
+``` r
+sqldf(
+  "SELECT count(DISTINCT idRow)
+  FROM byRow
+  WHERE TheoFra<>'Teacher centered approach' OR outIn <> 'Indoor' OR curri <> 'Curricular'")
+```
+
+    ##   count(DISTINCT idRow)
+    ## 1                   142
+
+``` r
+sqldf(
+  "SELECT count(DISTINCT idRow)
+  FROM byRow
+  WHERE NOT (TheoFra<>'Teacher centered approach' OR outIn <> 'Indoor' OR curri <> 'Curricular')")
+```
+
+    ##   count(DISTINCT idRow)
+    ## 1                     7
+
+``` r
+sqldf(
+  "SELECT count(DISTINCT id)
+  FROM byRow
+  WHERE TheoFra='Teacher centered approach' AND outIn = 'Indoor' --AND curri = 'Curricular'")
+```
+
+    ##   count(DISTINCT id)
+    ## 1                 17
+
+``` r
+sqldf(
+  "SELECT count(DISTINCT idRow)
+  FROM byRow"
+)
+```
+
+    ##   count(DISTINCT idRow)
+    ## 1                   152
+
+## 16.2 problem profesor
+
+``` r
+sqldf(
+  "SELECT GROUP_CONCAT(id, ', ')
+  FROM byRow
+  WHERE (TheoFra='Professional development workshop' OR pop IN ('Teachers','Pre-service teachers')) AND curri<> 'Professional development'
+  "
+)
+```
+
+    ##                                                                                                                                        GROUP_CONCAT(id, ', ')
+    ## 1 Aksut2016, Bozdogan2011, Lambert2012, Liu2015, Schubatzky2022, Shea2016, da_Rocha2020, Dal2015a, Ratinen2013, Nkoana2020, Saribaş2016 , Sutela2023, Xie2014
+
+``` r
+sqldf(
+  "SELECT id,pop,person,TheoFra,curri
+  FROM byRow
+  WHERE (TheoFra='Professional development workshop' OR pop IN ('Teachers','Pre-service teachers')) AND curri<> 'Professional development'
+  "
+)
+```
+
+    ##                id                  pop person                           TheoFra
+    ## 1       Aksut2016             Teachers    ABP         Teacher centered approach
+    ## 2    Bozdogan2011 Pre-service teachers    ABP                       Alternative
+    ## 3     Lambert2012             Teachers    ABP         Learner centered approach
+    ## 4         Liu2015             Teachers    ABP Professional development workshop
+    ## 5  Schubatzky2022             Teachers    ABP Professional development workshop
+    ## 6        Shea2016             Teachers    ABP Professional development workshop
+    ## 7    da_Rocha2020             Teachers  JGOP  Professional development workshop
+    ## 8        Dal2015a             Teachers  JGOP  Professional development workshop
+    ## 9     Ratinen2013 Pre-service teachers    BQ  Professional development workshop
+    ## 10     Nkoana2020             Teachers  JGOP  Professional development workshop
+    ## 11   Saribaş2016  Pre-service teachers   JGOP Professional development workshop
+    ## 12     Sutela2023             Teachers   JGOP                       Alternative
+    ## 13        Xie2014             Teachers     SB         Learner centered approach
+    ##              curri
+    ## 1  Extracurricular
+    ## 2       Curricular
+    ## 3  Extracurricular
+    ## 4  Extracurricular
+    ## 5  Extracurricular
+    ## 6  Extracurricular
+    ## 7  Extracurricular
+    ## 8  Extracurricular
+    ## 9       Curricular
+    ## 10      Curricular
+    ## 11 Extracurricular
+    ## 12      Curricular
+    ## 13      Curricular
+
+``` r
+sqldf(
+  "SELECT 
+  didItWork,count(*)
+  FROM byOutcome
+  Group by didItWork
+  ")
+```
+
+    ##   didItWork count(*)
+    ## 1        No       15
+    ## 2   Unclear       31
+    ## 3       Yes      244
+
+``` r
+sqldf(
+  "SELECT 
+  count(*)
+  FROM byOutcome
+  ")
+```
+
+    ##   count(*)
+    ## 1      290
