@@ -137,7 +137,7 @@ text(datesOnGraph,c(6,16.5),events, cex=.7)
 ## Income group
 
 ```{r}
-countryDoc
+#countryDoc
 incomeGrpDoc<-worldMap_tot[match(countryDoc,worldMap_tot$name),"income_grp"]$income_grp
 incomeGrpDoc[is.na(incomeGrpDoc)&countryDoc%in%tinyCountries$NAME]<-tinyCountries[match(countryDoc[is.na(incomeGrpDoc)&countryDoc%in%tinyCountries$NAME],tinyCountries$NAME),"INCOME_GRP"]$INCOME_GRP
 table(incomeGrpDoc,useNA="ifany")
