@@ -143,6 +143,15 @@ incomeGrpDoc[is.na(incomeGrpDoc)&countryDoc%in%tinyCountries$NAME]<-tinyCountrie
 table(incomeGrpDoc,useNA="ifany")
 par(mar=c(12,4,1,1))
 barplot(table(incomeGrpDoc,useNA="ifany"),las=2)
+countryDoc[is.na(incomeGrpDoc)]
+```
+
+Para referencia, number of countries with the different categories in the world
+
+```{r}
+table(c(worldMap_tot$income_grp,tinyCountries$INCOME_GRP))
+par(mar=c(12,4,1,1))
+barplot(table(c(worldMap_tot$income_grp,tinyCountries$INCOME_GRP)),las=2)
 ```
 
 
