@@ -63,7 +63,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231019_3.xlsx"))
+names(loadWorkbook("../../extraction/20231020.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -72,7 +72,7 @@ names(loadWorkbook("../../extraction/20231019_3.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231019_3.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231020.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -619,6 +619,191 @@ outcomeEffect$effect_simp<-NA
 outcomeEffect$effect_simp[outcomeEffect$effect%in%c("yes","YES","Yes")]<-"Yes"
 outcomeEffect$effect_simp[outcomeEffect$effect%in%c("no","No","NO")]<-"No"
 outcomeEffect$effect_simp[is.na(outcomeEffect$effect_simp)]<-"Unclear"
+tabOutEff<-table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")),useNA="ifany")
+kable(as.matrix(tabOutEff))
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+Yes
+
+</th>
+<th style="text-align:right;">
+
+Unclear
+
+</th>
+<th style="text-align:right;">
+
+No
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+knowledge
+
+</td>
+<td style="text-align:right;">
+
+113
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+awareness
+
+</td>
+<td style="text-align:right;">
+
+59
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+intention
+
+</td>
+<td style="text-align:right;">
+
+25
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+emotion
+
+</td>
+<td style="text-align:right;">
+
+23
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+action
+
+</td>
+<td style="text-align:right;">
+
+15
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+habit
+
+</td>
+<td style="text-align:right;">
+
+9
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Other
+
+</td>
+<td style="text-align:right;">
+
+21
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+</tr>
+</tbody>
+</table>
+
+``` r
 barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"))
 ```
 
@@ -2447,7 +2632,7 @@ Learner centered approach
 </td>
 <td style="text-align:right;">
 
-64
+62
 
 </td>
 </tr>
@@ -2459,7 +2644,7 @@ Alternative
 </td>
 <td style="text-align:right;">
 
-34
+33
 
 </td>
 </tr>
@@ -2483,7 +2668,7 @@ Professional development workshop
 </td>
 <td style="text-align:right;">
 
-14
+17
 
 </td>
 </tr>
@@ -2877,12 +3062,12 @@ Teachers
 </td>
 <td style="text-align:right;">
 
-4
+2
 
 </td>
 <td style="text-align:right;">
 
-8
+10
 
 </td>
 <td style="text-align:right;">
@@ -2914,7 +3099,7 @@ Pre-service teachers
 </td>
 <td style="text-align:right;">
 
-1
+0
 
 </td>
 <td style="text-align:right;">
@@ -2924,7 +3109,7 @@ Pre-service teachers
 </td>
 <td style="text-align:right;">
 
-6
+7
 
 </td>
 <td style="text-align:right;">
@@ -3615,11 +3800,9 @@ sort(table(extract$study.type),decreasing = T)
 
     ## 
     ##  Quantitative  quantitative   Qualitative          Both         Mixed 
-    ##            36            33            31            19            12 
+    ##            36            33            32            19            12 
     ##         mixed   qualitative          both  qualitative  quantitative  
-    ##             5             5             4             4             2 
-    ##            ND 
-    ##             1
+    ##             5             5             4             4             2
 
 ``` r
 extract$QuantQualClean<-NA
@@ -3630,8 +3813,8 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 ```
 
     ## 
-    ## Quantitative   Both/Mixed  Qualitative         <NA> 
-    ##           71           40           40            1
+    ## Quantitative  Qualitative   Both/Mixed 
+    ##           71           41           40
 
 ``` r
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
@@ -3657,16 +3840,16 @@ extract$`Pre/Post`<-(grepl("true",extract$`Pre/Post`, ignore.case = T) | grepl("
 ```
 
     ##        
-    ##         Both/Mixed Qualitative Quantitative <NA>
-    ##   FALSE          5          22            4    1
-    ##   TRUE          35          18           67    0
+    ##         Both/Mixed Qualitative Quantitative
+    ##   FALSE          5          23            4
+    ##   TRUE          35          18           67
 
 ``` r
 colSums(tabMetodosAnalyses)/sum(tabMetodosAnalyses)
 ```
 
-    ##   Both/Mixed  Qualitative Quantitative         <NA> 
-    ##  0.263157895  0.263157895  0.467105263  0.006578947
+    ##   Both/Mixed  Qualitative Quantitative 
+    ##    0.2631579    0.2697368    0.4671053
 
 ``` r
 barplot(table(extract$`Pre/Post`,extract$QuantQualClean,useNA="ifany"), legend=T,args.legend = list(x="topleft",title="Pre/post"))
@@ -3889,19 +4072,21 @@ table(extract$`Curricular/Extracurricular`)
 
     ## 
     ##                                                                                                                                                     Curricular 
-    ##                                                                                                                                                             80 
+    ##                                                                                                                                                             77 
     ##                                                  Curricular[supported by teachers, it might even be part of the study plan, but that is not clear in the paper 
     ##                                                                                                                                                              1 
     ##                                                                                                                                   CurricularandExtracurricular 
     ##                                                                                                                                                              4 
     ##                                                                                                                                                Extracurricular 
-    ##                                                                                                                                                             49 
+    ##                                                                                                                                                             42 
     ## Extracurricular, but I have a doubt:"we introduced an educational programme for climate change that included inviting adolescents to communicate with seniors" 
     ##                                                                                                                                                              1 
     ##                                                                                                                        Portugal:Extracurricular\nUK:Curricular 
     ##                                                                                                                                                              1 
+    ##                                                                                                                                        professionalDevelopment 
+    ##                                                                                                                                                              2 
     ##                                                                                                                                        ProfessionalDevelopment 
-    ##                                                                                                                                                             11
+    ##                                                                                                                                                             20
 
 ``` r
 curExtraCur<-rep(NA,nrow(extract))
@@ -3912,13 +4097,13 @@ extract[c("Curricular/Extracurricular","id")][is.na(curExtraCur),][c(3,6,7),]
 ```
 
     ##                                                                                                                                         Curricular/Extracurricular
-    ## 62                                                                                                                         Portugal:Extracurricular\nUK:Curricular
+    ## 53                                                                                                                                                            <NA>
+    ## 108                                                                                                                                                           <NA>
     ## 124 Extracurricular, but I have a doubt:"we introduced an educational programme for climate change that included inviting adolescents to communicate with seniors"
-    ## 139                                                  Curricular[supported by teachers, it might even be part of the study plan, but that is not clear in the paper
-    ##               id
-    ## 62    Leitao2022
-    ## 124       Hu2016
-    ## 139 Korsager2015
+    ##                 id
+    ## 53     Cebesoy2019
+    ## 108 Stevenson2018a
+    ## 124         Hu2016
 
 ``` r
 curExtraCur[extract$id=="Leitao2022"]<- c("Curricular/Extracurricular")
@@ -4023,7 +4208,7 @@ extract$Number.of.sessions
     ## [111] "1.0"  "1.0"  NA     NA     NA     NA     NA     "~5"   NA     "3.0" 
     ## [121] "6.0"  "7.0"  "3.0"  "2.0"  "12.0" NA     NA     "11.0" "20.0" NA    
     ## [131] NA     "4.0"  "~1"   "1.0"  "24.0" NA     NA     NA     NA     "5.0" 
-    ## [141] "6.0"  NA     NA     NA     "5.0"  "2.0"  "6.0"  "~10"  "3.0"  "~35" 
+    ## [141] "6.0"  NA     NA     "5.0"  "5.0"  "2.0"  "6.0"  "~10"  "3.0"  "~35" 
     ## [151] NA     "2.0"
 
 ``` r
@@ -18516,7 +18701,7 @@ Sukardi2022
 </td>
 <td style="text-align:right;">
 
-NA
+5
 
 </td>
 <td style="text-align:right;">
@@ -23783,7 +23968,7 @@ Sukardi2022
 </td>
 <td style="text-align:right;">
 
-NA
+5
 
 </td>
 <td style="text-align:right;">
@@ -24306,7 +24491,7 @@ sqldf(
 ```
 
     ##   count(DISTINCT idRow)
-    ## 1                   142
+    ## 1                   141
 
 ``` r
 sqldf(
@@ -24349,8 +24534,8 @@ sqldf(
 )
 ```
 
-    ##                                                                                                                                        GROUP_CONCAT(id, ', ')
-    ## 1 Aksut2016, Bozdogan2011, Lambert2012, Liu2015, Schubatzky2022, Shea2016, da_Rocha2020, Dal2015a, Ratinen2013, Nkoana2020, Saribaş2016 , Sutela2023, Xie2014
+    ##              GROUP_CONCAT(id, ', ')
+    ## 1 Saribaş2016 , Sutela2023, Xie2014
 
 ``` r
 sqldf(
@@ -24361,34 +24546,14 @@ sqldf(
 )
 ```
 
-    ##                id                  pop person                           TheoFra
-    ## 1       Aksut2016             Teachers    ABP         Teacher centered approach
-    ## 2    Bozdogan2011 Pre-service teachers    ABP                       Alternative
-    ## 3     Lambert2012             Teachers    ABP         Learner centered approach
-    ## 4         Liu2015             Teachers    ABP Professional development workshop
-    ## 5  Schubatzky2022             Teachers    ABP Professional development workshop
-    ## 6        Shea2016             Teachers    ABP Professional development workshop
-    ## 7    da_Rocha2020             Teachers  JGOP  Professional development workshop
-    ## 8        Dal2015a             Teachers  JGOP  Professional development workshop
-    ## 9     Ratinen2013 Pre-service teachers    BQ  Professional development workshop
-    ## 10     Nkoana2020             Teachers  JGOP  Professional development workshop
-    ## 11   Saribaş2016  Pre-service teachers   JGOP Professional development workshop
-    ## 12     Sutela2023             Teachers   JGOP                       Alternative
-    ## 13        Xie2014             Teachers     SB         Learner centered approach
-    ##              curri
-    ## 1  Extracurricular
-    ## 2       Curricular
-    ## 3  Extracurricular
-    ## 4  Extracurricular
-    ## 5  Extracurricular
-    ## 6  Extracurricular
-    ## 7  Extracurricular
-    ## 8  Extracurricular
-    ## 9       Curricular
-    ## 10      Curricular
-    ## 11 Extracurricular
-    ## 12      Curricular
-    ## 13      Curricular
+    ##             id                  pop person                           TheoFra
+    ## 1 Saribaş2016  Pre-service teachers   JGOP Professional development workshop
+    ## 2   Sutela2023             Teachers   JGOP                       Alternative
+    ## 3      Xie2014             Teachers     SB         Learner centered approach
+    ##             curri
+    ## 1 Extracurricular
+    ## 2      Curricular
+    ## 3      Curricular
 
 ``` r
 sqldf(

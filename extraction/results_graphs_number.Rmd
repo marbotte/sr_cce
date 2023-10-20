@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231019_3.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231019_3.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231020.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231020.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -170,6 +170,8 @@ outcomeEffect$effect_simp<-NA
 outcomeEffect$effect_simp[outcomeEffect$effect%in%c("yes","YES","Yes")]<-"Yes"
 outcomeEffect$effect_simp[outcomeEffect$effect%in%c("no","No","NO")]<-"No"
 outcomeEffect$effect_simp[is.na(outcomeEffect$effect_simp)]<-"Unclear"
+tabOutEff<-table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")),useNA="ifany")
+kable(as.matrix(tabOutEff))
 barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"))
 
 ```
