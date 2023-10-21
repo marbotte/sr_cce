@@ -854,3 +854,1276 @@ SN6<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target =
 saveNetwork(SN6,"SN6.html", selfcontained = T)
 SN6
 
+# very young theoretical - curricular----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT TheoFra name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT curri name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_young1<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_young1,"sn_young1.html", selfcontained = T)
+sn_young1
+
+# very young timeCat - outIn----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT timeCat name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outIn name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '4-11'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_young2<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_young2,"sn_young2.html", selfcontained = T)
+sn_young2
+
+
+
+# middle theoretical - curricular----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT TheoFra name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT curri name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_middle1<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_middle1,"sn_middle1.html", selfcontained = T)
+sn_middle1
+
+# middle timeCat - outIn----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT timeCat name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outIn name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '12-15'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_middle2<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_middle2,"sn_middle2.html", selfcontained = T)
+sn_middle2
+
+
+# high theoretical - curricular----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT TheoFra name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT curri name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_high1<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_high1,"sn_high1.html", selfcontained = T)
+sn_high1
+
+# high timeCat - outIn----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT timeCat name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outIn name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = '16-19'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_high2<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_high2,"sn_high2.html", selfcontained = T)
+sn_high2
+
+# teachers theoretical - curricular----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT TheoFra name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT curri name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_teachers1<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_teachers1,"sn_teachers1.html", selfcontained = T)
+sn_teachers1
+
+# teachers timeCat - outIn----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT timeCat name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outIn name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Teachers'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_teachers2<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_teachers2,"sn_teachers2.html", selfcontained = T)
+sn_teachers2
+
+# PS theoretical - curricular----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT TheoFra name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT curri name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_PS1<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_PS1,"sn_PS1.html", selfcontained = T)
+sn_PS1
+
+# PS timeCat - outIn----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT timeCat name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outIn name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Pre-service teachers'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_PS2<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_PS2,"sn_PS2.html", selfcontained = T)
+sn_PS2
+# parents theoretical - curricular----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT TheoFra name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT curri name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON theoFra=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON curri=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_parents1<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_parents1,"sn_parents1.html", selfcontained = T)
+sn_parents1
+
+# parents timeCat - outIn----
+
+nodes<-sqldf(
+  "
+  WITH a AS(
+  SELECT DISTINCT timeCat name, 'node' gp_node,4 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outcome name, 'node' gp_node,5 AS variable
+  FROM byOutcomeTot
+  UNION
+  SELECT DISTINCT outIn name, 'node' gp_node, 0 AS variable
+  FROM byOutcomeTot
+  )
+  SELECT name,gp_node
+  FROM a
+  ORDER BY variable
+  "
+)
+nodes<-data.frame(ID=0:(nrow(nodes)-1),
+                  nodes)
+links<-sqldf(
+  "
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON timeCat=n1.name
+  JOIN nodes n2 ON outcome=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON didItWork=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+ 
+  UNION
+   
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Yes' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Yes' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'No' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='No' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  UNION
+  SELECT n1.ID sourceNode, n2.ID targetNode,COUNT(DISTINCT idRow) val, 'Unclear' AS l_group
+  FROM byOutcomeTot
+  JOIN nodes n1 ON outcome=n1.name
+  JOIN nodes n2 ON outIn=n2.name
+  JOIN popAgeSep_df USING (id, idRow)
+  WHERE didItWork='Unclear' AND agePopCat = 'Parents'
+  GROUP BY n1.ID,n2.ID
+  ")
+
+colorCode<-
+  'd3.scaleOrdinal() .domain(["node","Yes", "No", "Unclear"]).range(["grey","steelblue", "red","orange"])'
+sn_parents2<-sankeyNetwork(Links = links, Nodes = nodes, Source = "sourceNode", Target = "targetNode", Value = "val", NodeID = "name",NodeGroup = "gp_node", LinkGroup = "l_group", fontSize = 14, nodeWidth = 30, colourScale = colorCode, sinksRight = F)
+saveNetwork(sn_parents2,"sn_parents2.html", selfcontained = T)
+sn_parents2

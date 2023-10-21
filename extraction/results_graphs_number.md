@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-20
+2023-10-21
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -49,7 +49,9 @@ Marius Bottin
 - [16 SQL style](#16-sql-style)
   - [16.1 Innovative?](#161-innovative)
   - [16.2 problem profesor](#162-problem-profesor)
-  - [16.3 Effectiveness](#163-effectiveness)
+  - [16.3 Ages and outcomes](#163-ages-and-outcomes)
+  - [16.4 Effectiveness](#164-effectiveness)
+    - [16.4.1 Young student](#1641-young-student)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -64,7 +66,7 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231020.xlsx"))
+names(loadWorkbook("../../extraction/20231021.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
@@ -73,7 +75,7 @@ names(loadWorkbook("../../extraction/20231020.xlsx"))
     ## [7] "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231020.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231021.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -266,163 +268,7 @@ sum(A[as.numeric(names(A))>=2012])/sum(A)
 
 ``` r
 library(stringr)
-rawExtract$Countries.STUDY
-```
-
-    ##   [1] "Denmark"                                                                                                                                                       
-    ##   [2] "Turkey"                                                                                                                                                        
-    ##   [3] "United States; China; New Zealand;  Norway"                                                                                                                    
-    ##   [4] "CANADA"                                                                                                                                                        
-    ##   [5] "PORTUGAL"                                                                                                                                                      
-    ##   [6] "United States"                                                                                                                                                 
-    ##   [7] "United States"                                                                                                                                                 
-    ##   [8] "Australia"                                                                                                                                                     
-    ##   [9] "Turkey"                                                                                                                                                        
-    ##  [10] "Singapore"                                                                                                                                                     
-    ##  [11] "Thailand"                                                                                                                                                      
-    ##  [12] "South korea, Australia"                                                                                                                                        
-    ##  [13] "United States"                                                                                                                                                 
-    ##  [14] "United States"                                                                                                                                                 
-    ##  [15] "United States"                                                                                                                                                 
-    ##  [16] "Germany"                                                                                                                                                       
-    ##  [17] "United States"                                                                                                                                                 
-    ##  [18] "United States"                                                                                                                                                 
-    ##  [19] "Austria"                                                                                                                                                       
-    ##  [20] "United States"                                                                                                                                                 
-    ##  [21] "United States"                                                                                                                                                 
-    ##  [22] "United States"                                                                                                                                                 
-    ##  [23] "United States"                                                                                                                                                 
-    ##  [24] "United States"                                                                                                                                                 
-    ##  [25] "Japan"                                                                                                                                                         
-    ##  [26] "United States"                                                                                                                                                 
-    ##  [27] "France"                                                                                                                                                        
-    ##  [28] "Denmark"                                                                                                                                                       
-    ##  [29] "Canada"                                                                                                                                                        
-    ##  [30] "USA"                                                                                                                                                           
-    ##  [31] "United States"                                                                                                                                                 
-    ##  [32] "Mexico"                                                                                                                                                        
-    ##  [33] "Austria"                                                                                                                                                       
-    ##  [34] "Germany"                                                                                                                                                       
-    ##  [35] "United States"                                                                                                                                                 
-    ##  [36] "Norway"                                                                                                                                                        
-    ##  [37] "Australia"                                                                                                                                                     
-    ##  [38] "United States"                                                                                                                                                 
-    ##  [39] "United States"                                                                                                                                                 
-    ##  [40] "United Kingdom"                                                                                                                                                
-    ##  [41] "Austria"                                                                                                                                                       
-    ##  [42] "United States"                                                                                                                                                 
-    ##  [43] "United States"                                                                                                                                                 
-    ##  [44] "BRASIL"                                                                                                                                                        
-    ##  [45] "Turkey"                                                                                                                                                        
-    ##  [46] "Spain"                                                                                                                                                         
-    ##  [47] "Turkey"                                                                                                                                                        
-    ##  [48] "United States"                                                                                                                                                 
-    ##  [49] "Indonesia"                                                                                                                                                     
-    ##  [50] "United States"                                                                                                                                                 
-    ##  [51] "Germany"                                                                                                                                                       
-    ##  [52] "United States"                                                                                                                                                 
-    ##  [53] "Turkey"                                                                                                                                                        
-    ##  [54] "China"                                                                                                                                                         
-    ##  [55] "Indonesia"                                                                                                                                                     
-    ##  [56] "Finland"                                                                                                                                                       
-    ##  [57] "Finland"                                                                                                                                                       
-    ##  [58] "United States"                                                                                                                                                 
-    ##  [59] "Turkey"                                                                                                                                                        
-    ##  [60] "Czech Republic"                                                                                                                                                
-    ##  [61] "UK"                                                                                                                                                            
-    ##  [62] "United Kingdom;Portugal"                                                                                                                                       
-    ##  [63] "Canada"                                                                                                                                                        
-    ##  [64] "United Kingdom"                                                                                                                                                
-    ##  [65] "Canada"                                                                                                                                                        
-    ##  [66] "Italy, Finland, Iceland"                                                                                                                                       
-    ##  [67] "Italy "                                                                                                                                                        
-    ##  [68] "USA"                                                                                                                                                           
-    ##  [69] "USA"                                                                                                                                                           
-    ##  [70] "Puerto Rico (United States)"                                                                                                                                   
-    ##  [71] "United States"                                                                                                                                                 
-    ##  [72] "China"                                                                                                                                                         
-    ##  [73] "China"                                                                                                                                                         
-    ##  [74] "United States"                                                                                                                                                 
-    ##  [75] "Thailand"                                                                                                                                                      
-    ##  [76] "United States"                                                                                                                                                 
-    ##  [77] "Malaysia"                                                                                                                                                      
-    ##  [78] "New Zealand"                                                                                                                                                   
-    ##  [79] "United States"                                                                                                                                                 
-    ##  [80] "Belgium"                                                                                                                                                       
-    ##  [81] "Austria"                                                                                                                                                       
-    ##  [82] "Turkey"                                                                                                                                                        
-    ##  [83] "United States"                                                                                                                                                 
-    ##  [84] "Germany"                                                                                                                                                       
-    ##  [85] "United States"                                                                                                                                                 
-    ##  [86] "United States"                                                                                                                                                 
-    ##  [87] "USA"                                                                                                                                                           
-    ##  [88] "South Africa"                                                                                                                                                  
-    ##  [89] "Turkey"                                                                                                                                                        
-    ##  [90] "United States"                                                                                                                                                 
-    ##  [91] "Germany"                                                                                                                                                       
-    ##  [92] "South Korea"                                                                                                                                                   
-    ##  [93] "Switzerland"                                                                                                                                                   
-    ##  [94] "Germany; Austria"                                                                                                                                              
-    ##  [95] "Germany"                                                                                                                                                       
-    ##  [96] "Austria"                                                                                                                                                       
-    ##  [97] "United States"                                                                                                                                                 
-    ##  [98] "United States"                                                                                                                                                 
-    ##  [99] "United States"                                                                                                                                                 
-    ## [100] "United States"                                                                                                                                                 
-    ## [101] "United States"                                                                                                                                                 
-    ## [102] "USA"                                                                                                                                                           
-    ## [103] "United States"                                                                                                                                                 
-    ## [104] "United States"                                                                                                                                                 
-    ## [105] "United States"                                                                                                                                                 
-    ## [106] "Sweden"                                                                                                                                                        
-    ## [107] "Finland"                                                                                                                                                       
-    ## [108] "United States"                                                                                                                                                 
-    ## [109] "United States"                                                                                                                                                 
-    ## [110] "Australia"                                                                                                                                                     
-    ## [111] "United States"                                                                                                                                                 
-    ## [112] "United States"                                                                                                                                                 
-    ## [113] "Greece"                                                                                                                                                        
-    ## [114] "Greece"                                                                                                                                                        
-    ## [115] "Brazil"                                                                                                                                                        
-    ## [116] "USA"                                                                                                                                                           
-    ## [117] "USA"                                                                                                                                                           
-    ## [118] "Malaysia"                                                                                                                                                      
-    ## [119] "USA"                                                                                                                                                           
-    ## [120] "United States"                                                                                                                                                 
-    ## [121] "Malaysia"                                                                                                                                                      
-    ## [122] "United States"                                                                                                                                                 
-    ## [123] "South Africa"                                                                                                                                                  
-    ## [124] "China"                                                                                                                                                         
-    ## [125] "Spain"                                                                                                                                                         
-    ## [126] "United States"                                                                                                                                                 
-    ## [127] "Austria"                                                                                                                                                       
-    ## [128] "United States"                                                                                                                                                 
-    ## [129] "United States"                                                                                                                                                 
-    ## [130] "Turkey"                                                                                                                                                        
-    ## [131] "CHINA"                                                                                                                                                         
-    ## [132] "Taiwan"                                                                                                                                                        
-    ## [133] "Austria; Denmark"                                                                                                                                              
-    ## [134] "Austria; Australia"                                                                                                                                            
-    ## [135] "Bangladesh"                                                                                                                                                    
-    ## [136] "United States"                                                                                                                                                 
-    ## [137] "United States"                                                                                                                                                 
-    ## [138] "South Africa"                                                                                                                                                  
-    ## [139] "Norway"                                                                                                                                                        
-    ## [140] "Italy"                                                                                                                                                         
-    ## [141] "Canada"                                                                                                                                                        
-    ## [142] "United Kingdom"                                                                                                                                                
-    ## [143] "United States"                                                                                                                                                 
-    ## [144] "Indonesia"                                                                                                                                                     
-    ## [145] "Italy"                                                                                                                                                         
-    ## [146] "Germany"                                                                                                                                                       
-    ## [147] "Turkey"                                                                                                                                                        
-    ## [148] "Greenland; Denmark; United States"                                                                                                                             
-    ## [149] "United States"                                                                                                                                                 
-    ## [150] "United States"                                                                                                                                                 
-    ## [151] "Brazil; Canada; Colombia; Costa Rica; Finland; Ghana; India; Indonesia; Kenya; Kuwait; Nigeria; Oman; Peru; Philippines; Poland; Slovenia; South Korea; Uganda"
-    ## [152] "United States"
-
-``` r
+#rawExtract$Countries.STUDY
 extract$Countries.STUDY[extract$id=="Arya2016"]<-"United States;China;New Zealand;Norway"
 extract$Countries.STUDY<-gsub("Puerto Rico \\(United States\\)","United States",gsub("Estados Unidos","United States",gsub("BRASIL","Brazil",gsub("UK","United Kingdom",gsub("USA","United States",extract$Countries.STUDY)))))
 sepCountry <- strsplit(extract$Countries.STUDY,"[,;]")
@@ -932,6 +778,16 @@ barplot(table(populClean,useNA = "ifany"),las=2)
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
+Clean, by row:
+
+``` r
+pop <- factor(rep(NA,nrow(extract)),c("Students","Teachers","Pre-service teachers","Parents"))
+pop[tolower(extract$TARGETED.SAMPLE)=="students"]<-"Students"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("teachers","entourage (teachers)")] <- "Teachers"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("pre-service teachers")] <- "Pre-service teachers"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("parents","entourage (parents)")] <- "Parents"
+```
+
 **Calculated for manuscript**:
 
 ``` r
@@ -963,6 +819,7 @@ sum(table(populClean,useNA = "ifany")[c("Teachers","Pre-service teachers")])/sum
 ## 6.3 Age
 
 ``` r
+extract$idRow<-rownames(extract)
 extract$age_min[extract$student]
 ```
 
@@ -1075,13 +932,15 @@ order(age_order)
     ## [51] 57 70 34 39 60 63  3  9 10 20 44 54 62 65 66 69 17 27 38  1
 
 ``` r
-tabForPlot<-extract[!is.na(extract$age_stud_type_info),c("age_min_stud","age_max_stud","age_aver_stud","age_stud_no_info","age_stud_type_info")][order(age_order),]
+tabForPlot<-extract[!is.na(extract$age_stud_type_info),c("idRow","age_min_stud","age_max_stud","age_aver_stud","age_stud_no_info","age_stud_type_info")]
+tabForPlot$pop<-pop[!is.na(extract$age_stud_type_info)]
+tabForPlot<-tabForPlot[order(age_order),]
 plot(x=age_order[order(age_order)],y=1:nrow(tabForPlot),type="n",xlim=range(tabForPlot[,c("age_min_stud","age_max_stud")],na.rm=T), xlab="Age",ylab="",yaxt="n")
 segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmax","all")], tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")])
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ### 6.3.1 Adding ages from grades
 
@@ -1089,47 +948,27 @@ points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")
 extract[is.na(extract[,"age_stud_type_info"])&!is.na(as.numeric(extract$Age_min.from.grade.))&!is.na(as.numeric(extract$Age_max.from.grade)),"age_stud_type_info"]<-"minmaxFromGrade"
 tabForPlot<-rbind(
   tabForPlot,
-  data.frame(age_min_stud=as.numeric(extract$Age_min.from.grade.[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
+  data.frame(idRow=extract$idRow[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"],
+             age_min_stud=as.numeric(extract$Age_min.from.grade.[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
              age_max_stud=as.numeric(extract$Age_max.from.grade[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
              age_aver_stud=NA,
              age_stud_no_info=T,
-             age_stud_type_info="minmaxFromGrade")
+             age_stud_type_info="minmaxFromGrade",
+             pop=pop[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"])
 )
-tabForPlot$age_min_stud<-as.integer(tabForPlot$age_min_stud)
-tabForPlot$age_max_stud<-as.integer(tabForPlot$age_max_stud)
-
-age_order<- rep(NA,sum(!is.na(tabForPlot$age_stud_type_info)))
-age_order[tabForPlot$age_stud_type_info[!is.na(tabForPlot$age_stud_type_info)]%in%c("all","mean")]<- tabForPlot[!is.na(tabForPlot$age_stud_type_info)&tabForPlot$age_stud_type_info%in%c("all","mean"),"age_aver_stud"]
-age_order[tabForPlot$age_stud_type_info[!is.na(tabForPlot$age_stud_type_info)]%in%c("minmax","minmaxFromGrade")]<-rowMeans( tabForPlot[!is.na(tabForPlot$age_stud_type_info)&tabForPlot$age_stud_type_info%in%c("minmax","minmaxFromGrade"),c("age_min_stud","age_max_stud")])
-order(age_order)
-```
-
-    ##   [1] 129   1  90 107 110  71 101   2   3   4   5   6   7  96   8   9  86  94
-    ##  [19]  97  10  11  12  13  14  15 114 115 116 118 119 127  77  78  79  80  87
-    ##  [37]  89  91  92  99 111 121 122  16  17  18  19  20  81  85 124 131 132 133
-    ##  [55]  21  22  23  24  25  26  27  28  29  30  84  95  98 104 105  31  32  33
-    ##  [73]  34  35 128  36  37  38  39  40  41  83 102 103 130  42  73  74  76  43
-    ##  [91]  44  45  46  47  48  82  88  93 108 109 120  49  50  51  52  72 100 106
-    ## [109] 112 117 123 125  53  54  55  56  75  57  58  59  60  61  62  63  64  65
-    ## [127]  66 113 126 134  67  68  69  70
-
-``` r
-tabForPlot<-tabForPlot[order(age_order),]
-plot(x=age_order[order(age_order)],y=1:nrow(tabForPlot),type="n",xlim=range(tabForPlot[,c("age_min_stud","age_max_stud")],na.rm=T), xlab="Age",ylab="",yaxt="n")
-segments(
-  x0=tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")],
-  y0=(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmax","all")],
-  x1=tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")])
-segments(
-  x0=tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],
-  y0=(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],
-  x1=tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],lty=3,lwd=.5)
-
+tabForPlot<-tabForPlot[!is.na(tabForPlot$pop)&tabForPlot$pop=="Students",]
+tabForPlot$medianVal<-NA
+tabForPlot$medianVal[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade","minmax")]<-rowMeans(tabForPlot[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade","minmax"),c("age_min_stud","age_max_stud")])
+tabForPlot$medianVal[tabForPlot$age_stud_type_info%in%c("all","mean")]<-tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("all","mean")]
+tabForPlot<-tabForPlot[order(tabForPlot$medianVal),]
+plot(x=tabForPlot$medianVal,y=1:nrow(tabForPlot),type="n",xlim=range(tabForPlot[,c("age_min_stud","age_max_stud")],na.rm=T), xlab="Age",ylab="",yaxt="n")
+segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmax","all")], tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")])
+segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")], tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],lty=3)
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
 legend("topleft",lwd=c(1,.5,NA),lty=c(1,3,NA),pch=c(NA,NA,3),legend=c("Range given","Range from grades","Average given"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ## 6.4 Population final categories
 
@@ -1468,11 +1307,6 @@ table(extract$age_stud_type_info,tolower(extract$TARGETED.SAMPLE))
     ##   minmaxFromGrade                     0
 
 ``` r
-pop <- factor(rep(NA,nrow(extract)),c("Students","Teachers","Pre-service teachers","Parents"))
-pop[tolower(extract$TARGETED.SAMPLE)=="students"]<-"Students"
-pop[tolower(extract$TARGETED.SAMPLE)%in%c("teachers","entourage (teachers)")] <- "Teachers"
-pop[tolower(extract$TARGETED.SAMPLE)%in%c("pre-service teachers")] <- "Pre-service teachers"
-pop[tolower(extract$TARGETED.SAMPLE)%in%c("parents","entourage (parents)")] <- "Parents"
 table(extract$age_stud_type_info,pop,useNA="ifany")
 ```
 
@@ -1510,7 +1344,7 @@ catAgeConcernedWeight<-sapply(tapply(colnames(ageConcerned),categoriesCol,functi
 barplot(colSums(catAgeConcerned))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 Number of age categories by study:
 
@@ -1518,7 +1352,7 @@ Number of age categories by study:
 barplot(table(rowSums(catAgeConcerned)))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ``` r
 rangeByStudyText<-apply(catAgeConcerned,1,function(x,cat)paste(paste(cat[x],sep=""),collapse=", "),cat=colnames(catAgeConcerned))
@@ -1565,7 +1399,15 @@ popTot<-factor(popTot,
 barplot(table(popTot,useNA = "ifany"),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+
+``` r
+catAgeConcerned_df<- data.frame(
+  id=extract$id,
+  idRow=rownames(extract),
+  catAgeConcerned
+)
+```
 
 ``` r
 catAgeConcerned<-cbind(catAgeConcerned,`No age information`=(apply(catAgeConcerned,1,sum)==0))
@@ -1673,7 +1515,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
 barplot(PercentageControversy,las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 ``` r
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
@@ -1698,7 +1540,7 @@ par(mar=c(11,4,1,1))
 barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),las=2,legend=T,args.legend = list(title="Controversy"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-16-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-2.png)<!-- -->
 
 **Calculations for text**
 
@@ -1936,7 +1778,7 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 \# Disciplines
 
 ``` r
@@ -1960,7 +1802,7 @@ disciplineClean[grepl("NA",extract$Disciplin_2)|is.na(extract$Disciplin_2)]<-"ND
 barplot(sort(table(disciplineClean),decreasing=T), las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 # 9 Educational framework
 
@@ -2603,7 +2445,7 @@ bp<-barplot(forTempPlot,las=2)
 text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
 ``` r
 kable(sort(table(tabTheoBack$theoBack),decreasing=T))
@@ -2707,7 +2549,7 @@ par(mar=c(15,4,1,1))
 barplot(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`)),col=rainbow(nlevels(popTot)), las=2, legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 ``` r
 kable(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`,useNA="ifany")))
@@ -3237,7 +3079,7 @@ extract$Categories.type.of.intervention<-factor(extract$Categories.type.of.inter
 barplot(table(extract$Categories.type.of.intervention,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(extract$Categories.type.of.intervention)),las=2,legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ## 11.3 Subcategorias
 
@@ -3787,7 +3629,7 @@ par(mar=c(13,4,1,1))
 barplot(table(subcatLearnerCentered,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(subcatLearnerCentered)),las=2,legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ## 11.4
 
@@ -3821,7 +3663,7 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 ## 12.2 Pre-post
 
@@ -3856,7 +3698,7 @@ colSums(tabMetodosAnalyses)/sum(tabMetodosAnalyses)
 barplot(table(extract$`Pre/Post`,extract$QuantQualClean,useNA="ifany"), legend=T,args.legend = list(x="topleft",title="Pre/post"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 ``` r
 A<-sort(table(extract$design),decreasing=T)
@@ -4010,7 +3852,7 @@ designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-
 barplot(table(designClean),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 ``` r
 par(mfrow=c(1,2))
@@ -4019,7 +3861,7 @@ barplot(table(designClean),las=2)
 barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
 
 # 13 Characteristics of interventions
 
@@ -4041,7 +3883,7 @@ barplot(c(
 )
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
 
 ### 13.1.2 From table
 
@@ -4050,7 +3892,7 @@ par(mar=c(14,4,1,1))
 barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
 
 ``` r
 extract$Categories.type.of.intervention <- extract$Categories.type.of.intervention <-factor(extract$Categories.type.of.intervention, levels = names(sort(table(extract$Categories.type.of.intervention), decreasing=T)))
@@ -4063,7 +3905,7 @@ opar <- par(lwd = 0.4)
 barplot(table(extract$Categories.type.of.intervention,factor(extract$datepubl,levels=min(extract$datepubl):max(extract$datepubl))),beside=T,col=rainbow(nlevels(extract$Categories.type.of.intervention)), legend=T, args.legend=list(x="topleft"), lwd=.1, cex.names=.8)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
 
 ## 13.2 Curricular/extracurricular
 
@@ -4073,7 +3915,7 @@ table(extract$`Curricular/Extracurricular`)
 
     ## 
     ##                                                                                                                                                     Curricular 
-    ##                                                                                                                                                             77 
+    ##                                                                                                                                                             76 
     ##                                                  Curricular[supported by teachers, it might even be part of the study plan, but that is not clear in the paper 
     ##                                                                                                                                                              1 
     ##                                                                                                                                   CurricularandExtracurricular 
@@ -4087,7 +3929,7 @@ table(extract$`Curricular/Extracurricular`)
     ##                                                                                                                                        professionalDevelopment 
     ##                                                                                                                                                              2 
     ##                                                                                                                                        ProfessionalDevelopment 
-    ##                                                                                                                                                             20
+    ##                                                                                                                                                             21
 
 ``` r
 curExtraCur<-rep(NA,nrow(extract))
@@ -4114,7 +3956,7 @@ par(mar=c(12,4,1,1))
 barplot(table(curExtraCur,useNA="ifany"),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
 
 ## 13.3 Indoor/outdoor
 
@@ -4217,7 +4059,7 @@ hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number o
 legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
 
 ``` r
 extract$Total.duration.of.the.intervention
@@ -8404,7 +8246,7 @@ axis(1,at=c(0,60*c(20,50,100,150)),labels=c("0","20h","50h","100h","150h"),las=1
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
 
 ``` r
 extract$Period.length
@@ -15508,7 +15350,7 @@ axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","m
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
 
 ## 14.1 intervention time categories
 
@@ -24289,7 +24131,7 @@ NA
 barplot(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"),beside = T,legend=T, args.legend = list(title="Horizon of change"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-44-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-45-1.png)<!-- -->
 
 ### 14.3.2 With outcomes
 
@@ -24312,7 +24154,7 @@ barplot(table(didItWork_outcomes[tf_outcomes[,"action"],"action"],extract$Interv
 barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Intervention.time.category[tf_outcomes[,"habit"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Habit")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-45-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-46-1.png)<!-- -->
 
 ### 14.3.3 Simplified
 
@@ -24363,7 +24205,7 @@ barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
 barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-46-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-47-1.png)<!-- -->
 
 # 15 Analisis
 
@@ -24394,11 +24236,14 @@ df_outcomeT<-data.frame(
 byRow<-data.frame(
   idRow=rownames(extract),
   id=extract$id,
+  ageMin=extract$age_min_stud,
+  ageMax=extract$age_max_stud,
   person=extract$codifico,
   population=popTot,
   curri=curExtraCur,
   outIn=extract$`Outdoor/Indoor/Both`,
   pop=pop,
+  timeCat=extract$Intervention.time.category,
   TheoFra=extract$`Theoretical.framework.(big.categories)`,
   mitAda=extract$`Final.mitigation/adaptation`,
   controv=ifelse(extract$controv_clean=="Yes","Controversy","No Controversy")
@@ -24435,7 +24280,7 @@ byRowDIW<-sqldf(
   ORDER BY CAST(idRow as int)",
   drv = "SQLite")
 byOutcomeTot<-sqldf(
-  "SELECT idRow,id,person,population,pop,ageCat,TheoFra,mitAda,controv,outcome,didItWork,curri,outIn
+  "SELECT idRow,id,person,population,pop,ageCat,ageMin,ageMax,timeCat,TheoFra,mitAda,controv,outcome,didItWork,curri,outIn
   FROM byRow
   LEFT JOIN byOutcome USING (idRow)
   JOIN AgeByRow USING (idRow)
@@ -24473,14 +24318,14 @@ sqldf(
 barplot(tablify(sqldf("SELECT curri,population,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"curri","population","nbPaper"),las=2,legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-50-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-51-1.png)<!-- -->
 
 ``` r
 par(mar=c(12,4,1,1))
 barplot(tablify(sqldf("SELECT TheoFra,curri,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"TheoFra","curri","nbPaper"),las=2,legend=T,col=rainbow(6))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-51-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-52-1.png)<!-- -->
 
 ## 16.1 Innovative?
 
@@ -24535,8 +24380,8 @@ sqldf(
 )
 ```
 
-    ##              GROUP_CONCAT(id, ', ')
-    ## 1 Saribaş2016 , Sutela2023, Xie2014
+    ##     GROUP_CONCAT(id, ', ')
+    ## 1 Saribaş2016 , Sutela2023
 
 ``` r
 sqldf(
@@ -24550,11 +24395,9 @@ sqldf(
     ##             id                  pop person                           TheoFra
     ## 1 Saribaş2016  Pre-service teachers   JGOP Professional development workshop
     ## 2   Sutela2023             Teachers   JGOP                       Alternative
-    ## 3      Xie2014             Teachers     SB         Learner centered approach
     ##             curri
     ## 1 Extracurricular
     ## 2      Curricular
-    ## 3      Curricular
 
 ``` r
 sqldf(
@@ -24581,7 +24424,82 @@ sqldf(
     ##   count(*)
     ## 1      290
 
-## 16.3 Effectiveness
+## 16.3 Ages and outcomes
+
+``` r
+popAgeSep_df<-sqldf(
+  "
+  WITH a AS
+  (SELECT id, idRow,'4-11' AS agePopCat
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE \"X4.11\" AND pop='Students'
+  UNION
+  SELECT id, idRow,'12-15'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE \"X12.15\" AND pop='Students'
+  UNION
+  SELECT id, idRow, '16-19'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE \"X16.19\" AND pop='Students'
+  UNION
+  SELECT id, idRow, 'Teachers'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE pop='Teachers'
+  UNION
+  SELECT id, idRow, 'Pre-service teachers'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE pop='Pre-service teachers'
+  UNION
+  SELECT id, idRow, 'Parents'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE pop='Parents'
+  )
+  SELECT DISTINCT *
+  FROM a
+  ORDER BY CAST(idRow AS int)
+  "
+)
+```
+
+``` r
+(tabAgeCatOutomeTot<-tablify(sqldf(
+  "SELECT outcome,agePopCat, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  LEFT JOIN popAgeSep_df USING (id, idRow)
+  GROUP BY agePopCat,outcome
+  "),"outcome","agePopCat","nbPapers")[c("knowledge","awareness","intention","emotion","habit","action","No information"),])
+```
+
+    ##                No information 12-15 16-19 4-11 Parents Pre-service teachers
+    ## knowledge                   3    85    56   42       2                    8
+    ## awareness                   1    40    26   21       1                    4
+    ## intention                   1    21    17    9       2                    2
+    ## emotion                     0    17    11   12       1                    2
+    ## habit                       0     5     4    3       3                    1
+    ## action                      0    14     8    6       2                    0
+    ## No information              1     0     0    0       0                    0
+    ##                Teachers
+    ## knowledge            12
+    ## awareness             9
+    ## intention             2
+    ## emotion               1
+    ## habit                 1
+    ## action                2
+    ## No information        1
+
+``` r
+barplot(tabAgeCatOutomeTot,beside=T,col=rainbow(nrow(tabAgeCatOutomeTot)),legend=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-57-1.png)<!-- -->
+
+## 16.4 Effectiveness
 
 ``` r
 tabPopTheoFraTot<-tablify(sqldf(
@@ -24636,4 +24554,144 @@ par(mar=c(12,4,4,1))
 barplot(t(tabPopTheoFraTot),beside=T,col=rainbow(ncol(tabPopTheoFraYes_comp)),main="Total",las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-55-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-58-1.png)<!-- -->
+
+``` r
+tabPopoutcomeTot<-tablify(sqldf(
+  "SELECT population, outcome, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  GROUP BY population,outcome
+  "),"population","outcome","nbPapers")
+tabPopoutcomeYes<-tablify(sqldf(
+  "SELECT population, outcome, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  WHERE didItWork='Yes'
+  GROUP BY population,outcome
+  "),"population","outcome","nbPapers")
+tabPopoutcomeNo<-tablify(sqldf(
+  "SELECT population, outcome, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  WHERE didItWork='No'
+  GROUP BY population,outcome
+  "),"population","outcome","nbPapers")
+tabPopoutcomeUnclear<-tablify(sqldf(
+  "SELECT population, outcome, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  WHERE didItWork='Unclear'
+  GROUP BY population,outcome
+  "),"population","outcome","nbPapers")
+colComplete<-unique(c(colnames(tabPopoutcomeYes),colnames(tabPopoutcomeUnclear),colnames(tabPopoutcomeNo)))
+rowComplete<-unique(c(rownames(tabPopoutcomeYes),rownames(tabPopoutcomeUnclear),rownames(tabPopoutcomeNo)))
+tabPopoutcomeYes_comp<-tabPopoutcomeNo_comp<-tabPopoutcomeUnclear_comp<-matrix(0,nrow=length(rowComplete),ncol=length(colComplete),dimnames=list(rowComplete,colComplete))
+for(i in rownames(tabPopoutcomeYes_comp)){
+  for(j in colnames(tabPopoutcomeYes_comp)){
+    if(i %in% rownames(tabPopoutcomeYes) & j %in% colnames(tabPopoutcomeYes))
+    {
+      tabPopoutcomeYes_comp[i,j]<-tabPopoutcomeYes[i,j]
+    }
+    if(i %in% rownames(tabPopoutcomeUnclear) & j %in% colnames(tabPopoutcomeUnclear))
+    {
+      tabPopoutcomeUnclear_comp[i,j]<-tabPopoutcomeUnclear[i,j]
+    }
+    if(i %in% rownames(tabPopoutcomeNo) & j %in% colnames(tabPopoutcomeNo))
+    {
+      tabPopoutcomeNo_comp[i,j]<-tabPopoutcomeNo[i,j]
+    }
+  }
+}
+layout.matrix=matrix(1:4,nrow=4)
+layout(layout.matrix,heights=c(1,1,1,1.7))
+par(mar=c(0,4,4,1))
+barplot(t(tabPopoutcomeYes_comp),beside=T,names.arg = rep("",nrow(tabPopoutcomeYes_comp)),col=rainbow(ncol(tabPopoutcomeYes_comp)),main="Yes",ylim=c(0,max(tabPopoutcomeTot)))
+barplot(t(tabPopoutcomeNo_comp),beside=T,names.arg = rep("",nrow(tabPopoutcomeYes_comp)),col=rainbow(ncol(tabPopoutcomeYes_comp)),main="No",ylim=c(0,max(tabPopoutcomeTot)),legend=T,args.legend = list(x="topleft"))
+barplot(t(tabPopoutcomeUnclear_comp),beside=T,names.arg = rep("",nrow(tabPopoutcomeYes_comp)),col=rainbow(ncol(tabPopoutcomeYes_comp)),main="Unclear",ylim=c(0,max(tabPopoutcomeTot)),las=2)
+par(mar=c(12,4,4,1))
+barplot(t(tabPopoutcomeTot),beside=T,col=rainbow(ncol(tabPopoutcomeYes_comp)),main="Total",las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-59-1.png)<!-- -->
+
+### 16.4.1 Young student
+
+``` r
+sqldf(
+  "SELECT DISTINCT id,idRow,ageMin,ageMax,population, TheoFra,outcome,didItWork,curri,outIn
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  WHERE \"X4.11\" AND population='Students (4-11)'
+  ORDER BY outcome
+   --CAST(idRow AS int)
+  "
+)
+```
+
+    ##              id idRow ageMin ageMax      population                   TheoFra
+    ## 1   Vicente2020    46     10     11 Students (4-11) Learner centered approach
+    ## 2   Herrick2022    52     10     11 Students (4-11) Learner centered approach
+    ## 3     Baker2013     4      8     10 Students (4-11)               Alternative
+    ## 4     Taber2009    37      6     10 Students (4-11) Learner centered approach
+    ## 5   Herrick2022    52     10     11 Students (4-11) Learner centered approach
+    ## 6     Jones2021    64      9     10 Students (4-11) Learner centered approach
+    ## 7   Herrick2022    52     10     11 Students (4-11) Learner centered approach
+    ## 8     Baker2013     4      8     10 Students (4-11)               Alternative
+    ## 9     Taber2009    37      6     10 Students (4-11) Learner centered approach
+    ## 10 Williams2017    40      7      9 Students (4-11)               Alternative
+    ## 11  Vicente2020    46     10     11 Students (4-11) Learner centered approach
+    ## 12  Akaygun2021    47     10     11 Students (4-11) Learner centered approach
+    ## 13  Herrick2022    52     10     11 Students (4-11) Learner centered approach
+    ## 14    Mason1998    67     10     11 Students (4-11) Learner centered approach
+    ##      outcome didItWork           curri   outIn
+    ## 1  awareness       Yes      Curricular  Indoor
+    ## 2  awareness       Yes      Curricular Outdoor
+    ## 3    emotion       Yes Extracurricular  Indoor
+    ## 4    emotion       Yes Extracurricular  Indoor
+    ## 5    emotion       Yes      Curricular Outdoor
+    ## 6    emotion   Unclear      Curricular  Indoor
+    ## 7  intention       Yes      Curricular Outdoor
+    ## 8  knowledge       Yes Extracurricular  Indoor
+    ## 9  knowledge        No Extracurricular  Indoor
+    ## 10 knowledge       Yes      Curricular  Indoor
+    ## 11 knowledge       Yes      Curricular  Indoor
+    ## 12 knowledge       Yes Extracurricular  Indoor
+    ## 13 knowledge       Yes      Curricular Outdoor
+    ## 14 knowledge       Yes      Curricular  Indoor
+
+``` r
+sqldf(
+  "SELECT outcome,didItWork,count(DISTINCT id), GROUP_CONCAT(DISTINCT id)
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  WHERE \"X4.11\" AND population = 'Students (4-11)'
+  GROUP BY outcome,didItWork
+  ORDER BY outcome
+  "
+)
+```
+
+    ##     outcome didItWork count(DISTINCT id)
+    ## 1 awareness       Yes                  2
+    ## 2   emotion   Unclear                  1
+    ## 3   emotion       Yes                  3
+    ## 4 intention       Yes                  1
+    ## 5 knowledge        No                  1
+    ## 6 knowledge       Yes                  6
+    ##                                              GROUP_CONCAT(DISTINCT id)
+    ## 1                                              Vicente2020,Herrick2022
+    ## 2                                                            Jones2021
+    ## 3                                      Baker2013,Taber2009,Herrick2022
+    ## 4                                                          Herrick2022
+    ## 5                                                            Taber2009
+    ## 6 Baker2013,Williams2017,Vicente2020,Akaygun2021,Herrick2022,Mason1998
+
+``` r
+sqldf(
+  "SELECT min(ageMin)
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  WHERE \"X4.11\" AND population = 'Students (4-11)'
+  "
+)
+```
+
+    ##   min(ageMin)
+    ## 1           6

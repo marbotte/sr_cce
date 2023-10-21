@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231020.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231020.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231021.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231021.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -50,7 +50,7 @@ sum(A[as.numeric(names(A))>=2012])/sum(A)
 
 ```{r}
 library(stringr)
-rawExtract$Countries.STUDY
+#rawExtract$Countries.STUDY
 extract$Countries.STUDY[extract$id=="Arya2016"]<-"United States;China;New Zealand;Norway"
 extract$Countries.STUDY<-gsub("Puerto Rico \\(United States\\)","United States",gsub("Estados Unidos","United States",gsub("BRASIL","Brazil",gsub("UK","United Kingdom",gsub("USA","United States",extract$Countries.STUDY)))))
 sepCountry <- strsplit(extract$Countries.STUDY,"[,;]")
@@ -224,7 +224,16 @@ populClean[populClean=="mixed"]<-"Mixed"
 populClean<-factor(populClean,levels=names(sort(table(populClean),decreasing = T)))
 par(mar=c(10,4,1,1))
 barplot(table(populClean,useNA = "ifany"),las=2)
+```
 
+Clean, by row:
+
+```{r}
+pop <- factor(rep(NA,nrow(extract)),c("Students","Teachers","Pre-service teachers","Parents"))
+pop[tolower(extract$TARGETED.SAMPLE)=="students"]<-"Students"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("teachers","entourage (teachers)")] <- "Teachers"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("pre-service teachers")] <- "Pre-service teachers"
+pop[tolower(extract$TARGETED.SAMPLE)%in%c("parents","entourage (parents)")] <- "Parents"
 ```
 
 **Calculated for manuscript**:
@@ -241,6 +250,7 @@ sum(table(populClean,useNA = "ifany")[c("Teachers","Pre-service teachers")])/sum
 ## Age 
 
 ```{r}
+extract$idRow<-rownames(extract)
 extract$age_min[extract$student]
 extract$age_max[extract$student]
 extract$mean.age[extract$student]
@@ -266,7 +276,9 @@ age_order<- rep(NA,sum(!is.na(extract$age_stud_type_info)))
 age_order[extract$age_stud_type_info[!is.na(extract$age_stud_type_info)]%in%c("all","mean")]<- extract[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info%in%c("all","mean"),"age_aver_stud"]
 age_order[extract$age_stud_type_info[!is.na(extract$age_stud_type_info)]%in%c("minmax")]<-rowMeans( extract[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info%in%c("minmax"),c("age_min_stud","age_max_stud")])
 order(age_order)
-tabForPlot<-extract[!is.na(extract$age_stud_type_info),c("age_min_stud","age_max_stud","age_aver_stud","age_stud_no_info","age_stud_type_info")][order(age_order),]
+tabForPlot<-extract[!is.na(extract$age_stud_type_info),c("idRow","age_min_stud","age_max_stud","age_aver_stud","age_stud_no_info","age_stud_type_info")]
+tabForPlot$pop<-pop[!is.na(extract$age_stud_type_info)]
+tabForPlot<-tabForPlot[order(age_order),]
 plot(x=age_order[order(age_order)],y=1:nrow(tabForPlot),type="n",xlim=range(tabForPlot[,c("age_min_stud","age_max_stud")],na.rm=T), xlab="Age",ylab="",yaxt="n")
 segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmax","all")], tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")])
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
@@ -278,30 +290,22 @@ points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")
 extract[is.na(extract[,"age_stud_type_info"])&!is.na(as.numeric(extract$Age_min.from.grade.))&!is.na(as.numeric(extract$Age_max.from.grade)),"age_stud_type_info"]<-"minmaxFromGrade"
 tabForPlot<-rbind(
   tabForPlot,
-  data.frame(age_min_stud=as.numeric(extract$Age_min.from.grade.[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
+  data.frame(idRow=extract$idRow[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"],
+             age_min_stud=as.numeric(extract$Age_min.from.grade.[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
              age_max_stud=as.numeric(extract$Age_max.from.grade[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"]),
              age_aver_stud=NA,
              age_stud_no_info=T,
-             age_stud_type_info="minmaxFromGrade")
+             age_stud_type_info="minmaxFromGrade",
+             pop=pop[!is.na(extract$age_stud_type_info)&extract$age_stud_type_info=="minmaxFromGrade"])
 )
-tabForPlot$age_min_stud<-as.integer(tabForPlot$age_min_stud)
-tabForPlot$age_max_stud<-as.integer(tabForPlot$age_max_stud)
-
-age_order<- rep(NA,sum(!is.na(tabForPlot$age_stud_type_info)))
-age_order[tabForPlot$age_stud_type_info[!is.na(tabForPlot$age_stud_type_info)]%in%c("all","mean")]<- tabForPlot[!is.na(tabForPlot$age_stud_type_info)&tabForPlot$age_stud_type_info%in%c("all","mean"),"age_aver_stud"]
-age_order[tabForPlot$age_stud_type_info[!is.na(tabForPlot$age_stud_type_info)]%in%c("minmax","minmaxFromGrade")]<-rowMeans( tabForPlot[!is.na(tabForPlot$age_stud_type_info)&tabForPlot$age_stud_type_info%in%c("minmax","minmaxFromGrade"),c("age_min_stud","age_max_stud")])
-order(age_order)
-tabForPlot<-tabForPlot[order(age_order),]
-plot(x=age_order[order(age_order)],y=1:nrow(tabForPlot),type="n",xlim=range(tabForPlot[,c("age_min_stud","age_max_stud")],na.rm=T), xlab="Age",ylab="",yaxt="n")
-segments(
-  x0=tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")],
-  y0=(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmax","all")],
-  x1=tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")])
-segments(
-  x0=tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],
-  y0=(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],
-  x1=tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],lty=3,lwd=.5)
-
+tabForPlot<-tabForPlot[!is.na(tabForPlot$pop)&tabForPlot$pop=="Students",]
+tabForPlot$medianVal<-NA
+tabForPlot$medianVal[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade","minmax")]<-rowMeans(tabForPlot[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade","minmax"),c("age_min_stud","age_max_stud")])
+tabForPlot$medianVal[tabForPlot$age_stud_type_info%in%c("all","mean")]<-tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("all","mean")]
+tabForPlot<-tabForPlot[order(tabForPlot$medianVal),]
+plot(x=tabForPlot$medianVal,y=1:nrow(tabForPlot),type="n",xlim=range(tabForPlot[,c("age_min_stud","age_max_stud")],na.rm=T), xlab="Age",ylab="",yaxt="n")
+segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmax","all")], tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmax","all")])
+segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")], tabForPlot$age_max_stud[tabForPlot$age_stud_type_info%in%c("minmaxFromGrade")],lty=3)
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
 legend("topleft",lwd=c(1,.5,NA),lty=c(1,3,NA),pch=c(NA,NA,3),legend=c("Range given","Range from grades","Average given"))
 ```
@@ -314,11 +318,7 @@ legend("topleft",lwd=c(1,.5,NA),lty=c(1,3,NA),pch=c(NA,NA,3),legend=c("Range giv
 extract[c("age_stud_type_info","age_min_stud","age_max_stud","age_aver_stud","TARGETED.SAMPLE")]
 
 table(extract$age_stud_type_info,tolower(extract$TARGETED.SAMPLE))
-pop <- factor(rep(NA,nrow(extract)),c("Students","Teachers","Pre-service teachers","Parents"))
-pop[tolower(extract$TARGETED.SAMPLE)=="students"]<-"Students"
-pop[tolower(extract$TARGETED.SAMPLE)%in%c("teachers","entourage (teachers)")] <- "Teachers"
-pop[tolower(extract$TARGETED.SAMPLE)%in%c("pre-service teachers")] <- "Pre-service teachers"
-pop[tolower(extract$TARGETED.SAMPLE)%in%c("parents","entourage (parents)")] <- "Parents"
+
 table(extract$age_stud_type_info,pop,useNA="ifany")
 extract$age_min_stud[is.na(extract$age_min_stud)]<-as.integer(extract$Age_min.from.grade.[is.na(extract$age_min_stud)])
 extract$age_max_stud[is.na(extract$age_max_stud)]<-as.integer(extract$Age_max.from.grade[is.na(extract$age_max_stud)])
@@ -388,6 +388,17 @@ popTot<-factor(popTot,
                         ))
 barplot(table(popTot,useNA = "ifany"),las=2)
 ```
+
+
+```{r creationTabAge}
+catAgeConcerned_df<- data.frame(
+  id=extract$id,
+  idRow=rownames(extract),
+  catAgeConcerned
+)
+```
+
+
 
 ```{r}
 catAgeConcerned<-cbind(catAgeConcerned,`No age information`=(apply(catAgeConcerned,1,sum)==0))
@@ -907,11 +918,14 @@ df_outcomeT<-data.frame(
 byRow<-data.frame(
   idRow=rownames(extract),
   id=extract$id,
+  ageMin=extract$age_min_stud,
+  ageMax=extract$age_max_stud,
   person=extract$codifico,
   population=popTot,
   curri=curExtraCur,
   outIn=extract$`Outdoor/Indoor/Both`,
   pop=pop,
+  timeCat=extract$Intervention.time.category,
   TheoFra=extract$`Theoretical.framework.(big.categories)`,
   mitAda=extract$`Final.mitigation/adaptation`,
   controv=ifelse(extract$controv_clean=="Yes","Controversy","No Controversy")
@@ -937,7 +951,7 @@ byRowDIW<-sqldf(
   ORDER BY CAST(idRow as int)",
   drv = "SQLite")
 byOutcomeTot<-sqldf(
-  "SELECT idRow,id,person,population,pop,ageCat,TheoFra,mitAda,controv,outcome,didItWork,curri,outIn
+  "SELECT idRow,id,person,population,pop,ageCat,ageMin,ageMax,timeCat,TheoFra,mitAda,controv,outcome,didItWork,curri,outIn
   FROM byRow
   LEFT JOIN byOutcome USING (idRow)
   JOIN AgeByRow USING (idRow)
@@ -1032,10 +1046,66 @@ sqldf(
   count(*)
   FROM byOutcome
   ")
+
 ```
 
-## Effectiveness
+## Ages and outcomes
 
+```{r}
+popAgeSep_df<-sqldf(
+  "
+  WITH a AS
+  (SELECT id, idRow,'4-11' AS agePopCat
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE \"X4.11\" AND pop='Students'
+  UNION
+  SELECT id, idRow,'12-15'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE \"X12.15\" AND pop='Students'
+  UNION
+  SELECT id, idRow, '16-19'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE \"X16.19\" AND pop='Students'
+  UNION
+  SELECT id, idRow, 'Teachers'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE pop='Teachers'
+  UNION
+  SELECT id, idRow, 'Pre-service teachers'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE pop='Pre-service teachers'
+  UNION
+  SELECT id, idRow, 'Parents'
+  FROM catAgeConcerned_df
+  LEFT JOIN byRow USING (id, idRow)
+  WHERE pop='Parents'
+  )
+  SELECT DISTINCT *
+  FROM a
+  ORDER BY CAST(idRow AS int)
+  "
+)
+```
+
+
+```{r}
+(tabAgeCatOutomeTot<-tablify(sqldf(
+  "SELECT outcome,agePopCat, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  LEFT JOIN popAgeSep_df USING (id, idRow)
+  GROUP BY agePopCat,outcome
+  "),"outcome","agePopCat","nbPapers")[c("knowledge","awareness","intention","emotion","habit","action","No information"),])
+barplot(tabAgeCatOutomeTot,beside=T,col=rainbow(nrow(tabAgeCatOutomeTot)),legend=T)
+```
+
+
+
+## Effectiveness
 
 ```{r fig.height=12}
 
@@ -1092,6 +1162,91 @@ barplot(t(tabPopTheoFraTot),beside=T,col=rainbow(ncol(tabPopTheoFraYes_comp)),ma
 
 ```
  
+```{r fig.height=12}
 
+tabPopoutcomeTot<-tablify(sqldf(
+  "SELECT population, outcome, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  GROUP BY population,outcome
+  "),"population","outcome","nbPapers")
+tabPopoutcomeYes<-tablify(sqldf(
+  "SELECT population, outcome, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  WHERE didItWork='Yes'
+  GROUP BY population,outcome
+  "),"population","outcome","nbPapers")
+tabPopoutcomeNo<-tablify(sqldf(
+  "SELECT population, outcome, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  WHERE didItWork='No'
+  GROUP BY population,outcome
+  "),"population","outcome","nbPapers")
+tabPopoutcomeUnclear<-tablify(sqldf(
+  "SELECT population, outcome, count(DISTINCT id) nbPapers
+  FROM byOutcomeTot
+  WHERE didItWork='Unclear'
+  GROUP BY population,outcome
+  "),"population","outcome","nbPapers")
+colComplete<-unique(c(colnames(tabPopoutcomeYes),colnames(tabPopoutcomeUnclear),colnames(tabPopoutcomeNo)))
+rowComplete<-unique(c(rownames(tabPopoutcomeYes),rownames(tabPopoutcomeUnclear),rownames(tabPopoutcomeNo)))
+tabPopoutcomeYes_comp<-tabPopoutcomeNo_comp<-tabPopoutcomeUnclear_comp<-matrix(0,nrow=length(rowComplete),ncol=length(colComplete),dimnames=list(rowComplete,colComplete))
+for(i in rownames(tabPopoutcomeYes_comp)){
+  for(j in colnames(tabPopoutcomeYes_comp)){
+    if(i %in% rownames(tabPopoutcomeYes) & j %in% colnames(tabPopoutcomeYes))
+    {
+      tabPopoutcomeYes_comp[i,j]<-tabPopoutcomeYes[i,j]
+    }
+    if(i %in% rownames(tabPopoutcomeUnclear) & j %in% colnames(tabPopoutcomeUnclear))
+    {
+      tabPopoutcomeUnclear_comp[i,j]<-tabPopoutcomeUnclear[i,j]
+    }
+    if(i %in% rownames(tabPopoutcomeNo) & j %in% colnames(tabPopoutcomeNo))
+    {
+      tabPopoutcomeNo_comp[i,j]<-tabPopoutcomeNo[i,j]
+    }
+  }
+}
+layout.matrix=matrix(1:4,nrow=4)
+layout(layout.matrix,heights=c(1,1,1,1.7))
+par(mar=c(0,4,4,1))
+barplot(t(tabPopoutcomeYes_comp),beside=T,names.arg = rep("",nrow(tabPopoutcomeYes_comp)),col=rainbow(ncol(tabPopoutcomeYes_comp)),main="Yes",ylim=c(0,max(tabPopoutcomeTot)))
+barplot(t(tabPopoutcomeNo_comp),beside=T,names.arg = rep("",nrow(tabPopoutcomeYes_comp)),col=rainbow(ncol(tabPopoutcomeYes_comp)),main="No",ylim=c(0,max(tabPopoutcomeTot)),legend=T,args.legend = list(x="topleft"))
+barplot(t(tabPopoutcomeUnclear_comp),beside=T,names.arg = rep("",nrow(tabPopoutcomeYes_comp)),col=rainbow(ncol(tabPopoutcomeYes_comp)),main="Unclear",ylim=c(0,max(tabPopoutcomeTot)),las=2)
+par(mar=c(12,4,4,1))
+barplot(t(tabPopoutcomeTot),beside=T,col=rainbow(ncol(tabPopoutcomeYes_comp)),main="Total",las=2)
 
+```
 
+### Young student
+
+```{r}
+sqldf(
+  "SELECT DISTINCT id,idRow,ageMin,ageMax,population, TheoFra,outcome,didItWork,curri,outIn
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  WHERE \"X4.11\" AND population='Students (4-11)'
+  ORDER BY outcome
+   --CAST(idRow AS int)
+  "
+)
+```
+```{r}
+sqldf(
+  "SELECT outcome,didItWork,count(DISTINCT id), GROUP_CONCAT(DISTINCT id)
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  WHERE \"X4.11\" AND population = 'Students (4-11)'
+  GROUP BY outcome,didItWork
+  ORDER BY outcome
+  "
+)
+```
+```{r}
+sqldf(
+  "SELECT min(ageMin)
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  WHERE \"X4.11\" AND population = 'Students (4-11)'
+  "
+)
+```
