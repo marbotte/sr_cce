@@ -152,6 +152,8 @@ for(i in resolved)
 (AcceptedFinal <- c(names(accepted)[!is.na(as.logical(accepted))&as.logical(accepted)],
                    finalDecisionTab$abbrev[!is.na(finalDecisionTab$Inclusion)&as.logical(finalDecisionTab$Inclusion)]))
 
+AcceptedFinal<-AcceptedFinal[!AcceptedFinal %in% finalDecisionTab$abbrev[!finalDecisionTab$Inclusion]]
+
 length(AcceptedFinal)
 
 RejectedFinal<-
@@ -161,9 +163,27 @@ RejectedFinal<-
       id=finalDecisionTab$abbrev[!is.na(finalDecisionTab$Inclusion)&!as.logical(finalDecisionTab$Inclusion)],
       reason=finalDecisionTab$ReasonExlusion[!is.na(finalDecisionTab$Inclusion)&!as.logical(finalDecisionTab$Inclusion)]
     ))
-kable(RejectedFinal,row.names = F)  
+```
+
+## rejection reason table
+
+```{r}
+kable(RejectedFinal,row.names = F)
+```
+
+## rejection reason numbers
+
+```{r}
 table(RejectedFinal$reason)
 save(AcceptedFinal,file="../../screening/fullTextScreening/acceptedFinal.RData")
+```
+
+```{r}
+rawExtract<-read.xlsx("../../extraction/20231022.xlsx",sheet = "extraction ",startRow = 2)
+AcceptedFinal[!AcceptedFinal%in%rawExtract$id]
+rawExtract$id[!rawExtract$id%in%AcceptedFinal]
+length(unique(rawExtract$id))
+length(AcceptedFinal)
 ```
 
 

@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231021.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231021.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231022.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231022.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -546,12 +546,6 @@ barplot(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`)
 kable(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`,useNA="ifany")))
 ```
 
-There are some professional development workshop for young students:
-
-```{r}
-extract$id[grepl("Students",popTot)&extract$`Theoretical.framework.(big.categories)`=="Professional development workshop"]
-```
-
 ## Comparison with pedagogical tools
 
 ```{r fig.height=7,fig.width=6}
@@ -559,19 +553,6 @@ par(mar=c(15,4,1,1))
 extract$Categories.type.of.intervention<-factor(extract$Categories.type.of.intervention)
 barplot(table(extract$Categories.type.of.intervention,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(extract$Categories.type.of.intervention)),las=2,legend=T)
 ```
-
-
-## Subcategorias
-
-```{r,fig.height=15,fig.width=15}
-kable(sort(table(subcatLearnerCentered<-factor(extract$X38)),decreasing = T))
-subcatLearnerCentered
-par(mar=c(13,4,1,1))
-barplot(table(subcatLearnerCentered,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(subcatLearnerCentered)),las=2,legend=T)
-```
-
-
-##
 
 
 # Methods & design
@@ -965,7 +946,7 @@ byOutcomeTot<-sqldf(
 ```{r}
 require(sqldf)
 sqldf(
-  "SELECT count(DISTINCT id) 
+  "SELECT count(DISTINCT id)
   FROM extract"
   )
 ```
@@ -1250,3 +1231,19 @@ sqldf(
   "
 )
 ```
+
+
+
+
+
+
+```{r}
+sqldf(
+  "SELECT id, idRow, population,ageMin,ageMax, outcome, didItWork
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  WHERE id LIKE 'Korfgen%'
+  "
+)
+```
+

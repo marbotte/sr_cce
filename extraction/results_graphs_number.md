@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-21
+2023-10-22
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -24,8 +24,6 @@ Marius Bottin
   - [11.1 Comparison with population](#111-comparison-with-population)
   - [11.2 Comparison with pedagogical
     tools](#112-comparison-with-pedagogical-tools)
-  - [11.3 Subcategorias](#113-subcategorias)
-  - [11.4](#114)
 - [12 Methods & design](#12-methods--design)
   - [12.1 Quanti/Quali](#121-quantiquali)
   - [12.2 Pre-post](#122-pre-post)
@@ -66,16 +64,16 @@ require(openxlsx)&require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-names(loadWorkbook("../../extraction/20231021.xlsx"))
+names(loadWorkbook("../../extraction/20231022.xlsx"))
 ```
 
     ## [1] "Guidance for search strategy" "Search strategy"             
     ## [3] "Feuille 3"                    "Inclusion-exclusion criteria"
     ## [5] "searches"                     "extraction "                 
-    ## [7] "ColorCode"
+    ## [7] "Tableau croisé dynamique 1"   "ColorCode"
 
 ``` r
-rawExtract<-read.xlsx("../../extraction/20231021.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/20231022.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -2475,7 +2473,7 @@ Learner centered approach
 </td>
 <td style="text-align:right;">
 
-62
+63
 
 </td>
 </tr>
@@ -2487,7 +2485,7 @@ Alternative
 </td>
 <td style="text-align:right;">
 
-33
+35
 
 </td>
 </tr>
@@ -2499,7 +2497,7 @@ Teacher centered approach
 </td>
 <td style="text-align:right;">
 
-19
+22
 
 </td>
 </tr>
@@ -2511,19 +2509,7 @@ Professional development workshop
 </td>
 <td style="text-align:right;">
 
-17
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Relational
-
-</td>
-<td style="text-align:right;">
-
-11
+18
 
 </td>
 </tr>
@@ -2535,7 +2521,7 @@ Promoting social awareness
 </td>
 <td style="text-align:right;">
 
-6
+10
 
 </td>
 </tr>
@@ -2578,11 +2564,6 @@ Professional development workshop
 <th style="text-align:right;">
 
 Promoting social awareness
-
-</th>
-<th style="text-align:right;">
-
-Relational
 
 </th>
 <th style="text-align:right;">
@@ -2634,11 +2615,6 @@ Students (4-11)
 0
 
 </td>
-<td style="text-align:right;">
-
-0
-
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -2648,7 +2624,7 @@ Students (4-15)
 </td>
 <td style="text-align:right;">
 
-7
+8
 
 </td>
 <td style="text-align:right;">
@@ -2664,11 +2640,6 @@ Students (4-15)
 <td style="text-align:right;">
 
 2
-
-</td>
-<td style="text-align:right;">
-
-1
 
 </td>
 <td style="text-align:right;">
@@ -2710,11 +2681,6 @@ Students (4-19)
 </td>
 <td style="text-align:right;">
 
-0
-
-</td>
-<td style="text-align:right;">
-
 3
 
 </td>
@@ -2732,7 +2698,7 @@ Students (12-15)
 </td>
 <td style="text-align:right;">
 
-2
+3
 
 </td>
 <td style="text-align:right;">
@@ -2747,17 +2713,12 @@ Students (12-15)
 </td>
 <td style="text-align:right;">
 
-1
+2
 
 </td>
 <td style="text-align:right;">
 
-3
-
-</td>
-<td style="text-align:right;">
-
-1
+2
 
 </td>
 <td style="text-align:right;">
@@ -2789,12 +2750,7 @@ Students (12-19)
 </td>
 <td style="text-align:right;">
 
-1
-
-</td>
-<td style="text-align:right;">
-
-3
+4
 
 </td>
 <td style="text-align:right;">
@@ -2821,7 +2777,7 @@ Students (16-19)
 </td>
 <td style="text-align:right;">
 
-4
+5
 
 </td>
 <td style="text-align:right;">
@@ -2836,12 +2792,7 @@ Students (16-19)
 </td>
 <td style="text-align:right;">
 
-3
-
-</td>
-<td style="text-align:right;">
-
-3
+5
 
 </td>
 <td style="text-align:right;">
@@ -2886,11 +2837,6 @@ Students (no age information)
 0
 
 </td>
-<td style="text-align:right;">
-
-0
-
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -2910,17 +2856,12 @@ Teachers
 </td>
 <td style="text-align:right;">
 
-10
+11
 
 </td>
 <td style="text-align:right;">
 
 0
-
-</td>
-<td style="text-align:right;">
-
-1
 
 </td>
 <td style="text-align:right;">
@@ -2970,11 +2911,6 @@ Pre-service teachers
 0
 
 </td>
-<td style="text-align:right;">
-
-0
-
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -2985,11 +2921,6 @@ Parents
 <td style="text-align:right;">
 
 4
-
-</td>
-<td style="text-align:right;">
-
-0
 
 </td>
 <td style="text-align:right;">
@@ -3046,11 +2977,6 @@ NA
 </td>
 <td style="text-align:right;">
 
-0
-
-</td>
-<td style="text-align:right;">
-
 1
 
 </td>
@@ -3062,14 +2988,6 @@ NA
 </tr>
 </tbody>
 </table>
-
-There are some professional development workshop for young students:
-
-``` r
-extract$id[grepl("Students",popTot)&extract$`Theoretical.framework.(big.categories)`=="Professional development workshop"]
-```
-
-    ## [1] NA NA NA
 
 ## 11.2 Comparison with pedagogical tools
 
@@ -3079,559 +2997,7 @@ extract$Categories.type.of.intervention<-factor(extract$Categories.type.of.inter
 barplot(table(extract$Categories.type.of.intervention,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(extract$Categories.type.of.intervention)),las=2,legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
-
-## 11.3 Subcategorias
-
-``` r
-kable(sort(table(subcatLearnerCentered<-factor(extract$X38)),decreasing = T))
-```
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-
-Var1
-
-</th>
-<th style="text-align:right;">
-
-Freq
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-Lectures/lessons/instruction
-
-</td>
-<td style="text-align:right;">
-
-17
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Constructivism
-
-</td>
-<td style="text-align:right;">
-
-14
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Socio-scientific/socio-constructivist/socio-ecological
-
-</td>
-<td style="text-align:right;">
-
-8
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Combination of active-learning/experiential learning strategies
-
-</td>
-<td style="text-align:right;">
-
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Conceptual change
-
-</td>
-<td style="text-align:right;">
-
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Inquiry-based learning
-
-</td>
-<td style="text-align:right;">
-
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Intergenerational learning
-
-</td>
-<td style="text-align:right;">
-
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Technology enhanced
-
-</td>
-<td style="text-align:right;">
-
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Active learning
-
-</td>
-<td style="text-align:right;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Experiential learning
-
-</td>
-<td style="text-align:right;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Visual arts
-
-</td>
-<td style="text-align:right;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Arts-based
-
-</td>
-<td style="text-align:right;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-combination of active-learning/experiential learning strategies
-
-</td>
-<td style="text-align:right;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Gaming/gamification
-
-</td>
-<td style="text-align:right;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Argument-driven
-
-</td>
-<td style="text-align:right;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Moderate constructivism
-
-</td>
-<td style="text-align:right;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Expert learner
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Future-oriented imagery
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Place/community-based
-
-</td>
-<td style="text-align:right;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-individual worksheets
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Buddhist principles of instruction
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Collaborative-learning
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Entertainment education
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Experiential learning
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Gestalt and Behaviorist learning theories
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Problem-based learning
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Project-based learning
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Socio-constructivism
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Visual Material
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-Workshop
-
-</td>
-<td style="text-align:right;">
-
-1
-
-</td>
-</tr>
-</tbody>
-</table>
-
-``` r
-subcatLearnerCentered
-```
-
-    ##   [1] Technology enhanced                                            
-    ##   [2] Lectures/lessons/instruction                                   
-    ##   [3] Lectures/lessons/instruction                                   
-    ##   [4] Arts-based                                                     
-    ##   [5] Arts-based                                                     
-    ##   [6] Constructivism                                                 
-    ##   [7] Lectures/lessons/instruction                                   
-    ##   [8] <NA>                                                           
-    ##   [9] Visual Material                                                
-    ##  [10] Conceptual change                                              
-    ##  [11] Buddhist principles of instruction                             
-    ##  [12] Combination of active-learning/experiential learning strategies
-    ##  [13] Conceptual change                                              
-    ##  [14] Inquiry-based learning                                         
-    ##  [15] Experiential learning                                          
-    ##  [16] Argument-driven                                                
-    ##  [17] Place/community-based                                          
-    ##  [18] <NA>                                                           
-    ##  [19] Constructivism                                                 
-    ##  [20] Inquiry-based learning                                         
-    ##  [21] Arts-based                                                     
-    ##  [22] Workshop                                                       
-    ##  [23] Conceptual change                                              
-    ##  [24] Lectures/lessons/instruction                                   
-    ##  [25] Experiential learning                                          
-    ##  [26] Place/community-based                                          
-    ##  [27] <NA>                                                           
-    ##  [28] Technology enhanced                                            
-    ##  [29] Conceptual change                                              
-    ##  [30] Socio-scientific/socio-constructivist/socio-ecological         
-    ##  [31] Active learning                                                
-    ##  [32] Active learning                                                
-    ##  [33] <NA>                                                           
-    ##  [34] Experiential learning                                          
-    ##  [35] combination of active-learning/experiential learning strategies
-    ##  [36] Socio-scientific/socio-constructivist/socio-ecological         
-    ##  [37] Constructivism                                                 
-    ##  [38] Socio-scientific/socio-constructivist/socio-ecological         
-    ##  [39] Constructivism                                                 
-    ##  [40] Intergenerational learning                                     
-    ##  [41] Moderate constructivism                                        
-    ##  [42] <NA>                                                           
-    ##  [43] <NA>                                                           
-    ##  [44] <NA>                                                           
-    ##  [45] <NA>                                                           
-    ##  [46] Constructivism                                                 
-    ##  [47] Constructivism                                                 
-    ##  [48] Combination of active-learning/experiential learning strategies
-    ##  [49] Gestalt and Behaviorist learning theories                      
-    ##  [50] <NA>                                                           
-    ##  [51] Socio-scientific/socio-constructivist/socio-ecological         
-    ##  [52] Experiential learning                                          
-    ##  [53] combination of active-learning/experiential learning strategies
-    ##  [54] Lectures/lessons/instruction                                   
-    ##  [55] Argument-driven                                                
-    ##  [56] <NA>                                                           
-    ##  [57] <NA>                                                           
-    ##  [58] Combination of active-learning/experiential learning strategies
-    ##  [59] Conceptual change                                              
-    ##  [60] Moderate constructivism                                        
-    ##  [61] Active learning                                                
-    ##  [62] Gaming/gamification                                            
-    ##  [63] <NA>                                                           
-    ##  [64] Expert learner                                                 
-    ##  [65] Conceptual change                                              
-    ##  [66] Socio-scientific/socio-constructivist/socio-ecological         
-    ##  [67] Socio-scientific/socio-constructivist/socio-ecological         
-    ##  [68] Gaming/gamification                                            
-    ##  [69] Entertainment education                                        
-    ##  [70] Visual arts                                                    
-    ##  [71] Visual arts                                                    
-    ##  [72] Lectures/lessons/instruction                                   
-    ##  [73] Lectures/lessons/instruction                                   
-    ##  [74] combination of active-learning/experiential learning strategies
-    ##  [75] combination of active-learning/experiential learning strategies
-    ##  [76] Active learning                                                
-    ##  [77] Constructivism                                                 
-    ##  [78] Future-oriented imagery                                        
-    ##  [79] Technology enhanced                                            
-    ##  [80] Technology enhanced                                            
-    ##  [81] Future-oriented imagery                                        
-    ##  [82] combination of active-learning/experiential learning strategies
-    ##  [83] Socio-scientific/socio-constructivist/socio-ecological         
-    ##  [84] Intergenerational learning                                     
-    ##  [85] Inquiry-based learning                                         
-    ##  [86] Inquiry-based learning                                         
-    ##  [87] Socio-scientific/socio-constructivist/socio-ecological         
-    ##  [88] <NA>                                                           
-    ##  [89] Lectures/lessons/instruction                                   
-    ##  [90] Experiential learning                                          
-    ##  [91] Gaming/gamification                                            
-    ##  [92] Lectures/lessons/instruction                                   
-    ##  [93] Constructivism                                                 
-    ##  [94] Moderate constructivism                                        
-    ##  [95] Active learning                                                
-    ##  [96] Moderate constructivism                                        
-    ##  [97] Visual arts                                                    
-    ##  [98] Lectures/lessons/instruction                                   
-    ##  [99] Intergenerational learning                                     
-    ## [100] Project-based learning                                         
-    ## [101] Expert learner                                                 
-    ## [102] Combination of active-learning/experiential learning strategies
-    ## [103] Lectures/lessons/instruction                                   
-    ## [104] Inquiry-based learning                                         
-    ## [105] <NA>                                                           
-    ## [106] Problem-based learning                                         
-    ## [107] Arts-based                                                     
-    ## [108] <NA>                                                           
-    ## [109] Inquiry-based learning                                         
-    ## [110] Technology enhanced                                            
-    ## [111] Combination of active-learning/experiential learning strategies
-    ## [112] Combination of active-learning/experiential learning strategies
-    ## [113] Intergenerational learning                                     
-    ## [114] Intergenerational learning                                     
-    ## [115] Lectures/lessons/instruction                                   
-    ## [116] Visual arts                                                    
-    ## [117] Visual arts                                                    
-    ## [118] Inquiry-based learning                                         
-    ## [119] Arts-based                                                     
-    ## [120] Technology enhanced                                            
-    ## [121] Experiential learning                                          
-    ## [122] Constructivism                                                 
-    ## [123] Socio-constructivism                                           
-    ## [124] Intergenerational learning                                     
-    ## [125] Constructivism                                                 
-    ## [126] Gaming/gamification                                            
-    ## [127] Constructivism                                                 
-    ## [128] Intergenerational learning                                     
-    ## [129] Technology enhanced                                            
-    ## [130]  individual worksheets                                         
-    ## [131] Lectures/lessons/instruction                                   
-    ## [132] Argument-driven                                                
-    ## [133] Lectures/lessons/instruction                                   
-    ## [134] Gaming/gamification                                            
-    ## [135] Lectures/lessons/instruction                                   
-    ## [136] Lectures/lessons/instruction                                   
-    ## [137] Visual arts                                                    
-    ## [138] Experiential learning                                          
-    ## [139] Constructivism                                                 
-    ## [140] Lectures/lessons/instruction                                   
-    ## [141] Collaborative-learning                                         
-    ## [142] <NA>                                                           
-    ## [143] <NA>                                                           
-    ## [144] Constructivism                                                 
-    ## [145] <NA>                                                           
-    ## [146] Conceptual change                                              
-    ## [147] Argument-driven                                                
-    ## [148] Combination of active-learning/experiential learning strategies
-    ## [149] Constructivism                                                 
-    ## [150] <NA>                                                           
-    ## [151] <NA>                                                           
-    ## [152] Active learning                                                
-    ## 30 Levels:  individual worksheets Active learning ... Workshop
-
-``` r
-par(mar=c(13,4,1,1))
-barplot(table(subcatLearnerCentered,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(subcatLearnerCentered)),las=2,legend=T)
-```
-
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
-
-## 11.4
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 # 12 Methods & design
 
@@ -3663,7 +3029,7 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ## 12.2 Pre-post
 
@@ -3698,7 +3064,7 @@ colSums(tabMetodosAnalyses)/sum(tabMetodosAnalyses)
 barplot(table(extract$`Pre/Post`,extract$QuantQualClean,useNA="ifany"), legend=T,args.legend = list(x="topleft",title="Pre/post"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ``` r
 A<-sort(table(extract$design),decreasing=T)
@@ -3852,7 +3218,7 @@ designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-
 barplot(table(designClean),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 ``` r
 par(mfrow=c(1,2))
@@ -3861,7 +3227,7 @@ barplot(table(designClean),las=2)
 barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 # 13 Characteristics of interventions
 
@@ -3883,7 +3249,7 @@ barplot(c(
 )
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 ### 13.1.2 From table
 
@@ -3892,7 +3258,7 @@ par(mar=c(14,4,1,1))
 barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
 
 ``` r
 extract$Categories.type.of.intervention <- extract$Categories.type.of.intervention <-factor(extract$Categories.type.of.intervention, levels = names(sort(table(extract$Categories.type.of.intervention), decreasing=T)))
@@ -3905,7 +3271,7 @@ opar <- par(lwd = 0.4)
 barplot(table(extract$Categories.type.of.intervention,factor(extract$datepubl,levels=min(extract$datepubl):max(extract$datepubl))),beside=T,col=rainbow(nlevels(extract$Categories.type.of.intervention)), legend=T, args.legend=list(x="topleft"), lwd=.1, cex.names=.8)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
 
 ## 13.2 Curricular/extracurricular
 
@@ -3956,7 +3322,7 @@ par(mar=c(12,4,1,1))
 barplot(table(curExtraCur,useNA="ifany"),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
 
 ## 13.3 Indoor/outdoor
 
@@ -4059,7 +3425,7 @@ hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number o
 legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
 
 ``` r
 extract$Total.duration.of.the.intervention
@@ -8246,7 +7612,7 @@ axis(1,at=c(0,60*c(20,50,100,150)),labels=c("0","20h","50h","100h","150h"),las=1
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
 
 ``` r
 extract$Period.length
@@ -15350,7 +14716,7 @@ axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","m
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
 
 ## 14.1 intervention time categories
 
@@ -24131,7 +23497,7 @@ NA
 barplot(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"),beside = T,legend=T, args.legend = list(title="Horizon of change"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-45-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-43-1.png)<!-- -->
 
 ### 14.3.2 With outcomes
 
@@ -24154,7 +23520,7 @@ barplot(table(didItWork_outcomes[tf_outcomes[,"action"],"action"],extract$Interv
 barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Intervention.time.category[tf_outcomes[,"habit"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Habit")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-46-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-44-1.png)<!-- -->
 
 ### 14.3.3 Simplified
 
@@ -24205,7 +23571,7 @@ barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
 barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-47-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-45-1.png)<!-- -->
 
 # 15 Analisis
 
@@ -24291,7 +23657,7 @@ byOutcomeTot<-sqldf(
 ``` r
 require(sqldf)
 sqldf(
-  "SELECT count(DISTINCT id) 
+  "SELECT count(DISTINCT id)
   FROM extract"
   )
 ```
@@ -24318,14 +23684,14 @@ sqldf(
 barplot(tablify(sqldf("SELECT curri,population,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"curri","population","nbPaper"),las=2,legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-51-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-49-1.png)<!-- -->
 
 ``` r
 par(mar=c(12,4,1,1))
 barplot(tablify(sqldf("SELECT TheoFra,curri,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"TheoFra","curri","nbPaper"),las=2,legend=T,col=rainbow(6))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-52-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-50-1.png)<!-- -->
 
 ## 16.1 Innovative?
 
@@ -24357,7 +23723,7 @@ sqldf(
 ```
 
     ##   count(DISTINCT id)
-    ## 1                 17
+    ## 1                 18
 
 ``` r
 sqldf(
@@ -24497,7 +23863,7 @@ popAgeSep_df<-sqldf(
 barplot(tabAgeCatOutomeTot,beside=T,col=rainbow(nrow(tabAgeCatOutomeTot)),legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-57-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-55-1.png)<!-- -->
 
 ## 16.4 Effectiveness
 
@@ -24554,7 +23920,7 @@ par(mar=c(12,4,4,1))
 barplot(t(tabPopTheoFraTot),beside=T,col=rainbow(ncol(tabPopTheoFraYes_comp)),main="Total",las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-58-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-56-1.png)<!-- -->
 
 ``` r
 tabPopoutcomeTot<-tablify(sqldf(
@@ -24609,7 +23975,7 @@ par(mar=c(12,4,4,1))
 barplot(t(tabPopoutcomeTot),beside=T,col=rainbow(ncol(tabPopoutcomeYes_comp)),main="Total",las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-59-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-57-1.png)<!-- -->
 
 ### 16.4.1 Young student
 
@@ -24695,3 +24061,17 @@ sqldf(
 
     ##   min(ageMin)
     ## 1           6
+
+``` r
+sqldf(
+  "SELECT id, idRow, population,ageMin,ageMax, outcome, didItWork
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  WHERE id LIKE 'Korfgen%'
+  "
+)
+```
+
+    ##            id idRow       population ageMin ageMax   outcome didItWork
+    ## 1 Korfgen2017    41 Students (12-15)     13     15 awareness       Yes
+    ## 2 Korfgen2017    41 Students (12-15)     13     15 knowledge       Yes

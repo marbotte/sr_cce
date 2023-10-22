@@ -2,7 +2,7 @@ Reading the results of the assignments and extracting the interesting
 data (example of a full-text screening exercise)
 ================
 Marius Bottin
-2023-10-05
+2023-10-22
 
 - [1 Numbers](#1-numbers)
 - [2 Conflicts](#2-conflicts)
@@ -47,78 +47,81 @@ Marius Bottin
   - [3.36 Kathiresan2021](#336-kathiresan2021)
   - [3.37 Le2019](#337-le2019)
   - [3.38 Logan2015](#338-logan2015)
-  - [3.39 Sukardi2022](#339-sukardi2022)
-  - [3.40 Anonymous2021](#340-anonymous2021)
-  - [3.41 Bello_Benavides2019](#341-bello_benavides2019)
-  - [3.42 Burkholder2017](#342-burkholder2017)
-  - [3.43 Carey2017](#343-carey2017)
-  - [3.44 Chordnork2012](#344-chordnork2012)
-  - [3.45 Ferguson2022](#345-ferguson2022)
-  - [3.46 Hugel2022](#346-hugel2022)
-  - [3.47 Jin2013](#347-jin2013)
-  - [3.48 Kreibich2011](#348-kreibich2011)
-  - [3.49 Lambert2012](#349-lambert2012)
-  - [3.50 Lombardi2012](#350-lombardi2012)
-  - [3.51 McGowan2022](#351-mcgowan2022)
-  - [3.52 McNeal2014](#352-mcneal2014)
-  - [3.53 Nkoana2020](#353-nkoana2020)
-  - [3.54 Oe2022](#354-oe2022)
-  - [3.55 Plutzer2021](#355-plutzer2021)
-  - [3.56 Pruneau2006a](#356-pruneau2006a)
-  - [3.57 Saribaş2016](#357-saribaş2016)
-  - [3.58 Schuster2018](#358-schuster2018)
-  - [3.59 Siegner2018](#359-siegner2018)
-  - [3.60 Sutela2023](#360-sutela2023)
-  - [3.61 Todd2016](#361-todd2016)
-  - [3.62 Xie2014](#362-xie2014)
-  - [3.63 Zhong2021](#363-zhong2021)
-  - [3.64 Zografakis2008](#364-zografakis2008)
-  - [3.65 Chankrajang2017](#365-chankrajang2017)
-  - [3.66 Goeschl2020](#366-goeschl2020)
-  - [3.67 Kullar2011](#367-kullar2011)
-  - [3.68 Makrakis2012](#368-makrakis2012)
-  - [3.69 Makrakis2012a](#369-makrakis2012a)
-  - [3.70 Nauck2020](#370-nauck2020)
-  - [3.71 Tomlinson2018](#371-tomlinson2018)
-  - [3.72 van_Zee2022](#372-van_zee2022)
-  - [3.73 Aldila2018](#373-aldila2018)
-  - [3.74 Bhattacharya2020](#374-bhattacharya2020)
-  - [3.75 Gomes2015](#375-gomes2015)
-  - [3.76 Day2013](#376-day2013)
-  - [3.77 Liu2019](#377-liu2019)
-  - [3.78 Muller2021](#378-muller2021)
-  - [3.79 Pimentel2021](#379-pimentel2021)
-  - [3.80 Yoon2016](#380-yoon2016)
-  - [3.81 Crouze2023](#381-crouze2023)
-  - [3.82 Cebesoy2019](#382-cebesoy2019)
-  - [3.83 Levrini2019](#383-levrini2019)
-  - [3.84 Levrini2021](#384-levrini2021)
-  - [3.85 Allen2014](#385-allen2014)
-  - [3.86 Meya2018](#386-meya2018)
-  - [3.87 Monroe2019](#387-monroe2019)
-  - [3.88 Dormody2020](#388-dormody2020)
-  - [3.89 Hestness2017](#389-hestness2017)
-  - [3.90 Oliveira2021](#390-oliveira2021)
-  - [3.91 Plutzer2018](#391-plutzer2018)
-  - [3.92 Prosser_Bravo2022](#392-prosser_bravo2022)
-  - [3.93 Raes2016](#393-raes2016)
-  - [3.94 Schuster2008](#394-schuster2008)
-  - [3.95 Sternang2012](#395-sternang2012)
-  - [3.96 Bush2019a](#396-bush2019a)
-  - [3.97 de_Sousa2019](#397-de_sousa2019)
-  - [3.98 Musselman2020](#398-musselman2020)
-  - [3.99 Cohen2013](#399-cohen2013)
-  - [3.100 Walsh2012](#3100-walsh2012)
-  - [3.101 Wallace2018](#3101-wallace2018)
-  - [3.102 da_Silva2022a](#3102-da_silva2022a)
-  - [3.103 Oberauer2023](#3103-oberauer2023)
-  - [3.104 Ouariachi2017a](#3104-ouariachi2017a)
-  - [3.105 Sezen_Barrie2020](#3105-sezen_barrie2020)
-  - [3.106 Walsh2018](#3106-walsh2018)
-  - [3.107 Bopardikar2021](#3107-bopardikar2021)
-  - [3.108 Turner2022](#3108-turner2022)
+  - [3.39 Anonymous2021](#339-anonymous2021)
+  - [3.40 Bello_Benavides2019](#340-bello_benavides2019)
+  - [3.41 Burkholder2017](#341-burkholder2017)
+  - [3.42 Carey2017](#342-carey2017)
+  - [3.43 Chordnork2012](#343-chordnork2012)
+  - [3.44 Ferguson2022](#344-ferguson2022)
+  - [3.45 Hugel2022](#345-hugel2022)
+  - [3.46 Jin2013](#346-jin2013)
+  - [3.47 Kreibich2011](#347-kreibich2011)
+  - [3.48 Lambert2012](#348-lambert2012)
+  - [3.49 Lombardi2012](#349-lombardi2012)
+  - [3.50 McGowan2022](#350-mcgowan2022)
+  - [3.51 McNeal2014](#351-mcneal2014)
+  - [3.52 Nkoana2020](#352-nkoana2020)
+  - [3.53 Oe2022](#353-oe2022)
+  - [3.54 Plutzer2021](#354-plutzer2021)
+  - [3.55 Pruneau2006a](#355-pruneau2006a)
+  - [3.56 Saribaş2016](#356-saribaş2016)
+  - [3.57 Siegner2018](#357-siegner2018)
+  - [3.58 Sutela2023](#358-sutela2023)
+  - [3.59 Todd2016](#359-todd2016)
+  - [3.60 Xie2014](#360-xie2014)
+  - [3.61 Zhong2021](#361-zhong2021)
+  - [3.62 Zografakis2008](#362-zografakis2008)
+  - [3.63 Chankrajang2017](#363-chankrajang2017)
+  - [3.64 Goeschl2020](#364-goeschl2020)
+  - [3.65 Kullar2011](#365-kullar2011)
+  - [3.66 Makrakis2012](#366-makrakis2012)
+  - [3.67 Makrakis2012a](#367-makrakis2012a)
+  - [3.68 Nauck2020](#368-nauck2020)
+  - [3.69 Tomlinson2018](#369-tomlinson2018)
+  - [3.70 van_Zee2022](#370-van_zee2022)
+  - [3.71 Aldila2018](#371-aldila2018)
+  - [3.72 Bhattacharya2020](#372-bhattacharya2020)
+  - [3.73 Gomes2015](#373-gomes2015)
+  - [3.74 Day2013](#374-day2013)
+  - [3.75 Liu2019](#375-liu2019)
+  - [3.76 Muller2021](#376-muller2021)
+  - [3.77 Pimentel2021](#377-pimentel2021)
+  - [3.78 Yoon2016](#378-yoon2016)
+  - [3.79 Crouze2023](#379-crouze2023)
+  - [3.80 Cebesoy2019](#380-cebesoy2019)
+  - [3.81 Levrini2019](#381-levrini2019)
+  - [3.82 Levrini2021](#382-levrini2021)
+  - [3.83 Allen2014](#383-allen2014)
+  - [3.84 Meya2018](#384-meya2018)
+  - [3.85 Monroe2019](#385-monroe2019)
+  - [3.86 Dormody2020](#386-dormody2020)
+  - [3.87 Hestness2017](#387-hestness2017)
+  - [3.88 Oliveira2021](#388-oliveira2021)
+  - [3.89 Plutzer2018](#389-plutzer2018)
+  - [3.90 Prosser_Bravo2022](#390-prosser_bravo2022)
+  - [3.91 Raes2016](#391-raes2016)
+  - [3.92 Schuster2008](#392-schuster2008)
+  - [3.93 Sternang2012](#393-sternang2012)
+  - [3.94 Bush2019a](#394-bush2019a)
+  - [3.95 de_Sousa2019](#395-de_sousa2019)
+  - [3.96 Musselman2020](#396-musselman2020)
+  - [3.97 Cohen2013](#397-cohen2013)
+  - [3.98 Walsh2012](#398-walsh2012)
+  - [3.99 Wallace2018](#399-wallace2018)
+  - [3.100 da_Silva2022a](#3100-da_silva2022a)
+  - [3.101 Oberauer2023](#3101-oberauer2023)
+  - [3.102 Ouariachi2017a](#3102-ouariachi2017a)
+  - [3.103 Sezen_Barrie2020](#3103-sezen_barrie2020)
+  - [3.104 Walsh2018](#3104-walsh2018)
+  - [3.105 Bopardikar2021](#3105-bopardikar2021)
+  - [3.106 Turner2022](#3106-turner2022)
+  - [3.107 Trott2020](#3107-trott2020)
+  - [3.108 Ross2021](#3108-ross2021)
+  - [3.109 Leckey2021a](#3109-leckey2021a)
 - [4 Final Numbers](#4-final-numbers)
-  - [4.1 Missing decisions](#41-missing-decisions)
+  - [4.1 rejection reason table](#41-rejection-reason-table)
+  - [4.2 rejection reason numbers](#42-rejection-reason-numbers)
+  - [4.3 Missing decisions](#43-missing-decisions)
 
 In order to read the results of the assignments, we put all the
 resulting excel files in a unique directory:
@@ -7501,183 +7504,7 @@ NA
 </tbody>
 </table>
 
-## 3.39 Sukardi2022
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-268
-
-</td>
-<td style="text-align:right;">
-
-26
-
-</td>
-<td style="text-align:left;">
-
-Ana
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-
-349
-
-</td>
-<td style="text-align:right;">
-
-30
-
-</td>
-<td style="text-align:left;">
-
-Luisa
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-The timeline of the intervention and the results is not clear.
-SUposedly, the prelearning activity (a questionaire asking for solutions
-to CC) boosts students ideas about solutions, such that at another
-moment (which is not clear to me that it is at the end of the
-intervention) they offer more ideas of what to do in the face of CC.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-**Decision**:
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:left;">
-
-abbrev
-
-</th>
-<th style="text-align:left;">
-
-People
-
-</th>
-<th style="text-align:left;">
-
-Inclusion
-
-</th>
-<th style="text-align:left;">
-
-ReasonExlusion
-
-</th>
-<th style="text-align:left;">
-
-Comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-39
-
-</td>
-<td style="text-align:left;">
-
-Sukardi2022
-
-</td>
-<td style="text-align:left;">
-
-Ana,Marius,Luisa,JuanGabriel,Sergio
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-problemas de calidad/extraccion
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## 3.40 Anonymous2021
+## 3.39 Anonymous2021
 
 <table>
 <thead>
@@ -7818,7 +7645,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-40
+39
 
 </td>
 <td style="text-align:left;">
@@ -7850,7 +7677,7 @@ NA
 </tbody>
 </table>
 
-## 3.41 Bello_Benavides2019
+## 3.40 Bello_Benavides2019
 
 <table>
 <thead>
@@ -8026,7 +7853,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-41
+40
 
 </td>
 <td style="text-align:left;">
@@ -8058,7 +7885,7 @@ satisfaction/advantage of the intervention in a pedagogical reflection
 </tbody>
 </table>
 
-## 3.42 Burkholder2017
+## 3.41 Burkholder2017
 
 <table>
 <thead>
@@ -8232,7 +8059,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-42
+41
 
 </td>
 <td style="text-align:left;">
@@ -8264,7 +8091,7 @@ College students
 </tbody>
 </table>
 
-## 3.43 Carey2017
+## 3.42 Carey2017
 
 <table>
 <thead>
@@ -8436,7 +8263,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-43
+42
 
 </td>
 <td style="text-align:left;">
@@ -8468,7 +8295,7 @@ University students
 </tbody>
 </table>
 
-## 3.44 Chordnork2012
+## 3.43 Chordnork2012
 
 <table>
 <thead>
@@ -8644,7 +8471,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-44
+43
 
 </td>
 <td style="text-align:left;">
@@ -8676,7 +8503,7 @@ NA
 </tbody>
 </table>
 
-## 3.45 Ferguson2022
+## 3.44 Ferguson2022
 
 <table>
 <thead>
@@ -8851,7 +8678,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-45
+44
 
 </td>
 <td style="text-align:left;">
@@ -8883,7 +8710,7 @@ NA
 </tbody>
 </table>
 
-## 3.46 Hugel2022
+## 3.45 Hugel2022
 
 <table>
 <thead>
@@ -9027,7 +8854,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-46
+45
 
 </td>
 <td style="text-align:left;">
@@ -9059,7 +8886,7 @@ NA
 </tbody>
 </table>
 
-## 3.47 Jin2013
+## 3.46 Jin2013
 
 <table>
 <thead>
@@ -9241,7 +9068,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-47
+46
 
 </td>
 <td style="text-align:left;">
@@ -9273,7 +9100,7 @@ NA
 </tbody>
 </table>
 
-## 3.48 Kreibich2011
+## 3.47 Kreibich2011
 
 <table>
 <thead>
@@ -9413,7 +9240,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-48
+47
 
 </td>
 <td style="text-align:left;">
@@ -9445,7 +9272,7 @@ NA
 </tbody>
 </table>
 
-## 3.49 Lambert2012
+## 3.48 Lambert2012
 
 <table>
 <thead>
@@ -9585,7 +9412,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-49
+48
 
 </td>
 <td style="text-align:left;">
@@ -9617,7 +9444,7 @@ NA
 </tbody>
 </table>
 
-## 3.50 Lombardi2012
+## 3.49 Lombardi2012
 
 <table>
 <thead>
@@ -9789,7 +9616,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-50
+49
 
 </td>
 <td style="text-align:left;">
@@ -9821,7 +9648,7 @@ NA
 </tbody>
 </table>
 
-## 3.51 McGowan2022
+## 3.50 McGowan2022
 
 <table>
 <thead>
@@ -9998,7 +9825,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-51
+50
 
 </td>
 <td style="text-align:left;">
@@ -10030,7 +9857,7 @@ NA
 </tbody>
 </table>
 
-## 3.52 McNeal2014
+## 3.51 McNeal2014
 
 <table>
 <thead>
@@ -10172,7 +9999,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-52
+51
 
 </td>
 <td style="text-align:left;">
@@ -10204,7 +10031,7 @@ NA
 </tbody>
 </table>
 
-## 3.53 Nkoana2020
+## 3.52 Nkoana2020
 
 <table>
 <thead>
@@ -10382,7 +10209,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-53
+52
 
 </td>
 <td style="text-align:left;">
@@ -10414,7 +10241,7 @@ NA
 </tbody>
 </table>
 
-## 3.54 Oe2022
+## 3.53 Oe2022
 
 <table>
 <thead>
@@ -10597,7 +10424,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-54
+53
 
 </td>
 <td style="text-align:left;">
@@ -10629,7 +10456,7 @@ NA
 </tbody>
 </table>
 
-## 3.55 Plutzer2021
+## 3.54 Plutzer2021
 
 <table>
 <thead>
@@ -10705,7 +10532,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-55
+54
 
 </td>
 <td style="text-align:left;">
@@ -10737,7 +10564,7 @@ NA
 </tbody>
 </table>
 
-## 3.56 Pruneau2006a
+## 3.55 Pruneau2006a
 
 <table>
 <thead>
@@ -10943,7 +10770,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-56
+55
 
 </td>
 <td style="text-align:left;">
@@ -10975,7 +10802,7 @@ Careful the effect on children is difficult to see here
 </tbody>
 </table>
 
-## 3.57 Saribaş2016
+## 3.56 Saribaş2016
 
 <table>
 <thead>
@@ -11149,7 +10976,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-57
+56
 
 </td>
 <td style="text-align:left;">
@@ -11181,115 +11008,7 @@ NA
 </tbody>
 </table>
 
-## 3.58 Schuster2018
-
-<table>
-<thead>
-<tr>
-<th style="text-align:right;">
-
-assignment
-
-</th>
-<th style="text-align:left;">
-
-person
-
-</th>
-<th style="text-align:left;">
-
-incl
-
-</th>
-<th style="text-align:left;">
-
-reasonExcl
-
-</th>
-<th style="text-align:left;">
-
-comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
-
-**Decision**:
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:left;">
-
-abbrev
-
-</th>
-<th style="text-align:left;">
-
-People
-
-</th>
-<th style="text-align:left;">
-
-Inclusion
-
-</th>
-<th style="text-align:left;">
-
-ReasonExlusion
-
-</th>
-<th style="text-align:left;">
-
-Comment
-
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-58
-
-</td>
-<td style="text-align:left;">
-
-Schuster2018
-
-</td>
-<td style="text-align:left;">
-
-Ana,Marius
-
-</td>
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-<td style="text-align:left;">
-
-NA
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## 3.59 Siegner2018
+## 3.57 Siegner2018
 
 <table>
 <thead>
@@ -11464,7 +11183,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-59
+57
 
 </td>
 <td style="text-align:left;">
@@ -11496,7 +11215,7 @@ NA
 </tbody>
 </table>
 
-## 3.60 Sutela2023
+## 3.58 Sutela2023
 
 <table>
 <thead>
@@ -11677,7 +11396,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-60
+58
 
 </td>
 <td style="text-align:left;">
@@ -11709,7 +11428,7 @@ NA
 </tbody>
 </table>
 
-## 3.61 Todd2016
+## 3.59 Todd2016
 
 <table>
 <thead>
@@ -11851,7 +11570,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-61
+59
 
 </td>
 <td style="text-align:left;">
@@ -11883,7 +11602,7 @@ NA
 </tbody>
 </table>
 
-## 3.62 Xie2014
+## 3.60 Xie2014
 
 <table>
 <thead>
@@ -12059,7 +11778,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-62
+60
 
 </td>
 <td style="text-align:left;">
@@ -12091,7 +11810,7 @@ NA
 </tbody>
 </table>
 
-## 3.63 Zhong2021
+## 3.61 Zhong2021
 
 <table>
 <thead>
@@ -12263,7 +11982,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-63
+61
 
 </td>
 <td style="text-align:left;">
@@ -12295,7 +12014,7 @@ NA
 </tbody>
 </table>
 
-## 3.64 Zografakis2008
+## 3.62 Zografakis2008
 
 <table>
 <thead>
@@ -12472,7 +12191,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-64
+62
 
 </td>
 <td style="text-align:left;">
@@ -12504,7 +12223,7 @@ NA
 </tbody>
 </table>
 
-## 3.65 Chankrajang2017
+## 3.63 Chankrajang2017
 
 <table>
 <thead>
@@ -12648,7 +12367,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-65
+63
 
 </td>
 <td style="text-align:left;">
@@ -12680,7 +12399,7 @@ NA
 </tbody>
 </table>
 
-## 3.66 Goeschl2020
+## 3.64 Goeschl2020
 
 <table>
 <thead>
@@ -12822,7 +12541,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-66
+64
 
 </td>
 <td style="text-align:left;">
@@ -12854,7 +12573,7 @@ NA
 </tbody>
 </table>
 
-## 3.67 Kullar2011
+## 3.65 Kullar2011
 
 <table>
 <thead>
@@ -12995,7 +12714,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-67
+65
 
 </td>
 <td style="text-align:left;">
@@ -13027,7 +12746,7 @@ PhD thesis
 </tbody>
 </table>
 
-## 3.68 Makrakis2012
+## 3.66 Makrakis2012
 
 <table>
 <thead>
@@ -13169,7 +12888,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-68
+66
 
 </td>
 <td style="text-align:left;">
@@ -13201,7 +12920,7 @@ NA
 </tbody>
 </table>
 
-## 3.69 Makrakis2012a
+## 3.67 Makrakis2012a
 
 <table>
 <thead>
@@ -13343,7 +13062,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-69
+67
 
 </td>
 <td style="text-align:left;">
@@ -13375,7 +13094,7 @@ NA
 </tbody>
 </table>
 
-## 3.70 Nauck2020
+## 3.68 Nauck2020
 
 <table>
 <thead>
@@ -13517,7 +13236,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-70
+68
 
 </td>
 <td style="text-align:left;">
@@ -13549,7 +13268,7 @@ NA
 </tbody>
 </table>
 
-## 3.71 Tomlinson2018
+## 3.69 Tomlinson2018
 
 <table>
 <thead>
@@ -13689,7 +13408,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-71
+69
 
 </td>
 <td style="text-align:left;">
@@ -13721,7 +13440,7 @@ NA
 </tbody>
 </table>
 
-## 3.72 van_Zee2022
+## 3.70 van_Zee2022
 
 <table>
 <thead>
@@ -13867,7 +13586,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-72
+70
 
 </td>
 <td style="text-align:left;">
@@ -13899,7 +13618,7 @@ NA
 </tbody>
 </table>
 
-## 3.73 Aldila2018
+## 3.71 Aldila2018
 
 <table>
 <thead>
@@ -14045,7 +13764,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-73
+71
 
 </td>
 <td style="text-align:left;">
@@ -14077,7 +13796,7 @@ NA
 </tbody>
 </table>
 
-## 3.74 Bhattacharya2020
+## 3.72 Bhattacharya2020
 
 <table>
 <thead>
@@ -14255,7 +13974,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-74
+72
 
 </td>
 <td style="text-align:left;">
@@ -14287,7 +14006,7 @@ NA
 </tbody>
 </table>
 
-## 3.75 Gomes2015
+## 3.73 Gomes2015
 
 <table>
 <thead>
@@ -14465,7 +14184,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-75
+73
 
 </td>
 <td style="text-align:left;">
@@ -14497,7 +14216,7 @@ NA
 </tbody>
 </table>
 
-## 3.76 Day2013
+## 3.74 Day2013
 
 <table>
 <thead>
@@ -14676,7 +14395,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-76
+74
 
 </td>
 <td style="text-align:left;">
@@ -14708,7 +14427,7 @@ NA
 </tbody>
 </table>
 
-## 3.77 Liu2019
+## 3.75 Liu2019
 
 <table>
 <thead>
@@ -14851,7 +14570,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-77
+75
 
 </td>
 <td style="text-align:left;">
@@ -14883,7 +14602,7 @@ NA
 </tbody>
 </table>
 
-## 3.78 Muller2021
+## 3.76 Muller2021
 
 <table>
 <thead>
@@ -15062,7 +14781,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-78
+76
 
 </td>
 <td style="text-align:left;">
@@ -15094,7 +14813,7 @@ NA
 </tbody>
 </table>
 
-## 3.79 Pimentel2021
+## 3.77 Pimentel2021
 
 <table>
 <thead>
@@ -15274,7 +14993,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-79
+77
 
 </td>
 <td style="text-align:left;">
@@ -15306,7 +15025,7 @@ Identication sentiment toward scientist, not really CC
 </tbody>
 </table>
 
-## 3.80 Yoon2016
+## 3.78 Yoon2016
 
 <table>
 <thead>
@@ -15447,7 +15166,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-80
+78
 
 </td>
 <td style="text-align:left;">
@@ -15479,7 +15198,7 @@ NA
 </tbody>
 </table>
 
-## 3.81 Crouze2023
+## 3.79 Crouze2023
 
 <table>
 <thead>
@@ -15657,7 +15376,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-81
+79
 
 </td>
 <td style="text-align:left;">
@@ -15689,7 +15408,7 @@ NA
 </tbody>
 </table>
 
-## 3.82 Cebesoy2019
+## 3.80 Cebesoy2019
 
 <table>
 <thead>
@@ -15869,7 +15588,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-82
+80
 
 </td>
 <td style="text-align:left;">
@@ -15901,7 +15620,7 @@ NA
 </tbody>
 </table>
 
-## 3.83 Levrini2019
+## 3.81 Levrini2019
 
 <table>
 <thead>
@@ -16076,7 +15795,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-83
+81
 
 </td>
 <td style="text-align:left;">
@@ -16108,7 +15827,7 @@ NA
 </tbody>
 </table>
 
-## 3.84 Levrini2021
+## 3.82 Levrini2021
 
 <table>
 <thead>
@@ -16286,7 +16005,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-84
+82
 
 </td>
 <td style="text-align:left;">
@@ -16318,7 +16037,7 @@ NA
 </tbody>
 </table>
 
-## 3.85 Allen2014
+## 3.83 Allen2014
 
 <table>
 <thead>
@@ -16493,7 +16212,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-85
+83
 
 </td>
 <td style="text-align:left;">
@@ -16526,7 +16245,7 @@ agreed to study
 </tbody>
 </table>
 
-## 3.86 Meya2018
+## 3.84 Meya2018
 
 <table>
 <thead>
@@ -16701,7 +16420,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-86
+84
 
 </td>
 <td style="text-align:left;">
@@ -16733,7 +16452,7 @@ NA
 </tbody>
 </table>
 
-## 3.87 Monroe2019
+## 3.85 Monroe2019
 
 <table>
 <thead>
@@ -16915,7 +16634,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-87
+85
 
 </td>
 <td style="text-align:left;">
@@ -16947,7 +16666,7 @@ NA
 </tbody>
 </table>
 
-## 3.88 Dormody2020
+## 3.86 Dormody2020
 
 <table>
 <thead>
@@ -17123,7 +16842,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-88
+86
 
 </td>
 <td style="text-align:left;">
@@ -17155,7 +16874,7 @@ NA
 </tbody>
 </table>
 
-## 3.89 Hestness2017
+## 3.87 Hestness2017
 
 <table>
 <thead>
@@ -17336,7 +17055,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-89
+87
 
 </td>
 <td style="text-align:left;">
@@ -17368,7 +17087,7 @@ NA
 </tbody>
 </table>
 
-## 3.90 Oliveira2021
+## 3.88 Oliveira2021
 
 <table>
 <thead>
@@ -17540,7 +17259,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-90
+88
 
 </td>
 <td style="text-align:left;">
@@ -17572,7 +17291,7 @@ NA
 </tbody>
 </table>
 
-## 3.91 Plutzer2018
+## 3.89 Plutzer2018
 
 <table>
 <thead>
@@ -17750,7 +17469,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-91
+89
 
 </td>
 <td style="text-align:left;">
@@ -17782,7 +17501,7 @@ NA
 </tbody>
 </table>
 
-## 3.92 Prosser_Bravo2022
+## 3.90 Prosser_Bravo2022
 
 <table>
 <thead>
@@ -17993,7 +17712,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-92
+90
 
 </td>
 <td style="text-align:left;">
@@ -18025,7 +17744,7 @@ NA
 </tbody>
 </table>
 
-## 3.93 Raes2016
+## 3.91 Raes2016
 
 <table>
 <thead>
@@ -18242,7 +17961,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-93
+91
 
 </td>
 <td style="text-align:left;">
@@ -18274,7 +17993,7 @@ NA
 </tbody>
 </table>
 
-## 3.94 Schuster2008
+## 3.92 Schuster2008
 
 <table>
 <thead>
@@ -18446,7 +18165,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-94
+92
 
 </td>
 <td style="text-align:left;">
@@ -18478,7 +18197,7 @@ NA
 </tbody>
 </table>
 
-## 3.95 Sternang2012
+## 3.93 Sternang2012
 
 <table>
 <thead>
@@ -18660,7 +18379,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-95
+93
 
 </td>
 <td style="text-align:left;">
@@ -18692,7 +18411,7 @@ NA
 </tbody>
 </table>
 
-## 3.96 Bush2019a
+## 3.94 Bush2019a
 
 <table>
 <thead>
@@ -18832,7 +18551,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-96
+94
 
 </td>
 <td style="text-align:left;">
@@ -18864,7 +18583,7 @@ NA
 </tbody>
 </table>
 
-## 3.97 de_Sousa2019
+## 3.95 de_Sousa2019
 
 <table>
 <thead>
@@ -19006,7 +18725,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-97
+95
 
 </td>
 <td style="text-align:left;">
@@ -19038,7 +18757,7 @@ NA
 </tbody>
 </table>
 
-## 3.98 Musselman2020
+## 3.96 Musselman2020
 
 <table>
 <thead>
@@ -19178,7 +18897,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-98
+96
 
 </td>
 <td style="text-align:left;">
@@ -19210,7 +18929,7 @@ Press article, not scientific
 </tbody>
 </table>
 
-## 3.99 Cohen2013
+## 3.97 Cohen2013
 
 <table>
 <thead>
@@ -19350,7 +19069,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-99
+97
 
 </td>
 <td style="text-align:left;">
@@ -19382,7 +19101,7 @@ Thesis
 </tbody>
 </table>
 
-## 3.100 Walsh2012
+## 3.98 Walsh2012
 
 <table>
 <thead>
@@ -19522,7 +19241,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-100
+98
 
 </td>
 <td style="text-align:left;">
@@ -19554,7 +19273,7 @@ Thesis
 </tbody>
 </table>
 
-## 3.101 Wallace2018
+## 3.99 Wallace2018
 
 <table>
 <thead>
@@ -19694,7 +19413,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-101
+99
 
 </td>
 <td style="text-align:left;">
@@ -19726,7 +19445,7 @@ Thesis
 </tbody>
 </table>
 
-## 3.102 da_Silva2022a
+## 3.100 da_Silva2022a
 
 <table>
 <thead>
@@ -19898,7 +19617,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-102
+100
 
 </td>
 <td style="text-align:left;">
@@ -19930,7 +19649,7 @@ NA
 </tbody>
 </table>
 
-## 3.103 Oberauer2023
+## 3.101 Oberauer2023
 
 <table>
 <thead>
@@ -20070,7 +19789,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-103
+101
 
 </td>
 <td style="text-align:left;">
@@ -20102,7 +19821,7 @@ Check quality for description of intervention
 </tbody>
 </table>
 
-## 3.104 Ouariachi2017a
+## 3.102 Ouariachi2017a
 
 <table>
 <thead>
@@ -20245,7 +19964,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-104
+102
 
 </td>
 <td style="text-align:left;">
@@ -20277,7 +19996,7 @@ NA
 </tbody>
 </table>
 
-## 3.105 Sezen_Barrie2020
+## 3.103 Sezen_Barrie2020
 
 <table>
 <thead>
@@ -20455,7 +20174,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-105
+103
 
 </td>
 <td style="text-align:left;">
@@ -20487,7 +20206,7 @@ NA
 </tbody>
 </table>
 
-## 3.106 Walsh2018
+## 3.104 Walsh2018
 
 <table>
 <thead>
@@ -20631,7 +20350,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-106
+104
 
 </td>
 <td style="text-align:left;">
@@ -20663,7 +20382,7 @@ NA
 </tbody>
 </table>
 
-## 3.107 Bopardikar2021
+## 3.105 Bopardikar2021
 
 <table>
 <thead>
@@ -20803,7 +20522,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-107
+105
 
 </td>
 <td style="text-align:left;">
@@ -20813,7 +20532,7 @@ Bopardikar2021
 </td>
 <td style="text-align:left;">
 
-Ana
+Marius,Ana
 
 </td>
 <td style="text-align:left;">
@@ -20835,7 +20554,7 @@ Ana found that there were no outcome during extraction
 </tbody>
 </table>
 
-## 3.108 Turner2022
+## 3.106 Turner2022
 
 <table>
 <thead>
@@ -20977,7 +20696,7 @@ Comment
 <tr>
 <td style="text-align:left;">
 
-108
+106
 
 </td>
 <td style="text-align:left;">
@@ -21003,6 +20722,527 @@ Outcome
 <td style="text-align:left;">
 
 Excluded during extraction (motivation toward intervention, not outcome)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.107 Trott2020
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+205
+
+</td>
+<td style="text-align:right;">
+
+22
+
+</td>
+<td style="text-align:left;">
+
+Sergio
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+455
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+107
+
+</td>
+<td style="text-align:left;">
+
+Trott2020
+
+</td>
+<td style="text-align:left;">
+
+Marius,Ana
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Excluded during extraction (2 cases studies on the use of photo
+activities, but no outcome in cognition, attitude, behavior)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.108 Ross2021
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+67
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+The paper is rooted in a new and particular analysis framework (based on
+the work of Bourdieux) it might be difficult to compare the results with
+other papers
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+449
+
+</td>
+<td style="text-align:right;">
+
+5
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+108
+
+</td>
+<td style="text-align:left;">
+
+Ross2021
+
+</td>
+<td style="text-align:left;">
+
+Marius,Luisa
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+<td style="text-align:left;">
+
+Excluded during extraction: the problem is that the outcomes are
+explained by sociological factors (Bourdieu’s framework), not by the
+intervention
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 3.109 Leckey2021a
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+assignment
+
+</th>
+<th style="text-align:left;">
+
+person
+
+</th>
+<th style="text-align:left;">
+
+incl
+
+</th>
+<th style="text-align:left;">
+
+reasonExcl
+
+</th>
+<th style="text-align:left;">
+
+comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+84
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+no doubt for me here
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+489
+
+</td>
+<td style="text-align:right;">
+
+6
+
+</td>
+<td style="text-align:left;">
+
+Ana
+
+</td>
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+<td style="text-align:left;">
+
+NA
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Decision**:
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+abbrev
+
+</th>
+<th style="text-align:left;">
+
+People
+
+</th>
+<th style="text-align:left;">
+
+Inclusion
+
+</th>
+<th style="text-align:left;">
+
+ReasonExlusion
+
+</th>
+<th style="text-align:left;">
+
+Comment
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+109
+
+</td>
+<td style="text-align:left;">
+
+Leckey2021a
+
+</td>
+<td style="text-align:left;">
+
+Marius
+
+</td>
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+<td style="text-align:left;">
+
+Duplicate
+
+</td>
+<td style="text-align:left;">
+
+NA
 
 </td>
 </tr>
@@ -21059,20 +21299,22 @@ Excluded during extraction (motivation toward intervention, not outcome)
     ## [121] "White2022"             "Williams2017"          "Markowitz2018"        
     ## [124] "Jacobson2017"          "Deisenrieder2020"      "Feierabend2012"       
     ## [127] "Goulah2017"            "McNeal2014a"           "Miller2015"           
-    ## [130] "Ratinen2013"           "Sukardi2022"           "Jin2013"              
-    ## [133] "Lambert2012"           "McGowan2022"           "Nkoana2020"           
-    ## [136] "Pruneau2006a"          "Saribaş2016"           "Schuster2018"         
-    ## [139] "Siegner2018"           "Sutela2023"            "Xie2014"              
-    ## [142] "Zhong2021"             "Zografakis2008"        "Muller2021"           
-    ## [145] "Cebesoy2019"           "Levrini2021"           "Meya2018"             
-    ## [148] "Dormody2020"           "Raes2016"              "Schuster2008"         
-    ## [151] "Sternang2012"          "Oberauer2023"          "Walsh2018"
+    ## [130] "Ratinen2013"           "Jin2013"               "Lambert2012"          
+    ## [133] "McGowan2022"           "Nkoana2020"            "Pruneau2006a"         
+    ## [136] "Saribaş2016"           "Siegner2018"           "Sutela2023"           
+    ## [139] "Xie2014"               "Zhong2021"             "Zografakis2008"       
+    ## [142] "Muller2021"            "Cebesoy2019"           "Levrini2021"          
+    ## [145] "Meya2018"              "Dormody2020"           "Raes2016"             
+    ## [148] "Schuster2008"          "Sternang2012"          "Oberauer2023"         
+    ## [151] "Walsh2018"
 
 ``` r
+AcceptedFinal<-AcceptedFinal[!AcceptedFinal %in% finalDecisionTab$abbrev[!finalDecisionTab$Inclusion]]
+
 length(AcceptedFinal)
 ```
 
-    ## [1] 153
+    ## [1] 146
 
 ``` r
 RejectedFinal<-
@@ -21082,7 +21324,12 @@ RejectedFinal<-
       id=finalDecisionTab$abbrev[!is.na(finalDecisionTab$Inclusion)&!as.logical(finalDecisionTab$Inclusion)],
       reason=finalDecisionTab$ReasonExlusion[!is.na(finalDecisionTab$Inclusion)&!as.logical(finalDecisionTab$Inclusion)]
     ))
-kable(RejectedFinal,row.names = F)  
+```
+
+## 4.1 rejection reason table
+
+``` r
+kable(RejectedFinal,row.names = F)
 ```
 
 <table>
@@ -22265,24 +22512,87 @@ Outcome
 
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+
+Trott2020
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Ross2021
+
+</td>
+<td style="text-align:left;">
+
+Outcome
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Leckey2021a
+
+</td>
+<td style="text-align:left;">
+
+Duplicate
+
+</td>
+</tr>
 </tbody>
 </table>
+
+## 4.2 rejection reason numbers
 
 ``` r
 table(RejectedFinal$reason)
 ```
 
     ## 
-    ##          I+O Intervention   MissingPdf      Outcome          P+I        P+I+O 
-    ##            7            8            1           40            3            7 
-    ##   Population    StudyType 
-    ##           21           10
+    ##    Duplicate          I+O Intervention   MissingPdf      Outcome          P+I 
+    ##            1            7            8            1           42            3 
+    ##        P+I+O   Population    StudyType 
+    ##            7           21           10
 
 ``` r
 save(AcceptedFinal,file="../../screening/fullTextScreening/acceptedFinal.RData")
 ```
 
-## 4.1 Missing decisions
+``` r
+rawExtract<-read.xlsx("../../extraction/20231022.xlsx",sheet = "extraction ",startRow = 2)
+AcceptedFinal[!AcceptedFinal%in%rawExtract$id]
+```
+
+    ## character(0)
+
+``` r
+rawExtract$id[!rawExtract$id%in%AcceptedFinal]
+```
+
+    ## character(0)
+
+``` r
+length(unique(rawExtract$id))
+```
+
+    ## [1] 146
+
+``` r
+length(AcceptedFinal)
+```
+
+    ## [1] 146
+
+## 4.3 Missing decisions
 
 ``` r
 load("../../screening/fullTextScreening/FTS.RData")
