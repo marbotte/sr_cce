@@ -94,7 +94,7 @@ par(mar=c(1,1,1,1))
 plot(st_geometry(worldMap_tot),border="grey",lwd=0.5)
 plot(st_geometry(worldMap_tot[orderCt,]),border="black",lwd=0.7,col=colorsScale[scaleNb],add=T)
 plot(st_geometry(tinyCountries[orderTinyCountries,]),pch=22,bg = colorsScale[scaleNb[indexTinyCountries]],add=T,cex=.7)
-legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5","5-10",">10"))
+legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5","5-10",paste0(">10 (USA: ",max(nbBycountry),")")))
 
 
 countryStudy$FinalName<-NA

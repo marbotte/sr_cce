@@ -210,7 +210,7 @@ extract$datepubl<-as.integer(gsub("\\.0$","",gsub("^([A-Z][a-z]+ )([12][0-9]{3})
     ##                  2015                  2012                  2012 
     ##            Roscoe2013      Roychoudhury2017            Ruboon2012 
     ##                  2012                  2017                  2012 
-    ##       Salas_Rueda2021         Salsabila2019          Saribaş2016  
+    ##       Salas_Rueda2021         Salsabila2019           Saribaş2016 
     ##                  2021                  2019                  2016 
     ##           Schrot2021a        Schubatzky2022          Schuster2008 
     ##                  2020                  2022                  2008 
@@ -341,7 +341,7 @@ par(mar=c(1,1,1,1))
 plot(st_geometry(worldMap_tot),border="grey",lwd=0.5)
 plot(st_geometry(worldMap_tot[orderCt,]),border="black",lwd=0.7,col=colorsScale[scaleNb],add=T)
 plot(st_geometry(tinyCountries[orderTinyCountries,]),pch=22,bg = colorsScale[scaleNb[indexTinyCountries]],add=T,cex=.7)
-legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5","5-10",">10"))
+legend("bottomleft",title="# Documents",fill=colorsScale,legend=c("1","2-3","4-5","5-10",paste0(">10 (USA: ",max(nbBycountry),")")))
 ```
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
@@ -1859,7 +1859,7 @@ Lombardi2013, Nicholas_Figueroa2017, Petersen2020, Puttick2018,
 Salas_Rueda2021, Schubatzky2022, Sellmann2013, Shea2016, Steffensen2022,
 Taber2009, Varma2012, Williams2017, Korfgen2017, Cebesoy2019,
 Dormody2020, Kolenaty2022, Kumar2023, Mason1998, Feldpausch_Parker2013,
-Roscoe2013, Raes2016, McGowan2022, Klosterman2010, Saribaş2016 ,
+Roscoe2013, Raes2016, McGowan2022, Klosterman2010, Saribaş2016,
 Reinfried2012, Sellmann2013a, Sternang2012, Sutela2023, Stevenson2018a,
 Xie2014, Xie2014, Trott2019, Trott2022, Markowitz2018, Zhong2021,
 Harker_Schuch2013, Harker_Schuch2020, Lambert2013, Littrell2022,
@@ -23746,8 +23746,8 @@ sqldf(
 )
 ```
 
-    ##     GROUP_CONCAT(id, ', ')
-    ## 1 Saribaş2016 , Sutela2023
+    ##    GROUP_CONCAT(id, ', ')
+    ## 1 Saribaş2016, Sutela2023
 
 ``` r
 sqldf(
@@ -23758,9 +23758,9 @@ sqldf(
 )
 ```
 
-    ##             id                  pop person                           TheoFra
-    ## 1 Saribaş2016  Pre-service teachers   JGOP Professional development workshop
-    ## 2   Sutela2023             Teachers   JGOP                       Alternative
+    ##            id                  pop person                           TheoFra
+    ## 1 Saribaş2016 Pre-service teachers   JGOP Professional development workshop
+    ## 2  Sutela2023             Teachers   JGOP                       Alternative
     ##             curri
     ## 1 Extracurricular
     ## 2      Curricular
