@@ -1581,11 +1581,27 @@ rownames(tbOutcomeRururb_Unclear)<-levels(rururbDoc)
 (tbOutcomeRururb_Unclear<-t(tbOutcomeRururb_Unclear))
 
 
-
 bp<-barplot(tbOutcomeRururb,beside=T,col=rainbow(nrow(tbOutcomeRururb)),legend=T,xlab="Rural/Urban", args.legend=list(x="top"))
 rect(xleft=as.vector(bp)-0.5,ybottom = 0,xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeRururb_No),density=20,angle = 45)
 rect(xleft=as.vector(bp)-0.5,ybottom = as.vector(tbOutcomeRururb_No),xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeRururb_No)+as.vector(tbOutcomeRururb_Unclear),density=20,angle = 90)
 legend("topright",density=c(0,20,20),angle=c(0,45,90),title="Did it work?",c("Yes","No","Unclear"))
 ```
+
+
+## Conclusions: country income and Rural/Urban
+
+| Comparison | Country income | Rural/Urban |
+|-----------:|:---------------|:------------|
+| Publication years | Low and middle outcome are more important in last years. Middle to low are present in 2015, 2019 and 2022 only | Rural only from 2015, both from 2008, no clear pattern |
+| Population | Comparatively more students in high income, only students in low, 1 study only for mixed in middle, parents in high income only | In rural and both very few other populations than students |
+| Student age | Not much to say | Very few of the youngest in in Rural, 12-15 and 16-19 comparable in Rural while more 12-15 in urban |
+| Rural/Urban | Vey few studies in Rural/Both in middle and low income countries | --- |
+| Controversy | Controversy in only high incomes | Comparatively more controversy in rural (probably republican importance in rural USA) |
+| Mitigation/adaptation | Adaptation is particularly present in Middle to high income countries (more studies than in high income countries, even though less total studies) | No adaptation in rural!!!, but more both than mitigation, contrary to Urban |
+| Curricular/Extracurricular | Professional development comparatively more important in middle, only curricular in low | More extracurricular in rural, contrary to urban |
+| Pedagogical tools | Not much to say, due to numbers game-based only in high income, no project-based, technology, cultural and games in low | In rural only lesson based and combined strategies. When both a bit of curriculum based, cultural based and game-based but comparatively less than in urban |
+| Theoretical framework | Alternative comparatively much more important in high income countries. Teacher centered comparatively less important in high income countries (more "traditional" way to teach in lower income situations?) | Comparatively more alternative in Rural, learner-centered and teacher-centered and promoting social awareness comparable, contrary to urban  where learner-centered > alternative > teacher centered> professional > promoting social awareness. In both, professional and promoting awareness go before teacher-centered |
+| Intervention period | More very short unique and week periods in high income countries, only large periods in low (but missing data) | Very few very short in Rural, but comparatively less large period as well. In both, the main  difference in less week period  |
+| Outcomes and effectiveness | Behavior more important in middle to high (comparable to attitudes), no attitude/behavior in low | In rural only cognition/attitudes (no behavior). Cognition and behavior are also more comparable. In both, behavior are more present than attitudes |
 
 
