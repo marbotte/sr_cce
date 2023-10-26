@@ -1,14 +1,15 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-22
+2023-10-25
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
 - [3 Countries](#3-countries)
   - [3.1 Making the map](#31-making-the-map)
 - [4 Years/Region of the world](#4-yearsregion-of-the-world)
-  - [4.1 Income group](#41-income-group)
+  - [4.1 Countries authors](#41-countries-authors)
+  - [4.2 Income group](#42-income-group)
 - [5 Outcomes](#5-outcomes)
 - [6 Population](#6-population)
   - [6.1 Rural/urban](#61-ruralurban)
@@ -50,6 +51,46 @@ Marius Bottin
   - [16.3 Ages and outcomes](#163-ages-and-outcomes)
   - [16.4 Effectiveness](#164-effectiveness)
     - [16.4.1 Young student](#1641-young-student)
+  - [16.5 Ages percentages](#165-ages-percentages)
+  - [16.6 Outcomes numbers](#166-outcomes-numbers)
+- [17 Exploring more (AFD requests)](#17-exploring-more-afd-requests)
+  - [17.1 Income group](#171-income-group)
+    - [17.1.1 Evolution over time](#1711-evolution-over-time)
+    - [17.1.2 Comparison with
+      population](#1712-comparison-with-population)
+    - [17.1.3 Age of students](#1713-age-of-students)
+    - [17.1.4 Rural/Urban](#1714-ruralurban)
+    - [17.1.5 Comparison with
+      controversy](#1715-comparison-with-controversy)
+    - [17.1.6 Comparison with
+      mitigation/adaptation](#1716-comparison-with-mitigationadaptation)
+    - [17.1.7 Comparison with
+      curricular/extracurricular](#1717-comparison-with-curricularextracurricular)
+    - [17.1.8 Comparison with pedagogical
+      tools](#1718-comparison-with-pedagogical-tools)
+    - [17.1.9 Comparison with theoretical
+      framework](#1719-comparison-with-theoretical-framework)
+    - [17.1.10 Comparison with time](#17110-comparison-with-time)
+    - [17.1.11 Comparison with outcomes and
+      effectiveness](#17111-comparison-with-outcomes-and-effectiveness)
+  - [17.2 Rural/urban](#172-ruralurban)
+    - [17.2.1 Evolution over time](#1721-evolution-over-time)
+    - [17.2.2 Comparison with
+      population](#1722-comparison-with-population)
+    - [17.2.3 Age of students](#1723-age-of-students)
+    - [17.2.4 Comparison with
+      controversy](#1724-comparison-with-controversy)
+    - [17.2.5 Comparison with
+      mitigation/adaptation](#1725-comparison-with-mitigationadaptation)
+    - [17.2.6 Comparison with
+      curricular/extracurricular](#1726-comparison-with-curricularextracurricular)
+    - [17.2.7 Comparison with pedagogical
+      tools](#1727-comparison-with-pedagogical-tools)
+    - [17.2.8 Comparison with theoretical
+      framework](#1728-comparison-with-theoretical-framework)
+    - [17.2.9 Comparison with time](#1729-comparison-with-time)
+    - [17.2.10 Comparison with outcomes and
+      effectiveness](#17210-comparison-with-outcomes-and-effectiveness)
 
 ``` r
 require(openxlsx)&require(knitr)&require(kableExtra)
@@ -392,7 +433,217 @@ text(datesOnGraph,c(6,16.5),events, cex=.7)
 
 ![](results_graphs_number_files/figure-gfm/yearRegions-2.png)<!-- -->
 
-## 4.1 Income group
+## 4.1 Countries authors
+
+``` r
+extract$Countries.AUTHORS<-gsub(" ?Puerto Rico \\(United States\\)","United States",gsub("Estados Unidos","United States",gsub("BRASIL","Brazil",gsub("England","United Kingdom",gsub("UK","United Kingdom",gsub("USA","United States",extract$Countries.AUTHORS))))))
+sepCountryA<-strsplit(extract$Countries.AUTHORS,"[,;]")
+countryStudyA<-data.frame(id=rep(rawExtract$id,sapply(sepCountryA,length)),
+           country=unlist(sepCountryA))
+countryStudyA$country<-str_to_title(gsub(" +$","",gsub("^and ","",gsub("^ +","",countryStudyA$country))))
+countryStudyA$FinalName<-NA
+countryStudyA$FinalName<-worldMap_tot[match(countryStudyA$country,worldMap_tot$name),]$name
+countryStudyA$FinalName[countryStudyA$country%in%InTinyCountries] <- tinyCountries$NAME[match(countryStudyA$country[countryStudyA$country%in%InTinyCountries],tinyCountries$NAME)]
+countryStudyA$FinalName[is.na(countryStudyA$FinalName)]<-worldMap_tot[match(countryStudyA$country[is.na(countryStudyA$FinalName)],worldMap_tot$name_long),]$name
+A<-tapply(countryStudyA$FinalName,countryStudyA$id,function(x)x)
+B<-tapply(countryStudy$FinalName,countryStudy$id,function(x)x)
+names(A)==names(B)
+```
+
+    ##   [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    ##  [16] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    ##  [31] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    ##  [46] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    ##  [61] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    ##  [76] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    ##  [91] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    ## [106] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    ## [121] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+    ## [136] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+
+``` r
+res<-mapply(function(a,b)b[!b%in%a],A,B)
+res<-res[sapply(res,function(x)length(x)>0)]
+kable(extract[extract$id%in%names(res),c("Countries.AUTHORS","Countries.STUDY")])
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+
+Countries.AUTHORS
+
+</th>
+<th style="text-align:left;">
+
+Countries.STUDY
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+3
+
+</td>
+<td style="text-align:left;">
+
+United States
+
+</td>
+<td style="text-align:left;">
+
+United States;China;New Zealand;Norway
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+84
+
+</td>
+<td style="text-align:left;">
+
+Austria
+
+</td>
+<td style="text-align:left;">
+
+Germany
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+88
+
+</td>
+<td style="text-align:left;">
+
+Belgium
+
+</td>
+<td style="text-align:left;">
+
+South Africa
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+94
+
+</td>
+<td style="text-align:left;">
+
+Austria
+
+</td>
+<td style="text-align:left;">
+
+Germany; Austria
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+106
+
+</td>
+<td style="text-align:left;">
+
+China
+
+</td>
+<td style="text-align:left;">
+
+Sweden
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+133
+
+</td>
+<td style="text-align:left;">
+
+Denmark
+
+</td>
+<td style="text-align:left;">
+
+Austria; Denmark
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+134
+
+</td>
+<td style="text-align:left;">
+
+Australia; Sweden
+
+</td>
+<td style="text-align:left;">
+
+Austria; Australia
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+148
+
+</td>
+<td style="text-align:left;">
+
+United States
+
+</td>
+<td style="text-align:left;">
+
+Greenland; Denmark; United States
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+151
+
+</td>
+<td style="text-align:left;">
+
+Canada; United States
+
+</td>
+<td style="text-align:left;">
+
+Brazil; Canada; Colombia; Costa Rica; Finland; Ghana; India; Indonesia;
+Kenya; Kuwait; Nigeria; Oman; Peru; Philippines; Poland; Slovenia; South
+Korea; Uganda
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 4.2 Income group
 
 ``` r
 #countryDoc
@@ -444,6 +695,98 @@ barplot(table(c(worldMap_tot$income_grp,tinyCountries$INCOME_GRP)),las=2)
 ```
 
 ![](results_graphs_number_files/figure-gfm/countryOutcomes-1.png)<!-- -->
+
+``` r
+barplot(table(incomeGrpDoc,yearPaper,useNA="ifany"),col=rainbow(nlevels(factor(incomeGrpDoc))+1),legend=T,args.legend = list(x="topleft"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+``` r
+countryStudy$income_grp <- worldMap_tot[match(countryStudy$FinalName,worldMap_tot$name),]$income_grp
+countryStudy$economy <- worldMap_tot[match(countryStudy$FinalName,worldMap_tot$name),]$economy
+countryStudy$gdp_md <- worldMap_tot[match(countryStudy$FinalName,worldMap_tot$name),]$gdp_md
+countryStudy$income_grp[is.na(countryStudy$income_grp)]<-tinyCountries[match(countryStudy$FinalName [is.na(countryStudy$income_grp)],tinyCountries$NAME),]$INCOME_GRP
+countryStudy$economy[is.na(countryStudy$economy)]<-tinyCountries[match(countryStudy$FinalName[is.na(countryStudy$economy)],tinyCountries$NAME),]$ECONOMY
+countryStudy$gdp_md[is.na(countryStudy$gdp_md)]<-tinyCountries[match(countryStudy$FinalName[is.na(countryStudy$gdp_md)],tinyCountries$NAME),]$GDP_MD
+
+tapply(countryStudy$country,countryStudy$income_grp,unique)
+```
+
+    ## $`1. High income: OECD`
+    ##  [1] "Denmark"        "United States"  "New Zealand"    "Norway"        
+    ##  [5] "Canada"         "Portugal"       "Australia"      "South Korea"   
+    ##  [9] "Germany"        "Austria"        "Japan"          "France"        
+    ## [13] "United Kingdom" "Spain"          "Finland"        "Czech Republic"
+    ## [17] "Italy"          "Iceland"        "Belgium"        "Switzerland"   
+    ## [21] "Sweden"         "Greece"         "Poland"         "Slovenia"      
+    ## 
+    ## $`2. High income: nonOECD`
+    ## [1] "Singapore" "Taiwan"    "Greenland" "Kuwait"    "Oman"     
+    ## 
+    ## $`3. Upper middle income`
+    ##  [1] "Turkey"       "China"        "Thailand"     "Mexico"       "Brazil"      
+    ##  [6] "Malaysia"     "South Africa" "Colombia"     "Costa Rica"   "Peru"        
+    ## 
+    ## $`4. Lower middle income`
+    ## [1] "Indonesia"   "Ghana"       "India"       "Nigeria"     "Philippines"
+    ## 
+    ## $`5. Low income`
+    ## [1] "Bangladesh" "Kenya"      "Uganda"
+
+``` r
+tapply(countryStudy$country,countryStudy$economy,unique)
+```
+
+    ## $`1. Developed region: G7`
+    ## [1] "United States"  "Canada"         "Germany"        "Japan"         
+    ## [5] "France"         "United Kingdom" "Italy"         
+    ## 
+    ## $`2. Developed region: nonG7`
+    ##  [1] "Denmark"        "New Zealand"    "Norway"         "Portugal"      
+    ##  [5] "Australia"      "Austria"        "Spain"          "Finland"       
+    ##  [9] "Czech Republic" "Iceland"        "Belgium"        "Switzerland"   
+    ## [13] "Sweden"         "Greece"         "Taiwan"         "Greenland"     
+    ## [17] "Poland"         "Slovenia"      
+    ## 
+    ## $`3. Emerging region: BRIC`
+    ## [1] "China"  "Brazil" "India" 
+    ## 
+    ## $`4. Emerging region: MIKT`
+    ## [1] "Turkey"      "South Korea" "Mexico"      "Indonesia"  
+    ## 
+    ## $`5. Emerging region: G20`
+    ## [1] "Thailand"     "South Africa" "Costa Rica"   "Kenya"        "Nigeria"     
+    ## [6] "Peru"         "Philippines" 
+    ## 
+    ## $`6. Developing region`
+    ## [1] "Singapore" "Malaysia"  "Colombia"  "Ghana"     "Kuwait"    "Oman"     
+    ## 
+    ## $`7. Least developed region`
+    ## [1] "Bangladesh" "Uganda"
+
+``` r
+countryStudy$econFinal<-NA
+countryStudy$econFinal[grepl("1",countryStudy$economy) | grepl("2",countryStudy$economy)] <- "Developed region"
+countryStudy$econFinal[grepl("3",countryStudy$economy) | grepl("4",countryStudy$economy) | grepl("5",countryStudy$economy)] <- "Emerging region"
+countryStudy$econFinal[grepl("^6",countryStudy$economy) | grepl("^7",countryStudy$economy)] <- "Developing region"
+econDoc<-factor(sapply(tapply(countryStudy$econFinal, countryStudy$id, unique), function(x) if(length(x)>1){return(NA)}else{return(x)}),levels=c("Developed region","Emerging region","Developing region"), ordered=T)
+barplot(table(econDoc,useNA="ifany"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+``` r
+countryStudy$incomeFinal <- NA
+countryStudy$incomeFinal [grepl("1",countryStudy$income_grp)|grepl("2",countryStudy$income_grp)] <- "High"
+countryStudy$incomeFinal[grepl("3",countryStudy$income_grp)] <- "Middle to high"
+countryStudy$incomeFinal [grepl("4",countryStudy$income_grp)|grepl("5",countryStudy$income_grp)] <- "Middle to low"
+
+incomeDoc<-factor(sapply(tapply(countryStudy$incomeFinal, countryStudy$id, unique), function(x) if(length(x)>1){return(NA)}else{return(x)}), levels=c("High","Middle to high","Middle to low"), ordered=T)
+barplot(table(incomeDoc,useNA="ifany"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
 
 # 5 Outcomes
 
@@ -649,7 +992,8 @@ Other
 </table>
 
 ``` r
-barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"))
+par(mar=c(6,4,1,1))
+barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"),names.arg = c("knowledge","awareness","intent","emotion","action","habit","Other"))
 ```
 
 ![](results_graphs_number_files/figure-gfm/outcomes-2.png)<!-- -->
@@ -774,7 +1118,7 @@ par(mar=c(10,4,1,1))
 barplot(table(populClean,useNA = "ifany"),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 Clean, by row:
 
@@ -938,7 +1282,7 @@ segments(tabForPlot$age_min_stud[tabForPlot$age_stud_type_info%in%c("minmax","al
 points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")],(1:nrow(tabForPlot))[tabForPlot$age_stud_type_info%in%c("mean","all")],pch=3,cex=.5)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ### 6.3.1 Adding ages from grades
 
@@ -966,7 +1310,7 @@ points(tabForPlot$age_aver_stud[tabForPlot$age_stud_type_info%in%c("mean","all")
 legend("topleft",lwd=c(1,.5,NA),lty=c(1,3,NA),pch=c(NA,NA,3),legend=c("Range given","Range from grades","Average given"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ## 6.4 Population final categories
 
@@ -1342,7 +1686,7 @@ catAgeConcernedWeight<-sapply(tapply(colnames(ageConcerned),categoriesCol,functi
 barplot(colSums(catAgeConcerned))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 Number of age categories by study:
 
@@ -1350,7 +1694,7 @@ Number of age categories by study:
 barplot(table(rowSums(catAgeConcerned)))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 ``` r
 rangeByStudyText<-apply(catAgeConcerned,1,function(x,cat)paste(paste(cat[x],sep=""),collapse=", "),cat=colnames(catAgeConcerned))
@@ -1397,7 +1741,7 @@ popTot<-factor(popTot,
 barplot(table(popTot,useNA = "ifany"),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 ``` r
 catAgeConcerned_df<- data.frame(
@@ -1513,7 +1857,7 @@ controvByDoc<-tapply(extract$controv_clean,extract$id,function(x)
 barplot(PercentageControversy,las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ``` r
 sum(controvByDoc=="Yes"&countryDoc[names(controvByDoc)]=="United States of America",na.rm = T)/sum(controvByDoc=="Yes",na.rm=T)
@@ -1538,7 +1882,7 @@ par(mar=c(11,4,1,1))
 barplot(t(A[order(A[,2],A[,1],decreasing=T),1:2]),beside=T,col=c("blue","red"),las=2,legend=T,args.legend = list(title="Controversy"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-17-2.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-2.png)<!-- -->
 
 **Calculations for text**
 
@@ -1776,7 +2120,7 @@ table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 \# Disciplines
 
 ``` r
@@ -1800,7 +2144,7 @@ disciplineClean[grepl("NA",extract$Disciplin_2)|is.na(extract$Disciplin_2)]<-"ND
 barplot(sort(table(disciplineClean),decreasing=T), las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 # 9 Educational framework
 
@@ -2439,13 +2783,14 @@ forTempPlot<-forTempPlot[order(forTempPlot,decreasing=T)]
 #forTempPlot<-c(forTempPlot,other)
 par(mar=c(15,4,1,1))
 bp<-barplot(forTempPlot,las=2)
-#legend("topright",density=18,"consistent with")
-text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ``` r
+#legend("topright",density=18,"consistent with")
+#text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
+
 kable(sort(table(tabTheoBack$theoBack),decreasing=T))
 ```
 
@@ -2535,7 +2880,7 @@ par(mar=c(15,4,1,1))
 barplot(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`)),col=rainbow(nlevels(popTot)), las=2, legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ``` r
 kable(as.matrix(table(popTot,extract$`Theoretical.framework.(big.categories)`,useNA="ifany")))
@@ -2997,7 +3342,7 @@ extract$Categories.type.of.intervention<-factor(extract$Categories.type.of.inter
 barplot(table(extract$Categories.type.of.intervention,extract$`Theoretical.framework.(big.categories)`),col=rainbow(nlevels(extract$Categories.type.of.intervention)),las=2,legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 # 12 Methods & design
 
@@ -3029,7 +3374,7 @@ sort(table(extract$QuantQualClean,useNA = "ifany"),decreasing = T)
 barplot(sort(table(extract$QuantQualClean),decreasing = T))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
 
 ## 12.2 Pre-post
 
@@ -3064,7 +3409,7 @@ colSums(tabMetodosAnalyses)/sum(tabMetodosAnalyses)
 barplot(table(extract$`Pre/Post`,extract$QuantQualClean,useNA="ifany"), legend=T,args.legend = list(x="topleft",title="Pre/post"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 ``` r
 A<-sort(table(extract$design),decreasing=T)
@@ -3218,7 +3563,7 @@ designClean<-factor(designClean,levels=c("Pre-post", "Pre-post + Control", "Pre-
 barplot(table(designClean),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
 
 ``` r
 par(mfrow=c(1,2))
@@ -3227,7 +3572,7 @@ barplot(table(designClean),las=2)
 barplot(sort(table(extract$QuantQualClean),decreasing = T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
 
 # 13 Characteristics of interventions
 
@@ -3249,7 +3594,7 @@ barplot(c(
 )
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
 
 ### 13.1.2 From table
 
@@ -3258,7 +3603,7 @@ par(mar=c(14,4,1,1))
 barplot(sort(table(extract$Categories.type.of.intervention),decreasing=T),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
 
 ``` r
 extract$Categories.type.of.intervention <- extract$Categories.type.of.intervention <-factor(extract$Categories.type.of.intervention, levels = names(sort(table(extract$Categories.type.of.intervention), decreasing=T)))
@@ -3271,7 +3616,7 @@ opar <- par(lwd = 0.4)
 barplot(table(extract$Categories.type.of.intervention,factor(extract$datepubl,levels=min(extract$datepubl):max(extract$datepubl))),beside=T,col=rainbow(nlevels(extract$Categories.type.of.intervention)), legend=T, args.legend=list(x="topleft"), lwd=.1, cex.names=.8)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
 
 ## 13.2 Curricular/extracurricular
 
@@ -3322,7 +3667,7 @@ par(mar=c(12,4,1,1))
 barplot(table(curExtraCur,useNA="ifany"),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
 
 ## 13.3 Indoor/outdoor
 
@@ -3425,7 +3770,7 @@ hist(as.integer(gsub("^~","",extract$Number.of.sessions)),main="",xlab="Number o
 legend("topright",legend=paste(c("n="),c(sum(!is.na(extract$Number.of.sessions)))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
 
 ``` r
 extract$Total.duration.of.the.intervention
@@ -7612,7 +7957,7 @@ axis(1,at=c(0,60*c(20,50,100,150)),labels=c("0","20h","50h","100h","150h"),las=1
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!totalDur$ND),sum(totalDur$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
 
 ``` r
 extract$Period.length
@@ -14716,7 +15061,7 @@ axis(1,at=c(1,24,24*7,24*30.5,24*364,24*364*2,24*364*3),labels=c(NA,NA,"week","m
 legend("topright",legend=paste(c("n=","approximate values:"),c(sum(!perLen$ND),sum(perLen$approx,na.rm = T))),bty = "n")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-42-1.png)<!-- -->
 
 ## 14.1 intervention time categories
 
@@ -23497,7 +23842,7 @@ NA
 barplot(table(extract$Horizon.of.change,extract$Intervention.time.category,useNA = "ifany"),beside = T,legend=T, args.legend = list(title="Horizon of change"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-43-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-46-1.png)<!-- -->
 
 ### 14.3.2 With outcomes
 
@@ -23520,7 +23865,7 @@ barplot(table(didItWork_outcomes[tf_outcomes[,"action"],"action"],extract$Interv
 barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Intervention.time.category[tf_outcomes[,"habit"]]), las=2, legend=T, args.legend = list(x="topleft"), main = "Habit")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-44-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-47-1.png)<!-- -->
 
 ### 14.3.3 Simplified
 
@@ -23563,15 +23908,15 @@ A<-table(data.frame(
 )
 par(mfrow=c(1,3))
 YLIM<-c(0,70)
-barplot(A[,,1],  xlab = "Cognition", ylim=YLIM)
+barplot(A[,,1],  xlab = "Cognition", ylim=YLIM, names.arg = c("short contact\ntime", "days to\nmonth","> month"),cex.name=1.1,col=rainbow(3))
 PARMAR<-par("mar")
 PARMAR[2]<-1
 par(mar=PARMAR)
-barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
-barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
+barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n",names.arg = c("short contact\ntime", "days to\nmonth","> month"),cex.name=1.1,col=rainbow(3))
+barplot(A[,,3], legend=T, args.legend = list(cex=1.5, title="Effectiveness"), xlab="Behavior", ylim=YLIM,yaxt="n",names.arg = c("short contact\ntime", "days to\nmonth","> month"),cex.name=1.1, cex.axis=1.5,col=rainbow(3))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-45-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-48-1.png)<!-- -->
 
 # 15 Analisis
 
@@ -23684,14 +24029,14 @@ sqldf(
 barplot(tablify(sqldf("SELECT curri,population,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"curri","population","nbPaper"),las=2,legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-49-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-52-1.png)<!-- -->
 
 ``` r
 par(mar=c(12,4,1,1))
 barplot(tablify(sqldf("SELECT TheoFra,curri,count(DISTINCT id) nbPaper FROM byRow GROUP BY curri, population"),"TheoFra","curri","nbPaper"),las=2,legend=T,col=rainbow(6))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-50-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-53-1.png)<!-- -->
 
 ## 16.1 Innovative?
 
@@ -23863,7 +24208,7 @@ popAgeSep_df<-sqldf(
 barplot(tabAgeCatOutomeTot,beside=T,col=rainbow(nrow(tabAgeCatOutomeTot)),legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-55-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-58-1.png)<!-- -->
 
 ## 16.4 Effectiveness
 
@@ -23920,7 +24265,7 @@ par(mar=c(12,4,4,1))
 barplot(t(tabPopTheoFraTot),beside=T,col=rainbow(ncol(tabPopTheoFraYes_comp)),main="Total",las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-56-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-59-1.png)<!-- -->
 
 ``` r
 tabPopoutcomeTot<-tablify(sqldf(
@@ -23975,7 +24320,7 @@ par(mar=c(12,4,4,1))
 barplot(t(tabPopoutcomeTot),beside=T,col=rainbow(ncol(tabPopoutcomeYes_comp)),main="Total",las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-57-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-60-1.png)<!-- -->
 
 ### 16.4.1 Young student
 
@@ -24075,3 +24420,937 @@ sqldf(
     ##            id idRow       population ageMin ageMax   outcome didItWork
     ## 1 Korfgen2017    41 Students (12-15)     13     15 awareness       Yes
     ## 2 Korfgen2017    41 Students (12-15)     13     15 knowledge       Yes
+
+## 16.5 Ages percentages
+
+Only accounting for students:
+
+``` r
+sqldf(
+  "SELECT pop, ageCat, count(DISTINCT id)
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  GROUP BY pop, ageCat
+  "
+)
+```
+
+    ##                     pop             ageCat count(DISTINCT id)
+    ## 1                  <NA>              12-15                  1
+    ## 2                  <NA>               4-11                  1
+    ## 3                  <NA> No age information                  1
+    ## 4               Parents              12-15                  4
+    ## 5               Parents              16-19                  1
+    ## 6               Parents               4-11                  2
+    ## 7               Parents No age information                  1
+    ## 8  Pre-service teachers              12-15                  3
+    ## 9  Pre-service teachers              16-19                  2
+    ## 10 Pre-service teachers               4-11                  5
+    ## 11 Pre-service teachers No age information                  3
+    ## 12             Students              12-15                 95
+    ## 13             Students              16-19                 61
+    ## 14             Students               4-11                 47
+    ## 15             Students No age information                  2
+    ## 16             Teachers              12-15                  6
+    ## 17             Teachers              16-19                  3
+    ## 18             Teachers               4-11                  5
+    ## 19             Teachers No age information                 11
+
+## 16.6 Outcomes numbers
+
+``` r
+for_outcomeByDoc<- by(tf_outcomes,extract$id,function(x)apply(x,2,any))
+outcomeByDoc<-Reduce(rbind,for_outcomeByDoc)
+rownames(outcomeByDoc)<-names(for_outcomeByDoc)
+colSums(outcomeByDoc)/146
+```
+
+    ##  knowledge  awareness  intention    emotion     action      habit      Other 
+    ## 0.87671233 0.43835616 0.22602740 0.19178082 0.12328767 0.06164384 0.19863014
+
+# 17 Exploring more (AFD requests)
+
+## 17.1 Income group
+
+The countries concerned are:
+
+``` r
+tapply(countryDoc,incomeDoc,function(x)sort(table(x),decreasing = T))
+```
+
+    ## $High
+    ## x
+    ## United States of America                  Germany                 Multiple 
+    ##                       59                        7                        7 
+    ##                  Austria                   Canada           United Kingdom 
+    ##                        6                        5                        4 
+    ##                Australia                  Finland                    Italy 
+    ##                        3                        3                        3 
+    ##                  Denmark                   Norway                    Spain 
+    ##                        2                        2                        2 
+    ##                  Belgium                  Czechia                   France 
+    ##                        1                        1                        1 
+    ##                   Greece                    Japan              New Zealand 
+    ##                        1                        1                        1 
+    ##                 Portugal                Singapore              South Korea 
+    ##                        1                        1                        1 
+    ##                   Sweden              Switzerland                   Taiwan 
+    ##                        1                        1                        1 
+    ## 
+    ## $`Middle to high`
+    ## x
+    ##       Turkey        China     Malaysia South Africa       Brazil     Thailand 
+    ##           10            4            3            3            2            2 
+    ##       Mexico 
+    ##            1 
+    ## 
+    ## $`Middle to low`
+    ## x
+    ##  Indonesia Bangladesh 
+    ##          3          1
+
+The studies which are concerned are:
+
+``` r
+tapply(countryDoc,incomeDoc,function(x)unique(names(x)))
+```
+
+    ## $High
+    ##   [1] "Aksel_Stenberdt2023"   "Baker2013"             "Bentz2020"            
+    ##   [4] "Bhattacharya2021"      "Blaum2017"             "Bodzin2014"           
+    ##   [7] "Bofferding2015"        "Boon2016"              "Breslyn2019"          
+    ##  [10] "Chang2018"             "Chin2016"              "Choi2021"             
+    ##  [13] "Deisenrieder2020"      "DeWaters2014"          "Dormody2020"          
+    ##  [16] "Dormody2021"           "Drewes2018"            "Eggert2017"           
+    ##  [19] "Faria2015"             "Feierabend2012"        "Feldpausch_Parker2013"
+    ##  [22] "Flora2014"             "Gold2015a"             "Goulah2017"           
+    ##  [25] "Gutierrez2022"         "Harker_Schuch2013"     "Harker_Schuch2020"    
+    ##  [28] "Herrick2022"           "Holthuis2014"          "Jacobson2017"         
+    ##  [31] "Jin2013"               "Jones2021"             "Keller2019"           
+    ##  [34] "Kern2017"              "Khadka2021"            "Kinsey2012"           
+    ##  [37] "Klosterman2010"        "Kolenaty2022"          "Korfgen2017"          
+    ##  [40] "Korsager2015"          "Kubisch2022"           "Kumar2023"            
+    ##  [43] "Lambert2012"           "Lambert2013"           "Lawson2019a"          
+    ##  [46] "Leckey2021"            "Leitao2022"            "Lester2006"           
+    ##  [49] "Levrini2021"           "Littrell2022"          "Liu2015"              
+    ##  [52] "Lombardi2013"          "Lozano2022"            "Markowitz2018"        
+    ##  [55] "Mason1998"             "McGowan2022"           "McNeal2014a"          
+    ##  [58] "McNeill2012"           "Meya2018"              "Miller2015"           
+    ##  [61] "Monroe2016"            "Nakamura2019"          "Nicholas_Figueroa2017"
+    ##  [64] "Nussbaum2015"          "Oberauer2023"          "Parant2017"           
+    ##  [67] "Park2020"              "Parth2020"             "Petersen2020"         
+    ##  [70] "Porter2012"            "Pruneau2003"           "Pruneau2006"          
+    ##  [73] "Pruneau2006a"          "Puttick2018"           "Raes2016"             
+    ##  [76] "Ratinen2013"           "Reinfried2012"         "Roscoe2013"           
+    ##  [79] "Roychoudhury2017"      "Schrot2021a"           "Schubatzky2022"       
+    ##  [82] "Schuster2008"          "Sellmann2013"          "Sellmann2013a"        
+    ##  [85] "Sellmann2015"          "Shea2016"              "Siegner2018"          
+    ##  [88] "Skains2022"            "Smith2019"             "Steffensen2022"       
+    ##  [91] "Sternang2012"          "Stevenson2018"         "Stevenson2018a"       
+    ##  [94] "Sumrall2021"           "Sundberg2013"          "Sutela2023"           
+    ##  [97] "Svihla2012"            "Taber2009"             "Tasquier2015"         
+    ## [100] "Tasquier2017"          "Taylor2020"            "Trott2019"            
+    ## [103] "Trott2020a"            "Trott2020b"            "Trott2022"            
+    ## [106] "Varma2012"             "Veijalainen2013"       "Vicente2020"          
+    ## [109] "Visintainer2015"       "Walsh2018"             "Walsh2019"            
+    ## [112] "White2022"             "Williams2017"          "Xie2014"              
+    ## [115] "Zografakis2008"       
+    ## 
+    ## $`Middle to high`
+    ##  [1] "Akaygun2021"     "Aksut2016"       "Bozdogan2011"    "Cebesoy2019"    
+    ##  [5] "Cebesoy2022"     "Chattuchai2015"  "Cibik2022"       "da_Rocha2020"   
+    ##  [9] "Dal2015a"        "Hu2016"          "Karpudewan2015"  "Karpudewan2015a"
+    ## [13] "Karpudewan2017"  "Li2022"          "Muller2021"      "Muller2021a"    
+    ## [17] "Nkoana2020"      "Pekel2019"       "Ruboon2012"      "Salas_Rueda2021"
+    ## [21] "Saribaş2016"     "Silva2021"       "Tasti2021"       "Wang2022"       
+    ## [25] "Zhong2021"      
+    ## 
+    ## $`Middle to low`
+    ## [1] "Kabir2015"     "Nafisah2022"   "Salsabila2019" "Sukardi2022"
+
+### 17.1.1 Evolution over time
+
+``` r
+all(names(yearPaper)==names(incomeDoc))
+```
+
+    ## [1] TRUE
+
+``` r
+(tbYearIncome<-table(incomeDoc,yearPaper))
+```
+
+    ##                 yearPaper
+    ## incomeDoc        1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009
+    ##   High              1    0    0    0    0    1    0    0    3    0    2    1
+    ##   Middle to high    0    0    0    0    0    0    0    0    0    0    0    0
+    ##   Middle to low     0    0    0    0    0    0    0    0    0    0    0    0
+    ##                 yearPaper
+    ## incomeDoc        2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021
+    ##   High              2    0   10   10    5   11    4   13    7    9   11    9
+    ##   Middle to high    0    1    1    0    1    3    3    1    0    3    3    6
+    ##   Middle to low     0    0    0    0    0    1    0    0    0    1    0    0
+    ##                 yearPaper
+    ## incomeDoc        2022 2023
+    ##   High             12    4
+    ##   Middle to high    3    0
+    ##   Middle to low     2    0
+
+``` r
+barplot(tbYearIncome,col=rainbow(nlevels(incomeDoc)),legend=T, args.legend=list(title="Country income",x="topleft"),las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-69-1.png)<!-- -->
+
+### 17.1.2 Comparison with population
+
+``` r
+all(names(populClean)==names(incomeDoc))
+```
+
+    ## [1] TRUE
+
+``` r
+(tbPopIncome<-table(populClean,incomeDoc))
+```
+
+    ##                       incomeDoc
+    ## populClean             High Middle to high Middle to low
+    ##   Students               94             14             4
+    ##   Teachers                8              6             0
+    ##   Pre-service teachers    5              4             0
+    ##   Mixed                   6              1             0
+    ##   Parents                 2              0             0
+
+``` r
+barplot(tbPopIncome,col=rainbow(nlevels(populClean)),legend=T,args.legend = list(title="Population"),xlab="Country income",beside=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-70-1.png)<!-- -->
+
+### 17.1.3 Age of students
+
+Note, it is not based on n=146, because one paper may have more than one
+age class, and not all papers are on students
+
+``` r
+nrow(catAgeConcerned)==length(incomeDoc[extract$id])
+```
+
+    ## [1] TRUE
+
+``` r
+resAgeIncome<-by(catAgeConcerned[populClean=="Students",],incomeDoc[extract$id][populClean=="Students"],colSums)
+tbAgeIncome<-as.table(as.matrix(Reduce(rbind,resAgeIncome)))
+rownames(tbAgeIncome)<-levels(incomeDoc)
+tbAgeIncome<-t(tbAgeIncome)
+barplot(tbAgeIncome,beside=T,col=rainbow(nrow(tbAgeIncome)),legend=T,xlab="Country income", args.legend="Student ages")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-71-1.png)<!-- -->
+
+### 17.1.4 Rural/Urban
+
+Note n=152 (6 papers with more than two populations)
+
+``` r
+(tbRururbIncome<-table(rururbClean,incomeDoc[extract$id]))
+```
+
+    ##            
+    ## rururbClean High Middle to high Middle to low
+    ##   Urban       68             19             3
+    ##   Rural        5              1             1
+    ##   Both        16              1             0
+    ##   Not given   31              5             0
+
+``` r
+barplot(tbRururbIncome,beside=T,col=rainbow(nrow(tbRururbIncome)),legend=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-72-1.png)<!-- -->
+
+### 17.1.5 Comparison with controversy
+
+``` r
+all(names(controvByDoc)==names(incomeDoc))
+```
+
+    ## [1] TRUE
+
+``` r
+(tbControvIncome<-table(controvByDoc,incomeDoc))
+```
+
+    ##             incomeDoc
+    ## controvByDoc High Middle to high Middle to low
+    ##          No    82             25             4
+    ##          Yes   33              0             0
+
+``` r
+barplot(tbControvIncome,col=c("blue","red"),legend=T,args.legend = list(title="Controversy"),xlab="Country income")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-73-1.png)<!-- -->
+
+### 17.1.6 Comparison with mitigation/adaptation
+
+Note n=152
+
+``` r
+(tbMitiadaptIncome <- table(extract$`Final.mitigation/adaptation`,incomeDoc[extract$id]))
+```
+
+    ##             
+    ##              High Middle to high Middle to low
+    ##   Adaptation    1              4             0
+    ##   Both         34              7             1
+    ##   Mitigation   79             13             3
+    ##   Neither       5              1             0
+
+``` r
+barplot(tbMitiadaptIncome,beside=T,col=rainbow(nrow(tbMitiadaptIncome)),legend=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-74-1.png)<!-- -->
+
+### 17.1.7 Comparison with curricular/extracurricular
+
+Since one study might concern more than one type of
+curricular/extracurricular, we are for these in the base n=152 instead
+of n=146
+
+``` r
+kable(tbCurIncome<-table(curExtraCur,incomeDoc[extract$id]))
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+High
+
+</th>
+<th style="text-align:right;">
+
+Middle to high
+
+</th>
+<th style="text-align:right;">
+
+Middle to low
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+Curricular
+
+</td>
+<td style="text-align:right;">
+
+63
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Curricular/Extracurricular
+
+</td>
+<td style="text-align:right;">
+
+4
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Extracurricular
+
+</td>
+<td style="text-align:right;">
+
+35
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Professional development
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+<td style="text-align:right;">
+
+7
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+</tr>
+</tbody>
+</table>
+
+``` r
+barplot(tbCurIncome,beside=T,col=rainbow(nlevels(factor(curExtraCur))),legend=T, xlab="Country income")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-75-1.png)<!-- -->
+
+### 17.1.8 Comparison with pedagogical tools
+
+n=152
+
+``` r
+(tbPedtoolsIncome<-table(extract$Categories.type.of.intervention,incomeDoc[extract$id]))
+```
+
+    ##                                    
+    ##                                     High Middle to high Middle to low
+    ##   Lesson-based                        44             13             2
+    ##   Combined strategies                 32              8             1
+    ##   Curriculum-based                    11              1             1
+    ##   Project-based learning               9              2             0
+    ##   Technology/virtual scenario-based    8              1             0
+    ##   Cultural-based                       5              1             0
+    ##   Game-based                           6              0             0
+
+``` r
+barplot(tbPedtoolsIncome,beside=T,col=rainbow(nrow(tbPedtoolsIncome)),legend=T, xlab="Country income")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-76-1.png)<!-- -->
+
+### 17.1.9 Comparison with theoretical framework
+
+n=152
+
+``` r
+(tbTheofraIncome<-table(factor(extract$`Theoretical.framework.(big.categories)`,levels=names(sort(table(extract$`Theoretical.framework.(big.categories)`),decreasing=T))),incomeDoc[extract$id]))
+```
+
+    ##                                    
+    ##                                     High Middle to high Middle to low
+    ##   Learner centered approach           51              9             3
+    ##   Alternative                         34              1             0
+    ##   Teacher centered approach           14              6             1
+    ##   Professional development workshop   12              6             0
+    ##   Promoting social awareness           6              4             0
+
+``` r
+barplot(tbTheofraIncome,beside=T,col=rainbow(nrow(tbTheofraIncome)),legend=T, xlab="Country income")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-77-1.png)<!-- -->
+
+### 17.1.10 Comparison with time
+
+``` r
+tbTempIncome<-table(extract$Intervention.time.category,incomeDoc[extract$id])
+barplot(tbTempIncome,beside=T,col=rainbow(nrow(tbTempIncome)),legend=T, xlab="Country income")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-78-1.png)<!-- -->
+
+### 17.1.11 Comparison with outcomes and effectiveness
+
+``` r
+resOutcomeIncome<-by(tf_outcomes,incomeDoc[extract$id],colSums)
+tbOutcomeIncome<-as.table(as.matrix(Reduce(rbind,resOutcomeIncome)))
+rownames(tbOutcomeIncome)<-levels(incomeDoc)
+(tbOutcomeIncome<-t(tbOutcomeIncome))
+```
+
+    ##           High Middle to high Middle to low
+    ## knowledge  103             23             3
+    ## awareness   46             17             1
+    ## intention   23              9             0
+    ## emotion     24              4             0
+    ## action      11              8             0
+    ## habit        6              5             0
+    ## Other       26              3             1
+
+``` r
+resOutcomeIncome_No<-by(didItWork_outcomes,incomeDoc[extract$id],function(tab)apply(tab,2,function(x)sum(x=="No",na.rm = T)))
+tbOutcomeIncome_No<-as.table(as.matrix(Reduce(rbind,resOutcomeIncome_No)))
+rownames(tbOutcomeIncome_No)<-levels(incomeDoc)
+(tbOutcomeIncome_No<-t(tbOutcomeIncome_No))
+```
+
+    ##           High Middle to high Middle to low
+    ## knowledge    6              0             0
+    ## awareness    3              0             0
+    ## intention    2              0             0
+    ## emotion      3              0             0
+    ## action       0              0             0
+    ## habit        1              0             0
+    ## Other        1              0             0
+
+``` r
+resOutcomeIncome_Unclear<-by(didItWork_outcomes,incomeDoc[extract$id],function(tab)apply(tab,2,function(x)sum(x=="Unclear",na.rm = T)))
+tbOutcomeIncome_Unclear<-as.table(as.matrix(Reduce(rbind,resOutcomeIncome_Unclear)))
+rownames(tbOutcomeIncome_Unclear)<-levels(incomeDoc)
+(tbOutcomeIncome_Unclear<-t(tbOutcomeIncome_Unclear))
+```
+
+    ##           High Middle to high Middle to low
+    ## knowledge   10              2             0
+    ## awareness    3              0             0
+    ## intention    5              2             0
+    ## emotion      3              0             0
+    ## action       5              0             0
+    ## habit        1              0             0
+    ## Other        8              0             0
+
+``` r
+bp<-barplot(tbOutcomeIncome,beside=T,col=rainbow(nrow(tbOutcomeIncome)),legend=T,xlab="Country income", args.legend=list(x="top"))
+rect(xleft=as.vector(bp)-0.5,ybottom = 0,xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeIncome_No),density=20,angle = 45)
+rect(xleft=as.vector(bp)-0.5,ybottom = as.vector(tbOutcomeIncome_No),xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeIncome_No)+as.vector(tbOutcomeIncome_Unclear),density=20,angle = 90)
+legend("topright",density=c(0,20,20),angle=c(0,45,90),title="Did it work?",c("Yes","No","Unclear"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-79-1.png)<!-- -->
+
+## 17.2 Rural/urban
+
+``` r
+rururbDoc<-factor(tapply(as.character(rururbClean),extract$id,unique),levels=c("Urban","Rural","Both","Not given"))
+```
+
+### 17.2.1 Evolution over time
+
+``` r
+all(names(yearPaper)==names(rururbDoc))
+```
+
+    ## [1] TRUE
+
+``` r
+(tbYearRururb<-table(rururbDoc,yearPaper))
+```
+
+    ##            yearPaper
+    ## rururbDoc   1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010
+    ##   Urban        1    0    0    0    0    1    0    0    2    0    1    1    1
+    ##   Rural        0    0    0    0    0    0    0    0    0    0    0    0    0
+    ##   Both         0    0    0    0    0    0    0    0    0    0    1    0    1
+    ##   Not given    0    0    0    0    0    0    0    0    1    0    0    0    0
+    ##            yearPaper
+    ## rururbDoc   2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023
+    ##   Urban        1    7    4    5    8    6    8    5    5    9   11   10    2
+    ##   Rural        0    0    0    0    1    0    2    0    1    0    1    2    0
+    ##   Both         0    2    1    0    1    0    2    1    4    1    0    1    1
+    ##   Not given    0    2    5    1    5    2    2    1    3    4    3    5    1
+
+``` r
+barplot(tbYearRururb,col=rainbow(nlevels(rururbDoc)),legend=T, args.legend=list(title="Rural/Urban",x="topleft"),las=2)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-81-1.png)<!-- -->
+
+### 17.2.2 Comparison with population
+
+``` r
+all(names(populClean)==names(rururbDoc))
+```
+
+    ## [1] TRUE
+
+``` r
+(tbPopRururb<-table(populClean,rururbDoc))
+```
+
+    ##                       rururbDoc
+    ## populClean             Urban Rural Both Not given
+    ##   Students                71     6   13        24
+    ##   Teachers                 9     1    1         3
+    ##   Pre-service teachers     3     0    1         5
+    ##   Mixed                    4     0    1         2
+    ##   Parents                  1     0    0         1
+
+``` r
+barplot(tbPopRururb,col=rainbow(nlevels(populClean)),legend=T,args.legend = list(title="Population"),xlab="Rural/Urban",beside=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-82-1.png)<!-- -->
+
+### 17.2.3 Age of students
+
+Note, it is not based on n=146, because one paper may have more than one
+age class, and not all papers are on students
+
+``` r
+nrow(catAgeConcerned)==length(rururbDoc[extract$id])
+```
+
+    ## [1] TRUE
+
+``` r
+resAgeRururb<-by(catAgeConcerned[populClean=="Students",],rururbDoc[extract$id][populClean=="Students"],colSums)
+tbAgeRururb<-as.table(as.matrix(Reduce(rbind,resAgeRururb)))
+rownames(tbAgeRururb)<-levels(rururbDoc)
+tbAgeRururb<-t(tbAgeRururb)
+barplot(tbAgeRururb,beside=T,col=rainbow(nrow(tbAgeRururb)),legend=T,xlab="Rural/Urban", args.legend="Student ages")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-83-1.png)<!-- -->
+
+### 17.2.4 Comparison with controversy
+
+``` r
+all(names(controvByDoc)==names(rururbDoc))
+```
+
+    ## [1] TRUE
+
+``` r
+(tbControvRururb<-table(controvByDoc,rururbDoc))
+```
+
+    ##             rururbDoc
+    ## controvByDoc Urban Rural Both Not given
+    ##          No     67     3   13        29
+    ##          Yes    21     4    3         6
+
+``` r
+barplot(tbControvRururb,col=c("blue","red"),legend=T,args.legend = list(title="Controversy"),xlab="Rural/Urban")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-84-1.png)<!-- -->
+
+### 17.2.5 Comparison with mitigation/adaptation
+
+Note n=152
+
+``` r
+(tbMitiadaptRururb <- table(extract$`Final.mitigation/adaptation`,rururbDoc[extract$id]))
+```
+
+    ##             
+    ##              Urban Rural Both Not given
+    ##   Adaptation     4     0    0         1
+    ##   Both          24     3    5        10
+    ##   Mitigation    61     2   10        24
+    ##   Neither        1     1    2         2
+
+``` r
+barplot(tbMitiadaptRururb,beside=T,col=rainbow(nrow(tbMitiadaptRururb)),legend=T)
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-85-1.png)<!-- -->
+
+### 17.2.6 Comparison with curricular/extracurricular
+
+Since one study might concern more than one type of
+curricular/extracurricular, we are for these in the base n=152 instead
+of n=146
+
+``` r
+kable(tbCurRururb<-table(curExtraCur,rururbDoc[extract$id]))
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+
+Urban
+
+</th>
+<th style="text-align:right;">
+
+Rural
+
+</th>
+<th style="text-align:right;">
+
+Both
+
+</th>
+<th style="text-align:right;">
+
+Not given
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+
+Curricular
+
+</td>
+<td style="text-align:right;">
+
+49
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+12
+
+</td>
+<td style="text-align:right;">
+
+14
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Curricular/Extracurricular
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+0
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Extracurricular
+
+</td>
+<td style="text-align:right;">
+
+31
+
+</td>
+<td style="text-align:right;">
+
+3
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+
+Professional development
+
+</td>
+<td style="text-align:right;">
+
+10
+
+</td>
+<td style="text-align:right;">
+
+1
+
+</td>
+<td style="text-align:right;">
+
+2
+
+</td>
+<td style="text-align:right;">
+
+8
+
+</td>
+</tr>
+</tbody>
+</table>
+
+``` r
+barplot(tbCurRururb,beside=T,col=rainbow(nlevels(factor(curExtraCur))),legend=T, xlab="Rural/Urban")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-86-1.png)<!-- -->
+
+### 17.2.7 Comparison with pedagogical tools
+
+n=152
+
+``` r
+(tbPedtoolsRururb<-table(extract$Categories.type.of.intervention,rururbDoc[extract$id]))
+```
+
+    ##                                    
+    ##                                     Urban Rural Both Not given
+    ##   Lesson-based                         38     4    5        13
+    ##   Combined strategies                  20     3    7        11
+    ##   Curriculum-based                     11     0    1         1
+    ##   Project-based learning                7     0    0         4
+    ##   Technology/virtual scenario-based     5     0    0         4
+    ##   Cultural-based                        4     0    1         1
+    ##   Game-based                            4     0    1         1
+
+``` r
+barplot(tbPedtoolsRururb,beside=T,col=rainbow(nrow(tbPedtoolsRururb)),legend=T, xlab="Rural/Urban")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-87-1.png)<!-- -->
+
+### 17.2.8 Comparison with theoretical framework
+
+n=152
+
+``` r
+(tbTheofraRururb<-table(factor(extract$`Theoretical.framework.(big.categories)`,levels=names(sort(table(extract$`Theoretical.framework.(big.categories)`),decreasing=T))),rururbDoc[extract$id]))
+```
+
+    ##                                    
+    ##                                     Urban Rural Both Not given
+    ##   Learner centered approach            39     1    8        15
+    ##   Alternative                          22     2    4         7
+    ##   Teacher centered approach            15     1    1         5
+    ##   Professional development workshop     9     0    2         7
+    ##   Promoting social awareness            5     1    2         2
+
+``` r
+barplot(tbTheofraRururb,beside=T,col=rainbow(nrow(tbTheofraRururb)),legend=T, xlab="Rural/Urban")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-88-1.png)<!-- -->
+
+### 17.2.9 Comparison with time
+
+``` r
+tbTempRururb<-table(extract$Intervention.time.category,rururbDoc[extract$id])
+barplot(tbTempRururb,beside=T,col=rainbow(nrow(tbTempRururb)),legend=T, xlab="Rural/Urban")
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-89-1.png)<!-- -->
+
+### 17.2.10 Comparison with outcomes and effectiveness
+
+``` r
+resOutcomeRururb<-by(tf_outcomes,rururbDoc[extract$id],colSums)
+tbOutcomeRururb<-as.table(as.matrix(Reduce(rbind,resOutcomeRururb)))
+rownames(tbOutcomeRururb)<-levels(rururbDoc)
+(tbOutcomeRururb<-t(tbOutcomeRururb))
+```
+
+    ##           Urban Rural Both Not given
+    ## knowledge    79     6   14        32
+    ## awareness    39     3    7        16
+    ## intention    26     2    2         4
+    ## emotion      16     3    1         9
+    ## action       14     0    3         3
+    ## habit         6     0    3         2
+    ## Other        19     2    2         7
+
+``` r
+resOutcomeRururb_No<-by(didItWork_outcomes,rururbDoc[extract$id],function(tab)apply(tab,2,function(x)sum(x=="No",na.rm = T)))
+tbOutcomeRururb_No<-as.table(as.matrix(Reduce(rbind,resOutcomeRururb_No)))
+rownames(tbOutcomeRururb_No)<-levels(rururbDoc)
+(tbOutcomeRururb_No<-t(tbOutcomeRururb_No))
+```
+
+    ##           Urban Rural Both Not given
+    ## knowledge     4     0    0         2
+    ## awareness     0     1    0         2
+    ## intention     1     0    0         1
+    ## emotion       0     1    0         2
+    ## action        0     0    0         0
+    ## habit         0     0    0         1
+    ## Other         0     0    0         1
+
+``` r
+resOutcomeRururb_Unclear<-by(didItWork_outcomes,rururbDoc[extract$id],function(tab)apply(tab,2,function(x)sum(x=="Unclear",na.rm = T)))
+tbOutcomeRururb_Unclear<-as.table(as.matrix(Reduce(rbind,resOutcomeRururb_Unclear)))
+rownames(tbOutcomeRururb_Unclear)<-levels(rururbDoc)
+(tbOutcomeRururb_Unclear<-t(tbOutcomeRururb_Unclear))
+```
+
+    ##           Urban Rural Both Not given
+    ## knowledge     6     0    3         3
+    ## awareness     2     0    1         0
+    ## intention     6     1    0         0
+    ## emotion       2     0    0         1
+    ## action        5     0    0         0
+    ## habit         0     0    0         1
+    ## Other         4     1    0         3
+
+``` r
+bp<-barplot(tbOutcomeRururb,beside=T,col=rainbow(nrow(tbOutcomeRururb)),legend=T,xlab="Rural/Urban", args.legend=list(x="top"))
+rect(xleft=as.vector(bp)-0.5,ybottom = 0,xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeRururb_No),density=20,angle = 45)
+rect(xleft=as.vector(bp)-0.5,ybottom = as.vector(tbOutcomeRururb_No),xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeRururb_No)+as.vector(tbOutcomeRururb_Unclear),density=20,angle = 90)
+legend("topright",density=c(0,20,20),angle=c(0,45,90),title="Did it work?",c("Yes","No","Unclear"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-90-1.png)<!-- -->

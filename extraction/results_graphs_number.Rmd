@@ -134,6 +134,28 @@ arrows(x0=datesOnGraph,y0=c(5,16),y1=rep(0,2),x1=datesOnGraph,length = .2,col="b
 text(datesOnGraph,c(6,16.5),events, cex=.7)
 ```
 
+## Countries authors
+
+```{r}
+extract$Countries.AUTHORS<-gsub(" ?Puerto Rico \\(United States\\)","United States",gsub("Estados Unidos","United States",gsub("BRASIL","Brazil",gsub("England","United Kingdom",gsub("UK","United Kingdom",gsub("USA","United States",extract$Countries.AUTHORS))))))
+sepCountryA<-strsplit(extract$Countries.AUTHORS,"[,;]")
+countryStudyA<-data.frame(id=rep(rawExtract$id,sapply(sepCountryA,length)),
+           country=unlist(sepCountryA))
+countryStudyA$country<-str_to_title(gsub(" +$","",gsub("^and ","",gsub("^ +","",countryStudyA$country))))
+countryStudyA$FinalName<-NA
+countryStudyA$FinalName<-worldMap_tot[match(countryStudyA$country,worldMap_tot$name),]$name
+countryStudyA$FinalName[countryStudyA$country%in%InTinyCountries] <- tinyCountries$NAME[match(countryStudyA$country[countryStudyA$country%in%InTinyCountries],tinyCountries$NAME)]
+countryStudyA$FinalName[is.na(countryStudyA$FinalName)]<-worldMap_tot[match(countryStudyA$country[is.na(countryStudyA$FinalName)],worldMap_tot$name_long),]$name
+A<-tapply(countryStudyA$FinalName,countryStudyA$id,function(x)x)
+B<-tapply(countryStudy$FinalName,countryStudy$id,function(x)x)
+names(A)==names(B)
+res<-mapply(function(a,b)b[!b%in%a],A,B)
+res<-res[sapply(res,function(x)length(x)>0)]
+kable(extract[extract$id%in%names(res),c("Countries.AUTHORS","Countries.STUDY")])
+```
+
+
+
 ## Income group
 
 ```{r incomegroup}
@@ -155,6 +177,38 @@ barplot(table(c(worldMap_tot$income_grp,tinyCountries$INCOME_GRP)),las=2)
 ```
 
 
+```{r}
+barplot(table(incomeGrpDoc,yearPaper,useNA="ifany"),col=rainbow(nlevels(factor(incomeGrpDoc))+1),legend=T,args.legend = list(x="topleft"))
+```
+```{r}
+countryStudy$income_grp <- worldMap_tot[match(countryStudy$FinalName,worldMap_tot$name),]$income_grp
+countryStudy$economy <- worldMap_tot[match(countryStudy$FinalName,worldMap_tot$name),]$economy
+countryStudy$gdp_md <- worldMap_tot[match(countryStudy$FinalName,worldMap_tot$name),]$gdp_md
+countryStudy$income_grp[is.na(countryStudy$income_grp)]<-tinyCountries[match(countryStudy$FinalName [is.na(countryStudy$income_grp)],tinyCountries$NAME),]$INCOME_GRP
+countryStudy$economy[is.na(countryStudy$economy)]<-tinyCountries[match(countryStudy$FinalName[is.na(countryStudy$economy)],tinyCountries$NAME),]$ECONOMY
+countryStudy$gdp_md[is.na(countryStudy$gdp_md)]<-tinyCountries[match(countryStudy$FinalName[is.na(countryStudy$gdp_md)],tinyCountries$NAME),]$GDP_MD
+
+tapply(countryStudy$country,countryStudy$income_grp,unique)
+tapply(countryStudy$country,countryStudy$economy,unique)
+
+countryStudy$econFinal<-NA
+countryStudy$econFinal[grepl("1",countryStudy$economy) | grepl("2",countryStudy$economy)] <- "Developed region"
+countryStudy$econFinal[grepl("3",countryStudy$economy) | grepl("4",countryStudy$economy) | grepl("5",countryStudy$economy)] <- "Emerging region"
+countryStudy$econFinal[grepl("^6",countryStudy$economy) | grepl("^7",countryStudy$economy)] <- "Developing region"
+econDoc<-factor(sapply(tapply(countryStudy$econFinal, countryStudy$id, unique), function(x) if(length(x)>1){return(NA)}else{return(x)}),levels=c("Developed region","Emerging region","Developing region"), ordered=T)
+barplot(table(econDoc,useNA="ifany"))
+
+
+countryStudy$incomeFinal <- NA
+countryStudy$incomeFinal [grepl("1",countryStudy$income_grp)|grepl("2",countryStudy$income_grp)] <- "High"
+countryStudy$incomeFinal[grepl("3",countryStudy$income_grp)] <- "Middle to high"
+countryStudy$incomeFinal [grepl("4",countryStudy$income_grp)|grepl("5",countryStudy$income_grp)] <- "Middle to low"
+
+incomeDoc<-factor(sapply(tapply(countryStudy$incomeFinal, countryStudy$id, unique), function(x) if(length(x)>1){return(NA)}else{return(x)}), levels=c("High","Middle to high","Middle to low"), ordered=T)
+barplot(table(incomeDoc,useNA="ifany"))
+```
+
+
 # Outcomes
 
 
@@ -172,7 +226,8 @@ outcomeEffect$effect_simp[outcomeEffect$effect%in%c("no","No","NO")]<-"No"
 outcomeEffect$effect_simp[is.na(outcomeEffect$effect_simp)]<-"Unclear"
 tabOutEff<-table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")),useNA="ifany")
 kable(as.matrix(tabOutEff))
-barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"))
+par(mar=c(6,4,1,1))
+barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"),names.arg = c("knowledge","awareness","intent","emotion","action","habit","Other"))
 
 ```
 
@@ -508,7 +563,7 @@ extract$id[grepl("5",extract$`Monroe.categories.(ONLY.1,2,3,4,5,6,7)`)]
 # Theoretical framework
 
 
-```{r fig.height=9,fig.width=6}
+```{r fig.height=7,fig.width=6}
 #sort(table(extract$`Theoretical.framework.(big.categories)`))
 clean<-function(x)
 {
@@ -534,7 +589,7 @@ forTempPlot<-forTempPlot[order(forTempPlot,decreasing=T)]
 par(mar=c(15,4,1,1))
 bp<-barplot(forTempPlot,las=2)
 #legend("topright",density=18,"consistent with")
-text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
+#text(bp[round(nrow(forTempPlot)/4)+1],max(forTempPlot)-5,paste("To evaluate:",sum(is.na(tabTheoBack$theoBack))))
 
 kable(sort(table(tabTheoBack$theoBack),decreasing=T))
 ```
@@ -824,7 +879,7 @@ barplot(table(didItWork_outcomes[tf_outcomes[,"habit"],"habit"],extract$Interven
 
 ### Simplified
 
-```{r fig.width=12}
+```{r fig.width=9, fig.height=5}
 simp_timeIntervention<-factor(NA,levels=c("short contact time", "days to month","> month"),ordered=T)
 simp_timeIntervention[as.numeric(extract$Intervention.time.category) %in% c(1,2)] <- "short contact time"
 simp_timeIntervention[as.numeric(extract$Intervention.time.category) %in% c(3,4)] <- "days to month"
@@ -856,12 +911,12 @@ A<-table(data.frame(
 )
 par(mfrow=c(1,3))
 YLIM<-c(0,70)
-barplot(A[,,1],  xlab = "Cognition", ylim=YLIM)
+barplot(A[,,1],  xlab = "Cognition", ylim=YLIM, names.arg = c("short contact\ntime", "days to\nmonth","> month"),cex.name=1.1,col=rainbow(3))
 PARMAR<-par("mar")
 PARMAR[2]<-1
 par(mar=PARMAR)
-barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n")
-barplot(A[,,3], legend=T, xlab="Behavior", ylim=YLIM,yaxt="n")
+barplot(A[,,2], xlab="Attitude", ylim=YLIM,yaxt="n",names.arg = c("short contact\ntime", "days to\nmonth","> month"),cex.name=1.1,col=rainbow(3))
+barplot(A[,,3], legend=T, args.legend = list(cex=1.5, title="Effectiveness"), xlab="Behavior", ylim=YLIM,yaxt="n",names.arg = c("short contact\ntime", "days to\nmonth","> month"),cex.name=1.1, cex.axis=1.5,col=rainbow(3))
 ```
 
 
@@ -1246,4 +1301,291 @@ sqldf(
   "
 )
 ```
+
+## Ages percentages
+
+Only accounting for students:
+
+```{r}
+sqldf(
+  "SELECT pop, ageCat, count(DISTINCT id)
+  FROM byOutcomeTot
+  FULL OUTER JOIN catAgeConcerned_df USING (id,idRow)
+  GROUP BY pop, ageCat
+  "
+)
+```
+
+
+## Outcomes numbers
+```{r}
+for_outcomeByDoc<- by(tf_outcomes,extract$id,function(x)apply(x,2,any))
+outcomeByDoc<-Reduce(rbind,for_outcomeByDoc)
+rownames(outcomeByDoc)<-names(for_outcomeByDoc)
+colSums(outcomeByDoc)/146
+```
+
+
+# Exploring more (AFD requests)
+
+## Income group
+
+The countries concerned are:
+
+```{r}
+tapply(countryDoc,incomeDoc,function(x)sort(table(x),decreasing = T))
+```
+The studies which are concerned are: 
+
+```{r}
+tapply(countryDoc,incomeDoc,function(x)unique(names(x)))
+```
+
+
+### Evolution over time
+
+```{r}
+all(names(yearPaper)==names(incomeDoc))
+(tbYearIncome<-table(incomeDoc,yearPaper))
+barplot(tbYearIncome,col=rainbow(nlevels(incomeDoc)),legend=T, args.legend=list(title="Country income",x="topleft"),las=2)
+```
+
+### Comparison with population
+
+```{r}
+all(names(populClean)==names(incomeDoc))
+(tbPopIncome<-table(populClean,incomeDoc))
+barplot(tbPopIncome,col=rainbow(nlevels(populClean)),legend=T,args.legend = list(title="Population"),xlab="Country income",beside=T)
+```
+
+
+### Age of students
+
+Note, it is not based on n=146, because one paper may have more than one age class, and not all papers are on students
+
+
+```{r}
+nrow(catAgeConcerned)==length(incomeDoc[extract$id])
+resAgeIncome<-by(catAgeConcerned[populClean=="Students",],incomeDoc[extract$id][populClean=="Students"],colSums)
+tbAgeIncome<-as.table(as.matrix(Reduce(rbind,resAgeIncome)))
+rownames(tbAgeIncome)<-levels(incomeDoc)
+tbAgeIncome<-t(tbAgeIncome)
+barplot(tbAgeIncome,beside=T,col=rainbow(nrow(tbAgeIncome)),legend=T,xlab="Country income", args.legend="Student ages")
+```
+
+### Rural/Urban
+
+Note n=152 (6 papers with more than two populations)
+
+```{r}
+(tbRururbIncome<-table(rururbClean,incomeDoc[extract$id]))
+barplot(tbRururbIncome,beside=T,col=rainbow(nrow(tbRururbIncome)),legend=T)
+```
+
+
+### Comparison with controversy
+
+```{r}
+all(names(controvByDoc)==names(incomeDoc))
+(tbControvIncome<-table(controvByDoc,incomeDoc))
+barplot(tbControvIncome,col=c("blue","red"),legend=T,args.legend = list(title="Controversy"),xlab="Country income")
+```
+
+
+### Comparison with mitigation/adaptation
+
+Note n=152
+
+```{r}
+(tbMitiadaptIncome <- table(extract$`Final.mitigation/adaptation`,incomeDoc[extract$id]))
+barplot(tbMitiadaptIncome,beside=T,col=rainbow(nrow(tbMitiadaptIncome)),legend=T)
+```
+
+
+
+### Comparison with curricular/extracurricular
+
+Since one study might concern more than one type of curricular/extracurricular, we are for these in the base n=152 instead of n=146
+
+```{r}
+kable(tbCurIncome<-table(curExtraCur,incomeDoc[extract$id]))
+barplot(tbCurIncome,beside=T,col=rainbow(nlevels(factor(curExtraCur))),legend=T, xlab="Country income")
+```
+
+
+### Comparison with pedagogical tools
+
+n=152
+
+```{r}
+(tbPedtoolsIncome<-table(extract$Categories.type.of.intervention,incomeDoc[extract$id]))
+barplot(tbPedtoolsIncome,beside=T,col=rainbow(nrow(tbPedtoolsIncome)),legend=T, xlab="Country income")
+```
+
+### Comparison with theoretical framework
+n=152
+
+```{r}
+(tbTheofraIncome<-table(factor(extract$`Theoretical.framework.(big.categories)`,levels=names(sort(table(extract$`Theoretical.framework.(big.categories)`),decreasing=T))),incomeDoc[extract$id]))
+barplot(tbTheofraIncome,beside=T,col=rainbow(nrow(tbTheofraIncome)),legend=T, xlab="Country income")
+```
+
+### Comparison with time
+
+
+```{r}
+tbTempIncome<-table(extract$Intervention.time.category,incomeDoc[extract$id])
+barplot(tbTempIncome,beside=T,col=rainbow(nrow(tbTempIncome)),legend=T, xlab="Country income")
+```
+
+
+
+### Comparison with outcomes and effectiveness
+
+
+```{r}
+resOutcomeIncome<-by(tf_outcomes,incomeDoc[extract$id],colSums)
+tbOutcomeIncome<-as.table(as.matrix(Reduce(rbind,resOutcomeIncome)))
+rownames(tbOutcomeIncome)<-levels(incomeDoc)
+(tbOutcomeIncome<-t(tbOutcomeIncome))
+resOutcomeIncome_No<-by(didItWork_outcomes,incomeDoc[extract$id],function(tab)apply(tab,2,function(x)sum(x=="No",na.rm = T)))
+tbOutcomeIncome_No<-as.table(as.matrix(Reduce(rbind,resOutcomeIncome_No)))
+rownames(tbOutcomeIncome_No)<-levels(incomeDoc)
+(tbOutcomeIncome_No<-t(tbOutcomeIncome_No))
+resOutcomeIncome_Unclear<-by(didItWork_outcomes,incomeDoc[extract$id],function(tab)apply(tab,2,function(x)sum(x=="Unclear",na.rm = T)))
+tbOutcomeIncome_Unclear<-as.table(as.matrix(Reduce(rbind,resOutcomeIncome_Unclear)))
+rownames(tbOutcomeIncome_Unclear)<-levels(incomeDoc)
+(tbOutcomeIncome_Unclear<-t(tbOutcomeIncome_Unclear))
+
+
+
+bp<-barplot(tbOutcomeIncome,beside=T,col=rainbow(nrow(tbOutcomeIncome)),legend=T,xlab="Country income", args.legend=list(x="top"))
+rect(xleft=as.vector(bp)-0.5,ybottom = 0,xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeIncome_No),density=20,angle = 45)
+rect(xleft=as.vector(bp)-0.5,ybottom = as.vector(tbOutcomeIncome_No),xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeIncome_No)+as.vector(tbOutcomeIncome_Unclear),density=20,angle = 90)
+legend("topright",density=c(0,20,20),angle=c(0,45,90),title="Did it work?",c("Yes","No","Unclear"))
+```
+
+
+
+
+## Rural/urban
+
+```{r}
+rururbDoc<-factor(tapply(as.character(rururbClean),extract$id,unique),levels=c("Urban","Rural","Both","Not given"))
+```
+
+
+### Evolution over time
+
+```{r}
+all(names(yearPaper)==names(rururbDoc))
+(tbYearRururb<-table(rururbDoc,yearPaper))
+barplot(tbYearRururb,col=rainbow(nlevels(rururbDoc)),legend=T, args.legend=list(title="Rural/Urban",x="topleft"),las=2)
+```
+
+### Comparison with population
+
+```{r}
+all(names(populClean)==names(rururbDoc))
+(tbPopRururb<-table(populClean,rururbDoc))
+barplot(tbPopRururb,col=rainbow(nlevels(populClean)),legend=T,args.legend = list(title="Population"),xlab="Rural/Urban",beside=T)
+```
+
+
+### Age of students
+
+Note, it is not based on n=146, because one paper may have more than one age class, and not all papers are on students
+
+
+```{r}
+nrow(catAgeConcerned)==length(rururbDoc[extract$id])
+resAgeRururb<-by(catAgeConcerned[populClean=="Students",],rururbDoc[extract$id][populClean=="Students"],colSums)
+tbAgeRururb<-as.table(as.matrix(Reduce(rbind,resAgeRururb)))
+rownames(tbAgeRururb)<-levels(rururbDoc)
+tbAgeRururb<-t(tbAgeRururb)
+barplot(tbAgeRururb,beside=T,col=rainbow(nrow(tbAgeRururb)),legend=T,xlab="Rural/Urban", args.legend="Student ages")
+```
+
+### Comparison with controversy
+
+```{r}
+all(names(controvByDoc)==names(rururbDoc))
+(tbControvRururb<-table(controvByDoc,rururbDoc))
+barplot(tbControvRururb,col=c("blue","red"),legend=T,args.legend = list(title="Controversy"),xlab="Rural/Urban")
+```
+
+
+### Comparison with mitigation/adaptation
+
+Note n=152
+
+```{r}
+(tbMitiadaptRururb <- table(extract$`Final.mitigation/adaptation`,rururbDoc[extract$id]))
+barplot(tbMitiadaptRururb,beside=T,col=rainbow(nrow(tbMitiadaptRururb)),legend=T)
+```
+
+
+
+### Comparison with curricular/extracurricular
+
+Since one study might concern more than one type of curricular/extracurricular, we are for these in the base n=152 instead of n=146
+
+```{r}
+kable(tbCurRururb<-table(curExtraCur,rururbDoc[extract$id]))
+barplot(tbCurRururb,beside=T,col=rainbow(nlevels(factor(curExtraCur))),legend=T, xlab="Rural/Urban")
+```
+
+
+### Comparison with pedagogical tools
+
+n=152
+
+```{r}
+(tbPedtoolsRururb<-table(extract$Categories.type.of.intervention,rururbDoc[extract$id]))
+barplot(tbPedtoolsRururb,beside=T,col=rainbow(nrow(tbPedtoolsRururb)),legend=T, xlab="Rural/Urban")
+```
+
+### Comparison with theoretical framework
+n=152
+
+```{r}
+(tbTheofraRururb<-table(factor(extract$`Theoretical.framework.(big.categories)`,levels=names(sort(table(extract$`Theoretical.framework.(big.categories)`),decreasing=T))),rururbDoc[extract$id]))
+barplot(tbTheofraRururb,beside=T,col=rainbow(nrow(tbTheofraRururb)),legend=T, xlab="Rural/Urban")
+```
+
+### Comparison with time
+
+
+```{r}
+tbTempRururb<-table(extract$Intervention.time.category,rururbDoc[extract$id])
+barplot(tbTempRururb,beside=T,col=rainbow(nrow(tbTempRururb)),legend=T, xlab="Rural/Urban")
+```
+
+
+
+### Comparison with outcomes and effectiveness
+
+
+```{r}
+resOutcomeRururb<-by(tf_outcomes,rururbDoc[extract$id],colSums)
+tbOutcomeRururb<-as.table(as.matrix(Reduce(rbind,resOutcomeRururb)))
+rownames(tbOutcomeRururb)<-levels(rururbDoc)
+(tbOutcomeRururb<-t(tbOutcomeRururb))
+resOutcomeRururb_No<-by(didItWork_outcomes,rururbDoc[extract$id],function(tab)apply(tab,2,function(x)sum(x=="No",na.rm = T)))
+tbOutcomeRururb_No<-as.table(as.matrix(Reduce(rbind,resOutcomeRururb_No)))
+rownames(tbOutcomeRururb_No)<-levels(rururbDoc)
+(tbOutcomeRururb_No<-t(tbOutcomeRururb_No))
+resOutcomeRururb_Unclear<-by(didItWork_outcomes,rururbDoc[extract$id],function(tab)apply(tab,2,function(x)sum(x=="Unclear",na.rm = T)))
+tbOutcomeRururb_Unclear<-as.table(as.matrix(Reduce(rbind,resOutcomeRururb_Unclear)))
+rownames(tbOutcomeRururb_Unclear)<-levels(rururbDoc)
+(tbOutcomeRururb_Unclear<-t(tbOutcomeRururb_Unclear))
+
+
+
+bp<-barplot(tbOutcomeRururb,beside=T,col=rainbow(nrow(tbOutcomeRururb)),legend=T,xlab="Rural/Urban", args.legend=list(x="top"))
+rect(xleft=as.vector(bp)-0.5,ybottom = 0,xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeRururb_No),density=20,angle = 45)
+rect(xleft=as.vector(bp)-0.5,ybottom = as.vector(tbOutcomeRururb_No),xright = as.vector(bp)+.5,ytop = as.vector(tbOutcomeRururb_No)+as.vector(tbOutcomeRururb_Unclear),density=20,angle = 90)
+legend("topright",density=c(0,20,20),angle=c(0,45,90),title="Did it work?",c("Yes","No","Unclear"))
+```
+
 
