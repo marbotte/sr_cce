@@ -1,7 +1,7 @@
 Results from the extraction: graphs and numbers
 ================
 Marius Bottin
-2023-10-26
+2023-10-27
 
 - [1 Missing extractions](#1-missing-extractions)
 - [2 Dates](#2-dates)
@@ -68,11 +68,13 @@ Marius Bottin
       curricular/extracurricular](#1717-comparison-with-curricularextracurricular)
     - [17.1.8 Comparison with pedagogical
       tools](#1718-comparison-with-pedagogical-tools)
-    - [17.1.9 Comparison with theoretical
-      framework](#1719-comparison-with-theoretical-framework)
-    - [17.1.10 Comparison with time](#17110-comparison-with-time)
-    - [17.1.11 Comparison with outcomes and
-      effectiveness](#17111-comparison-with-outcomes-and-effectiveness)
+    - [17.1.9 Comparison with local examples in the
+      interventions](#1719-comparison-with-local-examples-in-the-interventions)
+    - [17.1.10 Comparison with theoretical
+      framework](#17110-comparison-with-theoretical-framework)
+    - [17.1.11 Comparison with time](#17111-comparison-with-time)
+    - [17.1.12 Comparison with outcomes and
+      effectiveness](#17112-comparison-with-outcomes-and-effectiveness)
   - [17.2 Rural/urban](#172-ruralurban)
     - [17.2.1 Evolution over time](#1721-evolution-over-time)
     - [17.2.2 Comparison with
@@ -86,11 +88,13 @@ Marius Bottin
       curricular/extracurricular](#1726-comparison-with-curricularextracurricular)
     - [17.2.7 Comparison with pedagogical
       tools](#1727-comparison-with-pedagogical-tools)
-    - [17.2.8 Comparison with theoretical
-      framework](#1728-comparison-with-theoretical-framework)
-    - [17.2.9 Comparison with time](#1729-comparison-with-time)
-    - [17.2.10 Comparison with outcomes and
-      effectiveness](#17210-comparison-with-outcomes-and-effectiveness)
+    - [17.2.8 Comparison with local examples in the
+      interventions](#1728-comparison-with-local-examples-in-the-interventions)
+    - [17.2.9 Comparison with theoretical
+      framework](#1729-comparison-with-theoretical-framework)
+    - [17.2.10 Comparison with time](#17210-comparison-with-time)
+    - [17.2.11 Comparison with outcomes and
+      effectiveness](#17211-comparison-with-outcomes-and-effectiveness)
   - [17.3 Conclusions: country income and
     Rural/Urban](#173-conclusions-country-income-and-ruralurban)
 
@@ -24870,7 +24874,37 @@ barplot(tbPedtoolsIncome,beside=T,col=rainbow(nrow(tbPedtoolsIncome)),legend=T, 
 
 ![](results_graphs_number_files/figure-gfm/unnamed-chunk-76-1.png)<!-- -->
 
-### 17.1.9 Comparison with theoretical framework
+### 17.1.9 Comparison with local examples in the interventions
+
+n=152
+
+``` r
+locExample<-NA
+locExample[grepl("yes",extract$`Are.local.climate.change.issues.presented.to.participants?`,ignore.case = T)]<-T
+locExample[grepl("no",extract$`Are.local.climate.change.issues.presented.to.participants?`,ignore.case = T)]<-F
+table(locExample,useNA="ifany")
+```
+
+    ## locExample
+    ## FALSE  TRUE  <NA> 
+    ##    82    66     4
+
+``` r
+(tbLocexampleIncome<-table(locExample,incomeDoc[extract$id]))
+```
+
+    ##           
+    ## locExample High Middle to high Middle to low
+    ##      FALSE   67             13             1
+    ##      TRUE    50             13             2
+
+``` r
+barplot(tbLocexampleIncome,beside=T,col=rainbow(nrow(tbLocexampleIncome)),legend=T, xlab="Country income",args.legend = list(title="Local examples"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-77-1.png)<!-- -->
+
+### 17.1.10 Comparison with theoretical framework
 
 n=152
 
@@ -24890,18 +24924,18 @@ n=152
 barplot(tbTheofraIncome,beside=T,col=rainbow(nrow(tbTheofraIncome)),legend=T, xlab="Country income")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-77-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-78-1.png)<!-- -->
 
-### 17.1.10 Comparison with time
+### 17.1.11 Comparison with time
 
 ``` r
 tbTempIncome<-table(extract$Intervention.time.category,incomeDoc[extract$id])
 barplot(tbTempIncome,beside=T,col=rainbow(nrow(tbTempIncome)),legend=T, xlab="Country income")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-78-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-79-1.png)<!-- -->
 
-### 17.1.11 Comparison with outcomes and effectiveness
+### 17.1.12 Comparison with outcomes and effectiveness
 
 ``` r
 resOutcomeIncome<-by(tf_outcomes,incomeDoc[extract$id],colSums)
@@ -24958,7 +24992,7 @@ rect(xleft=as.vector(bp)-0.5,ybottom = as.vector(tbOutcomeIncome_No),xright = as
 legend("topright",density=c(0,20,20),angle=c(0,45,90),title="Did it work?",c("Yes","No","Unclear"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-79-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-80-1.png)<!-- -->
 
 ## 17.2 Rural/urban
 
@@ -24995,7 +25029,7 @@ all(names(yearPaper)==names(rururbDoc))
 barplot(tbYearRururb,col=rainbow(nlevels(rururbDoc)),legend=T, args.legend=list(title="Rural/Urban",x="topleft"),las=2)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-81-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-82-1.png)<!-- -->
 
 ### 17.2.2 Comparison with population
 
@@ -25021,7 +25055,7 @@ all(names(populClean)==names(rururbDoc))
 barplot(tbPopRururb,col=rainbow(nlevels(populClean)),legend=T,args.legend = list(title="Population"),xlab="Rural/Urban",beside=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-82-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-83-1.png)<!-- -->
 
 ### 17.2.3 Age of students
 
@@ -25042,7 +25076,7 @@ tbAgeRururb<-t(tbAgeRururb)
 barplot(tbAgeRururb,beside=T,col=rainbow(nrow(tbAgeRururb)),legend=T,xlab="Rural/Urban", args.legend="Student ages")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-83-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-84-1.png)<!-- -->
 
 ### 17.2.4 Comparison with controversy
 
@@ -25065,7 +25099,7 @@ all(names(controvByDoc)==names(rururbDoc))
 barplot(tbControvRururb,col=c("blue","red"),legend=T,args.legend = list(title="Controversy"),xlab="Rural/Urban")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-84-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-85-1.png)<!-- -->
 
 ### 17.2.5 Comparison with mitigation/adaptation
 
@@ -25086,7 +25120,7 @@ Note n=152
 barplot(tbMitiadaptRururb,beside=T,col=rainbow(nrow(tbMitiadaptRururb)),legend=T)
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-85-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-86-1.png)<!-- -->
 
 ### 17.2.6 Comparison with curricular/extracurricular
 
@@ -25241,7 +25275,7 @@ Professional development
 barplot(tbCurRururb,beside=T,col=rainbow(nlevels(factor(curExtraCur))),legend=T, xlab="Rural/Urban")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-86-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-87-1.png)<!-- -->
 
 ### 17.2.7 Comparison with pedagogical tools
 
@@ -25265,9 +25299,26 @@ n=152
 barplot(tbPedtoolsRururb,beside=T,col=rainbow(nrow(tbPedtoolsRururb)),legend=T, xlab="Rural/Urban")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-87-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-88-1.png)<!-- -->
 
-### 17.2.8 Comparison with theoretical framework
+### 17.2.8 Comparison with local examples in the interventions
+
+``` r
+(tbLocexampleRururb<-table(locExample,rururbDoc[extract$id]))
+```
+
+    ##           
+    ## locExample Urban Rural Both Not given
+    ##      FALSE    53     2    8        19
+    ##      TRUE     35     5    9        17
+
+``` r
+barplot(tbLocexampleRururb,beside=T,col=rainbow(nrow(tbLocexampleRururb)),legend=T, xlab="Rural/Urban",args.legend = list(title="Local examples"))
+```
+
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-89-1.png)<!-- -->
+
+### 17.2.9 Comparison with theoretical framework
 
 n=152
 
@@ -25287,18 +25338,18 @@ n=152
 barplot(tbTheofraRururb,beside=T,col=rainbow(nrow(tbTheofraRururb)),legend=T, xlab="Rural/Urban")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-88-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-90-1.png)<!-- -->
 
-### 17.2.9 Comparison with time
+### 17.2.10 Comparison with time
 
 ``` r
 tbTempRururb<-table(extract$Intervention.time.category,rururbDoc[extract$id])
 barplot(tbTempRururb,beside=T,col=rainbow(nrow(tbTempRururb)),legend=T, xlab="Rural/Urban")
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-89-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-91-1.png)<!-- -->
 
-### 17.2.10 Comparison with outcomes and effectiveness
+### 17.2.11 Comparison with outcomes and effectiveness
 
 ``` r
 resOutcomeRururb<-by(tf_outcomes,rururbDoc[extract$id],colSums)
@@ -25355,7 +25406,7 @@ rect(xleft=as.vector(bp)-0.5,ybottom = as.vector(tbOutcomeRururb_No),xright = as
 legend("topright",density=c(0,20,20),angle=c(0,45,90),title="Did it work?",c("Yes","No","Unclear"))
 ```
 
-![](results_graphs_number_files/figure-gfm/unnamed-chunk-90-1.png)<!-- -->
+![](results_graphs_number_files/figure-gfm/unnamed-chunk-92-1.png)<!-- -->
 
 ## 17.3 Conclusions: country income and Rural/Urban
 
@@ -25366,6 +25417,7 @@ legend("topright",density=c(0,20,20),angle=c(0,45,90),title="Did it work?",c("Ye
 |                Student age | Not much to say                                                                                                                                                                                              | Very few of the youngest in in Rural, 12-15 and 16-19 comparable in Rural while more 12-15 in urban                                                                                                                                                                                                                          |
 |                Rural/Urban | Vey few studies in Rural/Both in middle and low income countries                                                                                                                                             | —                                                                                                                                                                                                                                                                                                                            |
 |                Controversy | Controversy in only high incomes                                                                                                                                                                             | Comparatively more controversy in rural (probably republican importance in rural USA)                                                                                                                                                                                                                                        |
+|             Local examples | Less local example in high income, same in middle, more in low                                                                                                                                               | More local example in Rural and both, less in Urban                                                                                                                                                                                                                                                                          |
 |      Mitigation/adaptation | Adaptation is particularly present in Middle to high income countries (more studies than in high income countries, even though less total studies)                                                           | No adaptation in rural!!!, but more both than mitigation, contrary to Urban                                                                                                                                                                                                                                                  |
 | Curricular/Extracurricular | Professional development comparatively more important in middle, only curricular in low                                                                                                                      | More extracurricular in rural, contrary to urban                                                                                                                                                                                                                                                                             |
 |          Pedagogical tools | Not much to say, due to numbers game-based only in high income, no project-based, technology, cultural and games in low                                                                                      | In rural only lesson based and combined strategies. When both a bit of curriculum based, cultural based and game-based but comparatively less than in urban                                                                                                                                                                  |
