@@ -1,0 +1,112 @@
+---
+title: "Articles in psychology journals"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+```{r}
+require(openxlsx)&require(knitr)&require(kableExtra)
+completeFTS <- read.xlsx("../../screening/fullTextScreening/fullTextScreening.xlsx")
+names(loadWorkbook("../../extraction/20240116_journals.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20240116_journals.xlsx",sheet = "extraction ",startRow = 2)
+extract<-rawExtract
+#table(extract$`Validation.Mitigation/adaptation`)
+tabToWork<-extract[order(extract$id),]
+toKeepPsy<-apply(sapply(tabToWork[,grep("journal.discipline.*",colnames(tabToWork),ignore.case = T)],grepl,pattern="psychology",ignore.case = T),1,any)
+tabToWork<-tabToWork[toKeepPsy,]
+```
+
+```{r, results='asis'}
+for(i in 1:nrow(tabToWork))
+{
+  ref<-tabToWork$id[i]
+  title<-tabToWork$referencia[i]
+  person<-tabToWork$codifico[i]
+  abstract<-completeFTS[completeFTS$abbrev==ref,"abstract"]
+  knowledge<-tabToWork$knowledge[i]
+  awareness<-tabToWork$awareness[i]
+  intention<-tabToWork$intention[i]
+  emotions<-tabToWork$emotion[i]
+  action<-tabToWork$action[i]
+  habit<-tabToWork$habit[i]
+  other<-tabToWork$Other[i]
+  conclusions<-tabToWork$Conclusiones.generales[i]
+  notes<-tabToWork$Main.ideas.to.keep.for.the.synthesis[i]
+  # cat("#", ref,"\n\n",
+  #     "*title*:", title,"\n\n",
+  #     "*person*:", person,"\n\n",
+  #     "*abstract*:", abstract,"\n\n",
+  #     ifelse(is.na(knowledge),"",paste("*knowledge*:", knowledge,"\n\n")),
+  #     ifelse(is.na(awareness),"",paste("*awareness*:", awareness,"\n\n")),
+  #     ifelse(is.na(intention),"",paste("*intention*:", intention,"\n\n")),
+  #     ifelse(is.na(emotions),"",paste("*emotions*:", emotions,"\n\n")),
+  #     ifelse(is.na(action),"",paste("*action*:", action,"\n\n")),
+  #     ifelse(is.na(habit),"",paste("*habit*:", habit,"\n\n")),
+  #     ifelse(is.na(other),"",paste("*other*:", other,"\n\n"))
+  # )
+  cat("#", ref, "(",person,")\n\n")
+  
+  cat("**title**",tabToWork$referencia[i],"\n\n")
+  
+  cat("##","abstract","\n\n")
+  cat(abstract,"\n\n")
+  cat("## Population\n\n")
+  TAB<-na.omit(t(tabToWork[i,c("Countries.STUDY","TARGETED.SAMPLE","SAMPLE","sample.size","age_min","age_max","mean.age","urban.vs.rural")]))
+  TAB[,1]<-gsub("\\[","((",TAB[,1]);TAB[,1]<-gsub("\\]","))",TAB[,1])
+  cat(kable(TAB,col.names = c()))
+  cat("\n\n")
+  cat(paste("##","Objective/questions\n\n"))
+  TAB<-t(tabToWork[i,c("Objectives","Questions")])
+  TAB[,1]<-gsub("\\[","((",TAB[,1]);TAB[,1]<-gsub("\\]","))",TAB[,1])
+  #TAB[,1]<-gsub("\\[","\\\\[",TAB[,1])
+  #TAB[,1]<-gsub("([0-9])\\.","\\1",TAB[,1])
+  cat("**Objective**:\n\n",TAB["Objectives",],"\n\n")
+  cat("**Questions**:\n\n",TAB["Questions",],"\n\n")
+  cat("\n\n")
+  cat("## Intervention\n\n")
+  TAB<-t(tabToWork[i,c("Curricular/Extracurricular","Outdoor/Indoor/Both","Type.of.intervention","Descripcion.de.intervención")])
+  TAB[,1]<-gsub("\\[","((",TAB[,1]);TAB[,1]<-gsub("\\]","))",TAB[,1])
+  #cat(kable(TAB,col.names = c()))
+  cat("**Curricular/Extra**:",TAB[1,],"\n\n")
+  cat("**Indoor/Outdoor**:",TAB[2,],"\n\n")
+  cat("**Type**:",TAB[3,],"\n\n")
+  cat("**Description**:",TAB[4,],"\n\n")
+  
+  
+  cat("\n\n")
+  cat("## Methods/Results\n\n")
+  TAB<-t(tabToWork[i,c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Analysis.technique","Resultados.obtenidos.por.cada.outcome","Which.aspect.has.improved.or.not?")])
+  TAB[,1]<-gsub("\\[","((",TAB[,1]);TAB[,1]<-gsub("\\]","))",TAB[,1])
+  TAB[,1]<-gsub("^- ","",TAB[,1])
+  TAB[,1]<-gsub("\\[","((",TAB[,1]);TAB[,1]<-gsub("\\]","))",TAB[,1])
+  #cat(kable(TAB,col.names = c()))
+  cat("**Data**:",TAB[1,],"\n\n")
+  cat("**Analysis**:",TAB[2,],"\n\n")
+  cat("**Results**:",TAB[3,],"\n\n")
+  cat("**Improved?**:",TAB[4,],"\n\n")
+  cat("\n\n")
+  
+  cat("## Outcomes\n\n")
+  
+  cat(ifelse(is.na(knowledge),"\n",paste("**knowledge**:",knowledge,"(*Worked?*:",tabToWork$`knowledge.did.it.work?`[i], ")\n\n")))
+  cat(ifelse(is.na(awareness),"\n",paste("**awareness**:", awareness,"(*Worked?*:",tabToWork$`awareness.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(intention),"\n",paste("**intention**:", intention,"(*Worked?*:",tabToWork$`intention.,.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(emotions),"\n",paste("**emotions**:", emotions,"(*Worked?*:",tabToWork$`emotion,.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(action),"\n",paste("**action**:", action,"(*Worked?*:",tabToWork$`action,.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(habit),"\n",paste("**habit**:", habit,"(*Worked?*:",tabToWork$`habit,.did.it.work?`[i],")\n\n")))
+  cat(ifelse(is.na(other),"\n",paste("**other**:", other,"(*Worked?*:",tabToWork$`Other,.did.it.work`[i],")\n\n")))
+  
+  cat("## Conclusions\n\n")
+  
+  TAB<-t(tabToWork[i,c("Conclusiones.generales","Main.ideas.to.keep.for.the.synthesis")])
+  #cat(kable(TAB,col.names = c()))
+  cat("**Conclusions**:",TAB[1,],"\n\n")
+  cat("**Message to keep:**:",TAB[2,],"\n\n")
+  cat("\n\n")
+}
+```
+

@@ -11,8 +11,8 @@ always_allow_html: true
 
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
-names(loadWorkbook("../../extraction/20231022.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231022.xlsx",sheet = "extraction ",startRow = 2)
+names(loadWorkbook("../../extraction/20231027.xlsx"))
+rawExtract<-read.xlsx("../../extraction/20231027.xlsx",sheet = "extraction ",startRow = 2)
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
@@ -124,14 +124,16 @@ TAB_year_region<-table(regionPapers,yearPaper[names(regionPapers)])
 TAB_year_region<-TAB_year_region[as.logical(rowSums(TAB_year_region)),]
 TAB_year_region<-TAB_year_region[order(rowSums(TAB_year_region),decreasing=T),]
 
-A<-barplot(TAB_year_region,las=2,col=rainbow(nrow(TAB_year_region)),legend=T,args.legend = list(x="topleft"))
-events <- c("United nations: Climate\nchange education framework","UNESCO: Climate Change\nEducation for Sustainable\nDevelopment program","Paris Agreement\nand SDG adoption")
-dates <- c(1994,2010,2015)
+
+par(mar=c(6,3,1,1))
+A<-barplot(TAB_year_region,las=2,col=rainbow(nrow(TAB_year_region)),legend=T,args.legend = list(x="topleft"), names.arg = paste0(min(datesById):max(datesById),c(rep("",length(min(datesById):max(datesById))-1),"\n(1st Quarter)")))
+events <- c("United nations: Climate\nchange education framework","UNESCO: Climate Change\nEducation for Sustainable\nDevelopment program","Paris Agreement\nand SDG adoption","UNESCO's 2019\nCountry progress on\nClimate Change Education")
+dates <- c(1994,2010,2015,2019)
 events <-events[dates>min(as.numeric(colnames(TAB_year_region)))]
 dates<-dates[dates>min(as.numeric(colnames(TAB_year_region)))]
 datesOnGraph <-A[dates - as.numeric(min(as.numeric(colnames(TAB_year_region)), na.rm = T)) +1]
-arrows(x0=datesOnGraph,y0=c(5,16),y1=rep(0,2),x1=datesOnGraph,length = .2,col="black", lwd=2)
-text(datesOnGraph,c(6,16.5),events, cex=.7)
+arrows(x0=datesOnGraph,y0=c(5,16,15.5),y1=rep(0,2),x1=datesOnGraph,length = .2,col="black", lwd=2)
+text(datesOnGraph,c(6,16.5,16.5),events, cex=.7)
 ```
 
 ## Countries authors
@@ -230,6 +232,17 @@ par(mar=c(6,4,1,1))
 barplot(t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit","Other")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No")))),las=2, legend=T, args.legend = list(title="Efficient:"),names.arg = c("knowledge","awareness","intent","emotion","action","habit","Other"))
 
 ```
+
+## Without other
+
+```{r}
+par(mar=c(6,4,1,1))
+A<-t(table(factor(outcomeEffect$outcome,levels=c("knowledge","awareness","intention","emotion","action","habit")),factor(outcomeEffect$effect_simp,levels=c("Yes","Unclear","No"))))
+barplot(A,las=2, legend=T, args.legend = list(title="Efficient:"),names.arg = c("knowledge","awareness","intent","emotion","action","habit"))
+
+```
+
+
 
 # Population
 
@@ -524,6 +537,20 @@ disciplineClean[grepl("^Social",extract$Disciplin_2)]<-"Social Sciences"
 disciplineClean[grepl("STEAM",extract$Disciplin_2)]<-"Mixed"
 disciplineClean[grepl("NA",extract$Disciplin_2)|is.na(extract$Disciplin_2)]<-"ND"
 barplot(sort(table(disciplineClean),decreasing=T), las=2)
+```
+
+# Luisa's thematic groups
+
+```{r}
+barplot(colSums(extract[c("NATURAL.SCIENCE","SUSTAINABILITY.AND.HUMAN.BEHAVIOR","EXTREME.EVENTS")],na.rm=T))
+themes <- extract[,c("NATURAL.SCIENCE","SUSTAINABILITY.AND.HUMAN.BEHAVIOR","EXTREME.EVENTS")]
+colnames(themes)<-c("Natural sciences", "Sustainability, human behavior","Extreme events")
+themes[which(is.na(themes),arr.ind = T)]<-F
+mode(themes[[1]])<-"logical"
+mode(themes[[2]])<-"logical"
+mode(themes[[3]])<-"logical"
+
+
 ```
 
 
@@ -1382,6 +1409,17 @@ Note n=152 (6 papers with more than two populations)
 barplot(tbRururbIncome,beside=T,col=rainbow(nrow(tbRururbIncome)),legend=T)
 ```
 
+### Comparison with Luisa's themes
+
+```{r}
+resThemesIncome<-by(themes,incomeDoc[extract$id],colSums)
+tbThemesIncome<-as.table(as.matrix(Reduce(rbind,resThemesIncome)))
+rownames(tbThemesIncome)<-levels(incomeDoc)
+tbThemesIncome<-t(tbThemesIncome)
+barplot(tbThemesIncome,beside=T,col=rainbow(nrow(tbThemesIncome)),legend=T,xlab="Country income", args.legend="Student ages")
+```
+
+
 
 ### Comparison with controversy
 
@@ -1411,6 +1449,8 @@ Since one study might concern more than one type of curricular/extracurricular, 
 kable(tbCurIncome<-table(curExtraCur,incomeDoc[extract$id]))
 barplot(tbCurIncome,beside=T,col=rainbow(nlevels(factor(curExtraCur))),legend=T, xlab="Country income")
 ```
+
+
 
 
 ### Comparison with pedagogical tools
@@ -1478,6 +1518,16 @@ rect(xleft=as.vector(bp)-0.5,ybottom = as.vector(tbOutcomeIncome_No),xright = as
 legend("topright",density=c(0,20,20),angle=c(0,45,90),title="Did it work?",c("Yes","No","Unclear"))
 ```
 
+### Outcomes big groups
+
+```{r}
+tf_outcomes_bigCat
+
+resOutcomeBCIncome<-by(tf_outcomes_bigCat,incomeDoc[extract$id],colSums)
+tbOutcomeBCIncome<-as.table(as.matrix(Reduce(rbind,resOutcomeBCIncome)))
+rownames(tbOutcomeBCIncome)<-levels(incomeDoc)
+(tbOutcomeBCIncome<-t(tbOutcomeBCIncome))
+```
 
 
 
@@ -1517,6 +1567,16 @@ tbAgeRururb<-as.table(as.matrix(Reduce(rbind,resAgeRururb)))
 rownames(tbAgeRururb)<-levels(rururbDoc)
 tbAgeRururb<-t(tbAgeRururb)
 barplot(tbAgeRururb,beside=T,col=rainbow(nrow(tbAgeRururb)),legend=T,xlab="Rural/Urban", args.legend="Student ages")
+```
+
+### Comparison with Luisa's themes
+
+```{r}
+resThemesRururb<-by(themes,rururbDoc[extract$id],colSums)
+tbThemesRururb<-as.table(as.matrix(Reduce(rbind,resThemesRururb)))
+rownames(tbThemesRururb)<-levels(rururbDoc)
+tbThemesRururb<-t(tbThemesRururb)
+barplot(tbThemesRururb,beside=T,col=rainbow(nrow(tbThemesRururb)),legend=T,xlab="Rural/Urban")
 ```
 
 ### Comparison with controversy
