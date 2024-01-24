@@ -100,13 +100,13 @@ The concerned columns of the table are:
 - Which.aspect.has.improved.or.not?
 
 ``` r
-colMR <- c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Analysis.technique","Resultados.obtenidos.por.cada.outcome","Which.aspect.has.improved.or.not?")
+colMR <- c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Analysis.technique","Resultados.obtenidos.por.cada.outcome","Which.aspect.has.improved.or.not?","Objectives")
 ```
 
 The regular expression we will use to find the words are:
 
 ``` r
-exprs <- c("psycho","self.efficacy","planned behaviou?r","hope","fear","distress","anxi","distress")
+exprs <- c("psycho","self.efficacy","planned behaviou?r","hope","fear","distress","anxi")
 ```
 
 To apply the search on each column with each word, we do:
@@ -135,6 +135,9 @@ completeSearch
     ## $psycho$`Which.aspect.has.improved.or.not?`
     ## character(0)
     ## 
+    ## $psycho$Objectives
+    ## character(0)
+    ## 
     ## 
     ## $self.efficacy
     ## $self.efficacy$Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
@@ -148,6 +151,9 @@ completeSearch
     ## [5] "Petersen2020"    
     ## 
     ## $self.efficacy$`Which.aspect.has.improved.or.not?`
+    ## character(0)
+    ## 
+    ## $self.efficacy$Objectives
     ## character(0)
     ## 
     ## 
@@ -164,6 +170,9 @@ completeSearch
     ## $`planned behaviou?r`$`Which.aspect.has.improved.or.not?`
     ## character(0)
     ## 
+    ## $`planned behaviou?r`$Objectives
+    ## [1] "Hu2016"
+    ## 
     ## 
     ## $hope
     ## $hope$Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
@@ -179,6 +188,9 @@ completeSearch
     ## $hope$`Which.aspect.has.improved.or.not?`
     ## [1] "Herrick2022"    "Jones2021"      "Stevenson2018"  "Stevenson2018a"
     ## 
+    ## $hope$Objectives
+    ## [1] "Herrick2022"   "Stevenson2018" "Wang2022"     
+    ## 
     ## 
     ## $fear
     ## $fear$Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
@@ -191,6 +203,9 @@ completeSearch
     ## [1] "Gladwin2022" "Wang2022"   
     ## 
     ## $fear$`Which.aspect.has.improved.or.not?`
+    ## [1] "Wang2022"
+    ## 
+    ## $fear$Objectives
     ## [1] "Wang2022"
     ## 
     ## 
@@ -207,6 +222,9 @@ completeSearch
     ## $distress$`Which.aspect.has.improved.or.not?`
     ## character(0)
     ## 
+    ## $distress$Objectives
+    ## character(0)
+    ## 
     ## 
     ## $anxi
     ## $anxi$Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
@@ -221,18 +239,7 @@ completeSearch
     ## $anxi$`Which.aspect.has.improved.or.not?`
     ## character(0)
     ## 
-    ## 
-    ## $distress
-    ## $distress$Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto
-    ## character(0)
-    ## 
-    ## $distress$Analysis.technique
-    ## character(0)
-    ## 
-    ## $distress$Resultados.obtenidos.por.cada.outcome
-    ## character(0)
-    ## 
-    ## $distress$`Which.aspect.has.improved.or.not?`
+    ## $anxi$Objectives
     ## character(0)
 
 # 4 Do not consider!

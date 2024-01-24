@@ -49,13 +49,13 @@ The concerned columns of the table are:
 * Which.aspect.has.improved.or.not?
 
 ```{r}
-colMR <- c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Analysis.technique","Resultados.obtenidos.por.cada.outcome","Which.aspect.has.improved.or.not?")
+colMR <- c("Modalidad.de.recolección.de.datos.para.la.evaluación.del.efecto","Analysis.technique","Resultados.obtenidos.por.cada.outcome","Which.aspect.has.improved.or.not?","Objectives")
 ```
 
 The regular expression we will use to find the words are:
 
 ```{r}
-exprs <- c("psycho","self.efficacy","planned behaviou?r","hope","fear","distress","anxi","distress")
+exprs <- c("psycho","self.efficacy","planned behaviou?r","hope","fear","distress","anxi")
 ```
 
 To apply the search on each column with each word, we do:
