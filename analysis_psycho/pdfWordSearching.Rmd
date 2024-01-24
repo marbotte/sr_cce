@@ -1,0 +1,133 @@
+---
+title: "Searching words in the pdfs"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  bookdown::github_document2:
+     number_sections: true
+     toc: true
+always_allow_html: true
+---
+
+
+```{r}
+require(knitr)&require(kableExtra)
+knitr::opts_chunk$set(cache=T)
+dos <- normalizePath("../../extraction/")
+```
+# Number of pages
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-type d','-exec exiftool -T -filename -PageCount -s3 -ext pdf {} \\;'),intern = T)
+sum(as.numeric(sapply(strsplit(raw,"\t"),function(x)x[2])))
+```
+
+# Psycho
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "psycho" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+
+```
+
+# Self-efficacy
+
+"Self-efficacy" or "self efficacy":
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "self.efficacy" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+# Theory of planned behavior
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "planned[ -]behaviou?r" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+sep1<-sep
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+# Hope
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "hope" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+# Fear
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "fear" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+# Distress
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "distress" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+# anxi
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "anxi" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
