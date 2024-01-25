@@ -20,6 +20,7 @@ dos <- normalizePath("../../extraction/")
 ```{r}
 setwd(dos)
 raw <- system(paste("find",'-type d','-exec exiftool -T -filename -PageCount -s3 -ext pdf {} \\;'),intern = T)
+numberPages <- as.data.frame(Reduce(rbind,strsplit(raw,"\t")))
 sum(as.numeric(sapply(strsplit(raw,"\t"),function(x)x[2])))
 ```
 
@@ -36,6 +37,19 @@ sep <- strsplit(raw,":")
 cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
 
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*')
 
 ```
 
@@ -56,6 +70,19 @@ kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = N
 ```
 
 
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*self.efficacy*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*self.efficacy*')
+```
+
+
 # Theory of planned behavior
 
 ```{r}
@@ -69,6 +96,19 @@ sep <- strsplit(raw,":")
 cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
 sep1<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*planned.behaviou?r*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*planned.behaviou?r*')
 ```
 
 
@@ -87,6 +127,19 @@ cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", 
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*hope*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*hope*')
+```
+
 # Fear
 
 
@@ -100,6 +153,19 @@ sep <- strsplit(raw,":")
 ```{r}
 cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*fear*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*fear*')
 ```
 
 # Distress
@@ -117,6 +183,19 @@ cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", 
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*distress*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*distress*')
+```
+
 # anxi
 
 
@@ -130,4 +209,17 @@ sep <- strsplit(raw,":")
 ```{r}
 cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*anxi*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*anxi*')
 ```

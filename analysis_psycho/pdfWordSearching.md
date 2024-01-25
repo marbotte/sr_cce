@@ -1,7 +1,7 @@
 Searching words in the pdfs
 ================
 Marius Bottin
-2024-01-24
+2024-01-25
 
 - [1 Number of pages](#1-number-of-pages)
 - [2 Psycho](#2-psycho)
@@ -32,6 +32,7 @@ dos <- normalizePath("../../extraction/")
 ``` r
 setwd(dos)
 raw <- system(paste("find",'-type d','-exec exiftool -T -filename -PageCount -s3 -ext pdf {} \\;'),intern = T)
+numberPages <- as.data.frame(Reduce(rbind,strsplit(raw,"\t")))
 sum(as.numeric(sapply(strsplit(raw,"\t"),function(x)x[2])))
 ```
 
@@ -55,1315 +56,120 @@ cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", 
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+|      |                                   |     |
+|:-----|:----------------------------------|:----|
+| init | ./Sara/Muller2021a.pdf            | 3   |
+|      | ./Sara/Harker_Schuch2020.pdf      | 9   |
+|      | ./Sara/Littrell2022.pdf           | 10  |
+|      | ./Sara/Blaum2017.pdf              | 19  |
+|      | ./Sara/Smith2019.pdf              | 4   |
+|      | ./Sara/Lambert2013.pdf            | 8   |
+|      | ./Ana/Sellmann2013.pdf            | 3   |
+|      | ./Ana/Petersen2020.pdf            | 18  |
+|      | ./Ana/Leckey2021a.pdf             | 5   |
+|      | ./Ana/Schubatzky2022.pdf          | 4   |
+|      | ./Ana/Trott2020.pdf               | 5   |
+|      | ./Ana/Lambert2012.pdf             | 2   |
+|      | ./Ana/Feierabend2012.pdf          | 3   |
+|      | ./Ana/Porter2012.pdf              | 3   |
+|      | ./Ana/Lombardi2013.pdf            | 11  |
+|      | ./Ana/Arya2016.pdf                | 5   |
+|      | ./Ana/Khadka2021.pdf              | 9   |
+|      | ./Ana/Boon2016.pdf                | 6   |
+|      | ./Ana/Aksut2016.pdf               | 2   |
+|      | ./Ana/Bozdogan2011.pdf            | 3   |
+|      | ./Ana/DeWaters2014.pdf            | 3   |
+|      | ./Ana/Parant2017.pdf              | 28  |
+|      | ./Ana/Aksel_Stenberdt2023.pdf     | 38  |
+|      | ./Ana/Puttick2018.pdf             | 3   |
+|      | ./Ana/Kubisch2022.pdf             | 2   |
+|      | ./Ana/Liu2015.pdf                 | 2   |
+|      | ./Ana/Bofferding2015.pdf          | 2   |
+|      | ./Ana/Chang2018.pdf               | 3   |
+|      | ./Ana/Bentz2020.pdf               | 6   |
+|      | ./Ana/Williams2017.pdf            | 16  |
+|      | ./Ana/Varma2012.pdf               | 6   |
+|      | ./Sergio/Dormody2020.pdf          | 2   |
+|      | ./Sergio/Levrini2021.pdf          | 4   |
+|      | ./Sergio/Svihla2012.pdf           | 2   |
+|      | ./Sergio/Mason1998.pdf            | 4   |
+|      | ./Sergio/Reinfried2012.pdf        | 25  |
+|      | ./Sergio/Zografakis2008.pdf       | 2   |
+|      | ./Sergio/McGowan2022.pdf          | 20  |
+|      | ./Sergio/Sternang2012.pdf         | 5   |
+|      | ./Sergio/Cebesoy2019.pdf          | 3   |
+|      | ./Sergio/Kolenaty2022.pdf         | 12  |
+|      | ./Sergio/Kumar2023.pdf            | 3   |
+|      | ./Sergio/Sellmann2013a.pdf        | 17  |
+|      | ./Luisa/Skains2022.pdf            | 7   |
+|      | ./Luisa/Muller2021.pdf            | 3   |
+|      | ./Luisa/Stevenson2018.pdf         | 6   |
+|      | ./Luisa/Nussbaum2015.pdf          | 2   |
+|      | ./Luisa/Herrick2022.pdf           | 31  |
+|      | ./Luisa/Jin2013.pdf               | 5   |
+|      | ./Luisa/Markowitz2018.pdf         | 58  |
+|      | ./Luisa/Oberauer2023.pdf          | 27  |
+|      | ./Luisa/Pruneau2006a.pdf          | 6   |
+|      | ./Luisa/Tasquier2017.pdf          | 7   |
+|      | ./JuanGabriel/Trott2022.pdf       | 26  |
+|      | ./JuanGabriel/Karpudewan2015a.pdf | 3   |
+|      | ./JuanGabriel/Sutela2023.pdf      | 2   |
+|      | ./JuanGabriel/Walsh2019.pdf       | 8   |
+|      | ./JuanGabriel/Saribaş2016.pdf     | 2   |
+|      | ./JuanGabriel/Trott2019.pdf       | 19  |
+|      | ./JuanGabriel/Klosterman2010.pdf  | 2   |
+|      | ./JuanGabriel/Flora2014.pdf       | 2   |
+|      | ./JuanGabriel/Eggert2017.pdf      | 5   |
+|      | ./JuanGabriel/Zhong2021.pdf       | 6   |
+|      | ./Benjamin/Veijalainen2013.pdf    | 11  |
+|      | ./Benjamin/Ruboon2012.pdf         | 2   |
+|      | ./Benjamin/Roscoe2013.pdf         | 5   |
+|      | ./Benjamin/Taylor2020.pdf         | 2   |
+|      | ./Benjamin/Trott2020b.pdf         | 15  |
+|      | ./Benjamin/Raes2016.pdf           | 10  |
+|      | ./Benjamin/Wang2022.pdf           | 24  |
+|      | ./Benjamin/Pruneau2003.pdf        | 4   |
+|      | ./Marius/Miller2015.pdf           | 2   |
+|      | ./Marius/Karpudewan2017.pdf       | 7   |
+|      | ./Marius/Cebesoy2022.pdf          | 3   |
+|      | ./Marius/Trott2020a.pdf           | 19  |
+|      | ./Marius/Jones2021.pdf            | 7   |
+|      | ./Marius/Walsh2018.pdf            | 3   |
+|      | ./Marius/Sellmann2015.pdf         | 3   |
+|      | ./Marius/Gutierrez2022.pdf        | 9   |
+|      | ./Marius/Goulah2017.pdf           | 3   |
+|      | ./Marius/Leckey2021.pdf           | 5   |
+|      | ./Marius/Karpudewan2015.pdf       | 3   |
+|      | ./Marius/Schrot2021a.pdf          | 2   |
+|      | ./Marius/Leitao2022.pdf           | 2   |
+|      | ./Marius/Hu2016.pdf               | 12  |
+|      | ./Marius/Keller2019.pdf           | 9   |
+|      | ./Marius/Stevenson2018a.pdf       | 9   |
+|      | ./Marius/Jacobson2017.pdf         | 4   |
+|      | ./Marius/Deisenrieder2020.pdf     | 18  |
+|      | ./Marius/Ross2021.pdf             | 4   |
+|      | ./Marius/Parth2020.pdf            | 4   |
+|      | ./Marius/Korsager2015.pdf         | 3   |
+|      | ./Marius/Drewes2018.pdf           | 4   |
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-init
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*')
+```
 
-</td>
-<td style="text-align:left;">
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-./Sara/Muller2021a.pdf
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*')
+```
 
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Harker_Schuch2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-9
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Littrell2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-10
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Blaum2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-19
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Smith2019.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Lambert2013.pdf
-
-</td>
-<td style="text-align:left;">
-
-8
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Sellmann2013.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Petersen2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-18
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Leckey2021a.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Schubatzky2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Trott2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Lambert2012.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Feierabend2012.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Porter2012.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Lombardi2013.pdf
-
-</td>
-<td style="text-align:left;">
-
-11
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Arya2016.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Khadka2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-9
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Boon2016.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Aksut2016.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Bozdogan2011.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/DeWaters2014.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Parant2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-28
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Aksel_Stenberdt2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-38
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Puttick2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Kubisch2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Liu2015.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Bofferding2015.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Chang2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Bentz2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Williams2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-16
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Varma2012.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Dormody2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Levrini2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Svihla2012.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Mason1998.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Reinfried2012.pdf
-
-</td>
-<td style="text-align:left;">
-
-25
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Zografakis2008.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/McGowan2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-20
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Sternang2012.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Cebesoy2019.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Kolenaty2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-12
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Kumar2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Sellmann2013a.pdf
-
-</td>
-<td style="text-align:left;">
-
-17
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Skains2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Muller2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Stevenson2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Nussbaum2015.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Herrick2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-31
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Jin2013.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Markowitz2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-58
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Oberauer2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-27
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Pruneau2006a.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Tasquier2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Trott2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-26
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Karpudewan2015a.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Sutela2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Walsh2019.pdf
-
-</td>
-<td style="text-align:left;">
-
-8
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Saribaş2016.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Trott2019.pdf
-
-</td>
-<td style="text-align:left;">
-
-19
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Klosterman2010.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Flora2014.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Eggert2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Zhong2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Veijalainen2013.pdf
-
-</td>
-<td style="text-align:left;">
-
-11
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Ruboon2012.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Roscoe2013.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Taylor2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Trott2020b.pdf
-
-</td>
-<td style="text-align:left;">
-
-15
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Raes2016.pdf
-
-</td>
-<td style="text-align:left;">
-
-10
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Wang2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-24
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Pruneau2003.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Miller2015.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Karpudewan2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Cebesoy2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Trott2020a.pdf
-
-</td>
-<td style="text-align:left;">
-
-19
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Jones2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-7
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Walsh2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Sellmann2015.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Gutierrez2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-9
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Goulah2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Leckey2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Karpudewan2015.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Schrot2021a.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Leitao2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Hu2016.pdf
-
-</td>
-<td style="text-align:left;">
-
-12
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Keller2019.pdf
-
-</td>
-<td style="text-align:left;">
-
-9
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Stevenson2018a.pdf
-
-</td>
-<td style="text-align:left;">
-
-9
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Jacobson2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Deisenrieder2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-18
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Ross2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Parth2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Korsager2015.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Drewes2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-</tbody>
-</table>
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
 
 # 3 Self-efficacy
 
@@ -1385,265 +191,45 @@ cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", 
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-init
-
-</td>
-<td style="text-align:left;">
-
-./Sara/Muller2021a.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Petersen2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-25
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Schubatzky2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-48
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Boon2016.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/DeWaters2014.pdf
-
-</td>
-<td style="text-align:left;">
-
-21
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Aksel_Stenberdt2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-41
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Kolenaty2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-61
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Muller2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Stevenson2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Nussbaum2015.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Oberauer2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Saribaş2016.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Trott2019.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Flora2014.pdf
-
-</td>
-<td style="text-align:left;">
-
-14
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Wang2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-11
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Gutierrez2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-8
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Deisenrieder2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-31
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Ross2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-</tbody>
-</table>
+|      |                               |     |
+|:-----|:------------------------------|:----|
+| init | ./Sara/Muller2021a.pdf        | 2   |
+|      | ./Ana/Petersen2020.pdf        | 25  |
+|      | ./Ana/Schubatzky2022.pdf      | 48  |
+|      | ./Ana/Boon2016.pdf            | 4   |
+|      | ./Ana/DeWaters2014.pdf        | 21  |
+|      | ./Ana/Aksel_Stenberdt2023.pdf | 41  |
+|      | ./Sergio/Kolenaty2022.pdf     | 61  |
+|      | ./Luisa/Muller2021.pdf        | 2   |
+|      | ./Luisa/Stevenson2018.pdf     | 5   |
+|      | ./Luisa/Nussbaum2015.pdf      | 6   |
+|      | ./Luisa/Oberauer2023.pdf      | 2   |
+|      | ./JuanGabriel/Saribaş2016.pdf | 3   |
+|      | ./JuanGabriel/Trott2019.pdf   | 3   |
+|      | ./JuanGabriel/Flora2014.pdf   | 14  |
+|      | ./Benjamin/Wang2022.pdf       | 11  |
+|      | ./Marius/Gutierrez2022.pdf    | 8   |
+|      | ./Marius/Deisenrieder2020.pdf | 31  |
+|      | ./Marius/Ross2021.pdf         | 6   |
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*self.efficacy*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*self.efficacy*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
 
 # 4 Theory of planned behavior
 
@@ -1664,55 +250,30 @@ sep1<-sep
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
+|      |                           |     |
+|:-----|:--------------------------|:----|
+| init | ./Ana/Williams2017.pdf    | 3   |
+|      | ./Sergio/Kolenaty2022.pdf | 2   |
+|      | ./Marius/Hu2016.pdf       | 5   |
 
-init
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-</td>
-<td style="text-align:left;">
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*planned.behaviou?r*')
+```
 
-./Ana/Williams2017.pdf
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
-</td>
-<td style="text-align:left;">
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*planned.behaviou?r*')
+```
 
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Kolenaty2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Hu2016.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-</tbody>
-</table>
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-11-2.png)<!-- -->
 
 # 5 Hope
 
@@ -1732,587 +293,68 @@ cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", 
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-init
-
-</td>
-<td style="text-align:left;">
-
-./Sara/Muller2021a.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Harker_Schuch2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Littrell2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Lambert2013.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Gladwin2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-12
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Leckey2021a.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Trott2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Holthuis2014.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Feierabend2012.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Khadka2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-28
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Puttick2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Roychoudhury2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Nicholas_Figueroa2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Bentz2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-10
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Levrini2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-12
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Siegner2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/McGowan2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-14
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Kolenaty2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-17
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Skains2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Muller2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Stevenson2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-60
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Lawson2019a.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Herrick2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-21
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Oberauer2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-20
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Trott2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Sutela2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Walsh2019.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Trott2019.pdf
-
-</td>
-<td style="text-align:left;">
-
-10
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/da_Rocha2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Trott2020b.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Sumrall2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Wang2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-55
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Trott2020a.pdf
-
-</td>
-<td style="text-align:left;">
-
-16
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Jones2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-18
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Leckey2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Park2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Stevenson2018a.pdf
-
-</td>
-<td style="text-align:left;">
-
-44
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Jacobson2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Deisenrieder2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Ross2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Drewes2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-</tbody>
-</table>
+|      |                                 |     |
+|:-----|:--------------------------------|:----|
+| init | ./Sara/Muller2021a.pdf          | 2   |
+|      | ./Sara/Harker_Schuch2020.pdf    | 2   |
+|      | ./Sara/Littrell2022.pdf         | 3   |
+|      | ./Sara/Lambert2013.pdf          | 2   |
+|      | ./Ana/Gladwin2022.pdf           | 12  |
+|      | ./Ana/Leckey2021a.pdf           | 2   |
+|      | ./Ana/Trott2020.pdf             | 6   |
+|      | ./Ana/Holthuis2014.pdf          | 2   |
+|      | ./Ana/Feierabend2012.pdf        | 2   |
+|      | ./Ana/Khadka2021.pdf            | 28  |
+|      | ./Ana/Puttick2018.pdf           | 4   |
+|      | ./Ana/Roychoudhury2017.pdf      | 2   |
+|      | ./Ana/Nicholas_Figueroa2017.pdf | 2   |
+|      | ./Ana/Bentz2020.pdf             | 10  |
+|      | ./Sergio/Levrini2021.pdf        | 12  |
+|      | ./Sergio/Siegner2018.pdf        | 3   |
+|      | ./Sergio/McGowan2022.pdf        | 14  |
+|      | ./Sergio/Kolenaty2022.pdf       | 17  |
+|      | ./Luisa/Skains2022.pdf          | 2   |
+|      | ./Luisa/Muller2021.pdf          | 2   |
+|      | ./Luisa/Stevenson2018.pdf       | 60  |
+|      | ./Luisa/Lawson2019a.pdf         | 2   |
+|      | ./Luisa/Herrick2022.pdf         | 21  |
+|      | ./Luisa/Oberauer2023.pdf        | 20  |
+|      | ./JuanGabriel/Trott2022.pdf     | 2   |
+|      | ./JuanGabriel/Sutela2023.pdf    | 2   |
+|      | ./JuanGabriel/Walsh2019.pdf     | 5   |
+|      | ./JuanGabriel/Trott2019.pdf     | 10  |
+|      | ./JuanGabriel/da_Rocha2020.pdf  | 4   |
+|      | ./Benjamin/Trott2020b.pdf       | 3   |
+|      | ./Benjamin/Sumrall2021.pdf      | 2   |
+|      | ./Benjamin/Wang2022.pdf         | 55  |
+|      | ./Marius/Trott2020a.pdf         | 16  |
+|      | ./Marius/Jones2021.pdf          | 18  |
+|      | ./Marius/Leckey2021.pdf         | 2   |
+|      | ./Marius/Park2020.pdf           | 3   |
+|      | ./Marius/Stevenson2018a.pdf     | 44  |
+|      | ./Marius/Jacobson2017.pdf       | 5   |
+|      | ./Marius/Deisenrieder2020.pdf   | 3   |
+|      | ./Marius/Ross2021.pdf           | 4   |
+|      | ./Marius/Drewes2018.pdf         | 4   |
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*hope*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*hope*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->
 
 # 6 Fear
 
@@ -2332,237 +374,43 @@ cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", 
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-init
-
-</td>
-<td style="text-align:left;">
-
-./Sara/Harker_Schuch2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Lozano2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Gladwin2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Baker2013.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Steffensen2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Parant2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-20
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Williams2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Levrini2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-8
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Nussbaum2015.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Herrick2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Markowitz2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Oberauer2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-8
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Tasquier2017.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Trott2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Wang2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-56
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Jones2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-</tbody>
-</table>
+|      |                              |     |
+|:-----|:-----------------------------|:----|
+| init | ./Sara/Harker_Schuch2020.pdf | 2   |
+|      | ./Sara/Lozano2022.pdf        | 4   |
+|      | ./Ana/Gladwin2022.pdf        | 2   |
+|      | ./Ana/Baker2013.pdf          | 2   |
+|      | ./Ana/Steffensen2022.pdf     | 2   |
+|      | ./Ana/Parant2017.pdf         | 20  |
+|      | ./Ana/Williams2017.pdf       | 3   |
+|      | ./Sergio/Levrini2021.pdf     | 8   |
+|      | ./Luisa/Nussbaum2015.pdf     | 3   |
+|      | ./Luisa/Herrick2022.pdf      | 4   |
+|      | ./Luisa/Markowitz2018.pdf    | 3   |
+|      | ./Luisa/Oberauer2023.pdf     | 8   |
+|      | ./Luisa/Tasquier2017.pdf     | 2   |
+|      | ./JuanGabriel/Trott2022.pdf  | 2   |
+|      | ./Benjamin/Wang2022.pdf      | 56  |
+|      | ./Marius/Jones2021.pdf       | 6   |
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*fear*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*fear*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-17-2.png)<!-- -->
 
 # 7 Distress
 
@@ -2582,12 +430,24 @@ cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", 
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-<table>
-<tbody>
-<tr>
-</tr>
-</tbody>
-</table>
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*distress*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*distress*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-20-2.png)<!-- -->
 
 # 8 anxi
 
@@ -2607,262 +467,42 @@ cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", 
 kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
 ```
 
-<table>
-<tbody>
-<tr>
-<td style="text-align:left;">
-
-init
-
-</td>
-<td style="text-align:left;">
-
-./Sara/Muller2021a.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Harker_Schuch2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sara/Lozano2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Baker2013.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Ana/Bentz2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Levrini2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/McGowan2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Sergio/Kolenaty2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Muller2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Markowitz2018.pdf
-
-</td>
-<td style="text-align:left;">
-
-5
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Luisa/Oberauer2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-4
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Trott2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-6
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./JuanGabriel/Sutela2023.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Taylor2020.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Benjamin/Wang2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Trott2020a.pdf
-
-</td>
-<td style="text-align:left;">
-
-2
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Jones2021.pdf
-
-</td>
-<td style="text-align:left;">
-
-12
-
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-
-./Marius/Leitao2022.pdf
-
-</td>
-<td style="text-align:left;">
-
-3
-
-</td>
-</tr>
-</tbody>
-</table>
+|      |                              |     |
+|:-----|:-----------------------------|:----|
+| init | ./Sara/Muller2021a.pdf       | 3   |
+|      | ./Sara/Harker_Schuch2020.pdf | 3   |
+|      | ./Sara/Lozano2022.pdf        | 2   |
+|      | ./Ana/Baker2013.pdf          | 2   |
+|      | ./Ana/Bentz2020.pdf          | 2   |
+|      | ./Sergio/Levrini2021.pdf     | 3   |
+|      | ./Sergio/McGowan2022.pdf     | 4   |
+|      | ./Sergio/Kolenaty2022.pdf    | 5   |
+|      | ./Luisa/Muller2021.pdf       | 3   |
+|      | ./Luisa/Markowitz2018.pdf    | 5   |
+|      | ./Luisa/Oberauer2023.pdf     | 4   |
+|      | ./JuanGabriel/Trott2022.pdf  | 6   |
+|      | ./JuanGabriel/Sutela2023.pdf | 2   |
+|      | ./Benjamin/Taylor2020.pdf    | 2   |
+|      | ./Benjamin/Wang2022.pdf      | 2   |
+|      | ./Marius/Trott2020a.pdf      | 2   |
+|      | ./Marius/Jones2021.pdf       | 12  |
+|      | ./Marius/Leitao2022.pdf      | 3   |
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*anxi*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*anxi*')
+```
+
+![](pdfWordSearching_files/figure-gfm/unnamed-chunk-23-2.png)<!-- -->
