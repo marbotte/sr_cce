@@ -160,13 +160,13 @@ tabOccurrences<-data.frame(
 tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
 occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*')
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
-hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
@@ -220,13 +220,13 @@ tabOccurrences<-data.frame(
 tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
 occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*self.efficacy*')
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*self.efficacy*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ``` r
-hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*self.efficacy*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*self.efficacy*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
@@ -264,13 +264,13 @@ tabOccurrences<-data.frame(
 tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
 occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*planned.behaviou?r*')
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*planned.behaviou?r*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ``` r
-hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*planned.behaviou?r*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*planned.behaviou?r*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-11-2.png)<!-- -->
@@ -345,13 +345,13 @@ tabOccurrences<-data.frame(
 tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
 occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*hope*')
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*hope*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ``` r
-hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*hope*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*hope*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->
@@ -401,13 +401,13 @@ tabOccurrences<-data.frame(
 tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
 occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*fear*')
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*fear*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 ``` r
-hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*fear*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*fear*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-17-2.png)<!-- -->
@@ -438,13 +438,13 @@ tabOccurrences<-data.frame(
 tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
 occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*distress*')
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*distress*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ``` r
-hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*distress*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*distress*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-20-2.png)<!-- -->
@@ -496,13 +496,13 @@ tabOccurrences<-data.frame(
 tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
 occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*anxi*')
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*anxi*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 ``` r
-hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*anxi*')
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*anxi*',ylab="Number of documents")
 ```
 
 ![](pdfWordSearching_files/figure-gfm/unnamed-chunk-23-2.png)<!-- -->
