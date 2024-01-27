@@ -1,7 +1,7 @@
 Searching words in the pdfs
 ================
 Marius Bottin
-2024-01-25
+2024-01-26
 
 - [1 Number of pages](#1-number-of-pages)
 - [2 Psycho](#2-psycho)
@@ -11,6 +11,7 @@ Marius Bottin
 - [6 Fear](#6-fear)
 - [7 Distress](#7-distress)
 - [8 anxi](#8-anxi)
+- [9 Subset in psychology journals](#9-subset-in-psychology-journals)
 
 ``` r
 require(knitr)&require(kableExtra)
@@ -23,7 +24,7 @@ require(knitr)&require(kableExtra)
     ## [1] TRUE
 
 ``` r
-knitr::opts_chunk$set(cache=T)
+knitr::opts_chunk$set(cache=T, fig.path="./Fig/")
 dos <- normalizePath("../../extraction/")
 ```
 
@@ -163,13 +164,13 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](./Fig/unnamed-chunk-5-1.jpeg)<!-- -->
 
 ``` r
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
+![](./Fig/unnamed-chunk-5-2.jpeg)<!-- -->
 
 # 3 Self-efficacy
 
@@ -223,13 +224,13 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*self.efficacy*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](./Fig/unnamed-chunk-8-1.jpeg)<!-- -->
 
 ``` r
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*self.efficacy*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
+![](./Fig/unnamed-chunk-8-2.jpeg)<!-- -->
 
 # 4 Theory of planned behavior
 
@@ -267,13 +268,13 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*planned.behaviou?r*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](./Fig/unnamed-chunk-11-1.jpeg)<!-- -->
 
 ``` r
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*planned.behaviou?r*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-11-2.png)<!-- -->
+![](./Fig/unnamed-chunk-11-2.jpeg)<!-- -->
 
 # 5 Hope
 
@@ -348,13 +349,13 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*hope*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](./Fig/unnamed-chunk-14-1.jpeg)<!-- -->
 
 ``` r
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*hope*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->
+![](./Fig/unnamed-chunk-14-2.jpeg)<!-- -->
 
 # 6 Fear
 
@@ -404,13 +405,13 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*fear*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](./Fig/unnamed-chunk-17-1.jpeg)<!-- -->
 
 ``` r
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*fear*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-17-2.png)<!-- -->
+![](./Fig/unnamed-chunk-17-2.jpeg)<!-- -->
 
 # 7 Distress
 
@@ -441,13 +442,13 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*distress*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](./Fig/unnamed-chunk-20-1.jpeg)<!-- -->
 
 ``` r
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*distress*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-20-2.png)<!-- -->
+![](./Fig/unnamed-chunk-20-2.jpeg)<!-- -->
 
 # 8 anxi
 
@@ -499,10 +500,64 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*anxi*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+![](./Fig/unnamed-chunk-23-1.jpeg)<!-- -->
 
 ``` r
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*anxi*',ylab="Number of documents")
 ```
 
-![](pdfWordSearching_files/figure-gfm/unnamed-chunk-23-2.png)<!-- -->
+![](./Fig/unnamed-chunk-23-2.jpeg)<!-- -->
+
+# 9 Subset in psychology journals
+
+``` r
+dosPsycho <- normalizePath("../../CCE and Psychology/")
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "psycho" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-25-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-25-2.jpeg)<!-- -->
+
+``` r
+dosPsycho <- normalizePath("../../CCE and Psychology/Education journals/")
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "psycho" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-27-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-27-2.jpeg)<!-- -->

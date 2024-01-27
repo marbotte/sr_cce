@@ -110,3 +110,7 @@ for(i in 1:nrow(tabToWork))
 }
 ```
 
+```{r}
+toKeepPsy
+```
+

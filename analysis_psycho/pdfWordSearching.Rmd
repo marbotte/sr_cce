@@ -4,6 +4,8 @@ author: "Marius Bottin"
 date: "`r Sys.Date()`"
 output: 
   bookdown::github_document2:
+     dev: "jpeg"
+     dpi: 600
      number_sections: true
      toc: true
 always_allow_html: true
@@ -12,7 +14,7 @@ always_allow_html: true
 
 ```{r}
 require(knitr)&require(kableExtra)
-knitr::opts_chunk$set(cache=T)
+knitr::opts_chunk$set(cache=T, fig.path="./Fig/")
 dos <- normalizePath("../../extraction/")
 ```
 # Number of pages
@@ -222,4 +224,46 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*anxi*',ylab="Number of documents")
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*anxi*',ylab="Number of documents")
+```
+
+
+# Subset in psychology journals
+
+```{r}
+dosPsycho <- normalizePath("../../CCE and Psychology/")
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "psycho" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
+```
+
+
+```{r}
+dosPsycho <- normalizePath("../../CCE and Psychology/Education journals/")
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "psycho" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
 ```
