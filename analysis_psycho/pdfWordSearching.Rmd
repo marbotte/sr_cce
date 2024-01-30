@@ -53,6 +53,11 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
 
+listNumbersOccurrencePsycho<-
+  list(
+as.matrix(table(tabOccurrences$occurrences)),
+as.matrix(table(occPerPage))
+)
 ```
 
 # Self-efficacy
@@ -226,6 +231,119 @@ hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*a
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*anxi*',ylab="Number of documents")
 ```
 
+# Participatory action research
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.action.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*participatory.action.research*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*participatory*',ylab="Number of documents")
+```
+
+# Action research
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "action.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*action.research*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*action.research*',ylab="Number of documents")
+```
+
+# participatory research
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*participatory.research*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*participatory.research*',ylab="Number of documents")
+```
+
+# critical research
+
+
+```{r}
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "critical.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*critical.research*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*critical.research*',ylab="Number of documents")
+```
+
+
 
 # Subset in psychology journals
 
@@ -264,6 +382,151 @@ tabOccurrences<-data.frame(
 tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
 occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=, main='*psycho*',ylab="Number of documents")
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
+listNumbersOccurrencePsycho<-
+  c(listNumbersOccurrencePsycho,list(
+as.matrix(table(tabOccurrences$occurrences)),
+as.matrix(table(occPerPage))
+))
+```
+
+
+## Participatory action research
+
+
+```{r}
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.action.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*participatory.action.research*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*participatory*',ylab="Number of documents")
+```
+
+## Action research
+
+
+```{r}
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "action.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*action.research*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*action.research*',ylab="Number of documents")
+```
+
+## participatory research
+
+
+```{r}
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*participatory.research*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*participatory.research*',ylab="Number of documents")
+```
+
+## critical research
+
+
+```{r}
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "critical.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+
+```{r}
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
+```{r}
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*critical.research*',ylab="Number of documents")
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*critical.research*',ylab="Number of documents")
+```
+
+
+
+
+
+
+
+# Exporting occurrence numbers for psycho
+
+```{r}
+write.csv(file="../../export_sr_cce/allDocsOccurrences.csv",x = listNumbersOccurrencePsycho[[1]])
+write.csv(file="../../export_sr_cce/allDocsOccurrencesPerPage.csv",x = listNumbersOccurrencePsycho[[2]])
+write.csv(file="../../export_sr_cce/21docsOccurrences.csv",x = listNumbersOccurrencePsycho[[3]])
+write.csv(file="../../export_sr_cce/21DocsOccurrencesPerPage.csv",x = listNumbersOccurrencePsycho[[4]])
+```
+
+
+# Checking numbers
+
+```{r}
+library(openxlsx)
+rawExtract<-read.xlsx("../../extraction/20240116_journals.xlsx",sheet = "extraction ",startRow = 2)
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"'),intern = T)
+namesPdf<-gsub("\\.pdf","",basename(raw))
+namesPdf[!namesPdf%in%rawExtract$id]
 ```

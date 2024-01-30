@@ -1,7 +1,7 @@
 Searching words in the pdfs
 ================
 Marius Bottin
-2024-01-26
+2024-01-30
 
 - [1 Number of pages](#1-number-of-pages)
 - [2 Psycho](#2-psycho)
@@ -11,7 +11,19 @@ Marius Bottin
 - [6 Fear](#6-fear)
 - [7 Distress](#7-distress)
 - [8 anxi](#8-anxi)
-- [9 Subset in psychology journals](#9-subset-in-psychology-journals)
+- [9 Participatory action research](#9-participatory-action-research)
+- [10 Action research](#10-action-research)
+- [11 participatory research](#11-participatory-research)
+- [12 critical research](#12-critical-research)
+- [13 Subset in psychology journals](#13-subset-in-psychology-journals)
+  - [13.1 Participatory action
+    research](#131-participatory-action-research)
+  - [13.2 Action research](#132-action-research)
+  - [13.3 participatory research](#133-participatory-research)
+  - [13.4 critical research](#134-critical-research)
+- [14 Exporting occurrence numbers for
+  psycho](#14-exporting-occurrence-numbers-for-psycho)
+- [15 Checking numbers](#15-checking-numbers)
 
 ``` r
 require(knitr)&require(kableExtra)
@@ -171,6 +183,14 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*'
 ```
 
 ![](./Fig/unnamed-chunk-5-2.jpeg)<!-- -->
+
+``` r
+listNumbersOccurrencePsycho<-
+  list(
+as.matrix(table(tabOccurrences$occurrences)),
+as.matrix(table(occPerPage))
+)
+```
 
 # 3 Self-efficacy
 
@@ -508,7 +528,184 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*anxi*',y
 
 ![](./Fig/unnamed-chunk-23-2.jpeg)<!-- -->
 
-# 9 Subset in psychology journals
+# 9 Participatory action research
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.action.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+```
+
+    ## Number of papers:  3 / 152 include the word 5 times or more
+
+``` r
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+|      |                             |     |
+|:-----|:----------------------------|:----|
+| init | ./Sara/Muller2021a.pdf      | 6   |
+|      | ./Ana/Trott2020.pdf         | 4   |
+|      | ./Ana/Feierabend2012.pdf    | 4   |
+|      | ./Luisa/Muller2021.pdf      | 6   |
+|      | ./JuanGabriel/Trott2019.pdf | 7   |
+|      | ./Benjamin/Trott2020b.pdf   | 3   |
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*participatory.action.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-26-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*participatory*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-26-2.jpeg)<!-- -->
+
+# 10 Action research
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "action.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+```
+
+    ## Number of papers:  5 / 152 include the word 5 times or more
+
+``` r
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+|      |                             |     |
+|:-----|:----------------------------|:----|
+| init | ./Sara/Muller2021a.pdf      | 10  |
+|      | ./Ana/Trott2020.pdf         | 11  |
+|      | ./Ana/Feierabend2012.pdf    | 5   |
+|      | ./Ana/Chang2018.pdf         | 2   |
+|      | ./Sergio/Siegner2018.pdf    | 3   |
+|      | ./Luisa/Muller2021.pdf      | 10  |
+|      | ./JuanGabriel/Trott2022.pdf | 2   |
+|      | ./JuanGabriel/Trott2019.pdf | 26  |
+|      | ./Benjamin/Trott2020b.pdf   | 3   |
+|      | ./Marius/Trott2020a.pdf     | 4   |
+|      | ./Marius/Goulah2017.pdf     | 2   |
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*action.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-29-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*action.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-29-2.jpeg)<!-- -->
+
+# 11 participatory research
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+```
+
+    ## Number of papers:  0 / 152 include the word 5 times or more
+
+``` r
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+|      |                          |     |
+|:-----|:-------------------------|:----|
+| init | ./Ana/Trott2020.pdf      | 4   |
+|      | ./Ana/Williams2017.pdf   | 2   |
+|      | ./Sergio/Siegner2018.pdf | 2   |
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*participatory.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-32-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*participatory.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-32-2.jpeg)<!-- -->
+
+# 12 critical research
+
+``` r
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "critical.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+```
+
+    ## Number of papers:  0 / 152 include the word 5 times or more
+
+``` r
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*critical.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-35-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*critical.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-35-2.jpeg)<!-- -->
+
+# 13 Subset in psychology journals
 
 ``` r
 dosPsycho <- normalizePath("../../CCE and Psychology/")
@@ -528,13 +725,13 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
 ```
 
-![](./Fig/unnamed-chunk-25-1.jpeg)<!-- -->
+![](./Fig/unnamed-chunk-37-1.jpeg)<!-- -->
 
 ``` r
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
 ```
 
-![](./Fig/unnamed-chunk-25-2.jpeg)<!-- -->
+![](./Fig/unnamed-chunk-37-2.jpeg)<!-- -->
 
 ``` r
 dosPsycho <- normalizePath("../../CCE and Psychology/Education journals/")
@@ -551,13 +748,193 @@ tabOccurrences<-data.frame(
 tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
 occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 
-hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=, main='*psycho*',ylab="Number of documents")
 ```
 
-![](./Fig/unnamed-chunk-27-1.jpeg)<!-- -->
+![](./Fig/unnamed-chunk-39-1.jpeg)<!-- -->
 
 ``` r
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
 ```
 
-![](./Fig/unnamed-chunk-27-2.jpeg)<!-- -->
+![](./Fig/unnamed-chunk-39-2.jpeg)<!-- -->
+
+``` r
+listNumbersOccurrencePsycho<-
+  c(listNumbersOccurrencePsycho,list(
+as.matrix(table(tabOccurrences$occurrences)),
+as.matrix(table(occPerPage))
+))
+```
+
+## 13.1 Participatory action research
+
+``` r
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.action.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+```
+
+    ## Number of papers:  0 / 9 include the word 5 times or more
+
+``` r
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*participatory.action.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-42-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*participatory*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-42-2.jpeg)<!-- -->
+
+## 13.2 Action research
+
+``` r
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "action.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+```
+
+    ## Number of papers:  0 / 9 include the word 5 times or more
+
+``` r
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*action.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-45-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*action.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-45-2.jpeg)<!-- -->
+
+## 13.3 participatory research
+
+``` r
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+```
+
+    ## Number of papers:  0 / 9 include the word 5 times or more
+
+``` r
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*participatory.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-48-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*participatory.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-48-2.jpeg)<!-- -->
+
+## 13.4 critical research
+
+``` r
+setwd(dosPsycho)
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "critical.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+```
+
+``` r
+cat("Number of papers: ", sum(sapply(sep,function(x)as.numeric(x[2])>=5)), "/", length(sep), "include the word 5 times or more\n" )
+```
+
+    ## Number of papers:  0 / 9 include the word 5 times or more
+
+``` r
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+``` r
+tabOccurrences<-data.frame(
+  pdfName=basename(sapply(sep,function(x)x[1])),
+  occurrences=as.numeric(sapply(sep,function(x)x[2]))
+)
+tabOccurrences$pages<-as.numeric(numberPages[match(tabOccurrences$pdfName,numberPages$V1),2])
+occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
+
+hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*critical.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-51-1.jpeg)<!-- -->
+
+``` r
+hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*critical.research*',ylab="Number of documents")
+```
+
+![](./Fig/unnamed-chunk-51-2.jpeg)<!-- -->
+
+# 14 Exporting occurrence numbers for psycho
+
+``` r
+write.csv(file="../../export_sr_cce/allDocsOccurrences.csv",x = listNumbersOccurrencePsycho[[1]])
+write.csv(file="../../export_sr_cce/allDocsOccurrencesPerPage.csv",x = listNumbersOccurrencePsycho[[2]])
+write.csv(file="../../export_sr_cce/21docsOccurrences.csv",x = listNumbersOccurrencePsycho[[3]])
+write.csv(file="../../export_sr_cce/21DocsOccurrencesPerPage.csv",x = listNumbersOccurrencePsycho[[4]])
+```
+
+# 15 Checking numbers
+
+``` r
+library(openxlsx)
+rawExtract<-read.xlsx("../../extraction/20240116_journals.xlsx",sheet = "extraction ",startRow = 2)
+setwd(dos)
+raw <- system(paste("find",'-name "*.pdf"'),intern = T)
+namesPdf<-gsub("\\.pdf","",basename(raw))
+namesPdf[!namesPdf%in%rawExtract$id]
+```
+
+    ## [1] "Leckey2021a"           "Bopardikar2021"        "Trott2020"            
+    ## [4] "Turner2022"            "results_graphs_number" "Saribaş2016"          
+    ## [7] "Ross2021"
