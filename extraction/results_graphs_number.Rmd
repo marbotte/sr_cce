@@ -12,10 +12,30 @@ always_allow_html: true
 ```{r}
 require(openxlsx)&require(knitr)&require(kableExtra)
 names(loadWorkbook("../../extraction/20231027.xlsx"))
-rawExtract<-read.xlsx("../../extraction/20231027.xlsx",sheet = "extraction ",startRow = 2)
+#rawExtract<-read.xlsx("../../extraction/20231027.xlsx",sheet = "extraction ",startRow = 2)
+rawExtract<-read.xlsx("../../extraction/Extraction20251218.xlsx",sheet = "extraction ",startRow = 2)
+
 extract<-rawExtract
 load("../../extraction/docExtract.RData")
 ```
+
+
+```{r}
+extract$referencia<-gsub("Arguemntation","Argumentation",extract$referencia)
+```
+
+
+```{r}
+lP<-readLines("../../extraction/listPaper.txt")
+modifTitle<-tolower(gsub("[[:space:]]+"," ",gsub("[^[:alpha:]]","",gsub("\\n"," ", extract$referencia))))
+modifRef<-tolower(gsub("[[:space:]]+"," ",gsub("[^[:alpha:]]","",gsub("\\n"," ",lP))))
+A<-lapply(lapply(modifTitle,grep,modifRef),function(x)ifelse(length(x)==1,x,NA))
+res<-data.frame(title=1:length(A), refComp=unlist(A))
+res[is.na(res$refComp),]
+extract$citation<-lP[res$refComp]
+```
+
+
 # Missing extractions
 
 ```{r}
