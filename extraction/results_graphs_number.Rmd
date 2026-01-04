@@ -526,6 +526,33 @@ kbl(data.frame(
 table(extract$`Final.mitigation/adaptation`,useNA = 'always')/sum(table(extract$`Final.mitigation/adaptation`,useNA = 'always'))
 barplot(table(factor(extract$`Final.mitigation/adaptation`,levels=c("Mitigation","Adaptation","Both","Neither"))))
 ```
+
+
+Over time
+
+```{r}
+mitadapPaper<-tapply(extract$`Final.mitigation/adaptation`,extract$id,function(x)
+{
+  if("Both"%in%x)return("Both")
+  if(length(unique(x))>1){stop()}
+  if(is.na(unique(x))){return("Neither")}
+  return(unique(x))
+}
+  )
+mitadapPaper<-mitadapPaper[names(yearPaper)]
+t_ma_year<-table(mitadapPaper,yearPaper)
+barplot(t_ma_year,beside=T,legend=T,col=c("red","orange","blue","black"),args.legend = list(x="topleft"))
+plot(colSums(t_ma_year[c("Adaptation","Both"),])/colSums(t_ma_year)~as.numeric(colnames(t_ma_year)))
+mitadapPaper
+mitadapPaper<-mitadapPaper[names(incomeDoc)]
+t_ma_inc<-table(mitadapPaper,incomeDoc)
+barplot(t_ma_inc,beside=T,legend=T,col=c("red","orange","blue","black"),args.legend = list(x="topright"))
+colSums(t_ma_inc[c("Adaptation","Both"),])/colSums(t_ma_inc)
+```
+
+
+
+
 # Disciplines
 
 

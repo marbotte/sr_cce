@@ -1,0 +1,236 @@
+---
+title: "Formatting tables for the psychology paper"
+author: "Marius Bottin"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+     number_sections: true
+     toc: true
+---
+
+# Importing data
+
+```{r}
+require(openxlsx)
+A<-loadWorkbook("../../ArticlePsycho/Copia de Extraction_LR_10_22_2023.xlsx")
+datab<-read.xlsx(A,"extraction ",startRow=2)
+#load("../../export_sr_cce/someAutYearExp.RData")
+authExp_raw<-read.csv("../../export_sr_cce/authExpression.csv")
+authExp<-authExp_raw$expAutYear.idPapers.
+names(authExp)<-authExp_raw$idPapers
+```
+
+# Filter: concerns students
+```{r}
+# Let's filter only what we want
+table(datab$TARGETED.SAMPLE)
+toKeep<-grepl("student",datab$TARGETED.SAMPLE,ignore.case=T)
+table(toKeep,datab$TARGETED.SAMPLE)
+keepDoc<-tapply(toKeep,datab$id,any)
+table(keepDoc)
+```
+
+# Concerns psychologists
+```{r}
+psyAffil<-tapply(datab$Psychology.yes.or.no[datab$Psychology.yes.or.no!=3],datab$id[datab$Psychology.yes.or.no!=3],unique)
+mode(psyAffil)<-"logical"
+```
+
+Which authors are psychologists?
+
+```{r}
+colAreaAffil<-grep("^[A-z]+\\.author",colnames(datab))
+authorDiscipline<-as.matrix(datab[,colAreaAffil])
+AU_Disc_raw<-apply(authorDiscipline[datab$Psychology.yes.or.no!=3,],1,function(x)unique(na.omit(x)))
+names(AU_Disc_raw)<-datab$id[datab$Psychology.yes.or.no!=3]
+simpDisc<-matrix(NA,nrow=nrow(authorDiscipline),ncol=ncol(authorDiscipline))
+simpDisc[grepl("Psychology",authorDiscipline,ignore.case=T)]<-"Psychology"
+simpDisc[grepl("^Comm?unication,",authorDiscipline,ignore.case=T)]<-"Communication"
+A<-unique(na.omit(data.frame(
+  raw=as.vector(authorDiscipline),
+  simp=gsub(",.*","",as.vector(authorDiscipline))
+)))
+table(A$simp)
+m_discSimp<-match(authorDiscipline,A$raw)
+simpDisc[]<-A$simp[m_discSimp]
+write.table(as.data.frame(table(as.vector(simpDisc))),file="../../export_sr_cce/affilDisciplinesTMP.csv")
+# Corrections
+simpDisc[grep("Architecture",simpDisc)]<-"Arts"
+simpDisc[]<-gsub("Managment","management",simpDisc)
+simpDisc[grep("Data",simpDisc)] <- "Engineering"
+simpDisc[grep("Natural",simpDisc)]<-"Natural sciences"
+simpDisc[c(grep("Education",simpDisc),grep("Learning",simpDisc),grep("Student advisor",simpDisc),grep("Youth development program",simpDisc))]<-"Education"
+simpDisc[simpDisc=="Hydrology"]<-"Natural sciences"
+simpDisc[simpDisc%in%c("Health","Health Sciences","Medicine","Psychiatry")]<-"Health"
+simpDisc[simpDisc=="Architecture and urbanism"] <- "Arts"
+simpDisc[simpDisc=="Community development" | simpDisc=="Management" | simpDisc=="Phylosophy" | simpDisc =="Economics" | simpDisc=="Public sector" | simpDisc=="Communication"] <- "Social sciences"
+simpDisc[simpDisc=="Fire fighters coordination"] <- "Natural sciences"
+simpDisc <- simpDisc[datab$Psychology.yes.or.no!=3,]
+rownames(simpDisc)<-datab$id[datab$Psychology.yes.or.no!=3]
+barplot(sort(table(simpDisc)),las=2)
+
+
+listUnDisc<-apply(simpDisc,1,function(x)unique(x[!is.na(x)]))
+#listUnDisc[sapply(listUnDisc,length)>1&sapply(listUnDisc,function(x)any(x=="Psychology"))]
+
+barplot(table(unlist(listUnDisc[sapply(listUnDisc,length)>1])),las=2)
+barplot(table(unlist(listUnDisc[sapply(listUnDisc,length)>1&sapply(listUnDisc,function(x)any(x=="Psychology"))])),las=2)
+
+
+```
+
+```{r}
+#lapply(apply(datab[datab$Psychology.yes.or.no!=3,colAreaAffil],1,unique),na.exclude)
+
+```
+
+# Countries
+## Author
+```{r}
+require(RPostgreSQL)
+geog<-dbConnect(PostgreSQL(),dbname="worldGeog")
+refCountries<-dbGetQuery(geog,
+"SELECT cd_sov,sovereign,string
+FROM sovereign
+LEFT JOIN sovereign_names USING (cd_sov)
+")
+ls_co<-strsplit(datab$Countries.AUTHORS, ", ?|; ?")
+doc_co<-data.frame(
+  doc=rep(datab$id,sapply(ls_co,length)),
+  co_raw=unlist(ls_co),
+  country=NA
+)
+doc_co$co_raw<-gsub("^ ","",gsub(" $","",doc_co$co_raw))
+doc_co$country<-sapply(doc_co$co_raw,function(x,ref)
+{
+  res<-unique(ref$sovereign[tolower(ref$string)==tolower(x)])
+  if(length(res)==0){return(NA)}else{return(res)}
+},ref=refCountries)
+unique(doc_co$co_raw[is.na(doc_co$country)])
+doc_co$country[doc_co$co_raw=="USA"]<-"United States of America"
+doc_co$country[doc_co$co_raw=="Puerto rico (United States)"]<-"United States of America"
+doc_co$country[doc_co$co_raw=="England"]<-"United Kingdom"
+countries<-tapply(doc_co$country,doc_co$doc,unique)
+```
+## Study
+```{r}
+ls_co_st<-strsplit(datab$Countries.STUDY, ", ?|; ?")
+doc_co_st<-data.frame(
+  doc=rep(datab$id,sapply(ls_co_st,length)),
+  co_st_raw=unlist(ls_co_st),
+  country=NA
+)
+doc_co_st$co_st_raw<-gsub("^ ","",gsub(" $","",doc_co_st$co_st_raw))
+doc_co_st$country<-sapply(doc_co_st$co_st_raw,function(x,ref)
+{
+  res<-unique(ref$sovereign[tolower(ref$string)==tolower(x)])
+  if(length(res)==0){return(NA)}else{return(res)}
+},ref=refCountries)
+unique(doc_co_st$co_st_raw[is.na(doc_co_st$country)])
+doc_co_st$country[doc_co_st$co_st_raw=="USA"]<-"United States of America"
+doc_co_st$country[doc_co_st$co_st_raw=="Puerto Rico (United States)"]<-"United States of America"
+doc_co_st$country[doc_co_st$co_st_raw=="Greenland"]<-"Denmark"
+countries_st<-tapply(doc_co_st$country,doc_co_st$doc,unique)
+differences<-mapply(function(x,y)y[!y%in%x],countries,countries_st)
+diffCountryStudy<-sapply(differences[sapply(differences,length)>0],paste0,collapse=" ; ")
+```
+
+
+# Journal discipline
+
+```{r}
+A<-by(datab,datab$id,function(x)unique(x[c("Journal.discipline","Journal.discipline.(other)","Journal.Discipline.(Others)","Journal.Discipline.(Others)")]))
+all(sapply(A,nrow)==1)
+tabJourDisc<-Reduce(rbind,A)
+rownames(tabJourDisc)<-names(A)
+jourDisc<-apply(tabJourDisc,1,function(x)
+  paste0(na.omit(x[1:3]),collapse=" ; "))
+journal<-datab$Journal[datab$Psychology.yes.or.no!=3]
+names(journal)<-datab$id[datab$Psychology.yes.or.no!=3]
+
+```
+
+Number of authors
+
+```{r}
+numAU<-datab$Number.of.authors[datab$Psychology.yes.or.no!=3]
+names(numAU)<-datab$id[datab$Psychology.yes.or.no!=3]
+```
+
+Mitigation/Adaptation
+
+```{r}
+mitada<-datab$`mitigation.(reducir.causas)./.adaptación.(reducir.consecuencias)`[datab$Psychology.yes.or.no!=3]
+m_mitada<-c(Adaptation="A",Mitigation="M",Both="B")
+mitada<-m_mitada[mitada]
+names(mitada)<-datab$id[datab$Psychology.yes.or.no!=3]
+```
+
+Cognition actitude behavior
+
+```{r}
+outcomeMatrix<-matrix(T,nrow=nrow(datab),ncol=6)
+outcomeMatrix[which(is.na(datab[c("knowledge","awareness","intention","emotion","action","habit")]), arr.ind = T)] <- F
+cogAttBeh_raw <- by(outcomeMatrix,datab$id,function(x)c(cognition=any(x[,1:2]), attitude=any(x[,3:4]), behavior=any(x[,5:6])))
+cogAttBeh<-Reduce(rbind, cogAttBeh_raw)
+rownames(cogAttBeh)<-names(cogAttBeh_raw)
+```
+
+
+# Final tables
+
+
+```{r}
+idPapers<-names(keepDoc)
+all(datab$id%in%names(keepDoc))
+completeTable<-data.frame(
+  idPapers,
+  populationOK=keepDoc[idPapers],
+  reference=authExp[idPapers],
+  journal=journal[idPapers],
+  journalDiscipline=jourDisc[idPapers],
+  numberAuthor=numAU[idPapers],
+  numberAuthorPsy=apply(simpDisc,1,function(x)sum(x=="Psychology",na.rm = T))[idPapers],
+  countryAuthors=sapply(countries,paste0,collapse=" ; ")[idPapers],
+  diffCountryStudy=diffCountryStudy[idPapers],
+  mitigationAdaptation=mitada[idPapers],
+  cogAttBeh[idPapers,],
+  journalArea=jourDisc[idPapers],
+  simplifiedUniqueAffilDisciplines=sapply(listUnDisc,paste0,collapse=" ; ")[idPapers],
+  uniqueAffilDisciplines=sapply(AU_Disc_raw,paste0,collapse=" ; ")[idPapers]
+)
+tabPsy<-completeTable[rownames(completeTable)%in%names(psyAffil)[psyAffil] &
+                        rownames(completeTable)%in%names(keepDoc)[keepDoc],]
+tabNoPsy<-completeTable[!rownames(completeTable)%in%names(psyAffil)[psyAffil] &
+                        rownames(completeTable)%in%names(keepDoc)[keepDoc],]
+tabPsy$cognition<-ifelse(tabPsy$cognition,"X","")
+tabPsy$attitude<-ifelse(tabPsy$attitude,"X","")
+tabPsy$behavior<-ifelse(tabPsy$behavior,"X","")
+tabNoPsy$cognition<-ifelse(tabNoPsy$cognition,"X","")
+tabNoPsy$attitude<-ifelse(tabNoPsy$attitude,"X","")
+tabNoPsy$behavior<-ifelse(tabNoPsy$behavior,"X","")
+
+wb<-createWorkbook()
+addWorksheet(wb,"complete")
+addWorksheet(wb,"psychologists")
+addWorksheet(wb,"no psychologists")
+writeData(wb,"complete",completeTable)
+writeData(wb,"psychologists",tabPsy)
+writeData(wb,"no psychologists",tabNoPsy)
+saveWorkbook(wb,file="../../export_sr_cce/tables_for_psychology_paper.xlsx", overwrite = T)
+save(list=c("completeTable","keepDoc","jourDisc","psyAffil","simpDisc"),file="../../export_sr_cce/psychologyPaperData.RData")
+```
+
+```{r}
+#write.table(data.frame(idPapers,expAutYear[idPapers]),file="../../export_sr_cce/authExpression.csv")
+```
+
+# For the SR
+
+```{r}
+
+socJournal_mat<-matrix(NA,nrow(tabJourDisc),ncol(tabJourDisc))
+socJournal_mat[]<-grepl("social",as.matrix(tabJourDisc),ignore.case=T)&!grepl("education",as.matrix(tabJourDisc),ignore.case=T)
+sum(apply(socJournal_mat,1,any))
+```
+

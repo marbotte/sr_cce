@@ -285,6 +285,27 @@ paste0("scidownl download ",
       ),"./downloadPdf.sh")
 ```
 
+
+<!--
+Here I add some code to be able to extract the author information
+-->
+```{r}
+infoExtracted[c("abbrev","AU",'PY')]
+sepAU<-strsplit(infoExtracted$AU,'\\|')
+nbAU<-sapply(sepAU,length)
+expAutYear<-character(length(nbAU))
+expAutYear[nbAU>2]<-paste0(sapply(sepAU[nbAU>2],function(x)sub(",.*$","",x[1]))," et al., ",infoExtracted[nbAU>2,"PY"])
+expAutYear[nbAU==1]<-paste0(sapply(sepAU[nbAU==1],function(x)sub(",.*$","",x[1])),", ",infoExtracted[nbAU==1,"PY"])
+expAutYear[nbAU==2]<-paste0(sapply(sepAU[nbAU==2],function(x)sub(",.*$","",x[1]))," and ",sapply(sepAU[nbAU==2],function(x)sub(",.*$","",x[2])),", ",infoExtracted[nbAU==2,"PY"])
+names(expAutYear)<-infoExtracted$abbrev
+save(expAutYear,file='../../export_sr_cce/someAutYearExp.RData')
+
+```
+
+
+
+
+
 ```bash
 . ../sr_cce_env/bin/activate
 bash ./downloadPdf.sh

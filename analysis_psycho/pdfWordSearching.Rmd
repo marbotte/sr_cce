@@ -16,6 +16,7 @@ always_allow_html: true
 require(knitr)&require(kableExtra)
 knitr::opts_chunk$set(cache=T, fig.path="./Fig/")
 dos <- normalizePath("../../extraction/")
+toExclude<-c("Leckey2021a","Bopardikar2021","Trott2020","Turner2022","results_graphs_number","Ross2021")
 ```
 # Number of pages
 
@@ -32,6 +33,8 @@ sum(as.numeric(sapply(strsplit(raw,"\t"),function(x)x[2])))
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "psycho" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -60,6 +63,36 @@ as.matrix(table(occPerPage))
 )
 ```
 
+
+```{r nbOccPsychoTot,fig.height=6,fig.width=15}
+par(mar=c(5.1,4.1,1,1))
+dat<-table(factor(tabOccurrences$occurrences,levels=0:max(tabOccurrences$occurrences)))
+A<-barplot(dat,col="black",cex.names=0.71,ylim=c(0,45),xlab="Number of occurrences of *psycho* in words within each article", ylab="Number of articles")
+text(A[,1][dat>0],(dat+1)[dat>0],labels=dat[dat>0],cex=.71)
+```
+
+```{r nbOccPerPagePsychoTot,fig.height=6,fig.width=15}
+par(mar=c(5.1,4.1,1,1))
+
+
+A<-hist(occPerPage,  xlab="Number of occurrences of *psycho* in words per page within each article", ylab="Number of articles",col="black",nclass=60,border="white", main="")
+text(A$mids[A$counts>0],A$counts[A$counts>0]+1,A$counts[A$counts>0])
+```
+
+# Papers with more than 10 occurrences
+```{r}
+(moreThan10<-sapply(sep[tabOccurrences$occurrences>10],function(x)x[1]))
+setwd(dos)
+if(file.exists("../export_sr_cce/more10Psycho")){unlink("../export_sr_cce/more10Psycho",recursive=T)}
+dir.create("../export_sr_cce/more10Psycho")
+sapply(moreThan10,file.copy,to="../export_sr_cce/more10Psycho/")
+setwd("../export_sr_cce/more10Psycho/")
+raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.action.research" {} \\;'),intern = T)
+sep <- strsplit(raw,":")
+kable(Reduce(rbind,sep[sapply(sep,function(x)as.numeric(x[2])>1)]),row.names = NA)
+```
+
+
 # Self-efficacy
 
 "Self-efficacy" or "self efficacy":
@@ -68,6 +101,8 @@ as.matrix(table(occPerPage))
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "self.efficacy" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -96,6 +131,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*self.eff
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "planned[ -]behaviou?r" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -126,6 +163,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*planned.
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "hope" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -154,6 +193,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*hope*',y
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "fear" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -182,6 +223,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*fear*',y
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "distress" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -210,6 +253,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*distress
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "anxi" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -238,6 +283,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*anxi*',y
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.action.research" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -266,6 +313,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*particip
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "action.research" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -294,6 +343,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*action.r
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.research" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -322,6 +373,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*particip
 setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "critical.research" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -352,6 +405,8 @@ dosPsycho <- normalizePath("../../CCE and Psychology/")
 setwd(dosPsycho)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "psycho" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 ```{r}
@@ -365,13 +420,29 @@ occPerPage<-tabOccurrences$occurrences/tabOccurrences$pages
 hist(tabOccurrences$occurrences,xlab="Number of occurrences",nclass=60, main='*psycho*',ylab="Number of documents")
 hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*psycho*',ylab="Number of documents")
 ```
+```{r nbOccPsycho21,fig.height=6,fig.width=15}
+par(mar=c(5.1,4.1,1,1))
+dat<-table(factor(tabOccurrences$occurrences,levels=0:max(tabOccurrences$occurrences)))
+A<-barplot(dat,col="black",cex.names=0.71,ylim=c(0,8),xlab="Number of occurrences of *psycho* in words within each article", ylab="Number of articles")
+text(A[,1][dat>0],(dat+.2)[dat>0],labels=dat[dat>0],cex=.71)
+```
 
+
+```{r nbOccPsychoPerPage21,fig.height=6,fig.width=15}
+par(mar=c(5.1,4.1,1.5,1))
+
+
+A<-hist(occPerPage,  xlab="Number of occurrences of *psycho* in words per page within each article", ylab="Number of articles",col="black",nclass=30,border="white", main="",ylim=c(0,6.5))
+text(A$mids[A$counts>0],A$counts[A$counts>0]+.2,A$counts[A$counts>0])
+```
 
 ```{r}
 dosPsycho <- normalizePath("../../CCE and Psychology/Education journals/")
 setwd(dosPsycho)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "psycho" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 ```{r}
@@ -399,6 +470,8 @@ as.matrix(table(occPerPage))
 setwd(dosPsycho)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.action.research" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -427,6 +500,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*particip
 setwd(dosPsycho)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "action.research" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -455,6 +530,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*action.r
 setwd(dosPsycho)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "participatory.research" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -483,6 +560,8 @@ hist(occPerPage,xlab="Number of occurrences per page",nclass=60, main='*particip
 setwd(dosPsycho)
 raw <- system(paste("find",'-name "*.pdf"','-exec pdfgrep -icH -e "critical.research" {} \\;'),intern = T)
 sep <- strsplit(raw,":")
+excl<-gsub("\\.pdf","",basename(sapply(sep,function(x){x[1]})))%in%toExclude
+sep<-sep[!excl]
 ```
 
 
@@ -529,4 +608,5 @@ setwd(dos)
 raw <- system(paste("find",'-name "*.pdf"'),intern = T)
 namesPdf<-gsub("\\.pdf","",basename(raw))
 namesPdf[!namesPdf%in%rawExtract$id]
+rawExtract$id[!rawExtract$id%in%namesPdf]
 ```

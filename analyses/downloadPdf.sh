@@ -62,7 +62,7 @@ scidownl download --title "Title: Stories of Impact: Scientific Narratives and C
 scidownl download --doi "10.17533/udea.rib.v45n3e346130" --out ../../PDF_included_total/Gómez_Zermeño2022.pdf
 scidownl download --doi "10.1002/nse2.20086" --out ../../PDF_included_total/White2022.pdf
 scidownl download --doi "10.16920/jeet/2023/v36is2/23037" --out ../../PDF_included_total/Naik2022.pdf
-scidownl download --doi "10.34190/ecgbl.16.1.356" --out ../../PDF_included_total/Gabriel2022.pdf
+scidownl download --title "Climate4Kids: A Gamified App Teaching about Climate Change" --out ../../PDF_included_total/Gabriel2022.pdf
 scidownl download --doi "10.1007/978-3-031-06550-7_6" --out ../../PDF_included_total/Matamanda2022.pdf
 scidownl download --doi "10.1109/EDUCON52537.2022.9766619" --out ../../PDF_included_total/Nantsou2022.pdf
 scidownl download --doi "10.1080/20590776.2021.2004862" --out ../../PDF_included_total/Herrick2022.pdf
@@ -166,7 +166,7 @@ scidownl download --doi "10.1080/10382046.2019.1661126" --out ../../PDF_included
 scidownl download --doi "10.1080/13504622.2019.1675594" --out ../../PDF_included_total/Trott2020a.pdf
 scidownl download --doi "10.1016/j.ecolecon.2020.106591" --out ../../PDF_included_total/Goeschl2020.pdf
 scidownl download --doi "10.1111/medu.14081" --out ../../PDF_included_total/Nikendei2020.pdf
-scidownl download --doi "10.34068/joe.58.02.16" --out ../../PDF_included_total/Dormody2020.pdf
+scidownl download --title "Lesson Worksheets: A Tool for Developing Youth Weather and Climate Science Comprehension" --out ../../PDF_included_total/Dormody2020.pdf
 scidownl download --doi "10.1080/10598650.2020.1723994" --out ../../PDF_included_total/Kretser2020.pdf
 scidownl download --doi "10.1145/3386201.3386230" --out ../../PDF_included_total/Amato2020.pdf
 scidownl download --doi "10.1080/13504622.2019.1650164" --out ../../PDF_included_total/Eaton2020.pdf
@@ -385,7 +385,7 @@ scidownl download --doi "10.1007/978-3-642-14776-0_49" --out ../../PDF_included_
 scidownl download --doi "10.1007/978-3-642-22315-0_17" --out ../../PDF_included_total/Dalelo2011.pdf
 scidownl download --doi "10.1080/13504622.2011.565118" --out ../../PDF_included_total/Robelia2011.pdf
 scidownl download --doi "10.18848/1447-9494/cgp/v17i11/47368" --out ../../PDF_included_total/Wannawichitra2011.pdf
-scidownl download --doi "10.26529/cepsj.442" --out ../../PDF_included_total/Feierabend2011.pdf
+scidownl download --title "Innovating science teaching by participatory action research - Reflections from an interdisciplinary project of curriculum innovation on teaching about climate change" --out ../../PDF_included_total/Feierabend2011.pdf
 scidownl download --doi "10.1109/IGARSS.2010.5650471" --out ../../PDF_included_total/Atwood_Blaine2010.pdf
 scidownl download --doi "10.1080/00221341.2010.498121" --out ../../PDF_included_total/Bedford2010.pdf
 scidownl download --title "The challenge of climate change in the classroom" --out ../../PDF_included_total/Snow2010.pdf
@@ -416,13 +416,13 @@ scidownl download --doi "10.1504/IJGW.2017.10005878" --out ../../PDF_included_to
 scidownl download --title "CHALLENGES AND PERSPECTIVES FOR THE TEACHING OF GEOGRAFIC CLIMATOLOGY AT SCHOOL" --out ../../PDF_included_total/da_Silva2019.pdf
 scidownl download --title "Using Different Teaching Methods to Enhance Student Learning of Climate Change" --out ../../PDF_included_total/Bayer2013.pdf
 scidownl download --doi "10.1007/s40596-022-01697-y" --out ../../PDF_included_total/Haase2022.pdf
-scidownl download --doi "10.15700/saje.v35n3a1160" --out ../../PDF_included_total/Anyanwu2015.pdf
+scidownl download --title "Climate change science: The literacy of Geography teachers in the Western Cape Province, South Africa" --out ../../PDF_included_total/Anyanwu2015.pdf
 scidownl download --doi "10.3390/su9111966" --out ../../PDF_included_total/Kolleck2017.pdf
 scidownl download --doi "10.3390/su12166400" --out ../../PDF_included_total/Trott2020b.pdf
 scidownl download --doi "10.1080/00368121.2022.2106173" --out ../../PDF_included_total/Cibik2022.pdf
 scidownl download --doi "10.17159/2221-4070/2021/v10i2a4" --out ../../PDF_included_total/Muller2021a.pdf
 scidownl download --doi "10.3233/JCC210023" --out ../../PDF_included_total/Thrivikramji2021.pdf
-scidownl download --doi "10.21048/ijnd.2021.58.s1.27544" --out ../../PDF_included_total/Kathiresan2021.pdf
+scidownl download --title "Training Needs on Climate Resilient Farm Technologies for Improving the Livelihood and Nutritional Security of Farming Community in Namakkal District of Tamil Nadu" --out ../../PDF_included_total/Kathiresan2021.pdf
 scidownl download --doi "10.1080/00958964.2021.1949570" --out ../../PDF_included_total/Leckey2021a.pdf
 scidownl download --doi "10.1111/1467-9752.12486" --out ../../PDF_included_total/Stickney2020.pdf
 scidownl download --doi "10.1080/00368121.2021.1885334" --out ../../PDF_included_total/Sumrall2021.pdf
@@ -451,12 +451,12 @@ scidownl download --doi "10.1038/nclimate1526" --out ../../PDF_included_total/An
 scidownl download --doi "10.1108/MEQ-04-2015-0063" --out ../../PDF_included_total/Kacher2016.pdf
 scidownl download --doi "10.1108/17568691111129011" --out ../../PDF_included_total/Kreibich2011.pdf
 scidownl download --title "From Local to Global" --out ../../PDF_included_total/Trautmann2021.pdf
-scidownl download --doi "10.1109/cccs.2015.7374179" --out ../../PDF_included_total/Gomes2015.pdf
+scidownl download --title "Teaching Climate Change through blended learning: A case study in a private secondary school in Mauritius" --out ../../PDF_included_total/Gomes2015.pdf
 scidownl download --title "ClimateWatch and geography - connecting classrooms to nature and climate change" --out ../../PDF_included_total/Chew2017.pdf
 scidownl download --doi "10.33403rigeo.860160" --out ../../PDF_included_total/Ganatsa2021.pdf
 scidownl download --title "Our world our say: young Australians set the agenda for education on natural hazards and disasters" --out ../../PDF_included_total/Little2020.pdf
 scidownl download --title "Climate across the curriculum developing school teaching resources at the AMOS national conference" --out ../../PDF_included_total/MacAdam2021.pdf
-scidownl download --doi "10.5130/ijcre.v15i2.8318" --out ../../PDF_included_total/Sitas2022.pdf
+scidownl download --title "Youth visions in a changing climate: Emerging lessons from using immersive and arts-based methods for strengthening community-engaged research with urban youth" --out ../../PDF_included_total/Sitas2022.pdf
 scidownl download --title "Weather and climate skills" --out ../../PDF_included_total/Chaffer2022.pdf
 scidownl download --title "Supporting students on climate justice" --out ../../PDF_included_total/Anonymous2023.pdf
 scidownl download --title "Climate Change" --out ../../PDF_included_total/Puszka2008.pdf
@@ -468,7 +468,7 @@ scidownl download --doi "10.21703/0718-5162.v21.n45.2022.012" --out ../../PDF_in
 scidownl download --doi "10.1590/0102-77863630016" --out ../../PDF_included_total/Silva2021.pdf
 scidownl download --doi "10.1590/1516-731320210068" --out ../../PDF_included_total/Oliveira2021.pdf
 scidownl download --doi "10.22201/fq.18708404e.2019.3.67965" --out ../../PDF_included_total/Bello_Benavides2019.pdf
-scidownl download --doi "10.4067/s0718-235x2020000200128" --out ../../PDF_included_total/Delgado_Moreira2020.pdf
+scidownl download --title "Environmental knowledge and perceptions of good environmental education practices for affirmative climate actions in rural schools of Manabí-Ecuador" --out ../../PDF_included_total/Delgado_Moreira2020.pdf
 scidownl download --doi "10.17533/udea.rib.v45n3e346130" --out ../../PDF_included_total/Gómez_Zermeño2022a.pdf
 scidownl download --title "PROGRAMA DE EDUCACIÓN AMBIENTAL SOBRE EL CAMBIO CLIMÁTICO EN LA EDUCACIÓN FORMAL Y NO FORMAL" --out ../../PDF_included_total/González_Ordóñez2016.pdf
 scidownl download --doi "10.1590/1516-731320160040012" --out ../../PDF_included_total/Pedrini2016.pdf
@@ -477,57 +477,57 @@ scidownl download --doi "10.15359/ree.25-2.28" --out ../../PDF_included_total/Nu
 scidownl download --title "La educación familiar en función del cambio climático" --out ../../PDF_included_total/Amor_Pérez2021.pdf
 scidownl download --doi "10.15359/ree.25-2.30" --out ../../PDF_included_total/Nunez_Rodriguez2021a.pdf
 scidownl download --title "Teaching Children about Climate Change and Sustainability" --out ../../PDF_included_total/Rossini2022.pdf
-scidownl download --doi "10.18296/set.0180" --out ../../PDF_included_total/Bright2020.pdf
-scidownl download --doi "10.15730/forum.2020.62.2.251" --out ../../PDF_included_total/Pinto2020.pdf
+scidownl download --title "Climate Strikes: Their Value in Engaging and Educating Secondary School Students" --out ../../PDF_included_total/Bright2020.pdf
+scidownl download --title "From Climate Anxiety to Resilient Active Citizenship: When Primary Schools, Parents and Environmental Groups Work Together to Catalyse Change" --out ../../PDF_included_total/Pinto2020.pdf
 scidownl download --title "Developing Agency in Climate Resilience: How Youth Describe Experiences That Shaped Their Sense of Self and Collective Efficacy" --out ../../PDF_included_total/Haley2021.pdf
 scidownl download --title "Climate Justice: Science for a Better World--Opening Eyes to the Unequal Burden of Our Changing Climate" --out ../../PDF_included_total/Christie_Blick2021.pdf
-scidownl download --doi "10.17509/jsl.v2i2.13104" --out ../../PDF_included_total/Salsabila2019a.pdf
-scidownl download --doi "10.5032/jae.2021.03153" --out ../../PDF_included_total/Dormody2021.pdf
-scidownl download --doi "10.17509/jsl.v1i3.11793" --out ../../PDF_included_total/Aldila2018.pdf
+scidownl download --title "Improving Students Sustainability Awareness through Argument-Driven Inquiry" --out ../../PDF_included_total/Salsabila2019a.pdf
+scidownl download --title "Assessing the Impact of a Weather and Climate Curriculum on Youth Science Comprehension" --out ../../PDF_included_total/Dormody2021.pdf
+scidownl download --title "Students Cognitive and Attitude of Secondary School in Learning Global Warming Using Student Team Achievement Division (STAD) Based on Gender" --out ../../PDF_included_total/Aldila2018.pdf
 scidownl download --title "Teaching for Climate Action. Teaching in Focus. No. 44" --out ../../PDF_included_total/Anonymous2022.pdf
 scidownl download --title "The Need to Introduce System Thinking in Teaching Climate Change" --out ../../PDF_included_total/Roychoudhury2017.pdf
-scidownl download --doi "10.11114/jets.v5i10.2580" --out ../../PDF_included_total/Kern2017.pdf
+scidownl download --title "A Culturally Relevant Teacher Professional Development for Teaching Climate Change to Native American Students" --out ../../PDF_included_total/Kern2017.pdf
 scidownl download --title "In-Service Teachers Attitudes, Knowledge and Classroom Teaching of Global Climate Change" --out ../../PDF_included_total/Liu2015.pdf
 scidownl download --title "Think Green: Education and Climate Change. Trends Shaping Education Spotlights. No. 24" --out ../../PDF_included_total/Anonymous2021a.pdf
 scidownl download --title "Connecting with Community" --out ../../PDF_included_total/Musselman2020.pdf
 scidownl download --title "Climate Change and Sustainability in Primary and Intermediate Schools: Findings from the 2019 NZCER National Survey of English-Medium Schools" --out ../../PDF_included_total/Bolstad2020.pdf
 scidownl download --title "Linking Climate Change Education through the Integration of a Kite-Borne Remote Sensing System: Linking Climate Change Education and Remote Sensing" --out ../../PDF_included_total/Xie2014.pdf
-scidownl download --doi "10.1163/23641177-bja00004" --out ../../PDF_included_total/Park2020a.pdf
+scidownl download --title "Analysis of Climate Change Education (CCE) Programs: Focusing on Cultivating Citizen Activists to Respond to Climate Change" --out ../../PDF_included_total/Park2020a.pdf
 scidownl download --title "Using Climate Models to Learn About Global Climate Change: Investigating the Phenomenon of Increasing Surface Air Temperatures Using a Global Climate Modeling Approach" --out ../../PDF_included_total/Bhattacharya2020.pdf
-scidownl download --doi "10.18296/set.0183" --out ../../PDF_included_total/Taylor2020.pdf
+scidownl download --title "Tackling Climate-Science Learning through Futures Thinking" --out ../../PDF_included_total/Taylor2020.pdf
 scidownl download --title "Education for Tackling Climate Change" --out ../../PDF_included_total/Bassey2020.pdf
 scidownl download --title "Using a GIS-Based Framework to Teach Climate Change in Kansas" --out ../../PDF_included_total/Tabor2016.pdf
-scidownl download --doi "10.1080/00131946.2017.1369086" --out ../../PDF_included_total/Rousell2017.pdf
+scidownl download --title "Children of an Earth to Come: Speculative Fiction, Geophilosophy and Climate Change Education Research" --out ../../PDF_included_total/Rousell2017.pdf
 scidownl download --title "Communities Take Charge" --out ../../PDF_included_total/Goralnik2019.pdf
-scidownl download --doi "10.18296/set.0182" --out ../../PDF_included_total/Zink2020.pdf
+scidownl download --title "Envisioning a Better Future through Interrelatedness and Whanaungatanga" --out ../../PDF_included_total/Zink2020.pdf
 scidownl download --title "Keeping It Cool: Approaching Global Climate Change as a Socioscientific Issue to Support Science Teachers Looking to Address the NGSS" --out ../../PDF_included_total/Le2019.pdf
-scidownl download --doi "10.15730/forum.2020.62.2.189" --out ../../PDF_included_total/Da_Costa2020.pdf
+scidownl download --title "Moving towards Climate Justice with Pedagogy of the Oppressed" --out ../../PDF_included_total/Da_Costa2020.pdf
 scidownl download --title "Nurturing Hope: From Climate-Change Worriers to Eco-Warriors" --out ../../PDF_included_total/Birdsall2020.pdf
 scidownl download --title "How Teachers Beliefs about Climate Change Influence Their Instruction, Student Understanding, and Willingness to Take Action" --out ../../PDF_included_total/Trendell_Nation2017.pdf
 scidownl download --title "Investigating the Climate Change Beliefs, Knowledge, Behaviors, and Cultural Worldviews of Rural Middle School Students and Their Families during an Out-of-School Intervention: A Mixed-Methods Study" --out ../../PDF_included_total/Gutierrez2016.pdf
 scidownl download --title "Engaging in Climate Change: Arctic Cloud-Sea Ice Feedbacks in Observations, Climate Models, and the Classroom" --out ../../PDF_included_total/Morrison2019.pdf
-scidownl download --doi "10.5897/err2015.2360" --out ../../PDF_included_total/Chattuchai2015.pdf
+scidownl download --title "Development of Knowledge, Awareness, Global Warming Decreasing Behavior and Critical Thinking of Grade 11 Students Using the Four Noble Truths Method with Meta-Cognitive Techniques" --out ../../PDF_included_total/Chattuchai2015.pdf
 scidownl download --title "Creating a Climate for Service Learning Success" --out ../../PDF_included_total/Jeandron2010.pdf
 scidownl download --title "An Analysis of the Teachers Climate Change Awareness" --out ../../PDF_included_total/Dal2015a.pdf
 scidownl download --title "Creating Citizen Science Identity: Growing Conservation and Environmentally-Minded STEM Interest through Mobile Learning and Authentic Practice" --out ../../PDF_included_total/Wallace2018.pdf
-scidownl download --doi "10.5408/13-061.1" --out ../../PDF_included_total/McNeal2014.pdf
+scidownl download --title "Climate Change Education in the Southeastern U.S. Through Public Dialogue: Not Just Preaching to the Choir" --out ../../PDF_included_total/McNeal2014.pdf
 scidownl download --title "An Examination of Climate Scientists Participation in Education: Implications for Supporting the Teaching and Learning of Socially Controversial Science" --out ../../PDF_included_total/Walsh2012.pdf
 scidownl download --title "Climate Change Series: Federal, State, and Local Policy Recommendations for Creating a Positive School Climate" --out ../../PDF_included_total/Cardichon2015.pdf
-scidownl download --doi "10.1177/0973408218754625" --out ../../PDF_included_total/Bieler2017.pdf
+scidownl download --title "A National Overview of Climate Change Education Policy: Policy Coherence between Subnational Climate and Education Policies in Canada (K-12)" --out ../../PDF_included_total/Bieler2017.pdf
 scidownl download --doi "10.1002/sdr.1612" --out ../../PDF_included_total/Kumar2018.pdf
 scidownl download --title "Using Climate Change as a Teaching Tool." --out ../../PDF_included_total/Dahlberg2001.pdf
-scidownl download --doi "10.17077/etd.opsfk764" --out ../../PDF_included_total/Yarker2013.pdf
+scidownl download --title "Teacher Challenges, Perceptions, and Use of Science Models in Middle School Classrooms about Climate, Weather, and Energy Concepts" --out ../../PDF_included_total/Yarker2013.pdf
 scidownl download --title "Climate Change Schools Project..." --out ../../PDF_included_total/McKinzey2010.pdf
 scidownl download --doi "10.5565/rev/ensciencias.2088" --out ../../PDF_included_total/Ouariachi2017a.pdf
 scidownl download --title "Employing Inquiry-Based Computer Simulations and Embedded Scientist Videos to Teach Challenging Climate Change and Nature of Science Concepts" --out ../../PDF_included_total/Cohen2013.pdf
 scidownl download --title "Teaching Climate Change Science in Senior Secondary School: Issues, Barriers and Opportunities" --out ../../PDF_included_total/Bunten2014.pdf
 scidownl download --title "The Arctic Climate Modeling Program: Professional Development for Rural Teachers" --out ../../PDF_included_total/Bertram2010.pdf
 scidownl download --title "Effective Strategies for Talking about Climate Change in the Classroom" --out ../../PDF_included_total/Busch2014.pdf
-scidownl download --doi "10.1177/0973408215569114" --out ../../PDF_included_total/Han2015.pdf
-scidownl download --doi "10.1080/10598650.2013.11510781" --out ../../PDF_included_total/Swim2013.pdf
+scidownl download --title "Education for Sustainable Development and Climate Change Education in China: A Status Report" --out ../../PDF_included_total/Han2015.pdf
+scidownl download --title "Fostering Hope in Climate Change Educators" --out ../../PDF_included_total/Swim2013.pdf
 scidownl download --title "Simulating Global Climate Summits" --out ../../PDF_included_total/Vesperman2014.pdf
 scidownl download --title "Students Conceptions about Climate Change: Using Critical Evaluation to Influence Plausibility Reappraisals and Knowledge Reconstruction" --out ../../PDF_included_total/Lombardi2012a.pdf
-scidownl download --doi "10.1177/0973408212475202" --out ../../PDF_included_total/Vize2012.pdf
+scidownl download --title "Using Education to Bring Climate Change Adaptation to Pacific Communities" --out ../../PDF_included_total/Vize2012.pdf
 scidownl download --doi "10.1515/9783110877373-007" --out ../../PDF_included_total/Nauck2020.pdf
 scidownl download --title "Impact of social media as an instructional component on content knowledge, attitudes, and public engagement related to global climate change" --out ../../PDF_included_total/Greenberg2014.pdf
 scidownl download --title "Seventh Graders Ways of Reasoning in Evaluating and Generating Arguments about Climate Change Issues" --out ../../PDF_included_total/Choi2011.pdf
